@@ -4,7 +4,7 @@ layout: cover
 date: 2024-03-04T13:37:48+01:00
 ---
 
-![Markdown Logo](/markdown/images/Markdown-mark.png)
+![Markdown Logo](images/Markdown-mark.png)
 
 1. Introductie raadsel: [Afbeelding](intro-img), [Markdown versie](intro)
 2. Theorie: [Wat is Markdown](theorie)
