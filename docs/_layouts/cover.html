@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body>
+
+    <h1>[{{ page.title }}]("{{ page.url | relative_url }}")</h1>
+    {{ content }}
+
+
+    <br>
+    Cover page
+</body>
+</html>
