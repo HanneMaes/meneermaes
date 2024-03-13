@@ -1,7 +1,7 @@
 ---
-title: "Wat is Markdown"
+title: Wat is Markdown
+layout: default
 date: 2024-03-04T13:37:48+01:00
-draft: false
 ---
 
 # Wat is Markdown?

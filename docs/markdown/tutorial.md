@@ -1,7 +1,7 @@
 ---
-title: "Hoe gebruik je Markdown"
+title: Hoe gebruik je Markdown
+layout: default
 date: 2024-03-04T13:37:48+01:00
-draft: false
 ---
 
 # Een Markdown bestand maken

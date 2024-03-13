@@ -1,8 +1,7 @@
 ---
-title: "Markdown"
+title: Markdown
+layout: cover
 date: 2024-03-04T13:37:48+01:00
-draft: false
-layout: single
 ---
 
 ![Markdown Logo](/markdown/images/Markdown-mark.png)

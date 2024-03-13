@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: About
 layout: default
 date: 2024-03-13T10:33:28+01:00
 ---
