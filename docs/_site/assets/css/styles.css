@@ -14,7 +14,8 @@
 
     --animSpeed: 0.3s;
 
-    --contentWidth: 90%;
+    --contentWidth: 85%;
+    --contentWidthMax: 750px;
     --spacingBig: 70px;
     --roundness: 10px;
 }
@@ -46,6 +47,7 @@ section {
 
 .sectionContent {
     width: var(--contentWidth);
+    max-width: var(--contentWidthMax);
 }
 
 /*******/
@@ -55,13 +57,22 @@ section {
 nav {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     border-radius: var(--roundness);
     
     background-color: white;
     color: var(--textDark);
     margin: 30px;
     padding: 10px;
+
+    transition: all var(--animSpeed);
+}
+nav:hover {
+    box-shadow:0px 0px 0px 3px var(--light) inset;
+}
+
+nav a {
+    border-bottom: none !important;
 }
 
 /*******************/
@@ -80,6 +91,7 @@ footer {
 
 .footerContent {
     width: var(--contentWidth);
+    max-width: var(--contentWidthMax);
 
     display: flex;
     flex-direction: row;

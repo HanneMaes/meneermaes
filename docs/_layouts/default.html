@@ -5,11 +5,40 @@
 </head>
 <body>
 
-    {% include breadcrumbs.html %}
-    <header>{{ page.title }}</header>
-    {{ content }}
+    <!------------->
+    <!-- CONTENT -->
+    <!------------->
 
-    <br>
-    Default page
+    <section>
+        <div class="sectionContent">
+
+            <!-- breadcrumbs -->
+            {% if page.breadcrumbs == true %}
+                {% include breadcrumbs.html %}
+            {% endif %}
+
+            <!-- header -->
+            <header>{{ page.title }}</header>
+
+            <!-- content -->
+            {{ content }}
+
+        </div> <!-- sectionContent -->
+    </section>
+
+    <!------------>
+    <!-- FOOTER -->
+    <!------------>
+
+    <footer>
+        <div class="footerContent">
+
+            <a href="content/about">About</a>
+            <div class="pageInfo">{{ page.layout }} page</div>
+            <img width="107px" height="60px" src="{{ site.baseurl }}/assets/images/signatureBlack.gif">
+
+        </div>
+    </footer>
+
 </body>
 </html>

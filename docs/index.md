@@ -1,9 +1,10 @@
 ---
 title: Meneer Maes
-layout: cover
+breadcrumbs: false
+layout: default
 date: 2024-03-13T10:31:28+01:00
 ---
 
-[Markdown](content/markdown/index)
+# Webtechnology
 
-[About](content/about)
+[Markdown](content/markdown/index)
