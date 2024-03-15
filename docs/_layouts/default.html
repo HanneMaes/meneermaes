@@ -14,11 +14,9 @@
         <div class="sectionContent">
 
             <!-- breadcrumbs -->
-            {% unless page.path contains '/index' or page.url == site.baseurl %}
+            {% unless page.path contains '/index' or page.url == '/' %}
                 {% include breadcrumbs.html %}
             {% endunless  %}
-            Page URL: {{ page.url }}
-Site Base URL: {{ site.baseurl }}
 
             <!-- header -->
             <header>{{ page.title }}</header>
