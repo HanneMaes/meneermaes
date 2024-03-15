@@ -22,10 +22,19 @@
     <section>
         <div class="sectionContent">
 
-            <!-- breadcrumbs -->
-            {% unless page.path contains '/index' or page.url == '/' %} <!-- not when path contains '/index' or when on the homepage '/' -->
+            <!-- breadcrumbs: not on homepage -->
+            {% unless page.url == '/' %}
                 <nav>
-                    <a href="{{ site.baseurl }}">Home</a>
+                    <a href="{{ site.baseurl }}">Maes</a>
+                        
+                    <!-- only show link to section when not on a section page -->
+                    {% unless page.path contains '/index' %}
+                        <span class="navDivider">/</span>
+                        {% assign current_path_parts = page.url | split: '/' %}
+                        {% assign sectionName = current_path_parts[2] %}
+                        <a href="{{ site.baseurl }}/content/{{ sectionName }}/index">{{ sectionName | capitalize }}</a>
+                    {% endunless  %}
+                    
                 </nav>
             {% endunless  %}
 

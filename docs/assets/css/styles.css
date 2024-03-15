@@ -64,6 +64,8 @@ nav {
     color: var(--textDark);
     margin: 30px;
     padding: 10px;
+    padding-left:  15px;
+    padding-right: 15px;
 
     transition: all var(--animSpeed);
 }
@@ -73,6 +75,13 @@ nav:hover {
 
 nav a {
     border-bottom: none !important;
+}
+
+.navDivider {
+    color: var(--light);
+    font-weight: bold;
+    padding-left:  5px;
+    padding-right: 5px;
 }
 
 /*******************/

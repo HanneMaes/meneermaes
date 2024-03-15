@@ -24,10 +24,19 @@
     <section>
         <div class="sectionContent">
 
-            <!-- breadcrumbs -->
-             <!-- not when path contains '/index' or when on the homepage '/' -->
+            <!-- breadcrumbs: not on homepage -->
+            
                 <nav>
-                    <a href="/meneermaes">Home</a>
+                    <a href="/meneermaes">Maes</a>
+                        
+                    <!-- only show link to section when not on a section page -->
+                    
+                        <span class="navDivider">/</span>
+                        
+                        
+                        <a href="/meneermaes/content/markdown/index">Markdown</a>
+                    
+                    
                 </nav>
             
 
