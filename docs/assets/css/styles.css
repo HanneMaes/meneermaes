@@ -15,7 +15,7 @@
     --animSpeed: 0.3s;
 
     --contentWidth: 85%;
-    --contentWidthMax: 750px;
+    --contentWidthMax: 850px;
     --spacingBig: 70px;
     --roundness: 10px;
 }
@@ -182,12 +182,16 @@ th {
 }
 
 /*********/
-/* other */
+/* media */
 /*********/
 
+img {
+    max-width: 100%;
+}
+
 iframe {
-    width: 90vw;
-    height: calc(90vw / 16 * 9);
-    max-height: 90vh;
+    width: 100%;
+    aspect-ratio: 16/9;
     border: none;
+    border-radius: var(--roundness);
 }
