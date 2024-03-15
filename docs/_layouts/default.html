@@ -30,8 +30,8 @@
                     <!-- only show link to section when not on a section page -->
                     {% unless page.path contains '/index' %}
                         <span class="navDivider">/</span>
-                        {% assign current_path_parts = page.url | split: '/' %}
-                        {% assign sectionName = current_path_parts[2] %}
+                        {% assign current_path_parts = page.url | split: '/' %} <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+                        {% assign sectionName = current_path_parts[2] %}        <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
                         <a href="{{ site.baseurl }}/content/{{ sectionName }}/index">{{ sectionName | capitalize }}</a>
                     {% endunless  %}
                     

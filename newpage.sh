@@ -46,7 +46,6 @@ mkdir -p "$rootdir/$directory"
 # Define the content
 content="---
 title: $filename_no_extension_capitalized
-breadcrumbs: true
 layout: default
 date: $(date)
 ---"

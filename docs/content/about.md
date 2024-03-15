@@ -1,6 +1,5 @@
 ---
 title: About
-breadcrumbs: true
 layout: default
 date: 2024-03-13T10:33:28+01:00
 ---
