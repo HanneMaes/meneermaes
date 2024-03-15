@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% include head.html %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="{{ site.baseurl }}/assets/css/styles.css" rel="stylesheet">
+    <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico" />
+
+    <title>{{ page.title }}</title>
+
+    <!-- apply custom CSS to some page -->
     {% include customCSS.html %}
+
 </head>
 <body>
 
@@ -14,8 +23,10 @@
         <div class="sectionContent">
 
             <!-- breadcrumbs -->
-            {% unless page.path contains '/index' or page.url == '/' %}
-                {% include breadcrumbs.html %}
+            {% unless page.path contains '/index' or page.url == '/' %} <!-- not when path contains '/index' or when on the homepage '/' -->
+                <nav>
+                    <a href="{{ site.baseurl }}">Home</a>
+                </nav>
             {% endunless  %}
 
             <!-- header -->
@@ -35,7 +46,7 @@
         <div class="footerContent">
 
             <a href="content/about">About</a>
-            <div class="pageInfo">{{ page.layout }} page</div>
+            <div class="pageInfo">Created on {{ page.date | date: "%d/%m/%Y" }}, last modified: {{ page.last_modified_at | date: "%d/%m/%Y %H:%M" }}</div>
             <img width="107px" height="60px" src="{{ site.baseurl }}/assets/images/signatureBlack.gif">
 
         </div>
