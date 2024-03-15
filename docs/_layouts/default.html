@@ -17,6 +17,8 @@
             {% unless page.path contains '/index' or page.url == site.baseurl %}
                 {% include breadcrumbs.html %}
             {% endunless  %}
+            Page URL: {{ page.url }}
+Site Base URL: {{ site.baseurl }}
 
             <!-- header -->
             <header>{{ page.title }}</header>
