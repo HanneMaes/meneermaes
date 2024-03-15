@@ -8,6 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
             link.setAttribute('target', '_blank');
         }
     });
-console.log('xxx')
+    
 });
 

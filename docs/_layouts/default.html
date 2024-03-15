@@ -1,5 +1,9 @@
-
-{% include head.html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+    {% include customCSS.html %}
+</head>
 <body>
 
     <!------------->
@@ -10,9 +14,9 @@
         <div class="sectionContent">
 
             <!-- breadcrumbs -->
-            {% if page.breadcrumbs == true %}
+            {% unless page.path contains '/index' or page.url == site.baseurl %}
                 {% include breadcrumbs.html %}
-            {% endif %}
+            {% endunless  %}
 
             <!-- header -->
             <header>{{ page.title }}</header>
