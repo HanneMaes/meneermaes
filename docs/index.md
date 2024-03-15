@@ -14,5 +14,3 @@ date: 2024-03-13T10:31:28+01:00
 # Grafisch Design
 
 [Blender](https://hannemaes.github.io/BlenderWorkshop/)
-
-[Test](content/test/index)
