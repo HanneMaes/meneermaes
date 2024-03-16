@@ -32,8 +32,8 @@
                     <!-- only show link to section when not on a section page -->
                     
                         <span class="navDivider">/</span>
-                        
-                        
+                         <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+                                <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
                         <a href="/meneermaes/content/markdown/index">Markdown</a>
                     
                     
@@ -128,7 +128,10 @@ Voor nog meer tips kan je terecht in de <a href="https://code.visualstudio.com/D
     <footer>
         <div class="footerContent">
 
-            <a href="content/about">About</a>
+            <div>
+                <a href="content/about">About</a>
+                <p>CC-BY & GPL</p>
+            </div>
             <div class="pageInfo">Created on 04/03/2024, last modified: </div>
             <img width="107px" height="60px" src="/meneermaes/assets/images/signatureBlack.gif">
 
