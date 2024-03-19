@@ -47,13 +47,13 @@ footer: Markdown Presentaties
 
 ![bg](images/presentatie/bg.jpg)
 
-# Waarom presenteren markdown?
+# Waarom presenteren Markdown?
 
 ---
 
 ![bg right:25%](images/presentatie/bg.jpg)
 
-# Waarom presenteren in markdown?
+# Waarom presenteren in Markdown?
 
 - Zet bestaande Markdown **snel** om in een presentatie
 - **Focus op de inhoud**
@@ -95,7 +95,7 @@ footer: Markdown Presentaties
 
 # Hoe?
 
-1. Installeer de **Marps for VS Code** extension via [marp.app](https://marp.app/#get-started)
+1. Installeer de **Marp for VS Code** extension via [https://marp.app](https://marp.app/#get-started)
 
 ---
 
@@ -149,7 +149,7 @@ theme: default
 ---
 ```
 
-`theme: default` bekijk [hier](https://github.com/marp-team/marp-core#features) alle themes
+`theme: default` bekijk alle themes op [https://github.com/marp-team/marp-core/tree/main/themes](https://github.com/marp-team/marp-core/tree/main/themes)
 `class: invert` voeg dit toe voor **dark mode**
 `paginate: true` voeg **pagina nummers** toe
 `footer: by Hanne Maes` voeg een **footer** toe
@@ -222,7 +222,7 @@ Kies het export type:
     }
 </style>
 
-> Alle nodig info kan je in de [officiële documentatie]() terugvinden
+> Alle nodig info kan je in de officiële documentatie terugvinden: [https://marpit.marp.app/markdown](https://marpit.marp.app/markdown)
 
 |   **Puntenverdeling**      | **/16** |
 |---|---|
