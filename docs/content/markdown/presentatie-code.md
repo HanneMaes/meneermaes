@@ -157,8 +157,8 @@ theme: default
 `theme: default` bekijk alle themes [hier](https://github.com/marp-team/marp-core/tree/main/themes)
 `class: invert` voeg dit toe voor **dark mode**
 `paginate: true` voeg **pagina nummers** toe
-`footer: by Hanne Maes` voeg een **footer** toe
-`header: Markdown presentaties` voeg een **header** toe
+`footer: Markdown Presentaties` voeg een **footer** toe
+`header: by Hanne Maes` voeg een **header** toe
 
 ---
 <!-- single slide settings -->
@@ -198,8 +198,10 @@ Global custom CSS plaats je **direct onder de marp settings**:
 ---
 marp: true
 ---
-
 <style>
+    {
+        background-color: red;
+    }
     strong {
         color: #00d4ff;
     }
