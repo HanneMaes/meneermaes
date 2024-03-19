@@ -6,6 +6,7 @@ header: '![width:50](images/Markdown-mark-light.png)'
 footer: Markdown Presentaties
 ---
 
+<!-- global css -->
 <style>
     strong {
         color: #00d4ff;
@@ -15,6 +16,7 @@ footer: Markdown Presentaties
     }
 </style>
 
+<!-- single slide CSS -->
 <style scoped>
     h1 {
         margin-left: auto;
@@ -33,6 +35,7 @@ footer: Markdown Presentaties
 
 ---
 
+<!-- single slide CSS -->
 <style scoped>
     h1 {
         margin-left: auto;
@@ -61,6 +64,7 @@ footer: Markdown Presentaties
 
 ---
 
+<!-- single slide CSS -->
 <style scoped>
     h1 {
         margin-left: auto;
@@ -76,6 +80,7 @@ footer: Markdown Presentaties
 ![bg](images/presentatie/bg.jpg)
 
 # Waarom een online presentatie?
+
 ---
 
 ![bg right:25%](images/presentatie/bg.jpg)
@@ -149,13 +154,14 @@ theme: default
 ---
 ```
 
-`theme: default` bekijk alle themes op [https://github.com/marp-team/marp-core/tree/main/themes](https://github.com/marp-team/marp-core/tree/main/themes)
+`theme: default` bekijk alle themes [hier](https://github.com/marp-team/marp-core/tree/main/themes)
 `class: invert` voeg dit toe voor **dark mode**
 `paginate: true` voeg **pagina nummers** toe
 `footer: by Hanne Maes` voeg een **footer** toe
 `header: Markdown presentaties` voeg een **header** toe
 
 ---
+<!-- single slide settings -->
 <!-- _backgroundColor: white -->
 <!-- _color: black -->
 
@@ -216,13 +222,14 @@ Kies het export type:
 
 ---
 
+<!-- single slide CSS -->
 <style scoped>
     * {
     font-size: 24px;
     }
 </style>
 
-> Alle nodig info kan je in de officiële documentatie terugvinden: [https://marpit.marp.app/markdown](https://marpit.marp.app/markdown)
+> Alle nodig info kan je in de [officiële documentatie](https://marpit.marp.app/markdown) terugvinden
 
 |   **Puntenverdeling**      | **/16** |
 |---|---|
@@ -234,3 +241,4 @@ Kies het export type:
 | Slide met background image | /2 |
 | Slide met background image op de helft van het scherm | /2 |
 | Je publiceert je presentatie via GitHub pages en maakt een link vanuit index.md | /2 |
+
