@@ -227,7 +227,7 @@ Kies het export type:
 <!-- single slide CSS -->
 <style scoped>
     * {
-    font-size: 24px;
+    font-size: 27px;
     }
 </style>
 
