@@ -33,14 +33,49 @@ footer: Markdown Presentaties
 
 ---
 
+<style scoped>
+    h1 {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: black;
+        padding-bottom: 10px;
+        padding-top: 5px;
+        padding-left:  80px;
+        padding-right: 80px;
+    }
+</style>
+
+![bg](images/presentatie/bg.jpg)
+
+# Waarom presenteren markdown?
+
+---
+
 ![bg right:25%](images/presentatie/bg.jpg)
 
-# Waarom markdown?
+# Waarom presenteren in markdown?
 
 - Zet bestaande Markdown **snel** om in een presentatie
 - **Focus op de inhoud**
 - Pas het **ontwerp** later snel een eenvoudig aan
 
+---
+
+<style scoped>
+    h1 {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: black;
+        padding-bottom: 10px;
+        padding-top: 5px;
+        padding-left:  80px;
+        padding-right: 80px;
+    }
+</style>
+
+![bg](images/presentatie/bg.jpg)
+
+# Waarom een online presentatie?
 ---
 
 ![bg right:25%](images/presentatie/bg.jpg)
@@ -187,6 +222,8 @@ Kies het export type:
     }
 </style>
 
+> Alle nodig info kan je in de [officiële documentatie]() terugvinden
+
 |   **Puntenverdeling**      | **/16** |
 |---|---|
 | Hoe duidelijk en uitgebreid is je presentatie | /2 |
@@ -197,14 +234,3 @@ Kies het export type:
 | Slide met background image | /2 |
 | Slide met background image op de helft van het scherm | /2 |
 | Je publiceert je presentatie via GitHub pages en maakt een link vanuit index.md | /2 |
-
-> Alle nodig info kan je in de [officiële documentatie]() terugvinden
-
----
-
-<style scoped>
-    * {
-        margin-left: auto;
-        margin-right: auto;
-    }
-</style>
