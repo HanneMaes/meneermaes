@@ -4,7 +4,7 @@ layout: default
 date: 2024-03-13T10:31:28+01:00
 ---
 
-# Webtechnology
+# Web
 
 [Markdown](content/markdown/index)
 
@@ -13,3 +13,13 @@ date: 2024-03-13T10:31:28+01:00
 # Grafisch Design
 
 [Blender](https://hannemaes.github.io/BlenderWorkshop/)
+
+---
+
+# Externe cursussen
+
+## Linux
+
+[Linux Journey: alles over Linux](https://linuxjourney.com/)
+
+[Linux Survival: een game dat je de beginselen van de Linux terminal leert](https://linuxsurvival.com/)
