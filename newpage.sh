@@ -27,7 +27,7 @@ capitalize_dir() {
 
 # Check if a file path is provided as an argument
 if [ $# -ne 1 ]; then
-    echo "Please provide a file path: $0 <file_path/file.md>"
+    echo "Please provide a file path: $0 <file_path/file>"
     exit 1
 fi
 
@@ -50,10 +50,19 @@ layout: default
 date: $(date)
 ---"
 
+# If the filename does not end with ".md", add it
+extension=""
+if [[ $1 != *.md ]]; then
+    extension=".md"
+fi
+
 # Create the file with the content
-echo "$content" > "$rootdir/$1"
+echo "$content" > "$rootdir/$1$extension"
 
 echo ""
-echo -e "File ${color1}'$rootdir/$1'${nocolor} created with the following content:"
+echo -e "File ${color1}'$rootdir/$1$extension'${nocolor} created with the following content:"
 echo ""
 echo -e "${color2}$content"
+
+# Open the file
+code "$rootdir/$1$extension"

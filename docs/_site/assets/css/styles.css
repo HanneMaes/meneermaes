@@ -36,7 +36,7 @@ body {
 
 section {
     background-color: var(--white);
-    background-image: url("../images/50.png");
+    background-image: url("../images/50.jpg");
 
     display: flex;
     flex-direction: column;
