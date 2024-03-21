@@ -12,6 +12,8 @@
     <!-- apply custom CSS to some page -->
     
 
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
 </head>
 <body>
 
@@ -38,7 +40,30 @@
             <header>Webtechnology</header>
 
             <!-- content -->
-            
+            <h1 id="responive">Responive</h1>
+
+<div class="codeLanguage">css</div>
+<pre><code>
+    
+    .left, .right {
+        float: left;
+        width: 20%; /* The width is 20%, by default */
+    }
+
+    .main {
+        float: left;
+        width: 60%; /* The width is 60%, by default */
+    }
+
+    /* Use a media query to add a breakpoint at 800px: */
+    @media screen and (max-width: 800px) {
+        .left, .main, .right {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+        }
+    }
+
+</code></pre>
+
 
 
         </div> <!-- sectionContent -->
@@ -65,7 +90,12 @@
     <!-- JAVASCRIPT -->
     <!---------------->
 
+    <!-- my javascript -->
     <script src="/meneermaes/assets/javascript/script.js"></script> 
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
 </body>
 </html>

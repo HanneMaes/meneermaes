@@ -25,6 +25,11 @@
     src: url('fonts/Legquinne-Regular.otf');
 }
 
+@font-face {
+    font-family: codeFont;
+    src: url('fonts/CascadiaCode/CascadiaMono.woff2');
+}
+
 /********/
 /* body */
 /********/
@@ -100,6 +105,33 @@ a[href*='//']::after {
 
 strong {
     color: var(--textDark);
+}
+
+/********/
+/* code */
+/********/
+
+code, .codeLanguage {
+    font-family: codeFont;
+}
+
+.codeLanguage {
+    color: var(--medium);
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 10px;
+}
+
+code {
+    border: 3px solid var(--medium);
+    user-select: none;
+    border-radius: var(--roundness);
+    padding-top: 0 !important;
+}
+
+pre {
+    margin-top: 0;
+    display: inline-block;
 }
 
 /*******************/
