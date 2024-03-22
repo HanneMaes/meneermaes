@@ -1,12 +1,20 @@
 ---
-title: Webtechnology
+title: Responsive design
 layout: default
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
 # Responive
 
-{% capture code %}
+```html
+<html>
+    <head>
+    </head>
+    xxx
+</html>
+```
+
+```css
     .left, .right {
         float: left;
         width: 20%; /* The width is 20%, by default */
@@ -23,6 +31,8 @@ date: Wed, Mar 20, 2024  3:36:23 PM
         width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
         }
     }
-{% endcapture %}
-{% include code.html title="css" content=code %}
+```
 
+```javascript
+getal = 21
+```
