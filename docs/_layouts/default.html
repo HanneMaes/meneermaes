@@ -57,10 +57,12 @@
         <div class="footerContent">
 
             <div>
-                <a href="content/about">About</a>
+                <p><a href="content/about">About</a></p>
                 <p>CC-BY & GPL</p>
             </div>
-            <div class="pageInfo">Created on {{ page.date | date: "%d/%m/%Y" }}, last modified: {{ page.last_modified_at | date: "%d/%m/%Y %H:%M" }}</div>
+            <div class="pageInfo">
+                <a href="content/blank">Blank</a>, Created on {{ page.date | date: "%d/%m/%Y" }}
+            </div>
             <img width="107px" height="60px" src="{{ site.baseurl }}/assets/images/signatureBlack.gif">
 
         </div>
