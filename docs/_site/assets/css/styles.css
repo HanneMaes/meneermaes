@@ -265,7 +265,8 @@ li::marker { /* colorize sorted & unsorted list numbers and bullets */
 img {
     max-width: 100%;
     border-radius: var(--roundness);
-    margin-right: 10px;
+    margin-right:  10px;
+    margin-bottom: 10px;
 }
 
 iframe {

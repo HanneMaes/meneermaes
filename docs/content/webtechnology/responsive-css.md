@@ -157,6 +157,9 @@ Zowel **Firefox** als **Chrome** hebben ingebouwde opties voor het ontwikkelen v
 
 ## Stap 1: Row vs column
 
+![alt text](images/oef-gallery-desktop.png)
+![alt text](images/oef-gallery-mobile.png)
+
 Maak een **responsive gallery website** met minstens 3 afbeelding.
 - Desktop:
     - De **afbeeldingen** staan in een **rij**.
@@ -165,10 +168,10 @@ Maak een **responsive gallery website** met minstens 3 afbeelding.
     - De **afbeeldingen** staan in een **kolom**.
     - De **achtergrond** van de titel heeft een **kleur**.
 
-![alt text](images/oef-gallery-desktop.png)
-![alt text](images/oef-gallery-mobile.png)
+## Stap 2: Navbar vs hamburger menu
 
-## stap 2: Navbar vs hamburger menu
+![alt text](images/oef-gellery-nav.png)
+![alt text](images/oef-gallery-hamburger.png)
 
 Geef je gallery een **responsive menu**:
 - Desktop: 
@@ -176,5 +179,10 @@ Geef je gallery een **responsive menu**:
 - Mobile: 
     - Een **hamburger menu** dat een **full-screen menu** opent.
 
-![alt text](images/oef-gellery-nav.png)
-![alt text](images/oef-gallery-hamburger.png)
+**Tip:** Met deze CSS-regel kan je een HTML-element verwijderen:
+
+```css
+.hide {
+    display: none;
+}
+```
