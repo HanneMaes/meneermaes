@@ -1,15 +1,12 @@
 ---
 title: Wat is Markdown
-layout: default
 date: 2024-03-04T13:37:48+01:00
 ---
 
 # Wat is Markdown?
 
-![Markdown Logo](/markdown/images/Markdown-mark.png)
-
->Markdown is een **opmaaktaal** zoals HTML.
->Het staat bekend voor zijn **eenvoudige syntax** en **leesbare broncode**.
+Markdown is een **opmaaktaal** zoals HTML.  
+Het staat bekend voor zijn **eenvoudige syntax** en **leesbare broncode**.
 
 Het gebruik van Markdown verschilt van een WYSIWYG-editor. In toepassingen zoals Microsoft Word klik je op **knoppen** om woorden en zinnen te formatteren, en de wijzigingen zijn direct zichtbaar. Markdown werkt anders. 
 Bij het maken van een Markdown-geformatteerd bestand voeg je **syntaxis** toe aan de tekst om aan te geven welke woorden en zinnen er anders uit moeten zien.

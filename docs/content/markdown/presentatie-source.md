@@ -2,7 +2,7 @@
 marp: true
 theme: default
 class: invert
-header: '![width:50](images/Markdown-mark-light.png)'
+header: '![width:50](images-presentatie/Markdown-mark-light.png)'
 footer: Markdown Presentaties
 ---
 
@@ -29,7 +29,7 @@ footer: Markdown Presentaties
     }
 </style>
 
-![bg](images/presentatie/bg.jpg)
+![bg](images-presentatie/bg.jpg)
 
 # Presentaties in Markdown
 
@@ -48,13 +48,13 @@ footer: Markdown Presentaties
     }
 </style>
 
-![bg](images/presentatie/bg.jpg)
+![bg](images-presentatie/bg.jpg)
 
 # Waarom presenteren Markdown?
 
 ---
 
-![bg right:25%](images/presentatie/bg.jpg)
+![bg right:25%](images-presentatie/bg.jpg)
 
 # Waarom presenteren in Markdown?
 
@@ -77,13 +77,13 @@ footer: Markdown Presentaties
     }
 </style>
 
-![bg](images/presentatie/bg.jpg)
+![bg](images-presentatie/bg.jpg)
 
 # Waarom een online presentatie?
 
 ---
 
-![bg right:25%](images/presentatie/bg.jpg)
+![bg right:25%](images-presentatie/bg.jpg)
 
 # Waarom een online presentatie?
 
@@ -96,7 +96,7 @@ footer: Markdown Presentaties
 
 ---
 
-![bg right](images/presentatie/bg.jpg)
+![bg right](images-presentatie/bg.jpg)
 
 # Hoe?
 
@@ -130,16 +130,16 @@ marp: true
     1. `ctrl + shift + p`
     2. `Open Preview` of `Open Preview to the Side`
 
-    ![width:1000](images/presentatie/marp%20open%20preview.png)
+    ![width:1000](images-presentatie/marp%20open%20preview.png)
 
 ---
 
 Als de preview geen slides zijn:
 
 1. Klik op het **Marp icoontje**
-    ![width:800](images/presentatie/icon.png)
+    ![width:800](images-presentatie/icon.png)
 2. Selecteer **Toggle Marp**
-    ![width:800](images/presentatie/toggle.png)
+    ![width:800](images-presentatie/toggle.png)
 
 --- 
 
@@ -218,7 +218,7 @@ Kies het export type:
 
 1. Klik op het **Marp icoontje**
 2. Selecteer **Open Extension Settings**
-    ![width:800](images/presentatie/settings.png)
+    ![width:800](images-presentatie/settings.png)
 3. Export Type: **html** of **pptx**
 4. Klik op het **Marp icoontje** en selecteer **Export Slide Deck**
 

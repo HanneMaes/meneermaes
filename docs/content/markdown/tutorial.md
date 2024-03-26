@@ -1,6 +1,5 @@
 ---
 title: Hoe gebruik je Markdown
-layout: default
 date: 2024-03-04T13:37:48+01:00
 ---
 
@@ -52,10 +51,10 @@ Voor nog meer tips kan je terecht in de [officiële VS Code documentatie](https:
 
 De **Outline View onderaan de File Explorer** toont de structuur van het open Markdown bestand en kan dienen als een soort **inhoudstafel**.
 
-![outline](/markdown/images/outline.png)
+![alt text](images/outline.png)
 
 ## Afbeeldingen slepen
 
 Vanuit de **File Explorer** kan je afbeeldingen slepen met de `shift` toets, vergeet niet de `alt text` aan te passen.
 
-![image drag and drop](/markdown/images/drop-link.gif)
+![alt text](images/drop-link.gif)

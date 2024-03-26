@@ -1,1 +1,8 @@
 baseurl: /meneermaes
+
+# default file settings
+defaults:
+  - scope:
+      path: "" # empty string means all files
+    values:
+      layout: default # make default the layout of all files not specifying a layout in the front matter
