@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo ""
+
 # Define the directory
 directory="content"
 
