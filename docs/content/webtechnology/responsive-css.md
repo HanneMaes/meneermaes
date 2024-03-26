@@ -150,7 +150,9 @@ body {
 
 # Developer tools
 
-Zowel **Firefox** als **Chrome** hebben ingebouwde opties voor het ontwikkelen van mobiele en responsieve websites in hun **Developer Tools F12**.
+Zowel **Firefox** als **Chrome** hebben ingebouwde opties voor het ontwikkelen van mobiele en responsieve websites in hun **Developer Tools F12**.  
+
+![alt text](images/media-query-developer-tools-mobile.gif)
 
 # Oefening: Responsive CSS
 
@@ -186,7 +188,7 @@ Geef je gallery een **responsive menu**:
 }
 ```
 
-# Media query Breakpoints
+# Media query breakpoints
 
 Media query breakpoints zijn de specifieke schermgroottes die je instelt om je design aan te passen, dit zijn veelgebruikte breakpoints.  
 Maar pas op, met het grote veranderende aanbod aan toestellen kunnen er altijd uitzonderingen zijn.
