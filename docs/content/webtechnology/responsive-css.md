@@ -151,6 +151,30 @@ body {
 
 # Developer tools
 
-# Oefening 01: Row vs column
+Zowel **Firefox** als **Chrome** hebben ingebouwde opties voor het ontwikkelen van mobiele en responsieve websites in hun **Developer Tools F12**.
 
-# Oefening 02: Navbar vs hamburger menu
+# Oefening: Responsive CSS
+
+## Stap 1: Row vs column
+
+Maak een **responsive gallery website** met minstens 3 afbeelding.
+- Desktop:
+    - De **afbeeldingen** staan in een **rij**.
+    - De **achtergrond** van de titel is **doorschijnend**.
+- Mobile:
+    - De **afbeeldingen** staan in een **kolom**.
+    - De **achtergrond** van de titel heeft een **kleur**.
+
+![alt text](images/oef-gallery-desktop.png)
+![alt text](images/oef-gallery-mobile.png)
+
+## stap 2: Navbar vs hamburger menu
+
+Geef je gallery een **responsive menu**:
+- Desktop: 
+    - Een **horizontale** navbar.
+- Mobile: 
+    - Een **hamburger menu** dat een **full-screen menu** opent.
+
+![alt text](images/oef-gellery-nav.png)
+![alt text](images/oef-gallery-hamburger.png)
