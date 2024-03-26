@@ -17,10 +17,6 @@ Media queries stellen ons in staat om **specifieke CSS-regels** toe te passen op
 ```
 
 ```css
-body {
-    font-size: 30px;
-}
-
 .text::before {
     content: 'desktop';
     color: goldenrod;
@@ -60,12 +56,12 @@ body {
 ### Oriëntatie (Liggend/Portret)
 
 ```css
-/* Portretmodus */
+/* Portrait (verticaal) */
 @media only screen and (orientation: portrait) {
   /* CSS-regels */
 }
 
-/* Liggende */
+/* Landscape (horizontaal) */
 @media only screen and (orientation: landscape) {
   /* CSS-regels */
 }
@@ -95,7 +91,7 @@ body {
 /* orientatie */
 /**************/
 
-/* Portretmodus */
+/* Portrait (verticaal) */
 @media only screen and (orientation: portrait) {
     body {
         background-color: black;
@@ -106,7 +102,7 @@ body {
     }
 }
   
-/* Liggende */
+/* Landscape (horizontaal) */
 @media only screen and (orientation: landscape) {
     body {
         background-color: white;
@@ -121,6 +117,7 @@ body {
 /* screensize */
 /**************/
 
+/* Schermen breder dan 700px */
 @media screen and (min-width: 700px) {
     .text {
         font-size: 100px;
@@ -130,6 +127,7 @@ body {
     }
 }
 
+/* Schermen tussen 700px en 530 px breed */
 @media screen and (max-width: 700px) and (min-width: 530px) {
     .text {
         font-size: 80px;
@@ -139,6 +137,7 @@ body {
     }
 }
 
+/* Schermen kleiner dan 530px breed */
 @media (max-width: 530px) {
     .text {
         font-size: 30px;
@@ -186,3 +185,13 @@ Geef je gallery een **responsive menu**:
     display: none;
 }
 ```
+
+# Media query Breakpoints
+
+Media query breakpoints zijn de specifieke schermgroottes die je instelt om je design aan te passen, dit zijn veelgebruikte breakpoints.  
+Maar pas op, met het grote veranderende aanbod aan toestellen kunnen er altijd uitzonderingen zijn.
+
+- **576px** voor **portrettelefoons**
+- **768px** voor **tablets**
+- **992px** voor **laptops**
+- **1200px** voor **desktop computers**
