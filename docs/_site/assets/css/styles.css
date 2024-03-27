@@ -81,7 +81,7 @@ header {
 }
 
 h1 {
-    margin-top: calc(var(--spacingBig) * 2);
+    margin-top: var(--spacingBig);
     color: var(--medium);
     font-size: 50px;
 }

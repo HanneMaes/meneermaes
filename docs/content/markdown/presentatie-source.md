@@ -222,25 +222,3 @@ Kies het export type:
 3. Export Type: **html** of **pptx**
 4. Klik op het **Marp icoontje** en selecteer **Export Slide Deck**
 
----
-
-<!-- single slide CSS -->
-<style scoped>
-    * {
-    font-size: 27px;
-    }
-</style>
-
-> Alle nodig info kan je in de [officiële documentatie](https://marpit.marp.app/markdown) terugvinden
-
-|   **Puntenverdeling**      | **/16** |
-|---|---|
-| Hoe duidelijk en uitgebreid is je presentatie | /2 |
-| Een theme | /2 |
-| Afbeelding waarvan je de grootte zelf bepaald | /2 |
-| Header en/of footer | /2 |
-| Header en/of footer met image | /2 |
-| Slide met background image | /2 |
-| Slide met background image op de helft van het scherm | /2 |
-| Je publiceert je presentatie via GitHub pages en maakt een link vanuit index.md | /2 |
-
