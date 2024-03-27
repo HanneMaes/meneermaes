@@ -43,10 +43,12 @@ filename_no_extension_capitalized=$(capitalize_dir "$filename_no_extension")
 directory=$(dirname -- "$1")
 mkdir -p "$rootdir/$directory"
 
+# Get the time and date
+
 # Define the content
 content="---
 title: $filename_no_extension_capitalized
-date: $(date)
+date: $(date +'%Y-%m-%d %H:%M:%S %z')
 ---"
 
 # If the filename does not end with ".md", add it

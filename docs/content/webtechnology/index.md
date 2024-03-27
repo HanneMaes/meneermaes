@@ -17,4 +17,11 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [Responsive design met max-values](maxvalues)  
 
+[Responsive design met JavaScript](Responsive-design-met-JavaScript) 
+
 [De mobile-first filosofie](responsive-mobilefirst)
+
+# Portfolio website project
+
+1. [First draft](First-draft)
+2. [Responsive website](Responsive-website) 

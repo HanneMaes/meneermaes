@@ -30,3 +30,9 @@ Hoewel de trend van mobiel-gericht ontwerp snel groeit en mobiele apparaten een 
 - **Complexe inhoud**: Desktopweergaven bieden meer ruimte voor het presenteren van complexe inhoud, zoals uitgebreide grafieken, tabellen, formulieren en lange teksten.
 
 ![alt text](images/mobile-vs-desktop.png)
+
+---
+title: responsive-mobilefirst.md
+date: 2024-03-27 15:35:43 +01:00
+---
+
