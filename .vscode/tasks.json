@@ -1,0 +1,49 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Startup (git pull)",
+            "type": "shell",
+            "command": "bash \"${workspaceFolder}/task-startup.sh\"",
+            "problemMatcher": [],
+            "group": {
+                "kind": "custom",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true,
+            },
+            "runOptions": { "runOn": "folderOpen" }
+        },{
+            "label": "Serve Jekyll server",
+            "type": "shell",
+            "command": "bash \"${workspaceFolder}/task-serve.sh\"",
+            "problemMatcher": [],
+            "group": {
+                "kind": "custom",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": false,
+            }
+        },{
+            "label": "Push fast",
+            "type": "shell",
+            "command": "bash \"${workspaceFolder}/task-pushfast.sh\"",
+            "problemMatcher": [],
+            "group": {
+                "kind": "custom",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true,
+            }
+        }
+    ]
+}
