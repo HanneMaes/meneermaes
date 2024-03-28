@@ -119,11 +119,9 @@ strong {
 }
 
 blockquote {
-    border-left: 5px solid var(--medium);
-    background-color: rgba(255, 255, 255, .5);
-    padding-left: 15px;
-    border-top-right-radius: var(--roundness);
-    border-bottom-right-radius: var(--roundness);
+    font-size: 2em;
+    font-style: italic;
+    text-align: center;
 }
 
 /********/

@@ -5,6 +5,8 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 # Wat is mobile-first?
 
+> Mobile-first is het ontwerpen van websites eerst voor mobile en nadien voor desktop.
+
 Mobile-first is een **ontwerpfilosofie** waarbij de **focus** ligt op het ontwerpen en van websites en applicaties voor **mobiele apparaten**, voordat er wordt gedacht aan het ontwerp voor desktopcomputers. Deze aanpak staat in contrast met de traditionele benadering waarbij websites eerst worden ontworpen voor desktops en vervolgens worden aangepast aan kleinere schermen.  
 
 Mobile-first stimuleert een meer doordachte benadering van webontwikkeling, waarbij de **behoeften van mobiele gebruikers centraal staan**.  
