@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# cd docs/
+cd docs/
 bundle exec jekyll serve
