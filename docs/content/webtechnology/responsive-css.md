@@ -149,7 +149,7 @@ body {
 
 # Developer tools
 
-Zowel **Firefox** als **Chrome** hebben ingebouwde opties voor het ontwikkelen van mobiele en responsieve websites in hun **Developer Tools F12**.  
+Zowel **Firefox** als **Chrome** hebben ingebouwde opties voor het ontwikkelen van mobiele en responsieve websites in hun **Developer Tools** via {% include btn.html btn="F12" %} of {% include ui.html ui="rc, inspect" %} of {% include ui.html ui="ham, Developer tools" %}.  
 
 ![alt text](images/media-query-developer-tools-mobile.gif)
 

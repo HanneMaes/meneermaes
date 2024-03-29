@@ -22,7 +22,12 @@
 
 @font-face {
     font-family: titleFont;
-    src: url('fonts/Legquinne-Regular.otf');
+    src: url('fonts/legquinne/Legquinne-Regular.otf');
+}
+
+@font-face {
+    font-family: textFont;
+    src: url('fonts/tt_ramillas/TT\ Ramillas\ Trial\ Regular.ttf');
 }
 
 @font-face {
@@ -37,6 +42,7 @@
 body {
     color: var(--text);
     margin: 0;
+    font-family: textFont;
 }
 
 section {
@@ -69,7 +75,7 @@ hr {
 /* typography */
 /**************/
 
-header, h1, h2, h3, h4, h5 {
+header, h1, h2 {
     font-family: titleFont;
     color: var(--textDark);
 }
@@ -119,9 +125,12 @@ strong {
 }
 
 blockquote {
-    font-size: 2em;
+    color: var(--medium);
+    font-size: 1.7em;
     font-style: italic;
     text-align: center;
+    padding-top:    10px;
+    padding-bottom: 10px;
 }
 
 /********/
@@ -157,6 +166,35 @@ code {
 
 pre {
     margin-top: 0;
+}
+
+/***********************/
+/* UI elements in text */
+/***********************/
+
+.btn, .ui {
+    font-family: codeFont;
+    font-size: 0.8em;
+    background-color: var(--light);
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 1px;
+    padding-right: 4px;
+    padding-left:  4px;
+    text-transform: capitalize;
+}
+
+.btn {
+    border-bottom: 3px solid var(--medium);
+}
+
+.ui {
+    /* border: 2px solid var(--medium);  */
+}
+
+.uiSeparator {
+    color: var(--medium);
+    font-weight: bold;
 }
 
 /*******************/
