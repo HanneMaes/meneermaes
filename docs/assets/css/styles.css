@@ -20,19 +20,86 @@
     --roundness: 10px;
 }
 
+/* title font */
 @font-face {
     font-family: titleFont;
     src: url('fonts/legquinne/Legquinne-Regular.otf');
 }
 
+/* normal font */
 @font-face {
     font-family: textFont;
     src: url('fonts/tt_ramillas/TT\ Ramillas\ Trial\ Regular.ttf');
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+    font-family: textFont;
+    src: url('fonts/tt_ramillas/TT\ Ramillas\ Trial\ Italic.ttf');
+        font-weight: normal;
+        font-style: italic;
+}
+@font-face {
+    font-family: textFont;
+    src: url('fonts/tt_ramillas/TT\ Ramillas\ Trial\ Medium.ttf');
+        font-weight: medium;
+        font-style: normal;
+}
+@font-face {
+    font-family: textFont;
+    src: url('fonts/tt_ramillas/TT\ Ramillas\ Trial\ Medium\ Italic.ttf');
+        font-weight: medium;
+        font-style: italic;
+}
+@font-face {
+    font-family: textFont;
+    src: url('fonts/tt_ramillas/TT\ Ramillas\ Trial\ Light.ttf');
+        font-weight: light;
+        font-style: normal;
+}
+@font-face {
+    font-family: textFont;
+    src: url('fonts/tt_ramillas/TT\ Ramillas\ Trial\ Light\ Italic.ttf');
+        font-weight: light;
+        font-style: italic;
+}
+@font-face {
+    font-family: textFont;
+    src: url('fonts/tt_ramillas/TT\ Ramillas\ Trial\ Bold.ttf');
+        font-weight: bold;
+        font-style: normal;
+}
+@font-face {
+    font-family: textFont;
+    src: url('fonts/tt_ramillas/TT\ Ramillas\ Trial\ Bold\ Italic.ttf');
+        font-weight: bold;
+        font-style: italic;
+}
+@font-face {
+    font-family: textFont;
+    src: url('fonts/tt_ramillas/TT\ Ramillas\ Trial\ Black.ttf');
+        font-weight: 900;
+        font-style: normal;
+}
+@font-face {
+    font-family: textFont;
+    src: url('fonts/tt_ramillas/TT\ Ramillas\ Trial\ Black\ Italic.ttf');
+        font-weight: 900;
+        font-style: italic;
 }
 
+/* code font */
 @font-face {
     font-family: codeFont;
-    src: url('fonts/CascadiaCode/CascadiaMono.woff2');
+    src: url('fonts/CascadiaCode/CascadiaMono.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+    font-family: codeFont;
+    src: url('fonts/CascadiaCode/CascadiaMonoItalic.woff2') format('woff2');
+        font-weight: normal;
+        font-style: italic;
 }
 
 /********/
@@ -176,7 +243,6 @@ pre {
     font-family: codeFont;
     font-size: 0.8em;
     background-color: var(--light);
-    font-weight: bold;
     border-radius: 5px;
     padding: 1px;
     padding-right: 4px;
@@ -186,10 +252,6 @@ pre {
 
 .btn {
     border-bottom: 3px solid var(--medium);
-}
-
-.ui {
-    /* border: 2px solid var(--medium);  */
 }
 
 .uiSeparator {
@@ -271,7 +333,6 @@ nav a {
 
 .navDivider {
     color: var(--light);
-    font-weight: bold;
     padding-left:  5px;
     padding-right: 5px;
 }
