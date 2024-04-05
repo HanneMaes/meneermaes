@@ -91,13 +91,13 @@
 /* code font */
 @font-face {
     font-family: codeFont;
-    src: url('fonts/CascadiaCode/CascadiaMono.woff2') format('woff2');
+    src: url('fonts/CascadiaCode/CascadiaMono.woff2');
         font-weight: normal;
         font-style: normal;
 }
 @font-face {
     font-family: codeFont;
-    src: url('fonts/CascadiaCode/CascadiaMonoItalic.woff2') format('woff2');
+    src: url('fonts/CascadiaCode/CascadiaMonoItalic.woff2');
         font-weight: normal;
         font-style: italic;
 }
