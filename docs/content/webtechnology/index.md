@@ -9,19 +9,28 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [Cursus deel I](https://hannemaes.notion.site/Webtechnology-a8880858f95549feaacefcf65a342667)
 
-# Responsive design
+# HTML
 
-[Wat is responsive design?](responsive-into)
+## Je 1e code
 
-[Responsive design met CSS](responsive-css)  
+[Bestandsextensies tonen](Bestandsextensies-tonen)
 
-[Responsive design met max-values](maxvalues)  
+[Hoe snel kan ik deze website maken?](Hoe-snel-kan-ik-deze-website-maken?)
 
-[Responsive design met JavaScript](Responsive-design-met-JavaScript) 
+[Portfolio website: First draft](Portfolio-website-First-draft){: .portfolio }
 
-[De mobile-first filosofie](responsive-mobilefirst)
+# CSS
 
-# Portfolio website project
+## Responsive design
 
-1. [First draft](First-draft)
-2. [Responsive website](Responsive-website) 
+[Wat is responsive design?](Wat-is-responsive-design)
+
+[Media queries](Media-queries)
+
+[Min en max values](Min-en-max-values)
+
+[Responsive design met JavaScript](Responsive-design-met-JavaScript)
+
+[De mobile-first filosofie](Mobile-first)
+
+[Portfolio website: Responsive](Portfolio-website-Responsive){: .portfolio }

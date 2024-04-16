@@ -1,9 +1,7 @@
 ---
-title: 'Responsive design: CSS'
+title: 'Media queries'
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
-
-# Media queries
 
 Media queries stellen ons in staat om **specifieke CSS-regels** toe te passen op basis van de **eigenschappen van het apparaat**.
 
@@ -155,8 +153,6 @@ Zowel **Firefox** als **Chrome** hebben ingebouwde opties voor het ontwikkelen v
 
 # Oefening: Responsive CSS
 
-## Stap 1: Row vs column
-
 ![alt text](images/oef-gallery-desktop.png)
 ![alt text](images/oef-gallery-mobile.png)
 
@@ -167,25 +163,8 @@ Maak een **responsive gallery website** met minstens 3 afbeelding.
 - Mobile:
     - De **afbeeldingen** staan in een **kolom**.
     - De **achtergrond** van de titel heeft een **kleur**.
-
-## Stap 2: Navbar vs hamburger menu
-
-![alt text](images/oef-gellery-nav.png)
-![alt text](images/oef-gallery-hamburger.png)
-
-Geef je gallery een **responsive menu**:
-- Desktop: 
-    - Een **horizontale** navbar.
-- Mobile: 
-    - Een **hamburger menu** dat een **full-screen menu** opent.
-
-**Tip:** Met deze CSS-regel kan je een HTML-element verwijderen:
-
-```css
-.hide {
-    display: none;
-}
-```
+    
+{% include callout.html type='info' content='Hou deze oefening bij want we gaan er nog op verder werken.' %}
 
 # Media query breakpoints
 
