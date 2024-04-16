@@ -19,7 +19,7 @@
         },{
             "label": "Serve Jekyll server",
             "type": "shell",
-            "command": "bash \"${workspaceFolder}/task-serve.sh\"",
+            "command": "bash \"${workspaceFolder}/task-serve-linux.sh\"",
             "problemMatcher": [],
             "group": {
                 "kind": "custom",
@@ -29,6 +29,13 @@
                 "reveal": "always",
                 "panel": "new",
                 "focus": false,
+            },
+            "options": {
+                "shell": {
+                    "windows": {
+                        "command": "bash \"${workspaceFolder}/task-serve-windows.sh\""
+                    }
+                }
             }
         },{
             "label": "Push fast",
