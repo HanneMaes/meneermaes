@@ -149,12 +149,12 @@ body {
 
 Zowel **Firefox** als **Chrome** hebben ingebouwde opties voor het ontwikkelen van mobiele en responsieve websites in hun **Developer Tools** via {% include btn.html btn="F12" %} of {% include ui.html ui="rc, inspect" %} of {% include ui.html ui="ham, Developer tools" %}.  
 
-![alt text](images/media-query-developer-tools-mobile.gif)
+{% include browser.html img='images/media-query-developer-tools-mobile.gif' %}
 
 # Oefening: Responsive CSS
 
-![alt text](images/oef-gallery-desktop.png)
-![alt text](images/oef-gallery-mobile.png)
+{% include browser.html img='images/oef-gallery-desktop.png' %}
+{% include phone.html img='images/oef-gallery-mobile.png' %}
 
 Maak een **responsive gallery website** met minstens 3 afbeelding.
 - Desktop:

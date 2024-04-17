@@ -12,13 +12,13 @@ Het werken met min en max values is vaak simpeler *(op een goede manier)* dan we
 ```css
 .alwaysMaxWidth {
     width: 90%;
-    max-width: 800px;
+    max-width: 300px;
 }
 ```
 
 ```html
 <div class="alwaysMaxWidth">
-    Deze elementen zullen een maximale grootte hebben, zolang zullen nooit groter worden dan 200px.<br>
+    Deze elementen zullen een maximale grootte hebben, zolang zullen nooit groter worden dan 300px.<br>
     Dit is zeer handig afbeeldingen die zo groot mogelijk moeten zijn zonder verlies van kwaliteit.
 </div>
 <img class="alwaysMaxWidth" src="images/big.png">

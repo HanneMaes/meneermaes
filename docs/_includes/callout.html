@@ -1,4 +1,18 @@
 <div class="callout">
-    <!-- {{ include.type }} -->
-    ✏️&nbsp;&nbsp;&nbsp;&nbsp;{{ include.content }}
+    
+    <!-- icon -->
+    {% if include.type == "tip" %}
+        <p class="icon">🤯</p>
+    {% else %}
+        <p class="icon">✏️</p>
+    {% endif %}
+    
+    <!-- title -->
+    <p>
+        {% if include.type == "tip" %}
+            <strong>TIP</strong><br>
+        {% endif %}
+    
+    <!-- content -->
+    {{ include.content }}</p>
 </div>

@@ -189,15 +189,31 @@ blockquote {
 }
 
 .callout {
-    background-color: white;
-    color: var(--dark);
-    border: var(--borderWidth) solid var(--light);
+    background-color: var(--light);
+    color: var(--textDark);
+    border: var(--borderWidth) solid var(--medium);
     
-    padding: 20px;
     margin-top:    var(--spacing);
     margin-bottom: var(--spacing);
     font-weight: bold;
     border-radius: var(--roundness);
+
+    display: flex;
+    flex-direction: row;
+}
+
+.callout p {
+    padding: 20px;
+    margin: 0px;
+}
+
+.callout .icon {
+    padding-right: 0px; /* to not let the icon have double padding with the text */
+}
+
+.callout strong { /* title */
+    color: var(--medium);
+    font-style: italic;
 }
 
 /*********/
@@ -434,4 +450,16 @@ iframe {
     display: block;
     background-color: var(--light);
     color: var(--white);
+}
+
+.phone {
+    border: var(--borderWidth) solid var(--light);
+}
+.browserWindow::before {
+    content: 'x';
+    display: inline;
+    background-color: var(--light);
+    color: var(--white);
+    width: 100px;
+    border-radius: 10px;
 }

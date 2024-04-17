@@ -44,10 +44,112 @@
             <header>Responsive design met JavaScript</header>
 
             <!-- content -->
-            <h1 id="oefening-navbar--hamburger-menu">Oefening: Navbar &amp; hamburger menu</h1>
+            <p>Het gebruik van <strong>CSS</strong> voor het maken van een responsieve website is over het algemeen de <strong>beste aanpak</strong> omdat CSS specifiek is ontworpen voor het stylen van webpagina’s, inclusief het aanpassen van lay-outs op verschillende schermgroottes. <strong>Het laden van CSS-bestanden is sneller en efficiënter dan het uitvoeren van JavaScript-code.</strong></p>
 
-<p><img src="images/oef-gellery-nav.png" alt="alt text" />
-<img src="images/oef-gallery-hamburger.png" alt="alt text" /></p>
+<p>Maar, in bepaalde situaties kan het nuttig zijn om JavaScript te gebruiken voor <strong>aanvullende responsieve functionaliteit</strong>.</p>
+
+<h1 id="voorbeeld">Voorbeeld</h1>
+
+<p>Maak onderstaand voorbeeld na:</p>
+
+<p><img class="browserWindow" src="images/responsive-js.png" /></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// wacht tot de DOM volledig geladen is</span>
+<span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">let</span> <span class="nx">siteWidth</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">siteHeight</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span><span class="p">;</span>
+    
+    <span class="c1">// width &amp; height laten zien op de pagina</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">width</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">siteWidth</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">height</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">siteHeight</span><span class="p">;</span>
+    
+    <span class="c1">// portrait or landscape</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">siteHeight</span> <span class="o">&gt;</span> <span class="nx">siteWidth</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">landscapeOrPortrait</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Portrait</span><span class="dl">"</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">landscapeOrPortrait</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Desktop</span><span class="dl">"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">});</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"width"</span><span class="nt">&gt;&lt;/span&gt;</span> X <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"height"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"landscapeOrPortrait"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<div class="callout">
+    
+    <!-- icon -->
+    
+        <p class="icon">✏️</p>
+    
+    
+    <!-- title -->
+    <p>
+        
+    
+    <!-- content -->
+    Als je deze code uittest zal je merken dat deze niet optimaal is. Onderstaande code zal dit probleem oplossen.</p>
+</div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// wacht tot de DOM volledig geladen is</span>
+<span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">function</span> <span class="nf">screenChange</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// width &amp; height opvragen</span>
+        <span class="kd">let</span> <span class="nx">siteWidth</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span><span class="p">;</span>
+        <span class="kd">let</span> <span class="nx">siteHeight</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span><span class="p">;</span>
+        
+        <span class="c1">// width &amp; height laten zien op de pagina</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">width</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">siteWidth</span><span class="p">;</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">height</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">siteHeight</span><span class="p">;</span>
+        
+        <span class="c1">// portrait or landscape</span>
+        <span class="k">if </span><span class="p">(</span><span class="nx">siteHeight</span> <span class="o">&gt;</span> <span class="nx">siteWidth</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">landscapeOrPortrait</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Portrait</span><span class="dl">"</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">landscapeOrPortrait</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Desktop</span><span class="dl">"</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">resize</span><span class="dl">'</span><span class="p">,</span> <span class="nx">screenChange</span><span class="p">);</span> <span class="c1">// Voer de functie uit wanneer het scherm veranderd</span>
+    <span class="nf">screenChange</span><span class="p">();</span> <span class="c1">// Voer de functie uit om de eerste keer de waarden te laten zien</span>
+
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p><img class="browserWindow" src="images/responsive-js-update.gif" /></p>
+
+<p>Deze code zorgt ervoor dat wanneer we de grootte van het scherm aanpassen onze pagina geüpdatet zal worden.</p>
+<ol>
+  <li>Zet de code om de grootte van het scherm te vinden in een functie.<br />
+ <code class="language-plaintext highlighter-rouge">function screenChange()</code></li>
+  <li>Voer de functie uit elke keer als de grootte van de pagina veranderd.<br />
+ <code class="language-plaintext highlighter-rouge">window.addEventListener('resize', screenChange);</code></li>
+  <li>Nu zal de code enkel uitgevoerd worden wanneer we de pagina van grootte veranderen, en dus niet wanneer we de pagina openen. Daar om moeten we de functie ook nog eens uitvoeren.<br />
+ <code class="language-plaintext highlighter-rouge">screenChange();</code></li>
+</ol>
+
+<h1 id="oefening-navbar--hamburger-menu">Oefening: Navbar &amp; hamburger menu</h1>
+
+<div class="callout">
+    
+    <!-- icon -->
+    
+        <p class="icon">✏️</p>
+    
+    
+    <!-- title -->
+    <p>
+        
+    
+    <!-- content -->
+    Werk verder van "oefening: Responsive CSS".</p>
+</div>
+
+<p><img class="browserWindow" src="images/oef-gellery-nav.png" />
+<img class="phone" src="images/oef-gallery-hamburger.png" /></p>
 
 <p>Geef je gallery een <strong>responsive menu</strong>:</p>
 <ul>
@@ -63,7 +165,22 @@
   </li>
 </ul>
 
-<p><strong>Tip:</strong> Met deze CSS-regel kan je een HTML-element verwijderen:</p>
+<div class="callout">
+    
+    <!-- icon -->
+    
+        <p class="icon">🤯</p>
+    
+    
+    <!-- title -->
+    <p>
+        
+            <strong>TIP</strong><br />
+        
+    
+    <!-- content -->
+    Met deze CSS-regel kan je een HTML-element verwijderen:</p>
+</div>
 
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.hide</span> <span class="p">{</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
