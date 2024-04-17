@@ -442,24 +442,39 @@ iframe {
     border-radius: var(--roundness);
 }
 
+/**********/
+/* frames */
+/**********/
+
 .browserWindow {
+    background-color: var(--medium);
     border: var(--borderWidth) solid var(--light);
+    border-radius: var(--roundness);
+    display: inline-block;
 }
-.browserWindow::before {
-    content: 'x';
-    display: block;
+.browserWindowUi {
     background-color: var(--light);
-    color: var(--white);
+    color: var(--medium);
+    font-size: 14px;
+    font-family: codeFont;
+    letter-spacing: 1px;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px;
+    padding-left:  10px;
+    padding-bottom: 3px;
+
+    /* vertical center text */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.browserWindow img {
+    margin: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius:  0px;
 }
 
 .phone {
-    border: var(--borderWidth) solid var(--light);
-}
-.browserWindow::before {
-    content: 'x';
-    display: inline;
-    background-color: var(--light);
-    color: var(--white);
-    width: 100px;
-    border-radius: 10px;
+
 }

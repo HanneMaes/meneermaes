@@ -7,8 +7,6 @@ Het gebruik van **CSS** voor het maken van een responsieve website is over het a
 
 Maar, in bepaalde situaties kan het nuttig zijn om JavaScript te gebruiken voor **aanvullende responsieve functionaliteit**.
 
-# Voorbeeld
-
 Maak onderstaand voorbeeld na:
 
 {% include browser.html img='images/responsive-js.png' %}
