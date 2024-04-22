@@ -207,13 +207,14 @@ blockquote {
     margin: 0px;
 }
 
-.callout .icon {
-    padding-right: 0px; /* to not let the icon have double padding with the text */
+.callout strong { /* title */
+    color: var(--dark);
+    font-style: italic;
 }
 
-.callout strong { /* title */
-    color: var(--medium);
-    font-style: italic;
+.callout .icon {
+    padding-right: 0px; /* to not let the icon have double padding with the text */
+    font-size: 30px;
 }
 
 /*********/
@@ -446,12 +447,28 @@ iframe {
 /* frames */
 /**********/
 
-.browserWindow {
+.browserWindow, .phone {
     background-color: var(--medium);
     border: var(--borderWidth) solid var(--light);
     border-radius: var(--roundness);
     display: inline-block;
+    margin-top:    var(--spacingSmall);
+    margin-bottom: var(--spacingSmall);
+    margin-right:  var(--spacingSmall);
 }
+
+.browserWindow img {
+    margin: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius:  0px;
+}
+
+.phone img {
+    margin: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius:  0px;
+}
+
 .browserWindowUi {
     background-color: var(--light);
     color: var(--medium);
@@ -469,12 +486,21 @@ iframe {
     justify-content: space-between;
     align-items: center;
 }
-.browserWindow img {
-    margin: 0px;
-    border-top-right-radius: 0px;
-    border-top-left-radius:  0px;
-}
 
-.phone {
+.phoneUi {
+    background-color: var(--light);
+    color: var(--medium);
+    font-size: 14px;
+    font-family: codeFont;
+    letter-spacing: 1px;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px;
+    padding-left:  10px;
+    padding-bottom: 3px;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }

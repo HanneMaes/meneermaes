@@ -1,17 +1,16 @@
 <div class="callout" data-aos="zoom-in">
     
-    <!-- icon -->
+    <!-- icon & title -->
     {% if include.type == "tip" %}
         <p class="icon">🤯</p>
+        <p><strong>TIP</strong><br>
+    {% elsif include.type == "info" %}
+        <p class="icon">💡</p>
+        <p><strong>INFO</strong><br>
     {% else %}
         <p class="icon">✏️</p>
+        <p><strong>OEFENING</strong><br>
     {% endif %}
-    
-    <!-- title -->
-    <p>
-        {% if include.type == "tip" %}
-            <strong>TIP</strong><br>
-        {% endif %}
     
     <!-- content -->
     {{ include.content }}</p>

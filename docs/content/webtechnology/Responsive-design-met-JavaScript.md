@@ -89,7 +89,9 @@ Geef je gallery een **responsive menu**:
 - Mobile: 
     - Een **hamburger menu** dat een **full-screen menu** opent.
 
-{% include callout.html type='tip' content='Met deze CSS-regel kan je een HTML-element verwijderen:' %}
+{% include callout.html type='info' content='Maak je website resonsive met CSS, niet met JavaScript. JavaScript gebruik je alleen wanneer je zaken niet kan doen met CSS!' %}
+
+{% include callout.html type='tip' content='Met onderstaande CSS-regel kan je een HTML-element verwijderen.' %}
 
 ```css
 .hide {

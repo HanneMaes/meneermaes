@@ -7,8 +7,6 @@ In CSS stellen min en max values de **minimale en maximale grootte van een eleme
 
 Het werken met min en max values is vaak simpeler *(op een goede manier)* dan werken met media-queries, omdat je per element enkel een minimale of maximale grootte moet instellen, zonder je ontwerp te moeten gaan aanpassen voor meerdere schermformaten.
 
-# Voorbeelden
-
 ```css
 .alwaysMaxWidth {
     width: 90%;
