@@ -19,6 +19,10 @@ date: 2024-03-13T10:31:28+01:00
 
 # Externe cursussen
 
+## Web
+
+[Pro web typography](https://prowebtype.com/)
+
 ## Linux
 
 [Linux Journey: alles over Linux](https://linuxjourney.com/)
