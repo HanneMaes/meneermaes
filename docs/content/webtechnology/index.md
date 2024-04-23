@@ -1,7 +1,6 @@
 ---
 title: Webtechnology
 date: Wed, Mar 20, 2024  3:36:23 PM
-permalink: /webtechnology/
 ---
 
 # Cursus deel I
