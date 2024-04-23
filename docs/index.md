@@ -5,9 +5,9 @@ date: 2024-03-13T10:31:28+01:00
 
 # Web
 
-[Webtechnology](content/webtechnology/index)
+[Webtechnology](webtechnology)
 
-[Markdown](content/markdown/index)
+[Markdown](markdown/index)
 
 [Webdesign Workshop](https://hannemaes.github.io/webdesignWorkshop/)
 
