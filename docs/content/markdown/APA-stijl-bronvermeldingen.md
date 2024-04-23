@@ -3,9 +3,7 @@ title: APA-stijl bronvermelding
 date: 2024-03-04T13:37:48+01:00
 ---
 
-# Wat is de APA-stijl?
-
-De APA-stijl is een auteur-datumsysteem voor bronvermelding voor het schrijven van wetenschappelijke artikelen, proefschriften en papers op academisch niveau.
+> De APA-stijl is een auteur-datumsysteem voor bronvermelding voor het schrijven van wetenschappelijke artikelen, proefschriften en papers op academisch niveau.
 
 ## De literatuurlijst, ofwel de APA-bronnenlijst
 

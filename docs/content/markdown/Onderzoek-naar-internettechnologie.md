@@ -1,9 +1,7 @@
 ---
-title: Opdracht
+title: Onderzoek naar internettechnologie
 date: 2024-03-04T13:37:48+01:00
 ---
-
-# Onderzoek naar internettechnologie
   
 >In deze opdracht verdiep je je in verschillende internettechnologieën. 
 >Je taak is om onderzoek te doen en uitleg te geven **1 onderwerp**.
@@ -70,4 +68,4 @@ Exporteer je Markdown document naar:
 - **.docx** (Microsoft Word)
 - **.html**
 
-{% include punten.html data='onderzoek-naar-internettechnologie' %}
+{% include punten.html data='Onderzoek-naar-internettechnologie' %}
