@@ -153,6 +153,7 @@ header, h1, h2 {
 
 header {
     margin-top: var(--spacingBig);
+    margin-bottom: var(--spacing);
     font-size: 70px;
     background-color: none !important;
     text-decoration: underline;

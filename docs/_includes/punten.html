@@ -1,3 +1,18 @@
+<!------------------>
+<!-- CSV TO ARRAY -->
+<!------------------>
+
+<!-- get the last dir in the path of the markdown file that is including this file -->
+{% assign dir_segments = page.path | split: '/' %}
+{% assign subdirectory = dir_segments[1] %}
+
+<!-- turn the CSV into an array -->
+{% assign puntenverdeling = site.data[subdirectory][include.data] | csv_to_array %}
+
+<!---------->
+<!-- PAGE -->
+<!---------->
+
 <!-- title -->
 <h1>Puntenverdeling</h1>
 
@@ -18,7 +33,6 @@
 
     <!-- body -->
     <tbody>
-      {% assign puntenverdeling = site.data[include.data] | csv_to_array %}
       {% for row in puntenverdeling %}
       <tr>
         <td>{{ row.onderdeel }}</td>

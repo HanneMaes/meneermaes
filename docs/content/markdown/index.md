@@ -1,6 +1,7 @@
 ---
 title: Markdown
 date: 2024-03-04T13:37:48+01:00
+permalink: /markdown/
 ---
 
 ![Markdown Logo](images/Markdown-mark.png)

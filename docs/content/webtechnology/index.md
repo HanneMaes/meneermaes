@@ -1,6 +1,7 @@
 ---
 title: Webtechnology
 date: Wed, Mar 20, 2024  3:36:23 PM
+permalink: /webtechnology/
 ---
 
 # Cursus deel I
@@ -33,4 +34,4 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [De mobile-first filosofie](Mobile-first)
 
-[Portfolio website: Responsive design](Portfolio-website-Responsive){: .portfolio }
+[Portfolio website: Responsive design](Portfolio-website-Responsive-design){: .portfolio }
