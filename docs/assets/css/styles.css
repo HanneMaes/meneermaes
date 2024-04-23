@@ -152,8 +152,8 @@ header, h1, h2 {
 }
 
 header {
-    margin-top: var(--spacingBig);
-    margin-bottom: var(--spacing);
+    margin-top:    var(--spacingBig);
+    margin-bottom: var(--spacingBig);
     font-size: 70px;
     background-color: none !important;
     text-decoration: underline;
@@ -178,6 +178,10 @@ h3 {
 
 strong {
     color: var(--textDark);
+}
+
+em {
+    color: var(--textLight);
 }
 
 blockquote {
@@ -432,6 +436,7 @@ li::marker { /* colorize sorted & unsorted list numbers and bullets */
 
 img {
     max-width: 100%;
+    max-height: 100%;
     border-radius: var(--roundness);
     margin-right:  10px;
     margin-bottom: 10px;

@@ -19,9 +19,7 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [Portfolio website: First draft](Portfolio-website-First-draft){: .portfolio }
 
-# CSS
-
-## Responsive design
+# Responsive design
 
 [Wat is responsive design?](Wat-is-responsive-design)
 
@@ -34,3 +32,5 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 [De mobile-first filosofie](Mobile-first)
 
 [Portfolio website: Responsive design](Portfolio-website-Responsive-design){: .portfolio }
+
+[Externe libraries](Externe-libraries)

@@ -7,7 +7,7 @@
     <link href="/meneermaes/assets/css/styles.css" rel="stylesheet">
     <link rel="icon" href="/meneermaes/assets/images/favicon.ico" />
 
-    <title>Webtechnology</title>
+    <title>Meneer Maes</title>
 
     <!-- apply custom CSS to some page -->
     
@@ -31,46 +31,40 @@
                         
                     <!-- only show link to section when not on a section page -->
                     
+                        <span class="navDivider">/</span>
+                         <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+                                <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+                        <a href="/meneermaes/content//index"></a>
+                    
                     
                 </nav>
             
 
             <!-- header -->
-            <header data-aos="fade-left">Webtechnology</header>
+            <header data-aos="fade-left">Meneer Maes</header>
 
             <!-- content -->
-            <h1 id="cursus-deel-i">Cursus deel I</h1>
+            # Web
 
-<p><a href="https://hannemaes.notion.site/Cheat-Sheet-8e7723123d574276bc9cd56972dd5e27">Cheatsheet</a></p>
+[Webtechnology](content/webtechnology/index)
 
-<p><a href="https://hannemaes.notion.site/Webtechnology-a8880858f95549feaacefcf65a342667">Cursus deel I</a></p>
+[Markdown](content/markdown/index)
 
-<h1 id="html">HTML</h1>
+[Webdesign Workshop](https://hannemaes.github.io/webdesignWorkshop/)
 
-<h2 id="je-1e-code">Je 1e code</h2>
+# Grafisch Design
 
-<p><a href="Bestandsextensies-tonen">Bestandsextensies tonen</a></p>
+[Blender](https://hannemaes.github.io/BlenderWorkshop/)
 
-<p><a href="Hoe-snel-kan-ik-deze-website-maken?">Hoe snel kan ik deze website maken?</a></p>
+---
 
-<p><a href="Portfolio-website-First-draft" class="portfolio">Portfolio website: First draft</a></p>
+# Externe cursussen
 
-<h1 id="responsive-design">Responsive design</h1>
+## Linux
 
-<p><a href="Wat-is-responsive-design">Wat is responsive design?</a></p>
+[Linux Journey: alles over Linux](https://linuxjourney.com/)
 
-<p><a href="Media-queries">Media queries</a></p>
-
-<p><a href="Min-en-max-values">Min en max values</a></p>
-
-<p><a href="Responsive-design-met-JavaScript">Responsive design met JavaScript</a></p>
-
-<p><a href="Mobile-first">De mobile-first filosofie</a></p>
-
-<p><a href="Portfolio-website-Responsive-design" class="portfolio">Portfolio website: Responsive design</a></p>
-
-<p><a href="Externe-libraries">Externe libraries</a></p>
-
+[Linux Survival: een game dat je de beginselen van de Linux terminal leert](https://linuxsurvival.com/)
 
         </div> <!-- sectionContent -->
     </section>
@@ -89,7 +83,7 @@
                 <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
             </div>
             <div class="pageInfo">
-                <a href="content/blank">Blank</a>, Created on 20/03/2024
+                <a href="content/blank">Blank</a>, Created on 13/03/2024
             </div>
             <img width="107px" height="60px" src="/meneermaes/assets/images/signatureBlack.gif">
 

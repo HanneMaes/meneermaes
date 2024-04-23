@@ -31,7 +31,7 @@ Het werken met min en max values is vaak simpeler *(op een goede manier)* dan we
 Maak een sidebar menu met deze eigenschappen:
 - De sidebar neemt **20%** van de **breedte** van de pagina in.
 - De sidebar moet **tussen de 130 en 250 pixels breed** blijven.
-- De 1e letter van je hoofdtitel heeft een andere kleur, dit doe je met een speciale CSS-selector.
-- Voor de ondertitels staat een speciaal ASCII-symbool in een andere kleur. Op [deze website](https://ss64.com/ascii.html) kan je speciale ASCII-symbolen terugvinden.
-- De links zijn onderlijnt in een andere kleur.
+- De **1e letter** van je hoofdtitel heeft een andere kleur, dit doe je met een speciale CSS-selector.
+- Voor de ondertitels staat een speciaal **ASCII-symbool** in een andere kleur. Op [deze website](https://ss64.com/ascii.html) kan je speciale ASCII-symbolen terugvinden.
+- De links zijn **onderlijnt** in een **andere kleur**.
 - Je sidebar staat **verticaal gecentreerd**.
