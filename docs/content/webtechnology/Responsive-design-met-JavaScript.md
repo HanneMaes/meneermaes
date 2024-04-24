@@ -89,6 +89,8 @@ Geef je gallery een **responsive menu**:
 - Mobile: 
     - Een **hamburger menu** dat een **full-screen menu** opent.
 
+## Tips
+
 {% include callout.html type='info' content='Maak je website resonsive met CSS, niet met JavaScript. JavaScript gebruik je alleen wanneer je zaken niet kan doen met CSS!' %}
 
 {% include callout.html type='tip' content='Met onderstaande CSS-regel kan je een HTML-element verwijderen.' %}
@@ -97,4 +99,14 @@ Geef je gallery een **responsive menu**:
 .hide {
     display: none;
 }
+```
+
+{% include callout.html type='tip' content='Met z-index kan je elementen over of onder elkaar laten komen.' %}
+
+Elementen zonder z-index hebben automatisch een standaard z-index van 0. Hoe hoger de waarde van de z-index, hoe meer naar voren het element wordt geplaatst. Dit betekent dat **een element met een z-index van 2 boven een element met een z-index van 1 wordt geplaatst**.
+
+Belangrijk om te weten is dat z-index niet werkt op elementen die position static hebben.
+
+```css
+z-index: 2;
 ```
