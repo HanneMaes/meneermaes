@@ -12,7 +12,7 @@ JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functi
 
 {% include callout.html type='info' content='Een library kan je best kiezen bij de start van grote projecten. Terwijl je een library later kan toevoegen wanneer je nood hebt aan specifieke functionaliteit.' %}
 
-# Voorbeeld: OAS.js
+# Voorbeeld: OAS.js *(library)*
 
 **Animate on scroll (AOS.js)** is een **library** die je toelaat elementen met een animatie in beeld te laten komen.
 
