@@ -191,13 +191,15 @@
     
     <!-- icon & title -->
     
-        <p class="icon">💡</p>
-        <p><strong>INFO</strong><br />
+        <p class="icon">🤯</p>
+        <p><strong>TIP</strong><br />
     
     
     <!-- content -->
     Maak je website resonsive met CSS, niet met JavaScript. JavaScript gebruik je alleen wanneer je zaken niet kan doen met CSS!</p>
 </div>
+
+<h3 id="display">Display</h3>
 
 <div class="callout" data-aos="zoom-in">
     
@@ -208,13 +210,25 @@
     
     
     <!-- content -->
-    Met onderstaande CSS-regel kan je een HTML-element verwijderen.</p>
+    Met "display: none;" kan je een HTML-element verwijderen.</p>
 </div>
 
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.hide</span> <span class="p">{</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
+
+<p>De display-eigenschap in CSS bepaalt hoe een element wordt weergegeven.</p>
+<ul>
+  <li>‘none’: Het element wordt <strong>niet weergegeven</strong> op de pagina, alsof het niet bestaat.</li>
+  <li>‘block’: Het element wordt weergegeven als een block en neemt standaard de volledige breedte van zijn container in, waardoor het dit element niet op dezelfde regels zal weergegeven worden.<br />
+Een <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> heeft <code class="language-plaintext highlighter-rouge">display: block;</code>.</li>
+  <li>‘inline’: Het element staat op dezelfde regel en neemt alleen zoveel breedte in als nodig is.<br />
+Een <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> heeft <code class="language-plaintext highlighter-rouge">display: inline;</code>.</li>
+  <li>‘inline-block’: Combineert de eigenschappen van inline en block. Het element wordt weergegeven in dezelfde regel als omliggende inhoud, maar kan ook breedte en hoogte hebben zoals een block.</li>
+</ul>
+
+<h3 id="z-index">Z-index</h3>
 
 <div class="callout" data-aos="zoom-in">
     
@@ -228,12 +242,12 @@
     Met z-index kan je elementen over of onder elkaar laten komen.</p>
 </div>
 
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">z-index</span><span class="o">:</span> <span class="err">2</span><span class="o">;</span>
+</code></pre></div></div>
+
 <p>Elementen zonder z-index hebben automatisch een standaard z-index van 0. Hoe hoger de waarde van de z-index, hoe meer naar voren het element wordt geplaatst. Dit betekent dat <strong>een element met een z-index van 2 boven een element met een z-index van 1 wordt geplaatst</strong>.</p>
 
 <p>Belangrijk om te weten is dat z-index niet werkt op elementen die position static hebben.</p>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">z-index</span><span class="o">:</span> <span class="err">2</span><span class="o">;</span>
-</code></pre></div></div>
 
 
         </div> <!-- sectionContent -->

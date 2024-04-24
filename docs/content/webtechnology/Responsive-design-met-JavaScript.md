@@ -91,9 +91,11 @@ Geef je gallery een **responsive menu**:
 
 ## Tips
 
-{% include callout.html type='info' content='Maak je website resonsive met CSS, niet met JavaScript. JavaScript gebruik je alleen wanneer je zaken niet kan doen met CSS!' %}
+{% include callout.html type='tip' content='Maak je website resonsive met CSS, niet met JavaScript. JavaScript gebruik je alleen wanneer je zaken niet kan doen met CSS!' %}
 
-{% include callout.html type='tip' content='Met onderstaande CSS-regel kan je een HTML-element verwijderen.' %}
+### Display
+
+{% include callout.html type='tip' content='Met "display: none;" kan je een HTML-element verwijderen.' %}
 
 ```css
 .hide {
@@ -101,12 +103,22 @@ Geef je gallery een **responsive menu**:
 }
 ```
 
+De display-eigenschap in CSS bepaalt hoe een element wordt weergegeven.
+- 'none': Het element wordt **niet weergegeven** op de pagina, alsof het niet bestaat.
+- 'block': Het element wordt weergegeven als een block en neemt standaard de volledige breedte van zijn container in, waardoor het dit element niet op dezelfde regels zal weergegeven worden.  
+Een `<div>` heeft `display: block;`.
+- 'inline': Het element staat op dezelfde regel en neemt alleen zoveel breedte in als nodig is.  
+Een `<span>` heeft `display: inline;`.
+- 'inline-block': Combineert de eigenschappen van inline en block. Het element wordt weergegeven in dezelfde regel als omliggende inhoud, maar kan ook breedte en hoogte hebben zoals een block.
+
+### Z-index
+
 {% include callout.html type='tip' content='Met z-index kan je elementen over of onder elkaar laten komen.' %}
-
-Elementen zonder z-index hebben automatisch een standaard z-index van 0. Hoe hoger de waarde van de z-index, hoe meer naar voren het element wordt geplaatst. Dit betekent dat **een element met een z-index van 2 boven een element met een z-index van 1 wordt geplaatst**.
-
-Belangrijk om te weten is dat z-index niet werkt op elementen die position static hebben.
 
 ```css
 z-index: 2;
 ```
+
+Elementen zonder z-index hebben automatisch een standaard z-index van 0. Hoe hoger de waarde van de z-index, hoe meer naar voren het element wordt geplaatst. Dit betekent dat **een element met een z-index van 2 boven een element met een z-index van 1 wordt geplaatst**.
+
+Belangrijk om te weten is dat z-index niet werkt op elementen die position static hebben.
