@@ -39,9 +39,6 @@ JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functi
 
 {% include callout.html type='uitdaging' content='Zoek uit hoe je animaties later kan starten en kan bepalen hoe lang ze duren.' %}
 
-## Local files vs hosted files
-
-Library files *(.css, .js)* kunnen lokaal worden gehost, waarbij de bestanden rechtstreeks in de folder van het project worden geplaatst, of extern worden gehost, waarbij de bestanden worden geladen vanaf een externe locatie. 
 
 # Libraries
 
@@ -72,3 +69,7 @@ Kort uileggen wat een design system is.
 
 ## Code in code
 Les hier uit hoe je code kan laten zien op een pagina zonder deze code uit te voeren.
+
+# Local files vs hosted files
+
+Library files *(.css, .js)* kunnen lokaal worden gehost, waarbij de bestanden rechtstreeks in de folder van het project worden geplaatst, of extern worden gehost, waarbij de bestanden worden geladen vanaf een externe locatie. 
