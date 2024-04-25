@@ -1,3 +1,3 @@
 #!/bin/bash
 
-git pull
+gh repo pull # git pull
