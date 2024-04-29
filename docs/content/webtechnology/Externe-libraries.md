@@ -39,8 +39,9 @@ JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functi
 
 {% include callout.html type='uitdaging' content='Zoek uit hoe je animaties later kan starten en kan bepalen hoe lang ze duren.' %}
 
-# Libraries
+# Populaire libraries
 
+Hieronder staan een aantal veelgebruikte libraries:
 - [Hover animaties](http://ianlunn.github.io/Hover/)
 - [Hover & loading animatie](https://www.csswand.dev/)
 - [Reveal animaties](https://www.minimamente.com/project/magic/)
@@ -51,20 +52,23 @@ JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functi
 - [Interactieve 3D content](https://threejs.org/)
 
 # Design systems *(framework)*
-Kort uileggen wat een design system is.
 
+Een design system in is een **verzameling** van herbruikbare **code en elementen** die je kan gebruiken bij het maken van een project. Het bevat onder andere zaken als knoppen, navigatiebalken, icoontjes, kleuren, ...  
+Door een design system te gebruiken kan je snel een websites maken met een mooi en bruikbaar ontwerpen zonder alles handmatig te moeten ontwerpen.
+
+Hieronder staan een aantal veelgebruikte design systems:
 - [Simple.css](https://simplecss.org/)
 - [Google Material Design System](https://materializecss.com/)
 
 # Opdracht
 
 1. Maak een website met een **design system** naar keuze, start met de homepage waarin staat welk **design system** je gekozen hebt en **waarom**. 
-2. Maak een pagina met afbeeldingen en gebruik een **lightbox library**.
-3. Maak minstens **3** andere pagina's die elk gaan over een **externe libraries**.  
-    *Minstens 1 library moet je zelf zoeken en mag niet in de cursus staan.*
+2. Maak een pagina met afbeeldingen en gebruik een **lightbox library** *(ontdek zelf wat een lightbox is)*.
+3. Maak minstens **2** andere pagina's die elk gaan over een **libraries**.  
+    Minstens 1 library moet je zelf zoeken en mag niet in de cursus staan.  
     Op elke pagina vermeld je:
 - **Welke** library het is en **wat** ze doet.
-- Hoe je deze library kan gebruiken, met code voorbeelden.
+- Hoe je deze library kan gebruiken, met **code voorbeelden**.
 
 ## Code in code
 Les hier uit hoe je code kan laten zien op een pagina zonder deze code uit te voeren.
