@@ -49,7 +49,7 @@
 <h1 id="librarie-vs-framework">Librarie vs framework</h1>
 
 <ul>
-  <li>Een <strong>library</strong> biedt een set tools en functies die je kan gebruiken om (meestal kleine) <strong>specifieke taken</strong> uit te voeren.</li>
+  <li>Een <strong>library</strong> biedt een set tools en functies die je kan gebruiken om <em>(meestal kleine)</em> <strong>specifieke taken</strong> uit te voeren.</li>
   <li>Een <strong>framework</strong> bied een een omvattende <strong>structuur en werkwijze</strong> die je <strong>moet</strong> volgen, inclusief richtlijnen en conventies.</li>
 </ul>
 
@@ -65,26 +65,30 @@
     Een library kan je best kiezen bij de start van grote projecten. Terwijl je een library later kan toevoegen wanneer je nood hebt aan specifieke functionaliteit.</p>
 </div>
 
-<h1 id="voorbeeld-oasjs">Voorbeeld: OAS.js</h1>
+<h1 id="voorbeeld-oasjs-library">Voorbeeld: OAS.js <em>(library)</em></h1>
 
 <p><strong>Animate on scroll (AOS.js)</strong> is een <strong>library</strong> die je toelaat elementen met een animatie in beeld te laten komen.</p>
 
-<p><img src="images/aos-voorbeeld.gif" alt="" width="500" /></p>
+<div class="browserWindow" style="width: 500px;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/aos-voorbeeld.gif" />
+</div>
 
 <ol>
-  <li>Surf naar: <a href="https://michalsnik.github.io/aos/">https://michalsnik.github.io/aos/</a>, hier zie je het effect van de libarary.
+  <li>Surf naar: <a href="https://michalsnik.github.io/aos/">https://michalsnik.github.io/aos/</a>,
  Onderaan de pagina zie instructies om de library toe te voegen aan je eigen website.</li>
   <li>Download en unzip de code.</li>
-  <li>Plaats de bestanden in 
-<span class="ui">
+  <li>Plaats de bestanden in <span class="filePath">
  aos-master/dist/
-</span> in de map van je website, in een folder genaamd 
-<span class="ui">
+</span> in de map van je website, in een folder genaamd <span class="filePath">
  libraries/
-</span>. Dit is de code van de library.
+</span>. Dit is de code van de library.<br />
  <img src="images/lib-folder.png" alt="" width="500" /></li>
-  <li>Link in 
-<span class="ui">
+  <li>Link in <span class="filePath">
  index.html
 </span> naar de <strong>CSS</strong> en <strong>JS</strong> bestanden van de library.<br />
  <code class="language-plaintext highlighter-rouge">&lt;link rel="stylesheet" href="libraries/aos.css"&gt;</code><br />
@@ -112,10 +116,6 @@
     <!-- content -->
     Zoek uit hoe je animaties later kan starten en kan bepalen hoe lang ze duren.</p>
 </div>
-
-<h2 id="local-files-vs-hosted-files">Local files vs hosted files</h2>
-
-<p>Library files <em>(.css, .js)</em> kunnen lokaal worden gehost, waarbij de bestanden rechtstreeks in de folder van het project worden geplaatst, of extern worden gehost, waarbij de bestanden worden geladen vanaf een externe locatie.</p>
 
 <h1 id="libraries">Libraries</h1>
 
@@ -155,6 +155,10 @@
 
 <h2 id="code-in-code">Code in code</h2>
 <p>Les hier uit hoe je code kan laten zien op een pagina zonder deze code uit te voeren.</p>
+
+<h1 id="local-files-vs-hosted-files">Local files vs hosted files</h1>
+
+<p>Library files <em>(.css, .js)</em> kunnen lokaal worden gehost, waarbij de bestanden rechtstreeks in de folder van het project worden geplaatst, of extern worden gehost, waarbij de bestanden worden geladen vanaf een externe locatie.</p>
 
 
         </div> <!-- sectionContent -->

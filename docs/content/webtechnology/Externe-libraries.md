@@ -7,7 +7,7 @@ JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functi
 
 # Librarie vs framework
 
-- Een **library** biedt een set tools en functies die je kan gebruiken om (meestal kleine) **specifieke taken** uit te voeren.
+- Een **library** biedt een set tools en functies die je kan gebruiken om *(meestal kleine)* **specifieke taken** uit te voeren.
 - Een **framework** bied een een omvattende **structuur en werkwijze** die je **moet** volgen, inclusief richtlijnen en conventies.
 
 {% include callout.html type='info' content='Een library kan je best kiezen bij de start van grote projecten. Terwijl je een library later kan toevoegen wanneer je nood hebt aan specifieke functionaliteit.' %}
@@ -16,14 +16,14 @@ JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functi
 
 **Animate on scroll (AOS.js)** is een **library** die je toelaat elementen met een animatie in beeld te laten komen.
 
-![](images/aos-voorbeeld.gif){: width="500" }
+{% include browser.html img='images/aos-voorbeeld.gif' width='500px' %}
 
-1. Surf naar: [https://michalsnik.github.io/aos/](https://michalsnik.github.io/aos/), hier zie je het effect van de libarary.
+1. Surf naar: [https://michalsnik.github.io/aos/](https://michalsnik.github.io/aos/),
     Onderaan de pagina zie instructies om de library toe te voegen aan je eigen website.
 2. Download en unzip de code.
-3. Plaats de bestanden in {% include ui.html ui='aos-master/dist/' %} in de map van je website, in een folder genaamd {% include ui.html ui='libraries/' %}. Dit is de code van de library.
+3. Plaats de bestanden in {% include filePath.html fileOrPath='aos-master/dist/' %} in de map van je website, in een folder genaamd {% include filePath.html fileOrPath='libraries/' %}. Dit is de code van de library.  
     ![](images/lib-folder.png){: width="500" }
-4. Link in {% include ui.html ui='index.html' %} naar de **CSS** en **JS** bestanden van de library.  
+4. Link in {% include filePath.html fileOrPath='index.html' %} naar de **CSS** en **JS** bestanden van de library.  
     `<link rel="stylesheet" href="libraries/aos.css">`  
     `<script src="libraries/aos.js"></script>`
 5. Voeg deze code toe om de AOS.js library te starten.  
@@ -38,7 +38,6 @@ JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functi
     ```
 
 {% include callout.html type='uitdaging' content='Zoek uit hoe je animaties later kan starten en kan bepalen hoe lang ze duren.' %}
-
 
 # Libraries
 

@@ -3,10 +3,11 @@
 /*************/
 
 :root {
-    --dark: #714435;
-    --medium: #CD7B60;
-    --light: #E3B9A9;
-    --white: #F0F0EB;
+    --dark: rgb(113, 68, 53);
+    --medium: rgb(205, 123, 96);
+    --light:              rgb(227, 185, 169);
+    --light-transparant: rgba(227, 185, 169, 0.5);
+    --white: rgb(240, 240, 235);
 
     --textDark: rgba(0, 0, 0, .75);
     --text: rgba(0, 0, 0, 0.6);
@@ -194,7 +195,7 @@ blockquote {
 }
 
 .callout {
-    background-color: var(--light);
+    background-color: var(--light-transparant);
     color: var(--textDark);
     border: var(--borderWidth) solid var(--medium);
     
@@ -213,7 +214,7 @@ blockquote {
 }
 
 .callout strong { /* title */
-    color: var(--dark);
+    color: var(--medium);
     font-style: italic;
 }
 
@@ -230,7 +231,7 @@ a {
     color: var(--text);
     text-decoration: underline;
     text-decoration-color: var(--light);
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 2px;
 
     transition: all var(--animSpeed);
 }
@@ -288,7 +289,7 @@ pre {
 /* UI elements in text */
 /***********************/
 
-.btn, .ui {
+.btn, .ui, .filePath {
     font-family: codeFont;
     font-size: 0.8em;
     background-color: var(--light);
@@ -296,6 +297,9 @@ pre {
     padding: 1px;
     padding-right: 4px;
     padding-left:  4px;
+}
+
+.btn, .ui {
     text-transform: capitalize;
 }
 

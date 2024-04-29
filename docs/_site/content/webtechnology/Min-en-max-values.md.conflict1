@@ -65,7 +65,7 @@ Het werken met min en max values is vaak simpeler *(op een goede manier)* dan we
 <img class="alwaysMaxWidth" src="images/big.png">
 ```
 
-<div class="browserWindow">
+<div class="browserWindow" style="width: ;">
     <div class="browserWindowUi">
         <span>www</span>
         <span></span>
@@ -76,7 +76,7 @@ Het werken met min en max values is vaak simpeler *(op een goede manier)* dan we
 
 # Oefening: Sidebar menu
 
-<div class="browserWindow">
+<div class="browserWindow" style="width: ;">
     <div class="browserWindowUi">
         <span>www</span>
         <span></span>
