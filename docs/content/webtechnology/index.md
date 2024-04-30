@@ -15,8 +15,6 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [Bestandsextensies tonen](Bestandsextensies-tonen)
 
-[Hoe snel kan ik deze website maken?](Hoe-snel-kan-ik-deze-website-maken?)
-
 [Portfolio website: First draft](Portfolio-website-First-draft){: .portfolio }
 
 # Responsive design

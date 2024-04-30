@@ -9,4 +9,4 @@ Maak je portfolio website responsive, en publish hem op GitHub pages.
 
 {% include callout.html type='oef' content='Ik zal de responsiveness van je website testen op de smartphone van jouw en op die van mij.' %}
 
-{% include punten.html data='portfolio-website-responsive-design' %}
+{% include punten.html data='portfolio-website-2-responsive-design' %}
