@@ -1,5 +1,8 @@
 baseurl: "" # when not using a custom domain, use this base url: /meneermaes
 
+# how should the url's be generated
+# permalink: /:path/:basename/
+
 # default file settings
 defaults:
   - scope:
