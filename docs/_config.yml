@@ -1,4 +1,4 @@
-baseurl: /meneermaes
+baseurl: "" # when not using a custom domain, use this base url: /meneermaes
 
 # default file settings
 defaults:
