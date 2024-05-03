@@ -5,7 +5,7 @@ Website for my course material: [https://www.meneermaes.be/](https://www.meneerm
 Tooling to make my life easier
 
 ## maesbot/diff-file
-![diff-fileTerminal output](readmecarbon.png)
+![diff-fileTerminal output](readme/carbon.png)
 
 ## maesbot/punten/
 Automate everything that involves points, assignements, tests, ...
