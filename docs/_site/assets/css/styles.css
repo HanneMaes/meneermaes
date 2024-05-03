@@ -129,6 +129,11 @@ section {
     padding-bottom: var(--spacingBig);
 }
 
+.mainSection { /* make the page content be over the page info at the bottom */
+    position: relative; /* to make the z-index work */
+    z-index: 1;
+}
+
 .sectionContent {
     width: var(--contentWidth);
     max-width: var(--contentWidthMax);
@@ -344,16 +349,21 @@ footer img { /* signature */
 }
 
 .pageInfo {
-    z-index: -99;
-    opacity: 0.3;
+    opacity: 0.2;
     font-style: italic;
     position: fixed;
     bottom: 0;
-    padding: 10px;
+    padding: var(--spacingSmall);
 
-    /* horizontal center */
-    left: 50%;
-    transform: translateX(-50%);
+    width: calc(100vw - (3 * var(--spacingSmall))); /* Subtracting padding from total width (and give it some extra space (3 times instead of 2 times) */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pageInfoLine {
+    text-align: center;
 }
 
 /*******/
@@ -367,7 +377,6 @@ nav {
     border-radius: var(--roundness);
     
     background-color: white;
-    color: var(--textDark);
     margin: 30px;
     padding: 10px;
     padding-left:  15px;
@@ -376,11 +385,10 @@ nav {
     transition: all var(--animSpeed);
 }
 nav:hover {
-    box-shadow:0px 0px 0px var(--borderWidth) var(--light) inset;
+    box-shadow: 0px 0px 0px var(--borderWidth) var(--light) inset;
 }
 
 nav a {
-    color: var(--dark);
     text-decoration: none;
 }
 
@@ -388,6 +396,7 @@ nav a {
     color: var(--light);
     padding-left: var(--spacingSmall);
     padding-right:var(--spacingSmall);
+    font-weight: 900;
 }
 
 /**********/
@@ -513,4 +522,21 @@ iframe {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+.landscapeROW-portraitCOLUMN {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (orientation: portrait) {
+    
+    .landscapeROW-portraitCOLUMN {
+        display: flex;
+        flex-direction: column;
+    }
 }
