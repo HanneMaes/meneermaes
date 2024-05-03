@@ -1,5 +1,6 @@
 ---
 title: Responsive design met JavaScript
+last_modified_at: 2024-05-03T07:12:37
 date: 2024-04-16 21:02:37 +0200
 ---
 

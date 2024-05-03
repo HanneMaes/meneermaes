@@ -1,5 +1,6 @@
 ---
 title: Min en max values
+last_modified_at: 2024-05-03T07:12:37
 date: Mon, Mar 25, 2024  4:03:05 PM
 ---
 
