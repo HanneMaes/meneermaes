@@ -4,7 +4,7 @@ last_modified_at: 2024-05-03T07:12:37
 date: 2024-04-22 13:53:09 +0200
 ---
 
-Maak je portfolio website responsive, en publish hem op GitHub pages.
+Maak je portfolio website responsive, en publiceer hem op GitHub pages.
 
 {% include callout.html type='tip' content='Een toegankelijk menu is zeer belangrijk op een responsive website.' %}
 

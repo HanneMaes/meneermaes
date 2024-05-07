@@ -5,13 +5,6 @@ date: 2024-04-23 13:06:08 +0200
 
 JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functies en stijlen** die kunnen worden gebruikt om de **ontwikkeling** van webpagina's te **versnellen en verbeteren**.
 
-# Librarie vs framework
-
-- Een **library** biedt een set tools en functies die je kan gebruiken om *(meestal kleine)* **specifieke taken** uit te voeren.
-- Een **framework** bied een een omvattende **structuur en werkwijze** die je **moet** volgen, inclusief richtlijnen en conventies.
-
-{% include callout.html type='info' content='Een library kan je best kiezen bij de start van grote projecten. Terwijl je een library later kan toevoegen wanneer je nood hebt aan specifieke functionaliteit.' %}
-
 # Voorbeeld: OAS.js *(library)*
 
 **Animate on scroll (AOS.js)** is een **library** die je toelaat elementen met een animatie in beeld te laten komen.
@@ -19,14 +12,13 @@ JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functi
 {% include browser.html img='images/aos-voorbeeld.gif' width='500px' %}
 
 1. Surf naar: [https://michalsnik.github.io/aos/](https://michalsnik.github.io/aos/),
-    Onderaan de pagina zie instructies om de library toe te voegen aan je eigen website.
 2. Download en unzip de code.
 3. Plaats de bestanden in {% include filePath.html fileOrPath='aos-master/dist/' %} in de map van je website, in een folder genaamd {% include filePath.html fileOrPath='libraries/' %}. Dit is de code van de library.  
     ![](images/lib-folder.png){: width="500" }
 4. Link in {% include filePath.html fileOrPath='index.html' %} naar de **CSS** en **JS** bestanden van de library.  
     `<link rel="stylesheet" href="libraries/aos.css">`  
     `<script src="libraries/aos.js"></script>`
-5. Voeg deze code toe om de AOS.js library te starten.  
+5. Voeg deze code toe om de `AOS.js` library te starten. Dit moet onder de code staan die `aos.js` inlaad omdat de library eerst ingeladen moet zijn alvorens we de functies ervan kunnen gebruiken.
     ```javascript
     <script>
         AOS.init();
@@ -51,12 +43,19 @@ Hieronder staan een aantal veelgebruikte libraries:
 - [Patterns](https://bansal.io/)
 - [Interactieve 3D content](https://threejs.org/)
 
+# Librarie vs framework
+
+- Een **library** biedt een set tools en functies die je kan gebruiken om *(meestal kleine)* **specifieke taken** uit te voeren.
+- Een **framework** bied een een omvattende **structuur en werkwijze** die je **moet** volgen, inclusief richtlijnen en conventies.
+
+{% include callout.html type='info' content='Een library kan je best kiezen bij de start van grote projecten. Terwijl je een library later kan toevoegen wanneer je nood hebt aan specifieke functionaliteit.' %}
+
 # Design systems *(framework)*
 
 Een design system in is een **verzameling** van herbruikbare **code en elementen** die je kan gebruiken bij het maken van een project. Het bevat onder andere zaken als knoppen, navigatiebalken, icoontjes, kleuren, ...  
 Door een design system te gebruiken kan je snel een websites maken met een mooi en bruikbaar ontwerpen zonder alles handmatig te moeten ontwerpen.
 
-Hieronder staan een aantal veelgebruikte design systems:
+Hieronder een aantal veelgebruikte design systems:
 - [Simple.css](https://simplecss.org/)
 - [Google Material Design System](https://materializecss.com/)
 
@@ -64,11 +63,11 @@ Hieronder staan een aantal veelgebruikte design systems:
 
 1. Maak een website met een **design system** naar keuze, start met de homepage waarin staat welk **design system** je gekozen hebt en **waarom**. 
 2. Maak een pagina met afbeeldingen en gebruik een **lightbox library** *(ontdek zelf wat een lightbox is)*.
-3. Maak minstens **2** andere pagina's die elk gaan over een **libraries**.  
+3. Maak minstens **2** andere pagina's die elk een **library** gebruiken.  
     Minstens 1 library moet je zelf zoeken en mag niet in de cursus staan.  
     Op elke pagina vermeld je:
 - **Welke** library het is en **wat** ze doet.
-- Hoe je deze library kan gebruiken, met **code voorbeelden**.
+- Hoe je deze library kan gebruiken, met **code voorbeelden** (een kleine tutorial).
 
 ## Code in code
 Les hier uit hoe je code kan laten zien op een pagina zonder deze code uit te voeren.
