@@ -69,9 +69,34 @@ Hieronder een aantal veelgebruikte design systems:
 - **Welke** library het is en **wat** ze doet.
 - Hoe je deze library kan gebruiken, met **code voorbeelden** (een kleine tutorial).
 
-## Code in code
-Les hier uit hoe je code kan laten zien op een pagina zonder deze code uit te voeren.
+{% include callout.html type='tip' content='Om code weer te geven op een HTML-pagina zonder dat deze wordt uitgevoerd, kan je de [Highlight.js](https://highlightjs.org/) library gebruiken.' %}
 
 # Local files vs hosted files
 
 Library files *(.css, .js)* kunnen lokaal worden gehost, waarbij de bestanden rechtstreeks in de folder van het project worden geplaatst, of extern worden gehost, waarbij de bestanden worden geladen vanaf een externe locatie. 
+
+```html
+<link rel="stylesheet" href="<script src="libraries/aos.js"></script>">
+```
+```html
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+```
+
+## Hostel files
+
+Gehoste bestanden staan op **externe servers**, meestal van derden zoals Content Delivery Networks (CDN's).
+
+**Voordelen**{: .goodText } van hostel files:
+
+- **Snellere laadtijden**{: .goodText }: als het wordt gehost op een goed geoptimaliseerde server. Gehoste bestanden worden vaak geleverd via Content Delivery Networks (CDN's), wat betekent dat ze mogelijk al in de cache van de gebruiker staan of worden geleverd vanuit een server die dichter bij de gebruiker staat.
+- **Geen onderhoud**{: .goodText }: Je hoeft geen lokale kopieën van de bestanden te onderhouden of te updaten. Wanneer er een nieuwe versie beschikbaar is, wordt deze automatisch via de CDN geleverd.
+
+## Local files
+
+Lokale bestanden bevinden zich op je eigen server *(of computer)*.
+
+**Voordelen**{: .goodText } van local files:
+
+- **Controle**{: .goodText }: Wanneer een bestand aangepast word op een externe server, kan het de werking van je website verstoren, zonder dat jij dat weet. Bij lokale bestand weet je dat het bestand niet aangepast zal worden en dus dat het zal blijven werken.
+- **Geen afhankelijkheid van derden**{: .goodText }: Je bent niet afhankelijk van de externe serviceprovider *(zoals CDN)* om de bestanden beschikbaar te houden. Als deze een storing hebben, kan dit van invloed zijn op de beschikbaarheid van je website.
+- **Privacy en beveiliging**{: .goodText }: Als je externe scripts of bibliotheken laadt, geef je controle uit handen over wat er op je website wordt geladen. Hoewel CDNs doorgaans betrouwbaar zijn, brengt het laden van externe bestanden altijd een zeker risico met zich mee.

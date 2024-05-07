@@ -228,6 +228,10 @@ blockquote {
     font-size: 30px;
 }
 
+/* colors */
+.goodText { color: #00976a; }
+.badText  { color: #a30031; }
+
 /*********/
 /* links */
 /*********/
