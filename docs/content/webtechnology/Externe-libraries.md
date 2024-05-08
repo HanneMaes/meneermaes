@@ -5,7 +5,7 @@ date: 2024-04-23 13:06:08 +0200
 
 JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functies en stijlen** die kunnen worden gebruikt om de **ontwikkeling** van webpagina's te **versnellen en verbeteren**.
 
-# Voorbeeld: OAS.js *(library)*
+# Voorbeeld: AOS.js *(library)*
 
 **Animate on scroll (AOS.js)** is een **library** die je toelaat elementen met een animatie in beeld te laten komen.
 
@@ -26,7 +26,7 @@ JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functi
     ```
 6. Voeg de code voor het effect dat je wil toe aan een HTML-tag.
     ```html
-    <h1 data-aos="fade-down">OAS.js</h1>
+    <h1 data-aos="fade-down">Header text</h1>
     ```
 
 {% include callout.html type='uitdaging' content='Zoek uit hoe je animaties later kan starten en kan bepalen hoe lang ze duren.' %}
@@ -70,6 +70,8 @@ Hieronder een aantal veelgebruikte design systems:
 - Hoe je deze library kan gebruiken, met **code voorbeelden** (een kleine tutorial).
 
 {% include callout.html type='tip' content='Om code weer te geven op een HTML-pagina zonder dat deze wordt uitgevoerd, kan je de [Highlight.js](https://highlightjs.org/) library gebruiken.' %}
+
+{% include punten.html data='Externe-libraries' %}
 
 # Local files vs hosted files
 
