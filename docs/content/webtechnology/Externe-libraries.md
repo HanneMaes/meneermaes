@@ -59,7 +59,7 @@ Hieronder een aantal veelgebruikte design systems:
 - [Simple.css](https://simplecss.org/)
 - [Google Material Design System](https://materializecss.com/)
 
-# Opdracht
+# Opdracht libraries
 
 1. Maak een website met een **design system** naar keuze, start met de homepage waarin staat welk **design system** je gekozen hebt en **waarom**. 
 2. Maak een pagina met afbeeldingen en gebruik een **lightbox library** *(ontdek zelf wat een lightbox is)*.
