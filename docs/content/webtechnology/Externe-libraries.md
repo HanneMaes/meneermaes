@@ -11,6 +11,8 @@ JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functi
 
 {% include browser.html img='images/aos-voorbeeld.gif' width='500px' %}
 
+## Oefening: voeg AOS.js toe aan je portfolio website
+
 1. Surf naar: [https://michalsnik.github.io/aos/](https://michalsnik.github.io/aos/),
 2. Download en unzip de code.
 3. Plaats de bestanden in {% include filePath.html fileOrPath='aos-master/dist/' %} in de map van je website, in een folder genaamd {% include filePath.html fileOrPath='libraries/' %}. Dit is de code van de library.  
