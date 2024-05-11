@@ -1,6 +1,6 @@
-/*************/
-/* variables */
-/*************/
+/* ********* */
+/* VARIALBES */
+/* ********* */
 
 :root {
     --dark: rgb(113, 68, 53);
@@ -107,9 +107,9 @@
         font-style: italic;
 }
 
-/********/
-/* body */
-/********/
+/* **** */
+/* BODY */
+/* **** */
 
 body {
     color: var(--text);
@@ -148,9 +148,9 @@ hr {
     margin-bottom: var(--spacingBig);
 }
 
-/**************/
-/* typography */
-/**************/
+/* ********** */
+/* TYPOGRAPHY */
+/* ********** */
 
 header, h1, h2 {
     font-family: titleFont;
@@ -242,9 +242,9 @@ blockquote {
 .goodText { color: #00976a; }
 .badText  { color: #a30031; }
 
-/*********/
-/* links */
-/*********/
+/* ***** */
+/* LINKS */
+/* ***** */
 
 a {
     color: var(--text);
@@ -269,9 +269,9 @@ a[href*='//']::after {
     padding-right: var(--spacingSmall);
 }
 
-/********/
-/* code */
-/********/
+/* **** */
+/* CODE */
+/* **** */
 
 .language-html code { border: var(--borderWidth) solid #D4A200; }
 .language-html::before {                        color: #D4A200; 
@@ -304,9 +304,9 @@ pre {
     margin-top: 0;
 }
 
-/***********************/
-/* UI elements in text */
-/***********************/
+/* ******************* */
+/* UI ELEMENTS IN TEXT */
+/* ******************* */
 
 .btn, .ui, .filePath {
     font-family: codeFont;
@@ -331,9 +331,9 @@ pre {
     font-weight: bold;
 }
 
-/*******************/
-/* header & footer */
-/*******************/
+/* *************** */
+/* HEADER & FOOTER */
+/* *************** */
 
 footer {
     color: var(--textLight);
@@ -380,14 +380,14 @@ footer img { /* signature */
     text-align: center;
 }
 
-/*******/
-/* nav */
-/*******/
+/* ***************** */
+/* BREADCRUMBS & TOC */
+/* ***************** */
 
 nav {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     border-radius: var(--roundness);
     
     background-color: white;
@@ -406,6 +406,8 @@ nav a {
     text-decoration: none;
 }
 
+/* breadcrumbs */
+
 .navDivider {
     color: var(--light);
     padding-left: var(--spacingSmall);
@@ -413,9 +415,32 @@ nav a {
     font-weight: 900;
 }
 
-/**********/
-/* tables */
-/**********/
+/* toc */
+
+.toc {
+	top: 70px;
+}
+
+.tocHeader {
+	color: var(--medium);
+	text-decoration: underline;
+    text-decoration-color: var(--text);
+}
+
+.toc .h1Link, .toc .h2Link, .toc .h3Link, .toc .h4Link, .toc .h5Link, .toc .h6Link {
+	margin-top: 	10px;
+	margin-bottom: 10px;
+}
+
+.toc .h2Link { padding-left: 20px; }
+.toc .h3Link { padding-left: 40px; }
+.toc .h4Link { padding-left: 60px; }
+.toc .h5Link { padding-left: 70px; }
+.toc .h6Link { padding-left: 80px; }
+
+/* ****** */
+/* TABLES */
+/* ****** */
 
 table, th, td {
     border: 2px solid rgba(0, 0, 0, .05);;
@@ -449,17 +474,17 @@ thead th {
     text-align: center;
 }
 
-/*********/
-/* lists */
-/*********/
+/* ***** */
+/* LISTS */
+/* ***** */
 
 li::marker { /* colorize sorted & unsorted list numbers and bullets */
     color: var(--medium);
 }
 
-/*********/
-/* media */
-/*********/
+/* ***** */
+/* MEDIA */
+/* ***** */
 
 img {
     max-width: 100%;
@@ -476,9 +501,9 @@ iframe {
     border-radius: var(--roundness);
 }
 
-/**********/
-/* frames */
-/**********/
+/* ****** */
+/* FRAMES */
+/* ****** */
 
 .browserWindow, .phone {
     background-color: var(--medium);
@@ -538,9 +563,9 @@ iframe {
     align-items: center;
 }
 
-/*****************/
+/* ************* */
 /* MEDIA QUERIES */
-/*****************/
+/* ************* */
 
 .landscapeROW-portraitCOLUMN {
     display: flex;

@@ -85,9 +85,9 @@ body {
     color: grey;
 }
 
-/**************/
+/* ********** */
 /* orientatie */
-/**************/
+/* ********** */
 
 /* Portrait (verticaal) */
 @media only screen and (orientation: portrait) {
@@ -111,9 +111,9 @@ body {
     }
 }
 
-/**************/
+/* ********** */
 /* screensize */
-/**************/
+/* ********** */
 
 /* Schermen breder dan 700px */
 @media screen and (min-width: 700px) {

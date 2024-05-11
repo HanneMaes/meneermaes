@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="/assets/css/styles.css" rel="stylesheet">
-    <link rel="icon" href="/assets/images/favicon.ico" />
+	<link href="/assets/css/styles.css" rel="stylesheet">
+	<link rel="icon" href="/assets/images/favicon.ico" />
 
-    <title>Externe libraries</title>
+	<title>Externe libraries</title>
 
-    <!-- apply custom CSS to some page -->
-    
+	<!-- apply custom CSS to some page -->
+	
 
-    <!-- highlight.js -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+	<!-- highlight.js -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
 </head>
 <body>
 
-    <!------------->
-    <!-- CONTENT -->
-    <!------------->
+	<section class="mainSection">
+		<div class="sectionContent">
 
-    <section class="mainSection">
-        <div class="sectionContent">
+			<!-- ------- -->
+			<!-- SIDEBAR -->
+			<!-- ------- -->
 
-            <!-- breadcrumbs: not on homepage -->
-            
-                <nav>
-                    <a href="/index">⌂</a>
-                        
-                    <!-- only show link to section when not on a section page -->
-                    
-                        <span class="navDivider">/</span>
-                         <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
-                                <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
-                        <a href="/content/webtechnology/index">Webtechnology</a>
-                    
-                    
-                </nav>
-            
+			<!-- breadcrumbs: not on homepage -->
+			
+			<nav class="breadcrumbs">
+				<a href="/index">⌂</a>
+				
+				<!-- only show link to section when not on a section page -->
+				
+				<span class="navDivider">/</span>
+				 <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+				        <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+				<a href="/content/webtechnology/index">Webtechnology</a>
+				
+				
+			</nav>
+			
 
-            <!-- header -->
-            <header data-aos="fade-left">Externe libraries</header>
+			<!-- table of contents -->
+			<!-- <nav>
+				<div class="tocHeader">Inhoudstafel</div>
+				<div id="toc" class="toc"></div>
+			</nav> -->
 
-            <!-- content -->
-            <p>JavaScript- en CSS-libraries zijn verzamelingen van <strong>voorgeprogrammeerde functies en stijlen</strong> die kunnen worden gebruikt om de <strong>ontwikkeling</strong> van webpagina’s te <strong>versnellen en verbeteren</strong>.</p>
+			<!-- ------- -->
+			<!-- CONTENT -->
+			<!-- ------- -->
+
+			<!-- header -->
+			<header data-aos="fade-left">Externe libraries</header>
+
+			<!-- content -->
+			<p>JavaScript- en CSS-libraries zijn verzamelingen van <strong>voorgeprogrammeerde functies en stijlen</strong> die kunnen worden gebruikt om de <strong>ontwikkeling</strong> van webpagina’s te <strong>versnellen en verbeteren</strong>.</p>
 
 <h1 id="voorbeeld-aosjs-library">Voorbeeld: AOS.js <em>(library)</em></h1>
 
@@ -284,46 +294,46 @@ Door een design system te gebruiken kan je snel een websites maken met een mooi 
 </ul>
 
 
-        </div> <!-- sectionContent -->
-    </section>
+		</div> <!-- sectionContent -->
+	</section>
 
-    <!------------>
-    <!-- FOOTER -->
-    <!------------>
+	<!-- ------ -->
+	<!-- FOOTER -->
+	<!-- ------ -->
 
-    <footer>
-        <div class="footerContent">
-            <div>
-                <!-- <p><a href="content/about">About</a></p> -->
-                <p>Licentie:</p>
-                <p><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a></p>
-                <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
-            </div>
-            <img width="107px" height="60px" src="/assets/images/signatureBlack.gif">
-        </div>
-    </footer>
-    
-    <!-- page info -->
-    <div class="pageInfo landscapeROW-portraitCOLUMN">
-        <div></div>
-        <div class="pageInfoLine">Created on 23/04/2024, last edited on: </div>
-        <a href="content/blank">Blank</a>
-    </div>
+	<footer>
+		<div class="footerContent">
+			<div>
+				<!-- <p><a href="content/about">About</a></p> -->
+				<p>Licentie:</p>
+				<p><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a></p>
+				<p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+			</div>
+			<img width="107px" height="60px" src="/assets/images/signatureBlack.gif">
+		</div>
+	</footer>
+	
+	<!-- page info -->
+	<div class="pageInfo landscapeROW-portraitCOLUMN">
+		<div></div>
+		<div class="pageInfoLine">Created on 23/04/2024, last edited on: </div>
+		<a href="content/blank">Blank</a>
+	</div>
 
-    <!---------------->
-    <!-- JAVASCRIPT -->
-    <!---------------->
+	<!-- ---------- -->
+	<!-- JAVASCRIPT -->
+	<!-- ---------- -->
 
-    <!-- my javascript -->
-    <script src="/assets/javascript/script.js"></script> 
+	<!-- my javascript -->
+	<script src="/assets/javascript/script.js"></script> 
 
-    <!-- aos.js -->
-    <script src="/assets/libraries/aos/aos.js"></script>
-    <script>AOS.init();</script>
-    
-    <!-- highlight.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+	<!-- aos.js -->
+	<script src="/assets/libraries/aos/aos.js"></script>
+	<script>AOS.init();</script>
+	
+	<!-- highlight.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
 
 </body>
 </html>

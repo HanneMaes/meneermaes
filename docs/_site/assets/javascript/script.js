@@ -1,7 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-	// give 'opdracht & oefening' headers a CSS-class
+	// variables I need in multiple things
 	var headers = document.querySelectorAll('h1, h2, h3, h4, h5, h6');  // Get all headers
+
+	/* ************************ */
+	/* ADD CSS CLASSES TO STUFF */
+	/* ************************ */
+
+	// give 'opdracht & oefening' headers a CSS-class
 	headers.forEach(function(header) { 									// Loop through each header
 		if (header.textContent.trim().startsWith('Opdracht')) { 		// Check if the header's text starts with "opdracht"
 			header.classList.add('opdrachtHeader'); 					// If it does, add the class "opdrachtHeader"
@@ -9,6 +15,27 @@ document.addEventListener("DOMContentLoaded", function() {
 			header.classList.add('oefeningHeader'); 					// If it does, add the class "opdrachtHeader"
 		}
 	});
+
+	/* ***************** */
+	/* TABLE OF CONTENTS */
+	/* ***************** */
+	
+	// var tocHTML = "";
+	// console.log("TOC");
+	// headers.forEach(function (header) { // Loop through each header
+		
+	// 	// trim text
+	// 	var maxLetters = 40;
+	// 	var headerText = header.innerHTML.length > maxLetters ? header.innerHTML.substring(0, maxLetters) + '...' : header.innerHTML;
+
+	// 	// create HTML
+	// 	tocHTML += '<a class="' + header.localName + 'Link">' + headerText + '<a><br>';
+	// });
+	// document.getElementById('toc').innerHTML = tocHTML;
+
+	/* ************ */
+	/* TARGET BLANK */
+	/* ************ */
 
 	// Add target _blank to all external links
 	var links = document.querySelectorAll('a');
