@@ -1,9 +1,16 @@
+// $ node csv-to-sheets.js path/to/punten.csv klas
 // $ node csv-to-sheets.js '../../docs/_data/webtechnology/file.csv' 5AD
 
+// SETTINGS
+let outputPath =  '/home/hanne/Documents/School/Code/maesbot-private-data/punten';
+
+/* ********************************************************************************************************************************* */
+
 const fs = require('fs');
+const path = require('path');
 const csv = require('csv-parser');
 const ExcelJS = require('exceljs');
-const path = require('path');
+const { exec } = require('child_process');
 
 /* ***************************** */
 /* HANDLE COMMAND LINE ARGUMENTS */
@@ -18,12 +25,14 @@ if (args.length >= 2) {
 	klas = args[1];
 
 	console.log();
-	console.log('CSV file:', csvFile);
-	console.log('Klas:', klas);
+	console.log('Settings:');
+	console.log('✅ CSV file:', csvFile);
+	console.log('✅ Klas:', klas);
+	console.log('✅ Output path:', outputPath);
 } else {
 	console.log();
 	console.log("❌ Command line arguments need to be like this:");
-	console.log("node csv-to-sheets.js ../../docs/_data/webtechnology/file.csv 5AD");
+	console.log("node csv-to-sheets.js path/to/punten.csv klas output/path");
 
 	process.exit(); // stop script
 }
@@ -42,22 +51,45 @@ if (klas == "5AD") {
 /* *************************** */
 console.log();
 
+// create a new dir to put the files in
+const fileNameWithoutExtension = path.basename(csvFile, path.extname(csvFile));
+const directoryPath = outputPath + '/' + fileNameWithoutExtension;
+
+fs.mkdir(directoryPath, { recursive: true }, (err) => {
+	if (err) {
+		console.error('❌ Error creating directory:', err);
+	} else {
+		console.log('📁 Dir created:', directoryPath);
+	}
+});
+
+// create a new dir for the verbeterde punten sheets
+const directoryPathVerbeterd = directoryPath + '/verbeterd';
+fs.mkdir(directoryPathVerbeterd, { recursive: true }, (err) => {
+	if (err) {
+		console.error('❌ Error creating directory:', err);
+	} else {
+		console.log('📁 Dir created:', directoryPathVerbeterd);
+		console.log();
+	}
+});
+
 // Read CSV file
 fs.createReadStream(csvFile)
-  .pipe(csv())
-  .on('data', (row) => {
-	//console.log(row); // Do something with each row if needed
-  })
-  .on('end', () => {
+	.pipe(csv())
+	.on('data', (row) => {
+		//console.log(row); // Do something with each row if needed
+	})
+	.on('end', () => {
 	// Iterate over each name
-	  names.forEach((nameStudent) => {
-		
+	names.forEach((nameStudent) => {
+	
 		// Convert CSV to sheet
 		const workbook = new ExcelJS.Workbook();
 		const worksheet = workbook.addWorksheet('Sheet1');
 		let total = 0; // Variable to store the total of column B
-		
-		// Read CSV file again to add data to sheet worksheet
+
+		// Read CSV file to add data to sheet worksheet
 		fs.createReadStream(csvFile)
 		.pipe(csv())
 		.on('data', (row) => {
@@ -73,19 +105,28 @@ fs.createReadStream(csvFile)
 
 			worksheet.getCell('F1').value = '/ totaal';
 			worksheet.getCell('F2').value = { formula: '=SUM(C:C)' };
-			
+		
 			// Ensure the output directory exists
 			fs.mkdirSync('output', { recursive: true });
 
 			// Save sheet file to the output directory
-			outputFile = 'output/' + /*path.parse(csvFile).name + '/' +*/ nameStudent + '.xlsx';
+			outputFile = directoryPath + '/' + nameStudent + '.xlsx';
 			workbook.xlsx.writeFile(outputFile)
-			.then(() => {
-				console.log('🔨', nameStudent, '➡️', outputFile);
-			})
-			.catch((err) => {
-				console.error('❌', nameStudent, 'error:', err);
-			});
+				.then(() => {
+					console.log('📗', nameStudent);
+				})
+				.catch((err) => {
+					console.error('❌', nameStudent, 'error:', err);
+				});
+
 		});
 	});
-  });
+});
+
+/* ************ */
+/* OPEN NEW DIR */
+/* ************ */
+
+exec(`xdg-open ${directoryPath}`);	// Linux
+// exec(`open ${directoryPath}`); 	// MacOs
+// exec(`start ${directoryPath}`);	// Windows
