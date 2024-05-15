@@ -501,6 +501,11 @@ iframe {
     border-radius: var(--roundness);
 }
 
+/* special IMG classes */
+.square {
+	border-radius: 0px;
+}
+
 /* ****** */
 /* FRAMES */
 /* ****** */

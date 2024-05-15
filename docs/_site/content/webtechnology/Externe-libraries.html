@@ -83,13 +83,16 @@
   <li>Link in <span class="filePath">
  index.html
 </span> naar de <strong>CSS</strong> en <strong>JS</strong> bestanden van de library.<br />
- <code class="language-plaintext highlighter-rouge">&lt;link rel="stylesheet" href="libraries/aos.css"&gt;</code><br />
- <code class="language-plaintext highlighter-rouge">&lt;script src="libraries/aos.js"&gt;&lt;/script&gt;</code></li>
+ Ondertussen zou je al moeten weten waar deze zijn code in je HTML-bestand moeten komen.
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"libraries/aos.css"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"libraries/aos.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>    </div>
+  </li>
   <li>Voeg deze code toe om de <code class="language-plaintext highlighter-rouge">AOS.js</code> library te starten. Dit moet onder de code staan die <code class="language-plaintext highlighter-rouge">aos.js</code> inlaad omdat de library eerst ingeladen moet zijn alvorens we de functies ervan kunnen gebruiken.
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;script&gt;</span>
      <span class="nx">AOS</span><span class="p">.</span><span class="nf">init</span><span class="p">();</span>
- <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
-</span></code></pre></div>    </div>
+ <span class="nt">&lt;/script&gt;</span>
+</code></pre></div>    </div>
   </li>
   <li>Voeg de code voor het effect dat je wil toe aan een HTML-tag.
     <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;h1</span> <span class="na">data-aos=</span><span class="s">"fade-down"</span><span class="nt">&gt;</span>Header text<span class="nt">&lt;/h1&gt;</span>
@@ -159,7 +162,7 @@ Door een design system te gebruiken kan je snel een websites maken met een mooi 
   <li>Maak een website met een <strong>design system</strong> naar keuze, start met de homepage waarin staat welk <strong>design system</strong> je gekozen hebt en <strong>waarom</strong>.</li>
   <li>Maak een pagina met afbeeldingen en gebruik een <strong>lightbox library</strong> <em>(ontdek zelf wat een lightbox is)</em>.</li>
   <li>Maak minstens <strong>2</strong> andere pagina’s die elk een <strong>library</strong> gebruiken.<br />
- Minstens 1 library moet je zelf zoeken en mag niet in de cursus staan.<br />
+ Minstens 1 library moet je zelf zoeken en mag niet in de cursus staan. <em>(AOS.js telt niet als library die in de cursus staat, het is de bedoeling dat je zelf leert uitzoeken hoe je libraries kan gebruiken.)</em><br />
  Op elke pagina vermeld je:
     <ul>
       <li><strong>Welke</strong> library het is en <strong>wat</strong> ze doet.</li>
@@ -292,6 +295,14 @@ Door een design system te gebruiken kan je snel een websites maken met een mooi 
   <li><strong class="goodText">Geen afhankelijkheid van derden</strong>: Je bent niet afhankelijk van de externe serviceprovider <em>(zoals CDN)</em> om de bestanden beschikbaar te houden. Als deze een storing hebben, kan dit van invloed zijn op de beschikbaarheid van je website.</li>
   <li><strong class="goodText">Privacy en beveiliging</strong>: Als je externe scripts of bibliotheken laadt, geef je controle uit handen over wat er op je website wordt geladen. Hoewel CDNs doorgaans betrouwbaar zijn, brengt het laden van externe bestanden altijd een zeker risico met zich mee.</li>
 </ul>
+
+<h2 id="npm-node-package-manager">NPM <em>(Node package manager)</em></h2>
+
+<p><img src="images/Npm-logo.svg" alt="NPM logo" class="square" width="300px" /></p>
+
+<p>Npm is een <strong>package manager</strong> voor JavaScript.<br />
+Een package manager is een tool die wordt gebruikt voor het beheren van pakketten of verzamelingen van bestanden.<br />
+Npm maakt het gemakkelijk om JavaScript-libraries te installeren en up-to-date te houden.</p>
 
 
 		</div> <!-- sectionContent -->

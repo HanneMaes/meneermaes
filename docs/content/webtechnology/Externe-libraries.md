@@ -16,20 +16,23 @@ JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functi
 1. Surf naar: [https://michalsnik.github.io/aos/](https://michalsnik.github.io/aos/),
 2. Download en unzip de code.
 3. Plaats de bestanden in {% include filePath.html fileOrPath='aos-master/dist/' %} in de map van je website, in een folder genaamd {% include filePath.html fileOrPath='libraries/' %}. Dit is de code van de library.  
-    ![](images/lib-folder.png){: width="500" }
+	![](images/lib-folder.png){: width="500" }
 4. Link in {% include filePath.html fileOrPath='index.html' %} naar de **CSS** en **JS** bestanden van de library.  
-    `<link rel="stylesheet" href="libraries/aos.css">`  
-    `<script src="libraries/aos.js"></script>`
+	Ondertussen zou je al moeten weten waar deze zijn code in je HTML-bestand moeten komen.
+	```html
+	<link rel="stylesheet" href="libraries/aos.css">
+	<script src="libraries/aos.js"></script>
+	```
 5. Voeg deze code toe om de `AOS.js` library te starten. Dit moet onder de code staan die `aos.js` inlaad omdat de library eerst ingeladen moet zijn alvorens we de functies ervan kunnen gebruiken.
-    ```javascript
-    <script>
-        AOS.init();
-    </script>
-    ```
+	```html
+	<script>
+		AOS.init();
+	</script>
+	```
 6. Voeg de code voor het effect dat je wil toe aan een HTML-tag.
-    ```html
-    <h1 data-aos="fade-down">Header text</h1>
-    ```
+	```html
+	<h1 data-aos="fade-down">Header text</h1>
+	```
 
 {% include callout.html type='uitdaging' content='Zoek uit hoe je animaties later kan starten en kan bepalen hoe lang ze duren.' %}
 
@@ -66,8 +69,8 @@ Hieronder een aantal veelgebruikte design systems:
 1. Maak een website met een **design system** naar keuze, start met de homepage waarin staat welk **design system** je gekozen hebt en **waarom**. 
 2. Maak een pagina met afbeeldingen en gebruik een **lightbox library** *(ontdek zelf wat een lightbox is)*.
 3. Maak minstens **2** andere pagina's die elk een **library** gebruiken.  
-    Minstens 1 library moet je zelf zoeken en mag niet in de cursus staan.  
-    Op elke pagina vermeld je:
+	Minstens 1 library moet je zelf zoeken en mag niet in de cursus staan. *(AOS.js telt niet als library die in de cursus staat, het is de bedoeling dat je zelf leert uitzoeken hoe je libraries kan gebruiken.)*  
+	Op elke pagina vermeld je:
 - **Welke** library het is en **wat** ze doet.
 - Hoe je deze library kan gebruiken, met **code voorbeelden** (een kleine tutorial).
 
@@ -104,3 +107,11 @@ Lokale bestanden bevinden zich op je eigen server *(of computer)*.
 - **Controle**{: .goodText }: Wanneer een bestand aangepast word op een externe server, kan het de werking van je website verstoren, zonder dat jij dat weet. Bij lokale bestand weet je dat het bestand niet aangepast zal worden en dus dat het zal blijven werken.
 - **Geen afhankelijkheid van derden**{: .goodText }: Je bent niet afhankelijk van de externe serviceprovider *(zoals CDN)* om de bestanden beschikbaar te houden. Als deze een storing hebben, kan dit van invloed zijn op de beschikbaarheid van je website.
 - **Privacy en beveiliging**{: .goodText }: Als je externe scripts of bibliotheken laadt, geef je controle uit handen over wat er op je website wordt geladen. Hoewel CDNs doorgaans betrouwbaar zijn, brengt het laden van externe bestanden altijd een zeker risico met zich mee.
+
+## NPM *(Node package manager)*
+
+![NPM logo](images/Npm-logo.svg){: .square }{: width='300px' }
+
+Npm is een **package manager** voor JavaScript.  
+Een package manager is een tool die wordt gebruikt voor het beheren van pakketten of verzamelingen van bestanden.  
+Npm maakt het gemakkelijk om JavaScript-libraries te installeren en up-to-date te houden.

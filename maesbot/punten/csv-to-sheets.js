@@ -40,7 +40,7 @@ if (args.length >= 2) {
 // Handle klas
 let names
 if (klas == "5AD") {
-	names = ['Bibi Yassine', 'Bicer M.Kerem', 'Coremans Victor', 'Dante Gallardo Ledon', 'Tiago Niz Ferreira', 'Nouredine Tahrioui', 'Bram Van Ballaert', 'Yorbe Watthé', 'Noureddine Yazrak', 'Xibe Dierckx', 'Baharah Ghafori'];
+	names = ['Bibi Yassine', 'Bicer M.Kerem', 'Coremans Victor', 'Gallardo Ledon Dante', 'Niz Ferreira Tiago', 'Tahrioui Nouredine', 'Van Ballaert Bram', 'Watthé Yorbe', 'Yazrak Noureddine', 'Dierckx Xibe', 'Ghafori Baharah'];
 } else {
 	console.log();
 	console.log("❌ Klas", klas, "is not known.");
@@ -64,7 +64,7 @@ fs.mkdir(directoryPath, { recursive: true }, (err) => {
 });
 
 // create a new dir for the verbeterde punten sheets
-const directoryPathVerbeterd = directoryPath + '/verbeterd';
+const directoryPathVerbeterd = directoryPath + '/' + fileNameWithoutExtension + '-verbeterd';
 fs.mkdir(directoryPathVerbeterd, { recursive: true }, (err) => {
 	if (err) {
 		console.error('❌ Error creating directory:', err);
