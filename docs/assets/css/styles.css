@@ -516,6 +516,7 @@ iframe {
 
 .wrap {
 	float: left;
+	padding-right: var(--spacing);
 }
 
 /* ****** */

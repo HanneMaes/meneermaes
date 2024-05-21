@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="/assets/css/styles.css" rel="stylesheet">
+	<link rel="icon" href="/assets/images/favicon.ico" />
+
+	<title>FTP</title>
+
+	<!-- apply custom CSS to some page -->
+	
+
+	<!-- highlight.js -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+
+	<section class="mainSection">
+		<div class="sectionContent">
+
+			<!-- ------- -->
+			<!-- SIDEBAR -->
+			<!-- ------- -->
+
+			<!-- breadcrumbs: not on homepage -->
+			
+			<nav class="breadcrumbs">
+				<a href="/index">⌂</a>
+				
+				<!-- only show link to section when not on a section page -->
+				
+				<span class="navDivider">/</span>
+				 <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+				        <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+				<a href="/content/webtechnology/index">Webtechnology</a>
+				
+				
+			</nav>
+			
+
+			<!-- table of contents -->
+			<!-- <nav>
+				<div class="tocHeader">Inhoudstafel</div>
+				<div id="toc" class="toc"></div>
+			</nav> -->
+
+			<!-- ------- -->
+			<!-- CONTENT -->
+			<!-- ------- -->
+
+			<!-- header -->
+			<header data-aos="fade-left">FTP</header>
+
+			<!-- content -->
+			<blockquote>
+  <p>Staat voor <strong>“File Transfer Protocol”</strong>.</p>
+</blockquote>
+
+<p>Het is een standaard netwerkprotocol dat wordt gebruikt om bestanden van de ene computer naar de andere over te dragen via het internet. <strong>FTP maakt het mogelijk om bestanden te beheren op een server</strong>.</p>
+
+<h1 id="ftp-en-sftp">FTP en SFTP</h1>
+
+<p><strong>SFTP (Secure File Transfer Protocol)</strong> is een veiliger alternatief voor FTP omdat het gebruikmaakt van <strong>encryptie</strong> om de gegevens te beschermen <strong>tijdens de overdracht</strong>.</p>
+<ul>
+  <li><strong>FTP</strong> verzendt gegevens in <strong>gewone tekst</strong>, wat betekent dat de gegevens, inclusief gebruikersnamen en wachtwoorden, niet versleuteld zijn. Dit maakt FTP kwetsbaar voor onderschepping en afluisteren door kwaadwillenden.</li>
+  <li><strong>SFTP</strong> maakt gebruik van SSH (Secure Shell) om een beveiligde verbinding tot stand te brengen. <strong>Alle gegevens die worden verzonden</strong>, inclusief inloggegevens en bestanden, zijn <strong>versleuteld</strong>.</li>
+</ul>
+
+<h1 id="itbusleydenbe">Itbusleyden.be</h1>
+
+<p>We zullen werken met onze eigen webserver. Iedereen krijgt zijn persoonlijke webpagina op deze server waarop je webcontent kan publiceren. Deze pagina’s zullen toegankelijk zijn via individuele URL’s, zoals bijvoorbeeld <a href="http://hannemaes.itbusleyden.be/">http://hannemaes.itbusleyden.be/</a>.</p>
+
+<h1 id="crossftp">CrossFTP</h1>
+
+<p><img src="images/crossftp-logo.png" alt="CrossFTP Logo" width="100px" class="wrap" />
+Er zijn veel FTP-programma’s beschikbaar, en een van de meest gebruikte <em>(op Windows)</em> is <a href="https://www.crossftp.com">CrossFTP</a>. Dit programma is cross-platform, wat betekent dat het werkt op Linux, MacOS en Windows. Hoewel er een betaalde versie beschikbaar is, biedt de gratis versie alle functionaliteiten die we voor ons gebruik nodig hebben.</p>
+
+<h2 id="nieuwe-verbinding-aanmaken">Nieuwe verbinding aanmaken</h2>
+
+<ol>
+  <li><span class="ui">
+Bestand<span class="uiSeparator"> &gt; </span>Verbinden
+</span></li>
+  <li>Maak een verbinding met deze gegevens:</li>
+</ol>
+
+<p><span class="ui">
+    Protocol: FTP
+</span></p>
+
+<p><span class="ui">
+    Host: 
+</span></p>
+
+<h2 id="bestanden-overzetten">Bestanden overzetten</h2>
+
+<p><img src="images/crossftp-screenshot.png" alt="CrossFTP Window" /></p>
+
+<h2 id="bestaande-verbinding-aanpassen">Bestaande verbinding aanpassen</h2>
+
+<ol>
+  <li><span class="ui">
+Sites<span class="uiSeparator"> &gt; </span>Site beheer
+</span></li>
+</ol>
+
+
+		</div> <!-- sectionContent -->
+	</section>
+
+	<!-- ------ -->
+	<!-- FOOTER -->
+	<!-- ------ -->
+
+	<footer>
+		<div class="footerContent">
+			<div>
+				<!-- <p><a href="content/about">About</a></p> -->
+				<p>Licentie:</p>
+				<p><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a></p>
+				<p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+			</div>
+			<img width="107px" height="60px" src="/assets/images/signatureBlack.gif">
+		</div>
+	</footer>
+	
+	<!-- page info -->
+	<div class="pageInfo landscapeROW-portraitCOLUMN">
+		<div></div>
+		<div class="pageInfoLine">Created on 21/05/2024, last edited on: 21/05/2024</div>
+		<a href="content/blank">Blank</a>
+	</div>
+
+	<!-- ---------- -->
+	<!-- JAVASCRIPT -->
+	<!-- ---------- -->
+
+	<!-- my javascript -->
+	<script src="/assets/javascript/script.js"></script> 
+
+	<!-- aos.js -->
+	<script src="/assets/libraries/aos/aos.js"></script>
+	<script>AOS.init();</script>
+	
+	<!-- highlight.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+
+</body>
+</html>
