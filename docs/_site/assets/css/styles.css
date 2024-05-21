@@ -519,6 +519,10 @@ iframe {
 	padding-right: var(--spacing);
 }
 
+.frame {
+	border: var(--borderWidth) solid var(--light);
+}
+
 /* ****** */
 /* FRAMES */
 /* ****** */
