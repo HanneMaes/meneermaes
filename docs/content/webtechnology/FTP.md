@@ -46,7 +46,7 @@ Met een eigen server kun je zowel front-end als back-end technologieën gebruike
 - Crunker.io
 - Instagram
 
-# Itbusleyden.be
+# itbusleyden.be
 
 We gaan werken met onze eigen webserver. Iedereen krijgt zijn persoonlijke webpagina op deze server waarop je webcontent kan publiceren. Deze pagina's zullen toegankelijk zijn via individuele URL's, zoals bijvoorbeeld [http://hannemaes.itbusleyden.be/](http://hannemaes.itbusleyden.be/).
 
@@ -65,6 +65,8 @@ Verbinden doe je via {% include ui.html ui='Bestand, Verbinden' %}.
 Je kan vooraf gemaakte verbindingen aanpassen via {% include ui.html ui='Sites, Site beheer' %}.
 
 ![CrossFTP Window](images/crossftp-screenshot.png){: .frame }
+
+{% include callout.html type='info' content='Het bestand index.html moet altijd in de root van de server staan. De root is de hoofdmap/startlocatie van de server.' %}
 
 # Opdracht: FTP
 
