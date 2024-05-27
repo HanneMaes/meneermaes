@@ -140,12 +140,13 @@ section {
 }
 
 hr {
-	height: 1px;
+	height: 0px;
 	border: none;
-	background-color: var(--dark);
-	opacity: 0.2;
-	margin-top:    var(--spacingBig);
-	margin-bottom: var(--spacingBig);
+    border-top: 1px solid; /* Set the border width */
+    border-image: linear-gradient(to right, var(--white) 0%, var(--text) 20%, var(--text) 80%, var(--white) 100%) 1; /* Gradient with black at the start and end */
+	opacity: 0.3;
+    margin-top:    calc(2 * var(--spacingBig));
+	margin-bottom: calc(2 * var(--spacingBig));
 }
 
 /* ********** */

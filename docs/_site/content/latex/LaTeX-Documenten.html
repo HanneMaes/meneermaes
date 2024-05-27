@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="/assets/css/styles.css" rel="stylesheet">
+	<link rel="icon" href="/assets/images/favicon.ico" />
+
+	<title>LaTeX Documenten</title>
+
+	<!-- apply custom CSS to some page -->
+	
+
+	<!-- highlight.js -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+
+	<section class="mainSection">
+		<div class="sectionContent">
+
+			<!-- ------- -->
+			<!-- SIDEBAR -->
+			<!-- ------- -->
+
+			<!-- breadcrumbs: not on homepage -->
+			
+			<nav class="breadcrumbs">
+				<a href="/index">⌂</a>
+				
+				<!-- only show link to section when not on a section page -->
+				
+				<span class="navDivider">/</span>
+				 <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+				        <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+				<a href="/content/latex/index">Latex</a>
+				
+				
+			</nav>
+			
+
+			<!-- table of contents -->
+			<!-- <nav>
+				<div class="tocHeader">Inhoudstafel</div>
+				<div id="toc" class="toc"></div>
+			</nav> -->
+
+			<!-- ------- -->
+			<!-- CONTENT -->
+			<!-- ------- -->
+
+			<!-- header -->
+			<header data-aos="fade-left">LaTeX Documenten</header>
+
+			<!-- content -->
+			<p><img src="images/overleaf.svg" alt="" class="wrap" />
+De <strong>bekendste</strong> online LaTeX editor is <a href="https://www.overleaf.com/">https://www.overleaf.com/</a>.<br />
+Je bestanden worden <strong>online opgeslagen</strong>, maar je moet eerst een <strong>account maken</strong>.</p>
+
+<h1 id="basis-syntax">Basis syntax</h1>
+
+<ol>
+  <li>Surf naar <a href="https://www.overleaf.com/">https://www.overleaf.com/</a> en maak een account.</li>
+  <li>Klik op 
+<span class="ui">
+ Create a new project<span class="uiSeparator"> &gt; </span>Blank Project
+</span> en geef je project een passende naam.</li>
+  <li>Kopieer deze code, klik rechtsboven op 
+<span class="ui">
+ Recompile
+</span>, of gebruik de shortcut <span class="btn">ctrl</span> <span class="btn">S</span>.
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+ <span class="nt">\begin{document}</span>
+ Hello world!
+ <span class="nt">\end{document}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Laten we nu wat extra informatie toevoegen.
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+ <span class="k">\title</span><span class="p">{</span>My first LaTeX document<span class="p">}</span>
+ <span class="k">\author</span><span class="p">{</span>Meneer Maes<span class="p">}</span>
+ <span class="k">\date</span><span class="p">{</span>Mei 2024<span class="p">}</span>
+
+ <span class="nt">\begin{document}</span>
+ <span class="k">\maketitle</span>
+ Hello world!
+
+ <span class="nt">\end{document}</span>
+</code></pre></div>    </div>
+    <p>Met <code class="language-plaintext highlighter-rouge">\title</code>, <code class="language-plaintext highlighter-rouge">\author</code> en <code class="language-plaintext highlighter-rouge">\date</code> kan je extra informatie instellen en met <code class="language-plaintext highlighter-rouge">\maketitle</code> kan je kiezen waar in je document deze informatie moet komen.</p>
+
+    <p>Het is handig om informatie zoals de datum en de auteur bovenaan het document in te stellen, dit maakt het gemakkelijker om belangrijke details over het document snel te vinden en aan te passen.</p>
+  </li>
+</ol>
+
+<h1 id="tekst-opmaak">Tekst opmaak</h1>
+
+<ul>
+  <li>Op deze manier maak je tekst <strong>vet</strong>, <strong>cursief</strong> en <strong>onderlijnd</strong>.
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Zo maak je tekst <span class="k">\textbf</span><span class="p">{</span>vet (bold)<span class="p">}</span>.
+
+  Zo <span class="k">\underline</span><span class="p">{</span>onderlijn<span class="p">}</span> je tekst.
+
+  En zo maak je tekst <span class="k">\textit</span><span class="p">{</span>cursief (italic)<span class="p">}</span>.
+</code></pre></div>    </div>
+  </li>
+  <li>Een ander zeer nuttig commando is <code class="language-plaintext highlighter-rouge">\emph{argument}</code>, waarvan het effect op zijn argument afhangt van de context. In normale tekst wordt de benadrukte tekst cursief weergegeven, maar dit gedrag wordt omgekeerd als het wordt gebruikt binnen cursief gedrukte tekst.
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Zo ziet <span class="k">\emph</span><span class="p">{</span>het emph commando<span class="p">}</span> eruit in gewone tekst.
+
+  <span class="k">\textit</span><span class="p">{</span>Zo ziet <span class="k">\emph</span><span class="p">{</span>het emp commando<span class="p">}</span> eruit in cursieve tekst.<span class="p">}</span>
+
+  <span class="k">\textbf</span><span class="p">{</span>Zo ziet <span class="k">\emph</span><span class="p">{</span>het emp commando<span class="p">}</span> eruit in vet gedrukt tekst.<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="afbeeldingen">Afbeeldingen</h1>
+
+<ol>
+  <li>Als eerste importeren we enkele <strong>libraries</strong>, <strong>deze moeten onder <code class="language-plaintext highlighter-rouge">\documentclass</code> staan</strong>.
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+ <span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span> <span class="c">%LaTeX package to import graphics</span>
+ <span class="k">\graphicspath</span> <span class="c">%configuring the graphicx package</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Daarna uploaden we de afbeelding via de <strong>Insert Figure</strong> knop bovenaan, de code voor de afbeelding zal automatisch toegevoegd worden.<br />
+ <img src="images/image-btn.png" alt="" class="square wrap" />
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>
+ <span class="k">\centering</span>
+ <span class="k">\includegraphics</span><span class="na">[width=0.5\linewidth]</span><span class="p">{</span>download.png<span class="p">}</span>
+ <span class="k">\caption</span><span class="p">{</span>Enter Caption<span class="p">}</span>
+ <span class="k">\label</span><span class="p">{</span>fig:enter-label<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">\centering</code>: De afbeelding wordt in het <strong>midden van de pagina</strong> wordt geplaatst.</li>
+      <li><code class="language-plaintext highlighter-rouge">[width=0.5\linewidth]</code>: Deze optie stelt de <strong>breedte van de afbeelding</strong> in op de helft van de breedte van de omringende tekst. Je kunt ook andere eenheden gebruiken, zoals cm, in of een relatieve waarde zoals 0.5\textwidth.</li>
+      <li><code class="language-plaintext highlighter-rouge">\caption{Enter Caption}</code>: Dit voegt een <strong>bijschrift</strong> toe aan de afbeelding. Het bijschrift verschijnt onder de afbeelding.</li>
+      <li><code class="language-plaintext highlighter-rouge">\label{fig:enter-label}</code>: Deze opdracht definieert een label voor de figuur, waarmee je later in de tekst naar deze figuur kunt <strong>verwijzen</strong>. Door <code class="language-plaintext highlighter-rouge">\ref{fig:enter-label}</code> ergens anders in je document te plaatsen, kun je het figuurnummer oproepen.</li>
+    </ul>
+  </li>
+  <li>LaTeX probeert figuren en tabellen op een ‘goede’ plaats te zetten, wat soms resulteert in het verplaatsen van deze elementen naar de volgende pagina of het einde van het document, vooral als er niet genoeg ruimte is op de huidige pagina.
+Om de afbeelding te forceren op de plaats waar je deze wilt hebben, kun je een <strong>positieparameter</strong> toevoegen. De meest gebruikte opties zijn:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">h</code> voor <strong>here</strong> <em>(hier)</em></li>
+      <li><code class="language-plaintext highlighter-rouge">t</code> voor <strong>top</strong> <em>(bovenkant van de pagina)</em></li>
+      <li><code class="language-plaintext highlighter-rouge">b</code> voor <strong>bottom</strong> <em>(onderkant van de pagina)</em></li>
+      <li><code class="language-plaintext highlighter-rouge">p</code> voor <strong>page</strong> <em>(apart figuren-pagina)</em>
+        <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>[h]
+ <span class="k">\centering</span>
+ <span class="k">\includegraphics</span><span class="na">[width=0.5\linewidth]</span><span class="p">{</span>LaTeX-logo.jpg<span class="p">}</span>
+ <span class="k">\caption</span><span class="p">{</span>Enter Caption<span class="p">}</span>
+ <span class="k">\label</span><span class="p">{</span>fig:enter-label<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="document-types">Document types</h1>
+
+<p>Verander <code class="language-plaintext highlighter-rouge">\documentclass</code> van <code class="language-plaintext highlighter-rouge">article</code> naar <code class="language-plaintext highlighter-rouge">beamer</code> en bekijk wat het effect is.</p>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclas</span><span class="p">{</span>beamer<span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">article</code>: Deze klasse is bedoeld voor het schrijven van <strong>korte documenten</strong> <em>(artikelen, essays, …)</em>. Het biedt een eenvoudige structuur met secties en subsecties, maar zonder hoofdstukken.</li>
+  <li><code class="language-plaintext highlighter-rouge">book</code>: Deze klasse is ontworpen voor <strong>boeken</strong>. Het biedt hoofdstukken, secties, subsecties en andere hiërarchische structuren die geschikt zijn voor langere documenten.</li>
+  <li><code class="language-plaintext highlighter-rouge">beamer</code>: Deze klasse is voor <strong>presentaties</strong>. Het biedt functies voor het maken van dia’s met verschillende lay-outs en stijlen.</li>
+  <li><code class="language-plaintext highlighter-rouge">slides</code>: Deze klasse is voor het maken van <strong>handouts</strong> die vaak bij <strong>presentaties</strong> met de beamer documentklasse horen.</li>
+</ul>
+
+<p>Er zijn meerdere document-types beschikbaar in LaTeX. Elke klasse biedt verschillende structuren, lay-outs en opmaakopties die zijn afgestemd op specifieke soorten documenten.</p>
+
+<h1 id="downloaden">Downloaden</h1>
+
+<p>Om je document te downloaden klik je op het <span class="btn">Download</span> icoontje naast <span class="btn">Compile</span>.</p>
+
+<p><img src="images/download.png" alt="download" width="300px" /></p>
+
+
+		</div> <!-- sectionContent -->
+	</section>
+
+	<!-- ------ -->
+	<!-- FOOTER -->
+	<!-- ------ -->
+
+	<footer>
+		<div class="footerContent">
+			<div>
+				<!-- <p><a href="content/about">About</a></p> -->
+				<p>Licentie:</p>
+				<p><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a></p>
+				<p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+			</div>
+			<img width="107px" height="60px" src="/assets/images/signatureBlack.gif">
+		</div>
+	</footer>
+	
+	<!-- page info -->
+	<div class="pageInfo landscapeROW-portraitCOLUMN">
+		<div></div>
+		<div class="pageInfoLine">Created on 27/05/2024, last edited on: 27/05/2024</div>
+		<a href="content/blank">Blank</a>
+	</div>
+
+	<!-- ---------- -->
+	<!-- JAVASCRIPT -->
+	<!-- ---------- -->
+
+	<!-- my javascript -->
+	<script src="/assets/javascript/script.js"></script> 
+
+	<!-- aos.js -->
+	<script src="/assets/libraries/aos/aos.js"></script>
+	<script>AOS.init();</script>
+	
+	<!-- highlight.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script> <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+	<script>hljs.highlightAll();</script>
+
+</body>
+</html>
