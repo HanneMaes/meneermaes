@@ -1,11 +1,12 @@
-baseurl: "" # when not using a custom domain, use this base url: /meneermaes
+# Base URL and Custom Domain
+baseurl: "" # Leave empty when using a custom domain, otherwise specify your base URL (e.g., "/meneermaes")
 
-# how should the url's be generated
-# permalink: /:path/:basename/
+# URL Generation
+# permalink: /:path/:basename/ # Uncomment and set if you want to customize permalinks
 
-# default file settings
+# Default File Settings
 defaults:
   - scope:
-      path: "" # empty string means all files
+      path: "" # Empty string means all files
     values:
-      layout: default # make default the layout of all files not specifying a layout in the front matter
+      layout: default # Apply the 'default' layout to all files not specifying a layout in the front matter

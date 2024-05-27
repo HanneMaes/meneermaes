@@ -64,7 +64,7 @@ Het is zeer goed in het maken van complexe <strong>wiskundige formules en symbol
 
 <ul>
   <li><strong>Markdown</strong><br />
-  Een <strong>simple markup taal</strong> <em>(opmaaktaal)</em> die makkelijk te leren is, en ontworpen is voor eenvoudige opmaak en voornamelijk gebruikt word voor het schrijven van <strong>webcontent en documentatie</strong>.</li>
+  Een <strong>simple markup taal</strong> <em>(opmaaktaal)</em> die makkelijk te leren is, en ontworpen is voor <strong>eenvoudige opmaak</strong> en voornamelijk gebruikt word voor het schrijven van <strong>webcontent en documentatie</strong>.</li>
   <li><strong>LaTeX</strong><br />
   Biedt veel <strong>meer controle</strong> over de opmaak van <strong>complete en professionele documenten</strong> en ondersteunt onder andere wiskundige notaties, kan automatisch bronvermeldingen opmaken, …</li>
 </ul>
@@ -92,11 +92,104 @@ Je bestanden worden online opgeslagen, maar je moet eerst een <strong>account ma
 <span class="ui">
  Create a new project<span class="uiSeparator"> &gt; </span>Blank Project
 </span> en geef je project een passende naam.</li>
-  <li>Klik rechtsboven op 
+  <li>Kopieer deze code, klik rechtsboven op 
 <span class="ui">
  Recompile
-</span></li>
+</span>, of gebruik de shortcut <span class="btn">ctrl</span> <span class="btn">S</span>.
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+ <span class="nt">\begin{document}</span>
+ Hello world!
+ <span class="nt">\end{document}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Laten we nu wat extra informatie toevoegen.
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+ <span class="k">\title</span><span class="p">{</span>My first LaTeX document<span class="p">}</span>
+ <span class="k">\author</span><span class="p">{</span>Meneer Maes<span class="p">}</span>
+ <span class="k">\date</span><span class="p">{</span>Mei 2024<span class="p">}</span>
+
+ <span class="nt">\begin{document}</span>
+ <span class="k">\maketitle</span>
+ Hello world!
+
+ <span class="nt">\end{document}</span>
+</code></pre></div>    </div>
+    <p>Met <code class="language-plaintext highlighter-rouge">\title</code>, <code class="language-plaintext highlighter-rouge">\author</code> en <code class="language-plaintext highlighter-rouge">\date</code> kan je extra informatie instellen en met <code class="language-plaintext highlighter-rouge">\maketitle</code> kan je kiezen waar in je document deze informatie moet komen.</p>
+
+    <p>Het is handig om informatie zoals de datum en de auteur bovenaan het document in te stellen, dit maakt het gemakkelijker om belangrijke details over het document te vinden en aan te passen.</p>
+  </li>
+  <li>De volgende stap is om tekstopmaak toe te voegen.
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Zo maak je tekst <span class="k">\textbf</span><span class="p">{</span>vet (bold)<span class="p">}</span>.
+
+ Zo <span class="k">\underline</span><span class="p">{</span>onderlijn<span class="p">}</span> je tekst.
+
+ En zo maak je tekst <span class="k">\textit</span><span class="p">{</span>cursief (italic)<span class="p">}</span>.
+</code></pre></div>    </div>
+  </li>
+  <li>Een ander zeer nuttig commando is <code class="language-plaintext highlighter-rouge">\emph{argument}</code>, waarvan het effect op zijn argument afhangt van de context. In normale tekst wordt de benadrukte tekst cursief weergegeven, maar dit gedrag wordt omgekeerd als het wordt gebruikt binnen cursief gedrukte tekst.
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Zo ziet <span class="k">\emph</span><span class="p">{</span>het emph commando<span class="p">}</span> eruit in gewone tekst.
+
+ <span class="k">\textit</span><span class="p">{</span>Zo ziet <span class="k">\emph</span><span class="p">{</span>het emp commando<span class="p">}</span> eruit in cursieve tekst.<span class="p">}</span>
+
+ <span class="k">\textbf</span><span class="p">{</span>Zo ziet <span class="k">\emph</span><span class="p">{</span>het emp commando<span class="p">}</span> eruit in vet gedrukt tekst.<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Verander <code class="language-plaintext highlighter-rouge">\documentclass</code> van <code class="language-plaintext highlighter-rouge">article</code> naar <code class="language-plaintext highlighter-rouge">beamer</code> en bekijk wat het effect is.
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">\documentclas</span><span class="p">{</span>beamer<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Om je document te downloaden klik je op het <span class="btn">Download</span> icoontje naast <span class="btn">Compile</span>.<br />
+ <img src="images/download.png" alt="download" width="300px" /></li>
 </ol>
+
+<h2 id="document-type">Document-type</h2>
+
+<p>Er zijn meerdere document-types beschikbaar in LaTeX. Elke klasse biedt verschillende structuren, lay-outs en opmaakopties die zijn afgestemd op specifieke soorten documenten.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">article</code>: Deze klasse is bedoeld voor het schrijven van <strong>korte documenten</strong> <em>(artikelen, essays, …)</em>. Het biedt een eenvoudige structuur met secties en subsections, maar zonder hoofdstukken.</li>
+  <li><code class="language-plaintext highlighter-rouge">book</code>: Deze klasse is ontworpen voor <strong>boeken</strong>. Het biedt hoofdstukken, secties, subsecties en andere hiërarchische structuren die geschikt zijn voor langere documenten.</li>
+  <li><code class="language-plaintext highlighter-rouge">beamer</code>: Deze klasse is voor <strong>presentaties</strong>. Het biedt functies voor het maken van dia’s met verschillende lay-outs en stijlen.</li>
+  <li><code class="language-plaintext highlighter-rouge">slides</code>: Deze klasse is voor het maken van <strong>handouts</strong> die vaak bij <strong>presentaties</strong> met de beamer documentklasse horen.</li>
+</ul>
+
+<h2 id="afbeeldingen">Afbeeldingen</h2>
+
+<ol>
+  <li>Om afbeeldingen te gebruiken moeten we eerst enkele <strong>libraries</strong> importeren, <strong>deze moeten onder <code class="language-plaintext highlighter-rouge">\documentclass</code> staan</strong>.
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+ <span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span> <span class="c">%LaTeX package to import graphics</span>
+ <span class="k">\graphicspath</span> <span class="c">%configuring the graphicx package</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Positionering</p>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>
+    <span class="k">\centering</span>
+    <span class="k">\includegraphics</span><span class="na">[width=0.5\linewidth]</span><span class="p">{</span>LaTeX-logo.jpg<span class="p">}</span>
+    <span class="k">\caption</span><span class="p">{</span>Enter Caption<span class="p">}</span>
+    <span class="k">\label</span><span class="p">{</span>fig:enter-label<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div></div>
+
+<p>LaTeX probeert figuren en tabellen op een ‘goede’ plaats te zetten, wat soms resulteert in het verplaatsen van deze elementen naar de volgende pagina of het einde van het document, vooral als er niet genoeg ruimte is op de huidige pagina.</p>
+
+<p>Om de afbeelding te forceren op de plaats waar je deze wilt hebben, kun je een positieparameter toevoegen aan de figure-omgeving. De meest gebruikte opties zijn:</p>
+
+<p>h voor ‘here’ (hier)
+t voor ‘top’ (bovenkant van de pagina)
+b voor ‘bottom’ (onderkant van de pagina)
+p voor ‘page’ (apart figuren-pagina)
+Je kunt ook meerdere opties combineren en LaTeX laten proberen ze in die volgorde te gebruiken, bijvoorbeeld [htbp].</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>[h]
+    <span class="k">\centering</span>
+    <span class="k">\includegraphics</span><span class="na">[width=0.5\linewidth]</span><span class="p">{</span>LaTeX-logo.jpg<span class="p">}</span>
+    <span class="k">\caption</span><span class="p">{</span>Enter Caption<span class="p">}</span>
+    <span class="k">\label</span><span class="p">{</span>fig:enter-label<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div></div>
 
 <h1 id="je-1e-latex-formule">Je 1e LaTeX-formule</h1>
 
@@ -108,16 +201,161 @@ Je bestanden worden online opgeslagen, maar je moet eerst een <strong>account ma
 </span><span class="p">\]</span>
 </code></pre></div></div>
 
+<h1 id="templates">Templates</h1>
+
+<p><a href="https://www.overleaf.com/latex/templates">https://www.overleaf.com/latex/templates</a></p>
+
 <hr />
 
 <p>Guides</p>
 <ul>
   <li><a href="https://chatgpt.com/c/f8f74c72-a67a-41fe-9401-1360cad41b51">https://chatgpt.com/c/f8f74c72-a67a-41fe-9401-1360cad41b51</a></li>
   <li><a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes</a></li>
-  <li><a href="https://www.overleaf.com/latex/templates">https://www.overleaf.com/latex/templates</a></li>
 </ul>
 
 <h1 id="opdracht">Opdracht</h1>
+
+<!------------------>
+<!-- CSV TO ARRAY -->
+<!------------------>
+
+<!-- get the last dir in the path of the markdown file that is including this file -->
+
+<!-- turn the CSV into an array -->
+
+<!---------->
+<!-- PAGE -->
+<!---------->
+
+<!-- title -->
+<!-- <h1>Puntenverdeling</h1> -->
+
+<!-- table -->
+<table>
+
+	<!-- header -->
+	<thead>
+	  <tr>
+		<th>
+			<em>Puntenverdeling:</em> 
+			       <!-- get the filename -->
+			 <!-- replace all '-' with spaces -->
+			LaTeX
+		</th>
+		<th></th>
+	  </tr>
+	</thead>
+
+	<!-- body -->
+	<tbody>
+	  
+	  <tr>
+		<td>Je hebt een document-type</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Je hebt A4-papier</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Titel</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Auteur</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Bij he auteur geef je extra dank aan de persoon die je LaTeX geleerd heeft</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Je gebruikt comments om je code overzichtelijk te maken</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Je hebt tekst in het vet (bold) cursief (italic) en onderlijnd (underline)</td>
+		<td class="punt"> 3</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Je hebt minstens 1 afbeelding</td>
+		<td class="punt"> 3</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Onderder list</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Unordered list</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Je hebt titels &amp; subtitels</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Je hebt een tabel</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Je hebt een inhoudstafel</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Onder je inhoudstafel staat een afbeelding</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Je gebruikt een template</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td><strong>Exporteren</strong></td>
+		<td class="punt"></td>
+	  </tr>
+	  
+	  <tr>
+		<td>Je hebt een geschreven document (.pdf)</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Je hebt een presentatie</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Je hebt handouts voor bij je presentatie</td>
+		<td class="punt"> 1</td>
+	  </tr>
+	  
+	  
+	  <!-- Total row -->
+	  <tr class="puntenTotaal">
+		<td>Totaal</td>
+		<td class="punt">
+		  
+		  
+		  22
+		</td>
+	  </tr>
+	</tbody>
+  </table>
 
 <h2 id="optie-1-beschrijving-van-een-wiskundig-of-technologisch-concept">Optie 1: Beschrijving van een wiskundig of technologisch concept</h2>
 
@@ -215,6 +453,10 @@ Beschrijf de verschillen en gelijkenissen als ook de voordelen van elk systeem.<
 	
 	<!-- highlight.js -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script> <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
 	<script>hljs.highlightAll();</script>
 
 </body>

@@ -16,7 +16,7 @@ LaTeX-code kan geschreven worden in elke **teksteditor** en wordt **gecompileerd
 ## LaTeX vs Markdown
 
 - **Markdown**  
-	Een **simple markup taal** *(opmaaktaal)* die makkelijk te leren is, en ontworpen is voor eenvoudige opmaak en voornamelijk gebruikt word voor het schrijven van **webcontent en documentatie**.  
+	Een **simple markup taal** *(opmaaktaal)* die makkelijk te leren is, en ontworpen is voor **eenvoudige opmaak** en voornamelijk gebruikt word voor het schrijven van **webcontent en documentatie**.  
 - **LaTeX**  
 	Biedt veel **meer controle** over de opmaak van **complete en professionele documenten** en ondersteunt onder andere wiskundige notaties, kan automatisch bronvermeldingen opmaken, ...
 
@@ -37,7 +37,98 @@ Er zijn ook online LaTeX editors gespecialiseerd in formules, voor onderstaande 
 
 1. Surf naar [https://www.overleaf.com/](https://www.overleaf.com/) en maak een account.
 2. Klik op {% include ui.html ui='Create a new project, Blank Project' %} en geef je project een passende naam.
-3. Klik rechtsboven op {% include ui.html ui='Recompile' %}
+3. Kopieer deze code, klik rechtsboven op {% include ui.html ui='Recompile' %}, of gebruik de shortcut {% include btn.html btn='ctrl' %} {% include btn.html btn='S' %}.
+	```latex
+	\documentclass{article}
+	\begin{document}
+	Hello world!
+	\end{document}
+	```
+4. Laten we nu wat extra informatie toevoegen.
+	```latex
+	\documentclass{article}
+	\title{My first LaTeX document}
+	\author{Meneer Maes}
+	\date{Mei 2024}
+
+	\begin{document}
+	\maketitle
+	Hello world!
+
+	\end{document}
+	```
+	Met `\title`, `\author` en `\date` kan je extra informatie instellen en met `\maketitle` kan je kiezen waar in je document deze informatie moet komen.
+
+	Het is handig om informatie zoals de datum en de auteur bovenaan het document in te stellen, dit maakt het gemakkelijker om belangrijke details over het document te vinden en aan te passen.
+5. De volgende stap is om tekstopmaak toe te voegen.
+	```latex
+	Zo maak je tekst \textbf{vet (bold)}.
+
+	Zo \underline{onderlijn} je tekst.
+
+	En zo maak je tekst \textit{cursief (italic)}.
+	```
+6. Een ander zeer nuttig commando is `\emph{argument}`, waarvan het effect op zijn argument afhangt van de context. In normale tekst wordt de benadrukte tekst cursief weergegeven, maar dit gedrag wordt omgekeerd als het wordt gebruikt binnen cursief gedrukte tekst.
+	```latex
+	Zo ziet \emph{het emph commando} eruit in gewone tekst.
+
+	\textit{Zo ziet \emph{het emp commando} eruit in cursieve tekst.}
+
+	\textbf{Zo ziet \emph{het emp commando} eruit in vet gedrukt tekst.}
+	```
+7. Verander `\documentclass` van `article` naar `beamer` en bekijk wat het effect is.
+	```latex
+	\documentclas{beamer}
+	```
+8. Om je document te downloaden klik je op het {% include btn.html btn='Download' %} icoontje naast {% include btn.html btn='Compile' %}.  
+	![download](images/download.png){: width='300px' }
+
+## Document-type
+
+Er zijn meerdere document-types beschikbaar in LaTeX. Elke klasse biedt verschillende structuren, lay-outs en opmaakopties die zijn afgestemd op specifieke soorten documenten.
+
+- `article`: Deze klasse is bedoeld voor het schrijven van **korte documenten** *(artikelen, essays, ...)*. Het biedt een eenvoudige structuur met secties en subsections, maar zonder hoofdstukken.
+- `book`: Deze klasse is ontworpen voor **boeken**. Het biedt hoofdstukken, secties, subsecties en andere hiërarchische structuren die geschikt zijn voor langere documenten.
+- `beamer`: Deze klasse is voor **presentaties**. Het biedt functies voor het maken van dia's met verschillende lay-outs en stijlen.
+- `slides`: Deze klasse is voor het maken van **handouts** die vaak bij **presentaties** met de beamer documentklasse horen. 
+
+## Afbeeldingen
+
+1. Om afbeeldingen te gebruiken moeten we eerst enkele **libraries** importeren, **deze moeten onder `\documentclass` staan**.
+	```latex
+	\documentclass{article}
+	\usepackage{graphicx} %LaTeX package to import graphics
+	\graphicspath{{images/}} %configuring the graphicx package
+	```
+
+Positionering
+```latex
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{LaTeX-logo.jpg}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+```
+
+LaTeX probeert figuren en tabellen op een 'goede' plaats te zetten, wat soms resulteert in het verplaatsen van deze elementen naar de volgende pagina of het einde van het document, vooral als er niet genoeg ruimte is op de huidige pagina.
+
+Om de afbeelding te forceren op de plaats waar je deze wilt hebben, kun je een positieparameter toevoegen aan de figure-omgeving. De meest gebruikte opties zijn:
+
+h voor 'here' (hier)
+t voor 'top' (bovenkant van de pagina)
+b voor 'bottom' (onderkant van de pagina)
+p voor 'page' (apart figuren-pagina)
+Je kunt ook meerdere opties combineren en LaTeX laten proberen ze in die volgorde te gebruiken, bijvoorbeeld [htbp].
+
+```latex
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{LaTeX-logo.jpg}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+```
 
 # Je 1e LaTeX-formule
 
@@ -51,14 +142,19 @@ Er zijn ook online LaTeX editors gespecialiseerd in formules, voor onderstaande 
 \]
 ```
 
+# Templates
+
+[https://www.overleaf.com/latex/templates](https://www.overleaf.com/latex/templates)
+
 ---
 
 Guides
 - [https://chatgpt.com/c/f8f74c72-a67a-41fe-9401-1360cad41b51](https://chatgpt.com/c/f8f74c72-a67a-41fe-9401-1360cad41b51)
 - [https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
-- [https://www.overleaf.com/latex/templates](https://www.overleaf.com/latex/templates)
 
 # Opdracht
+
+{% include punten.html data='LaTeX' %}
 
 ## Optie 1: Beschrijving van een wiskundig of technologisch concept
 

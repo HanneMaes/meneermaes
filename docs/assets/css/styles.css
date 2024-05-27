@@ -273,27 +273,31 @@ a[href*='//']::after {
 /* CODE */
 /* **** */
 
+code.hljs.language-html::before { content: "" !important; }
 .language-html code { border: var(--borderWidth) solid #D4A200; }
 .language-html::before {                        color: #D4A200; 
 	content: "HTML";
 }
 
+code.hljs.language-css::before { content: "" !important; }
 .language-css code { border: var(--borderWidth) solid #F34A4A; }
 .language-css::before {                        color: #F34A4A; 
 	content: "CSS"; 
 }
 
+code.hljs.language-javascript::before { content: "" !important; }
 .language-javascript code { border: var(--borderWidth) solid #30B8EE; }
 .language-javascript::before {                        color: #30B8EE; 
 	content: "JavaScript";
 }
 
-.language-latex code { border: var(--borderWidth) solid #4ccf80; }
-.language-latex::before {                        color: #4ccf80; 
+code.hljs.language-latex::before { content: "" !important; }
+.language-latex code { border: var(--borderWidth) solid #00a7a7; }
+.language-latex::before {                        color: #00a7a7; 
 	content: "LaTeX";
 }
 	
-.language-html::before, .language-css::before, .language-javascript::before  { 
+.language-html::before, .language-css::before, .language-javascript::before, .language-latex::before { 
 	font-size: 12px;
 	letter-spacing: 1px;
 	font-family: codeFont;
