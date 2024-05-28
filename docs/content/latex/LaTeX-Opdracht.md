@@ -45,4 +45,4 @@ Kijk in de puntenverdeling waaraan je paper moet voldoen.
 
 # Puntenverdeling
 
-{% include punten.html data='LaTeX' %}
+{% include punten.html data='LaTeX-Paper' %}

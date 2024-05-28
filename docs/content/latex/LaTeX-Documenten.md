@@ -59,9 +59,10 @@ Je bestanden worden **online opgeslagen**, maar je moet eerst een **account make
 
 1. Als eerste importeren we enkele **libraries**, **deze moeten onder `\documentclass` staan**.
 	```latex
-	\documentclass{article}
-	\usepackage{graphicx} %LaTeX package to import graphics
-	\graphicspath{{images/}} %configuring the graphicx package
+	{% raw %}
+	\usepackage{graphicx} %needed for images: LaTeX package to import graphics
+	\graphicspath{{images/}} %needed for images: configuring the graphicx package
+	{% endraw %}
 	```
 2. Daarna uploaden we de afbeelding via de **Insert Figure** knop bovenaan, de code voor de afbeelding zal automatisch toegevoegd worden.  
 	![](images/image-btn.png){: .square }{: .wrap }

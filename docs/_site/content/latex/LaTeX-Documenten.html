@@ -119,9 +119,10 @@ Je bestanden worden <strong>online opgeslagen</strong>, maar je moet eerst een <
 
 <ol>
   <li>Als eerste importeren we enkele <strong>libraries</strong>, <strong>deze moeten onder <code class="language-plaintext highlighter-rouge">\documentclass</code> staan</strong>.
-    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
- <span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span> <span class="c">%LaTeX package to import graphics</span>
- <span class="k">\graphicspath</span> <span class="c">%configuring the graphicx package</span>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	
+ <span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span> <span class="c">%needed for images: LaTeX package to import graphics</span>
+ <span class="k">\graphicspath</span><span class="p">{{</span>images/<span class="p">}}</span> <span class="c">%needed for images: configuring the graphicx package</span>
+	
 </code></pre></div>    </div>
   </li>
   <li>Daarna uploaden we de afbeelding via de <strong>Insert Figure</strong> knop bovenaan, de code voor de afbeelding zal automatisch toegevoegd worden.<br />
