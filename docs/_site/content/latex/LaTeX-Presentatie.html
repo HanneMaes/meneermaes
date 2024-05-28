@@ -7,7 +7,7 @@
 	<link href="/assets/css/styles.css" rel="stylesheet">
 	<link rel="icon" href="/assets/images/favicon.ico" />
 
-	<title>LaTeX</title>
+	<title>LaTeX Presentatie</title>
 
 	<!-- apply custom CSS to some page -->
 	
@@ -31,6 +31,11 @@
 				
 				<!-- only show link to section when not on a section page -->
 				
+				<span class="navDivider">/</span>
+				 <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+				        <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+				<a href="/content/latex/index">Latex</a>
+				
 				
 			</nav>
 			
@@ -46,42 +51,86 @@
 			<!-- ------- -->
 
 			<!-- header -->
-			<header data-aos="fade-left">LaTeX</header>
+			<header data-aos="fade-left">LaTeX Presentatie</header>
 
 			<!-- content -->
-			<p><img src="images/LaTeX-logo.svg" alt="LaTeX logo" /></p>
+			<p>Zet je document om in een <strong>presentatie</strong> en voorzie er <strong>handouts</strong> bij.</p>
 
-<blockquote>
-  <p>Uitgesproken als “<strong>LAY-tek</strong>” of “<strong>LAH-tek</strong>”</p>
-</blockquote>
+<div class="callout" data-aos="zoom-in">
+    
+	<!-- info: voor algemene info -->
+	<!-- tip: een extra tip bij bijvoorbeeld een oefening -->
+	<!-- uitdaging: extra uitdaging bij een oefening -->
+	<!-- oefening: voor een oefening -->
 
-<p>LaTeX is een <strong>krachtige markup taal</strong> <em>(opmaaktaal)</em> om <strong>professionele text documenten</strong> te maken <em>(vergelijkbaar met Microsoft Word)</em> dat zich richt op complexe documenten, zoals academische papers, wetenschappelijke artikelen, …<br />
-Het is zeer goed in het maken van complexe <strong>wiskundige formules en symbolen</strong>, waardoor het veel word gebruikt binnen disciplines zoals wiskunde, <strong>informatica</strong>, techniek en economie.</p>
+    <!-- icon & title -->
+    
+		<p class="icon">🤯</p>
+		<p><strong>TIP</strong><br />
+	
+    
+    <!-- content -->
+    Probeer dit zo slim mogelijk en met zo weinig mogelijk aanpassingen te doen.</p>
+</div>
 
-<p>LaTeX-code kan geschreven worden in elke <strong>teksteditor</strong> en wordt <strong>gecompileerd</strong> tot een document, daardoor is het platformonafhankelijk en kan het worden gebruikt op <strong>Linux</strong>, <strong>MacOS</strong> en <strong>Windows</strong>.</p>
+<h1 id="puntenverdeling">Puntenverdeling</h1>
 
-<h2 id="latex-vs-markdown">LaTeX vs Markdown</h2>
+<!------------------>
+<!-- CSV TO ARRAY -->
+<!------------------>
 
-<ul>
-  <li><strong>Markdown</strong><br />
-  Een <strong>simple markup taal</strong> <em>(opmaaktaal)</em> die makkelijk te leren is, en ontworpen is voor <strong>eenvoudige opmaak</strong> en voornamelijk gebruikt word voor het schrijven van <strong>webcontent en documentatie</strong>.</li>
-  <li><strong>LaTeX</strong><br />
-  Biedt veel <strong>meer controle</strong> over de opmaak van <strong>complete en professionele documenten</strong> en ondersteunt onder andere wiskundige notaties, kan automatisch bronvermeldingen opmaken, …</li>
-</ul>
+<!-- get the last dir in the path of the markdown file that is including this file -->
 
-<h1 id="latex-gebruiken">LaTeX gebruiken</h1>
+<!-- turn the CSV into an array -->
 
-<p><a href="LaTeX-Documenten">LaTeX Documenten</a></p>
+<!---------->
+<!-- PAGE -->
+<!---------->
 
-<p><a href="LaTeX-Formules">LaTeX Formules</a></p>
+<!-- title -->
+<!-- <h1>Puntenverdeling</h1> -->
 
-<p>Extra resources: <a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes</a></p>
+<!-- table -->
+<table>
 
-<h1 id="opdrachten">Opdrachten</h1>
+	<!-- header -->
+	<thead>
+	  <tr>
+		<th>
+			<em>Puntenverdeling:</em> 
+			       <!-- get the filename -->
+			 <!-- replace all '-' with spaces -->
+			LaTeX Presentatie
+		</th>
+		<th></th>
+	  </tr>
+	</thead>
 
-<p><a href="LaTeX-Paper">LaTeX Paper</a></p>
-
-<p><a href="LaTeX-Presentatie">LaTeX Presentatie</a></p>
+	<!-- body -->
+	<tbody>
+	  
+	  <tr>
+		<td>Je hebt een uitgebreide overzichtelijke presentatie</td>
+		<td class="punt"> 3</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Je hebt overzichtelijke handouts voor bij je presentatie</td>
+		<td class="punt"> 3</td>
+	  </tr>
+	  
+	  
+	  <!-- Total row -->
+	  <tr class="puntenTotaal">
+		<td>Totaal</td>
+		<td class="punt">
+		  
+		  
+		  6
+		</td>
+	  </tr>
+	</tbody>
+  </table>
 
 
 		</div> <!-- sectionContent -->
@@ -106,7 +155,7 @@ Het is zeer goed in het maken van complexe <strong>wiskundige formules en symbol
 	<!-- page info -->
 	<div class="pageInfo landscapeROW-portraitCOLUMN">
 		<div></div>
-		<div class="pageInfoLine">Created on 20/05/2024, last edited on: 20/05/2024</div>
+		<div class="pageInfoLine">Created on 28/05/2024, last edited on: 28/05/2024</div>
 		<a href="content/blank">Blank</a>
 	</div>
 

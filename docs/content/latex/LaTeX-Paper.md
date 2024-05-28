@@ -1,12 +1,12 @@
 ---
-title: LaTeX Opdracht
+title: LaTeX Paper
 last_modified_at: 2024-05-27 21:34:47 +0200
 date: 2024-05-27 21:34:47 +0200
 ---
 
 # Stap 1: Kies een algoritme
 
-Kies een algoritme uit de onderstaande lijst:
+Kies 1 algoritme uit de onderstaande lijst:
 
 **Informatica**
 - Zoekalgoritmen & logaritmen
@@ -42,6 +42,9 @@ Beantwoord volgende vragen over je gekozen algoritme.
 Gebruik LaTeX om een paper te schrijven over de bevindingen van je onderzoek.  
 Voeg een LaTeX-formule toe en leg deze uit.  
 Kijk in de puntenverdeling waaraan je paper moet voldoen.
+
+Alle **informatie over LaTeX** die je nodig hebt kan je hier terugvinden:  
+[https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
 
 # Puntenverdeling
 

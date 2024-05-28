@@ -28,6 +28,8 @@ LaTeX-code kan geschreven worden in elke **teksteditor** en wordt **gecompileerd
 
 Extra resources: [https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
 
-# Opdracht
+# Opdrachten
 
-[LaTeX Opdracht](LaTeX-Opdracht)
+[LaTeX Paper](LaTeX-Paper)
+
+[LaTeX Presentatie](LaTeX-Presentatie)
