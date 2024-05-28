@@ -24,14 +24,10 @@ LaTeX-code kan geschreven worden in elke **teksteditor** en wordt **gecompileerd
 
 [LaTeX Documenten](LaTeX-Documenten)
 
+[LaTeX Formules](LaTeX-Formules)
+
 Extra resources: [https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
 
 # Opdracht
 
 [LaTeX Opdracht](LaTeX-Opdracht)
-
----
-
-[LaTeX Formules](LaTeX-Formules)
-
-[https://www.overleaf.com/latex/templates](https://www.overleaf.com/latex/templates)

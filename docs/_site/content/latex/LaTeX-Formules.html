@@ -60,17 +60,74 @@
   <li><a href="https://latexeditor.lagrida.com/">https://latexeditor.lagrida.com/</a></li>
   <li><a href="https://math-editor.online/">https://math-editor.online/</a></li>
   <li><a href="https://www.commontools.org/tool/latex-compiler-and-equation-writer-18">https://www.commontools.org/tool/latex-compiler-and-equation-writer-18</a></li>
+  <li><a href="https://viereck.ch/latex-to-svg/">LaTeX to SVG convertor</a></li>
 </ul>
 
-<h1 id="je-1e-latex-formule">Je 1e LaTeX-formule</h1>
+<h1 id="latex-formule-syntax">LaTeX-formule syntax</h1>
 
-<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">\[</span><span class="nb"> a</span><span class="p">^</span><span class="m">2</span><span class="nb"> </span><span class="o">+</span><span class="nb"> b</span><span class="p">^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> c</span><span class="p">^</span><span class="m">2</span><span class="nb"> </span><span class="p">\]</span>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">Wiskundige notatie</th>
+      <th style="text-align: left">LaTeX code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right"><img src="formules/2power3.svg" alt="" class="square" /></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">2^3</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: right"><img src="formules/minuspower.svg" alt="" class="square" /></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">2^{-1}</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: right"><img src="formules/powerdot.svg" alt="" class="square" /></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">2^{5 \cdot 1}</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: right"><img src="formules/dlowern.svg" alt="" class="square" /></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">D_N(x)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: right"><img src="formules/powerlower.svg" alt="" class="square" /></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">3^2_5</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: right"><img src="formules/hatequal.svg" alt="" class="square" /></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">A\,{\widehat {=}}\,0</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: right"><img src="formules/hatx.svg" alt="" class="square" /></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">A\,{\widehat {x}}\,0</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: right"><img src="formules/dots.svg" alt="" class="square" /></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">\{1,\ldots ,q-1\}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="dirac-vergelijking">Dirac-vergelijking</h2>
+<p><img src="formules/Dirac-vergelijking.svg" alt="" class="square" /></p>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\left</span>(i<span class="k">\gamma</span><span class="p">^</span><span class="k">\mu</span> <span class="k">\partial</span><span class="p">_</span><span class="k">\mu</span> - m<span class="k">\right</span>)<span class="k">\psi</span> = 0
 </code></pre></div></div>
 
-<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">\[</span><span class="nb">
-</span><span class="nv">\int</span><span class="p">_{</span><span class="nb">a</span><span class="p">}^{</span><span class="nb">b</span><span class="p">}</span><span class="nb"> x</span><span class="p">^</span><span class="m">2</span><span class="nb"> dx
-</span><span class="p">\]</span>
+<h2 id="schrödingervergelijking">Schrödingervergelijking</h2>
+<p><img src="formules/Schrödingervergelijking.svg" alt="" class="square" /></p>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>i<span class="k">\hbar\frac</span><span class="p">{</span><span class="k">\partial</span><span class="p">}{</span><span class="k">\partial</span> t<span class="p">}</span><span class="k">\Psi</span>(<span class="k">\mathbf</span><span class="p">{</span>r<span class="p">}</span>,t) = <span class="k">\left</span>(-<span class="k">\frac</span><span class="p">{</span><span class="k">\hbar</span><span class="p">^</span>2<span class="p">}{</span>2m<span class="p">}</span><span class="k">\nabla</span><span class="p">^</span>2 + V(<span class="k">\mathbf</span><span class="p">{</span>r<span class="p">}</span>,t)<span class="k">\right</span>)<span class="k">\Psi</span>(<span class="k">\mathbf</span><span class="p">{</span>r<span class="p">}</span>,t)
 </code></pre></div></div>
+
+<h2 id="maxwell-vergelijkingen">Maxwell-vergelijkingen</h2>
+<p><img src="formules/Maxwell-vergelijkingen.svg" alt="" class="square" /></p>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{align*}</span>
+<span class="k">\nabla</span> <span class="k">\cdot</span> <span class="k">\mathbf</span><span class="p">{</span>E<span class="p">}</span> <span class="p">&amp;</span>= <span class="k">\frac</span><span class="p">{</span><span class="k">\rho</span><span class="p">}{</span><span class="k">\varepsilon</span><span class="p">_</span>0<span class="p">}</span> <span class="k">\\</span>
+<span class="k">\nabla</span> <span class="k">\cdot</span> <span class="k">\mathbf</span><span class="p">{</span>B<span class="p">}</span> <span class="p">&amp;</span>= 0 <span class="k">\\</span>
+<span class="k">\nabla</span> <span class="k">\times</span> <span class="k">\mathbf</span><span class="p">{</span>E<span class="p">}</span> <span class="p">&amp;</span>= -<span class="k">\frac</span><span class="p">{</span><span class="k">\partial</span> <span class="k">\mathbf</span><span class="p">{</span>B<span class="p">}}{</span><span class="k">\partial</span> t<span class="p">}</span> <span class="k">\\</span>
+<span class="k">\nabla</span> <span class="k">\times</span> <span class="k">\mathbf</span><span class="p">{</span>B<span class="p">}</span> <span class="p">&amp;</span>= <span class="k">\mu</span><span class="p">_</span>0 <span class="k">\mathbf</span><span class="p">{</span>J<span class="p">}</span> + <span class="k">\mu</span><span class="p">_</span>0 <span class="k">\varepsilon</span><span class="p">_</span>0 <span class="k">\frac</span><span class="p">{</span><span class="k">\partial</span> <span class="k">\mathbf</span><span class="p">{</span>E<span class="p">}}{</span><span class="k">\partial</span> t<span class="p">}</span>
+<span class="nt">\end{align*}</span>
+</code></pre></div></div>
+
 
 
 		</div> <!-- sectionContent -->
