@@ -16,6 +16,10 @@ Kies een algoritme uit de onderstaande lijst:
 - Netwerksnelheid & bandwidth-delay product
 - De wet van Snellius
 
+**Blockchain**
+- Het gebruik van matrices in blockchain
+- Hashfuncties & bitwise operaties
+
 **Encryptie**
 - Caesar cipher & Vigenère cipher
 - Quantum-Resistant Encryption
@@ -23,11 +27,6 @@ Kies een algoritme uit de onderstaande lijst:
 - Discrete logaritmen & het ElGamal encryptiesysteem
 - Additive Homomorphic Encryption
 - RSA encryptie & matrices *<span>(moeilijk)</span>{: .badText }*
-
-**Blockchain**
-- Het gebruik van matrices in blockchain
-- Hashfuncties & bitwise operaties
-
 
 {% include callout.html type='info' content='Je mag ook zelf een algoritme kiezen dat te maken heeft met informatica, techniek, economie of wiskunde.' %}
 
@@ -38,9 +37,10 @@ Beantwoord volgende vragen over je gekozen algoritme.
 - Sinds wanneer is het in gebruik.
 - Geef praktische voorbeelden die te maken hebben met **informatica, computers, internet, ...**
 
-# Stap 3: LaTeX paper
+# Stap 3: LaTeX paper & formule
 
 Gebruik LaTeX om een paper te schrijven over de bevindingen van je onderzoek.  
+Voeg een LaTeX-formule toe en leg deze uit.  
 Kijk in de puntenverdeling waaraan je paper moet voldoen.
 
 # Puntenverdeling
