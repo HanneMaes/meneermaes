@@ -12,11 +12,16 @@ Kies een algoritme uit de onderstaande lijst:
 - Zoekalgoritmen & logaritmen
 - Beeldverwerking & matrices
 - Grafische weergave, animatie & sinus- en cosinusfuncties
+- Program Evaluation Review Techniek
+- Netwerksnelheid & bandwidth-delay product
+- De wet van Snellius
 
 **Encryptie**
 - Caesar cipher & Vigenère cipher
+- Quantum-Resistant Encryption
 - Discrete logaritmen & het Diffie-Hellman algoritme
 - Discrete logaritmen & het ElGamal encryptiesysteem
+- Additive Homomorphic Encryption
 - RSA encryptie & matrices *<span>(moeilijk)</span>{: .badText }*
 
 **Blockchain**
@@ -37,3 +42,7 @@ Beantwoord volgende vragen over je gekozen algoritme.
 
 Gebruik LaTeX om een paper te schrijven over de bevindingen van je onderzoek.  
 Kijk in de puntenverdeling waaraan je paper moet voldoen.
+
+# Puntenverdeling
+
+{% include punten.html data='LaTeX' %}
