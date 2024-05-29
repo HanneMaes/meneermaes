@@ -43,10 +43,8 @@ Gebruik LaTeX om een paper te schrijven over de bevindingen van je onderzoek.
 Voeg een LaTeX-formule toe en leg deze uit.  
 Kijk in de puntenverdeling waaraan je paper moet voldoen.
 
-Alle **informatie over LaTeX** die je nodig hebt kan je hier terugvinden:  
+**Alle informatie over LaTeX die je nodig hebt kan je hier terugvinden:**  
 [https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
-
-# Puntenverdeling
 
 {% include punten.html data='LaTeX-Paper' %}
 

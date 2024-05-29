@@ -8,6 +8,4 @@ Zet je document om in een **presentatie** en voorzie er **handouts** bij.
 
 {% include callout.html type='tip' content='Probeer dit zo slim mogelijk en met zo weinig mogelijk aanpassingen te doen.' %}
 
-# Puntenverdeling
-
 {% include punten.html data='LaTeX-Presentatie' %}

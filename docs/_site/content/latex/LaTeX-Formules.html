@@ -54,14 +54,29 @@
 			<header data-aos="fade-left">LaTeX Formules</header>
 
 			<!-- content -->
-			<p>Er zijn online LaTeX editors gespecialiseerd in formules, voor onderstaande editors heb je <strong>geen account</strong> nodig:</p>
+			<ol>
+  <li>Om een wiskunde formule in te voegen klik je bovenaan op de <strong>insert math</strong> knop.<br />
+<img src="images/insertemathicon.png" alt="" class="square" width="50px" /></li>
+  <li>Daarna heb je de keuze tussen <strong>Inline Math</strong> en <strong>Display Math</strong>.<br />
+<img src="images/insertmath.png" alt="" class="square" width="250px" /></li>
+</ol>
+
 <ul>
-  <li><a href="https://latex.codecogs.com/eqneditor/editor.php">https://latex.codecogs.com/eqneditor/editor.php</a></li>
-  <li><a href="https://latexeditor.lagrida.com/">https://latexeditor.lagrida.com/</a></li>
-  <li><a href="https://math-editor.online/">https://math-editor.online/</a></li>
-  <li><a href="https://www.commontools.org/tool/latex-compiler-and-equation-writer-18">https://www.commontools.org/tool/latex-compiler-and-equation-writer-18</a></li>
-  <li><a href="https://viereck.ch/latex-to-svg/">LaTeX to SVG convertor</a></li>
+  <li><strong>Inline Math</strong><br />
+  Hiermee plaats je de formule <strong>in een lijn tekst</strong>, zoals een <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>-tag in HTML.<br />
+  <strong>Syntax</strong>: <code class="language-plaintext highlighter-rouge">\( ... \)</code> (vervand de … door je formule).</li>
+  <li><strong>Display Math</strong><br />
+  Hiermee krijgt de formule een <strong>eigen lijn</strong>, zoals een <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>-tag in HTML.<br />
+  <strong>Syntax</strong>: <code class="language-plaintext highlighter-rouge">\[ ... \]</code> (vervand de … door je formule).</li>
 </ul>
+
+<p><img src="images/inlinevsblock.png" alt="" class="frame" width="500px" /></p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dit is <span class="p">\(</span><span class="m">2</span><span class="p">^{</span><span class="o">-</span><span class="m">1</span><span class="p">}\)</span> inline math.
+
+Dit is display math:
+<span class="p">\[</span><span class="m">2</span><span class="p">^{</span><span class="o">-</span><span class="m">1</span><span class="p">}\]</span>
+</code></pre></div></div>
 
 <h1 id="latex-formule-syntax">LaTeX-formule syntax</h1>
 
@@ -108,6 +123,8 @@
   </tbody>
 </table>
 
+<p>Je kan heel ver gaan in het opbouwen van formules, hieronder enkele voorbeelden:</p>
+
 <h2 id="dirac-vergelijking">Dirac-vergelijking</h2>
 <p><img src="formules/Dirac-vergelijking.svg" alt="" class="square" /></p>
 <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\left</span>(i<span class="k">\gamma</span><span class="p">^</span><span class="k">\mu</span> <span class="k">\partial</span><span class="p">_</span><span class="k">\mu</span> - m<span class="k">\right</span>)<span class="k">\psi</span> = 0
@@ -128,6 +145,18 @@
 <span class="nt">\end{align*}</span>
 </code></pre></div></div>
 
+<h1 id="stand-alone-latex-math-editors">Stand-alone LaTeX math editors</h1>
+
+<p>Er zijn online LaTeX editors gespecialiseerd in formules, meestal worden deze editors gebruikt om <strong>afbeeldingen van formules</strong> te maken die in andere kantoor softwarepakketten ingevoegd worden.</p>
+
+<p>Voor onderstaande editors heb je <strong>geen account</strong> nodig:</p>
+<ul>
+  <li><a href="https://viereck.ch/latex-to-svg/">LaTeX to SVG convertor</a></li>
+  <li><a href="https://latex.codecogs.com/eqneditor/editor.php">https://latex.codecogs.com/eqneditor/editor.php</a></li>
+  <li><a href="https://latexeditor.lagrida.com/">https://latexeditor.lagrida.com/</a></li>
+  <li><a href="https://math-editor.online/">https://math-editor.online/</a></li>
+  <li><a href="https://www.commontools.org/tool/latex-compiler-and-equation-writer-18">https://www.commontools.org/tool/latex-compiler-and-equation-writer-18</a></li>
+</ul>
 
 
 		</div> <!-- sectionContent -->

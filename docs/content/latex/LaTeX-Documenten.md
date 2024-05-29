@@ -54,6 +54,15 @@ Je bestanden worden **online opgeslagen**, maar je moet eerst een **account make
 
 	\textbf{Zo ziet \emph{het emp commando} eruit in vet gedrukt tekst.}
 	```
+- Hieronder zie je hoe je een **line break** maakt.
+	```latex
+	Je kan een lege lijn maken door 2 backslashes te gebruiken\\
+	De lijn hierboven heeft 1 line break gekregen.
+	\\
+	\\
+	Hierboven gebruik ik 2 maal een line break om een lege lijn te krijgen.
+	```
+	Het commando `\\` kan je vergelijken met `<br>` in HTML.
 
 # Afbeeldingen
 
@@ -65,7 +74,7 @@ Je bestanden worden **online opgeslagen**, maar je moet eerst een **account make
 	{% endraw %}
 	```
 2. Daarna uploaden we de afbeelding via de **Insert Figure** knop bovenaan, de code voor de afbeelding zal automatisch toegevoegd worden.  
-	![](images/image-btn.png){: .square }{: .wrap }
+	![](images/image-btn.png){: .square }
 ```latex
 \begin{figure}
 	\centering

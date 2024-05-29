@@ -317,6 +317,15 @@ pre {
 	margin-top: 0;
 }
 
+/* for some reason highlight.js doesn't style inline code blocks, so I do it here */
+code {
+	background-color: rgba(40, 44, 52, 1);
+	color: #abb2bf;
+	border-radius: 5px;
+	padding-left:  5px;
+	padding-right: 5px;
+}
+
 /* ******************* */
 /* UI ELEMENTS IN TEXT */
 /* ******************* */
