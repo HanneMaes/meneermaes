@@ -35,7 +35,7 @@ Kies 1 algoritme uit de onderstaande lijst:
 Beantwoord volgende vragen over je gekozen algoritme.
 - Leg het **begrip en algoritme** zo duidelijk mogelijk uit.
 - Sinds wanneer is het in gebruik.
-- Geef praktische voorbeelden die te maken hebben met **informatica, computers, internet, ...**
+- Geef **praktische voorbeelden** die te maken hebben met **informatica, computers, internet, ...**
 
 # Stap 3: LaTeX paper & formule
 
@@ -49,3 +49,9 @@ Alle **informatie over LaTeX** die je nodig hebt kan je hier terugvinden:
 # Puntenverdeling
 
 {% include punten.html data='LaTeX-Paper' %}
+
+## Extra dank aan de auteur
+
+Dit is wat ik bedoel met **je geeft extra dank aan een persoon**.
+
+![](images/extradank.png){: width="400px" }{: .frame }
