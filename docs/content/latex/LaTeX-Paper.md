@@ -46,6 +46,11 @@ Kijk in de puntenverdeling waaraan je paper moet voldoen.
 **Alle informatie over LaTeX die je nodig hebt kan je hier terugvinden:**  
 [https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
 
+## Uploaden
+Je upload **2 documenten**:
+- Je paper in **PDF-formaat**
+- Een **tekst-document** *(word, kladblok, ...)* met je **code**.
+
 {% include punten.html data='LaTeX-Paper' %}
 
 ## Extra dank aan de auteur
