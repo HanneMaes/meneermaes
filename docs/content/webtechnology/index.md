@@ -38,4 +38,6 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 # JavaScript projecten
 
+[Het if-statement](Het-if-statement)
+
 [Price calculator](Price-calculator)

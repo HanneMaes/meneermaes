@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="/assets/css/styles.css" rel="stylesheet">
+	<link rel="icon" href="/assets/images/favicon.ico" />
+
+	<title>Het if statement</title>
+
+	<!-- apply custom CSS to some page -->
+	
+
+	<!-- highlight.js -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+
+	<section class="mainSection">
+		<div class="sectionContent">
+
+			<!-- ------- -->
+			<!-- SIDEBAR -->
+			<!-- ------- -->
+
+			<!-- breadcrumbs: not on homepage -->
+			
+			<nav class="breadcrumbs">
+				<a href="/index">⌂</a>
+				
+				<!-- only show link to section when not on a section page -->
+				
+				<span class="navDivider">/</span>
+				 <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+				        <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+				<a href="/content/webtechnology/index">Webtechnology</a>
+				
+				
+			</nav>
+			
+
+			<!-- table of contents -->
+			<!-- <nav>
+				<div class="tocHeader">Inhoudstafel</div>
+				<div id="toc" class="toc"></div>
+			</nav> -->
+
+			<!-- ------- -->
+			<!-- CONTENT -->
+			<!-- ------- -->
+
+			<!-- header -->
+			<header data-aos="fade-left">Het if statement</header>
+
+			<!-- content -->
+			<p>Maak een webapp met een <strong>textfield</strong> en een <strong>knop</strong>.</p>
+
+<div class="browserWindow" style="width: 200px;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/if-1.png" />
+</div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">id=</span><span class="s">"formulier"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"formTitle"</span><span class="nt">&gt;</span>Geef een getal:<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
+	<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"tekstveldGetal"</span> <span class="na">placeholder=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+
+<span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"knopGetal"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Knop<span class="nt">&lt;/a&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"paginaText"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h1 id="if-statement">If-statement</h1>
+
+<p>Voeg deze JavaScript code toe om een bericht te tonen als het getal 0 is.</p>
+
+<div class="browserWindow" style="width: 200px;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/if-2.png" />
+</div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">knopGetal</span><span class="dl">"</span><span class="p">).</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="c1">// haal de waarde uit het tekstveld</span>
+	<span class="kd">let</span> <span class="nx">getal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">tekstveldGetal</span><span class="dl">"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">getal</span><span class="p">);</span>
+
+	<span class="c1">// als het getal 0 is, tonen we een bericht op de pagina</span>
+	<span class="k">if </span><span class="p">(</span><span class="nx">getal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">paginaText</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="dl">"</span><span class="s2">Het getal is 0!</span><span class="dl">"</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h1 id="if-else-statement">If-else-statement</h1>
+
+<p>Als het getal 0 is, tonen we een bericht op de pagina, zo niet tonen we een ander bericht.</p>
+
+<div class="browserWindow" style="width: 200px;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/if-2.png" />
+</div>
+<div class="browserWindow" style="width: 200px;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/if-3.png" />
+</div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">knopGetal</span><span class="dl">"</span><span class="p">).</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="c1">// haal de waarde uit het tekstveld</span>
+	<span class="kd">let</span> <span class="nx">getal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">tekstveldGetal</span><span class="dl">"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">getal</span><span class="p">);</span>
+
+	<span class="c1">// als het getal 0 is, tonen we een bericht op de pagina</span>
+	<span class="c1">// zo niet tonen we een ander bericht</span>
+	<span class="k">if </span><span class="p">(</span><span class="nx">getal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">paginaText</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="dl">"</span><span class="s2">Het getal is 0!</span><span class="dl">"</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">paginaText</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="dl">"</span><span class="s2">Het getal is niet 0! &lt;br&gt;</span><span class="dl">"</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h1 id="if-else-if-statement">If-else-if-statement</h1>
+
+<p>Als het getal 0 is, tonen we “Het getal is 0!”.<br />
+Als het getal groter dan 0 is, tonen we “Het getal is POSITIEF!”.<br />
+Zo niet tonen we “Het getal is NEGATIEF!””</p>
+
+<div class="browserWindow" style="width: 200px;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/if-2.png" />
+</div>
+<div class="browserWindow" style="width: 200px;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/if-4.png" />
+</div>
+<div class="browserWindow" style="width: 200px;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/if-5.png" />
+</div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">knopGetal</span><span class="dl">"</span><span class="p">).</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="c1">// haal de waarde uit het tekstveld</span>
+	<span class="kd">let</span> <span class="nx">getal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">tekstveldGetal</span><span class="dl">"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">getal</span><span class="p">);</span>
+
+	<span class="c1">// als het getal 0 is, tonen we "Het getal is 0!"</span>
+	<span class="c1">// als het getal groter dan 0 is, tonen we "Het getal is POSITIEF!"</span>
+	<span class="c1">// zo niet tonen we "Het getal is NEGATIEF!""</span>
+	<span class="k">if </span><span class="p">(</span><span class="nx">getal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">paginaText</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Het getal is 0!</span><span class="dl">"</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="k">if </span><span class="p">(</span><span class="nx">getal</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">paginaText</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Het getal is POSITIEF</span><span class="dl">"</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">paginaText</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Het getal is NEGATIEF</span><span class="dl">"</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h1 id="code-optimaliseren">Code optimaliseren</h1>
+
+<p>Momenteel doen we 3 keer <code class="language-plaintext highlighter-rouge">document.getElementById("paginaText").innerHTML</code>, elke keer dat we deze code uitvoeren kost dit een beetje <strong>tijd en computer resources</strong>.</p>
+
+<p>We kunnen onze code optimaliseren, en onze webapp sneller maker door dit maar 1 keer uit te voeren en <strong>op te slaan in een variable</strong>:<br />
+<code class="language-plaintext highlighter-rouge">let tekst = document.getElementById("paginaText")</code></p>
+
+<p>Onze code ziet er dan als volgt uit:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">knopGetal</span><span class="dl">"</span><span class="p">).</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="c1">// haal de waarde uit het tekstveld</span>
+	<span class="kd">let</span> <span class="nx">getal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">tekstveldGetal</span><span class="dl">"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">getal</span><span class="p">);</span>
+
+	<span class="c1">// de &lt;div&gt; opslaan in een variabele</span>
+	<span class="kd">let</span> <span class="nx">tekst</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">paginaText</span><span class="dl">"</span><span class="p">);</span>
+
+	<span class="c1">// if-statement</span>
+	<span class="k">if </span><span class="p">(</span><span class="nx">getal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">tekst</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Het getal is 0!</span><span class="dl">"</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="k">if </span><span class="p">(</span><span class="nx">getal</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">tekst</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Het getal is POSITIEF</span><span class="dl">"</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="nx">tekst</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Het getal is NEGATIEF</span><span class="dl">"</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h1 id="innerhtml-met-html-tags">InnerHTML met HTML-tags</h1>
+
+<p>We kunnen via de <code class="language-plaintext highlighter-rouge">.innerHTML</code> methode ook <strong>HTML-code toevoegen</strong> aan de pagina.</p>
+
+<div class="browserWindow" style="width: 200px;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/if-6.png" />
+</div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">knopGetal</span><span class="dl">"</span><span class="p">).</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="kd">let</span> <span class="nx">getal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">tekstveldGetal</span><span class="dl">"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">getal</span><span class="p">);</span>
+
+	<span class="kd">let</span> <span class="nx">tekst</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">paginaText</span><span class="dl">"</span><span class="p">);</span>
+
+	<span class="k">if </span><span class="p">(</span><span class="nx">getal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">tekst</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="dl">"</span><span class="s2">Het getal is 0! &lt;br&gt;</span><span class="dl">"</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="k">if </span><span class="p">(</span><span class="nx">getal</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">tekst</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="dl">"</span><span class="s2">Het getal is &lt;strong&gt;POSITIEF&lt;/strong&gt; &lt;br&gt;</span><span class="dl">"</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="nx">tekst</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="dl">"</span><span class="s2">Het getal is &lt;strong&gt;NEGATIEF&lt;/strong&gt; &lt;br&gt;</span><span class="dl">"</span><span class="p">;</span>
+	<span class="p">}</span>
+
+<span class="p">});</span>
+</code></pre></div></div>
+
+
+		</div> <!-- sectionContent -->
+	</section>
+
+	<!-- ------ -->
+	<!-- FOOTER -->
+	<!-- ------ -->
+
+	<footer>
+		<div class="footerContent">
+			<div>
+				<!-- <p><a href="content/about">About</a></p> -->
+				<p>Licentie:</p>
+				<p><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a></p>
+				<p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+			</div>
+			<img width="107px" height="60px" src="/assets/images/signatureBlack.gif">
+		</div>
+	</footer>
+	
+	<!-- page info -->
+	<div class="pageInfo landscapeROW-portraitCOLUMN">
+		<div></div>
+		<div class="pageInfoLine">Created on 05/06/2024, last edited on: 05/06/2024</div>
+		<a href="content/blank">Blank</a>
+	</div>
+
+	<!-- ---------- -->
+	<!-- JAVASCRIPT -->
+	<!-- ---------- -->
+
+	<!-- my javascript -->
+	<script src="/assets/javascript/script.js"></script> 
+
+	<!-- aos.js -->
+	<script src="/assets/libraries/aos/aos.js"></script>
+	<script>AOS.init();</script>
+	
+	<!-- highlight.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script> <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+	<script>hljs.highlightAll();</script>
+
+</body>
+</html>

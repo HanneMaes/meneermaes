@@ -240,8 +240,9 @@ blockquote {
 }
 
 /* colors */
-.goodText { color: #00976a; }
-.badText  { color: #a30031; }
+.goodText { color: #00976a; font-weight: bold; }
+.badText  { color: #a30031; font-weight: bold; }
+.blueText { color: #006097; font-weight: bold; }
 
 /* ***** */
 /* LINKS */
@@ -549,6 +550,7 @@ iframe {
 	margin-top:    var(--spacingSmall);
 	margin-bottom: var(--spacingSmall);
 	margin-right:  var(--spacingSmall);
+	vertical-align: top;
 }
 
 .browserWindow img {
