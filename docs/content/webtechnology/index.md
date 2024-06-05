@@ -35,3 +35,7 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 [Externe libraries](Externe-libraries)
 
 [FTP](FTP)
+
+# JavaScript projecten
+
+[Price calculator](Price-calculator)
