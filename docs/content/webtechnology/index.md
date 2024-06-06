@@ -30,13 +30,14 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [De mobile-first filosofie](Mobile-first)
 
-[Portfolio website: Responsive design](Portfolio-website-Responsive-design){: .portfolio }
-
-[Externe libraries](Externe-libraries)
-
 [FTP](FTP)
 
+[Portfolio website: Responsive design](Portfolio-website-Responsive-design){: .portfolio }
+
+
 # JavaScript projecten
+
+[Externe libraries](Externe-libraries)
 
 [Het if-statement](Het-if-statement)
 

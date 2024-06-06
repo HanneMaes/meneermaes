@@ -67,9 +67,3 @@ Je kan vooraf gemaakte verbindingen aanpassen via {% include ui.html ui='Sites, 
 ![CrossFTP Window](images/crossftp-screenshot.png){: .frame }
 
 {% include callout.html type='info' content='Het bestand index.html moet altijd in de root van de server staan. De root is de hoofdmap/startlocatie van de server.' %}
-
-# Opdracht: FTP
-
-Plaats een eigen website *(naar keuze)* via FTP op de webserver van de school.
-
-{% include punten.html data='ftp' %}
