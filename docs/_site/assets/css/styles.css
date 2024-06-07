@@ -119,7 +119,7 @@ body {
 
 section {
 	background-color: var(--white);
-	background-image: url("../images/50.jpg");
+	background-image: url("../images/blenderstudiopattern.svg");
 
 	display: flex;
 	flex-direction: column;
