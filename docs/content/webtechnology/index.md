@@ -10,14 +10,6 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [Cursus deel I](https://hannemaes.notion.site/Webtechnology-a8880858f95549feaacefcf65a342667)
 
-# HTML
-
-## Je 1e code
-
-[Bestandsextensies tonen](Bestandsextensies-tonen)
-
-[Portfolio website: First draft](Portfolio-website-First-draft){: .portfolio }
-
 # Responsive design
 
 [Wat is responsive design?](Wat-is-responsive-design)
