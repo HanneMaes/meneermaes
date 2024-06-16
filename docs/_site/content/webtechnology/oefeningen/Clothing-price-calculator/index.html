@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="images/favicon.png" />
+    <title>Profit Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+<body>
+
+<h1>Profil Calculator</h1>
+
+<!-- FORM -->
+<form>
+    <ul>
+        <!-- Manufacturing -->
+        <li class="title">Manufacturing</li>
+        <li>
+            <label>Shirt</label>
+            <input id="shirtManufacturing" type="text" value="9.94" />
+        </li>
+        <li>
+            <label>Hoody</label>
+            <input id="hoodyManufacturing" type="text" value="48.73" />
+        </li>
+
+        <!-- Shipping -->
+        <li class="newSection title">Shipping</li>
+        <li>
+            <label>Shipping</label>
+            <input id="shipping" type="text" value="6.15" />
+        </li>
+
+		<hr>
+
+        <!-- Selling price -->
+        <li class="newSection title">Selling price</li>
+        <li>
+            <label>Shirt</label>
+            <input id="shirtSellingPrice" type="text" value="25" />
+        </li>
+        <li>
+            <label>Hoody</label>
+            <input id="hoodySellingPrice" type="text" value="65" />
+        </li>
+
+        <!-- Profit target -->
+        <li class="newSection title">Target profit</li>
+        <li>
+            <label>Target profil</label>
+            <input id="targetProfit" type="text" value="15" />
+        </li>
+
+        <!-- button -->
+        <li class="newSection">
+            <a id="calculate" href="#">Calculate profits</a>
+        </li>
+    </ul>
+</form>
+
+<!-- OUTPUT -->
+<div id="output" class="output hidden"></div>
+
+<script src="script.js"></script> 
+
+</body>
+</html>
