@@ -1,0 +1,5 @@
+# Exclude files
+-docs/_site/
+-node_modules/
+-.git/
+-.jekyll-cache/
