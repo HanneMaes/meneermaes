@@ -23,7 +23,6 @@ body {
     background-color: var(--colorBackground);
     color: var(--colorText);
     font-family: body;
-    overflow: hidden; /* remove scrollbars */
 
     display: flex;
     flex-direction: column;
