@@ -9,7 +9,7 @@ for dirpath, dirnames, filenames in os.walk("."):
         if dirname.startswith("."):
             dirnames.remove(dirname)
     for filename in filenames:
-        if not filename.startswith("."):
+        if not filename.startswith(".") and filename != os.path.basename(__file__):
 
             # Exclude the script files
             if filename != "batchImageDiff.py" and filename != "LICENSE" and filename != "README.md":
@@ -25,7 +25,7 @@ for dirpath, dirnames, filenames in os.walk("."):
                         chunk = file.read(1024) # read only 1024 bytes at a time
                         h.update(chunk)
                 hashedFile = h.hexdigest() # return the hex representation of digest
-                    
+
                 # Add to array
                 namesAndHashes.append([filePath, hashedFile])
 
@@ -38,7 +38,7 @@ for i in namesAndHashes:
 print()
 
 # Sort array
-namesAndHashes.sort(key=lambda namesAndHashes:namesAndHashes[1]) 
+namesAndHashes.sort(key=lambda namesAndHashes:namesAndHashes[1])
 
 # Compare hashes
 prevIsDifferent = False # True means that the prev loop iteration found a double

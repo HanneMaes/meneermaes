@@ -2,7 +2,7 @@
 // $ node csv-to-sheets.js '../../docs/_data/webtechnology/file.csv' 5AD
 
 // SETTINGS
-let outputPath =  '/home/hanne/Documents/School/Code/maesbot-private-data/punten';
+let outputPath =  '/home/hanne/Documents/School/Code/maesbot-private-data/CSV 2 sheet';
 
 /* ********************************************************************************************************************************* */
 
@@ -24,13 +24,11 @@ if (args.length >= 2) {
 	csvFile = args[0];
 	klas = args[1];
 
-	console.log();
 	console.log('Settings:');
 	console.log('✅ CSV file:', csvFile);
 	console.log('✅ Klas:', klas);
 	console.log('✅ Output path:', outputPath);
 } else {
-	console.log();
 	console.log("❌ Command line arguments need to be like this:");
 	console.log("node csv-to-sheets.js path/to/punten.csv klas output/path");
 
@@ -83,7 +81,7 @@ fs.createReadStream(csvFile)
 	.on('end', () => {
 	// Iterate over each name
 	names.forEach((nameStudent) => {
-	
+
 		// Convert CSV to sheet
 		const workbook = new ExcelJS.Workbook();
 		const worksheet = workbook.addWorksheet('Sheet1');
@@ -105,7 +103,7 @@ fs.createReadStream(csvFile)
 
 			worksheet.getCell('F1').value = '/ totaal';
 			worksheet.getCell('F2').value = { formula: '=SUM(C:C)' };
-		
+
 			// Ensure the output directory exists
 			fs.mkdirSync('output', { recursive: true });
 
