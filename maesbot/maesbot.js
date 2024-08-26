@@ -9,16 +9,27 @@ const path = require('path'); // work with file paths
 /* ****************** */
 
 try {
-	const data = fs.readFileSync('settings-maesbot.json', 'utf8'); // Read the contents of the JSON file synchronously
-	const jsonData = JSON.parse(data); // Parse the JSON data into a JavaScript object
 
 	// Get settings
-	const privateDataDir = jsonData['private data dir'];
-
-	console.log();
-	console.log(color.info('settings-maesbot.json:'));
-	console.log(color.info('  - Private data directory:', privateDataDir))
-	console.log();
+   privateDataDir = "";
+   fs.readFile('settings-maesbot.json', 'utf8', (err, jsonString) => {
+      if (err) {
+         console.error("Error reading settings-maesbot.json:", err);
+         return;
+      }
+      try {
+         const data = JSON.parse(jsonString);
+         // console.log("Parsed data:", data);
+         if (data["private-data-dir"]) {
+            privateDataDir = data["private-data-dir"];
+            // console.log("private-data-dir:", privateDataDir);
+         } else {
+            console.error("Error: 'private-data-dir' not found in parsed data");
+         }
+      } catch(err) {
+         console.error('Error parsing JSON string:', err);
+      }
+   });
 
 	/* ********* */
 	/* ASCII ART */
