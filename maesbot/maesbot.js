@@ -34,15 +34,15 @@ try {
 	/* ********* */
 	/* ASCII ART */
 	/* ********* */
-	console.log(color.highlight("          __            "));
-	console.log(color.highlight("  _(_\\   |@@|           "));
-	console.log(color.highlight(" (__/\\__ \\--/ __        "));
-	console.log(color.highlight("    \\___|----|  |   __  "));
-	console.log(color.highlight("        \\ }{ /\\ )_ / _\\ "));
-	console.log(color.highlight("        /\\__/\\ \\__O (__ "));
-	console.log(color.highlight("       (--/\\--)    \\__/ "));
-	console.log(color.highlight("       _)(  )(_         "));
-	console.log(color.highlight("      `---''---`        "));
+	console.log(color.art("          __            "));
+	console.log(color.art("  _(_\\   |") + color.highlight("@@") + color.art("|           "));
+	console.log(color.art(" (__/\\__ \\--/ __        "));
+	console.log(color.art("    \\___|----|  |   __  "));
+	console.log(color.art("        \\ }{ /\\ )_ / _\\ "));
+	console.log(color.art("        /\\__/\\ \\__O (__ "));
+	console.log(color.art("       (--/\\--)    \\__/ "));
+	console.log(color.art("       _)(  )(_         "));
+	console.log(color.art("      `---''---`        "));
 
 	/* *************** */
 	/* INTRO QUESTIONS */

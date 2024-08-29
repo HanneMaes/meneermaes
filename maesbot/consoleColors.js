@@ -35,4 +35,5 @@ module.exports = {
   executing: (text) => `${colors.fgYellow}${text}${colors.reset}`,
   highlight: (text) => `${colors.fgRed}${text}${colors.reset}`,
   info: (text) => `${colors.fgGray}${text}${colors.reset}`,
+  art: (text) => `${colors.fgYellow}${text}${colors.reset}`,
 };

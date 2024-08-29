@@ -1,3 +1,4 @@
 {
-  "private-data-dir": "/home/hanne/Documents/Nextcloud/School/maesbot-private-data"
+   "private-data-dir": "/home/hanne/Documents/Nextcloud/School/maesbot-private-data",
+   "diff-files-dir": "Diff files"
 }
