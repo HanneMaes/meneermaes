@@ -1,10 +1,27 @@
 import os
 import hashlib
+import argparse # provides a convenient way to write user-friendly command-line interfaces
+
+########################################################################################################################################################
+# Get command line arguments
+
+parser = argparse.ArgumentParser(description="Handle a command line variable") # creates an ArgumentParser object. The description parameter provides a brief explanation of what the script does, which will be displayed if the user runs the script with a -h or --help flag.
+parser.add_argument("variable", help="The variable to be processed") # adds an argument to the parser. In this case, it's a positional argument named "variable". The help parameter provides a description of this argument, which will be shown in the help message.
+
+args = parser.parse_args() # parses the command-line arguments
+diffDir = args.variable
+
+# print diff folder location
+# print()
+# print(f"Diffing all files in: {diffDir }")
+
+########################################################################################################################################################
+# Start the diff
 
 namesAndHashes = []
 
 # Get all files in the current dir and all subdirs, that are not hidden
-for dirpath, dirnames, filenames in os.walk("."):
+for dirpath, dirnames, filenames in os.walk(diffDir):
     for dirname in dirnames:
         if dirname.startswith("."):
             dirnames.remove(dirname)

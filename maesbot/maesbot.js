@@ -4,32 +4,37 @@ const { spawn } = require('child_process'); // execute other scripts
 const fs = require('fs'); // access to filesystem
 const path = require('path'); // work with file paths
 
+/* ******************************************************************************************************************************************* */
+
 /* ****************** */
 /* READ SETTINGS JSON */
 /* ****************** */
 
-try {
+// Get settings from settings-maesbot.json
+fs.readFile('settings-maesbot.json', 'utf8', (err, data) => { // Read the JSON file
+   if (err) {
+      console.error('Error reading settings-maesbot.json:', err);
+      return;
+   }
+   try {
+      const jsonObject = JSON.parse(data); // Parse the JSON string into an object
+      showMenu(jsonObject); // Continue when everything is loaded
+   } catch (parseError) {
+      console.error('Error parsing settings-maesbot.json:', parseError);
+   }
+});
 
-	// Get settings
-   privateDataDir = "";
-   fs.readFile('settings-maesbot.json', 'utf8', (err, jsonString) => {
-      if (err) {
-         console.error("Error reading settings-maesbot.json:", err);
-         return;
-      }
-      try {
-         const data = JSON.parse(jsonString);
-         // console.log("Parsed data:", data);
-         if (data["private-data-dir"]) {
-            privateDataDir = data["private-data-dir"];
-            // console.log("private-data-dir:", privateDataDir);
-         } else {
-            console.error("Error: 'private-data-dir' not found in parsed data");
-         }
-      } catch(err) {
-         console.error('Error parsing JSON string:', err);
-      }
-   });
+/* ******************************************************************************************************************************************* */
+
+/* ********************************************* */
+/* CONTINUE WHEN settings-maesbot.json is loaded */
+/* ********************************************* */
+
+function showMenu(settings) {
+
+   // show settings
+   // console.log("Settings:", settings);
+   // console.log();
 
 	/* ********* */
 	/* ASCII ART */
@@ -106,9 +111,8 @@ try {
 			/* DIFF: OPEN DIR */
 			/* ************** */
 
-			console.log(color.executing('🤖 Opening diff files dir...'));
-
-			const directoryPath = path.join(__dirname, 'diff-file/Files to Diff/'); // Define the directory you want to open
+         const directoryPath = path.join(settings['private-data-dir'], settings['diff-files-dir']);
+			console.log(color.executing('🤖 Opening diff files dir: ' + directoryPath));
 
 			let command;
 			let args;
@@ -138,9 +142,10 @@ try {
 			/* DIFF: DIFF FILES */
 			/* **************** */
 
+         const directoryPath = path.join(settings['private-data-dir'], settings['diff-files-dir']);
 			console.log(color.executing('🤖 Diff files...'));
 
-			const pythonProcess = spawn('/usr/bin/python3', ['batchFileDiff.py'], { cwd: 'diff-file/' });
+			const pythonProcess = spawn('/usr/bin/python3', ['batchFileDiff.py', directoryPath], { cwd: 'diff-file/' });
 			// /usr/bin/python3: the location of the Python3 binary, find with this command $ which python3
 			// cwd: the location from where the python scripts is executed
 
@@ -162,11 +167,4 @@ try {
 
 		rl.close();
 	});
-
-/* ****************************** */
-/* ON ERROR READING SETTINGS JSON */
-/* ****************************** */
-
-} catch (error) {
-	console.error('❌ Error reading or parsing settings-maesbot.json:', error);
-}
+} // function showMenu(settings) {
