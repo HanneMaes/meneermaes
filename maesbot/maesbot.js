@@ -89,12 +89,24 @@ function showMenu(settings) {
          const child = spawn(command, args); // Execute the command
          child.stdout.on('data', (data) => {
 				console.log(`${data}`); // output the Python scrip output
+
+            // RUN MAESBOT AGAIN?
+            runAgain(settings);
+
          });
          child.stderr.on('data', (data) => {
             console.error(`Error: ${data}`);
+
+            // RUN MAESBOT AGAIN?
+            runAgain(settings);
+
          });
          child.on('error', (error) => {
             console.error(`Error from nodejs script: ${error.message}`);
+
+            // RUN MAESBOT AGAIN?
+            runAgain(settings);
+
          });
 
 		} else if (answer == '2') {
@@ -104,6 +116,9 @@ function showMenu(settings) {
 			/* *********** */
 
 			console.log(color.executing("🤖 Punten PDF's maken..."));
+
+         // RUN MAESBOT AGAIN?
+         runAgain(settings);
 
 		} else if (answer == '3') {
 
@@ -120,14 +135,26 @@ function showMenu(settings) {
 				// Windows
 				command = 'cmd';
 				args = ['/c', `start "" "${directoryPath}"`];
+
+            // RUN MAESBOT AGAIN?
+            runAgain(settings);
+
 			} else if (process.platform === 'darwin') {
 				// macOS
 				command = 'open';
 				args = [directoryPath];
+
+            // RUN MAESBOT AGAIN?
+            runAgain(settings);
+
 			} else {
 				// Linux and other UNIX-like OSes
 				command = 'xdg-open';
 				args = [directoryPath];
+
+            // RUN MAESBOT AGAIN?
+            runAgain(settings);
+
 			}
 
 			// Execute the command
@@ -151,9 +178,15 @@ function showMenu(settings) {
 
 			pythonProcess.stdout.on('data', (data) => {
 				console.log(`${data}`); // output the Python scrip output
+
+            // RUN MAESBOT AGAIN?
+            runAgain(settings);
 			});
 			pythonProcess.stderr.on('data', (data) => {
 				console.error(`Error from Python script: ${data}`);
+
+            // RUN MAESBOT AGAIN?
+            runAgain(settings);
 			});
 
 		} else {
@@ -167,4 +200,19 @@ function showMenu(settings) {
 
 		rl.close();
 	});
+
 } // function showMenu(settings) {
+
+/* ******************************************************************************************************************************************* */
+
+/* ***************** */
+/* RUN MAESBOT AGAIN */
+/* ***************** */
+
+// run maesbot again without loading the json settings (aka just showing the menu again)
+function runAgain(settings) {
+
+   // ask to run again
+
+   showMenu(settings);
+}
