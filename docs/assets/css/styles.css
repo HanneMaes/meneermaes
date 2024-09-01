@@ -214,7 +214,7 @@ blockquote {
 	background-color: var(--light-transparant);
 	color: var(--textDark);
 	border: var(--borderWidth) solid var(--medium);
-	
+
 	margin-top:    var(--spacing);
 	margin-bottom: var(--spacing);
 	font-weight: bold;
@@ -263,7 +263,7 @@ a:hover {
 /* extra styling for export links */
 a[href*='//']::after {
 	content: '↗';
-	opacity: 0.4;
+	opacity: 0.6;
 }
 
 .portfolio::before {
@@ -277,29 +277,29 @@ a[href*='//']::after {
 
 code.hljs.language-html::before { content: "" !important; }
 .language-html code { border: var(--borderWidth) solid #D4A200; }
-.language-html::before {                        color: #D4A200; 
+.language-html::before {                        color: #D4A200;
 	content: "HTML";
 }
 
 code.hljs.language-css::before { content: "" !important; }
 .language-css code { border: var(--borderWidth) solid #F34A4A; }
-.language-css::before {                        color: #F34A4A; 
-	content: "CSS"; 
+.language-css::before {                        color: #F34A4A;
+	content: "CSS";
 }
 
 code.hljs.language-javascript::before { content: "" !important; }
 .language-javascript code { border: var(--borderWidth) solid #30B8EE; }
-.language-javascript::before {                        color: #30B8EE; 
+.language-javascript::before {                        color: #30B8EE;
 	content: "JavaScript";
 }
 
 code.hljs.language-latex::before { content: "" !important; }
 .language-latex code { border: var(--borderWidth) solid #00a7a7; }
-.language-latex::before {                        color: #00a7a7; 
+.language-latex::before {                        color: #00a7a7;
 	content: "LaTeX";
 }
-	
-.language-html::before, .language-css::before, .language-javascript::before, .language-latex::before { 
+
+.language-html::before, .language-css::before, .language-javascript::before, .language-latex::before {
 	font-size: 12px;
 	letter-spacing: 1px;
 	font-family: codeFont;
@@ -412,7 +412,7 @@ nav {
 	top: 0;
 	right: 0;
 	border-radius: var(--roundness);
-	
+
 	background-color: white;
 	margin: 30px;
 	padding: 10px;
@@ -611,7 +611,7 @@ iframe {
 }
 
 @media only screen and (orientation: portrait) {
-	
+
 	.landscapeROW-portraitCOLUMN {
 		display: flex;
 		flex-direction: column;
