@@ -6,19 +6,11 @@ date: 2024-03-13T10:31:28+01:00
 
 # Cursussen
 
-## Webtechnology
+[Databases](content/databases/index)
 
-[Webtechnology](content/webtechnology/index)
+[Hardware](content/hardware/index)
 
-[Webdesign Workshop](https://hannemaes.github.io/webdesignWorkshop/)
-
-## Markup Languages
-
-[Markdown](content/markdown/index)
-
-[LaTeX](content/latex/index)
-
-# Externe cursussen
+# Uitbreiding
 
 ## Web
 
