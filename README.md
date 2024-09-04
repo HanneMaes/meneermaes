@@ -8,8 +8,8 @@
 
 ## Setup errors & fixes
 **You don't have /home/hanne/bin in your PATH, gem executables will not run.**
-- Cause: the directory /home/hanne/bin is not included in your PATH, which means that any executables installed by Ruby gems (such as jekyll) may not be found when you try to run them
-- Fix: add this line to .bashrc: `export PATH="$HOME/bin:$PATH"`
+- **Cause:** the directory /home/hanne/bin is not included in your PATH, which means that any executables installed by Ruby gems (such as jekyll) may not be found when you try to run them
+- **Fix:** add this line to .bashrc: `export PATH="$HOME/bin:$PATH"`
 
 # maesbot/
 *Tooling to make my life easier*
