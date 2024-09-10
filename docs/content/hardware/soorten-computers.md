@@ -15,7 +15,8 @@ date: 2024-03-04T13:37:48+01:00
 # Opdracht 2: Artikel
 
 Zoek op het internet een artikel over één van de technologieën uit de presentatie.
-- Leg de inhoud ervan uit aan de klas.
+- Leg de inhoud van het artikel uit aan de klas.
+- Leg uit doe de technologie of het apparaat uit je artikel technisch werkt.
 - Zoek minsten 1 parallel met één van de andere technologieën.
 - Leg uit wat je standpunt is. Vind je het ethisch verantwoord of niet, en leg aan de hand van sterke argumenten uit waarom.
 
