@@ -17,6 +17,13 @@
 **An error occurred while installing http_parser.rb (0.8.0), and Bundler cannot continue.**
 - Install dependencies: `sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev`
 
+**An error occurred while installing rake (13.2.1), and Bundler cannot continue.**
+1. gem install bundler
+2. rm -rf Gemfile.lock
+3. bundle install
+4. gem install rake
+5. sudo bundle install
+
 # maesbot/
 *Tooling to make my life easier*
 

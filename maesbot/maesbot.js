@@ -17,8 +17,23 @@ fs.readFile('settings-maesbot.json', 'utf8', (err, data) => { // Read the JSON f
       return;
    }
    try {
-      const jsonObject = JSON.parse(data); // Parse the JSON string into an object
-      showMenu(jsonObject); // Continue when everything is loaded
+      const jsonObjectSettings = JSON.parse(data); // Parse the JSON string into an object
+
+      // Continue if the JSON is loaded
+      // Get settings from private-data-dir/klassen-en-leerlingen
+      fs.readFile(path.join(jsonObjectSettings ['private-data-dir'], jsonObjectSettings ['klassen en leerlingen']), 'utf8', (err, data) => { // Read the JSON file
+         if (err) {
+            console.error('Error reading klassen-en-leerlingen.json', err);
+            return;
+         }
+         try {
+            const jsonObjectKlassen = JSON.parse(data); // Parse the JSON string into an object
+            showMenu(jsonObjectSettings, jsonObjectKlassen); // Continue when everything is loaded
+         } catch (parseError) {
+            console.error('Error parsing klassen-en-leerlingen.json', parseError);
+         }
+      });
+
    } catch (parseError) {
       console.error('Error parsing settings-maesbot.json:', parseError);
    }
@@ -30,11 +45,16 @@ fs.readFile('settings-maesbot.json', 'utf8', (err, data) => { // Read the JSON f
 /* CONTINUE WHEN settings-maesbot.json is loaded */
 /* ********************************************* */
 
-function showMenu(settings) {
+function showMenu(settings, klassen) {
 
-   // show settings
-   // console.log("Settings:", settings);
-   // console.log();
+   // show debug info is the script is runned like this: $ node maesbot.js debug
+   const debugMode = process.argv.includes('debug'); // true or false
+   if (debugMode) {
+      console.log("Settings:", settings);
+      console.log();
+      console.log("Klassen:", klassen);
+      console.log();
+   }
 
 	/* ********* */
 	/* ASCII ART */
@@ -216,3 +236,9 @@ function runAgain(settings) {
 
    showMenu(settings);
 }
+
+/* ******************************************************************************************************************************************* */
+// GUIDE
+
+// $ node maesbot.js
+// $ node maesbot.js debug

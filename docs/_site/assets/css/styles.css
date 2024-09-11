@@ -23,6 +23,7 @@
 	--spacingSmall: 5px;
 	--spacing: 20px;
 	--spacingBig: 70px;
+   --spacingSuperBig: 200px;
 }
 
 /* title font */
@@ -360,8 +361,8 @@ code {
 
 footer {
 	color: var(--textLight);
-	padding-top: var(--spacingBig);
-	padding-bottom: calc(var(--spacingBig) * 3);
+	padding-top: var(--spacing);
+	padding-bottom: var(--spacingSuperBig);
 
 	display: flex;
 	justify-content: center;
@@ -403,6 +404,11 @@ footer img { /* signature */
 	text-align: center;
 }
 
+.curvedShadow {
+   opacity: 0.15;
+   width: 98vw;
+   height: 44px;
+}
 /* ***************** */
 /* BREADCRUMBS & TOC */
 /* ***************** */

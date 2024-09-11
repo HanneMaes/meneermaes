@@ -1,105 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link href="{{ site.baseurl }}/assets/css/styles.css" rel="stylesheet">
-	<link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico" />
+      <link href="{{ site.baseurl }}/assets/css/styles.css" rel="stylesheet">
+      <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico" />
 
-	<title>{{ page.title }}</title>
+      <title>{{ page.title }}</title>
 
-	<!-- apply custom CSS to some page -->
-	{% include customCSS.html %}
+      <!-- apply custom CSS to some page -->
+      {% include customCSS.html %}
 
-	<!-- highlight.js -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
-</head>
-<body>
+      <!-- highlight.js -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+   </head>
+   <body>
 
-	<section class="mainSection">
-		<div class="sectionContent">
+      <section class="mainSection">
+         <div class="sectionContent">
 
-			<!-- ------- -->
-			<!-- SIDEBAR -->
-			<!-- ------- -->
+            <!-- ------- -->
+            <!-- SIDEBAR -->
+            <!-- ------- -->
 
-			<!-- breadcrumbs: not on homepage -->
-			{% unless page.url == '/' %}
-			<nav class="breadcrumbs">
-				<a href="{{ site.baseurl }}/index">⌂</a>
-				
-				<!-- only show link to section when not on a section page -->
-				{% unless page.path contains '/index' %}
-				<span class="navDivider">/</span>
-				{% assign current_path_parts = page.url | split: '/' %} <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
-				{% assign sectionName = current_path_parts[2] %}        <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
-				<a href="{{ site.baseurl }}/content/{{ sectionName }}/index">{{ sectionName | capitalize }}</a>
-				{% endunless  %}
-				
-			</nav>
-			{% endunless  %}
+            <!-- breadcrumbs: not on homepage -->
+            {% unless page.url == '/' %}
+            <nav class="breadcrumbs">
+               <a href="{{ site.baseurl }}/index">⌂</a>
 
-			<!-- table of contents -->
-			<!-- <nav>
-				<div class="tocHeader">Inhoudstafel</div>
-				<div id="toc" class="toc"></div>
-			</nav> -->
+               <!-- only show link to section when not on a section page -->
+               {% unless page.path contains '/index' %}
+               <span class="navDivider">/</span>
+               {% assign current_path_parts = page.url | split: '/' %} <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+               {% assign sectionName = current_path_parts[2] %}        <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+               <a href="{{ site.baseurl }}/content/{{ sectionName }}/index">{{ sectionName | capitalize }}</a>
+               {% endunless  %}
 
-			<!-- ------- -->
-			<!-- CONTENT -->
-			<!-- ------- -->
+            </nav>
+            {% endunless  %}
 
-			<!-- header -->
-			<header data-aos="fade-left">{{ page.title }}</header>
+            <!-- table of contents -->
+            <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
 
-			<!-- content -->
-			{{ content }}
+            <!-- ------- -->
+            <!-- CONTENT -->
+            <!-- ------- -->
 
-		</div> <!-- sectionContent -->
-	</section>
+            <!-- header -->
+            <header data-aos="fade-left">{{ page.title }}</header>
 
-	<!-- ------ -->
-	<!-- FOOTER -->
-	<!-- ------ -->
+            <!-- content -->
+            {{ content }}
 
-	<footer>
-		<div class="footerContent">
-			<div>
-				<!-- <p><a href="content/about">About</a></p> -->
-				<p>Licentie:</p>
-				<p><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a></p>
-				<p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
-			</div>
-			<img width="107px" height="60px" src="{{ site.baseurl }}/assets/images/signatureBlack.gif">
-		</div>
-	</footer>
-	
-	<!-- page info -->
-	<div class="pageInfo landscapeROW-portraitCOLUMN">
-		<div></div>
-		<div class="pageInfoLine">Created on {{ page.date | date: "%d/%m/%Y" }}, last edited on: {{ page.last_modified_at | date: "%d/%m/%Y" }}</div>
-		<a href="content/blank">Blank</a>
-	</div>
+         </div> <!-- sectionContent -->
+      </section>
 
-	<!-- ---------- -->
-	<!-- JAVASCRIPT -->
-	<!-- ---------- -->
+      <!-- ------ -->
+      <!-- FOOTER -->
+      <!-- ------ -->
 
-	<!-- my javascript -->
-	<script src="{{ site.baseurl }}/assets/javascript/script.js"></script> 
+      <!-- curved shadow -->
+      <center><img class="curvedShadow" src="{{ site.baseurl }}/assets/images/curved_shadow.png"></center>
 
-	<!-- aos.js -->
-	<script src="{{ site.baseurl }}/assets/libraries/aos/aos.js"></script>
-	<script>AOS.init();</script>
-	
-	<!-- highlight.js -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script> <!-- HTML -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
-	<script>hljs.highlightAll();</script>
+      <footer>
+         <div class="footerContent">
+            <div>
+               <!-- <p><a href="content/about">About</a></p> -->
+               <p>Licentie:</p>
+               <p><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a></p>
+               <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+            </div>
+            <img width="107px" height="60px" src="{{ site.baseurl }}/assets/images/signatureBlack.gif">
+         </div>
+      </footer>
 
-</body>
+      <!-- page info -->
+      <div class="pageInfo landscapeROW-portraitCOLUMN">
+         <div></div>
+         <div class="pageInfoLine">Created on {{ page.date | date: "%d/%m/%Y" }}, last edited on: {{ page.last_modified_at | date: "%d/%m/%Y" }}</div>
+         <a href="content/blank">Blank</a>
+      </div>
+
+      <!-- ---------- -->
+      <!-- JAVASCRIPT -->
+      <!-- ---------- -->
+
+      <!-- my javascript -->
+      <script src="{{ site.baseurl }}/assets/javascript/script.js"></script>
+
+      <!-- aos.js -->
+      <script src="{{ site.baseurl }}/assets/libraries/aos/aos.js"></script>
+      <script>AOS.init();</script>
+
+      <!-- highlight.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script> <!-- HTML -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+      <script>hljs.highlightAll();</script>
+
+   </body>
 </html>

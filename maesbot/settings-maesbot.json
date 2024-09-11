@@ -1,4 +1,6 @@
 {
    "private-data-dir": "/home/hanne/Documents/Nextcloud/School/maesbot-private-data",
-   "diff-files-dir": "Diff-files"
+   "klassen en leerlingen": "klassen-en-leerlingen.json",
+   "diff-files-dir": "Diff-files",
+   "punter-dir": "Punten"
 }

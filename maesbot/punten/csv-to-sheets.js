@@ -1,5 +1,5 @@
 // SETTINGS
-let outputPath = '/home/hanne/Documents/School/Code/maesbot-private-data/Punten/CSV 2 sheet';
+let outputPath = '/home/hanne/Documents/Nextcloud/School/maesbot-private-data/Punten';
 
 /* ********************************************************************************************************************************* */
 
@@ -22,10 +22,10 @@ if (args.length >= 2) {
 	klas = args[1];
 
 	console.log('Settings:');
-	console.log('✅ CSV file:', csvFile);
-	console.log('✅ Klas:', klas);
-	console.log('✅ Output path:', outputPath);
-} else {/home/hanne/Documents/Nextcloud/School/maesbot-private-data
+	console.log('  ✅ CSV file:', csvFile);
+	console.log('  ✅ Klas:', klas);
+	console.log('  ✅ Output path:', outputPath);
+} else {
 	console.log("❌ Command line arguments need to be like this:");
 	console.log("node csv-to-sheets.js path/to/punten.csv klas output/path");
 
@@ -90,18 +90,66 @@ fs.createReadStream(csvFile)
 		fs.createReadStream(csvFile)
 		.pipe(csv())
 		.on('data', (row) => {
-			worksheet.addRow(Object.values(row));
 
-			// Sum the values in column C
+         // **********************
+         // PUNTEN LEERLING: START
+
+         const rowData = [
+            row['onderdeel'],               // Column A: description
+            '',                             // Column B: punt leerling (momenteel leeg)
+            '/',                            // Column C: '/'
+            parseInt(row['punt'], 10) || 0  // Column D: punt maximum, converted to a number
+         ];
+         worksheet.addRow(rowData);
+
 			total += parseInt(row['punt'], 10) || 0;
+
+         // PUNTEN LEERLING: STOP
+         // *********************
+
 		})
 		.on('end', () => {
-			// Punten / totaal
-			worksheet.getCell('E1').value = 'Punten';
-			worksheet.getCell('E2').value = { formula: '=SUM(B:B)' };
 
-			worksheet.getCell('F1').value = '/ totaal';
-			worksheet.getCell('F2').value = { formula: '=SUM(C:C)' };
+         // *******************************
+			// TOTALE PUNTEN BEREKENING: START
+
+			worksheet.getCell('F1').value = 'Punten';
+			worksheet.getCell('F2').value = { formula: '=SUM(B:B)' };
+
+			worksheet.getCell('G1').value = '/';
+			worksheet.getCell('G2').value = '/';
+
+			worksheet.getCell('H1').value = 'Totaal';
+			worksheet.getCell('H2').value = { formula: '=SUM(D:D)' };
+
+			// TOTALE PUNTEN BEREKENING: STOP
+         // ******************************
+
+         // *************************
+         // SPREADSHEET DESIGN: START
+
+         // Onderdeel breder
+         worksheet.getColumn(getColumnIndex('A')).width = 40;
+
+         // '/' smaller en centreren
+         worksheet.getColumn(getColumnIndex('C')).width = 2;
+         worksheet.getColumn(getColumnIndex('G')).width = 2;
+         worksheet.getColumn(getColumnIndex('C')).alignment = { horizontal: 'center' };
+         worksheet.getColumn(getColumnIndex('G')).alignment = { horizontal: 'center' };
+
+         // getallen smaller
+         worksheet.getColumn(getColumnIndex('B')).width = 4;
+         worksheet.getColumn(getColumnIndex('D')).width = 4;
+
+         // getallen na '/' links uitlijnen
+         worksheet.getColumn(getColumnIndex('D')).alignment = { horizontal: 'left' };
+         worksheet.getColumn(getColumnIndex('H')).alignment = { horizontal: 'left' };
+
+         // het woord punten rechts uitlijnen
+         worksheet.getColumn(getColumnIndex('F')).alignment = { horizontal: 'right' };
+
+         // SPREADSHEET DESIGN: STOP
+         // ************************
 
 			// Ensure the output directory exists
 			fs.mkdirSync('output', { recursive: true });
@@ -110,12 +158,11 @@ fs.createReadStream(csvFile)
 			outputFile = directoryPath + '/' + nameStudent + '.xlsx';
 			workbook.xlsx.writeFile(outputFile)
 				.then(() => {
-					console.log('📗', nameStudent);
+					console.log('📘', nameStudent);
 				})
 				.catch((err) => {
 					console.error('❌', nameStudent, 'error:', err);
 				});
-
 		});
 	});
 });
@@ -124,9 +171,16 @@ fs.createReadStream(csvFile)
 /* OPEN NEW DIR */
 /* ************ */
 
-exec(`xdg-open ${directoryPath}`);	// Linux
+// exec(`xdg-open ${directoryPath}`);	// Linux
 // exec(`open ${directoryPath}`); 	// MacOs
 // exec(`start ${directoryPath}`);	// Windows
+
+/* ********************************************************************************************************************************* */
+// Helper functions
+
+function getColumnIndex(columnLetter) {
+    return columnLetter.toUpperCase().charCodeAt(0) - 64;
+}
 
 /* ********************************************************************************************************************************* */
 // GUIDE
