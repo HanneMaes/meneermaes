@@ -10,6 +10,8 @@ date: 2024-03-13T10:31:28+01:00
 
 [Hardware](content/hardware/index)
 
+[Flex](content/flex/index)
+
 # Uitbreiding
 
 ## Web
