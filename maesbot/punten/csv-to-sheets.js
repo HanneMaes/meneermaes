@@ -1,8 +1,5 @@
-// $ node csv-to-sheets.js path/to/punten.csv klas
-// $ node csv-to-sheets.js '../../docs/_data/webtechnology/file.csv' 5AD
-
 // SETTINGS
-let outputPath =  '/home/hanne/Documents/School/Code/maesbot-private-data/CSV 2 sheet';
+let outputPath = '/home/hanne/Documents/School/Code/maesbot-private-data/Punten/CSV 2 sheet';
 
 /* ********************************************************************************************************************************* */
 
@@ -28,7 +25,7 @@ if (args.length >= 2) {
 	console.log('✅ CSV file:', csvFile);
 	console.log('✅ Klas:', klas);
 	console.log('✅ Output path:', outputPath);
-} else {
+} else {/home/hanne/Documents/Nextcloud/School/maesbot-private-data
 	console.log("❌ Command line arguments need to be like this:");
 	console.log("node csv-to-sheets.js path/to/punten.csv klas output/path");
 
@@ -39,6 +36,8 @@ if (args.length >= 2) {
 let names
 if (klas == "5AD") {
 	names = ['Bibi Yassine', 'Bicer M.Kerem', 'Coremans Victor', 'Gallardo Ledon Dante', 'Niz Ferreira Tiago', 'Tahrioui Nouredine', 'Van Ballaert Bram', 'Watthé Yorbe', 'Yazrak Noureddine', 'Dierckx Xibe', 'Ghafori Baharah'];
+} else if (klas=="5IFCW") {
+   names = ['De Haen Jente', 'Dirickx Glen', 'El Harrab Yasmine', 'Fru Angel', 'Moreels Milo', 'Saelens Kasper', 'Vanhoof Lara Joy', 'Zohair Jaydae'];
 } else {
 	console.log();
 	console.log("❌ Klas", klas, "is not known.");
@@ -128,3 +127,9 @@ fs.createReadStream(csvFile)
 exec(`xdg-open ${directoryPath}`);	// Linux
 // exec(`open ${directoryPath}`); 	// MacOs
 // exec(`start ${directoryPath}`);	// Windows
+
+/* ********************************************************************************************************************************* */
+// GUIDE
+
+// $ node csv-to-sheets.js path/to/punten.csv klas
+// $ node csv-to-sheets.js '../../docs/_data/webtechnology/file.csv' 5AD
