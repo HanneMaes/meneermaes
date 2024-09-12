@@ -12,6 +12,8 @@ date: 2024-03-13T10:31:28+01:00
 
 [Flex](content/flex/index)
 
+[Webtechnology](content/webtechnology/index)
+
 # Uitbreiding
 
 ## Web
