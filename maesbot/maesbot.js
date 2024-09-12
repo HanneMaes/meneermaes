@@ -1,4 +1,4 @@
-const color = require('./consoleColors'); // my color script
+const color = require('./consoleColors'); // my colot: script
 const readline = require('readline'); // ask questions
 const { spawn } = require('child_process'); // execute other scripts
 const fs = require('fs'); // access to filesystem
@@ -45,183 +45,183 @@ fs.readFile('settings-maesbot.json', 'utf8', (err, data) => { // Read the JSON f
 /* CONTINUE WHEN settings-maesbot.json is loaded */
 /* ********************************************* */
 
-function showMenu(settings, klassen) {
+function showMenu(settingsJson, klassenJSON) {
 
    // show debug info is the script is runned like this: $ node maesbot.js debug
    const debugMode = process.argv.includes('debug'); // true or false
    if (debugMode) {
-      console.log("Settings:", settings);
+      console.log("settingsJson:", settingsJson);
       console.log();
-      console.log("Klassen:", klassen);
+      console.log("klassenJSON:", klassenJSON);
       console.log();
    }
 
-	/* ********* */
-	/* ASCII ART */
-	/* ********* */
-	console.log(color.art("          __            "));
-	console.log(color.art("  _(_\\   |") + color.highlight("@@") + color.art("|           "));
-	console.log(color.art(" (__/\\__ \\--/ __        "));
-	console.log(color.art("    \\___|----|  |   __  "));
-	console.log(color.art("        \\ }{ /\\ )_ / _\\ "));
-	console.log(color.art("        /\\__/\\ \\__O (__ "));
-	console.log(color.art("       (--/\\--)    \\__/ "));
-	console.log(color.art("       _)(  )(_         "));
-	console.log(color.art("      `---''---`        "));
+   /* ********* */
+   /* ASCII ART */
+   /* ********* */
+   console.log(color.art("          __            "));
+   console.log(color.art("  _(_\\   |") + color.highlight("@@") + color.art("|           "));
+   console.log(color.art(" (__/\\__ \\--/ __        "));
+   console.log(color.art("    \\___|----|  |   __  "));
+   console.log(color.art("        \\ }{ /\\ )_ / _\\ "));
+   console.log(color.art("        /\\__/\\ \\__O (__ "));
+   console.log(color.art("       (--/\\--)    \\__/ "));
+   console.log(color.art("       _)(  )(_         "));
+   console.log(color.art("      `---''---`        "));
 
-	/* *************** */
-	/* INTRO QUESTIONS */
-	/* *************** */
+   /* *************** */
+   /* INTRO QUESTIONS */
+   /* *************** */
 
-	console.log();
-	console.log(color.info('Punten'))
-	console.log(color.answer(' 1. CVS 2 sheet'));
-	console.log(color.answer(' 2. Sheet 2 PDF'));
-	console.log();
-	console.log(color.info('Diff'))
-	console.log(color.answer(' 3. Open dir'));
-	console.log(color.answer(' 4. Diff files'));
-	console.log();
-	console.log(color.info('Anykey to quit'));
-	console.log();
+   console.log();
+   console.log(color.info('Punten'))
+   console.log(color.answer(' 1. CVS 2 sheet'));
+   console.log(color.answer(' 2. Sheet 2 PDF'));
+   console.log();
+   console.log(color.info('Diff'))
+   console.log(color.answer(' 3. Open dir'));
+   console.log(color.answer(' 4. Diff files'));
+   console.log();
+   console.log(color.info('Anykey to quit'));
+   console.log();
 
-	/* ************** */
-	/* ASK WHAT TO DO */
-	/* ************** */
+   /* ************** */
+   /* ASK WHAT TO DO */
+   /* ************** */
 
-	const rl = readline.createInterface({
-	input: process.stdin,
-	output: process.stdout
-	});
-	rl.question(color.question('🤖 What do you want to do? '), (answer) => {
+   const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+   });
+   rl.question(color.question('🤖 What do you want to do? '), (answer) => {
 
-		// execute what you chose
-		if (answer == '1') {
+      // execute what you chose
+      if (answer == '1') {
 
-			/* *********** */
-			/* CSV 2 SHEET */
-			/* *********** */
+         /* *********** */
+         /* CSV 2 SHEET */
+         /* *********** */
 
-			console.log(color.executing('🤖 Punten sheets maken...'));
+         console.log(color.executing('🤖 Punten sheets maken...'));
 
          const command = 'node';
          const args = ['punten/csv-to-sheets.js'];
          const child = spawn(command, args); // Execute the command
          child.stdout.on('data', (data) => {
-				console.log(`${data}`); // output the Python scrip output
+            console.log(`${data}`); // output the Python scrip output
 
             // RUN MAESBOT AGAIN?
-            runAgain(settings);
+            // runAgain(settingsJson);
 
          });
          child.stderr.on('data', (data) => {
             console.error(`Error: ${data}`);
 
             // RUN MAESBOT AGAIN?
-            runAgain(settings);
+            // runAgain(settingsJson);
 
          });
          child.on('error', (error) => {
             console.error(`Error from nodejs script: ${error.message}`);
 
             // RUN MAESBOT AGAIN?
-            runAgain(settings);
+            // runAgain(settingsJson);
 
          });
 
-		} else if (answer == '2') {
+      } else if (answer == '2') {
 
-			/* *********** */
-			/* SHEET 2 PDF */
-			/* *********** */
+         /* *********** */
+         /* SHEET 2 PDF */
+         /* *********** */
 
-			console.log(color.executing("🤖 Punten PDF's maken..."));
+         console.log(color.executing("🤖 Punten PDF's maken..."));
 
          // RUN MAESBOT AGAIN?
-         runAgain(settings);
+         // runAgain(settingsJson);
 
-		} else if (answer == '3') {
+      } else if (answer == '3') {
 
-			/* ************** */
-			/* DIFF: OPEN DIR */
-			/* ************** */
+         /* ************** */
+         /* DIFF: OPEN DIR */
+         /* ************** */
 
-         const directoryPath = path.join(settings['private-data-dir'], settings['diff-files-dir']);
-			console.log(color.executing('🤖 Opening diff files dir: ' + directoryPath));
+         const directoryPath = path.join(settingsJson['private-data-dir'], settingsJson['diff-files-dir']);
+         console.log(color.executing('🤖 Opening diff files dir: ' + directoryPath));
 
-			let command;
-			let args;
-			if (process.platform === 'win32') {
-				// Windows
-				command = 'cmd';
-				args = ['/c', `start "" "${directoryPath}"`];
-
-            // RUN MAESBOT AGAIN?
-            runAgain(settings);
-
-			} else if (process.platform === 'darwin') {
-				// macOS
-				command = 'open';
-				args = [directoryPath];
+         let command;
+         let args;
+         if (process.platform === 'win32') {
+            // Windows
+            command = 'cmd';
+            args = ['/c', `start "" "${directoryPath}"`];
 
             // RUN MAESBOT AGAIN?
-            runAgain(settings);
+            // runAgain(settingsJson);
 
-			} else {
-				// Linux and other UNIX-like OSes
-				command = 'xdg-open';
-				args = [directoryPath];
-
-            // RUN MAESBOT AGAIN?
-            runAgain(settings);
-
-			}
-
-			// Execute the command
-			const child = spawn(command, args, { stdio: 'ignore' });
-			child.on('error', (err) => {
-				console.error(`Error opening directory: ${err}`);
-			});
-
-		} else if (answer == '4') {
-
-			/* **************** */
-			/* DIFF: DIFF FILES */
-			/* **************** */
-
-         const directoryPath = path.join(settings['private-data-dir'], settings['diff-files-dir']);
-			console.log(color.executing('🤖 Diff files...'));
-
-			const pythonProcess = spawn('/usr/bin/python3', ['batchFileDiff.py', directoryPath], { cwd: 'diff-file/' });
-			// /usr/bin/python3: the location of the Python3 binary, find with this command $ which python3
-			// cwd: the location from where the python scripts is executed
-
-			pythonProcess.stdout.on('data', (data) => {
-				console.log(`${data}`); // output the Python scrip output
+         } else if (process.platform === 'darwin') {
+            // macOS
+            command = 'open';
+            args = [directoryPath];
 
             // RUN MAESBOT AGAIN?
-            runAgain(settings);
-			});
-			pythonProcess.stderr.on('data', (data) => {
-				console.error(`Error from Python script: ${data}`);
+            // runAgain(settingsJson);
+
+         } else {
+            // Linux and other UNIX-like OSes
+            command = 'xdg-open';
+            args = [directoryPath];
 
             // RUN MAESBOT AGAIN?
-            runAgain(settings);
-			});
+            // runAgain(settingsJson);
 
-		} else {
+         }
+
+         // Execute the command
+         const child = spawn(command, args, { stdio: 'ignore' });
+         child.on('error', (err) => {
+            console.error(`Error opening directory: ${err}`);
+         });
+
+      } else if (answer == '4') {
+
+         /* **************** */
+         /* DIFF: DIFF FILES */
+         /* **************** */
+
+         const directoryPath = path.join(settingsJson['private-data-dir'], settingsJson['diff-files-dir']);
+         console.log(color.executing('🤖 Diff files...'));
+
+         const pythonProcess = spawn('/usr/bin/python3', ['batchFileDiff.py', directoryPath], { cwd: 'diff-file/' });
+         // /usr/bin/python3: the location of the Python3 binary, find with this command $ which python3
+         // cwd: the location from where the python scripts is executed
+
+         pythonProcess.stdout.on('data', (data) => {
+            console.log(`${data}`); // output the Python scrip output
+
+            // RUN MAESBOT AGAIN?
+            // runAgain(settingsJson);
+         });
+         pythonProcess.stderr.on('data', (data) => {
+            console.error(`Error from Python script: ${data}`);
+
+            // RUN MAESBOT AGAIN?
+            // runAgain(settingsJson);
+         });
+
+      } else {
 
          /* ******* */
          /* NOTHING */
          /* ******* */
 
-			console.log(color.executing('🤖 Nothing...'));
-		}
+         console.log(color.executing('🤖 Nothing...'));
+      }
 
-		rl.close();
-	});
+      rl.close();
+   });
 
-} // function showMenu(settings) {
+} // function showMenu(settingsJson) {
 
 /* ******************************************************************************************************************************************* */
 
@@ -230,11 +230,11 @@ function showMenu(settings, klassen) {
 /* ***************** */
 
 // run maesbot again without loading the json settings (aka just showing the menu again)
-function runAgain(settings) {
+function runAgain(settingsJson) {
 
    // ask to run again
 
-   showMenu(settings);
+   showMenu(settingsJson);
 }
 
 /* ******************************************************************************************************************************************* */
