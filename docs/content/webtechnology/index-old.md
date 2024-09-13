@@ -14,7 +14,7 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [Bestandsextensies tonen](Bestandsextensies-tonen)
 
-[Portfolio website: First draft](Portfolio-website-First-draft){: .portfolio }
+[First draft](Portfolio-website-First-draft){: .portfolio }
 
 # Responsive design
 
@@ -30,7 +30,7 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [FTP](FTP)
 
-[Portfolio website: Responsive design](Portfolio-website-Responsive-design){: .portfolio }
+[Responsive design](Portfolio-website-Responsive-design){: .portfolio }
 
 
 # JavaScript projecten

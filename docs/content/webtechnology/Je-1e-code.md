@@ -5,8 +5,8 @@ date: Thu, Sep 12, 2024  20:47:23 PM
 ---
 
 # Bestand extensies
-## Wat zijn bestand extensies?
 
+{% include toggle.html title='Wat zijn bestand extensies?' content='
 Bestand extensies zijn de letters die na het punt in een bestandsnaam komen.
 **Ze geven aan wat voor type bestand het is** en helpen het besturingssysteem te bepalen welke applicatie het bestand kan openen. 
 Ze fungeren als een soort label dat vertelt hoe het bestand gelezen of geopend moet worden.
@@ -19,6 +19,7 @@ In webdesign gebruiken we verschillende soorten bestanden. Het is belangrijk om 
 Helaas verbergt Windows deze extensies.
 
 **Door de extensies zichtbaar te houden, kunnen we gemakkelijk bestanden identificeren en van extensie (en dus ook type) veranderen.**
+' %}
 
 ## Bestand extensies tonen
 

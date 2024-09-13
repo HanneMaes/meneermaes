@@ -4,7 +4,7 @@ last_modified_at: 2024-05-03T07:12:37
 date: Fri, sep 13, 2024  9:20:23 AM
 ---
 
-Je een website maken met alleen een tekstbestand. De tekst in dit tekstbestand is **HTML5**, dit is een taal die webbrowsers begrijpen.  
+Je een website maken met alleen een tekstbestand. De tekst in dit tekstbestand is **HTML**, dit is een taal die webbrowsers begrijpen.  
 Het maakt niet uit in welk programma je deze taal schrijft, zolang de taal correct geschreven is zal de webbrowser deze begrijpen en kunnen omzetten in een website.
 
 {% include callout.html type='info' content='Dit geldt niet allen voor HTML, maar voor alle programmeertalen.' %}

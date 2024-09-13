@@ -10,8 +10,6 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [MDN](https://developer.mozilla.org)
 
-[Cheatsheet](https://hannemaes.notion.site/Cheat-Sheet-8e7723123d574276bc9cd56972dd5e27)
-
 ---
 
 # HTML
@@ -22,4 +20,4 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [Wat is een programmeertaal?](Wat-is-een-programmeertaal)
 
-[Zelf HTML5 tags ontdekken](Zelf-html-tags-ontdekken){: .opdracht }
+[Zelf HTML tags ontdekken](Zelf-html-tags-ontdekken){: .opdracht }

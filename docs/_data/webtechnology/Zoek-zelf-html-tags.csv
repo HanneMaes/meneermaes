@@ -1,0 +1,12 @@
+onderdeel,punt
+Headers 1 2 en 3, 1
+De ‘(header)’ moet kleiner zijn dan de rest van de header tekst, 3
+De ‘2’ van ‘E = MC2’ moet hoger staan, 1
+De ‘2’ van ‘H2O’ moet lager staan, 1
+Knop, 1
+Twee horizontale lijnen, 1
+Een <strong>unordered</strong> list, 3
+Een <strong>ordered</strong> list, 3
+Een <strong>progress bar</strong>, 3
+Een <strong>abbreviation</strong>, 3
+Je maakt correct gebruik van de <strong>p</strong> en <strong>br</strong> tags, 4

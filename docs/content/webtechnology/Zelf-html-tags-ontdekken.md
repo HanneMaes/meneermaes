@@ -4,14 +4,14 @@ last_modified_at: 2024-05-03T07:12:37
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
-# Opdracht 1: Wat doen deze HTML-tags?
+# Wat doen deze HTML-tags?
 - `<h1></h1>`, `<h2></h2>`, ..., `<h6>`
 - `<small></small>`
 - `<sup></sup>`
 - `<center></center>`
 - `<hr>`
 
-# Opdracht 2: Zoek zelf HTML5-tags
+# Opdracht: Zoek zelf HTML-tags
 
 Start met deze code:
 ```html 
@@ -29,11 +29,12 @@ Start met deze code:
 Maak deze website na:
 {% include browser.html img='images/namaken.png' width='500px' %}
 
-{% include callout.html type='tip' content='Gebruik nooit 2x <code>&lt;br&gt;</code> direct na elkaar.' %}
+{% include callout.html type='tip' content='Gebruik nooit 2x `<br>` meteen na elkaar.' %}Hoe lang zal het duren om deze simple Hello world website te maken.
+
+{% include punten.html data='Zoek-zelf-html-tags' %}
 
 # Uibreiding
 
-- Zoek het **verschil** op tussen `<br>` en `<p>`.
 - Laat de **knop** iets doen.
 - Voeg een **afbeelding** toe.
 - Voeg een **video** toe.

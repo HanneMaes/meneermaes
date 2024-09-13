@@ -4,7 +4,7 @@ last_modified_at: 2024-05-03T07:12:37
 date: Fri, sep 13, 2024  8:55:23 AM
 ---
 
-# Je 1e HTML5 tags
+# Je 1e HTML tags
 
 Maak een nieuwe website met deze code:
 ```html 
