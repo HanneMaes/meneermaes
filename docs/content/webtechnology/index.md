@@ -20,10 +20,6 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [Je 1e website](Je-1e-website)
 
-## Wat is HTML?
-
 [Wat is een programmeertaal?](Wat-is-een-programmeertaal)
-
-## Zelf HTML5-tags ontdekken
 
 [Zelf HTML5 tags ontdekken](Zelf-html-tags-ontdekken){: .opdracht }
