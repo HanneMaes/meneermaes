@@ -5,13 +5,24 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
 # Wat doen deze HTML-tags?
-- `<h1></h1>`, `<h2></h2>`, ..., `<h6>`
+- `<h1></h1>`, `<h2></h2>`, ..., `<h6></h6>`
 - `<small></small>`
 - `<sup></sup>`
 - `<center></center>`
 - `<hr>`
 
-# Opdracht: Zoek zelf HTML-tags
+# W3Schools & MDN
+
+> W3Schools en MDN zijn als de Wikipedia’s van webdesign
+
+Zelfs professionele webdesigners gebruiken de websites W3Schools en MDN omdat ze nZelfs professionele webdesigners gebruiken de websites W3Schools en MDN omdat ze niet alle HTML-tags uit hun hoofd kennen. Ze raadplegen deze websites om nieuwe tags en technieken op te zoeken en bij te leren.iet alle HTML-tags uit hun hoofd kennen. 
+Ook raadplegen ze deze websites om nieuwe tags en technieken op te zoeken en bij te leren.
+
+[W3Schools](https://www.w3schools.com/)
+
+[MDN](https://developer.mozilla.org)
+
+# Opdracht 01: Zoek zelf HTML-tags
 
 Start met deze code:
 ```html 
@@ -38,3 +49,12 @@ Maak deze website na:
 - Laat de **knop** iets doen.
 - Voeg een **afbeelding** toe.
 - Voeg een **video** toe.
+
+# Opdracht 02: Afbeeldingen & video's
+
+1. Maak een nieuwe website.
+2. Zoek via MDN of W3Schools hoe je **afbeeldingen** en **video’s** toe kan voegen aan je website.
+3. Daar zoek je **2 HTML-tags** die we nog niet gezien hebben en voeg deze toe aan je website.
+4. Zoek het verschil op tussen de `<br>` en `<p></p>` tags.  
+    Leg op je website het verschil uitlegt en zorg ervoor dat je correct gebruikt maakt van deze tags.
+5. Als laatste zoek je een website waarin je denkt dat de `<br>` tag gebruikt is, je neemt er een screenshot van en plaats deze op je website, hetzelfde doe je voor de `<p></p>` tag.

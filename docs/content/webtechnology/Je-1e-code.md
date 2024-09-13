@@ -23,7 +23,7 @@ Helaas verbergt Windows deze extensies.
 
 ## Bestand extensies tonen
 
-{% include ui.html ui='beeld, opties, extensies voor bekende bestandstypes verbergen' %}
+{% include ui.html ui='beeld, opties Weergave, extensies voor bekende bestandstypes verbergen' %}
 
 ![Bestand extensies tonen](images/bestand-extensies-tonen.png)
 
