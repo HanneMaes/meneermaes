@@ -15,29 +15,41 @@ Ze fungeren als een soort label dat vertelt hoe het bestand gelezen of geopend m
 - afbeeling**.jpg**
 - word-document**.docx**
 
+In webdesign gebruiken we verschillende soorten bestanden. Het is belangrijk om de bestandsextensies zichtbaar te hebben, omdat dit ons helpt te weten welk type bestand we gebruiken.
+Helaas verbergt Windows deze extensies.
+
+**Door de extensies zichtbaar te houden, kunnen we gemakkelijk bestanden identificeren en van extensie (en dus ook type) veranderen.**
+
 ## Bestand extensies tonen
 
-1. Beeld.
-2. Opties.
-3. Extensies voor bekende bestand types verbergen **afvinken**.
+{% include ui.html ui='beeld, opties, extensies voor bekende bestandstypes verbergen' %}
 
 ![Bestand extensies tonen](images/bestand-extensies-tonen.png)
 
 ## Experiment
 
-1. **Download een afbeelding**.  
-    *Bijvoorbeeld: afbeeling**.jpg** of image**.png**.*
-2. Klik met de **rechter muisknop** op de afbeelding en kies **Naam wijzigen**.
-3. Verander de extensie naar **.txt** zodat de computer denk dat het een tekstbestand is.
-4. **Dubbelklik** nu op de afbeelding en de computer gaat het bestand openen met een **testprogramma**.  
-        Wat je nu te zien krijgt is de **computer code** waaruit de afbeelding bestaat.
+1. **Download een afbeelding** van het internet.  
+Door de **.jpg, .jpeg of .png** extensie weten we dat het een **afbeelding** is.
+2. Klik met de {% include ui.html ui='rc' %} op de afbeelding, kies {% include ui.html ui='naam wijzigen' %} en verander de extensie naar '**.txt**' zodat de computer denkt dat het een **tekstbestand** is.
+3. {% include ui.html ui='dc' %} op de afbeelding zodat het opent met een **tekstprogramma**  *(omdat de computer denkt dat het een tekstbestand is)*.  
+Wat we nu te zien krijgen is de **computer code** waaruit de afbeelding bestaat.
 
 # Hoe snel kan ik deze website maken?
 
 Ik ga jullie nu laten zien hoe je onderstaande website maakt.  
 
-{% include callout.html type='weddenschap' content='Hoe lang denken jullie dat dit zal duren?' %}
+{% include callout.html type='vraag' content='Hoe lang zal het duren om deze simple Hello world website te maken.' %}
 
 {% include browser.html img='images/hello-world.png' %}
 
-# Zelf proberen
+## Zelf proberen
+
+{% include callout.html type='vraag' content='Hoe snel kan je dit zelf?' %}
+
+1. Maak een nieuw **tekstdocument**.
+2. Hernoem het document naar {% include filePath.html fileOrPath='index.html' %}, **zorg dat de bestand extensies zichtbaar zijn anders krijg je een dubbele extensie**.
+    *Bijvoorbeeld: text.html.txt*  
+    Je zal het icoontje zien veranderen van een tekstdocument naar een website icoontje.
+3. Op het bestand met **kladblok**.
+4. Schrijf **Hello world** en sla het bestand op.
+5. Open het bestand met een **webbrowser**.

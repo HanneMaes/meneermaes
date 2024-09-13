@@ -4,41 +4,26 @@ last_modified_at: 2024-05-03T07:12:37
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
-# Cursus deel I
+# Hulpmiddelen
 
-[Cursus deel I](https://hannemaes.notion.site/Webtechnology-a8880858f95549feaacefcf65a342667)
+[W3Schools](https://www.w3schools.com/)
+
+[MDN](https://developer.mozilla.org)
+
+[Cheatsheet](https://hannemaes.notion.site/Cheat-Sheet-8e7723123d574276bc9cd56972dd5e27)
+
+---
 
 # HTML
 
-## Je 1e code
+[Je 1e code](Je-1e-code)
 
-[Bestandsextensies tonen](Bestandsextensies-tonen)
+[Je 1e website](Je-1e-website)
 
-[Portfolio website: First draft](Portfolio-website-First-draft){: .portfolio }
+## Wat is HTML?
 
-# Responsive design
+[Wat is een programmeertaal?](Wat-is-een-programmeertaal)
 
-[Wat is responsive design?](Wat-is-responsive-design)
+## Zelf HTML5-tags ontdekken
 
-[Media queries](Media-queries)
-
-[Min en max values](Min-en-max-values)
-
-[Responsive design met JavaScript](Responsive-design-met-JavaScript)
-
-[De mobile-first filosofie](Mobile-first)
-
-[FTP](FTP)
-
-[Portfolio website: Responsive design](Portfolio-website-Responsive-design){: .portfolio }
-
-
-# JavaScript projecten
-
-[Externe libraries](Externe-libraries)
-
-[Het if-statement](Het-if-statement)
-
-[Price calculator](Price-calculator)
-
-[Battle game](Battle-game)
+[Zelf HTML5 tags ontdekken](Zelf-html-tags-ontdekken){: .opdracht }

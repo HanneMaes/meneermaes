@@ -98,49 +98,47 @@
 
    <!-- info: voor algemene info -->
    <!-- tip: een extra tip bij bijvoorbeeld een oefening -->
-   <!-- uitdaging: extra uitdaging bij een oefening -->
-   <!-- oefening: voor een oefening -->
-   <!-- weddenschap -->
+   <!-- uitdaging -->
+   <!-- oefening -->
+   <!-- vraag -->
 
    <!-- icon & title -->
    
 
-      <p class="icon">💵<p>
-      <p><strong>WEDDENSCHAP</strong><br />
+      <p class="icon">❓</p>
+      <p>
 
    
 
    <!-- content -->
    Als je deze code uittest zal je merken dat deze niet optimaal is. Onderstaande code zal dit probleem oplossen.</p>
 
-&lt;/div&gt;
+</div>
 
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// wacht tot de DOM volledig geladen is</span>
+<span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 
-```javascript
-// wacht tot de DOM volledig geladen is
-document.addEventListener("DOMContentLoaded", function() {
-
-    function screenChange() {
-        // width &amp; height opvragen
-        let siteWidth = window.innerWidth;
-        let siteHeight = window.innerHeight;
+    <span class="kd">function</span> <span class="nf">screenChange</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// width &amp; height opvragen</span>
+        <span class="kd">let</span> <span class="nx">siteWidth</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span><span class="p">;</span>
+        <span class="kd">let</span> <span class="nx">siteHeight</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span><span class="p">;</span>
         
-        // width &amp; height laten zien op de pagina
-        document.getElementById("width").innerHTML = siteWidth;
-        document.getElementById("height").innerHTML = siteHeight;
+        <span class="c1">// width &amp; height laten zien op de pagina</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">width</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">siteWidth</span><span class="p">;</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">height</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">siteHeight</span><span class="p">;</span>
         
-        // portrait or landscape
-        if (siteHeight &gt; siteWidth) {
-            document.getElementById("landscapeOrPortrait").innerHTML = "Portrait";
-        } else {
-            document.getElementById("landscapeOrPortrait").innerHTML = "Desktop";
-        }
-    }
-    window.addEventListener('resize', screenChange); // Voer de functie uit wanneer het scherm veranderd
-    screenChange(); // Voer de functie uit om de eerste keer de waarden te laten zien
+        <span class="c1">// portrait or landscape</span>
+        <span class="k">if </span><span class="p">(</span><span class="nx">siteHeight</span> <span class="o">&gt;</span> <span class="nx">siteWidth</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">landscapeOrPortrait</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Portrait</span><span class="dl">"</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">landscapeOrPortrait</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Desktop</span><span class="dl">"</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">resize</span><span class="dl">'</span><span class="p">,</span> <span class="nx">screenChange</span><span class="p">);</span> <span class="c1">// Voer de functie uit wanneer het scherm veranderd</span>
+    <span class="nf">screenChange</span><span class="p">();</span> <span class="c1">// Voer de functie uit om de eerste keer de waarden te laten zien</span>
 
-});
-```
+<span class="p">});</span>
+</code></pre></div></div>
 
 <div class="browserWindow" style="width: ;">
     <div class="browserWindowUi">
@@ -151,37 +149,38 @@ document.addEventListener("DOMContentLoaded", function() {
     <img src="images/responsive-js-update.gif" />
 </div>
 
-Deze code zorgt ervoor dat wanneer we de grootte van het scherm aanpassen onze pagina geüpdatet zal worden.
-1. Zet de code om de grootte van het scherm te vinden in een functie.  
-    `function screenChange()`
-2. Voer de functie uit elke keer als de grootte van de pagina veranderd.  
-    `window.addEventListener('resize', screenChange);`
-3. Nu zal de code enkel uitgevoerd worden wanneer we de pagina van grootte veranderen, en dus niet wanneer we de pagina openen. Daar om moeten we de functie ook nog eens uitvoeren.  
-    `screenChange();`
+<p>Deze code zorgt ervoor dat wanneer we de grootte van het scherm aanpassen onze pagina geüpdatet zal worden.</p>
+<ol>
+  <li>Zet de code om de grootte van het scherm te vinden in een functie.<br />
+ <code class="language-plaintext highlighter-rouge">function screenChange()</code></li>
+  <li>Voer de functie uit elke keer als de grootte van de pagina veranderd.<br />
+ <code class="language-plaintext highlighter-rouge">window.addEventListener('resize', screenChange);</code></li>
+  <li>Nu zal de code enkel uitgevoerd worden wanneer we de pagina van grootte veranderen, en dus niet wanneer we de pagina openen. Daar om moeten we de functie ook nog eens uitvoeren.<br />
+ <code class="language-plaintext highlighter-rouge">screenChange();</code></li>
+</ol>
 
-# Oefening: Navbar &amp; hamburger menu
+<h1 id="oefening-navbar--hamburger-menu">Oefening: Navbar &amp; hamburger menu</h1>
 
 <div class="callout" data-aos="zoom-in">
 
    <!-- info: voor algemene info -->
    <!-- tip: een extra tip bij bijvoorbeeld een oefening -->
-   <!-- uitdaging: extra uitdaging bij een oefening -->
-   <!-- oefening: voor een oefening -->
-   <!-- weddenschap -->
+   <!-- uitdaging -->
+   <!-- oefening -->
+   <!-- vraag -->
 
    <!-- icon & title -->
    
 
-      <p class="icon">💵<p>
-      <p><strong>WEDDENSCHAP</strong><br />
+      <p class="icon">❓</p>
+      <p>
 
    
 
    <!-- content -->
    Werk verder van "oefening: Responsive CSS".</p>
 
-&lt;/div&gt;
-
+</div>
 
 <div class="browserWindow" style="width: ;">
     <div class="browserWindowUi">
@@ -200,21 +199,29 @@ Deze code zorgt ervoor dat wanneer we de grootte van het scherm aanpassen onze p
     </div>
 </div>
 
-Geef je gallery een **responsive menu**:
-- Desktop: 
-    - Een **horizontale** navbar.
-- Mobile: 
-    - Een **hamburger menu** dat een **full-screen menu** opent.
+<p>Geef je gallery een <strong>responsive menu</strong>:</p>
+<ul>
+  <li>Desktop:
+    <ul>
+      <li>Een <strong>horizontale</strong> navbar.</li>
+    </ul>
+  </li>
+  <li>Mobile:
+    <ul>
+      <li>Een <strong>hamburger menu</strong> dat een <strong>full-screen menu</strong> opent.</li>
+    </ul>
+  </li>
+</ul>
 
-## Tips
+<h2 id="tips">Tips</h2>
 
 <div class="callout" data-aos="zoom-in">
 
    <!-- info: voor algemene info -->
    <!-- tip: een extra tip bij bijvoorbeeld een oefening -->
-   <!-- uitdaging: extra uitdaging bij een oefening -->
-   <!-- oefening: voor een oefening -->
-   <!-- weddenschap -->
+   <!-- uitdaging -->
+   <!-- oefening -->
+   <!-- vraag -->
 
    <!-- icon & title -->
    
@@ -229,16 +236,15 @@ Geef je gallery een **responsive menu**:
 
 </div>
 
-
-### Display
+<h3 id="display">Display</h3>
 
 <div class="callout" data-aos="zoom-in">
 
    <!-- info: voor algemene info -->
    <!-- tip: een extra tip bij bijvoorbeeld een oefening -->
-   <!-- uitdaging: extra uitdaging bij een oefening -->
-   <!-- oefening: voor een oefening -->
-   <!-- weddenschap -->
+   <!-- uitdaging -->
+   <!-- oefening -->
+   <!-- vraag -->
 
    <!-- icon & title -->
    
@@ -253,30 +259,30 @@ Geef je gallery een **responsive menu**:
 
 </div>
 
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.hide</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-```css
-.hide {
-    display: none;
-}
-```
+<p>De display-eigenschap in CSS bepaalt hoe een element wordt weergegeven.</p>
+<ul>
+  <li>‘none’: Het element wordt <strong>niet weergegeven</strong> op de pagina, alsof het niet bestaat.</li>
+  <li>‘block’: Het element wordt weergegeven als een block en neemt standaard de volledige breedte van zijn container in, waardoor het dit element niet op dezelfde regels zal weergegeven worden.<br />
+Een <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> heeft <code class="language-plaintext highlighter-rouge">display: block;</code>.</li>
+  <li>‘inline’: Het element staat op dezelfde regel en neemt alleen zoveel breedte in als nodig is.<br />
+Een <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> heeft <code class="language-plaintext highlighter-rouge">display: inline;</code>.</li>
+  <li>‘inline-block’: Combineert de eigenschappen van inline en block. Het element wordt weergegeven in dezelfde regel als omliggende inhoud, maar kan ook breedte en hoogte hebben zoals een block.</li>
+</ul>
 
-De display-eigenschap in CSS bepaalt hoe een element wordt weergegeven.
-- 'none': Het element wordt **niet weergegeven** op de pagina, alsof het niet bestaat.
-- 'block': Het element wordt weergegeven als een block en neemt standaard de volledige breedte van zijn container in, waardoor het dit element niet op dezelfde regels zal weergegeven worden.  
-Een `<div>` heeft `display: block;`.
-- 'inline': Het element staat op dezelfde regel en neemt alleen zoveel breedte in als nodig is.  
-Een `<span>` heeft `display: inline;`.
-- 'inline-block': Combineert de eigenschappen van inline en block. Het element wordt weergegeven in dezelfde regel als omliggende inhoud, maar kan ook breedte en hoogte hebben zoals een block.
-
-### Z-index
+<h3 id="z-index">Z-index</h3>
 
 <div class="callout" data-aos="zoom-in">
 
    <!-- info: voor algemene info -->
    <!-- tip: een extra tip bij bijvoorbeeld een oefening -->
-   <!-- uitdaging: extra uitdaging bij een oefening -->
-   <!-- oefening: voor een oefening -->
-   <!-- weddenschap -->
+   <!-- uitdaging -->
+   <!-- oefening -->
+   <!-- vraag -->
 
    <!-- icon & title -->
    
@@ -291,15 +297,12 @@ Een `<span>` heeft `display: inline;`.
 
 </div>
 
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">z-index</span><span class="o">:</span> <span class="err">2</span><span class="o">;</span>
+</code></pre></div></div>
 
-```css
-z-index: 2;
-```
+<p>Elementen zonder z-index hebben automatisch een standaard z-index van 0. Hoe hoger de waarde van de z-index, hoe meer naar voren het element wordt geplaatst. Dit betekent dat <strong>een element met een z-index van 2 boven een element met een z-index van 1 wordt geplaatst</strong>.</p>
 
-Elementen zonder z-index hebben automatisch een standaard z-index van 0. Hoe hoger de waarde van de z-index, hoe meer naar voren het element wordt geplaatst. Dit betekent dat **een element met een z-index van 2 boven een element met een z-index van 1 wordt geplaatst**.
-
-Belangrijk om te weten is dat z-index niet werkt op elementen die position static hebben.
-</span></div></p></p></div></p></p></div>
+<p>Belangrijk om te weten is dat z-index niet werkt op elementen die position static hebben.</p>
 
 
          </div> <!-- sectionContent -->
