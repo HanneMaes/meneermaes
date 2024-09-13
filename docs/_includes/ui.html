@@ -1,6 +1,6 @@
-{% assign uiReplaced = include.ui 
-    | replace: ', ', '<span class="uiSeparator"> \> </span>' 
-    | replace: ',' , '<span class="uiSeparator"> \> </span>' 
+{% assign uiReplaced = include.ui
+    | replace: ', ', '<span class="uiSeparator"> \> </span>'
+    | replace: ',' , '<span class="uiSeparator"> \> </span>'
     | replace: 'ham ', '☰'
     | replace: 'ham' , '☰'
     | replace: 'rc ', 'Rechter muisknop'

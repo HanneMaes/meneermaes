@@ -222,7 +222,7 @@ blockquote {
 	font-weight: bold;
 	border-radius: var(--roundness);
 
-	display: flex;
+	display: inline-flex;
 	flex-direction: row;
 }
 

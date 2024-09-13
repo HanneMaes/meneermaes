@@ -15,7 +15,7 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 > W3Schools en MDN zijn als de Wikipedia’s van webdesign
 
-Zelfs professionele webdesigners gebruiken de websites W3Schools en MDN omdat ze nZelfs professionele webdesigners gebruiken de websites W3Schools en MDN omdat ze niet alle HTML-tags uit hun hoofd kennen. Ze raadplegen deze websites om nieuwe tags en technieken op te zoeken en bij te leren.iet alle HTML-tags uit hun hoofd kennen. 
+Zelfs professionele webdesigners gebruiken de websites W3Schools en MDN omdat ze niet alle HTML-tags uit hun hoofd kennen.  
 Ook raadplegen ze deze websites om nieuwe tags en technieken op te zoeken en bij te leren.
 
 [W3Schools](https://www.w3schools.com/)
@@ -44,7 +44,7 @@ Maak deze website na:
 
 {% include punten.html data='Zoek-zelf-html-tags' %}
 
-# Uibreiding
+## Uibreiding
 
 - Laat de **knop** iets doen.
 - Voeg een **afbeelding** toe.
