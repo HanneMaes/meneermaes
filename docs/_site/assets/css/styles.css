@@ -272,12 +272,14 @@ a[href*='//']::after {
 	content: '🌐 Portfolio website:';
    font-style: italic;
 	padding-right: var(--spacingSmall);
+   color: var(--medium);
 }
 
 .opdracht::before {
    content: '✏️ Opdracht:';
    font-style: italic;
    padding-right: var(--spacingSmall);
+   color: var(--medium);
 }
 
 /* **** */

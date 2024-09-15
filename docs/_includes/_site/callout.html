@@ -1,0 +1,40 @@
+<div class="callout" data-aos="zoom-in">
+
+   <!-- info: voor algemene info -->
+   <!-- tip: een extra tip bij bijvoorbeeld een oefening -->
+   <!-- uitdaging -->
+   <!-- oefening -->
+   <!-- vraag -->
+
+   <!-- icon & title -->
+   {% if include.type == "info" %}
+
+      <p class="icon">💡</p>
+      <p><strong>INFO</strong><br>
+
+   {% elsif include.type == "tip" %}
+
+      <p class="icon">🤯</p>
+      <p><strong>TIP</strong><br>
+
+   {% elsif include.type == "uitdaging" %}
+
+      <p class="icon">🏆</p>
+      <p><strong>UITDAGING</strong><br>
+
+   {% elsif include.type == "oefening" %}
+
+      <p class="icon">✏️<</p>
+      <p><strong>OEFENING</strong><br>
+
+   {% else %}
+
+      <p class="icon">❓</p>
+      <p>
+
+   {% endif %}
+
+   <!-- content -->
+   {{ include.content | markdownify }}</p>
+
+</div>
