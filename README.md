@@ -5,8 +5,10 @@
 1. Install ruby gems:
     - Ubuntu: `sudo apt install ruby-rubygems`
 2. Install dependencies: `sudo gem install jekyll bundler`
+    *Bundler is a dependency manager that will use your Gemfile to install and manage gem versions.*
 3. Navigate to the dir containing the Gemfile
 4. Install gems listed in the Gemfile: `bundle install`
+    *Reads the Gemfile, downloads and installs the gems and their dependencies, creates a Gemfile.lock file that records the exact versions of every gem installed*
 
 ### Setup errors & fixes
 
@@ -32,3 +34,10 @@
 
 **maesbot/punten/**
 Automate everything that involves points, assignements, tests, ...
+
+# System agnostic
+*I try to make everything system agnostic (Jekyll especially, it was giving me errors after every sync between computers)*
+
+- Always use `bundle exec` when running Jekyll commands.
+    *Bundler is a dependency management tool for Ruby projects. It helps manage the gems (Ruby libraries) that your project depends on.*
+- .gitignore Jelyll stuff
