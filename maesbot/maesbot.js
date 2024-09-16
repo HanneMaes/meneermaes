@@ -102,8 +102,21 @@ function showMenu(settingsJson, klassenJSON) {
          /* CSV 2 SHEET */
          /* *********** */
 
-         console.log(color.executing('🤖 Punten sheets maken...'));
+         // Kies een klas
+         console.log(color.question('🤖 Kies een klas:'), Object.keys(klassenJSON['klassen']).join(', '));
 
+         // Ask the user to select a class
+         rl.question(color.question('🤖 Kies een klas: '), (answerKlas) => {
+            // Check if the selected class exists
+            if (Object.keys(klassenJSON['klassen']).includes(answerKlas)) {
+               console.log(color.green(`Gekozen klas: ${answerKlas}`));
+            } else {
+               console.log(color.red(`Klas '${answerKlas}' bestaat niet.`));
+            }
+         });
+
+         // run punten/csv-to-sheets
+         console.log(color.executing('🤖 Punten sheets maken...'));
          const command = 'node';
          const args = ['punten/csv-to-sheets.js'];
          const child = spawn(command, args); // Execute the command
