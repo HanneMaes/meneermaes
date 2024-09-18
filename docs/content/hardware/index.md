@@ -5,3 +5,5 @@ date: Wed, sep 04, 2024  10:47:23 PM
 ---
 
 [Soorten computers](soorten-computers)
+
+[Besturingssystemen](Besturingssystemen)
