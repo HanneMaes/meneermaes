@@ -80,9 +80,9 @@
 
       <!-- page info -->
       <div class="pageInfo landscapeROW-portraitCOLUMN">
-         <div></div>
-         <div class="pageInfoLine">Created on {{ page.date | date: "%d/%m/%Y" }}, last edited on: {{ page.last_modified_at | date: "%d/%m/%Y" }}</div>
-         <a href="content/blank">Blank</a>
+         <a href="content/blank">
+            Created on {{ page.date | date: "%d/%m/%Y" }}, last edited on {{ page.last_modified_at | date: "%d/%m/%Y" }}
+         </a>
       </div>
 
       <!-- ---------- -->

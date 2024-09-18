@@ -401,17 +401,15 @@ footer img { /* signature */
 	font-style: italic;
 	position: fixed;
 	bottom: 0;
-	padding: var(--spacingSmall);
+	padding: var(--spacing);
 
-	width: calc(100vw - (3 * var(--spacingSmall))); /* Subtracting padding from total width (and give it some extra space (3 times instead of 2 times) */
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
+   /* center content */
+   width: 100%;
+   display: flex;
+   justify-content: center;
 }
-
-.pageInfoLine {
-	text-align: center;
+.pageInfo a {
+  text-decoration: none;
 }
 
 .curvedShadow {
