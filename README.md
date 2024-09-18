@@ -7,7 +7,8 @@
 2. Install dependencies: `sudo gem install jekyll bundler`
     *Bundler is a dependency manager that will use your Gemfile to install and manage gem versions.*
 3. Navigate to the dir containing the Gemfile
-4. Install gems listed in the Gemfile: `bundle install`
+4. Configure bundler to install gems only for the projects, bit is better for syncing this project: `bundle config set --local path 'vendor/bundle'`
+5. Install gems listed in the Gemfile: `bundle install`
     *Reads the Gemfile, downloads and installs the gems and their dependencies, creates a Gemfile.lock file that records the exact versions of every gem installed*
 
 ### Setup errors & fixes
