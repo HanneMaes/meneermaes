@@ -241,6 +241,20 @@ blockquote {
 	font-size: 30px;
 }
 
+details { /* open/close toggle */
+   margin: var(--spacing);
+}
+summary {
+   cursor: pointer;
+   font-size: 1.3em;
+   text-decoration-color: var(--light);
+   text-decoration-thickness: 2px;
+
+   transition: all var(--animSpeed);
+}
+summary:hover {
+	color: var(--medium);
+}
 /* colors */
 .goodText { color: #00976a; font-weight: bold; }
 .badText  { color: #a30031; font-weight: bold; }
