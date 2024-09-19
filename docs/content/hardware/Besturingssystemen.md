@@ -1,6 +1,6 @@
 ---
 title: Besturingssystemen
-last_modified_at: 2024-09-19 14:29:34 +0200
+last_modified_at: 2024-09-19 15:10:48 +0200
 date: 2024-09-18 12:21:40 +0200
 ---
 
@@ -105,6 +105,8 @@ Wat is het, welke bedrijf richtte het op, en waarvoor was het oorspronkelijk bed
 
 ***2010*** **CyanogenMod**  
 Waarom werd het ontwikkeld en wat waren de belangrijkste kenmerken?
+
+{% include punten.html data='geschiedenis-van-besturingsystemen' %}
 
 # Xerox en Steve Jobs
 
