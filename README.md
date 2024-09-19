@@ -5,6 +5,17 @@
 1. Install a Ruby version manager
     - Ubuntu: `sudo apt install rbenv`
     - Fedora: `sudo dnf install rbenv`
+2. Initialize rbenv to manage the Ruby version: `rbenv init`
+3. Add this to `.bashrc`: `eval "$(rbenv init -)"`
+4. Install the correct Ruby version from `.ruby-version`: `rbenv install`
+5. Install Bundler a Ruby tool that manages gem dependencies: `gem install bundler`
+5. Install Ruby gems: `bundle install`
+6. Test if everything works: `bundle exec jekyll serve`
+
+## Setup old
+1. Install a Ruby version manager
+    - Ubuntu: `sudo apt install rbenv`
+    - Fedora: `sudo dnf install rbenv`
 1. Install ruby gems:
     - Ubuntu: `sudo apt install ruby-rubygems`
 2. Install dependencies: `sudo gem install jekyll bundler`
