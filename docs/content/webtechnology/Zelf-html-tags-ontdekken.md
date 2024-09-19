@@ -1,6 +1,6 @@
 ---
 title: Zelf HTML-tags ontdekken
-last_modified_at: 2024-05-03T07:12:37
+last_modified_at: 2024-09-19 22:41:05 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -44,17 +44,12 @@ Maak deze website na:
 
 {% include punten.html data='Zoek-zelf-html-tags' %}
 
-## Uibreiding
-
-- Laat de **knop** iets doen.
-- Voeg een **afbeelding** toe.
-- Voeg een **video** toe.
-
 # Opdracht 02: Afbeeldingen & video's
 
 1. Maak een nieuwe website.
 2. Zoek via MDN of W3Schools hoe je **afbeeldingen** en **video’s** toe kan voegen aan je website.
-3. Daar zoek je **2 HTML-tags** die we nog niet gezien hebben en voeg deze toe aan je website.
+3. Zoek **2 HTML-tags** die we nog niet gezien hebben en voeg deze toe aan je website.
 4. Zoek het verschil op tussen de `<br>` en `<p></p>` tags.  
     Leg op je website het verschil uitlegt en zorg ervoor dat je correct gebruikt maakt van deze tags.
-5. Als laatste zoek je een website waarin je denkt dat de `<br>` tag gebruikt is, je neemt er een screenshot van en plaats deze op je website, hetzelfde doe je voor de `<p></p>` tag.
+
+{% include punten.html data='Afbeeldingen-videos' %}

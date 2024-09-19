@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2024-05-03T07:12:37
+last_modified_at: 2024-09-19 22:19:10 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -21,3 +21,7 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 [Wat is een programmeertaal?](Wat-is-een-programmeertaal)
 
 [Zelf HTML tags ontdekken](Zelf-html-tags-ontdekken){: .opdracht }
+
+[Een korte geschiedenis](Een-korte-geschiedenis)
+
+[Code editors](Code-editors)
