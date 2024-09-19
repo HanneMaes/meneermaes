@@ -1,6 +1,6 @@
 ---
 title: Besturingssystemen
-last_modified_at: 2024-09-19 14:20:49 +0200
+last_modified_at: 2024-09-19 14:29:34 +0200
 date: 2024-09-18 12:21:40 +0200
 ---
 
@@ -80,7 +80,7 @@ Deze gebeurtenissen hebben allemaal bijgedragen aan de evolutie van de technolog
 Wat is Bell Labs en hoe verschilt Unix van andere besturingssystemen die op dat moment beschikbaar waren?
 
 ***1977*** **BSD: Berkeley Software Distribution**  
-Wat waren de belangrijkste innovaties van BSD vergeleken met Unix?
+Wat waren de belangrijkste innovaties van BSD vergeleken met Unix, word BSD nu nog gebruikt?
 
 ***1981*** **Xerox & Palo Alto Research Center (PARC)**  
 Wat waren de belangrijkste innovaties van het PARC-onderzoek en hoe werden deze innovaties later overgenomen door andere bedrijven zoals Apple en Microsoft?
