@@ -2,6 +2,9 @@
 *Website for my course material: [https://www.meneermaes.be/](https://www.meneermaes.be/)*
 
 ## Setup
+1. Install a Ruby version manager
+    - Ubuntu: `sudo apt install rbenv`
+    - Fedora: `sudo dnf install rbenv`
 1. Install ruby gems:
     - Ubuntu: `sudo apt install ruby-rubygems`
 2. Install dependencies: `sudo gem install jekyll bundler`

@@ -1,6 +1,6 @@
 ---
 title: Spline
-last_modified_at: 2024-05-03T07:12:37
+last_modified_at: 2024-09-19 09:41:08 +0200
 date: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -28,7 +28,7 @@ Kies per groep van 2 één van de onderstaande features:
 - Cartoon style
 - ...
 
-Experimenteer, maak een showcase project met bijbehorende tutorial website.
+Experimenteer, bekijk de [officiële documentatie](https://docs.spline.design/doc/-getting-started/doc390iSGamE) en maak een showcase project met bijbehorende tutorial website.
 Zorg ervoor dat je tutorial **duidelijk** en **overzichtelijk** is, je klasgenoten zullen hem gebruiken.
 
 {% include punten.html data='spline-tutorial' %}
