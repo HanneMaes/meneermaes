@@ -2,6 +2,7 @@
 *Website for my course material: [https://www.meneermaes.be/](https://www.meneermaes.be/)*
 
 ## Setup
+0. Pull repo and cd into dir
 1. Install a Ruby version manager
     - Ubuntu: `sudo apt install rbenv`
     - Fedora: `sudo dnf install rbenv`
@@ -10,7 +11,7 @@
 4. Install the correct Ruby version from `.ruby-version`: `rbenv install`
 5. Install Bundler a Ruby tool that manages gem dependencies: `gem install bundler`
 5. Install Ruby gems: `bundle install`
-6. Test if everything works: `bundle exec jekyll serve`
+6. Test if everything works: `cd docs/ && bundle exec jekyll serve`
 
 ## Setup old
 1. Install a Ruby version manager
