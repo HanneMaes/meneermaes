@@ -1,6 +1,6 @@
 ---
 title: Een korte geschiedenis
-last_modified_at: 2024-09-19 22:18:50 +0200
+last_modified_at: 2024-09-20 16:44:56 +0200
 date: 2024-09-19 21:55:45 +0200
 ---
 
@@ -10,7 +10,7 @@ date: 2024-09-19 21:55:45 +0200
 ![](images/geschied-google-doc.png){: .frame }
 
 **HTML document**
-![](images/geschied-google-doc.png){: .frame }
+![](images/geschied-html.png){: .frame }
 
 # Het Amerikaanse leger
 
