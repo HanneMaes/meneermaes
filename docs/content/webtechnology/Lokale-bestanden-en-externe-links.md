@@ -1,6 +1,6 @@
 ---
 title: Lokale bestanden & externe links
-last_modified_at: 2024-09-20 15:43:11 +0200
+last_modified_at: 2024-09-20 15:49:59 +0200
 date: 2024-09-20 15:18:33 +0200
 ---
 
@@ -44,16 +44,16 @@ Bij het uploaden of delen van een website is het belangrijk om lokale **mediabes
 
 Het is belangrijk de **locatie van het bestand** correct te noteren.
 
-## De afbeelding in de map media.
-
-![](images/local-image.png){: width='500px' }
-```html 
-<img src="images/image.jpg">
-```
-
 ## De afbeelding in dezelfde map als het .html bestand.
 
 ![](images/local-image2.png){: width='500px' }
 ```html 
 <img src="image.jpg">
+```
+
+## De afbeelding in de map media.
+
+![](images/local-image.png){: width='500px' }
+```html 
+<img src="media/image.jpg">
 ```
