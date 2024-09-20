@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2024-09-19 22:19:10 +0200
+last_modified_at: 2024-09-20 09:25:25 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -14,6 +14,8 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 # HTML
 
+## Je 1e code
+
 [Je 1e code](Je-1e-code)
 
 [Je 1e website](Je-1e-website)
@@ -25,3 +27,9 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 [Een korte geschiedenis](Een-korte-geschiedenis)
 
 [Code editors](Code-editors)
+
+[Tabs & comments](Tabs-en-comments)
+
+## Je 1e website
+
+[Je éérste échte website](Je-1e-echte-website){: .opdracht }
