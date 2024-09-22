@@ -290,7 +290,7 @@ a[href*='//']::after {
 }
 
 .opdracht::before {
-   content: '✏️ Opdracht:';
+   content: '✏️ Opdracht';
    font-style: italic;
    padding-right: var(--spacingSmall);
    color: var(--medium);
