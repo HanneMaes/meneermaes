@@ -28,7 +28,7 @@ Kies 1 van de onderstaande features:
 - Cartoon style
 - ...
 
-Experimenteer, bekijk de [officiële documentatie](https://docs.spline.design/doc/-getting-started/doc390iSGamE) en maak een showcase project met bijbehorende tutorial website.
+Experimenteer, bekijk de [officiële documentatie](https://docs.spline.design/doc/-getting-started/doc390iSGamE) en maak een **showcase project met bijbehorende tutorial website**.
 Zorg ervoor dat je tutorial **duidelijk** en **overzichtelijk** is, je klasgenoten zullen hem gebruiken.
 
 {% include punten.html data='spline-tutorial' %}
