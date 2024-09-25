@@ -1,19 +1,10 @@
 ---
 title: Geschiedenis Van Besturingssystemen
-last_modified_at: 2024-09-25 11:27:05 +0200
+last_modified_at: 2024-09-25 13:19:02 +0200
 date: 2024-09-19 15:18:44 +0200
 ---
 
-Tijdens deze oefening zullen jullie de belangrijkste gebeurtenissen in de geschiedenis van besturingssystemen onderzoeken.
-Deze gebeurtenissen hebben allemaal bijgedragen aan de evolutie van de technologie die we vandaag de dag gebruiken. 
-
-**Jullie krijgen elk enkele specifieke gebeurtenissen toegewezen en zoeken een antwoord op deze onderzoeksvragen:**
-- Plaats je onderwerp in context van de tijdslijn, wat had het te maken met de voorgaande en erop volgende gebeurtenissen?
-- Hoe droeg het bij aan de vooruitgang van besturingssystemen?
-
-{% include callout.html type='oef' content='Het is belangrijk om beeldmateriaal te verzamelen dat helpt om de informatie visueel te maken en de invloed van elke gebeurtenis duidelijker te illustreren.' %}
-
-## Tijdslijn
+# Tijdslijn
 ***1969*** **Unix & Bell Labs**  
 Wat is Bell Labs en hoe verschilt Unix van andere besturingssystemen die op dat moment beschikbaar waren?
 
@@ -43,5 +34,3 @@ Wat is het, welke bedrijf richtte het op, en waarvoor was het oorspronkelijk bed
 
 ***2010*** **CyanogenMod**  
 Waarom werd het ontwikkeld en wat waren de belangrijkste kenmerken?
-
-{% include punten.html data='geschiedenis-van-besturingsystemen' %}
