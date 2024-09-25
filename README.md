@@ -1,7 +1,16 @@
+# Website
+
+## Setup
+
+### 1. Docker
+1. Install docker: https://docs.docker.com/engine/install/
+
+---
+
 # docs/
 *Website for my course material: [https://www.meneermaes.be/](https://www.meneermaes.be/)*
 
-## Setup
+## Setup old
 0. Pull repo and cd into dir
 1. Install a Ruby version manager
     - Ubuntu: `sudo apt install rbenv`
@@ -13,7 +22,7 @@
 5. Install Ruby gems: `bundle install`
 6. Test if everything works: `cd docs/ && bundle exec jekyll serve`
 
-## Setup old
+## Setup older
 1. Install a Ruby version manager
     - Ubuntu: `sudo apt install rbenv`
     - Fedora: `sudo dnf install rbenv`

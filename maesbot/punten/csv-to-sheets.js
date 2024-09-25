@@ -189,3 +189,4 @@ function getColumnIndex(columnLetter) {
 
 // $ node csv-to-sheets.js path/to/punten.csv klas
 // $ node csv-to-sheets.js '../../docs/_data/webtechnology/file.csv' 5AD
+// $ node csv-to-sheets.js /home/hanne/Documents/meneermaes/docs/_data/hardware/artikel-soorten-computers.csv 5IFCW
