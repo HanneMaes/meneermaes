@@ -17,7 +17,7 @@ Open spline, experimenteer, en probeer in **40min** tijd een **afgewerkt project
 
 # Opdracht 1: Showcase & tutorial
 
-Kies per groep van 2 één van de onderstaande features:
+Kies 1 van de onderstaande features:
 - 3D modelling & vector
 - Animaties
 - Interacties/events
