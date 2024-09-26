@@ -1,6 +1,6 @@
 ---
 title: Geschiedenis Van Besturingssystemen
-last_modified_at: 2024-09-25 11:32:08 +0200
+last_modified_at: 2024-09-26 11:13:38 +0200
 date: 2024-09-19 15:18:44 +0200
 ---
 
@@ -13,7 +13,7 @@ Deze gebeurtenissen hebben allemaal bijgedragen aan de evolutie van de technolog
 
 {% include callout.html type='oef' content='Het is belangrijk om beeldmateriaal te verzamelen dat helpt om de informatie visueel te maken en de invloed van elke gebeurtenis duidelijker te illustreren.' %}
 
-## Tijdslijn
+# Tijdslijn
 
 **Xerox & Palo Alto Research Center (PARC)**  
 Wat waren de belangrijkste innovaties van het PARC-onderzoek en hoe werden deze innovaties later overgenomen door andere bedrijven zoals Apple en Microsoft?
@@ -46,3 +46,12 @@ Wie richtte het op, wat was er anders aan dit besturingssysteem en waarom waren 
 Wat is het, waarom werd het opgericht, door wie en waarom is het momenteel zo belangrijk?
 
 {% include punten.html data='geschiedenis-van-besturingsystemen' %}
+
+# Quiz
+
+> Nu is het tijd om te testen hoe goed jullie hebben opgelet!
+
+Iedereen stuurt mij **3 quizvragen** over het onderwerp dat jullie hebben onderzocht.  
+Zorg ervoor dat de vragen variëren in moeilijkheid en dat ze onderwerpen omvatten die we **tijdens de les hebben besproken**.
+
+Op die manier kunnen we een uitdagende en leuke quiz samenstellen.
