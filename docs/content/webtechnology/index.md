@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2024-09-20 15:18:26 +0200
+last_modified_at: 2024-09-26 21:59:08 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -35,3 +35,13 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 ## Je 1e website
 
 [Je éérste échte website](Je-1e-echte-website){: .opdracht }
+
+[Body & head](body-en-head)
+
+[Meerdere pagina's](Meerdere-paginas)
+
+[Je éérste uitgebreide website](Je-1e-uitgebreide-website){: .opdracht }
+
+[Peer assessment](Peer-assessment)
+
+[ZIP-bestanden](ZIP-bestanden)
