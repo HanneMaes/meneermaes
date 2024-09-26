@@ -1,6 +1,6 @@
 ---
 title: Spline
-last_modified_at: 2024-09-25 21:14:46 +0200
+last_modified_at: 2024-09-26 08:33:42 +0200
 date: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -23,9 +23,10 @@ Kies **1 features van Spline**:
 - Interacties/events
 - Physics
 - Particles
-- Materials & shaders
+- Materials, scene & lights
 - A.I.
 - Cartoon style
+- Importing & exporting
 - ...
 
 Experimenteer, bekijk de [officiële documentatie](https://docs.spline.design/doc/-getting-started/doc390iSGamE) en maak een **showcase project met bijbehorende tutorial website**.
