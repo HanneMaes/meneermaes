@@ -1,6 +1,6 @@
 ---
 title: Body & Head
-last_modified_at: 2024-09-27 11:11:38 +0200
+last_modified_at: 2024-09-27 14:12:14 +0200
 date: 2024-09-26 20:59:44 +0200
 ---
 
@@ -16,7 +16,7 @@ Dit is eigenlijk hoe de code van een website eruit moet zien:
 
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" href="images/favicon.png" />
+        <link rel="icon" href="images/favicon.ico" />
         <title>Website title</title>
 
     </head>
@@ -71,16 +71,24 @@ Deze titel is te zien is zowel de **browser** als in de zoekresultaten van zoekm
 
 ![](images/title.png)
 
-## `<link rel="icon" href="images/favicon.png" />`
+## `<link rel="icon" href="images/favicon.ico" />`
 
 Deze tag geeft je website een **favicon**.
 
 Dit favicon is te zien in zowel de **browser** als in de zoekresultaten van zoekmachines zoals **Google**.
 
-![](images/favicon.png)
+![](images/favicon.ico)
 
-Het deel `"images/favicon.png"` wil zeggen dat de afbeelding `favicon.png` in een de folder `images` zit.
+Het deel `"images/favicon.ico"` wil zeggen dat de afbeelding `favicon.ico` in een de folder `images` zit.
 
 ![](images/favicon-dir.png)
 
 {% include callout.html type='tip' content='Bij websites is het gebruikelijk alle afbeeldingen in een folder genaamd images te zetten, zo maak je je folderstructuur duidelijker bij veel pagina’s met veel afbeeldingen.' %}
+
+## .ICO formaat
+
+Het .ico-formaat wordt gebruikt voor icoon afbeeldingen. 
+Het heeft mogelijkheid om meerdere resoluties in één bestand op te slaan, ondersteuning voor transparantie, kleine bestandsgrootte en automatische herkenning door browsers.
+Dit zorgt ervoor dat de favicon er goed uitziet op verschillende apparaten en goed laadt, wat bijdraagt aan een consistente en professionele uitstraling van de website.
+
+{% include callout.html type='Info' content='Een favicon moet altijd in het **.ICO** formaat' %}
