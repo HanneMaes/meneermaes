@@ -1,6 +1,6 @@
 ---
 title: Body & Head
-last_modified_at: 2024-09-26 21:20:44 +0200
+last_modified_at: 2024-09-27 11:06:18 +0200
 date: 2024-09-26 20:59:44 +0200
 ---
 
@@ -12,19 +12,19 @@ Dit is eigenlijk hoe de code van een website eruit moet zien:
 ```html
 <!doctype html>
 <html>
-  <head>
+    <head>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-		<link rel="icon" href="images/favicon.png" />
-    <title>Website title</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" href="images/favicon.png" />
+        <title>Website title</title>
 
-  </head>
-	<body>
+    </head>
+    <body>
 
-		Hello world!
+        Hello world!
 
-	</body>
+    </body>
 </html>
 ```
 
