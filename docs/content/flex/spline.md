@@ -1,6 +1,6 @@
 ---
 title: Spline
-last_modified_at: 2024-09-26 08:33:42 +0200
+last_modified_at: 2024-09-27 11:41:22 +0200
 date: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -24,13 +24,16 @@ Kies **1 features van Spline**:
 - Physics
 - Particles
 - Materials, scene & lights
-- A.I.
 - Cartoon style
 - Importing & exporting
-- ...
+- ~~A.I. (betalend)~~
+- ...~
 
-Experimenteer, bekijk de [officiële documentatie](https://docs.spline.design/doc/-getting-started/doc390iSGamE) en maak een **showcase project met bijbehorende tutorial website**.
-Zorg ervoor dat je tutorial **duidelijk** en **overzichtelijk** is, je klasgenoten zullen hem gebruiken.
+## Stappenplan
+1. Experimenteer, bekijk de [officiële documentatie](https://docs.spline.design/doc/-getting-started/doc390iSGamE).
+2. Maak een **showcase project**.
+3. Maak een **tutorial website met stappenplan** waarom je uitlegt hoe je onderwerp werkt of hoe je het showcase project gemaakt hebt.
+    Zorg ervoor dat je tutorial **duidelijk** en **overzichtelijk** is, je klasgenoten zullen hem gebruiken.
 
 {% include punten.html data='spline-tutorial' %}
 
