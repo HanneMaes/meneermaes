@@ -20,5 +20,5 @@ Zoek op het internet een artikel over één van de technologieën uit de present
 - Zoek minsten 1 parallel met één van de andere technologieën.
 - Leg uit wat je standpunt is. Vind je het ethisch verantwoord of niet, en leg aan de hand van sterke argumenten uit waarom.
 
-{% include callout.html type='info' content='We zullen hier tijdens het vak <strong>Kantoorsoftware</strong> een presentatie van maken.' %}
+{% include callout.html type='info' content='We zullen hier tijdens het vak [Kantoorsoftware een presentatie](../kantoorsoftware/PowerPoint-basics) van maken.' %}
 {% include punten.html data='artikel-soorten-computers' %}
