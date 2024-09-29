@@ -1,6 +1,6 @@
 ---
 title: Kantoorsoftware
-last_modified_at: 2024-05-03T07:12:37
+last_modified_at: 2024-09-29 20:32:31 +0200
 date: Wed, sep 15, 2024  14:07:23 PM
 ---
 
