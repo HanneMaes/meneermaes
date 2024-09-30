@@ -1,3 +1,14 @@
+# maesbot/
+*Tooling to make my life easier*
+
+## maesbot/diff-file/ 
+![diff-fileTerminal output](readme/carbon.png)
+
+## maesbot/punten/
+Automate everything that involves points, assignements, tests, ...
+
+---
+
 # docs/
 *Website for my course material: [https://www.meneermaes.be/](https://www.meneermaes.be/)*
 
@@ -24,14 +35,3 @@ Launch the Docker container with the Jekyll project: `cd docs/ && bash init.sh`
 - `init.sh`: Script to launch the Jekyll website
 - `_layouts/`: Directory containing template files for different page layouts
 - `_site/`: Output directory where Jekyll generates the final static site aka the final .html files
-
----
-
-# maesbot/
-*Tooling to make my life easier*
-
-## maesbot/diff-file/ 
-![diff-fileTerminal output](readme/carbon.png)
-
-## maesbot/punten/
-Automate everything that involves points, assignements, tests, ...
