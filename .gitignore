@@ -3,18 +3,6 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
-# Bundler files
-.bundle/
-vendor/
-
-# Logs
-*.log
-
-# Temporary files
-.sass-cache/
-*.swp
-*~
-
 # OS generated files
 .DS_Store
 .DS_Store?
