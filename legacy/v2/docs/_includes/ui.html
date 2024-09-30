@@ -1,0 +1,15 @@
+{% assign uiReplaced = include.ui
+    | replace: ', ', '<span class="uiSeparator"> \> </span>'
+    | replace: ',' , '<span class="uiSeparator"> \> </span>'
+    | replace: 'ham ', '☰'
+    | replace: 'ham' , '☰'
+    | replace: 'rc ', 'Rechter muisknop'
+    | replace: 'rc' , 'Rechter muisknop'
+    | replace: 'lc ', 'Linker muisknop'
+    | replace: 'lc' , 'Linker muisknop'
+    | replace: 'dc ', 'Dubbelklik'
+    | replace: 'dc' , 'Dubbelklik'
+%}
+<span class="ui">
+    {{ uiReplaced }}
+</span>

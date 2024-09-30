@@ -1,0 +1,145 @@
+:root {
+    --colorDark: #422712;
+    --colorText: #785d48;
+    --colorBackground: #daba91;
+}
+
+@font-face {
+    font-family: 'body';
+    src: url('fonts/Basteleur-Bold.woff');
+}
+
+@font-face {
+    font-family: 'hero';
+    src: url('fonts/Martin.ttf');
+}
+
+@font-face {
+    font-family: 'enemy';
+    src: url('fonts/ElSol.otf');
+}
+
+body {
+    background-color: var(--colorBackground);
+    color: var(--colorText);
+    font-family: body;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: hero;
+    font-size: 40px;
+    color: var(--colorDark);
+}
+
+em {
+    color: var(--colorDark);
+}
+
+a {
+    background-color: var(--colorText);
+    color: var(--colorBackground);
+    text-decoration: none; /* geen lijn onder de link */
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+    transition: 0.5s; /* laat de hover animeren */
+}
+a:hover {
+    background-color: var(--colorDark);
+}
+
+/* om HTML elementen te verbergern */
+.hide {
+    display: none !important;
+}
+
+.health {
+    color: #943212;
+}
+
+.strength {
+    color: #078271;
+}
+
+img {
+    margin-top: 20px;
+}
+
+.vs {
+    margin-top: 30px;
+}
+.vs::before, .vs::after {
+    content:' -------------- ';
+}
+
+/* ***** */
+/* enemy */
+/* ***** */
+
+.enemyName {
+    font-family: enemy;
+}
+
+.enemyImage {
+    width:  350px;
+    height: 350px;
+    border: 5px solid var(--colorDark);
+}
+
+/* **** */
+/* hero */
+/* **** */
+
+.heroName {
+    font-family: hero;
+}
+
+small {
+    opacity: 0.5;
+    font-size: 25px;
+    font-style: italic;
+}
+
+/* ********** */
+/* start page */
+/* ********** */
+
+.startpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.startmenu {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 5px solid var(--colorDark);
+    padding: 20px;
+}
+
+hr {
+    border-bottom: 5px solid var(--colorDark);
+    height: 0px;
+    margin-top:    20px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.formTitle {
+    color: var(--colorDark);
+    font-size: 25px;
+}
+
+/* ************************ */
+/* general styling elements */ 
+/* ************************ */
+
+.round {
+    border-radius: 20px;
+}

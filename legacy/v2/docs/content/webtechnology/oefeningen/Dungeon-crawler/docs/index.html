@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" href="images/favicon.ico" />
+        <link rel="stylesheet" href="styles.css"> <!-- dit MOET in head staan -->
+        <title>Dungeon Crawler</title>
+
+    </head>
+	  <body>
+
+        <!-- ---------- -->
+        <!-- start page -->
+        <!-- ---------- -->
+
+        <div id="startpage" class="startpage">
+            <h1>Character Creation</h1>
+            <form id="startmenu" class="startmenu round">
+
+                <!-- name -->
+                <label class="formTitle">Hero name:</label><br>
+                <input type="text" id="naamTextfield" placeholder="Enter hero name">
+
+                <hr>
+
+                <!-- class -->
+                <label class="formTitle">Class:</label><br>
+
+                <input type="radio" name="classRadioButton" value="Barbarian" checked>
+                <label><em>Barbarian</em>: Strong attacks, but less health</label><br>
+
+                <input type="radio" name="classRadioButton" value="Paladin">
+                <label><em>Paladin</em>: Strong armour, but weak attacks</label><br>
+
+                <input type="radio" name="classRadioButton" value="Medic">
+                <label><em>Medic</em>: Has a small chance to heal each turn</label><br>
+
+            </form>
+            <a id="enterDungeon" href="#">&#9769; Enter Dungeon &#9769;</a>
+        </div>
+
+        <!-- ---- -->
+        <!-- game -->
+        <!-- ---- -->
+
+        <div id="enemy" class="hide"></div>
+        <div id="vs"    class="hide vs">VS</div>
+        <div id="hero"  class="hide"></div>
+
+        <!-- de script-tag moet onderaan body staan -->
+        <script src="script.js"></script> 
+	  </body>
+</html>
