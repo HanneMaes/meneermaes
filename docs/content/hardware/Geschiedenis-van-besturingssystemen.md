@@ -1,15 +1,35 @@
 ---
 title: Geschiedenis Van Besturingssystemen
-last_modified_at: 2024-10-01 15:16:57 +0200
+last_modified_at: 2024-10-01 20:56:25 +0200
 date: 2024-09-19 15:18:44 +0200
 ---
 
 Tijdens deze oefening zullen jullie de belangrijkste gebeurtenissen in de geschiedenis van besturingssystemen onderzoeken.
 Deze gebeurtenissen hebben allemaal bijgedragen aan de evolutie van de technologie die we vandaag de dag gebruiken. 
 
-**Jullie krijgen elk enkele gebeurtenissen met onderzoeksvragen toegewezen.**
+# Tijdslijn
 
-# Onderwerpen:
+Werk als team samen en maak een tijdlijn van deze gebeurtenissen. Verdeel de rollen binnen het team en kies de tools die jullie het meest geschikt vinden.
+
+- **Xerox & Palo Alto Research Center (PARC)**  
+- **Android 1.0**  
+- **Classic Mac OS**  
+- **GNU Project**  
+- **BSD: Berkeley Software Distribution**  
+- **Unix & Bell Labs**  
+- **Windows 95**  
+- **CyanogenMod**  
+- **MacOS**  
+- **Linux**  
+
+# Opdracht
+
+Jullie krijgen elk een aantal gebeurtenissen toegewezen met bijbehorende onderzoeksvragen. Zoek een antwoord op de vragen over jouw onderwerp en beantwoord daarnaast de volgende algemene vragen:
+- Hoe past jouw gebeurtenis in de tijdslijn? Wat is de relatie met de gebeurtenissen ervoor en erna?
+- Hoe heeft deze gebeurtenis bijgedragen aan de ontwikkeling van moderne besturingssystemen?
+- Verzamel beeldmateriaal om de informatie visueel te ondersteunen en de impact van de gebeurtenis duidelijker te maken.
+
+## Gebeurtenissen
 
 **Xerox & Palo Alto Research Center (PARC)**  
 Wat waren de belangrijkste innovaties van het PARC-onderzoek en hoe werden deze innovaties later overgenomen door andere bedrijven zoals Apple en Microsoft?
@@ -41,17 +61,6 @@ Wie richtte het op, wat was er anders aan dit besturingssysteem en waarom waren 
 **Linux**  
 Wat is het, waarom werd het opgericht, door wie en waarom is het momenteel zo belangrijk?
 
-
-# Stap 1: Tijdslijn
-
-# Stap 2: Onderzoeksvragen
-
-**Zoek een antwoord op de onderzoeksvragen van je onderwerp en onderstaande onderzoeksvragen:**
-- Plaats je onderwerp in **context van de tijdslijn**, wat had het te maken met de voorgaande en erop volgende gebeurtenissen?
-- Hoe droeg het bij aan de **vooruitgang van besturingssystemen**?
-
-**Verzamel beeldmateriaal dat helpt om de informatie visueel te maken en de invloed van elke gebeurtenis duidelijker te illustreren.**
-
-# Puntenverdeling
+## Puntenverdeling
 
 {% include punten.html data='geschiedenis-van-besturingsystemen' %}
