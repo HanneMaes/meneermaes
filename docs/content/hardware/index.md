@@ -1,6 +1,6 @@
 ---
 title: Hardware
-last_modified_at: 2024-09-18 12:16:09 +0200
+last_modified_at: 2024-10-01 14:55:14 +0200
 date: Wed, sep 04, 2024  10:47:23 PM
 ---
 
