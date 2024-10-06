@@ -1,6 +1,6 @@
 ---
 title: Powerpoint Basics
-last_modified_at: 2024-09-29 22:11:12 +0200
+last_modified_at: 2024-10-06 21:58:57 +0200
 date: 2024-09-29 20:41:34 +0200
 ---
 
@@ -113,6 +113,36 @@ Indien gewenst, kan je ook nog de achtergrond van een dia opmaken. Dit doe je al
     ![](images/achtergrond.png)
 3. Kies of je een effen achtergrond wilt, een afbeelding als achtergrond of een achtergrond met kleur overgang.
 4. Je keuze wordt standaard toegepast op één dia. Wanneer je wenst dat de achtergrond wordt toegepast op alle dia’s, dan dien je onderaan in het zij venster te klikken op ‘Overal toepassen’. Kies voor de optie ‘Opnieuw instellen’ als je de gekozen achtergrond wenst te verwijderen.
+
+# Voettekst
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j3ZgwKpfMF0?si=n8Hpcw1dGX77MNBu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Via de voettekst kan je bepaalde informatie zichtbaar maken op alle dia’s.
+1. Klik bij het tabblad **Invoegen** op **Koptekst en voettekst**.
+    ![](images/voettekst.png)
+2. Volgende informatie kan je toevoegen aan je dia’s:
+    - Datum & tijd (automatisch bijwerken of vast)
+    - Dia nummer
+    - Voettekst (moet je zelf aanvullen)
+3. Wanneer je klaar bent met het instellen van de voettekst, kan je deze **toepassen op de dia** die je hebt geselecteerd in de dia lijst **of overal toepassen** (op alle dia’s). De optie **Niet weergeven op titeldia** kun je gebruiken om de voettekst daar niet weer te geven.
+
+# Koppelingen (hyperlinks)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YglC8f4fwcU?si=B5B7M1AbuKAQIMGt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Binnen een presentatie kan je **via tekst of objecten** (vb. afbeeldingen) een koppeling/hyperlink leggen naar een **webpagina, document, e-mailadres of een plaats binnen jouw presentatie**.
+1. Selecteer een **tekstgedeelte of object** waaraan je een koppeling wenst toe te voegen.
+2. Klik in het tabblad Invoegen op **Hyperlink** of **Koppeling**.
+    ![](images/koppelingen-hyperlinks.png)
+3. Kies het gewenste type van koppeling:
+    - **Bestaand document/webadres**  
+        Hier kan je een document kiezen of in de balk ‘Adres’ een URL typen. Als je dan klikt op de tekst/object met koppeling zal je onmiddellijk doorverwezen worden naar het document of webadres.
+    - **Plaats in document**  
+        Hier kan je één van je dia’s selecteren. Als je dan klikt op de tekst/object met koppeling zal je onmiddellijk doorverwezen naar de gelinkte dia.
+    - **E-mailadres**
+        Hier kan je een e-mailadres invoeren. Bij het klikken op de tekst/object met koppeling zal het programma Outlook zich automatisch openen om een bericht te sturen naar dit gekozen mailadres.
+4. Klik op **OK**.
 
 # Opdracht: Soorten computers
 
