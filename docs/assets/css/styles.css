@@ -422,9 +422,6 @@ footer img { /* signature */
    display: flex;
    justify-content: center;
 }
-.pageInfo a {
-  text-decoration: none;
-}
 
 .curvedShadow {
    opacity: 0.15;
