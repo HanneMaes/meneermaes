@@ -1,6 +1,6 @@
 ---
 title: Powerpoint Basics
-last_modified_at: 2024-10-07 08:40:12 +0200
+last_modified_at: 2024-10-07 09:05:26 +0200
 date: 2024-09-29 20:41:34 +0200
 ---
 
@@ -152,7 +152,7 @@ Verwerk de informatie die je tijdens de ["Soorten computers: Artikel"](../hardwa
 2. **Kies een variant**.  
     Upload een screenshot van dezelfde dia in een andere variant.
 3. **Kies een eigen achtergrond**.  
-    Upload een screenshot van dezelfde dia met dezelfde achtergrond.
+    Upload een screenshot van dezelfde dia met een andere achtergrond.
 4. Voeg een **voettekst** toe met een eigen tekst, het dia nummer, de datum en tijd. Zorg ervoor dat de titeldia deze voettekst niet krijgt.
 5. Verwijs naar het artikel via een **koppeling/hyperlink**.
 6. Zet op de laatste dia een afbeelding waar je op kan klikken om terug naar de 1e dia te gaan.
