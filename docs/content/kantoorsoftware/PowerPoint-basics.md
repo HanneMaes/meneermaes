@@ -1,14 +1,14 @@
 ---
 title: Powerpoint Basics
-last_modified_at: 2024-10-06 21:58:57 +0200
+last_modified_at: 2024-10-07 08:40:12 +0200
 date: 2024-09-29 20:41:34 +0200
 ---
 
 # Basis van een goede presentatie
 
-## Aantal slides
+## Aantal dia's
 
-Het verhaal moet van jou komen en niet van wat er op het scherm staat. Beperk daarom het aantal slides in je presentatie.
+Het verhaal moet van jou komen en niet van wat er op het scherm staat. Beperk daarom het aantal dia's in je presentatie.
 
 ## Achtergrond
 
@@ -29,7 +29,7 @@ Het verhaal moet van jou komen en niet van wat er op het scherm staat. Beperk da
 
 ## Structuur
 
-Structureer de informatie op de slides.
+Structureer de informatie op de dia's.
 
 ![](images/structuur.png)
 
@@ -39,7 +39,7 @@ Gebruik zo weinig mogelijk tekst en veel beeld. Hoe meer je zelf vertelt en afbe
 
 ## Dia model
 
-Zorg voor een duidelijke en eenvoudige lay-out voor al je slides. Al je slides moeten dezelfde opmaak hebben. De lay-out kan je makkelijk aanpassen via het dia model.
+Zorg voor een duidelijke en eenvoudige lay-out voor al je dia's. Al je dia's moeten dezelfde opmaak hebben. De lay-out kan je makkelijk aanpassen via het dia model.
 
 ## Animaties
 
@@ -148,10 +148,13 @@ Binnen een presentatie kan je **via tekst of objecten** (vb. afbeeldingen) een k
 
 Verwerk de informatie die je tijdens de ["Soorten computers: Artikel"](../hardware/soorten-computers) opdracht heb opgezocht tot een presentatie.
 1. **Kies een thema**.  
-    Upload een screenshot van je 1e slide in het gekozen thema.
+    Upload een screenshot van je 1e dia in het gekozen thema.
 2. **Kies een variant**.  
-    Upload een screenshot van dezelfde slide in een andere variant.
+    Upload een screenshot van dezelfde dia in een andere variant.
 3. **Kies een eigen achtergrond**.  
-    Upload een screenshot van dezelfde slide met dezelfde achtergrond.
+    Upload een screenshot van dezelfde dia met dezelfde achtergrond.
+4. Voeg een **voettekst** toe met een eigen tekst, het dia nummer, de datum en tijd. Zorg ervoor dat de titeldia deze voettekst niet krijgt.
+5. Verwijs naar het artikel via een **koppeling/hyperlink**.
+6. Zet op de laatste dia een afbeelding waar je op kan klikken om terug naar de 1e dia te gaan.
 
 {% include punten.html data='Powerpoint-basics' %}
