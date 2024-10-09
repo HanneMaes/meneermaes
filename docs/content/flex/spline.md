@@ -1,6 +1,6 @@
 ---
 title: Spline
-last_modified_at: 2024-09-27 11:41:22 +0200
+last_modified_at: 2024-10-09 09:30:16 +0200
 date: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -27,7 +27,7 @@ Kies **1 features van Spline**:
 - Cartoon style
 - Importing & exporting
 - ~~A.I. (betalend)~~
-- ...~
+- ...
 
 ## Stappenplan
 1. Experimenteer, bekijk de [officiële documentatie](https://docs.spline.design/doc/-getting-started/doc390iSGamE).
