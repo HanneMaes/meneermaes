@@ -1,6 +1,6 @@
 ---
 title: Spline
-last_modified_at: 2024-10-09 09:30:16 +0200
+last_modified_at: 2024-10-10 08:51:08 +0200
 date: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -18,7 +18,10 @@ Open spline, experimenteer, en probeer in **40min** tijd een **afgewerkt project
 # Opdracht 1: Showcase & tutorial
 
 Kies **1 features van Spline**:
-- 3D modelling & vector
+- 3D modeling
+- 3D sculpting
+- 3D paths
+- UI (user interface) scenes
 - Animaties
 - Interacties/events
 - Physics

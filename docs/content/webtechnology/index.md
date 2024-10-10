@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2024-09-27 14:01:30 +0200
+last_modified_at: 2024-10-10 11:57:09 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -38,14 +38,26 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 ## Je 1e website
 
-[Je éérste échte website](Je-1e-echte-website){: .opdracht }
+[Je 1e échte website](Je-1e-echte-website){: .opdracht }
 
 [Body & head](body-en-head)
 
 [Meerdere pagina's](Meerdere-paginas)
 
-[Je éérste uitgebreide website](Je-1e-uitgebreide-website){: .opdracht }
+[Je 1e uitgebreide website](Je-1e-uitgebreide-website){: .opdracht }
+
+[ZIP-bestanden](ZIP-bestanden)
 
 [Peer assessment](Peer-assessment)
 
-[ZIP-bestanden](ZIP-bestanden)
+# CSS
+
+## CSS Basics
+
+[Anatomie van een website](Anatomie-van-een-website)
+
+[CSS Basics](CSS-basics)
+
+[Je 1e website stylen](Je-1e-website-stylen){: .opdracht }
+
+## Geavanceerde CSS
