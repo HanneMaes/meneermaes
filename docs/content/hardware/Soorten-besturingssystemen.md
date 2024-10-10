@@ -1,6 +1,6 @@
 ---
 title: Soorten Besturingssystemen
-last_modified_at: 2024-09-25 21:59:45 +0200
+last_modified_at: 2024-10-10 12:22:04 +0200
 date: 2024-09-25 21:21:33 +0200
 ---
 
@@ -52,7 +52,7 @@ Iedereen krijgt één van de onderstaande Besturingssystemen toegewezen:
 2. **Wat maakt het geschikt voor deze toepassingen?**  
 3. **Welke bedrijven of apparaten gebruiken dit besturingssysteem?**  
     Geef voorbeelden van producten of diensten die afhankelijk zijn van dit OS.
-4. **Bespreek de verschillende versie van dit OS.**
+4. **Zijn er schillende versies van dit soort OS?**
 5. **Is het open-source of commercieel, en hoe beïnvloedt dit de ontwikkeling?**
 6. **Hoe ziet de toekomst van dit besturingssysteem eruit?**  
     Wordt er nog steeds actief aan gewerkt?  
