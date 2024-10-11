@@ -1,6 +1,6 @@
 ---
 title: Spline
-last_modified_at: 2024-10-10 08:51:08 +0200
+last_modified_at: 2024-10-11 12:09:20 +0200
 date: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -40,7 +40,6 @@ Kies **1 features van Spline**:
 
 {% include punten.html data='spline-tutorial' %}
 
-# Uitdagingen
+# Uitdaging
 
-- Zoek een manier om het spline watermark weg te krijgen.
 - Zoek een manier om een interactie te krijgen met de muis op heel de pagina.
