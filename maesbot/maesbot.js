@@ -1,4 +1,4 @@
-const color = require('./consoleColors'); // my colot: script
+const color = require('./consoleColors'); // my color script
 const readline = require('readline'); // ask questions
 const { spawn } = require('child_process'); // execute other scripts
 const fs = require('fs'); // access to filesystem
