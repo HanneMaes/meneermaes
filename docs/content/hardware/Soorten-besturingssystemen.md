@@ -1,6 +1,6 @@
 ---
 title: Soorten Besturingssystemen
-last_modified_at: 2024-10-16 12:47:43 +0200
+last_modified_at: 2024-10-16 12:49:43 +0200
 date: 2024-09-25 21:21:33 +0200
 ---
 
@@ -29,11 +29,11 @@ Android is een mobiel besturingssysteem dat door Google is ontwikkeld en op de m
 iOS is het besturingssysteem dat draait op de iPhone en iPad, ontwikkeld door Apple. 
 " %}
 
-# Doel
+# Doel van de opdracht
 
 Jullie onderzoeken diverse typen besturingssystemen en ontdekken hun rol in de echte wereld, de technologieën die ze ondersteunen, en hun gebruik in verschillende sectoren.
 
-# Soort besturingssysteem
+# Soorten besturingssystemen
 
 Iedereen krijgt één van de onderstaande Besturingssystemen toegewezen:
 - Linux Desktop
