@@ -1,6 +1,6 @@
 ---
 title: Spline
-last_modified_at: 2024-10-16 22:03:35 +0200
+last_modified_at: 2024-10-17 10:23:19 +0200
 date: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -47,19 +47,6 @@ Kies **1 features van Spline**:
 
 - Zoek een manier om een interactie te krijgen met de muis op heel de pagina.
 
-# Showcase
-
-De volgende stap is om je project te presenteren aan je klasgenoten.
-Dit is je kans om te laten zien waar je de afgelopen lessen aan hebt gewerkt en om je technische vaardigheden te demonstreren.
-
-Presenteer je showcase project aan de klas en leg **kort en krachtig** uit wat je feature is en wat je er **praktisch** allemaal mee kan doen.
-**Concrete voorbeelden** kunnen hier bij helpen.
-
-**Tips om je showcase voor te brengen:**
-- Spreek rustig en duidelijk
-- Maak oogcontact met je publiek
-- Wees enthousiast over je werk
-
 # Tutorials testen
 
 Nu is het tijd om elkaars tutorials uit te testen en **constructieve feedback** te geven.
@@ -105,3 +92,16 @@ Feedback is een waardevol hulpmiddel om je werk te verfijnen en te leren van de 
     - Wat heb je geleerd uit het feedbackproces?
 
 Upload je definitieve versie van de tutorial in de uploadzone.
+
+# Showcase
+
+De volgende stap is om je project te presenteren aan je klasgenoten.
+Dit is je kans om te laten zien waar je de afgelopen lessen aan hebt gewerkt en om je technische vaardigheden te demonstreren.
+
+Presenteer je showcase project aan de klas en leg **kort en krachtig** uit wat je feature is en wat je er **praktisch** allemaal mee kan doen.
+**Concrete voorbeelden** kunnen hier bij helpen.
+
+**Tips om je showcase voor te brengen:**
+- Spreek rustig en duidelijk
+- Maak oogcontact met je publiek
+- Wees enthousiast over je werk
