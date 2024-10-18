@@ -1,6 +1,6 @@
 ---
 title: "Neutral Html Tags:<br> div & span"
-last_modified_at: 2024-10-18 09:41:33 +0200
+last_modified_at: 2024-10-18 15:57:29 +0200
 date: 2024-10-18 09:10:08 +0200
 ---
 
@@ -12,7 +12,7 @@ Ze zijn **neutraal** en hebben **geen standaard visuele opmaak** *(zoals kleur, 
 
 Hoewel beide elementen gebruikt worden om inhoud te groeperen, zijn er belangrjke verschillen:
 - `<span>` is een **inline-element**:
-    Dat nbetekent dat het wordt weergegeven binnen de normale stroom van een tekstregel. 
+    Dat betekent dat het wordt weergegeven binnen de normale stroom van een tekstregel. 
     Het is geschikt voor het toepassen van stijlen op **woorden, zinnen, of delen van een tekst**.
 - `<div>` is een **blok-element**
     Dat betekent dat het **altijd een nieuwe regel begint en de volledige breedte van zijn oudercontainer inneemt**.
