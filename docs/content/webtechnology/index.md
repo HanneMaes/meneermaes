@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2024-10-18 09:17:37 +0200
+last_modified_at: 2024-10-18 12:50:31 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -63,3 +63,5 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 ## Geavanceerde CSS
 
 [Neutrale HTML-tags\: \<div\> en \<span\>](Neutral-HTML-tags-div-en-span)
+
+[Knoppen](knoppen){: .opdracht }
