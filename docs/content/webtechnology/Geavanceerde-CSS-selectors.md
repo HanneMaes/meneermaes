@@ -1,6 +1,6 @@
 ---
 title: Geavanceerde CSS-Selectors
-last_modified_at: 2024-10-18 14:17:05 +0200
+last_modified_at: 2024-10-18 16:19:48 +0200
 date: 2024-10-18 14:01:36 +0200
 ---
 
@@ -9,10 +9,10 @@ date: 2024-10-18 14:01:36 +0200
 # Links: hover & visited
 
 ```html
-<a href="#">Link 1</a>
-<a href="#">Link 2</a>
-<a href="#">Link 3</a>
-<a href="#">Link 4</a>
+<a href="https://www.meneermaes.be/">Link 1</a>
+<a href="https://www.meneermaes.be/">Link 2</a>
+<a href="https://www.meneermaes.be/">Link 3</a>
+<a href="https://www.meneermaes.be/">Link 4</a>
 ```
 
 ```css
