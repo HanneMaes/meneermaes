@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2024-10-18 12:50:31 +0200
+last_modified_at: 2024-10-18 15:09:01 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -13,6 +13,9 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 **Favicon**
 - [Convert image to favicon](https://convertico.com/favicon/)
 - [Emoji's](https://emojipedia.org/)
+
+**Web fonts**
+- [Browse Fonts - Google Fonts](https://fonts.google.com/)
 
 ---
 
@@ -63,5 +66,11 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 ## Geavanceerde CSS
 
 [Neutrale HTML-tags\: \<div\> en \<span\>](Neutral-HTML-tags-div-en-span)
+
+[Geavanceerde CSS-selectors](Geavanceerde-CSS-selectors)
+
+[Web fonts](Web-fonts)
+
+[Browser developer tools](Browser-developer-tools)
 
 [Knoppen](knoppen){: .opdracht }

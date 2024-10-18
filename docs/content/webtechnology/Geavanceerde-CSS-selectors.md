@@ -1,0 +1,62 @@
+---
+title: Geavanceerde CSS-Selectors
+last_modified_at: 2024-10-18 14:17:05 +0200
+date: 2024-10-18 14:01:36 +0200
+---
+
+> Test onderstaande code uit, en probeer te achterhalen wat ze doen
+
+# Links: hover & visited
+
+```html
+<a href="#">Link 1</a>
+<a href="#">Link 2</a>
+<a href="#">Link 3</a>
+<a href="#">Link 4</a>
+```
+
+```css
+a:hover {
+    color: red;
+
+}
+a:visited {
+    color: green;
+}
+```
+
+# First-letter & first-line
+
+```html
+<p class="eersteletter">Eerste letter</p>
+<p class="eerstelijn">Eerste lijn.<br>Tweede lijn.</p>
+```
+
+```css
+.eersteletter::first-letter {
+    color: red;
+
+}
+.eerstelijn::first-line {
+    color: green;
+}
+```
+
+# Before & after
+
+
+```html
+Aankoop prijs: <span class="euro">100</span>
+```
+
+```css
+.euro::before {
+    content: '€';
+    color: orange;
+}
+
+.euro::after {
+    content: '!';
+    color: red;
+}
+```
