@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2024-10-10 11:57:09 +0200
+last_modified_at: 2024-10-18 09:17:37 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -48,8 +48,6 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [ZIP-bestanden](ZIP-bestanden)
 
-[Peer assessment](Peer-assessment)
-
 # CSS
 
 ## CSS Basics
@@ -60,4 +58,8 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [Je 1e website stylen](Je-1e-website-stylen){: .opdracht }
 
+[Peer assessment](Peer-assessment)
+
 ## Geavanceerde CSS
+
+[Neutrale HTML-tags\: \<div\> en \<span\>](Neutral-HTML-tags-div-en-span)
