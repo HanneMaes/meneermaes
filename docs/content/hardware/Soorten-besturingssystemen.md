@@ -1,17 +1,17 @@
 ---
 title: Soorten Besturingssystemen
-last_modified_at: 2024-10-17 12:10:21 +0200
+last_modified_at: 2024-10-23 12:01:27 +0200
 date: 2024-09-25 21:21:33 +0200
 ---
 
 
-Besturingssystemen zijn overal om ons heen te vinden, van onze telefoons en computers tot geavanceerde machines en IoT-apparaten. 
+Besturingssystemen zijn overal om ons heen te vinden, van onze telefoons en computers tot geavanceerde machines en IoT-apparaten.
 
 In deze opdracht gaan jullie niet alleen onderzoeken hoe verschillende besturingssystemen werken, maar ook hoe ze orden toegepast in verschillende situaties en wat hun specifieke voordelen en nadelen zijn.
 
 Dit helpt jullie niet alleen te begrijpen welke systemen in bepaalde omgevingen worden gebruikt, maar ook waarom deze systemen in die specifieke situaties het beste werken.
 
-Iedereen onder jullie kent Windows, macOS, iOS en Android. Deze systemen gebruiken jullie dagelijks op je computer, telefoon of tablet. 
+Iedereen onder jullie kent Windows, macOS, iOS en Android. Deze systemen gebruiken jullie dagelijks op je computer, telefoon of tablet.
 
 {% include toggle.html title="Wat is Windows?" content="
 Windows is het meest gebruikte desktop en laptop besturingssystemen ter wereld, ontwikkeld door Microsoft. Het draait vooral op pc’s en laptops en wordt vaak gebruikt in zowel zakelijke omgevingen als thuis.
@@ -22,11 +22,11 @@ MacOS is het besturingssysteem van Apple voor hun Mac-computers. Het staat beken
 " %}
 
 {% include toggle.html title="Wat is Andriod?" content="
-Android is een mobiel besturingssysteem dat door Google is ontwikkeld en op de meeste smartphones draait. Het is een open-source systeem, wat betekent dat verschillende fabrikanten zoals Samsung en Huawei hun eigen versie van Android kunnen maken. 
+Android is een mobiel besturingssysteem dat door Google is ontwikkeld en op de meeste smartphones draait. Het is een open-source systeem, wat betekent dat verschillende fabrikanten zoals Samsung en Huawei hun eigen versie van Android kunnen maken.
 " %}
 
 {% include toggle.html title="Wat is IOS?" content="
-iOS is het besturingssysteem dat draait op de iPhone en iPad, ontwikkeld door Apple. 
+iOS is het besturingssysteem dat draait op de iPhone en iPad, ontwikkeld door Apple.
 " %}
 
 # Doel van de opdracht
@@ -72,3 +72,8 @@ Terwijl je naar de presentaties van je klasgenoten luistert, is het belangrijk o
 
 Na de presentaties krijgen jullie allemaal enkele vragen over de besturingssystemen. Deze vragen zijn bedoeld om te testen of je alles goed hebt begrepen.
 {% include punten.html data='soorten-besturingssystemen-inzichtsvragen' %}
+
+# Uitbreiding
+
+Zoek naar verschillende manieren waarop je een besturingssysteem kunt installeren op je computer.  
+Dit is een belangrijke stap, want in het volgende hoofdstuk zal je zelf een OS installeren.
