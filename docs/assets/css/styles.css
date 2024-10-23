@@ -1,5 +1,5 @@
 /* ********* */
-/* VARIALBES */
+/* VARIABLES */
 /* ********* */
 
 :root {
@@ -212,6 +212,8 @@ blockquote {
    margin-right: 0px;
 }
 
+/* callout */
+
 .callout {
 	background-color: var(--light-transparant);
 	color: var(--textDark);
@@ -241,7 +243,9 @@ blockquote {
 	font-size: 30px;
 }
 
-details { /* open/close toggle */
+/* toggles */
+
+details {
    margin: var(--spacing);
 }
 summary {
@@ -255,6 +259,17 @@ summary {
 summary:hover {
 	color: var(--medium);
 }
+
+summary::marker { /* the arrow/triangle */
+   color: var(--light);
+}
+
+.toggleContent {
+   padding-left: var(--spacing); /* spacing between the line and the text */
+   margin-left: 4px; /* to put the line right under the arrow */
+   border-left: var(--borderWidth) solid var(--light);
+}
+
 /* colors */
 .goodText { color: #00976a; font-weight: bold; }
 .badText  { color: #a30031; font-weight: bold; }
