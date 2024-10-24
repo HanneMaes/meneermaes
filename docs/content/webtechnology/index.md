@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2024-10-18 15:09:01 +0200
+last_modified_at: 2024-10-24 16:15:03 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 

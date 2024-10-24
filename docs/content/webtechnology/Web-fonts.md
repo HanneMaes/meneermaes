@@ -1,17 +1,17 @@
 ---
 title: Web Fonts
-last_modified_at: 2024-10-18 15:04:18 +0200
+last_modified_at: 2024-10-24 16:15:12 +0200
 date: 2024-10-18 14:22:42 +0200
 ---
 
-Elke computer wordt geleverd met een standaard set lettertypen die zijn geïnstalleerd op het besturingssysteem. Deze lettertypen variëren afhankelijk van het besturingssysteem (zoals Windows, macOS, Linux) en de versie ervan. Omdat verschillende besturingssystemen verschillende lettertypen bevatten, kan een website er op de computer van de ontwerper anders uitzien dan op de computer van de bezoeker. Wat er goed uitziet op de ene computer, kan er anders uitzien op een andere computer als die niet hetzelfde lettertype heeft geïnstalleerd.
+Elke computer wordt geleverd met een standaard set lettertypen die zijn geïnstalleerd op het besturingssysteem. Deze **lettertypen variëren afhankelijk van het besturingssysteem** (zoals Windows, macOS, Linux) en de versie ervan. Omdat verschillende besturingssystemen verschillende lettertypen bevatten, kan een **website er op de computer van de ontwerper anders uitzien dan op de computer van de bezoeker**. Wat er goed uitziet op de ene computer, kan er anders uitzien op een andere computer als die niet hetzelfde lettertype heeft geïnstalleerd.
 
-Web fonts komen hier te hulp. Het zijn lettertypen die specifiek zijn ontworpen en geoptimaliseerd voor gebruik op websites.
-Wanneer een website een web font gebruikt, downloadt de browser van de gebruiker het specifieke lettertype. Hierdoor zien alle bezoekers van de website dezelfde lettertypen, ongeacht welk besturingssysteem ze gebruiken of welke lettertypen ze op hun computer hebben geïnstalleerd.
+Web fonts komen hier te hulp. Het zijn **lettertypen die specifiek zijn ontworpen en geoptimaliseerd voor gebruik op websites**.
+Wanneer een website een web font gebruikt, downloadt de browser van de gebruiker het specifieke lettertype. Hierdoor zien **alle bezoekers van de website dezelfde lettertypen**, ongeacht welk besturingssysteem ze gebruiken of welke lettertypen ze op hun computer hebben geïnstalleerd.
 
 # Google Fonts
 
-Google Fonts is een gratis online dienst van Google waarmee web ontwikkelaars toegang krijgen tot een uitgebreide bibliotheek met verschillende lettertypen die ze kunnen gebruiken op hun websites.
+Google Fonts is een **gratis online dienst** van Google waarmee web ontwikkelaars toegang krijgen tot een uitgebreide bibliotheek met verschillende lettertypen die ze kunnen gebruiken op hun websites.
 
 [Browse Fonts - Google Fonts](https://fonts.google.com/)
 
