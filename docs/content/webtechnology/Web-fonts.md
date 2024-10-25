@@ -1,6 +1,6 @@
 ---
 title: Web Fonts
-last_modified_at: 2024-10-25 13:57:24 +0200
+last_modified_at: 2024-10-25 14:22:44 +0200
 date: 2024-10-18 14:22:42 +0200
 ---
 
@@ -60,8 +60,9 @@ Open een van je vorige websites en voeg **minstens 2 verschillende webfonts** to
 Om meerdere fonts te gebruiken moeten we **2 keer** de `@font-face` code gebruiken:
 
 ```css
+/* Hier definiëren we het font, dit moet gebeuren voor we het font toekennen aan elementen */
 @font-face {
-    font-family: 'pacifico';
+    font-family: 'pacifico'; /* deze naam mogen we kiezen */
     src: url('fonts/Pacifico-Regular.ttf');
 }
 
@@ -70,6 +71,7 @@ Om meerdere fonts te gebruiken moeten we **2 keer** de `@font-face` code gebruik
     src: url('fonts/Roboto-Regular.ttf');
 }
 
+/* Hier kennen we het font toen aan elementen */
 p {
     font-family: pacifico;
 }
