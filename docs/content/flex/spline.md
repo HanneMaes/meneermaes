@@ -1,14 +1,10 @@
 ---
 title: Spline
-last_modified_at: 2024-10-17 10:23:19 +0200
+last_modified_at: 2024-10-25 12:38:11 +0200
 date: Wed, sep 11, 2024  10:47:23 PM
 ---
 
-{% include toggle.html title="Doelen" content="
-- De leerlingen gaan respectvol en constructief met anderen in interactie rekening houdend met elkaars grenzen.
-- De leerlingen gebruiken school- en vaktaal.
-- De leerlingen zoeken doelgericht informatie in diverse bronnen en verwerken die op een kritische en systematische manier.
-" %}
+{% include doelen.html data='spline-tutorial' %}
 
 > Dynasmische & interactieve 3D web graphics
 
