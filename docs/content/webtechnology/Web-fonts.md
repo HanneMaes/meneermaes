@@ -1,6 +1,6 @@
 ---
 title: Web Fonts
-last_modified_at: 2024-10-24 16:15:12 +0200
+last_modified_at: 2024-10-25 13:57:24 +0200
 date: 2024-10-18 14:22:42 +0200
 ---
 
@@ -68,5 +68,13 @@ Om meerdere fonts te gebruiken moeten we **2 keer** de `@font-face` code gebruik
 @font-face {
     font-family: 'roboto';
     src: url('fonts/Roboto-Regular.ttf');
+}
+
+p {
+    font-family: pacifico;
+}
+
+h1, h2 {
+    font-family: roboto;
 }
 ```
