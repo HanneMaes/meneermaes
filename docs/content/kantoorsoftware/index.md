@@ -1,6 +1,6 @@
 ---
 title: Kantoorsoftware
-last_modified_at: 2024-10-11 15:24:00 +0200
+last_modified_at: 2024-11-01 16:18:51 +0200
 date: Wed, sep 15, 2024  14:07:23 PM
 ---
 
@@ -14,6 +14,10 @@ date: Wed, sep 15, 2024  14:07:23 PM
 
 [PowerPoint Diamodel](PowerPoint-diamodel)
 
-# Rekennen
+# Rekenen
 
 [Spreadsheets verkennen](https://hannemaes.notion.site/Rekenbladen-Spreadsheets-verkennen-555058affe0544eca18e4b1a0f3459b8?pvs=4)
+
+# Gecombineerde projecten
+
+[Professioneel materiaal ontwikkelen](Professioneel-materiaal-ontwikkelen)
