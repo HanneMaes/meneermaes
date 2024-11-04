@@ -1,6 +1,6 @@
 ---
 title: Professioneel Materiaal Ontwikkelen
-last_modified_at: 2024-11-03 21:49:48 +0200
+last_modified_at: 2024-11-04 11:04:03 +0200
 date: 2024-11-01 16:18:57 +0200
 ---
 
@@ -8,13 +8,15 @@ Jullie hebben de afgelopen periode de basisbeginselen van Office-software onder 
 Jullie gaan een **praktische handleiding creëren** die andere leerlingen zal helpen enkele belangrijke mogelijkheden van Office-software te begrijpen en toe te passen, die zo nodig zullen hebben voor hun eindproject.
 
 # Einddoel
-Een professionele, gebruiksvriendelijke handleiding ontwikkelen.
+Een professionele, gebruiksvriendelijke handleiding ontwikkelen met **Microsoft Office**.
 
 Deze handleiding zal bestaan uit 2 delen:
 - Handleiding in tekst vorm
 - Ingesproken presentatie
 
-Onderwerpen die aan bod moeten komen:
+**Onderwerpen die aan bod moeten komen:**
+
+{: .goodText }
 - Automatische inhoudstafel en automatische nummering
 - Opmaak stijlen van tekst, titels, tussentitels, ...
 - Opmaak van een bibliografie
@@ -54,6 +56,8 @@ Bij het analyseren van de resultaten zou je een beter inzicht moeten hebben in d
 - Sterktes en zwaktes van het team
 - Zaken die je kan benutten voor deze opdracht
 - Betere inschatting van teamrollen
+
+{% include callout.html type='tip' content='Jullie eindproduct moet met Microsoft Office tools gemaakt worden, maar het werken in de cloud mag met software naar keuze.' %}
 
 # 2. Taakverdeling onderzoek
 
