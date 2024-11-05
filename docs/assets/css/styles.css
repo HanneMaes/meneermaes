@@ -13,7 +13,11 @@
 	--text: rgba(0, 0, 0, 0.6);
 	--textLight: rgba(0, 0, 0, 0.3);
 
-	--animSpeed: 0.3s;
+   --colorGreen: rgb(0, 151, 106);
+   --colorRed: #a30031;
+   --colorBlue: #006097;
+
+   --animSpeed: 0.3s;
 
 	--contentWidth: 85%;
 	--contentWidthMax: 850px;
@@ -215,9 +219,9 @@ blockquote {
 /* callout */
 
 .callout {
-	background-color: var(--light-transparant);
+	background-color: rgba(var(--colorGreen), 0.5);
 	color: var(--textDark);
-	border: var(--borderWidth) solid var(--medium);
+	border: var(--borderWidth) solid var(--colorGreen);
 
 	margin-top:    var(--spacing);
 	margin-bottom: var(--spacing);
@@ -226,6 +230,7 @@ blockquote {
 
 	display: inline-flex;
 	flex-direction: row;
+   align-items: center;
 }
 
 .callout p {
@@ -233,14 +238,10 @@ blockquote {
 	margin: 0px;
 }
 
-.callout strong { /* title */
+.callout .icon {
 	color: var(--medium);
 	font-style: italic;
-}
-
-.callout .icon {
-	padding-right: 0px; /* to not let the icon have double padding with the text */
-	font-size: 30px;
+	font-size: 10px;
 }
 
 /* toggles */
@@ -270,10 +271,10 @@ summary::marker { /* the arrow/triangle */
    border-left: var(--borderWidth) solid var(--light);
 }
 
-/* colors */
-.goodText { color: #00976a; font-weight: bold; }
-.badText  { color: #a30031; font-weight: bold; }
-.blueText { color: #006097; font-weight: bold; }
+/* colored text */
+.goodText { color: var(--colorGreen); font-weight: bold; }
+.badText  { color: var(--colorRed); font-weight: bold; }
+.blueText { color: var(--colorBlue); font-weight: bold; }
 
 /* ***** */
 /* LINKS */

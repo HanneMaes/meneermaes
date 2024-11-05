@@ -1,6 +1,6 @@
 ---
 title: Zelf Aan De Slag Met Een Besturingssysteem
-last_modified_at: 2024-10-23 16:41:02 +0200
+last_modified_at: 2024-11-05 19:20:52 +0200
 date: 2024-10-23 15:39:25 +0200
 ---
 
@@ -58,3 +58,45 @@ Het bekendste voorbeeld hier van is **VirtualBox**.
 - Minder goede performance dan native installatie
 - Beperkte toegang tot hardware
 " %}
+
+# Opdracht: Linux-distributie installatie
+
+## Doelstelling
+
+In deze opdracht gaan jullie aan de slag met het kiezen en installeren van een Linux-distributie die past bij een specifiek gebruik of doel.
+
+## Stap 1: Kies een scenario
+
+Kies één van de volgende doelen waarvoor je Linux-distributie moet dienen, of bekend er zelf een:
+- Gaming
+- Cybersecurity & ethical hacking
+- Programming & developing
+- Customizability (aanpasbaarheid)
+
+Maak een document waarin je doel staat, en verzin 2 zaken die je wil doen of bereiken met je gekozen Linux-distributie.
+
+## Stap 2: Onderzoek
+
+Onderzoek 2 verschillende Linux-distributies die passen bij jouw gekozen doel.
+
+Voeg een vergelijkingstabel toe aan je document met criteria zoals:
+- Systeemvereisten
+- Gebruiksgemak
+- Doelgroep
+- ...
+
+## Stap 3: installatie
+
+Installeer de gekozen distributie in een virtuele machine door gebruik te maken van de software [VirtualBox](https://www.virtualbox.org)
+
+{% include callout.html type="info" content="
+VirtualBox is een krachtige, gratis en **open-source virtualisatie software**. Het stelt gebruikers in staat om virtuele computers, ook wel **virtuele machines (VM's)** genoemd, te creëren en te beheren op een gewone desktop of laptop computer.
+" %}
+
+{% include toggle.html title="Wat is een Virtuele Machine?" content="
+Een virtuele machine is een soort **'computer in een computer'**. Het is een programma dat zich gedraagt als een aparte computer binnen je echte computer. **Je kunt er een besturingssysteem op installeren**, zoals Windows of Linux, zonder dat je je echte computer hoeft aan te passen. Alle onderdelen zoals opslag en geheugen worden virtueel nagebootst, maar ze gebruiken wel de echte hardware van je computer.
+" %}
+
+## Stap 4: Voer je doel uit
+
+Voer je twee specifieke taken uit.
