@@ -9,27 +9,27 @@
    <!-- title & icon -->
    {% if include.type == "info" %}
 
-      <p class="calloutTitle">💡INFO</p>
+      <p class="title">💡INFO</p>
 
    {% elsif include.type == "tip" %}
 
-      <p class="calloutTitle">🤯TIP</p>
+      <p class="title">🤯TIP</p>
 
    {% elsif include.type == "uitdaging" %}
 
-      <p class="calloutTitle">🏆UITDAGING</p>
+      <p class="title">🏆UITDAGING</p>
 
    {% elsif include.type == "oefening" %}
 
-      <p class="calloutTitle">✏️OEFENING</p>
+      <p class="title">✏️OEFENING</p>
 
    {% elsif include.type == "vraag" %}
 
-      <p class="calloutTitle">❓VRAAG</p>
+      <p class="title">❓VRAAG</p>
 
    {% else %}
 
-      <p class="calloutTitle">{{ include.type }}</p>
+      <p class="title">{{ include.type }}</p>
 
    {% endif %}
 

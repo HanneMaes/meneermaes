@@ -219,9 +219,9 @@ blockquote {
 /* callout */
 
 .callout {
-   background-color: color-mix(in srgb, var(--colorGreen) 50%, transparent);
+   background-color: color-mix(in srgb, var(--colorGreen) 20%, transparent);
 	color: var(--textDark);
-	border: var(--borderWidth) solid var(--colorGreen);
+	border: var(--borderWidth) solid color-mix(in srgb, var(--colorGreen) 50%, transparent);
 
 	margin-top:    var(--spacing);
 	margin-bottom: var(--spacing);
@@ -237,7 +237,7 @@ blockquote {
 	margin: 0px;
 }
 
-.callout .icon {
+.callout .title {
 	color: var(--colorGreen);
 	font-style: italic;
 	font-weight: bold;
