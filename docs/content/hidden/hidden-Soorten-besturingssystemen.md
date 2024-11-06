@@ -1,6 +1,6 @@
 ---
 title: Soorten Besturingssystemen
-last_modified_at: 2024-11-06 12:11:25 +0200
+last_modified_at: 2024-11-06 12:52:22 +0200
 date: 2024-09-25 22:01:20 +0200
 ---
 
@@ -71,6 +71,7 @@ date: 2024-09-25 22:01:20 +0200
 - Wat zijn enkele redenen waarom energieverbruik belangrijk is voor embedded besturingssystemen?
 
 **Realtime OS**  
+- Wat is het verschil tussen een Realtime OS en een Embedded OS?
 - Hoe zou je het concept van "real-time" uitleggen aan iemand die niet bekend is met technologie?
 - Waarom zijn voorspelbare prestaties belangrijk in real-time OS'en, en wat kan er misgaan als deze niet worden gegarandeerd?
 - Hoe zorgen realtime OS'en ervoor dat taken binnen een gegarandeerde tijd worden uitgevoerd, en wat zijn de uitdagingen hierbij?
