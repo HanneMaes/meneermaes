@@ -238,7 +238,7 @@ blockquote {
 }
 
 .callout .title {
-	color: var(--colorGreen);
+	color: color-mix(in srgb, var(--colorGreen) 50%, transparent);
 	font-size: 20px;
    font-weight: 900;
    font-style: italic;
