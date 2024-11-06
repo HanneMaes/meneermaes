@@ -1,18 +1,18 @@
-<div class="callout" data-aos="zoom-in">
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+{% assign color = "green" %}
 
-   <!-- belangrijk: RED -->
-   <!-- oefening: BLUE -->
-   <!-- all de rest: GREEN -->
-   {% assign color = "green" %}
+{% if include.type == "belangrijk" %}
+   {% assign color = "red" %}
+{% elsif include.type == "oef" %}
+   {% assign color = "blue" %}
+{% endif %}
 
-   {% if include.type == "belangrijk" %}
-      {% assign color = "red" %}
-   {% elsif include.type == "oefening" %}
-      {% assign color = "blue" %}
-   {% endif %}
+<!-- content -->
+<div class="callout {{ color }}" data-aos="zoom-in">
 
-   <!-- content -->
-   <p class="title {{ color }}">{{ include.type }}</p>
+   <p class="title">{{ include.type }}</p>
    <p>{{ include.content | markdownify }}</p>
 
 </div>
