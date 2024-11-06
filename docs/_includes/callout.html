@@ -23,9 +23,13 @@
 
       <p class="icon">✏️<strong>OEFENING</strong></p>
 
-   {% else %}
+   {% elsif include.type == "vraag" %}
 
       <p class="icon">❓<strong>VRAAG</strong></p>
+
+   {% else %}
+
+      <p class="icon"><strong>{{ include.type }}</strong></p>
 
    {% endif %}
 
