@@ -1,6 +1,6 @@
 ---
 title: Soorten Besturingssystemen
-last_modified_at: 2024-11-06 11:52:11 +0200
+last_modified_at: 2024-11-06 12:11:25 +0200
 date: 2024-09-25 22:01:20 +0200
 ---
 
@@ -30,6 +30,8 @@ date: 2024-09-25 22:01:20 +0200
 
 ## Mogelijke vragen
 
+> Leg in je eigen woorden wat het is, er wat er anders aan is dan andere Besturingssystemen.
+
 **Linux Desktop**  
 - Waarom kiezen sommige mensen ervoor om Linux Desktop te gebruiken in plaats van Windows of macOS?
 - Welke Linux distro zou jij kiezen en waarom?
@@ -54,6 +56,7 @@ date: 2024-09-25 22:01:20 +0200
 - Hoe zou je de rol van de gemeenschap en de open-source natuur van BSD beschrijven in de ontwikkeling van het besturingssysteem?
 
 **Supercomputer OS**  
+- Zijn er veel verschillende versies van supercomputer OS'es?
 - Waarom zijn supercomputers belangrijk voor wetenschappelijk onderzoek?
 - Waarom hebben supercomputers vaak een speciaal OS nodig?
 - Hoe denk je dat de keuzes in hardware invloed hebben op het ontwerp van het besturingssysteem voor een supercomputer?

@@ -219,9 +219,7 @@ blockquote {
 /* callout */
 
 .callout {
-   background-color: color-mix(in srgb, var(--colorGreen) 10%, transparent);
 	color: var(--textDark);
-	border: var(--borderWidth) solid color-mix(in srgb, var(--colorGreen) 30%, transparent);
 
 	margin-top:    var(--spacing);
 	margin-bottom: var(--spacing);
@@ -230,6 +228,10 @@ blockquote {
 	display: inline-flex;
 	flex-direction: row;
    align-items: center;
+}
+.callout .green {
+   background-color: color-mix(in srgb, var(--colorGreen) 10%, transparent);
+	border: var(--borderWidth) solid color-mix(in srgb, var(--colorGreen) 30%, transparent);
 }
 
 .callout p {
