@@ -1,6 +1,6 @@
 ---
 title: Databases
-last_modified_at: 2024-11-06 08:55:31 +0200
+last_modified_at: 2024-11-06 09:34:59 +0200
 date: Wed, sep 04, 2024  10:47:23 PM
 ---
 
@@ -8,7 +8,7 @@ date: Wed, sep 04, 2024  10:47:23 PM
 [Cursus Access](https://bazandpoort.notion.site/Cursus-Access-76925f312780422a9f49b2072a7c40d6?pvs=4)
 
 {% include callout.html type='Vragen?' content='
-Formulier: [Vragen bij het thuis verwerken van leerstof](https://docs.google.com/forms/d/e/1FAIpQLScdlqY3KBHuf_P5h4lNCinZ-usfxPqMU-DlPHyOuJ6QlAodxA/viewform)  
+Formulier: **[Vragen bij het thuis verwerken van leerstof](https://docs.google.com/forms/d/e/1FAIpQLScdlqY3KBHuf_P5h4lNCinZ-usfxPqMU-DlPHyOuJ6QlAodxA/viewform)**  
 *Om het formulier in te kunnen vullen moet je ingelogd zijn met je* Zandpoort email.
 ' %}
 
