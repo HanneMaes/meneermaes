@@ -219,9 +219,9 @@ blockquote {
 /* callout */
 
 .callout {
-   background-color: color-mix(in srgb, var(--colorGreen) 20%, transparent);
+   background-color: color-mix(in srgb, var(--colorGreen) 10%, transparent);
 	color: var(--textDark);
-	border: var(--borderWidth) solid color-mix(in srgb, var(--colorGreen) 50%, transparent);
+	border: var(--borderWidth) solid color-mix(in srgb, var(--colorGreen) 30%, transparent);
 
 	margin-top:    var(--spacing);
 	margin-bottom: var(--spacing);
