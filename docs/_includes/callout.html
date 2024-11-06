@@ -1,12 +1,12 @@
 <!-- belangrijk: RED -->
 <!-- oef: BLUE -->
 <!-- all de rest: GREEN -->
-{% assign color = "green" %}
+{% assign color = "calloutGreen" %}
 
 {% if include.type == "belangrijk" %}
-   {% assign color = "red" %}
+   {% assign color = "calloutRed" %}
 {% elsif include.type == "oef" %}
-   {% assign color = "blue" %}
+   {% assign color = "calloutBlue" %}
 {% endif %}
 
 <!-- content -->
