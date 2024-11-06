@@ -239,9 +239,9 @@ blockquote {
 
 .callout .title {
 	color: var(--colorGreen);
-	font-style: italic;
-	font-weight: bold;
-	font-size: 15px;
+	font-size: 20px;
+   font-weight: 900;
+   font-style: italic;
 }
 
 /* toggles */
