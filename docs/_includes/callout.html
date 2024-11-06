@@ -1,39 +1,18 @@
 <div class="callout" data-aos="zoom-in">
 
-   <!-- info: voor algemene info -->
-   <!-- tip: een extra tip bij bijvoorbeeld een oefening -->
-   <!-- uitdaging -->
-   <!-- oefening -->
-   <!-- vraag -->
+   <!-- belangrijk: RED -->
+   <!-- oefening: BLUE -->
+   <!-- all de rest: GREEN -->
+   {% assign color = "green" %}
 
-   <!-- title & icon -->
-   {% if include.type == "info" %}
-
-      <p class="title">INFO</p>
-
-   {% elsif include.type == "tip" %}
-
-      <p class="title">TIP</p>
-
-   {% elsif include.type == "uitdaging" %}
-
-      <p class="title">UITDAGING</p>
-
+   {% if include.type == "belangrijk" %}
+      {% assign color = "red" %}
    {% elsif include.type == "oefening" %}
-
-      <p class="title">OEFENING</p>
-
-   {% elsif include.type == "vraag" %}
-
-      <p class="title">VRAAG</p>
-
-   {% else %}
-
-      <p class="title">{{ include.type }}</p>
-
+      {% assign color = "blue" %}
    {% endif %}
 
    <!-- content -->
+   <p class="title {{ color }}">{{ include.type }}</p>
    <p>{{ include.content | markdownify }}</p>
 
 </div>
