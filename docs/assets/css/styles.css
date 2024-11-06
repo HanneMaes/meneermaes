@@ -219,13 +219,12 @@ blockquote {
 /* callout */
 
 .callout {
-	background-color: rgba(var(--colorGreen), 0.5);
+   background-color: color-mix(in srgb, var(--colorGreen) 50%, transparent);
 	color: var(--textDark);
 	border: var(--borderWidth) solid var(--colorGreen);
 
 	margin-top:    var(--spacing);
 	margin-bottom: var(--spacing);
-	font-weight: bold;
 	border-radius: var(--roundness);
 
 	display: inline-flex;
@@ -241,6 +240,7 @@ blockquote {
 .callout .icon {
 	color: var(--colorGreen);
 	font-style: italic;
+	font-weight: bold;
 	font-size: 15px;
 }
 

@@ -6,30 +6,30 @@
    <!-- oefening -->
    <!-- vraag -->
 
-   <!-- icon & title -->
+   <!-- title & icon -->
    {% if include.type == "info" %}
 
-      <p class="icon">💡<strong>INFO</strong></p>
+      <p class="calloutTitle">💡INFO</p>
 
    {% elsif include.type == "tip" %}
 
-      <p class="icon">🤯<strong>TIP</strong></p>
+      <p class="calloutTitle">🤯TIP</p>
 
    {% elsif include.type == "uitdaging" %}
 
-      <p class="icon">🏆<strong>UITDAGING</strong></p>
+      <p class="calloutTitle">🏆UITDAGING</p>
 
    {% elsif include.type == "oefening" %}
 
-      <p class="icon">✏️<strong>OEFENING</strong></p>
+      <p class="calloutTitle">✏️OEFENING</p>
 
    {% elsif include.type == "vraag" %}
 
-      <p class="icon">❓<strong>VRAAG</strong></p>
+      <p class="calloutTitle">❓VRAAG</p>
 
    {% else %}
 
-      <p class="icon"><strong>{{ include.type }}</strong></p>
+      <p class="calloutTitle">{{ include.type }}</p>
 
    {% endif %}
 
