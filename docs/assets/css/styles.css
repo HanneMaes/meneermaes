@@ -238,6 +238,7 @@ blockquote {
 }
 
 .callout .title {
+   text-transform: capitalize;
 	color: color-mix(in srgb, var(--colorGreen) 60%, transparent);
 	font-size: 20px;
    font-weight: 900;
