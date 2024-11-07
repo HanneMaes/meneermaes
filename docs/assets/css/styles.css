@@ -194,7 +194,7 @@ h3 {
 	text-decoration-color: var(--text);
 }
 .opdrachtHeader::before {
-	content: '> ';
+	content: '🗸 ';
 	color: var(--text)
 }
 
@@ -519,10 +519,6 @@ table, th, td {
 	margin-top:    20px;
 	margin-bottom: 20px;
 	padding: 10px;
-}
-
-table {
-	border-radius: var(--roundness);
 }
 
 th {

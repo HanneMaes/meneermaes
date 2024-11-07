@@ -1,6 +1,6 @@
 ---
 title: Zelf Aan De Slag Met Een Besturingssysteem
-last_modified_at: 2024-11-05 19:20:52 +0200
+last_modified_at: 2024-11-07 12:23:27 +0200
 date: 2024-10-23 15:39:25 +0200
 ---
 
@@ -100,3 +100,7 @@ Een virtuele machine is een soort **'computer in een computer'**. Het is een pro
 ## Stap 4: Voer je doel uit
 
 Voer je twee specifieke taken uit.
+
+## Puntenverdeling
+
+{% include punten.html data='zelf-aan-de-slag-met-een-besturingssysteem' %}

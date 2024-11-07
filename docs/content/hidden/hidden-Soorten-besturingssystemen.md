@@ -1,6 +1,6 @@
 ---
 title: Soorten Besturingssystemen
-last_modified_at: 2024-11-06 12:52:22 +0200
+last_modified_at: 2024-11-07 14:08:03 +0200
 date: 2024-09-25 22:01:20 +0200
 ---
 
@@ -56,6 +56,7 @@ date: 2024-09-25 22:01:20 +0200
 - Hoe zou je de rol van de gemeenschap en de open-source natuur van BSD beschrijven in de ontwikkeling van het besturingssysteem?
 
 **Supercomputer OS**  
+- Wat denk je dat de belangrijkste technische verschillen zijn tussen een supercompter OS en windows?
 - Zijn er veel verschillende versies van supercomputer OS'es?
 - Waarom zijn supercomputers belangrijk voor wetenschappelijk onderzoek?
 - Waarom hebben supercomputers vaak een speciaal OS nodig?
