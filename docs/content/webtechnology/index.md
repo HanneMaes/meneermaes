@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2024-10-24 16:15:03 +0200
+last_modified_at: 2024-11-07 21:09:29 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -9,6 +9,7 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 **Web code**
 - [W3Schools](https://www.w3schools.com/)
 - [MDN](https://developer.mozilla.org)
+- [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 **Favicon**
 - [Convert image to favicon](https://convertico.com/favicon/)
@@ -74,3 +75,5 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 [Browser developer tools](Browser-developer-tools)
 
 [Knoppen](knoppen){: .opdracht }
+
+[Flexbox](flexbox)
