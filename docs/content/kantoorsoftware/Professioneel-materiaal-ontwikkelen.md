@@ -1,6 +1,6 @@
 ---
 title: Professioneel Materiaal Ontwikkelen
-last_modified_at: 2024-11-04 11:04:03 +0200
+last_modified_at: 2024-11-11 12:53:30 +0200
 date: 2024-11-01 16:18:57 +0200
 ---
 
@@ -19,7 +19,7 @@ Deze handleiding zal bestaan uit 2 delen:
 {: .goodText }
 - Automatische inhoudstafel en automatische nummering
 - Opmaak stijlen van tekst, titels, tussentitels, ...
-- Opmaak van een bibliografie
+- Bibliografie, bronvermeldingen en verwijzingen
 - Voetnoten en paginanummering
 - Pagina's draaien
 - Invoegen van afbeeldingen en figuren
