@@ -1,6 +1,6 @@
 ---
 title: Knoppen en poorten
-last_modified_at: 2024-11-13 10:49:05 +0200
+last_modified_at: 2024-11-13 12:46:21 +0200
 date: 2024-11-12 11:01:28 +0200
 ---
 
@@ -34,7 +34,7 @@ De meeste desktopcomputers hebben meerdere USB-poorten. Deze kunnen worden gebru
 ![](images/knoppen-poorten-achteraan.jpg){: height='600px' }
 
 {% include toggle.html title="1" content="
-**Audio In/Audio Out**
+**Audio In/Audio Out**  
 Bijna elke computer heeft twee of meer audio-poorten waarop je verschillende apparaten kunt aansluiten, zoals luidsprekers, microfoons en headsets.
 - **Roze**
     Deze poort is voor microfoons (invoer). Het is de poort waar je een microfoon kunt aansluiten om geluid naar de computer in te voeren, bijvoorbeeld voor spraakopname of videoconferenties.
@@ -46,37 +46,37 @@ Bijna elke computer heeft twee of meer audio-poorten waarop je verschillende app
 ![](images/knoppen-poorten-audio.png)
 
 {% include toggle.html title="2" content="
-**Monitorpoort**
+**Monitorpoort**  
 Hier sluit je de kabel van je monitor aan. In dit voorbeeld heeft de computer zowel een DisplayPort- als een VGA-poort. Andere computers kunnen verschillende soorten monitorpoorten hebben, zoals DVI (digital visual interface) of HDMI (high-definition multimedia interface).
 " %}
 ![](images/knoppen-poorten-monitor-poorten.png){: .frame }
 
 {% include toggle.html title="3" content="
-**USB-poorten**
+**USB-poorten**  
 Bij de meeste desktopcomputers bevinden de meeste USB-poorten zich aan de achterkant van de computerbehuizing. Over het algemeen wil je je muis en toetsenbord op deze poorten aansluiten en de USB-poorten aan de voorkant vrij houden, zodat ze gebruikt kunnen worden voor digitale camera's en andere apparaten.
 " %}
 ![](images/knoppen-poorten-usb.jpg){: .frame }{: height='300px' }
 
 {% include toggle.html title="4" content="
-**Ethernetpoort**
+**Ethernetpoort**  
 Via poort geeft je netwerkverbinding en internetaansluiting.
 " %}
 ![](images/knoppen-poorten-ethernet.jpg){: .frame }{: height='300px' }
 
 {% include toggle.html title="5" content="
-**Seriële poort**
+**Seriële poort**  
 Deze poort is minder gebruikelijk op moderne computers. Vroeger werd het vaak gebruikt om randapparatuur, zoals digitale camera's, aan te sluiten, maar het is vervangen door USB en andere soorten poorten.
 " %}
 ![](images/knoppen-poorten-serial.png){: .frame }
 
 {% include toggle.html title="6" content="
-**Audio In/Audio Out**
-Bijna elke computer heeft twee of meer audio-poorten waarop je verschillende apparaten kunt aansluiten, zoals luidsprekers, microfoons en headsets.
+**PS/2 poorten**  
+De PS/2 poort is een oudere computeraansluiting die vooral werd gebruikt voor toetsenborden en muizen vóór de komst van USB.
 " %}
 ![](images/knoppen-poorten-PS2.jpg){: .frame }{: height='300px' }
 
 {% include toggle.html title="7" content="
-**Uitbreidingssleuven**
+**Uitbreidingssleuven**  
 Deze lege sleuven zijn waar uitbreidingskaarten aan computers worden toegevoegd. Bijvoorbeeld, als je computer geen videokaart had, kun je er een kopen en deze hier installeren.
 " %}
 
@@ -84,7 +84,7 @@ Deze lege sleuven zijn waar uitbreidingskaarten aan computers worden toegevoegd.
 ![](images/knoppen-poorten-expansion-front.png){: .frame }{: height='300px' }
 
 {% include toggle.html title="8" content="
-**Power Socket** *stopcontact*
+**Power Socket** *stopcontact*  
 Hier sluit je de stroomkabel aan op de computer.
 " %}
 ![](images/knoppen-poorten-power.jpg){: .frame }{: height='300px' }
