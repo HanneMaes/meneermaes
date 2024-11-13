@@ -1,6 +1,6 @@
 ---
 title: Knoppen en poorten
-last_modified_at: 2024-11-12 13:11:47 +0200
+last_modified_at: 2024-11-13 10:49:05 +0200
 date: 2024-11-12 11:01:28 +0200
 ---
 
@@ -74,7 +74,7 @@ Deze poort is minder gebruikelijk op moderne computers. Vroeger werd het vaak ge
 Bijna elke computer heeft twee of meer audio-poorten waarop je verschillende apparaten kunt aansluiten, zoals luidsprekers, microfoons en headsets.
 " %}
 ![](images/knoppen-poorten-PS2.jpg){: .frame }{: height='300px' }
-https://www.youtube.com/embed/HB4I2CgkcCo?si=8odtWqwFjmEFCLAK
+
 {% include toggle.html title="7" content="
 **Uitbreidingssleuven**
 Deze lege sleuven zijn waar uitbreidingskaarten aan computers worden toegevoegd. Bijvoorbeeld, als je computer geen videokaart had, kun je er een kopen en deze hier installeren.

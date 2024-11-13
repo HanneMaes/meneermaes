@@ -1,6 +1,6 @@
 ---
 title: "Opdracht: Onderdelen Van Een Computer"
-last_modified_at: 2024-11-12 13:26:02 +0200
+last_modified_at: 2024-11-13 10:49:57 +0200
 date: 2024-11-12 13:16:19 +0200
 ---
 
@@ -15,6 +15,6 @@ date: 2024-11-12 13:16:19 +0200
 - Voeding
 - Koeling
 
-Iedereen onderzoek het gegeven component (of meerdere componenten), en maak een PowerPoint presentatie die onderstaande vragen beantwoorden:
+Iedereen onderzoek het gegeven component (of meerdere componenten), en maak een presentatie die onderstaande vragen beantwoorden:
 
 {% include punten.html data='onderdelen-van-een-computer' %} 
