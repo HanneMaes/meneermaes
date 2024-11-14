@@ -1,6 +1,6 @@
 ---
 title: Flexbox
-last_modified_at: 2024-11-07 22:06:07 +0200
+last_modified_at: 2024-11-14 12:45:52 +0200
 date: 2024-11-07 20:57:12 +0200
 ---
 
@@ -70,7 +70,7 @@ Maak dit kunstwerk van Piet Mondriaan na.
 
 ![Untitled](images/flexbox-mondriaan.jpeg)
 
-# Oefening: iPhone
+# Oefening 05: iPhone
 
 Maak een iPhone na in HTML en CSS, en geef het deze layout:
 
