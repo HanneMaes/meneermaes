@@ -1,6 +1,6 @@
 ---
 title: Zelf Aan De Slag Met Een Besturingssysteem
-last_modified_at: 2024-11-07 12:23:27 +0200
+last_modified_at: 2024-11-14 09:07:20 +0200
 date: 2024-10-23 15:39:25 +0200
 ---
 
@@ -72,6 +72,7 @@ Kies één van de volgende doelen waarvoor je Linux-distributie moet dienen, of 
 - Cybersecurity & ethical hacking
 - Programming & developing
 - Customizability (aanpasbaarheid)
+- Creativity: Graphic design, video & music production
 
 Maak een document waarin je doel staat, en verzin 2 zaken die je wil doen of bereiken met je gekozen Linux-distributie.
 
