@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2024-11-07 21:09:29 +0200
+last_modified_at: 2024-11-15 13:54:21 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -77,3 +77,5 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 [Knoppen](knoppen){: .opdracht }
 
 [Flexbox](flexbox)
+
+[Display & position](Display-en-position)
