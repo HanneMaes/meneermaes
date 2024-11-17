@@ -1,6 +1,6 @@
 ---
 title: Professioneel Materiaal Ontwikkelen
-last_modified_at: 2024-11-11 12:53:30 +0200
+last_modified_at: 2024-11-17 20:48:21 +0200
 date: 2024-11-01 16:18:57 +0200
 ---
 
@@ -57,7 +57,7 @@ Bij het analyseren van de resultaten zou je een beter inzicht moeten hebben in d
 - Zaken die je kan benutten voor deze opdracht
 - Betere inschatting van teamrollen
 
-{% include callout.html type='tip' content='Jullie eindproduct moet met Microsoft Office tools gemaakt worden, maar het werken in de cloud mag met software naar keuze.' %}
+{% include callout.html type='tip' content='Jullie eindproduct moet met **Microsoft Office** tools gemaakt worden, maar het werken in de cloud mag met software naar keuze.' %}
 
 # 2. Taakverdeling onderzoek
 
@@ -71,9 +71,21 @@ Spreek ook een manier af om elkaar op de hoogte te houden en om materiaal te ver
 
 Maak een **overzichtelijk document in de cloud** waarin staat:
 - De taakverdeling
+- Een overzicht waarom jullie voor deze taakverdeling gekozen hebben
 - Hoe jullie elkaar op de hoogte houden
 - Waar jullie het materiaal gaan verzamelen
 
 {% include punten.html data='professioneel-materiaal-ontwikkelen-swot-punten' %}
 
 {% include doelen.html data='professioneel-materiaal-ontwikkelen-swot-doelen' %}
+
+# 3. Technische beheersing
+
+Na de SWOT-analyse en taakverdeling ga je individueel de aan jou toegewezen Office-onderdelen onderzoeken en bewijzen dat je ze beheerst.
+
+Maak per onderdeel dat aan je toegewezen is een Word-document met daarin:
+- De naam van het onderdeel
+- Wat het onderdeel precies inhoudt, wat je er mee kan doen en waarom het handig is te gebruiken
+- Een werkend voorbeeld van je onderdeel
+
+{% include punten.html data='professioneel-materiaal-ontwikkelen-technische-beheering' %} 
