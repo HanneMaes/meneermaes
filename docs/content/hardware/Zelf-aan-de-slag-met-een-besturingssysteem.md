@@ -67,24 +67,22 @@ In deze opdracht gaan jullie aan de slag met het kiezen en installeren van een L
 
 ## Stap 1: Kies een scenario
 
-Kies één van de volgende doelen waarvoor je Linux-distributie moet dienen, of bekend er zelf een:
+Kies één van de volgende doelen waarvoor je Linux-distributie moet dienen, of bedenk er zelf een:
 - Gaming
 - Cybersecurity & ethical hacking
 - Programming & developing
 - Customizability (aanpasbaarheid)
 - Creativity: Graphic design, video & music production
 
-Maak een document waarin je doel staat, en verzin 2 zaken die je wil doen of bereiken met je gekozen Linux-distributie.
+**Maak een document waarin je doel staat**, en verzin **2 zaken die je wil doen of bereiken** met je gekozen Linux-distributie.
 
 ## Stap 2: Onderzoek
 
-Onderzoek 2 verschillende Linux-distributies die passen bij jouw gekozen doel.
-
-Voeg een vergelijkingstabel toe aan je document met criteria zoals:
-- Systeemvereisten
-- Gebruiksgemak
-- Doelgroep
-- ...
+1. Zoek Linux-distributies op die passen bij je gekozen scenario.
+2. Voeg een vergelijkingstabel toe aan je document waarin je 2 Linux-distributies vergelijkt met criteria zoals:
+	- Systeemvereisten
+	- Gebruiksgemak
+	- **Voeg extra criteria op die passen bij je gekozen scenario**
 
 ## Stap 3: installatie
 
