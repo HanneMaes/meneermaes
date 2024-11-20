@@ -297,6 +297,7 @@ a {
 }
 a:hover {
 	color: var(--medium);
+	opacity: 1;
 }
 
 /* extra styling for export links */
@@ -317,6 +318,17 @@ a[href*='//']::after {
    font-style: italic;
    padding-right: var(--spacingSmall);
    color: var(--medium);
+}
+
+figcaption {
+	opacity: 0.5;
+} 
+figcaption a {
+	font-style: italic;
+}
+figcaption::before {
+	content: 'Credit: ';
+	color: var(--medium);
 }
 
 /* **** */
