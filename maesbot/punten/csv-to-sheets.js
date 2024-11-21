@@ -9,6 +9,7 @@ const path = require('path');
 const csv = require('csv-parser');
 const ExcelJS = require('exceljs');
 const { exec } = require('child_process');
+const os = require('os');
 
 /* ***************************** */
 /* HANDLE COMMAND LINE ARGUMENTS */
@@ -20,7 +21,7 @@ let klas;
 const args = process.argv.slice(2);
 if (args.length >= 2) {
    csvFile = args[0];
-   klas = args[1];
+   klas = args[1].toLowerCase(); // Convert to lowercase to prevent typos
 
    console.log('Settings:');
    console.log('  ℹ️C CSV file:', csvFile);
@@ -32,23 +33,6 @@ if (args.length >= 2) {
    process.exit(); // stop script
 }
 
-// Handle klas
-// let names
-// if (klas == "6AD") {
-//    names = ['Bibi Yassine', 'Bicer M.Kerem', 'Coremans Victor', 'Gallardo Ledon Dante', 'Niz Ferreira Tiago', 'Tahrioui Nouredine', 'Van Ballaert Bram', 'Watthé Yorbe', 'Yazrak Noureddine', 'Dierckx Xibe', 'Ghafori Baharah'];
-// } else if (klas == "5AD") {
-//    names = ['AdjeiJerremy', 'AnsinghTristan', 'BadiAkram', 'BencherquiYaniss', 'EzinwaAlex', 'FilaliMounir', 'GillabelEmely', 'KavalzhiDavyd', 'KoubaaMohamed', 'MartinXander', 'MhammediYassine', 'NolletAster', 'VanheertumNiels']
-// } else if (klas=="5IFCW") {
-//    names = ['De Haen Jente', 'Dirickx Glen', 'El Harrab Yasmine', 'Fru Angel', 'Moreels Milo', 'Saelens Kasper', 'Vanhoof Lara Joy', 'Zohair Jaydae'];
-// } else {
-//    console.log();
-//    console.log("❌ Klas", klas, "is not known.");
-// }
-//
-// console.log()
-// console.log('KLAS')
-// console.log(names)
-
 // read JSON data
 fs.readFile(dataPath, 'utf8', (error, data) => {
 
@@ -58,14 +42,10 @@ fs.readFile(dataPath, 'utf8', (error, data) => {
         return;
     }
     const jsonData = JSON.parse(data);
-    // console.log();
-    // console.log(jsonData);
 
    // assign JSON data to correct vars
-   const names = jsonData.klassen
-
-   console.log('  ℹ️  Leerlingen:')
-   console.log(names[klas])
+   const klassen = jsonData.klassen
+	const names = klassen[klas]
 
    /* *************************** */
    /* CREATE SHEETS FROM CVS FILE */
@@ -102,7 +82,7 @@ fs.readFile(dataPath, 'utf8', (error, data) => {
          //console.log(row); // Do something with each row if needed
       })
       .on('end', () => {
-         // Iterate over each name
+		  // Iterate over each name
          names.forEach((nameStudent) => {
 
             // Convert CSV to sheet
@@ -195,9 +175,23 @@ fs.readFile(dataPath, 'utf8', (error, data) => {
    /* OPEN NEW DIR */
    /* ************ */
 
-   // exec(`xdg-open ${directoryPath}`);	// Linux
-   // exec(`open ${directoryPath}`); 	// MacOs
-   // exec(`start ${directoryPath}`);	// Windows
+	const platform = os.platform();
+
+	if (platform === 'linux') {
+	exec(`xdg-open "${directoryPath}"`, (err) => {
+		if (err) console.error('Error opening directory on Linux:', err);
+	});
+	} else if (platform === 'darwin') {
+	exec(`open "${directoryPath}"`, (err) => {
+		if (err) console.error('Error opening directory on macOS:', err);
+	});
+	} else if (platform === 'win32') {
+	exec(`start "${directoryPath}"`, (err) => {
+		if (err) console.error('Error opening directory on Windows:', err);
+	});
+	} else {
+	console.error('Unsupported operating system:', platform);
+	}
 
 });
 

@@ -93,7 +93,7 @@ Bedenk **2 zaken die je wil doen of bereiken** met je gekozen Linux-distributie,
 	- **Voeg extra criteria op die passen bij je gekozen scenario**
 3. Kies een Linux-distributie en beschrijf waarom je deze gekozen hebt boven de andere.
 
-## 3. installatie
+## 3. Installatie
 
 Installeer de gekozen distributie in een virtuele machine door gebruik te maken van de software [VirtualBox](https://www.virtualbox.org)
 
