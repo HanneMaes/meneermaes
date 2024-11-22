@@ -1,14 +1,14 @@
 const color = require('./consoleColors'); // my color script
 const readline = require('readline'); // ask questions
-const { spawn } = require('child_process'); // execute other scripts
+const { spawn, execSync } = require('child_process'); // execute other scripts
 const fs = require('fs'); // access to filesystem
 const path = require('path'); // work with file paths
 
 /* ******************************************************************************************************************************************* */
 
-/* ****************** */
-/* READ SETTINGS JSON */
-/* ****************** */
+/* ********************* */
+/* 1. READ SETTINGS JSON */
+/* ********************* */
 
 // Get settings from settings-maesbot.json
 fs.readFile('settings-maesbot.json', 'utf8', (err, data) => { // Read the JSON file
@@ -41,9 +41,9 @@ fs.readFile('settings-maesbot.json', 'utf8', (err, data) => { // Read the JSON f
 
 /* ******************************************************************************************************************************************* */
 
-/* ********************************************* */
-/* CONTINUE WHEN settings-maesbot.json is loaded */
-/* ********************************************* */
+/* *************************************** */
+/* 2. ASK WHAT TO DO JSON FILES ARE LOADED */
+/* *************************************** */
 
 function showMenu(settingsJson, klassenJSON) {
 
@@ -77,10 +77,11 @@ function showMenu(settingsJson, klassenJSON) {
    console.log(color.info('Punten'))
    console.log(color.answer(' 1. CVS 2 sheet'));
    console.log(color.answer(' 2. Sheet 2 PDF'));
+   console.log(color.answer(' 3. Open punten dir'));
    console.log();
    console.log(color.info('Diff'))
-   console.log(color.answer(' 3. Open dir'));
-   console.log(color.answer(' 4. Diff files'));
+   console.log(color.answer(' 4. Open diff dir'));
+   console.log(color.answer(' 5. Diff files'));
    console.log();
    console.log(color.info('Anykey to quit'));
    console.log();
@@ -95,132 +96,128 @@ function showMenu(settingsJson, klassenJSON) {
    });
    rl.question(color.question('🤖 What do you want to do? '), (answer) => {
 
-      // execute what you chose
-      if (answer == '1') {
+/* ******************************************************************************************************************************************* */
 
-         /* *********** */
-         /* CSV 2 SHEET */
-         /* *********** */
+/* *************************** */
+/* 3. DO WHAT I SELECTED TO DO */
+/* *************************** */
+	   
+      /* *********** */
+      /* CSV 2 SHEET */
+	  /* *********** */
+	   if (answer == '1') {
 
-         // Kies een klas
-         console.log(color.question('🤖 Kies een klas:'), Object.keys(klassenJSON['klassen']).join(', '));
+		   // selecteer een klas
+		   const selectedKlas = selectFromArray(Object.keys(klassenJSON.klassen));
+		  
+		   // Selecteer een file
+		   const directoryToSearch = '../docs/_data/'; // Where to look for files
+		   const selectedFile = browseFile(directoryToSearch);
+			
+		   if (selectedFile) {
+			   if (selectedKlas) {
+				   console.log(`Selected file: ${selectedFile}`);
+				   const command = 'node';
+				   const args = ['punten/csv-to-sheets.js', selectedFile, selectedKlas];
+				   const child = spawn(command, args, { stdio: 'inherit' }); // Pass stdio to inherit input/output
+				   child.on('error', (err) => {
+					   console.error('Failed to start subprocess:', err);
+				   });
+			   } else {
+				   console.error('Geen klas geselecteerd.');
+			   }
+		   } else {
+			   console.error('Geen file geselecteerd.');
+		   }
 
-         // Ask the user to select a class
-         rl.question(color.question('🤖 Kies een klas: '), (answerKlas) => {
-            // Check if the selected class exists
-            if (Object.keys(klassenJSON['klassen']).includes(answerKlas)) {
-               console.log(color.green(`Gekozen klas: ${answerKlas}`));
-            } else {
-               console.log(color.red(`Klas '${answerKlas}' bestaat niet.`));
-            }
-         });
+		   /* *********** */
+		   /* SHEET 2 PDF */
+		   /* *********** */
+	   } else if (answer == '2') {
 
-         // run punten/csv-to-sheets
-         console.log(color.executing('🤖 Punten sheets maken...'));
-         const command = 'node';
-         const args = ['punten/csv-to-sheets.js'];
-         const child = spawn(command, args); // Execute the command
-         child.stdout.on('data', (data) => {
-            console.log(`${data}`); // output the Python scrip output
-
-            // RUN MAESBOT AGAIN?
-            // runAgain(settingsJson);
-
-         });
-         child.stderr.on('data', (data) => {
-            console.error(`Error: ${data}`);
-
-            // RUN MAESBOT AGAIN?
-            // runAgain(settingsJson);
-
-         });
-         child.on('error', (error) => {
-            console.error(`Error from nodejs script: ${error.message}`);
-
-            // RUN MAESBOT AGAIN?
-            // runAgain(settingsJson);
-
-         });
-
-      } else if (answer == '2') {
-
-         /* *********** */
-         /* SHEET 2 PDF */
-         /* *********** */
-
-         console.log(color.executing("🤖 Punten PDF's maken..."));
-
-         // RUN MAESBOT AGAIN?
-         // runAgain(settingsJson);
-
-      } else if (answer == '3') {
+		   console.log(color.executing("🤖 Punten PDF's maken..."));
+		  
+		   /* *************** */
+		   /* OPEN PUNTEN DIR */
+		   /* *************** */
+	   } else if (answer == '3') {
+		  
+		  
 
          /* ************** */
          /* DIFF: OPEN DIR */
          /* ************** */
 
-         const directoryPath = path.join(settingsJson['private-data-dir'], settingsJson['diff-files-dir']);
-         console.log(color.executing('🤖 Opening diff files dir: ' + directoryPath));
+        //  const directoryPath = path.join(settingsJson['private-data-dir'], settingsJson['diff-files-dir']);
+        //  console.log(color.executing('🤖 Opening diff files dir: ' + directoryPath));
 
-         let command;
-         let args;
-         if (process.platform === 'win32') {
-            // Windows
-            command = 'cmd';
-            args = ['/c', `start "" "${directoryPath}"`];
+        //  let command;
+        //  let args;
+        //  if (process.platform === 'win32') {
+        //     // Windows
+        //     command = 'cmd';
+        //     args = ['/c', `start "" "${directoryPath}"`];
 
-            // RUN MAESBOT AGAIN?
-            // runAgain(settingsJson);
+        //     // RUN MAESBOT AGAIN?
+        //     // runAgain(settingsJson);
 
-         } else if (process.platform === 'darwin') {
-            // macOS
-            command = 'open';
-            args = [directoryPath];
+        //  } else if (process.platform === 'darwin') {
+        //     // macOS
+        //     command = 'open';
+        //     args = [directoryPath];
 
-            // RUN MAESBOT AGAIN?
-            // runAgain(settingsJson);
+        //     // RUN MAESBOT AGAIN?
+        //     // runAgain(settingsJson);
 
-         } else {
-            // Linux and other UNIX-like OSes
-            command = 'xdg-open';
-            args = [directoryPath];
+        //  } else {
+        //     // Linux and other UNIX-like OSes
+        //     command = 'xdg-open';
+        //     args = [directoryPath];
 
-            // RUN MAESBOT AGAIN?
-            // runAgain(settingsJson);
+        //     // RUN MAESBOT AGAIN?
+        //     // runAgain(settingsJson);
 
-         }
+        //  }
 
-         // Execute the command
-         const child = spawn(command, args, { stdio: 'ignore' });
-         child.on('error', (err) => {
-            console.error(`Error opening directory: ${err}`);
-         });
+        //  // Execute the command
+        //  const child = spawn(command, args, { stdio: 'ignore' });
+        //  child.on('error', (err) => {
+        //     console.error(`Error opening directory: ${err}`);
+		  //  });
+		  
+	    /* *********** */
+         /* SHEET 2 PDF */
+         /* *********** */
 
-      } else if (answer == '4') {
+	// 	 console.log(color.executing("🤖 Punten PDF's maken..."));
+
+	// 	} else if (answer == '4') {
+
+    //   } else if (answer == '5') {
 
          /* **************** */
          /* DIFF: DIFF FILES */
          /* **************** */
 
-         const directoryPath = path.join(settingsJson['private-data-dir'], settingsJson['diff-files-dir']);
-         console.log(color.executing('🤖 Diff files...'));
+        //  const directoryPath = path.join(settingsJson['private-data-dir'], settingsJson['diff-files-dir']);
+        //  console.log(color.executing('🤖 Diff files...'));
 
-         const pythonProcess = spawn('/usr/bin/python3', ['batchFileDiff.py', directoryPath], { cwd: 'diff-file/' });
-         // /usr/bin/python3: the location of the Python3 binary, find with this command $ which python3
-         // cwd: the location from where the python scripts is executed
+        //  const pythonProcess = spawn('/usr/bin/python3', ['batchFileDiff.py', directoryPath], { cwd: 'diff-file/' });
+        //  // /usr/bin/python3: the location of the Python3 binary, find with this command $ which python3
+        //  // cwd: the location from where the python scripts is executed
 
-         pythonProcess.stdout.on('data', (data) => {
-            console.log(`${data}`); // output the Python scrip output
+        //  pythonProcess.stdout.on('data', (data) => {
+        //     console.log(`${data}`); // output the Python scrip output
 
-            // RUN MAESBOT AGAIN?
-            // runAgain(settingsJson);
-         });
-         pythonProcess.stderr.on('data', (data) => {
-            console.error(`Error from Python script: ${data}`);
+        //     // RUN MAESBOT AGAIN?
+        //     // runAgain(settingsJson);
+        //  });
+        //  pythonProcess.stderr.on('data', (data) => {
+        //     console.error(`Error from Python script: ${data}`);
 
-            // RUN MAESBOT AGAIN?
-            // runAgain(settingsJson);
-         });
+        //     // RUN MAESBOT AGAIN?
+        //     // runAgain(settingsJson);
+        //  });
 
       } else {
 
@@ -238,16 +235,85 @@ function showMenu(settingsJson, klassenJSON) {
 
 /* ******************************************************************************************************************************************* */
 
-/* ***************** */
-/* RUN MAESBOT AGAIN */
-/* ***************** */
+/* **************** */
+/* HELPER FUNCTIONS */
+/* *************** */
 
 // run maesbot again without loading the json settings (aka just showing the menu again)
-function runAgain(settingsJson) {
+// function runAgain(settingsJson) {
+//    showMenu(settingsJson);
+// }
 
-   // ask to run again
+/* ************************************* */
 
-   showMenu(settingsJson);
+// Open a dir in the default file explorer
+function openDir(directory) {
+	const platform = os.platform();
+
+	if (platform === 'linux') {
+	exec(`xdg-open "${directory}"`, (err) => {
+		if (err) console.error('maesbot.js openDir() -> Error opening directory on Linux:', err);
+	});
+	} else if (platform === 'darwin') {
+	exec(`open "${directory}"`, (err) => {
+		if (err) console.error('maesbot.js openDir() -> Error opening directory on macOS:', err);
+	});
+	} else if (platform === 'win32') {
+	exec(`start "${directory}"`, (err) => {
+		if (err) console.error('maesbot.js openDir() -> Error opening directory on Windows:', err);
+	});
+	} else {
+	console.error('maesbot.js openDir() -> Unsupported operating system:', platform);
+	}
+}
+
+/* ************************************* */
+
+// Select a file with fzf and return it, directory is the dir where to search in
+function browseFile(directory) {
+    try {
+        // Run fzf to browse files in the specified directory
+        const result = execSync(`find ${directory} -type f | fzf`, {
+            encoding: 'utf-8', // Ensure the output is a string
+            stdio: ['inherit', 'pipe', 'ignore'], // Pass input/output as needed
+        }).trim(); // Remove trailing newline
+
+        if (result) {
+            // Resolve the absolute path of the selected file
+            const absolutePath = path.resolve(result);
+
+            // Ensure that the selected file is actually within the given directory
+            if (!absolutePath.startsWith(path.resolve(directory))) {
+                console.error('Selected file is outside the allowed directory.');
+                return null;
+            }
+
+            return absolutePath;
+        } else {
+            return null; // Return null if no file is selected
+        }
+    } catch (error) {
+        console.error('maesbot.js browseFile() -> canceled or error occurred.');
+        return null; // Return null if something went wrong
+    }
+}
+
+/* ************************************* */
+
+// Select an element form an array with fzf and return it
+function selectFromArray(inputArray) {
+    try {
+        // Join array elements with newlines, and escape special characters for fzf
+        const inputString = inputArray.join('\n');
+        const result = execSync(`echo "${inputString}" | fzf`, {
+            encoding: 'utf-8',
+            stdio: ['pipe', 'pipe', 'ignore'],
+        }).trim();
+        return result; // Return the selected class
+    } catch (error) {
+        console.error('maesbot.js selectFromArray() -> canceled or error occurred.');
+        return null; // Return null to indicate cancellation
+    }
 }
 
 /* ******************************************************************************************************************************************* */

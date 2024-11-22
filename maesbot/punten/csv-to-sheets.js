@@ -1,5 +1,5 @@
 // SETTINGS
-const outputPath = '/home/hanne/Documents/Nextcloud/School/maesbot-private-data/Punten';
+const outputPath = '/home/hanne/Documents/Nextcloud/School/maesbot-private-data/Punten/Generated-files';
 const dataPath='/home/hanne/Documents/Nextcloud/School/maesbot-private-data/klassen-en-leerlingen.json';
 
 /* ********************************************************************************************************************************* */
