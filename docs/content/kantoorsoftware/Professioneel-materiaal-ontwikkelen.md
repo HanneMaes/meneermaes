@@ -1,6 +1,6 @@
 ---
 title: Professioneel Materiaal Ontwikkelen
-last_modified_at: 2024-11-17 20:48:21 +0200
+last_modified_at: 2024-11-24 22:31:39 +0200
 date: 2024-11-01 16:18:57 +0200
 ---
 
@@ -89,3 +89,26 @@ Maak per onderdeel dat aan je toegewezen is een Word-document met daarin:
 - Een werkend voorbeeld van je onderdeel
 
 {% include punten.html data='professioneel-materiaal-ontwikkelen-technische-beheering' %} 
+
+# 4. Style guide
+
+## Wat is een style guide en waarom is het belangrijk?
+
+Een style guide is een document dat richtlijnen biedt voor het ontwikkelen van inhoud, zowel qua stijl als structuur. Het zorgt ervoor dat het eindproduct consistent, professioneel en aantrekkelijk is. Waarom is dit belangrijk?
+
+{% include callout.html type='Style guide' content='Een style guide geeft jullie als team een houvast en voorkomt dat onderdelen teveel van elkaar verschillen.' %}
+
+Maak een style guide waarin jullie richtlijnen opstellen over:
+- **Consistentie in stijl en uitstraling**  
+    Gebruik dezelfde lettertypes, kleuren, en opmaak voor de hele handleiding en presentatie.
+- **Professionaliteit**  
+    Correct en professioneel taalgebruik.
+- **Structuur**  
+    Maak gebruik van een vaste structuur om alles duidelijk en professioneel te maken.
+- **Beeldmateriaal**  
+    Zorg dat screenshots en voorbeelden dezelfde stijl hebben (bijvoorbeeld geen balken of randen van verschillende softwareversies).  
+    Gebruik dezelfde pijlen of markeringen om belangrijke punten aan te geven.
+
+Gebruik de style guide als basis om de taakverdeling opnieuw te bekijken. Stel samen een plan op voor de uitwerking van zowel de handleiding in tekstvorm als de ingesproken presentatie.
+
+{% include punten.html data='professioneel-materiaal-ontwikkelen-style-guide' %} 
