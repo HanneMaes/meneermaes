@@ -24,7 +24,7 @@ Deze handleiding zal bestaan uit 2 delen:
 - Pagina's draaien
 - Invoegen van afbeeldingen en figuren
 - Opmaak van tabellen
-- Opmaak van grafieken via Excel
+- Opmaak van grafieken via Excel en deze importeren in Word
 
 # 1. SWOT-Analyse
 
