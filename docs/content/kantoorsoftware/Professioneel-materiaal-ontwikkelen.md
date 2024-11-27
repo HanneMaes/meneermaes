@@ -1,6 +1,6 @@
 ---
 title: Professioneel Materiaal Ontwikkelen
-last_modified_at: 2024-11-24 22:31:39 +0200
+last_modified_at: 2024-11-27 17:54:55 +0200
 date: 2024-11-01 16:18:57 +0200
 ---
 
@@ -22,7 +22,7 @@ Deze handleiding zal bestaan uit 2 delen:
 - Bibliografie, bronvermeldingen en verwijzingen
 - Voetnoten en paginanummering
 - Pagina's draaien
-- Invoegen van afbeeldingen en figuren
+- Afbeeldingen en figuren: invoegen, opmaken/vormgeven, positie, tekstterugloop, alternatieve tekst, ...
 - Opmaak van tabellen
 - Opmaak van grafieken via Excel en deze importeren in Word
 

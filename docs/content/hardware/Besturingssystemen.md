@@ -1,6 +1,6 @@
 ---
 title: Besturingssystemen
-last_modified_at: 2024-11-05 19:21:12 +0200
+last_modified_at: 2024-11-27 15:27:52 +0200
 date: 2024-09-18 12:21:40 +0200
 ---
 
@@ -15,3 +15,5 @@ date: 2024-09-18 12:21:40 +0200
 [Soorten besturingssystemen](Soorten-besturingssystemen){: .opdracht }
 
 [Zelf aan de slag met een besturingssysteem](Zelf-aan-de-slag-met-een-besturingssysteem){: .opdracht }
+
+[Linux challenges](Linux-challenges)
