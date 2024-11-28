@@ -47,6 +47,12 @@ document.addEventListener("DOMContentLoaded", function() {
    });
    console.log('Added "target: _blank" to all external links:', links);
 
+	// Add target _blank to all links to .pdf files
+	document.querySelectorAll('a[href$=".pdf"]').forEach(link => {
+		link.setAttribute('target', '_blank');
+	});
+	console.log('Added "target: _blank" to all .pdf links:', links);
+
    // Add target _blank to all links in an iframe, so they don't open in the iframe itself
    window.addEventListener('DOMContentLoaded', function () {
       var iframes = document.querySelectorAll('iframe');
@@ -60,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
          };
       });
       console.log('Added "target: _blank" to all links in iframes:', iframes);
-   });
+   });	
 
    /* ******************************** */
    /* HIDE BREADCRUMBS ON HIDDEN PAGES */

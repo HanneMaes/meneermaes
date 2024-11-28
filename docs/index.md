@@ -35,3 +35,5 @@ date: 2024-03-13T10:31:28+01:00
 [Linux Journey: alles over Linux](https://linuxjourney.com/)
 
 [Linux Survival: een game dat je de beginselen van de Linux terminal leert](https://linuxsurvival.com/)
+
+[Linux for Hackers](content/uitbreiding/Linux%20Basics%20for%20Hackers.pdf)

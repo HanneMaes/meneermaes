@@ -300,8 +300,12 @@ a:hover {
 	opacity: 1;
 }
 
-/* extra styling for export links */
+/* extra styling for external links and .pdf files */
 a[href*='//']::after {
+	content: '↗';
+   color: var(--medium);
+}
+a[href*=".pdf"]::after {
 	content: '↗';
    color: var(--medium);
 }
