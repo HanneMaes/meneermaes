@@ -1,6 +1,6 @@
 ---
 title: Professioneel Materiaal Ontwikkelen
-last_modified_at: 2024-11-27 17:54:55 +0200
+last_modified_at: 2025-01-05 17:54:43 +0200
 date: 2024-11-01 16:18:57 +0200
 ---
 
@@ -112,3 +112,23 @@ Maak een style guide waarin jullie richtlijnen opstellen over:
 Gebruik de style guide als basis om de taakverdeling opnieuw te bekijken. Stel samen een plan op voor de uitwerking van zowel de handleiding in tekstvorm als de ingesproken presentatie.
 
 {% include punten.html data='professioneel-materiaal-ontwikkelen-style-guide' %} 
+
+# 5. Handleiding in tekstvorm uitwerken
+
+Schrijft de handleiding van je onderdeel/onderdelen uit in tekstvorm, voorzie voldoende screenshots en zet alles in de afgesproken stijl.
+
+**Tips**
+- Tekst
+    - Maak je tekst simple, duidelijk en helder.
+    - Zorg voor een duidelijke structuur.
+    - Lees de handleiding aandachtig na om taal- en typefouten te corrigeren.
+    - Laat een iemand de handleiding nalezen voor extra feedback.
+- Screenshots
+    - Zorg ervoor dat de screenshots relevant zijn en de stappen visueel verduidelijken.
+    - Gebruik markeringen zoals pijlen of cirkels in je screenshots.
+- Opmaak
+    - Zorg ervoor dat de handleiding voldoet aan de opgestelde style guide.
+    - Controleer of de gebruikte lettertypes, kleuren, en opmaak consistent zijn met de stijlrichtlijnen.
+    - Houd de stijl van de screenshots consistent met de eerder vastgestelde afspraken.
+
+{% include punten.html data='professioneel-materiaal-ontwikkelen-tekst' %} 
