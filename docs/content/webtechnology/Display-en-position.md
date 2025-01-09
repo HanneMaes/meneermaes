@@ -1,6 +1,6 @@
 ---
 title: Display & Position
-last_modified_at: 2024-11-15 14:19:50 +0200
+last_modified_at: 2025-01-09 10:50:21 +0200
 date: 2024-11-15 13:55:04 +0200
 ---
 > Nu is het tijd om zelf op te zoeken wat de css-properties **display** en **position** doen.
@@ -13,7 +13,7 @@ Zelfstandig nieuwe zaken opzoeken is een waardevolle vaardigheid in webdesign, o
 
 ## Display
 
-Maak een website waarin je uitlegt wat deze **display-properties** doen, voorzie ook **duidelijke voorbeelden** (voorbeelden gemaakt met code, geen afbeeldingen:
+Maak een website waarin je uitlegt wat deze **display-properties** doen, voorzie ook **duidelijke voorbeelden** (voorbeelden gemaakt met code, geen afbeeldingen):
 - Block
 - Inline-block
 - Inline
@@ -21,7 +21,7 @@ Maak een website waarin je uitlegt wat deze **display-properties** doen, voorzie
 
 ## Position
 
-Maak een nieuwe pagina waarin je uitlegt wat deze **position-properties** doen, voorzie ook **duidelijke voorbeelden** (voorbeelden gemaakt met code, geen afbeeldingen:
+Maak een nieuwe pagina waarin je uitlegt wat deze **position-properties** doen, voorzie ook **duidelijke voorbeelden** (voorbeelden gemaakt met code, geen afbeeldingen):
 - Absolute
 - Fixed
 - Relative
@@ -31,9 +31,9 @@ Maak een nieuwe pagina waarin je uitlegt wat deze **position-properties** doen, 
 
 ## Mac style dock
 
-Maak deze lay-out na: dock, icoontjes, background border en bolletjes onderaan.
+Maak een nieuwe website met onderaan een dock.  
+Het dock heeft de volgende elementen: icoontjes, background, border en bolletjes.
 
-Plaats het dock onderaan de pagina
 
 ![Untitled](images/desktop-environment-1.png)
 
@@ -46,5 +46,11 @@ Geef je desktop environment een menu bar bovenaan en een wallpaper.
 ## Window
 
 Geef je desktop environment een window.
+
+Het windows heeft icoontjes voor maximize, minimize en close.  
+Op Windows zien deze er zo uit, maar je mag zelf een design kiezen.  
+![Untitled](images/window-decorations.jpg)
+
+De inhoud van het window mag je zelf kiezen.
 
 ![Untitled](images/desktop-environment-3.png)
