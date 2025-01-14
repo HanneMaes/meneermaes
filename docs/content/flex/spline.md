@@ -1,10 +1,8 @@
 ---
 title: Spline
-last_modified_at: 2024-10-25 12:38:11 +0200
+last_modified_at: 2025-01-14 16:48:52 +0200
 date: Wed, sep 11, 2024  10:47:23 PM
 ---
-
-{% include doelen.html data='spline-tutorial' %}
 
 > Dynasmische & interactieve 3D web graphics
 
@@ -18,6 +16,8 @@ Let's GOOOOOO!
 Open spline, experimenteer, en probeer in **40min** tijd een **afgewerkt project** te maken.
 
 # Opdracht 1: Showcase & tutorial
+
+{% include doelen.html data='spline-tutorial' %}
 
 Kies **1 features van Spline**:
 - 3D modeling
