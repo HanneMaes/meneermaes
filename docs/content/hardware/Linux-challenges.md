@@ -4,7 +4,7 @@ date: 2024-11-28T13:37:48+01:00
 ---
 
 # Terminal aanpassen
-
+1. Zoek uit wat de functie van `.bashrc` is.
 1. Leer hoe je het systeem kunt updaten en hoe je apps kunt installeren en verwijderen.
 2. Schrijf een script om een aangepaste begroeting en de huidige systeemdatum en -tijd weer te geven wanneer je de terminal opent.
 3. Schrijf een "fortune cookie" script met willekeurige citaten of grappen.
