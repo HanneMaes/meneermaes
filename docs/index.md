@@ -1,6 +1,6 @@
 ---
 title: Meneer Maes
-last_modified_at: 2024-11-11 22:06:55 +0200
+last_modified_at: 2025-01-19 15:36:36 +0200
 date: 2024-03-13T10:31:28+01:00
 ---
 
@@ -21,6 +21,8 @@ date: 2024-03-13T10:31:28+01:00
 ## 1e Graad
 
 [Basisoptie I.T.](content/basisoptie-it/index)
+
+[Seminarie I.T.](content/seminarie-it/index)
 
 ---
 
