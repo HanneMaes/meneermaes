@@ -1,6 +1,6 @@
 ---
 title: Professioneel Materiaal Ontwikkelen
-last_modified_at: 2025-01-19 14:57:42 +0200
+last_modified_at: 2025-01-19 15:09:52 +0200
 date: 2024-11-01 16:18:57 +0200
 ---
 
@@ -129,7 +129,7 @@ Gebruik de style guide als basis om de taakverdeling opnieuw te bekijken. Stel s
 
 Schrijft de handleiding van je onderdeel/onderdelen uit in tekstvorm, voorzie voldoende screenshots en zet alles in de afgesproken stijl.
 
-**Tips**
+## Tips
 
 - Tekst
   - Maak je tekst simple, duidelijk en helder.
@@ -144,7 +144,17 @@ Schrijft de handleiding van je onderdeel/onderdelen uit in tekstvorm, voorzie vo
   - Controleer of de gebruikte lettertypes, kleuren, en opmaak consistent zijn met de stijlrichtlijnen.
   - Houd de stijl van de screenshots consistent met de eerder vastgestelde afspraken.
 
-{% include punten.html data='professioneel-materiaal-ontwikkelen-tekst' %}
+## Peer assessment tip
+
+Voordat je de presentatie als definitief beschouwt, laat een klasgenoot jouw werk beoordelen. Dit helpt om te controleren of alles duidelijk is en of er extra mogelijkheden zijn om de inhoud te verbeteren. Vraag je klasgenoot specifiek om feedback te geven op:
+
+- **Duidelijkheid van de uitleg:**  
+   Begrijpen zij de uitleg zonder verdere toelichting?
+- **Logische opbouw:**  
+   Volgt de informatie elkaar op in een logische en begrijpelijke volgorde?
+- **Extra mogelijkheden:**  
+   Zijn er functies of details die nog verder uitgewerkt kunnen worden voor meer helderheid of toegevoegde waarde?
+  {% include punten.html data='professioneel-materiaal-ontwikkelen-tekst' %}
 
 # 6. Ingesproken presentatie
 
@@ -168,5 +178,16 @@ De presentatie volgt dezelfde structuur als de handleiding in tekstvorm:
 - Voeg tekst toe om het geheel nog duidelijker te maken.
 - Houd je uitleg simpel en duidelijk. Gebruik duidelijke taal.
 - Probeer je publiek betrokken te houden door vragen te stellen of interactieve elementen toe te voegen.
+
+## Peer assessment tip
+
+Voordat je de presentatie als definitief beschouwt, laat een klasgenoot jouw werk beoordelen. Dit helpt om te controleren of alles duidelijk is en of er extra mogelijkheden zijn om de inhoud te verbeteren. Vraag je klasgenoot specifiek om feedback te geven op:
+
+- **Duidelijkheid van de uitleg:**  
+   Begrijpen zij de uitleg zonder verdere toelichting?
+- **Logische opbouw:**  
+   Volgt de informatie elkaar op in een logische en begrijpelijke volgorde?
+- **Extra mogelijkheden:**  
+   Zijn er functies of details die nog verder uitgewerkt kunnen worden voor meer helderheid of toegevoegde waarde?
 
 {% include punten.html data='professioneel-materiaal-ontwikkelen-ingesproken' %}
