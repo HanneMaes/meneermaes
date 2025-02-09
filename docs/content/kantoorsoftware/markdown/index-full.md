@@ -1,13 +1,13 @@
 ---
 title: Markdown
-last_modified_at: 2024-05-03T07:12:37
+last_modified_at: 2025-02-09 15:34:02 +0200
 date: 2024-03-04T13:37:48+01:00
 ---
 
 ![Markdown Logo](images/Markdown-mark.png)
 
 1. Introductie raadsel: [Afbeelding](intro-img), [Markdown versie](intro)
-2. Theorie: [Wat is markdown](Wat-is-markdown)
+<!-- 2. Theorie: [Wat is markdown](Wat-is-markdown)
 3. Praktisch: [Hoe gebruik je Markdown](Hoe-gebruik-je-Markdown)
 
 # Opdracht
@@ -18,3 +18,4 @@ date: 2024-03-04T13:37:48+01:00
 # Markdown presentaties
 
 - [Theorie & opdracht](presentatie)
+-->
