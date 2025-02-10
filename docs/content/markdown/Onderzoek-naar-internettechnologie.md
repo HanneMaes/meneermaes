@@ -2,13 +2,14 @@
 title: Onderzoek naar internettechnologie
 date: 2024-03-04T13:37:48+01:00
 ---
-  
->In deze opdracht verdiep je je in verschillende internettechnologieën. 
->Je taak is om onderzoek te doen en uitleg te geven **1 onderwerp**.
+
+> In deze opdracht verdiep je je in verschillende internettechnologieën.
+> Je taak is om onderzoek te doen en uitleg te geven **1 onderwerp**.
 >
->Maak een **Markdown document** waarin je in eigen woorden je onderwerp toelicht.
+> Maak een **Markdown document** waarin je in eigen woorden je onderwerp toelicht.
 
 **Onderwerpen**:
+
 - HTTP & HTTPS
 - SSL
 - WWW
@@ -23,15 +24,17 @@ date: 2024-03-04T13:37:48+01:00
 # Te onderzoeken vragen
 
 **Bij alle onderwerpen**
+
 1. Waar staat de **afkorting** voor?
 2. **Definitie**
-    - Leg het concept uit in je eigen woorden
-    - Hoe draagt *x* bij aan de functionaliteit van het internet?
+   - Leg het concept uit in je eigen woorden
+   - Hoe draagt _x_ bij aan de functionaliteit van het internet?
 3. **Veiligheid**
-    - Welke rol speelt *x* bij het waarborgen van de beveiliging van online communicatie?
-    - Welke data zou gestolen kunnen worden wanneer een hacker toegang krijgt tot dit protocol?
+   - Welke rol speelt _x_ bij het waarborgen van de beveiliging van online communicatie?
+   - Welke data zou gestolen kunnen worden wanneer een hacker toegang krijgt tot dit protocol?
 
 **Vragen bij specifieke onderwerpen**
+
 - **HTTP & HTTPS**
   1. Wat is het doel van HTTPS en hoe verschilt het van HTTP?
   2. Hoe helpt HTTPS bij het waarborgen van de privacy van gebruikersgegevens tijdens gegevensoverdracht?
@@ -57,15 +60,15 @@ date: 2024-03-04T13:37:48+01:00
   2. Hoe kunnen webontwikkelaars profiteren van het werk van het W3C?
 - **GIT**
   1. Bespreek enkele Git-commando's en hun toepassingen in een ontwikkelomgeving.
-  
+
 # Je onderzoek beschrijven in Markdown
 
 Gebruik Markdown om je onderzoek op een **duidelijke en goed gestructureerde** manier weer te geven, en gebruik **afbeeldingen ter verduidelijking**.
 
-**Bestandsformaten**
-
 Exporteer je Markdown document naar:
+
 - **.docx** (Microsoft Word)
 - **.html**
 
-{% include punten.html data='Onderzoek-naar-internettechnologie' %}
+{% include punten.html data='Onderzoek-naar-internettechnologie-kantoorsoftware' %}
+{% include punten.html data='Onderzoek-naar-internettechnologie-webtechnology' %}
