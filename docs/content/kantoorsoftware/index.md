@@ -1,6 +1,6 @@
 ---
 title: Kantoorsoftware
-last_modified_at: 2025-02-09 15:33:43 +0200
+last_modified_at: 2025-02-10 08:58:34 +0200
 date: Wed, sep 15, 2024  14:07:23 PM
 ---
 
@@ -24,4 +24,6 @@ date: Wed, sep 15, 2024  14:07:23 PM
 
 # Scripting
 
-[Markdown](markdown/index)
+[Markdown](../markdown/index)
+
+[LaTeX](../latex/index)

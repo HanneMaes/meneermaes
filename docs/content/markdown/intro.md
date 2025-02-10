@@ -15,7 +15,7 @@ En **gebruik Markdown** om aan te tonen dat je het antwoord op deze vragen gevon
 1. Wat fluistert het universum over het **doel** van Markdown?
 2. Welke mystieke portalen openen zich in het **verschil** met andere talen?
 3. Treden we binnen in een parallelle realiteit bij het verkennen van het **verschil** met andere software?
-4. Zijn er betoverende **voordelen** verbonden aan Markdown, of zijn er duistere **nadelen* die verscholen blijven?
+4. Zijn er betoverende **voordelen** verbonden aan Markdown, of zijn er duistere **nadelen** die verscholen blijven?
 
 ## Daarna zoek je de betekenis van deze cryptische symbolen:
 
@@ -28,3 +28,5 @@ En **gebruik Markdown** om aan te tonen dat je het antwoord op deze vragen gevon
 
 - Heeft de raadselachtige aard van Markdown je geïntrigeerd, of verlang je terug naar de geruststellende bekendheid van reguliere tekstverwerking?
 - Was het een avontuur waar je van genoot, of trok de duisternis je uit je comfortzone? Waarom wel, waarom niet?
+
+
