@@ -1,6 +1,6 @@
 ---
 title: Zelf Aan De Slag Met Een Besturingssysteem
-last_modified_at: 2024-11-14 09:07:20 +0200
+last_modified_at: 2025-02-11 12:44:24 +0200
 date: 2024-10-23 15:39:25 +0200
 ---
 
@@ -129,3 +129,18 @@ Voeg de antwoorden op volgende vragen toe aan je projectverslagt:
 
 {% include punten.html data='zelf-aan-de-slag-met-een-besturingssysteem-punten' %}
 {% include doelen.html data='Zelf-aan-de-slag-met-een-besturingssysteem-doelen' %}
+
+# Demonstratie
+
+Dit is niet alleen een kans om je werk te tonen, maar ook om inzichten en tips met je medestudenten te delen. Door jouw ervaringen en uitdagingen te bespreken, help je anderen om nieuwe perspectieven te ontdekken en Linux op een andere manier te benaderen. Zo leren we van elkaar en versterken we samen onze kennis.
+
+1. Vertel wat je gekozen scenario is.
+2. Vertel kort welk OS je hebt gekozen en waarom.
+    Waarom heb je deze distributie gekozen boven andere opties?
+3. Wat waren je taken en laat zien hoe je deze uitvoerde.
+4. Vertel hoe Linux bijdraagt aan 2 van de volgende zaken: 
+    - Samenhorigheid
+    - Privacy
+    - Duurzaamheid
+    - Ongelijkheid verminderen
+    - Digitale geletterdheid
