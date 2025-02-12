@@ -1,6 +1,6 @@
 ---
 title: Bash Scripting
-last_modified_at: 2025-01-19 16:54:41 +0200
+last_modified_at: 2025-02-12 14:01:48 +0200
 date: 2025-01-15 15:21:22 +0200
 ---
 
@@ -26,6 +26,18 @@ Wat Bash echt krachtig maakt, is dat je er ook mee kunt programmeren. Dit beteke
 - Met Bash kun je de gezondheid van je server controleren, zoals het controleren van de schijfruimte of het geheugen, en meldingen sturen als er een probleem is.
 - Het regelmatig maken van back-ups van je serverbestanden en databases is cruciaal. Met Bash kun je back-upscripts schrijven die dit automatisch doen, bijvoorbeeld door dagelijkse back-ups van je serverbestanden en MySQL-databases te maken.
 - Op een server wil je ervoor zorgen dat kritieke services, zoals een webserver of database, altijd actief blijven. Met Bash kun je automatisch controleren of deze services draaien en ze opnieuw starten als dat niet het geval is.
+
+# Linux of Git Bash
+
+Tijdens deze opdracht zullen we werken met Bash, de shell waarmee je commando’s invoert in een Linux-omgeving.
+Je kan op 2 manieren met Bash werken:
+
+- **Git Bash**  
+   Git Bash is een programma waarmee je op een Windows-computer Linux-achtige commando’s kunt gebruiken. Het geeft je toegang tot de Bash-shell, die normaal gesproken op Linux en macOS wordt gebruikt.
+- **Een volledige Linux-versie in een virtuele machine**  
+  Dit geeft je de complete Linux-ervaring.
+
+Je mag zelf kiezen welke optie je gebruikt om met Bash aan de slag te gaan.
 
 # Bash scripts aanmaken en uitvoeren
 
@@ -117,3 +129,5 @@ functie_naam
    - Loop
 
 Je **upload** zowel je **script** als een **screenshot** van het resultaat.
+
+{% include doelen.html data='bash-scripting' %}

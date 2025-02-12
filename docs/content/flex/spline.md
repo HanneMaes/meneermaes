@@ -1,6 +1,6 @@
 ---
 title: Spline
-last_modified_at: 2025-01-22 11:57:00 +0200
+last_modified_at: 2025-02-12 15:12:26 +0200
 date: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -179,5 +179,16 @@ Druk op {% include btn.html btn='Copy Embed' %} om de embed code te kopiëren.
 
 ## Doelen & puntenverdeling
 
-{% include doelen.html data='spine-eindopdracht-doelen' %}
+{% include doelen.html data='spline-eindopdracht-doelen' %}
 {% include punten.html data='spline-eindopdracht' %}
+
+# Samenvoegen tot een complete website
+
+Nu iedereen een eigen project heeft gemaakt, is het tijd om **alles samen te voegen tot één grote interactieve website**. Dit vereist samenwerking, structurering en publicatie.
+
+- Jullie beslissen samen welke **volgorde** de projecten krijgen op de website.
+- Voorzie een passende **title & favicon**.
+- Gebruik **Git** om efficiënt samen te werken.
+- Publiceer de afgewerkte website op **GitHub Pages**.
+
+{% include doelen.html data='spline-complete-website-doelen' %}

@@ -3,16 +3,6 @@ title: Linux challenges
 date: 2024-11-28T13:37:48+01:00
 ---
 
-Tijdens deze opdracht zullen we werken met Bash, de shell waarmee je commando’s invoert in een Linux-omgeving.
-Je kan op 2 manieren met Bash werken:
-
-- **Git Bash**  
-   Git Bash is een programma waarmee je op een Windows-computer Linux-achtige commando’s kunt gebruiken. Het geeft je toegang tot de Bash-shell, die normaal gesproken op Linux en macOS wordt gebruikt.
-- **Een volledige Linux-versie in een virtuele machine**  
-  Dit geeft je de complete Linux-ervaring.
-
-Je mag zelf kiezen welke optie je gebruikt om met Bash aan de slag te gaan.
-
 # Terminal aanpassen
 
 1. Leer hoe je het systeem kunt updaten.
@@ -45,3 +35,5 @@ Je mag zelf kiezen welke optie je gebruikt om met Bash aan de slag te gaan.
 2. Leer hoe je een eenvoudige file-sharing server start met `python3 -m http.server 8000`.
 3. Leer hoe je een lokale FTP-server opzLeer hoe je een eenvoudige file-sharing server start met python3 -m http.server 8000.
    Leer hoe je een lokale FTP-server opzet met vsftpd of python3 -m pyftpdlib.et met `vsftpd` of `python3 -m pyftpdlib`.
+
+{% include doelen.html data='linux-challenges' %}
