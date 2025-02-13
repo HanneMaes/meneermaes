@@ -1,6 +1,6 @@
 ---
 title: Spline
-last_modified_at: 2025-02-12 15:12:26 +0200
+last_modified_at: 2025-02-13 08:56:52 +0200
 date: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -122,6 +122,8 @@ We combineren alle projecten tot één interactieve website. Jouw taak is om een
 
 - **Titel van het vak**  
    De naam van het vak dat je gekozen hebt moet prominent zichtbaar zijn in je ontwerp.
+- **Ondertitel**  
+  Een korte ondertitel zoals het vak kort uitgelegd, wat je in het vak leert of waarom het belangrijk is.
 - **Animatie**  
    Voeg minstens één animatie toe.  
    _Bijvoorbeeld een bewegend object, een roterende camera, of een dynamisch licht._
