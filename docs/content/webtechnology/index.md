@@ -1,21 +1,24 @@
 ---
 title: Webtechnology
-last_modified_at: 2025-01-17 14:37:18 +0200
+last_modified_at: 2025-02-14 12:17:17 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
 # Hulpmiddelen
 
 **Web code**
+
 - [W3Schools](https://www.w3schools.com/)
 - [MDN](https://developer.mozilla.org)
 - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 **Favicon**
+
 - [Convert image to favicon](https://convertico.com/favicon/)
 - [Emoji's](https://emojipedia.org/)
 
 **Web fonts**
+
 - [Browse Fonts - Google Fonts](https://fonts.google.com/)
 
 ---
@@ -89,3 +92,7 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 [Wat is JavaScript?](Wat-is-JavaScript)
 
 [Je 1e JavaScript code](Je-1e-JavaScript-code)
+
+## JavaScript projecten
+
+[Random story generator: Deel 1](Random-story-generator-deel-1)
