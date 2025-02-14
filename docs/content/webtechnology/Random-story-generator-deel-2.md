@@ -1,12 +1,12 @@
 ---
 title: Random Story Generator Deel 2
-last_modified_at: 2025-02-14 15:59:10 +0200
+last_modified_at: 2025-02-14 16:03:55 +0200
 date: 2025-02-14 15:47:54 +0200
 ---
 
 # Stap 1: Knop die het verhaal toont
 
-![](images/randomknop1.gif)
+![](images/randomknop1.gif){: .frame }
 
 1. Verberg je verhaal door het deze CSS-class te geven.
 
@@ -42,7 +42,7 @@ date: 2025-02-14 15:47:54 +0200
 
 # Stap 2: Een tekstveld uitlezen
 
-![](images/randomknop2.gif)
+![](images/randomknop2.gif){: .frame }
 
 1. Start met een HTML-form toe te voegen met daarin een tekstveld.
 
@@ -68,7 +68,7 @@ date: 2025-02-14 15:47:54 +0200
 
 # Stap 3: Radio buttons uitlezen
 
-![](images/randomradio.gif)
+![](images/randomradio.gif){: .frame }
 
 1. Voeg **radio buttons** toe aan je HTML-formulier.
 
@@ -95,7 +95,7 @@ date: 2025-02-14 15:47:54 +0200
 
 # Stap 4: Checkbox buttons uitlezen
 
-![](images/randomcheckbox.gif)
+![](images/randomcheckbox.gif){: .frame }
 
 1. Voeg **checkbox buttons** toe aan je HTML-formulier.kboxes
 

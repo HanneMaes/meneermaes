@@ -1,6 +1,6 @@
 ---
 title: "Random Story Generator: Deel 1"
-last_modified_at: 2025-02-14 12:46:25 +0200
+last_modified_at: 2025-02-14 16:03:18 +0200
 date: 2025-02-14 11:40:34 +0200
 ---
 
@@ -11,7 +11,7 @@ date: 2025-02-14 11:40:34 +0200
 Gebruik de kennis uit het vorige hoofdstuk om een dynamische website te maken.  
 De website toont een **verhaal met random elementen**.
 
-![](images/story1.gif)
+![](images/story1.gif){: .frame }
 
 Maak een nieuw project aan en start met deze code:
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 # Stap 2: CSS-styling
 
-![](images/storycss.png)
+![](images/storycss.png){: .frame }
 
 1. Gebruik CSS om je pagina mooier te maken.
 2. Voeg een **titel** toe en geef deze een **lettertype** gedownload van [https://fontesk.com](https://fontesk.com)
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 # Stap 3: Random afbeelding toevoegen
 
-![](images/storyrandoimage.gif)
+![](images/storyrandoimage.gif){: .frame }{: .frame }
 
 Download enkele afbeeldingen en plaats een random afbeelding op je website via JavaScript-code.  
 **Het is de bedoeling dat je een afbeelding toevoegt op je pagina, niet dat je de achtergrond afbeelding aanpast.**  
