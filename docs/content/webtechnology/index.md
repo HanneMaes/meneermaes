@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2025-02-14 12:17:17 +0200
+last_modified_at: 2025-02-14 15:48:05 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -96,3 +96,5 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 ## JavaScript projecten
 
 [Random story generator: Deel 1](Random-story-generator-deel-1)
+
+[Random story generator: Deel 2](Random-story-generator-deel-2)
