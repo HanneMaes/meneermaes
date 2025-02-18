@@ -1,6 +1,6 @@
 ---
 title: Databases
-last_modified_at: 2025-02-18 11:18:50 +0200
+last_modified_at: 2025-02-18 11:30:27 +0200
 date: Wed, sep 04, 2024  10:47:23 PM
 ---
 
@@ -11,7 +11,6 @@ date: Wed, sep 04, 2024  10:47:23 PM
 [Cursus SQL](https://bazandpoort.notion.site/Cursus-SQL-3048434a07034c5f809e7f78b5913375)
 
 [Cursus PHP](https://bazandpoort.notion.site/Cursus-PHP-067b61152ad44fe698f70b41fd979d57?pvs=4)
-
 
 {% include callout.html type='PhpMyAdmin Login' content='
 User: **root**  
