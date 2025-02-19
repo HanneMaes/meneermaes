@@ -33,7 +33,6 @@ date: 2024-11-28T13:37:48+01:00
 
 1. Leer hoe je een eenvoudige webserver start met `python3 -m http.server`
 2. Leer hoe je een eenvoudige file-sharing server start met `python3 -m http.server 8000`.
-3. Leer hoe je een lokale FTP-server opzLeer hoe je een eenvoudige file-sharing server start met python3 -m http.server 8000.
-   Leer hoe je een lokale FTP-server opzet met vsftpd of python3 -m pyftpdlib.et met `vsftpd` of `python3 -m pyftpdlib`.
+3. Leer hoe je een lokale FTP-server opzet met `vsftpd` of `python3 -m pyftpdlib`.
 
 {% include doelen.html data='linux-challenges' %}
