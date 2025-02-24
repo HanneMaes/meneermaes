@@ -1,6 +1,6 @@
 ---
 title: Professioneel Materiaal Ontwikkelen
-last_modified_at: 2025-01-19 15:09:52 +0200
+last_modified_at: 2025-02-24 09:05:24 +0200
 date: 2024-11-01 16:18:57 +0200
 ---
 
@@ -191,3 +191,17 @@ Voordat je de presentatie als definitief beschouwt, laat een klasgenoot jouw wer
    Zijn er functies of details die nog verder uitgewerkt kunnen worden voor meer helderheid of toegevoegde waarde?
 
 {% include punten.html data='professioneel-materiaal-ontwikkelen-ingesproken' %}
+
+# 7. Demonstratie
+
+Als afsluiting van dit project geven jullie een demonstratie aan de andere klassen. Jullie mogen zelf kiezen hoe jullie deze demonstratie uitwerken, maar zorg ervoor dat iedereen binnen het team een duidelijke rol heeft.
+
+Belangrijke richtlijnen:
+
+- Het moet een **live demonstratie** zijn, waarbij jullie tonen hoe de verschillende Office-functionaliteiten werken.
+- Na elk onderdeel krijgen de leerlingen de kans om het zelf uit te testen.
+- Jullie beantwoorden vragen en helpen waar nodig.
+
+Denk goed na over een logische opbouw en een interactieve aanpak, zodat de leerlingen zoveel mogelijk leren van jullie demonstratie.
+
+{% include doelen.html data='professioneel-materiaal-ontwikkelen-demonatratie-doelen' %}
