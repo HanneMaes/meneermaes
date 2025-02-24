@@ -1,6 +1,6 @@
 ---
 title: Hardware
-last_modified_at: 2025-02-11 12:26:57 +0200
+last_modified_at: 2025-02-24 16:22:55 +0200
 date: Wed, sep 04, 2024  10:47:23 PM
 ---
 
@@ -10,7 +10,7 @@ date: Wed, sep 04, 2024  10:47:23 PM
 
 [Anatomie van een computer](Anatomie-van-een-computer)
 
-# Zelfstandige opdrachten
+# Onderzoeksopdrachten
 
 [Beeldapparatuur](zelfstandige-opdrachten/beeldapparatuur.docx){: .opdracht }
 
