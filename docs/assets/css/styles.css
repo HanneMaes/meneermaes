@@ -112,6 +112,22 @@
   font-style: italic;
 }
 
+/* ****************** */
+/* horizontal spacing */
+/* ****************** */
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-left: var(--spacing);
+}
+
+p {
+  margin-left: calc(2 * var(--spacing));
+}
+
 /* **** */
 /* BODY */
 /* **** */
