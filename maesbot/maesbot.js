@@ -121,11 +121,15 @@ function showMenu(settingsJson, klassenJSON) {
     /* *********** */
     if (answer == "1") {
       // selecteer een klas
+      console.log("---------- selectKlas START --------");
       const selectedKlas = selectFromArray(Object.keys(klassenJSON.klassen));
+      console.log("---------- selectKlas STOP --------");
 
       // Selecteer een file
+      console.log("---------- selectFile START --------");
       const directoryToSearch = "../docs/_data/"; // Where to look for files
       const selectedFile = browseFile(directoryToSearch);
+      console.log("---------- selectFile STOP --------");
 
       if (selectedFile) {
         if (selectedKlas) {
@@ -307,10 +311,13 @@ function selectFromArray(inputArray) {
   try {
     // Join array elements with newlines, and escape special characters for fzf
     const inputString = inputArray.join("\n");
-    const result = execSync(`echo "${inputString}" | fzf`, {
+    console.log("--- inputstring: ", inputString);
+    // const result = execSync(`echo "${inputString}" | fzf`, {
+    const result = execSync(`printf "%s\n" ${inputArray.map(x => `"${x}"`).join(" ")} | fzf`, {
       encoding: "utf-8",
       stdio: ["pipe", "pipe", "ignore"],
     }).trim();
+    console.log("--- result: ", result);
     return result; // Return the selected class
   } catch (error) {
     console.error(
