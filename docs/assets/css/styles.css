@@ -121,11 +121,11 @@ h3,
 h4,
 h5,
 h6 {
-  margin-left: var(--spacingBig);
+  margin-left: var(--spacing);
 }
 
 p {
-  margin-left: calc(2 * var(--spacingBig));
+  margin-left: calc(2 * var(--spacing));
 }
 
 /* **** */
