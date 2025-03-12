@@ -1,6 +1,6 @@
 ---
 title: Hardware
-last_modified_at: 2025-02-24 16:22:55 +0200
+last_modified_at: 2025-03-12 16:28:19 +0200
 date: Wed, sep 04, 2024  10:47:23 PM
 ---
 
@@ -9,6 +9,8 @@ date: Wed, sep 04, 2024  10:47:23 PM
 [Besturingssystemen](Besturingssystemen)
 
 [Anatomie van een computer](Anatomie-van-een-computer)
+
+[Datacompressie](Datacompressie)
 
 # Onderzoeksopdrachten
 
