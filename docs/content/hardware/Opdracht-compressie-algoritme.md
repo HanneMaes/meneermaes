@@ -1,6 +1,6 @@
 ---
 title: Ontwerp je eigen compressie-algoritme
-last_modified_at: 2025-03-13 15:01:44 +0200
+last_modified_at: 2025-03-13 15:06:53 +0200
 date: 2025-03-12 16:29:00 +0200
 ---
 
@@ -29,8 +29,7 @@ date: 2025-03-12 16:29:00 +0200
 
 # Algoritme digitaliseren
 
-Maak een digitale versie van je eigen compressie en decompressie algoritmen.
-
+Maak een digitale versie van je eigen compressie en decompressie algoritmen.  
 Kies zelf de programmeertaal, maar hou er rekening mee dat je deze zaken moet doen:
 
 - Een bestand openen/uitlezen.
