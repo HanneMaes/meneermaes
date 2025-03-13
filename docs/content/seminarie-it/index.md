@@ -1,8 +1,10 @@
 ---
 title: Seminarie I.T.
-last_modified_at: 2025-02-20 20:53:57 +0200
+last_modified_at: 2025-03-13 15:15:36 +0200
 date: 2025-01-19 15:37:26 +0200
 ---
+
+[Digitale Kennismaking](https://www.notion.so/hannemaes/Digitale-kennismaking-met-Canva-14c2b51142cd8029ac34d6338316a551)
 
 [Opleiding tot Cyberagent](https://hannemaes.notion.site/Opleiding-tot-Cyberagent-1762b51142cd80568005c447835a9510?pvs=74)
 
