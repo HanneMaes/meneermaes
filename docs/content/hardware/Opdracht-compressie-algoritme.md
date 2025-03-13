@@ -1,6 +1,6 @@
 ---
 title: Ontwerp je eigen compressie-algoritme
-last_modified_at: 2025-03-13 12:29:36 +0200
+last_modified_at: 2025-03-13 15:01:44 +0200
 date: 2025-03-12 16:29:00 +0200
 ---
 
@@ -26,3 +26,13 @@ date: 2025-03-12 16:29:00 +0200
 - **Creativiteit**: Hoe slim of origineel is de methode?
 
 > Wie kan de tekst het beste comprimeren en decomprimeerbaar houden?
+
+# Algoritme digitaliseren
+
+Maak een digitale versie van je eigen compressie en decompressie algoritmen.
+
+Kies zelf de programmeertaal, maar hou er rekening mee dat je deze zaken moet doen:
+
+- Een bestand openen/uitlezen.
+- Een bestand saven/uitschrijven.
+- Woorden of stukken tekst vervangen.
