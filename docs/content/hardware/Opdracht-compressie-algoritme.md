@@ -1,6 +1,6 @@
 ---
 title: Ontwerp je eigen compressie-algoritme
-last_modified_at: 2025-03-12 16:41:49 +0200
+last_modified_at: 2025-03-13 12:29:36 +0200
 date: 2025-03-12 16:29:00 +0200
 ---
 
@@ -18,10 +18,6 @@ date: 2025-03-12 16:29:00 +0200
    - Geef jouw gecomprimeerde tekst en instructies aan een ander groepje.
    - Ontvang de gecomprimeerde tekst en instructies van een ander groepje.
    - Probeer de tekst te decomprimeren met behulp van de instructies die je hebt gekregen.
-
-# Regels
-
-- Je mag enkel tekst gebruiken in je gecomprimeerde tekst *(letters, cijfers en symbolen)*.
 
 # Doelen
 
