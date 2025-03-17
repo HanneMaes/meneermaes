@@ -1,6 +1,6 @@
 ---
 title: Basisoptie I.T.
-last_modified_at: 2024-05-03T07:12:37
+last_modified_at: 2025-03-17 09:25:30 +0200
 date: Wed, sep 15, 2024  14:03:23 PM
 ---
 
@@ -13,3 +13,7 @@ date: Wed, sep 15, 2024  14:03:23 PM
 # Programmeren
 
 [Python game development](https://hannemaes.notion.site/Python-Game-Development-f26abfaf2cdc4ff7967753b933cd206f?pvs=74)
+
+# Tinkercad
+
+[TinkerCad CodeBlocks](https://hannemaes.notion.site/TinkerCad-CodeBlocks-49d41492409b42afafa84ed086035eee)
