@@ -1,6 +1,6 @@
 ---
 title: Ontwerp je eigen compressie-algoritme
-last_modified_at: 2025-03-19 12:15:05 +0200
+last_modified_at: 2025-03-19 12:17:33 +0200
 date: 2025-03-12 16:29:00 +0200
 ---
 
@@ -21,9 +21,7 @@ date: 2025-03-12 16:29:00 +0200
 
 ## Te comprimeren tekst
 
-```
 Maandag werk ik aan een taak en eet ik thuis met mijn familie na een lange dag. Dinsdag werk ik weer en geef ik een presentatie op kantoor met collega’s. Woensdag rust ik in de tuin en eet ik buiten onder de zon met een goed boek. Donderdag fiets ik naar de stad en werk ik aan een nieuw project met mijn team. Vrijdag sluit ik af met een borrel en eet ik met vrienden in het weekend thuis, terwijl we lachen en praten. Zaterdag lees ik een krant en rust ik thuis, en zondag bezoek ik de markt en eet ik met mijn ouders in de middag.
-```
 
 # Doelen
 
