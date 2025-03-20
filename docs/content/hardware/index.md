@@ -1,6 +1,6 @@
 ---
 title: Hardware
-last_modified_at: 2025-03-20 11:49:58 +0200
+last_modified_at: 2025-03-20 12:40:58 +0200
 date: Wed, sep 04, 2024  10:47:23 PM
 ---
 
@@ -10,7 +10,7 @@ date: Wed, sep 04, 2024  10:47:23 PM
 
 [Anatomie van een computer](Anatomie-van-een-computer)
 
-[Datacompressie, Backups & Datarecovery](Datacompressie)
+[Datacompressie, backups & datarecovery](Datacompressie)
 
 # Onderzoeksopdrachten
 
