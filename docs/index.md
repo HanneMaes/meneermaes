@@ -1,6 +1,6 @@
 ---
 title: Meneer Maes
-last_modified_at: 2025-01-19 15:36:36 +0200
+last_modified_at: 2025-03-20 09:21:17 +0200
 date: 2024-03-13T10:31:28+01:00
 ---
 
@@ -27,6 +27,10 @@ date: 2024-03-13T10:31:28+01:00
 ---
 
 # Uitbreiding
+
+## Programmeren
+
+[EarSketch: Muziek programmeren](content/uitbreiding/earsketch)
 
 ## Web
 
