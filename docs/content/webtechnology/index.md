@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2025-02-14 15:48:05 +0200
+last_modified_at: 2025-03-20 17:14:27 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -98,3 +98,11 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 [Random story generator: Deel 1](Random-story-generator-deel-1)
 
 [Random story generator: Deel 2](Random-story-generator-deel-2)
+
+# Hosting
+
+[Open-source](open-source)
+
+[Hosting 1: GitHub Pages](hosting-1-GitHub-pages){: .opdracht }
+
+[Licenties](licenties)

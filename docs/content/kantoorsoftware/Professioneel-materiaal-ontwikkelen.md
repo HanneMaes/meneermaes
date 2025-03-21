@@ -1,6 +1,6 @@
 ---
 title: Professioneel Materiaal Ontwikkelen
-last_modified_at: 2025-02-24 09:05:24 +0200
+last_modified_at: 2025-03-21 10:30:28 +0200
 date: 2024-11-01 16:18:57 +0200
 ---
 
@@ -28,6 +28,7 @@ Deze handleiding zal bestaan uit 2 delen:
 - Afbeeldingen en figuren: invoegen, opmaken/vormgeven, positie, tekstterugloop, alternatieve tekst, ...
 - Opmaak van tabellen
 - Opmaak van grafieken via Excel en deze importeren in Word
+- Kruisvermeldingen bij bronvermeldingen
 
 # 1. SWOT-Analyse
 
