@@ -1,6 +1,6 @@
 ---
 title: Markdown
-last_modified_at: 2025-03-24 08:54:16 +0200
+last_modified_at: 2025-03-24 09:27:32 +0200
 date: 2024-03-04T13:37:48+01:00
 ---
 
@@ -12,8 +12,8 @@ date: 2024-03-04T13:37:48+01:00
 
 # Opdracht
 
-- [GitHub Pages](github-pages)
 - [APA-stijl bronvermeldingen](APA-stijl-bronvermeldingen)
+- [GitHub Pages](github-pages)
 - Opdracht: [Onderzoek naar internettechnologie](Onderzoek-naar-internettechnologie)
 
 # Markdown presentaties
