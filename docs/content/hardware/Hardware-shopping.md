@@ -1,6 +1,6 @@
 ---
 title: Hardware Shopping
-last_modified_at: 2025-03-27 12:00:48 +0200
+last_modified_at: 2025-03-27 13:58:28 +0200
 date: 2025-03-27 10:48:10 +0200
 ---
 
@@ -22,6 +22,7 @@ Daarna stel je een PC samen en motiveer je jouw keuzes.
 # Opdracht: Hardware Shopping
 
 Je mag de opdracht uitwerken op één van de volgende manieren:
+
 - **Geschreven document**  
    Maak een duidelijke structuur met titels, tabellen, een inhoudstafel, ...
 - **Presentatie**  
@@ -39,17 +40,23 @@ Je mag de opdracht uitwerken op één van de volgende manieren:
 - Welk Besturingssysteem leent zich het beste bij dit scenario, en waarom?
 - Waarom lenen de andere Besturingssystemen zich minder bij dit scenario.
 
-## Koop de onderdelen 
+## Koop de onderdelen
 
-Je krijgt 2 budgetten:
+Stel voor beide budgetten een **volledige PC** samen en motiveer je keuzes.
+
 - Laag budget: **max €800**
 - Hoog budget: **max €2000**
 
-Stel voor beide budgetten een **volledige PC** samen en motiveer je keuzes.
-{% include checkbox-interactive.html text='Moederbord' %} 
-{% include checkbox-interactive.html text='Processor (CPU)' %} 
-{% include checkbox-interactive.html text='Werkgeheugen (RAM)' %} 
-{% include checkbox-interactive.html text='Oplsag (SSD/HDD)' %} 
+Via deze webtools kan je zelf een PC samenstellen:
+
+- [PC Part Picker](https://pcpartpicker.com)
+- [PC Builder](https://pcbuilder.net)
+
+Voorzie alle onderdelen die een werkende PC nodig heeft:
+{% include checkbox-interactive.html text='Moederbord' %}
+{% include checkbox-interactive.html text='Processor (CPU)' %}
+{% include checkbox-interactive.html text='Werkgeheugen (RAM)' %}
+{% include checkbox-interactive.html text='Oplsag (SSD/HDD)' %}
 {% include checkbox-interactive.html text='Grafische kaart (indien nodig)' %}
 {% include checkbox-interactive.html text='Behuizing' %}
 {% include checkbox-interactive.html text='Voeding' %}
@@ -58,10 +65,11 @@ Stel voor beide budgetten een **volledige PC** samen en motiveer je keuzes.
 {% include checkbox-interactive.html text='Extra randapparatuur (indien nodig, zoals een scherm, muis, toetsenbord, ...)' %}
 
 Vergelijk kort de goedkopere en duurdere configuratie:
+
 - Wat zijn de belangrijkste verschillen?
 - Welke compromissen moest je maken binnen het lage budget?
 - Wat krijg je extra bij het hogere budget?
 
 ## Puntenverdeling
 
-{% include punten.html data='hardware-shopping' %} 
+{% include punten.html data='hardware-shopping' %}
