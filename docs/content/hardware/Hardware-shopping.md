@@ -1,6 +1,6 @@
 ---
 title: Hardware Shopping
-last_modified_at: 2025-03-27 14:54:10 +0200
+last_modified_at: 2025-03-27 15:05:45 +0200
 date: 2025-03-27 10:48:10 +0200
 ---
 
@@ -47,11 +47,6 @@ Stel voor beide budgetten een **volledige PC** samen en motiveer je keuzes.
 - Laag budget: **max €1000**
 - Hoog budget: **max €2500**
 
-Via deze webtools kan je zelf een PC samenstellen:
-
-- [PC Part Picker](https://pcpartpicker.com)
-- [PC Builder](https://pcbuilder.net)
-
 Voorzie alle onderdelen die een werkende PC nodig heeft:
 {% include checkbox-interactive.html text='Monitor' %}
 {% include checkbox-interactive.html text='Moederbord' %}
@@ -70,6 +65,19 @@ Vergelijk kort de goedkopere en duurdere configuratie:
 - Wat zijn de belangrijkste verschillen?
 - Welke compromissen moest je maken binnen het lage budget?
 - Wat krijg je extra bij het hogere budget?
+
+### PC build tools
+
+Via deze webtools kan je zelf een PC samenstellen:
+
+- [PC Part Picker](https://pcpartpicker.com)
+- [PC Builder](https://pcbuilder.net)
+
+Beide tools bieden de mogelijkheid om je setup te **bewaren** via een **URL**.
+**Zet de URL van je config mee in je verslag.**
+
+![](images/pcbuilderURL1.png){: .frame }
+![](images/pcbuilderURL2.png){: .frame }
 
 ## Puntenverdeling
 
