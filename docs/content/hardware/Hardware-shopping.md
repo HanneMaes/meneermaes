@@ -1,6 +1,6 @@
 ---
 title: Hardware Shopping
-last_modified_at: 2025-03-27 13:58:28 +0200
+last_modified_at: 2025-03-27 14:54:10 +0200
 date: 2025-03-27 10:48:10 +0200
 ---
 
@@ -44,8 +44,8 @@ Je mag de opdracht uitwerken op één van de volgende manieren:
 
 Stel voor beide budgetten een **volledige PC** samen en motiveer je keuzes.
 
-- Laag budget: **max €800**
-- Hoog budget: **max €2000**
+- Laag budget: **max €1000**
+- Hoog budget: **max €2500**
 
 Via deze webtools kan je zelf een PC samenstellen:
 
@@ -53,6 +53,7 @@ Via deze webtools kan je zelf een PC samenstellen:
 - [PC Builder](https://pcbuilder.net)
 
 Voorzie alle onderdelen die een werkende PC nodig heeft:
+{% include checkbox-interactive.html text='Monitor' %}
 {% include checkbox-interactive.html text='Moederbord' %}
 {% include checkbox-interactive.html text='Processor (CPU)' %}
 {% include checkbox-interactive.html text='Werkgeheugen (RAM)' %}
@@ -62,7 +63,7 @@ Voorzie alle onderdelen die een werkende PC nodig heeft:
 {% include checkbox-interactive.html text='Voeding' %}
 {% include checkbox-interactive.html text='Koeling (indien apart nodig)' %}
 {% include checkbox-interactive.html text='Besturingssysteem (Windows/Linux)' %}
-{% include checkbox-interactive.html text='Extra randapparatuur (indien nodig, zoals een scherm, muis, toetsenbord, ...)' %}
+{% include checkbox-interactive.html text='Extra randapparatuur indien nodig' %}
 
 Vergelijk kort de goedkopere en duurdere configuratie:
 
