@@ -1,6 +1,6 @@
 ---
 title: Hardware Shopping
-last_modified_at: 2025-03-27 15:05:45 +0200
+last_modified_at: 2025-03-27 15:23:26 +0200
 date: 2025-03-27 10:48:10 +0200
 ---
 
@@ -49,6 +49,8 @@ Stel voor beide budgetten een **volledige PC** samen en motiveer je keuzes.
 
 Voorzie alle onderdelen die een werkende PC nodig heeft:
 {% include checkbox-interactive.html text='Monitor' %}
+{% include checkbox-interactive.html text='Toetsenbord' %}
+{% include checkbox-interactive.html text='Muis' %}
 {% include checkbox-interactive.html text='Moederbord' %}
 {% include checkbox-interactive.html text='Processor (CPU)' %}
 {% include checkbox-interactive.html text='Werkgeheugen (RAM)' %}
