@@ -1,6 +1,6 @@
 ---
 title: Hardware
-last_modified_at: 2025-03-20 12:40:58 +0200
+last_modified_at: 2025-03-27 10:47:59 +0200
 date: Wed, sep 04, 2024  10:47:23 PM
 ---
 
@@ -21,3 +21,11 @@ date: Wed, sep 04, 2024  10:47:23 PM
 [Processorkoeling](zelfstandige-opdrachten/processorkoeling.docx){: .opdracht }
 
 [Von Neumann-architectuur](zelfstandige-opdrachten/von-Neumann-architectuur.docx){: .opdracht }
+
+# Bouw je eigen PC 
+
+[Hardware shopping](Hardware-shopping)
+
+[Demontage & montage](Demontage-en-montage)
+
+[Ergonomie](Ergonomie)

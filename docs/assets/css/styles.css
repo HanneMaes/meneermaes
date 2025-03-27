@@ -130,6 +130,10 @@ ol {
   margin-left: calc(2 * var(--spacing));
 }
 
+.checkbox-interactive {
+  margin-left: calc(3 * var(--spacing));
+}
+
 /* **** */
 /* BODY */
 /* **** */
@@ -322,6 +326,12 @@ summary::marker {
 .blueText {
   color: var(--colorBlue);
   font-weight: bold;
+}
+
+/* checkbox interactive */
+
+.checkbox-interactive-label {
+   margin-left: var(--spacingSmall);
 }
 
 /* ***** */
