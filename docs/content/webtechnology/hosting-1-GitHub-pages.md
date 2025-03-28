@@ -1,22 +1,16 @@
 ---
 title: Hosting 1 Github Pages
-last_modified_at: 2025-03-28 16:08:25 +0200
+last_modified_at: 2025-03-28 16:29:57 +0200
 date: 2025-03-20 17:14:30 +0200
 ---
 
 Tijdens deze opdracht gaan we een website **publiceren en onderhouden.** Kies een thema dat je persoonlijk interesseert. Dit kan variëren van hobby's, nieuws, tot persoonlijke projecten. Het belangrijkste is dat je gemotiveerd blijft om de **inhoud regelmatig bij te werken**.
 
-# Stap 1: Ontwerp een website
-
-Begin met het ontwerpen van een overzichtelijke en aantrekkelijke website. Zorg ervoor dat de navigatie duidelijk is en de gebruikerservaring centraal staat.
-
-# Stap 2: Website publiceren op GitHub Pages
-
-## Git downloaden
+# Git downloaden
 
 Controleer of **Git bash** op je computer staat, zo niet download en installeer je het via: [https://gitforwindows.org/](https://gitforwindows.org/)
 
-## Nieuw GitHub project
+# Nieuw GitHub project
 
 1. Maak een **nieuwe repository** op GitHub.  
    Het is belangrijk dat je een **README.md** file toegevoegd.  
@@ -50,9 +44,11 @@ Controleer of **Git bash** op je computer staat, zo niet download en installeer 
    3. **Clone** de repository: `git clone <repo url>`  
       Als alles goed gelopen is, heb je nu een folder met de GitHub repository waarin je kan beginnen werken.
 
-3. Kopieer je website naar deze folder.
+# Maak een website
 
-## Push: Code uploaden
+Maak een website in de nieuwe folder die je net gecloned hebt.
+
+# Push: Code uploaden
 
 1. Voeg de bestanden toe die je wil pushen (uploaden) naar GitHub.
    - 1 bestand toevoegen: `git add index.html`.
@@ -66,9 +62,10 @@ Controleer of **Git bash** op je computer staat, zo niet download en installeer 
 
 Wil je bij een conflict je lokale versie pushen: `git push --force origin main`.
 
-## Website publiceren via GitHub pages
+# Website publiceren via GitHub pages
 
-1. `Settings (balk bovenaan) > Pages (balk rechts)`
+1. Ga naar de **settings** van je GitHub repo _(niet de settings van je account)_.  
+   `Settings (balk bovenaan) > Pages (balk rechts)`
 2. **Branch**: selecteer de folder die je wil publiceren als website.
    - **Master**: publiceer je hele project al website.
    - **Custom folder**: je kan ervoor kiezen enkel een deel van je project te publiceren als website (vaak de `docs/` folder). Zo kan je naast je website ook andere bestanden hebben zoals test- of onafgewerkte pagina’s, design assets, …
