@@ -1,6 +1,6 @@
 ---
 title: Hosting 1 Github Pages
-last_modified_at: 2025-03-28 15:07:53 +0200
+last_modified_at: 2025-03-28 15:30:56 +0200
 date: 2025-03-20 17:14:30 +0200
 ---
 
@@ -74,3 +74,7 @@ Wil je bij een conflict je lokale versie pushen: `git push --force origin main`.
 Als alles goed gelopen is, krijg je bovenaan de `Pages` pagina in de `Settings` het adres voor je website te zien:
 
 ![](images/ghlive.png){: .frame width='700px'}
+
+# Puntenverdeling
+
+{% include punten.html data='github-pages-1' %}
