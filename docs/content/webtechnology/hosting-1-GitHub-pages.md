@@ -1,6 +1,6 @@
 ---
 title: Hosting 1 Github Pages
-last_modified_at: 2025-03-28 15:35:25 +0200
+last_modified_at: 2025-03-28 16:08:25 +0200
 date: 2025-03-20 17:14:30 +0200
 ---
 
@@ -18,15 +18,17 @@ Controleer of **Git bash** op je computer staat, zo niet download en installeer 
 
 ## Nieuw GitHub project
 
-1. Maak een **nieuwe repository** op GitHub.
+1. Maak een **nieuwe repository** op GitHub.  
+   Het is belangrijk dat je een **README.md** file toegevoegd.  
+   ![](images/githubpages-readme.png){: .frame width="600px" }
 
+   - **Add a README file**
+     - Een README-bestand is een markdown bestand dat vaak wordt toegevoegd aan een repository om **belangrijke informatie** te verstrekken. Het kan details bevatten zoals installatie instructies, gebruik, bijdragersrichtlijnen en andere relevante informatie.  
+       Het dient als de **startpagina** voor het project.
    - **Public vs Private**
      - Iedereen kan een **public** repository bekijken en klonen. Ze kunnen ook suggesties voor wijzigingen (pull requests) doen.
      - Alleen mensen die zijn uitgenodigd door de eigenaar van de repository hebben toegang tot een **private** repository. De inhoud is niet zichtbaar voor anderen.  
        Op je website online te zetten via GitHub Pages moet je repository **public** zijn.
-   - **Optioneel: Add a README file**
-     - Een README-bestand is een markdown bestand dat vaak wordt toegevoegd aan een repository om **belangrijke informatie** te verstrekken. Het kan details bevatten zoals installatie instructies, gebruik, bijdragersrichtlijnen en andere relevante informatie.  
-       Het dient als de **startpagina** voor het project.
    - **Optioneel: Add .gitignore**
      - Het .gitignore-bestand wordt gebruikt om bepaalde bestanden of mappen uit te sluiten van versiebeheer.
    - **Optioneel: Choose a license**
