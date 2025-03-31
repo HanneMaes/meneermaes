@@ -77,5 +77,6 @@ Exporteer je Markdown document naar:
 Je uploadt de volgende bestanden:
 
 - Een **Word-document** met de **link (URL)** naar je GitHub-repository.
+- Je **Markdown-bestanden**.
 - De **Word-documenten** die gegenereerd zijn uit je Markdown-bestanden.
 - De **HTML-bestanden** die gegenereerd zijn uit je Markdown-bestanden.
