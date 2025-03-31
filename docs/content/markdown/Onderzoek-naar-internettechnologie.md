@@ -71,3 +71,11 @@ Exporteer je Markdown document naar:
 
 {% include punten.html data='Onderzoek-naar-internettechnologie-kantoorsoftware' %}
 {% include punten.html data='Onderzoek-naar-internettechnologie-webtechnology' %}
+
+## Uploaden
+
+Je uploadt de volgende bestanden:
+
+- Een **Word-document** met de **link (URL)** naar je GitHub-repository.
+- De **Word-documenten** die gegenereerd zijn uit je Markdown-bestanden.
+- De **HTML-bestanden** die gegenereerd zijn uit je Markdown-bestanden.
