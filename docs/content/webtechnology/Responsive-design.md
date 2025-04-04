@@ -1,6 +1,6 @@
 ---
 title: Responsive Design
-last_modified_at: 2025-04-04 12:10:04 +0200
+last_modified_at: 2025-04-04 15:31:35 +0200
 date: 2025-04-04 10:48:04 +0200
 ---
 
@@ -13,14 +13,14 @@ date: 2025-04-04 10:48:04 +0200
 ### Min- en max-values
 
 ```css
-.maxWidth {
+img {
   width: 90%;
   max-width: 300px;
 }
 
-.minWidth {
+img {
   width: 50%;
-  max-width: 50px;
+  mix-width: 50px;
 }
 ```
 
@@ -29,12 +29,16 @@ date: 2025-04-04 10:48:04 +0200
 ```css
 /* Portretmodus */
 @media only screen and (orientation: portrait) {
-  /* CSS-regels */
+  body {
+    background-color: black;
+  }
 }
 
 /* Liggende */
 @media only screen and (orientation: landscape) {
-  /* CSS-regels */
+  body {
+    background-color: white;
+  }
 }
 ```
 
@@ -43,17 +47,23 @@ date: 2025-04-04 10:48:04 +0200
 ```css
 /* Schermen breder van 700px */
 @media screen and (min-width: 700px) {
-  /* CSS-regels */
+  body {
+    background-color: black;
+  }
 }
 
 /* Schermen tussen 530px en 700px breed */
 @media screen and (max-width: 700px) and (min-width: 530px) {
-  /* CSS-regels */
+  body {
+    background-color: grey;
+  }
 }
 
 /* Schermen kleiner dan 530px breed */
 @media (max-width: 530px) {
-  /* CSS-regels */
+  body {
+    background-color: white;
+  }
 }
 ```
 
