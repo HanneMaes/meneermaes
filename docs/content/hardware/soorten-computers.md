@@ -2,6 +2,7 @@
 title: Soorten computers
 date: 2024-03-04T13:37:48+01:00
 ---
+
 <iframe src="https://docs.google.com/presentation/d/1KTVXaFKQ915TOTVHwjHIBEWzTI6VYSDx/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="515" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 # Opdracht 1: Servers
@@ -15,6 +16,7 @@ date: 2024-03-04T13:37:48+01:00
 # Opdracht 2: Artikel
 
 Zoek op het internet een artikel over één van de technologieën uit de presentatie.
+
 - Leg de inhoud van het artikel uit aan de klas.
 - Leg uit doe de technologie of het apparaat uit je artikel technisch werkt.
 - Zoek minsten 1 parallel met één van de andere technologieën.

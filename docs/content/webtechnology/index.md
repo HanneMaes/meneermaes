@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2025-03-20 17:14:27 +0200
+last_modified_at: 2025-04-04 10:48:02 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -106,3 +106,5 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 [Hosting 1: GitHub Pages](hosting-1-GitHub-pages){: .opdracht }
 
 [Licenties](licenties)
+
+[Responsive design](Responsive-design)
