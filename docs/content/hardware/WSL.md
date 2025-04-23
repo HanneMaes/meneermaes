@@ -1,6 +1,6 @@
 ---
 title: WSL
-last_modified_at: 2025-04-22 14:01:24 +0200
+last_modified_at: 2025-04-23 16:01:03 +0200
 date: 2025-04-22 13:28:45 +0200
 ---
 
@@ -27,21 +27,28 @@ In 2016 was het groot nieuws dat **Microsoft samenwerkte met Canonical** (van Ub
 
 # Hoe installeer je WSL
 
-**Voorwaarden:**
-- Windows 10 versie 2004 of hoger (build 19041)
+## Voorwaarden
 
-**Installatie:**
+Windows 10 versie 2004 of hoger (build 19041)
+
+## Via PowerShell *(aanbevolen)*
+
+1. Druk op **Start**, typ **PowerShell**
+2. Klik **rechts** op **Windows PowerShell** > **Als administrator uitvoeren**
+3. Voer dit commando uit `wsl --install`  
+   Dit installeert: het WSL-platform, de Linux-kernel, Ubuntu.
+4. Herstart Windows.
+
+## Via de Microsoft Store
+
 1. Ga naar de **Microsoft Store** en installeer **Ubuntu**, of een van de andere ondersteunde Linux-distributies.
 2. Open Ubuntu WSL via het **Start-menu**.
+3. Herstart Windows.
 
-**Testen of het werkt:**
-1. Open een terminal (Windows Terminal of "Ubuntu" via Start).
-2. Typ: `uname -a`.  
-   Uname staat voor "Unix Name" en toont **systeeminformatie**, de -a vlag betekent "all", dus: toon alle beschikbare info.
-3. Je zou iets moeten zien als: `Linux DESKTOP-1234 5.15.90.1-microsoft-standard-WSL2 ...`.
+## Ubuntu starten
+1. Open **Ubuntu** via **Start** of open **PowerShell** en typ `wsl`.
+2. Typ `uname -a` om te kijken op welk systeem je zit.  
+   Uname staat voor "Unix Name" en toont **systeeminformatie**, de -a vlag betekent "all", dus: toon alle beschikbare info.  
+   Je zou iets moeten zien als `Linux DESKTOP-1234 5.15.90.1-microsoft-standard-WSL2 ...`.
 
 # WSL tips
-
-- Je kunt `code .` gebruiken om **Visual Studio Code** te openen in je huidige Linux-map. Zorg wel dat de **extensie “Remote - WSL”** geïnstalleerd is in VS Code.
-- Linux-bestanden staan in Windows onder: {% include filePath.html fileOrPath='\\wsl$\Ubuntu\home\jouwgebruikersnaam' %} 
-- En omgekeerd kun je je Windows-schijf vinden vanuit Linux via: {% include filePath.html fileOrPath='/mnt/c/Users/...' %} 
