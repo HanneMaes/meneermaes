@@ -1,6 +1,6 @@
 ---
 title: Hardware Shopping
-last_modified_at: 2025-03-27 15:23:26 +0200
+last_modified_at: 2025-04-23 11:39:19 +0200
 date: 2025-03-27 10:48:10 +0200
 ---
 
@@ -74,6 +74,8 @@ Via deze webtools kan je zelf een PC samenstellen:
 
 - [PC Part Picker](https://pcpartpicker.com)
 - [PC Builder](https://pcbuilder.net)
+
+{% include callout.html type='Belangrijk' content='Pas de **landsinstellingen** aan zodat je onderdelen te zien krijgt beschikbaar je **jouw regio** en aan de correcte prijzen.' %}
 
 Beide tools bieden de mogelijkheid om je setup te **bewaren** via een **URL**.
 **Zet de URL van je config mee in je verslag.**
