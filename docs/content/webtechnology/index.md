@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2025-04-04 10:48:02 +0200
+last_modified_at: 2025-04-24 16:37:54 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -85,6 +85,10 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [Copyright infringement](Copyright-infringement)
 
+[Responsive design](Responsive-design)
+
+[Formulieren stylen](Formulieren-stylen)
+
 # JavaScript
 
 ## JavaScript basics
@@ -99,6 +103,10 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [Random story generator: Deel 2](Random-story-generator-deel-2)
 
+[Formulieren stylen](Formulieren-stylen)
+
+[Project: Calculator](Project-Calculator)
+
 # Hosting
 
 [Open-source](open-source)
@@ -106,5 +114,3 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 [Hosting 1: GitHub Pages](hosting-1-GitHub-pages){: .opdracht }
 
 [Licenties](licenties)
-
-[Responsive design](Responsive-design)
