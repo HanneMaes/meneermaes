@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2025-04-24 16:37:54 +0200
+last_modified_at: 2025-04-25 14:51:04 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -106,6 +106,8 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 [Formulieren stylen](Formulieren-stylen)
 
 [Project: Calculator](Project-Calculator)
+
+[Project: Character creator](Project-Character-creator)
 
 # Hosting
 
