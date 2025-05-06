@@ -1,6 +1,6 @@
 ---
 title: Demontage & Montage
-last_modified_at: 2025-04-03 11:22:05 +0200
+last_modified_at: 2025-05-06 12:29:57 +0200
 date: 2025-04-02 15:53:00 +0200
 ---
 
@@ -21,23 +21,25 @@ In deze video krijg je een kort overzicht van hoe je de belangrijkste onderdelen
 - **Let op scherpe randen**  
    Sommige computerbehuizingen en onderdelen hebben scherpe metalen randen, werk voorzichtig om snijwonden te voorkomen.
 
-# 1. Document aanmaken
+# Opdracht: In groep kennismaken met de binnenkant van een computer
+
+## 1. Document aanmaken
 
 Eén persoon uit de groep maakt een digitaal document aan en deelt dit met de andere persoon.
 
-# 2. Kabels verwijderen
+## 2. Kabels verwijderen
 
 Trek eerst een foto van hoe alle kabels in de computer zitten, dit kan je later helpen alles correct terug te steken.  
 Plaats de foto in het document, heeft de computer een **stroomschakelaar** dan zet je deze **uit** en ontkoppel vervolgens voorzichtig alle kabels.
 
-# 3. De computerkast openen
+## 3. De computerkast openen
 
-## Voorbereiding
+### Voorbereiding
 
 1. Voorzie een bakje, glas of **lege** pennenzak om schroeven veilig te bewaren.
 2. Maak een **foto** van jullie **opberg container** en plaats dit in het document.
 
-## De kast openen
+### De kast openen
 
 1. Identificeer waar alle schroeven zitten die de behuizing vastzetten.
 2. **Denk na** over hoe de case geopend moet worden (zijpanelen, schuifsysteem, etc.).
@@ -49,7 +51,7 @@ Plaats de foto in het document, heeft de computer een **stroomschakelaar** dan z
 
 {% include callout.html type='Tip' content='Kijk bij de [Hardware Shopping](Hardware-shopping) opdracht welke onderdelen er allemaal in een computer zitten.' %}
 
-# 4. Demonteren & monteren
+## 4. Demonteren & monteren
 
 1. Kies een onderdeel om te demonteren.
 2. Neem foto's vanuit **verschillende hoeken** om te documenteren hoe het onderdeel vastzit.  
@@ -60,7 +62,7 @@ Plaats de foto in het document, heeft de computer een **stroomschakelaar** dan z
 
 > Herhaal deze stappen met andere onderdelen, zolang er tijd is.
 
-# 5. Computer terug aansluiten
+## 5. Computer terug aansluiten
 
 1. Zorg ervoor dat alle onderdelen correct zijn teruggeplaatst.
 2. Sluit de computerkast en schroef deze terug dicht.
@@ -68,7 +70,64 @@ Plaats de foto in het document, heeft de computer een **stroomschakelaar** dan z
 4. Zet de computer aan en controleer of alles nog werkt.
 5. Als de computer niet opstart, controleer dan of alle kabels goed aangesloten zijn en of alle componenten stevig vastzitten.
 
-# Reflectie
+## Reflectie
 
 - Welke problemen kwamen jullie tegen en hoe hebben jullie die opgelost?
 - Wat zou je de volgende keer anders doen?
+
+# Opdracht: Individueel werken
+
+## 1. Document aanmaken
+
+Maak een document aan en noteer welke voorbereidingen je getroffen hebt voor je begint met het demonteren van de computer.  
+Laat je voorbereidingen ook zien aan de hand één of meerdere foto's.
+
+## 2. Onderdelen onderzoeken
+
+Je krijgt willekeurig **3 onderdelen**, per onderdeel noteer je:
+1. Wat is de **functie** van dit onderdeel.
+2. De **volledige** naam van het onderdeel.
+3. Wat zou er gebeuren als dit onderdeel **stuk** is?
+4. Waarop moet je letten als je dit onderdeel zou vervangen.
+
+## 3. Demontage
+
+### Voorbereiding
+
+Tijdens deze stap demonteer je **alle onderdelen** van de computer.
+Voor je begint, noteer je in je document **hoe je ervoor zult zorgen dat je achteraf nog weet waar elk onderdeel en elke vijs thuishoort, en hoe alles opnieuw correct moet worden aangesloten.**
+
+### Demontage 
+
+1. Demonteer alle onderdelen.
+2. Neem een foto van het **moederbord zonder onderdelen**.
+3. Neem een foto van je **werkplek met losse onderdelen**.
+
+## 4. Montage
+
+Monteer de computer, sluit alles aan **en test of de computer terug werkt**.
+
+{% include callout.html type='Belangrijk' content='Roep de leerkracht na het afronden van deze stap, **ook als de computer niet meer opstart.**' %}
+
+## Punterderdeling
+
+{% include punten.html data='demonteren-en-monteren-individueel' %} 
+# Reflectie
+
+{% include callout.html type='Reflectie' content='Zijn er zaken die je de volgende keer anders zou doen?' %}
+{% include callout.html type='Reflectie' content='Wat vond je het meest verrassend aan hoe een computer in elkaar zit?' %}
+
+# Quiz
+
+Stel **5 quizvragen** op over:
+- De onderdelen aan de binnenkant van een computer
+- Het proces van demonteren en monteren
+- De werking en het nut van specifieke componenten
+
+Maak gebruik van dit type vragen:
+- Juist of fout
+- Meerkeuze met **4** antwoorden
+
+Voorzie voor elke vraag:
+- Een duidelijke vraag
+- Het juiste antwoord
