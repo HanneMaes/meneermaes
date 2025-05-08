@@ -1,6 +1,6 @@
 ---
 title: Demontage & Montage
-last_modified_at: 2025-05-06 12:29:57 +0200
+last_modified_at: 2025-05-08 10:54:09 +0200
 date: 2025-04-02 15:53:00 +0200
 ---
 
@@ -77,14 +77,15 @@ Plaats de foto in het document, heeft de computer een **stroomschakelaar** dan z
 
 # Opdracht: Individueel werken
 
-## 1. Document aanmaken
+## 1. veiligheidsmaatregelen
 
-Maak een document aan en noteer welke voorbereidingen je getroffen hebt voor je begint met het demonteren van de computer.  
+Maak een document aan en noteer welke **veiligheidsmaatregelen** je getroffen hebt voor je begint met het demonteren van de computer.  
 Laat je voorbereidingen ook zien aan de hand één of meerdere foto's.
 
 ## 2. Onderdelen onderzoeken
 
 Je krijgt willekeurig **3 onderdelen**, per onderdeel noteer je:
+
 1. Wat is de **functie** van dit onderdeel.
 2. De **volledige** naam van het onderdeel.
 3. Wat zou er gebeuren als dit onderdeel **stuk** is?
@@ -97,7 +98,7 @@ Je krijgt willekeurig **3 onderdelen**, per onderdeel noteer je:
 Tijdens deze stap demonteer je **alle onderdelen** van de computer.
 Voor je begint, noteer je in je document **hoe je ervoor zult zorgen dat je achteraf nog weet waar elk onderdeel en elke vijs thuishoort, en hoe alles opnieuw correct moet worden aangesloten.**
 
-### Demontage 
+### Demontage
 
 1. Demonteer alle onderdelen.
 2. Neem een foto van het **moederbord zonder onderdelen**.
@@ -111,7 +112,8 @@ Monteer de computer, sluit alles aan **en test of de computer terug werkt**.
 
 ## Punterderdeling
 
-{% include punten.html data='demonteren-en-monteren-individueel' %} 
+{% include punten.html data='demonteren-en-monteren-individueel' %}
+
 # Reflectie
 
 {% include callout.html type='Reflectie' content='Zijn er zaken die je de volgende keer anders zou doen?' %}
@@ -120,14 +122,17 @@ Monteer de computer, sluit alles aan **en test of de computer terug werkt**.
 # Quiz
 
 Stel **5 quizvragen** op over:
+
 - De onderdelen aan de binnenkant van een computer
 - Het proces van demonteren en monteren
 - De werking en het nut van specifieke componenten
 
 Maak gebruik van dit type vragen:
+
 - Juist of fout
 - Meerkeuze met **4** antwoorden
 
 Voorzie voor elke vraag:
+
 - Een duidelijke vraag
 - Het juiste antwoord
