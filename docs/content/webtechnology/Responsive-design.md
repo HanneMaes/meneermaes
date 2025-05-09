@@ -1,6 +1,6 @@
 ---
 title: Responsive Design
-last_modified_at: 2025-05-09 15:13:38 +0200
+last_modified_at: 2025-05-09 15:40:02 +0200
 date: 2025-04-04 10:48:04 +0200
 ---
 
@@ -110,9 +110,6 @@ Fullscreen overlays worden in webdesign vaak gebruikt om **fullscreen menu's of 
 Maak een nieuwe website via de regels van responsive design.  
 Je website heeft deze zaken:
 
-- **Navigatie balk** die overgaat in een **hamburger menu** wanneer de pagina kleiner is dan 500 pixels.
-  - De **navigatie balk** bevat **links een titel** en **rechts links**.
-  - Het **hamburger menu** opent een **fullscreen overlay menu** waarin de titel bovenaan staat, en de links onder elkaar. Het fullscreen overlay menu openen doe je best via **JavaScript**.
 - Maak 2 tekstblokken en daarin tekst van 12 pixels groot.
   - De eerste neemt 10% van de breedte van de pagina in, de tweede 30%.
   - Als het scherm **horizontaal** staat _(het is breder dan het hoog is, zoals desktops en laptops)_, staan de tekstblokken naast elkaar.
@@ -120,3 +117,6 @@ Je website heeft deze zaken:
 - Laat de tekstgrootte aanpassen aan de hand van de breedte van het scherm:
   - Schermen **kleiner dan 300 pixels** -> tekstgrootte van **30 pixels**.
   - Schermen **tussen 300 en 600 pixels** -> tekstgrootte van **20 pixels**.
+- **Navigatie balk** die overgaat in een **hamburger menu** wanneer de pagina kleiner is dan 500 pixels.
+  - De **navigatie balk** bevat **links een titel** en **rechts links**.
+  - Het **hamburger menu** opent een **fullscreen overlay menu** waarin de titel bovenaan staat, en de links onder elkaar. Het fullscreen overlay menu openen doe je best via **JavaScript**.
