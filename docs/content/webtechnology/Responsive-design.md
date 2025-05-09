@@ -1,6 +1,6 @@
 ---
 title: Responsive Design
-last_modified_at: 2025-05-09 12:20:56 +0200
+last_modified_at: 2025-05-09 12:38:53 +0200
 date: 2025-04-04 10:48:04 +0200
 ---
 
@@ -75,6 +75,10 @@ Je website heeft deze zaken:
 - **Navigatie balk** die overgaat in een **hamburger menu** wanneer de pagina kleiner is dan 500 pixels.
   - De **navigatie balk** bevat **links een titel** en **rechts links**.
   - Het **hamburger menu** opent een **fullscreen overlay menu** waarin de titel bovenaan staat, en de links onder elkaar.
-- Maak 2 tekstblokken.
+- Maak 2 tekstblokken en daarin tekst van 12 pixels groot.
+  - De eerste neemt 10% van de breedte van de pagina in, de tweede 30%.
   - Als het scherm **horizontaal** staat _(het is breder dan het hoog is, zoals desktops en laptops)_, staan de tekstblokken naast elkaar.
   - Als het scherm **verticaal** staan _(het is hoger dan het breed is, zoals bij smartphones)_, staan de tekstblokken onder elkaar.
+  - Laat de tekstgrootte aanpassen aan de hand van de breedte van het scherm:
+  - Schermen **kleiner dan 300 pixels** -> tekstgrootte van **30 pixels**.
+  - Schermen **tussen 300 en 600 pixels** -> tekstgrootte van **20 pixels**.
