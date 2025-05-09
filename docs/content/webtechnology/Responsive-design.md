@@ -1,6 +1,6 @@
 ---
 title: Responsive Design
-last_modified_at: 2025-04-04 15:31:35 +0200
+last_modified_at: 2025-05-09 09:48:49 +0200
 date: 2025-04-04 10:48:04 +0200
 ---
 

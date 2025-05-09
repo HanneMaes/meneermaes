@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2025-04-25 14:51:04 +0200
+last_modified_at: 2025-05-09 08:37:04 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -85,8 +85,6 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 [Copyright infringement](Copyright-infringement)
 
-[Responsive design](Responsive-design)
-
 [Formulieren stylen](Formulieren-stylen)
 
 # JavaScript
@@ -108,6 +106,12 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 [Project: Calculator](Project-Calculator)
 
 [Project: Character creator](Project-Character-creator)
+
+# Responsive Design
+
+[Responsive design](Responsive-design)
+
+[Responsive design met JavaScript](Responsive-design-met-JavaScript)
 
 # Hosting
 
