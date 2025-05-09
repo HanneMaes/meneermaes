@@ -1,6 +1,6 @@
 ---
 title: Responsive Design
-last_modified_at: 2025-05-09 09:48:49 +0200
+last_modified_at: 2025-05-09 12:08:47 +0200
 date: 2025-04-04 10:48:04 +0200
 ---
 
@@ -72,5 +72,6 @@ img {
 Maak een nieuwe website via de regels van responsive design.  
 Je website heeft deze zaken:
 
-- **Navigatie balk** die overgaat in een **hamburger menu of bottom navigation**.
-- Landing page met duidelijke **call to action**.
+- **Navigatie balk** die overgaat in een **hamburger menu** wanneer de pagina kleiner is dan 500 pixels.
+  - De **navigatie balk** bevat links een **titel** en rechts **links**.
+  - Het **hamburger menu** opent een fullscreen menu waarin de titel bovenaan staat, en de links onder elkaar.
