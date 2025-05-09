@@ -1,6 +1,6 @@
 ---
 title: Responsive Design
-last_modified_at: 2025-05-09 14:00:34 +0200
+last_modified_at: 2025-05-09 15:13:38 +0200
 date: 2025-04-04 10:48:04 +0200
 ---
 
@@ -66,6 +66,44 @@ img {
   }
 }
 ```
+
+# Praktische tips
+
+## Elementen tonen en verbeteren
+
+Je kan elementen **verbergen** met `display:none`, bijvoorbeeld bij een dropdown of mobiele navigatie.
+
+```css
+.hidden {
+  display: none;
+}
+```
+
+Je kan elementen terug zichtbaar maken met:
+
+- `display: block`: Toont het element als een blok. Het neemt de hele breedte in van zijn container.  
+   **Zoals `<div>`-elementen.**
+- `display: inline`: Toont het element naast andere elementen zonder een nieuwe regel te starten.  
+   **Zoals `<span>`-elementen.**
+
+## Fullscreen overlay
+
+Fullscreen overlays worden in webdesign vaak gebruikt om **fullscreen menu's of pop-ups** te maken.
+
+```css
+.fixed-button {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+  background: black;
+  opacity: 0.9;
+}
+```
+
+- `position: fixed` zet een element vast op het scherm, los van andere elementen. Het blijft altijd op dezelfde plek, ook als je scrolt. Het wordt gepositioneerd ten opzichte van het browservenster, niet van een ander element.
+- Met `top`, `bottom`, `left` en `right` kan je de plaats bepalen.
+- De `z-index` bepaalt welk element bovenop komt te liggen als meerdere elementen elkaar overlappen. Een element met een hogere z-index ligt bovenop een element met een lagere z-index. De standaard z-index is 0.
 
 # Opdracht: Responsive design
 
