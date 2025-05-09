@@ -1,6 +1,6 @@
 ---
 title: Responsive Design
-last_modified_at: 2025-05-09 12:44:12 +0200
+last_modified_at: 2025-05-09 14:00:34 +0200
 date: 2025-04-04 10:48:04 +0200
 ---
 
@@ -74,7 +74,7 @@ Je website heeft deze zaken:
 
 - **Navigatie balk** die overgaat in een **hamburger menu** wanneer de pagina kleiner is dan 500 pixels.
   - De **navigatie balk** bevat **links een titel** en **rechts links**.
-  - Het **hamburger menu** opent een **fullscreen overlay menu** waarin de titel bovenaan staat, en de links onder elkaar.
+  - Het **hamburger menu** opent een **fullscreen overlay menu** waarin de titel bovenaan staat, en de links onder elkaar. Het fullscreen overlay menu openen doe je best via **JavaScript**.
 - Maak 2 tekstblokken en daarin tekst van 12 pixels groot.
   - De eerste neemt 10% van de breedte van de pagina in, de tweede 30%.
   - Als het scherm **horizontaal** staat _(het is breder dan het hoog is, zoals desktops en laptops)_, staan de tekstblokken naast elkaar.
