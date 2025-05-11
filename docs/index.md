@@ -1,6 +1,6 @@
 ---
 title: Meneer Maes
-last_modified_at: 2025-04-22 13:26:03 +0200
+last_modified_at: 2025-05-11 15:27:51 +0200
 date: 2024-03-13T10:31:28+01:00
 ---
 
@@ -43,3 +43,7 @@ date: 2024-03-13T10:31:28+01:00
 [Linux Survival: een game dat je de beginselen van de Linux terminal leert](https://linuxsurvival.com/)
 
 [Linux for Hackers](content/uitbreiding/Linux%20Basics%20for%20Hackers.pdf)
+
+## Privacy
+
+[Contro Chrome: een kritische webcomic over Google Chrome](https://contrachrome.com/)
