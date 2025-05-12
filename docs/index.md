@@ -1,6 +1,6 @@
 ---
 title: Meneer Maes
-last_modified_at: 2025-05-11 15:27:51 +0200
+last_modified_at: 2025-05-12 16:08:21 +0200
 date: 2024-03-13T10:31:28+01:00
 ---
 
@@ -46,4 +46,4 @@ date: 2024-03-13T10:31:28+01:00
 
 ## Privacy
 
-[Contro Chrome: een kritische webcomic over Google Chrome](https://contrachrome.com/)
+[Contra Chrome: een kritische webcomic over Google Chrome](https://contrachrome.com/)
