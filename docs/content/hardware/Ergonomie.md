@@ -1,12 +1,12 @@
 ---
 title: Ergonomie
-last_modified_at: 2025-05-08 11:56:12 +0200
+last_modified_at: 2025-05-13 15:02:36 +0200
 date: 2025-05-08 09:25:52 +0200
 ---
 
 > Hoe is jullie bureau thuis ingericht?
 
-- **Waar werk je meestal?** Zit je aan een bureau, op een stoel, in bed, op de bank, of ergens anders
+- **Waar werk je meestal?** Zit je aan een bureau, op een stoel, in bed, op de bank, of ergens anders?
 - **Gebruik je meerdere schermen?**
 - **Hoe zit je bij het gebruik van je computer?**
 - **Heb je last van ongemakken tijdens of na het werken?**
@@ -67,19 +67,22 @@ RSI kan verschillende delen van het lichaam aantasten, maar komt het meest voor 
 - **Oefeningen voor ontspanning:**  
   Regelmatige rekoefeningen voor je polsen, schouders en nek kunnen helpen om spanning te verlichten.
 
-# Opdracht: Check je werkplek
+# Opdracht 1: Check je werkplek
 
 ## 1. Analyse van je werkplek
 
-Download dit document en gebruik de checklist om je werkplek op school the analyseren.
+1. Neem een foto van hoe de plaats waar je meestal werkt voor school eruit zien.
+2. Download dit document en analyseer je huidige werkplek.
 
 {% include callout.html type='Download' content='**[Document: Checklist ergonomie](https://docs.google.com/document/d/1m2OJYym0evqPnFmAdybeSQICv5vwbdCN/edit?usp=sharing&ouid=114090905886704231803&rtpof=true&sd=true)**' %}
 
 ## 2. Optimalisatie van je werkplek
 
-Gebruik deze tips om je werkplek te optimaliseren.
+Gebruik deze tips om je werkplek te optimaliseren.  
+**Noteer je aanpassingen in het document samen met een foto.**  
+Als je geen aanpassingen hoeft te doen aan bijvoorbeeld je monitor, leg dan in het document uit waarom deze al correct is opgesteld.
 
-{% include callout.html type='Tip' content='Heeft je hardware niet de juiste instelmogelijkheden *(zoals een monitor die niet in hoogte verstelbaar is)*? Wees creatief *(en gebruik bijvoorbeeld een stapel boeken of een stevige doos om het scherm op ooghoogte te brengen)*.' %}
+{% include callout.html type='Tip' content='Heeft je hardware niet de juiste instelmogelijkheden (zoals een monitor die niet in hoogte verstelbaar is)? Wees creatief (en gebruik bijvoorbeeld een stapel boeken of een stevige doos om het scherm op ooghoogte te brengen).' %}
 
 **Stoel**
 
@@ -111,40 +114,46 @@ Gebruik deze tips om je werkplek te optimaliseren.
 
 - Zorg ervoor dat je benen comfortabel kunnen bewegen en dat er geen obstakels zijn.
 
-# Tips
+# Opdracht 2: Beweging aan je werkplek
 
-Te lang zitten zonder pauze
-Het is verleidelijk om uren achter elkaar door te werken, maar dit kan leiden tot overbelasting van je spieren en gewrichten. Het is belangrijk om regelmatig pauzes te nemen (bijvoorbeeld elke 30-45 minuten).
+Voor deze opdracht werk je in **groepjes van 2**.
 
-Een slechte zithouding
-Veel mensen zitten te lang met een gebogen rug of naar voren leunend. Dit belast je nek en rug en kan leiden tot chronische pijn. Zorg ervoor dat je rug recht is en dat je niet naar voren leunt.
+Bij langdurig beeldschermwerk is het belangrijk om regelmatig te bewegen en een goede werkhouding aan te nemen. In deze opdracht onderzoek je hoe je dat op een eenvoudige manier kunt toepassen én uitleggen aan anderen.
 
-Scherm te dicht of te ver weg
-Als je scherm te dicht bij je ogen staat, kun je last krijgen van oogvermoeidheid en hoofdpijn. Als het te ver weg staat, moet je je nek telkens draaien om het te zien, wat ook pijnlijk kan zijn.
+## 1. Bewegingsoefening
 
-Te weinig variatie in werkhouding
-Sta af en toe op, beweeg, of wissel van houding. Een statische houding is schadelijk op de lange termijn.
+1. Kies samen één lichaamsdeel waarop je je wil richten:
+   - Pols
+   - Schouders
+   - Nek
+   - Rug 
+   - Ogen 
+   - Vingers
+   - ...
+2. Zoek een geschikte bewegingsoefening voor je gekozen lichaamsdeel.
+3. Beantwoord deze vragen:
+   - Waarom is beweging voor dit lichaamsdeel belangrijk bij beeldschermwerk?
+   - Hoe vaak zou je deze oefening idealiter moeten uitvoeren.
+   - Wanneer zou je deze oefening aanraden (bijv. tijdens pauzes, na 30 minuten, enz.)?
+4. Maak een duidelijke mini-handleiding voor de oefening:
+5. Geef een **duidelijke en gestructureerde** demonstratie aan de klas.
 
-Te weinig ruimte voor je benen
-Zorg ervoor dat er geen spullen onder je bureau staan die je belemmeren om comfortabel te zitten.
+## 2. Veelgemaakte fouten
 
-# Opdracht: Beweging
+Kies één van de onderstaande problemen en onderzoek dit grondig. Je presenteert je inzichten kort aan de klas
 
-1. Hoe vaak moet je pauzeren?
+1. Te lang zitten zonder pauze
+    - Wat gebeurt er met je lichaam als je uren stilzit?
+    - Wat zijn mogelijke gevolgen op lange termijn?
+    - Hoe kun je jezelf eraan herinneren om pauze te nemen?
+2. Slechte zithouding
+    - Wat is het effect van een bolle rug of voorover leunen?
+    - Hoe ziet een goede zithouding eruit?
+    - Welke hulpmiddelen (stoel, voetensteun, schermhoogte...) kunnen hierbij helpen?
+3. Te weinig variatie in werkhouding
+    - Waarom is afwisseling belangrijk, zelfs als je goed zit?
+    - Wat zijn manieren om meer af te wisselen tijdens je werkdag?
 
-**Oefeningen**
+## Puntenverdeling
 
-- Pols
-- schouders
-- Nek
-
-## Veelgemaakte fouten
-
-- **Oefeningen te snel uitvoeren:**  
-   neem de tijd en voel wat je doet.
-- **Bewegen terwijl je gespannen zit:**  
-   ontspan je schouders en adem rustig.
-- **Te lang wachten met bewegen:**  
-   beter kort en vaak dan pas na uren achter je scherm.
-
-Laat elk duo 1 vraag uitwerken en kort presenteren aan de klas (2 min per duo max).
+{% include punten.html data='beweging-aan-je-werkplek' %} 
