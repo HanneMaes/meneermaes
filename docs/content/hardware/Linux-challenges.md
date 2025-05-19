@@ -14,26 +14,41 @@ date: 2024-11-28T13:37:48+01:00
 7. Schrijf een "fortune cookie" script met willekeurige citaten of grappen en voeg dit toe aan je `.bashrc`.
 8. Gebruik `cowsay` of `figlet` in je "fortune cookie" script.
 
-# Automatisatie
+# Je eigen Linux server 
+
+## 1. Automatisatie
 
 1. Schrijf een script dat je **belangrijkste config files en bestanden** upload naar **Google Drive** met `rclone`, zodat je een backup hebt.
 2. Maak een **shutdown script** dat eerst alle belangrijkste bestanden upload naar **Google Drive**, en daarna aflsuit zodat je altijd een backup hebt van je meest recente bestanden.
 3. Stel `Cron-jobs` in om **minstens 2 taken te automatiseren**, zoals systeem updates plannen of wekelijks downloads opruimen of organiseren.
 
-# Systeem monitoring en processen
+## 2. Systeem monitoring en processen
 
 1. Gebruik commands zoals `top`, `htop`, of `ps` om actieve processen te bekijken.
 2. Beëindig een specifiek proces veilig met `kill` of `pkill`.
 
-# Remote connection
+## 3. Remote connection
 
 1. Log met een Windows-computer in op je Linux-systeem via `ssh`.
 2. Kopieer bestanden van een Windows-computer naar je Linux-systeem via `SCP`.
 
-# Servers
+## 4. Webservers
 
 1. Leer hoe je een eenvoudige webserver start met `python3 -m http.server`
 2. Leer hoe je een eenvoudige file-sharing server start met `python3 -m http.server 8000`.
 3. Leer hoe je een lokale FTP-server opzet met `vsftpd` of `python3 -m pyftpdlib`.
+
+## Advances Servers
+
+1. Zet je eigen Nextcloud (Google Drive alternatief) server op.
+2. Zet je eigen Bitwarden password manager server op.
+3. Zet je eigen adblock server op met Pi-hole.
+4. Zet je eigen home automation server op met Home Assistant.
+
+## 5. Media centers & gameservers
+
+1. Bouw je Raspberry Pi om tot een retro gaming console.
+2. Bouw je Raspberry Pi om tot een Media center.
+3. Run een Minecraft server op je Raspberry Pi.
 
 {% include doelen.html data='linux-challenges' %}
