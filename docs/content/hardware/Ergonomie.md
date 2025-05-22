@@ -1,6 +1,6 @@
 ---
 title: Ergonomie
-last_modified_at: 2025-05-13 15:02:36 +0200
+last_modified_at: 2025-05-22 14:00:21 +0200
 date: 2025-05-08 09:25:52 +0200
 ---
 
@@ -126,8 +126,8 @@ Bij langdurig beeldschermwerk is het belangrijk om regelmatig te bewegen en een 
    - Pols
    - Schouders
    - Nek
-   - Rug 
-   - Ogen 
+   - Rug
+   - Ogen
    - Vingers
    - ...
 2. Zoek een geschikte bewegingsoefening voor je gekozen lichaamsdeel.
@@ -143,17 +143,17 @@ Bij langdurig beeldschermwerk is het belangrijk om regelmatig te bewegen en een 
 Kies één van de onderstaande problemen en onderzoek dit grondig. Je presenteert je inzichten kort aan de klas
 
 1. Te lang zitten zonder pauze
-    - Wat gebeurt er met je lichaam als je uren stilzit?
-    - Wat zijn mogelijke gevolgen op lange termijn?
-    - Hoe kun je jezelf eraan herinneren om pauze te nemen?
+   - Wat gebeurt er met je lichaam als je uren stilzit?
+   - Wat zijn mogelijke gevolgen op lange termijn?
+   - Hoe kun je jezelf eraan herinneren om pauze te nemen?
 2. Slechte zithouding
-    - Wat is het effect van een bolle rug of voorover leunen?
-    - Hoe ziet een goede zithouding eruit?
-    - Welke hulpmiddelen (stoel, voetensteun, schermhoogte...) kunnen hierbij helpen?
+   - Wat is het effect van een bolle rug of voorover leunen?
+   - Hoe ziet een goede zithouding eruit?
+   - Welke hulpmiddelen (stoel, voetensteun, schermhoogte...) kunnen hierbij helpen?
 3. Te weinig variatie in werkhouding
-    - Waarom is afwisseling belangrijk, zelfs als je goed zit?
-    - Wat zijn manieren om meer af te wisselen tijdens je werkdag?
+   - Waarom is afwisseling belangrijk, zelfs als je goed zit?
+   - Wat zijn manieren om meer af te wisselen tijdens je werkdag?
 
 ## Puntenverdeling
 
-{% include punten.html data='beweging-aan-je-werkplek' %} 
+{% include punten.html data='beweging-aan-je-werkplek' %}
