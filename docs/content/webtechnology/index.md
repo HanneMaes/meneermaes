@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2025-05-09 08:37:04 +0200
+last_modified_at: 2025-05-23 11:58:19 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -106,6 +106,8 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 [Project: Calculator](Project-Calculator)
 
 [Project: Character creator](Project-Character-creator)
+
+[Arrays](Arrays)
 
 # Responsive Design
 
