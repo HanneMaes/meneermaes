@@ -1,6 +1,6 @@
 ---
 title: FTP
-last_modified_at: 2024-05-21 15:07:48 +0200
+last_modified_at: 2025-05-27 21:35:49 +0200
 date: 2024-05-21 15:07:48 +0200
 ---
 
@@ -22,19 +22,23 @@ Met een eigen server hebben we de mogelijkheid om een breder scala aan technolog
 
 ## Front-end vs Back-end
 
+{% include toggle.html title="Front-end" content="
 De **front-end** van een website is **het deel dat gebruikers zien** en waarmee ze interactie hebben. Het omvat alles wat op de webpagina wordt weergegeven, zoals tekst, afbeeldingen, knoppen, formulieren, eigenlijk de **volledige lay-out**.
 
 **Front-end** technologieën zijn onder andere:
 - **HTML** *(HyperText Markup Language)*
 - **CSS** *(Cascading Style Sheets)*
 - **JavaScript**
+" %}
 
+{% include toggle.html title="Back-end" content="
 De **back-end** is het **deel van de website dat op de server draait**. Het handelt verzoeken van de front-end af, voert berekeningen uit en stuurt gegevens terug naar de front-end.
 
 **Back-end** technologieën zijn onder andere:
 - **PHP**
 - **Databases**
 - **Node.js**
+" %}
 
 GitHub Pages staat alleen **front-end** websites toe *(websites die gebruik maken van HTML, CSS en JavaScript)*. Alle berekeningen gebeuren aan de kant van de gebruiker *(in de browser, op het toestel van de gebruiker)*. Dit **minimaliseert de belasting van hun server**, omdat er geen server-side scripts worden uitgevoerd.  
 
