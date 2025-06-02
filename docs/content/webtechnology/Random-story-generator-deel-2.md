@@ -137,6 +137,21 @@ date: 2025-02-14 15:47:54 +0200
 2. Voeg de gekozen opties toe aan je verhaal.
    Geef de gekozen opties CSS-styling zodat deze duidelijk zichtbaar is.
 
+# Stap 5: CSS-styling toevoegen aan de volledige pagina 
+
+Je kan ook CSS-styling toevoegen **rechtstreeks op de `body` van de pagina:**
+
+```css
+.darkmode {
+  color: white;
+  background-color: black;
+}
+```
+
+```javascript
+document.body.classList.add("darkmode");
+```
+
 # 🏆 Uitbreiding: Choose your own adventure
 
 Creëer een interactief verhaal met meerdere paden, waarbij de lezer zijn eigen beslissingen kan nemen door middel van knoppen die verschillende keuzemogelijkheden presenteren.
