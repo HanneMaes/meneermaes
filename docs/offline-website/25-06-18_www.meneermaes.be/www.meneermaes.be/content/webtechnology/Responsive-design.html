@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Responsive Design</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Webtechnology</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Responsive Design</header>
+
+        <!-- content -->
+        <h1 id="wat-is-responsive-design">Wat is responsive design?</h1>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSnFaYYHLrTxCS8w7qM_RWBAPidlXrqNC8wq69L0Y17hAPQc3yUAL5dvAj7R1BKdA/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="1280" height="515" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<h1 id="hoe-maak-je-een-website-responsive">Hoe maak je een website responsive?</h1>
+
+<h3 id="min--en-max-values">Min- en max-values</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">90%</span><span class="p">;</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="py">mix-width</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="media-queries-oriëntatie-liggendportret">Media queries: Oriëntatie (Liggend/Portret)</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* Portretmodus */</span>
+<span class="k">@media</span> <span class="n">only</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">orientation</span><span class="p">:</span> <span class="nb">portrait</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c">/* Liggende */</span>
+<span class="k">@media</span> <span class="n">only</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">orientation</span><span class="p">:</span> <span class="nb">landscape</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="media-queries-scherm-breedte">Media queries: Scherm breedte</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* Schermen breder van 700px */</span>
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">700px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c">/* Schermen tussen 530px en 700px breed */</span>
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">700px</span><span class="p">)</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">530px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="n">grey</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c">/* Schermen kleiner dan 530px breed */</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">530px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="praktische-tips">Praktische tips</h1>
+
+<h2 id="elementen-tonen-en-verbeteren">Elementen tonen en verbeteren</h2>
+
+<p>Je kan elementen <strong>verbergen</strong> met <code class="language-plaintext highlighter-rouge">display:none</code>, bijvoorbeeld bij een dropdown of mobiele navigatie.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.hidden</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Je kan elementen terug zichtbaar maken met:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">display: block</code>: Toont het element als een blok. Het neemt de hele breedte in van zijn container.<br />
+ <strong>Zoals <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>-elementen.</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">display: inline</code>: Toont het element naast andere elementen zonder een nieuwe regel te starten.<br />
+ <strong>Zoals <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>-elementen.</strong></li>
+</ul>
+
+<h2 id="fullscreen-overlay">Fullscreen overlay</h2>
+
+<p>Fullscreen overlays worden in webdesign vaak gebruikt om <strong>fullscreen menu’s of pop-ups</strong> te maken.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.fixed-button</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0px</span><span class="p">;</span>
+  <span class="nl">right</span><span class="p">:</span> <span class="m">0px</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0.9</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">position: fixed</code> zet een element vast op het scherm, los van andere elementen. Het blijft altijd op dezelfde plek, ook als je scrolt. Het wordt gepositioneerd ten opzichte van het browservenster, niet van een ander element.</li>
+  <li>Met <code class="language-plaintext highlighter-rouge">top</code>, <code class="language-plaintext highlighter-rouge">bottom</code>, <code class="language-plaintext highlighter-rouge">left</code> en <code class="language-plaintext highlighter-rouge">right</code> kan je de plaats bepalen.</li>
+  <li>De <code class="language-plaintext highlighter-rouge">z-index</code> bepaalt welk element bovenop komt te liggen als meerdere elementen elkaar overlappen. Een element met een hogere z-index ligt bovenop een element met een lagere z-index. De standaard z-index is 0.</li>
+</ul>
+
+<h1 id="opdracht-responsive-design">Opdracht: Responsive design</h1>
+
+<p>Maak een nieuwe website via de regels van responsive design.<br />
+Je website heeft deze zaken:</p>
+
+<ul>
+  <li>Maak 2 tekstblokken en daarin tekst van 12 pixels groot.
+    <ul>
+      <li>De eerste neemt 10% van de breedte van de pagina in, de tweede 30%.</li>
+      <li>Als het scherm <strong>horizontaal</strong> staat <em>(het is breder dan het hoog is, zoals desktops en laptops)</em>, staan de tekstblokken naast elkaar.</li>
+      <li>Als het scherm <strong>verticaal</strong> staan <em>(het is hoger dan het breed is, zoals bij smartphones)</em>, staan de tekstblokken onder elkaar.</li>
+    </ul>
+  </li>
+  <li>Laat de tekstgrootte aanpassen aan de hand van de breedte van het scherm:
+    <ul>
+      <li>Schermen <strong>kleiner dan 300 pixels</strong> -&gt; tekstgrootte van <strong>30 pixels</strong>.</li>
+      <li>Schermen <strong>tussen 300 en 600 pixels</strong> -&gt; tekstgrootte van <strong>20 pixels</strong>.</li>
+    </ul>
+  </li>
+  <li><strong>Navigatie balk</strong> die overgaat in een <strong>hamburger menu</strong> wanneer de pagina kleiner is dan 500 pixels.
+    <ul>
+      <li>De <strong>navigatie balk</strong> bevat <strong>links een titel</strong> en <strong>rechts links</strong>.</li>
+      <li>Het <strong>hamburger menu</strong> opent een <strong>fullscreen overlay menu</strong> waarin de titel bovenaan staat, en de links onder elkaar. Het fullscreen overlay menu openen doe je best via <strong>JavaScript</strong>.</li>
+    </ul>
+  </li>
+</ul>
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 04/04/2025, last edited on 09/05/2025
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

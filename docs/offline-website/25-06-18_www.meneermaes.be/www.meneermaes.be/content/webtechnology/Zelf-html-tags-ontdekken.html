@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Zelf HTML-tags ontdekken</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Webtechnology</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Zelf HTML-tags ontdekken</header>
+
+        <!-- content -->
+        <h1 id="wat-doen-deze-html-tags">Wat doen deze HTML-tags?</h1>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;h2&gt;&lt;/h2&gt;</code>, …, <code class="language-plaintext highlighter-rouge">&lt;h6&gt;&lt;/h6&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;small&gt;&lt;/small&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;sup&gt;&lt;/sup&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;center&gt;&lt;/center&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;hr&gt;</code></li>
+</ul>
+
+<h1 id="w3schools--mdn">W3Schools &amp; MDN</h1>
+
+<blockquote>
+  <p>W3Schools en MDN zijn als de Wikipedia’s van webdesign</p>
+</blockquote>
+
+<p>Zelfs professionele webdesigners gebruiken de websites W3Schools en MDN omdat ze niet alle HTML-tags uit hun hoofd kennen.<br />
+Ook raadplegen ze deze websites om nieuwe tags en technieken op te zoeken en bij te leren.</p>
+
+<p><a href="https://www.w3schools.com/">W3Schools</a></p>
+
+<p><a href="https://developer.mozilla.org">MDN</a></p>
+
+<h1 id="opdracht-01-zoek-zelf-html-tags">Opdracht 01: Zoek zelf HTML-tags</h1>
+
+<p>Start met deze code:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>
+    E = MC2
+    <span class="nt">&lt;br&gt;</span>
+    H2O
+<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>
+    Wanneer ik hier met mijn muis over ga, komt er extra info tevoorschijn.
+<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<p>Maak deze website na:</p>
+<div class="browserWindow" style="width: 500px;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/namaken.png" />
+</div>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">tip</p>
+   <p><p>Gebruik nooit 2x <code class="language-plaintext highlighter-rouge">&lt;br&gt;</code> meteen na elkaar.</p>
+</p>
+
+</div>
+<p>Hoe lang zal het duren om deze simple Hello world website te maken.</p>
+
+<!------------------>
+<!-- CSV TO ARRAY -->
+<!------------------>
+
+<!-- get the last dir in the path of the markdown file that is including this file -->
+
+<!-- turn the CSV into an array -->
+
+<!---------->
+<!-- PAGE -->
+<!---------->
+
+<!-- table -->
+<table>
+
+   <!-- header -->
+   <thead>
+      <tr>
+         <th>
+            <em>Puntenverdeling:</em>
+                   <!-- get the filename -->
+             <!-- replace all '-' with spaces -->
+            Zoek zelf html tags
+         </th>
+         <th></th>
+      </tr>
+   </thead>
+
+   <!-- body -->
+   <tbody>
+      
+      <tr>
+         <td>Headers 1 2 en 3</td>
+         <td class="punt"> 1</td>
+      </tr>
+      
+      <tr>
+         <td>De ‘(header)’ moet kleiner zijn dan de rest van de header tekst</td>
+         <td class="punt"> 3</td>
+      </tr>
+      
+      <tr>
+         <td>De ‘2’ van ‘E = MC2’ moet hoger staan</td>
+         <td class="punt"> 1</td>
+      </tr>
+      
+      <tr>
+         <td>De ‘2’ van ‘H2O’ moet lager staan</td>
+         <td class="punt"> 1</td>
+      </tr>
+      
+      <tr>
+         <td>Knop</td>
+         <td class="punt"> 1</td>
+      </tr>
+      
+      <tr>
+         <td>Twee horizontale lijnen</td>
+         <td class="punt"> 1</td>
+      </tr>
+      
+      <tr>
+         <td>Een unordered</td>
+         <td class="punt"> 3</td>
+      </tr>
+      
+      <tr>
+         <td>Een ordered list</td>
+         <td class="punt"> 3</td>
+      </tr>
+      
+      <tr>
+         <td>Een progress bar</td>
+         <td class="punt"> 3</td>
+      </tr>
+      
+      <tr>
+         <td>Een abbreviation</td>
+         <td class="punt"> 3</td>
+      </tr>
+      
+      <tr>
+         <td>Je maakt correct gebruik van de p en br tags</td>
+         <td class="punt"> 4</td>
+      </tr>
+      
+
+      <!-- Total row -->
+      <tr class="puntenTotaal">
+         <td>Totaal</td>
+         <td class="punt">
+            
+            
+            24
+         </td>
+      </tr>
+   </tbody>
+</table>
+
+<h1 id="opdracht-02-afbeeldingen--videos">Opdracht 02: Afbeeldingen &amp; video’s</h1>
+
+<ol>
+  <li>Maak een nieuwe website.</li>
+  <li>Zoek via MDN of W3Schools hoe je <strong>afbeeldingen</strong> en <strong>video’s</strong> toe kan voegen aan je website.</li>
+  <li>Zoek <strong>2 HTML-tags</strong> die we nog niet gezien hebben en voeg deze toe aan je website.</li>
+  <li>Zoek het verschil op tussen de <code class="language-plaintext highlighter-rouge">&lt;br&gt;</code> en <code class="language-plaintext highlighter-rouge">&lt;p&gt;&lt;/p&gt;</code> tags.<br />
+ Leg op je website het verschil uitlegt en zorg ervoor dat je correct gebruikt maakt van deze tags.</li>
+</ol>
+
+<!------------------>
+<!-- CSV TO ARRAY -->
+<!------------------>
+
+<!-- get the last dir in the path of the markdown file that is including this file -->
+
+<!-- turn the CSV into an array -->
+
+<!---------->
+<!-- PAGE -->
+<!---------->
+
+<!-- table -->
+<table>
+
+   <!-- header -->
+   <thead>
+      <tr>
+         <th>
+            <em>Puntenverdeling:</em>
+                   <!-- get the filename -->
+             <!-- replace all '-' with spaces -->
+            Afbeeldingen videos
+         </th>
+         <th></th>
+      </tr>
+   </thead>
+
+   <!-- body -->
+   <tbody>
+      
+      <tr>
+         <td>Je voegt op de correcte manier een afbeeling toe</td>
+         <td class="punt"> 2</td>
+      </tr>
+      
+      <tr>
+         <td>Je voegt op de correcte manier een video toe</td>
+         <td class="punt"> 2</td>
+      </tr>
+      
+      <tr>
+         <td>Je voeg 2 nieuwe HTML-tags toe</td>
+         <td class="punt"> 4</td>
+      </tr>
+      
+      <tr>
+         <td>Je legt het verschil uit tussen de br en p tags</td>
+         <td class="punt"> 2</td>
+      </tr>
+      
+      <tr>
+         <td>Je maakt correct gebruik van de br en p tags</td>
+         <td class="punt"> 2</td>
+      </tr>
+      
+
+      <!-- Total row -->
+      <tr class="puntenTotaal">
+         <td>Totaal</td>
+         <td class="punt">
+            
+            
+            12
+         </td>
+      </tr>
+   </tbody>
+</table>
+
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 20/03/2024, last edited on 19/09/2024
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

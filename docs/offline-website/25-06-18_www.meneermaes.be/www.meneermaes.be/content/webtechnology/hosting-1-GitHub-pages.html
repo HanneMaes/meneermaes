@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Hosting 1 Github Pages</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Webtechnology</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Hosting 1 Github Pages</header>
+
+        <!-- content -->
+        <p>Tijdens deze opdracht gaan we een website <strong>publiceren en onderhouden.</strong> Kies een thema dat je persoonlijk interesseert. Dit kan variëren van hobby’s, nieuws, tot persoonlijke projecten. Het belangrijkste is dat je gemotiveerd blijft om de <strong>inhoud regelmatig bij te werken</strong>.</p>
+
+<h1 id="git-downloaden">Git downloaden</h1>
+
+<p>Controleer of <strong>Git bash</strong> op je computer staat, zo niet download en installeer je het via: <a href="https://gitforwindows.org/">https://gitforwindows.org/</a></p>
+
+<h1 id="nieuw-github-project">Nieuw GitHub project</h1>
+
+<ol>
+  <li>
+    <p>Maak een <strong>nieuwe repository</strong> op GitHub.<br />
+Het is belangrijk dat je een <strong>README.md</strong> file toegevoegd.<br />
+<img src="images/githubpages-readme.png" alt="" class="frame" width="600px" /></p>
+
+    <ul>
+      <li><strong>Add a README file</strong>
+        <ul>
+          <li>Een README-bestand is een markdown bestand dat vaak wordt toegevoegd aan een repository om <strong>belangrijke informatie</strong> te verstrekken. Het kan details bevatten zoals installatie instructies, gebruik, bijdragersrichtlijnen en andere relevante informatie.<br />
+Het dient als de <strong>startpagina</strong> voor het project.</li>
+        </ul>
+      </li>
+      <li><strong>Public vs Private</strong>
+        <ul>
+          <li>Iedereen kan een <strong>public</strong> repository bekijken en klonen. Ze kunnen ook suggesties voor wijzigingen (pull requests) doen.</li>
+          <li>Alleen mensen die zijn uitgenodigd door de eigenaar van de repository hebben toegang tot een <strong>private</strong> repository. De inhoud is niet zichtbaar voor anderen.<br />
+Op je website online te zetten via GitHub Pages moet je repository <strong>public</strong> zijn.</li>
+        </ul>
+      </li>
+      <li><strong>Optioneel: Add .gitignore</strong>
+        <ul>
+          <li>Het .gitignore-bestand wordt gebruikt om bepaalde bestanden of mappen uit te sluiten van versiebeheer.</li>
+        </ul>
+      </li>
+      <li><strong>Optioneel: Choose a license</strong>
+        <ul>
+          <li>Het kiezen van een licentie is belangrijk om de voorwaarden te bepalen waaronder anderen je code mogen gebruiken, wijzigen en verspreiden.</li>
+          <li>Een licentie is <strong>niet verplicht</strong>, maar het is <strong>aan te raden</strong> om er een toe te voegen, in lijn met de <strong>principes van open source</strong>.</li>
+          <li>Als je <strong>geen licentie</strong> kiest, wordt je code <strong>automatisch</strong> beschermd door het <strong>auteursrecht</strong>.<br />
+<em>Andere kunnen je code bekijken, maar mogen deze niet gebruiken, toch geeft GitHub hen nog steeds de optie je code to clonen.</em><br />
+→ Hier vind je meer informatie over licenties: <a href="licenties.html">Licenties</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Clone</strong> je GitHub naar je computer</p>
+
+    <ol>
+      <li>
+        <p><strong>Kopieer</strong> de <strong>url</strong> van de repository: <code class="language-plaintext highlighter-rouge">Code &gt; Local &gt; HTTPS</code></p>
+
+        <p><img src="images/ghpages.png" alt="Untitled" class="frame" width="400px" /></p>
+      </li>
+      <li>Open een <strong>terminal</strong> op de <strong>locatie</strong> waar je <strong>project</strong> moet komen.
+        <ul>
+          <li>Windows PowerShell: <code class="language-plaintext highlighter-rouge">Rechter klik &gt; Openen in Terminal</code></li>
+          <li>VS Code: <code class="language-plaintext highlighter-rouge">ctrl + shift + p &gt; Create New Terminal</code></li>
+        </ul>
+      </li>
+      <li><strong>Clone</strong> de repository: <code class="language-plaintext highlighter-rouge">git clone &lt;repo url&gt;</code><br />
+Als alles goed gelopen is, heb je nu een folder met de GitHub repository waarin je kan beginnen werken.</li>
+    </ol>
+  </li>
+</ol>
+
+<h1 id="maak-een-website">Maak een website</h1>
+
+<p>Maak een website in de nieuwe folder die je net gecloned hebt.</p>
+
+<h1 id="push-code-uploaden">Push: Code uploaden</h1>
+
+<ol>
+  <li>Voeg de bestanden toe die je wil pushen (uploaden) naar GitHub.
+    <ul>
+      <li>1 bestand toevoegen: <code class="language-plaintext highlighter-rouge">git add index.html</code>.</li>
+      <li>Meerdere bestanden toevoegen: <code class="language-plaintext highlighter-rouge">git add index.html styles.css</code>.</li>
+      <li>Alle bestanden in de locatie toevoegen: <code class="language-plaintext highlighter-rouge">git add *</code>.</li>
+    </ul>
+  </li>
+  <li>Controleer of alle bestanden zijn toegevoegd: <code class="language-plaintext highlighter-rouge">git status</code>.
+    <ul>
+      <li>Wil je de <code class="language-plaintext highlighter-rouge">git add</code> ongedaan maken, gebruik dat dit command: <code class="language-plaintext highlighter-rouge">git reset</code>.</li>
+    </ul>
+  </li>
+  <li>Als alle bestanden toegevoegd zijn maar je een nieuwe commit: <code class="language-plaintext highlighter-rouge">git commit -m 'message'</code>.
+    <ul>
+      <li>Verander <code class="language-plaintext highlighter-rouge">'message'</code> door wat je hebt aangepast aan je website, zo heb je een duidelijk overzicht van alle aanpassingen.</li>
+    </ul>
+  </li>
+  <li>Push (upload) alle bestanden naar GitHub: <code class="language-plaintext highlighter-rouge">git push</code>.</li>
+</ol>
+
+<p>Wil je bij een conflict je lokale versie pushen: <code class="language-plaintext highlighter-rouge">git push --force origin main</code>.</p>
+
+<h1 id="website-publiceren-via-github-pages">Website publiceren via GitHub pages</h1>
+
+<ol>
+  <li>Ga naar de <strong>settings</strong> van je GitHub repo <em>(niet de settings van je account)</em>.<br />
+<code class="language-plaintext highlighter-rouge">Settings (balk bovenaan) &gt; Pages (balk rechts)</code></li>
+  <li><strong>Branch</strong>: selecteer de folder die je wil publiceren als website.
+    <ul>
+      <li><strong>Master</strong>: publiceer je hele project al website.</li>
+      <li><strong>Custom folder</strong>: je kan ervoor kiezen enkel een deel van je project te publiceren als website (vaak de <code class="language-plaintext highlighter-rouge">docs/</code> folder). Zo kan je naast je website ook andere bestanden hebben zoals test- of onafgewerkte pagina’s, design assets, …</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Als alles goed gelopen is, krijg je bovenaan de <code class="language-plaintext highlighter-rouge">Pages</code> pagina in de <code class="language-plaintext highlighter-rouge">Settings</code> het adres voor je website te zien:</p>
+
+<p><img src="images/ghlive.png" alt="" class="frame" width="700px" /></p>
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 20/03/2025, last edited on 28/03/2025
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

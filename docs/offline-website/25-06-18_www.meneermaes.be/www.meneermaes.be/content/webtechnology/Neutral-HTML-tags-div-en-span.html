@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Neutral Html Tags:<br> div & span</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Webtechnology</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Neutral Html Tags:<br> div & span</header>
+
+        <!-- content -->
+        <p>Zowel <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> als <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> zijn veelgebruikte HTML-elementen die dienen als “containers” om inhoud te structureren.</p>
+
+<p>Ze zijn <strong>neutraal</strong> en hebben <strong>geen standaard visuele opmaak</strong> <em>(zoals kleur, grootte, of marges)</em>. Hierdoor functioneren ze als een leeg canvas, waarop je met CSS <strong>volledige controle</strong> hebt om stijlen toe te passen.</p>
+
+<h1 id="belangrijkste-verschillen">Belangrijkste verschillen</h1>
+
+<p>Hoewel beide elementen gebruikt worden om inhoud te groeperen, zijn er belangrjke verschillen:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> is een <strong>inline-element</strong>:
+  Dat betekent dat het wordt weergegeven binnen de normale stroom van een tekstregel. 
+  Het is geschikt voor het toepassen van stijlen op <strong>woorden, zinnen, of delen van een tekst</strong>.</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> is een <strong>blok-element</strong>
+  Dat betekent dat het <strong>altijd een nieuwe regel begint en de volledige breedte van zijn oudercontainer inneemt</strong>.
+  Het wordt vaak gebruikt om secties van een webpagina te definiëren of om groepen van elementen samen te voegen.</li>
+</ul>
+
+<h2 id="test-zelf-het-verschil">Test zelf het verschil</h2>
+
+<p>Start met het maken van deze HTML-pagina.<br />
+Je zal niets zien van de <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> en <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> elementen, dit komt omdat het <strong>blanco</strong> elementen zijn, die <strong>geen standaard visuele opmaak</strong> hebben. Dit zorgt ervoor dat je vanaf nul kunt beginnen met het ontwerpen.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>
+    Dit is <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"styling"</span><span class="nt">&gt;</span>span element.<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+    Dit is <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"styling"</span><span class="nt">&gt;</span>div element.<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<p>Je zult ze pas zien of opmerken op je webpagina als je ze zelf stijlen met CSS:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.styling</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="combineren-met-andere-elementen">Combineren met andere elementen</h1>
+
+<h2 id="span-combineren"><code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> combineren</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>SPAN combineren met <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spanNaam"</span><span class="nt">&gt;</span>andere<span class="nt">&lt;/span&gt;</span> elementen<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"divNaam"</span><span class="nt">&gt;</span>
+    Dit is een DIV.<span class="nt">&lt;br&gt;</span>
+    Dit is een <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spanNaam"</span><span class="nt">&gt;</span>SPAN<span class="nt">&lt;/span&gt;</span>.
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.divNaam</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">cyan</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.spanNaam</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">pink</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.divTwee</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="div-combineren"><code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> combineren</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>SPAN combineren met <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spanNaam"</span><span class="nt">&gt;</span>andere<span class="nt">&lt;/span&gt;</span> elementen<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"divNaam"</span><span class="nt">&gt;</span>
+    Dit is een DIV.<span class="nt">&lt;br&gt;</span>
+    Dit is een <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spanNaam"</span><span class="nt">&gt;</span>SPAN<span class="nt">&lt;/span&gt;</span>.
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"divTwee"</span><span class="nt">&gt;</span>Dit is een 2e div<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.divNaam</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">cyan</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.spanNaam</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">pink</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.divTwee</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="blijven-gaan">Blijven gaan!</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>SPAN combineren met <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spanNaam"</span><span class="nt">&gt;</span>andere<span class="nt">&lt;/span&gt;</span> elementen<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"divNaam"</span><span class="nt">&gt;</span>
+    Dit is een DIV.<span class="nt">&lt;br&gt;</span>
+    Dit is een <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spanNaam"</span><span class="nt">&gt;</span>SPAN<span class="nt">&lt;/span&gt;</span>.
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"divTwee"</span><span class="nt">&gt;</span>Dit is een 2e div, met <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spanNaam"</span><span class="nt">&gt;</span>terug<span class="nt">&lt;/span&gt;</span> een span<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.divNaam</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">cyan</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.spanNaam</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">pink</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.divTwee</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 18/10/2024, last edited on 18/10/2024
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

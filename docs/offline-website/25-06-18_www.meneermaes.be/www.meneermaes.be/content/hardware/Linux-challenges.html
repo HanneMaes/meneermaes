@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Linux challenges</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Hardware</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Linux challenges</header>
+
+        <!-- content -->
+        <h1 id="terminal-aanpassen">Terminal aanpassen</h1>
+
+<ol>
+  <li>Leer hoe je het systeem kunt updaten en apps kan installeren via <code class="language-plaintext highlighter-rouge">apt</code>.</li>
+  <li>Installeer <code class="language-plaintext highlighter-rouge">screenfetch</code> om systeem informatie weer te geven wanneer je de terminal opent.</li>
+  <li>Zoek uit wat de functie van <code class="language-plaintext highlighter-rouge">.bashrc</code> is.</li>
+  <li>Zoek uit hoe je tekstbestanden aan kan passen via <code class="language-plaintext highlighter-rouge">nano</code> of <code class="language-plaintext highlighter-rouge">vim</code>.</li>
+  <li>Schrijf een script om een aangepaste begroeting en de huidige systeemdatum en -tijd weer te geven wanneer je de terminal opent.</li>
+  <li>Gebruik een <code class="language-plaintext highlighter-rouge">alias</code> om het script makkelijker uit te voeren.</li>
+  <li>Schrijf een “fortune cookie” script met willekeurige citaten of grappen en voeg dit toe aan je <code class="language-plaintext highlighter-rouge">.bashrc</code>.</li>
+  <li>Gebruik <code class="language-plaintext highlighter-rouge">cowsay</code> of <code class="language-plaintext highlighter-rouge">figlet</code> in je “fortune cookie” script.</li>
+</ol>
+
+<h1 id="je-eigen-linux-server">Je eigen Linux server</h1>
+
+<h2 id="1-automatisatie">1. Automatisatie</h2>
+
+<ol>
+  <li>Schrijf een script dat je <strong>belangrijkste config files en bestanden</strong> upload naar <strong>Google Drive</strong> met <code class="language-plaintext highlighter-rouge">rclone</code>, zodat je een backup hebt.</li>
+  <li>Maak een <strong>shutdown script</strong> dat eerst alle belangrijkste bestanden upload naar <strong>Google Drive</strong>, en daarna aflsuit zodat je altijd een backup hebt van je meest recente bestanden.</li>
+  <li>Stel <code class="language-plaintext highlighter-rouge">Cron-jobs</code> in om <strong>minstens 2 taken te automatiseren</strong>, zoals systeem updates plannen of wekelijks downloads opruimen of organiseren.</li>
+</ol>
+
+<h2 id="2-systeem-monitoring-en-processen">2. Systeem monitoring en processen</h2>
+
+<ol>
+  <li>Gebruik commands zoals <code class="language-plaintext highlighter-rouge">top</code>, <code class="language-plaintext highlighter-rouge">htop</code>, of <code class="language-plaintext highlighter-rouge">ps</code> om actieve processen te bekijken.</li>
+  <li>Beëindig een specifiek proces veilig met <code class="language-plaintext highlighter-rouge">kill</code> of <code class="language-plaintext highlighter-rouge">pkill</code>.</li>
+</ol>
+
+<h2 id="3-remote-connection">3. Remote connection</h2>
+
+<ol>
+  <li>Log met een Windows-computer in op je Linux-systeem via <code class="language-plaintext highlighter-rouge">ssh</code>.</li>
+  <li>Kopieer bestanden van een Windows-computer naar je Linux-systeem via <code class="language-plaintext highlighter-rouge">SCP</code>.</li>
+</ol>
+
+<h2 id="4-webservers">4. Webservers</h2>
+
+<ol>
+  <li>Leer hoe je een eenvoudige webserver start met <code class="language-plaintext highlighter-rouge">python3 -m http.server</code></li>
+  <li>Leer hoe je een eenvoudige file-sharing server start met <code class="language-plaintext highlighter-rouge">python3 -m http.server 8000</code>.</li>
+  <li>Leer hoe je een lokale FTP-server opzet met <code class="language-plaintext highlighter-rouge">vsftpd</code> of <code class="language-plaintext highlighter-rouge">python3 -m pyftpdlib</code>.</li>
+</ol>
+
+<h2 id="advances-servers">Advances Servers</h2>
+
+<ol>
+  <li>Zet je eigen Nextcloud (Google Drive alternatief) server op.</li>
+  <li>Zet je eigen Bitwarden password manager server op.</li>
+  <li>Zet je eigen adblock server op met Pi-hole.</li>
+  <li>Zet je eigen home automation server op met Home Assistant.</li>
+</ol>
+
+<h2 id="5-media-centers--gameservers">5. Media centers &amp; gameservers</h2>
+
+<ol>
+  <li>Bouw je Raspberry Pi om tot een retro gaming console.</li>
+  <li>Bouw je Raspberry Pi om tot een Media center.</li>
+  <li>Run een Minecraft server op je Raspberry Pi.</li>
+</ol>
+
+<!------------------>
+<!-- CSV TO ARRAY -->
+<!------------------>
+
+<!-- get the last dir in the path of the markdown file that is including this file -->
+
+<!-- turn the CSV into an array -->
+
+<!---------->
+<!-- PAGE -->
+<!---------->
+
+<!-- table -->
+<table>
+
+   <!-- header -->
+   <thead>
+      <tr>
+         <th></th>
+         <th>
+            <em>Doelen:</em>
+                   <!-- get the filename -->
+             <!-- replace all '-' with spaces -->
+            linux challenges
+         </th>
+      </tr>
+   </thead>
+
+   <!-- body -->
+   <tbody>
+      
+      <tr>
+         <td><em>BV3_04.01</em></td>
+         <td> De leerlingen gebruiken courante functionaliteiten van vergelijkbare toepassingen om digitale inhouden te creëren</td>
+      </tr>
+      
+      <tr>
+         <td><em>BV3_13.04</em></td>
+         <td> De leerlingen zoeken doelgericht informatie in diverse bronnen en verwerken die op een kritische en systematische manier.</td>
+      </tr>
+      
+   </tbody>
+
+</table>
+
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 28/11/2024, last edited on 
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

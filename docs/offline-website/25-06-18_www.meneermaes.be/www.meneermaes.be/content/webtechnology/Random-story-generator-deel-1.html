@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Random Story Generator: Deel 1</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Webtechnology</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Random Story Generator: Deel 1</header>
+
+        <!-- content -->
+        <p><img src="images/randomstory1.webp" alt="" /></p>
+
+<h1 id="stap-1-random-verhaal">Stap 1: Random verhaal</h1>
+
+<p>Gebruik de kennis uit het vorige hoofdstuk om een dynamische website te maken.<br />
+De website toont een <strong>verhaal met random elementen</strong>.</p>
+
+<p><img src="images/story1.gif" alt="" class="frame" /></p>
+
+<p>Maak een nieuw project aan en start met deze code:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>On a <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"weer"</span><span class="nt">&gt;</span>sunny<span class="nt">&lt;/span&gt;</span> monday.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// weer</span>
+  <span class="kd">let</span> <span class="nx">randomWordsWeer</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">sunny</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">rainy</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">misty</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">hot</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">cold</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">dark</span><span class="dl">"</span><span class="p">];</span> <span class="c1">// Lijst met willekeurige woorden</span>
+  <span class="kd">let</span> <span class="nx">chosenWordWeer</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">randomWordsWeer</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span> <span class="c1">// Kies een willekeurig woord uit de lijst</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">weer</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">randomWordsWeer</span><span class="p">[</span><span class="nx">chosenWordWeer</span><span class="p">];</span> <span class="c1">// Voeg het gekozen woord toen aand de HTML-tag met de juiste ID</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h1 id="stap-2-css-styling">Stap 2: CSS-styling</h1>
+
+<p><img src="images/storycss.png" alt="" class="frame" /></p>
+
+<ol>
+  <li>Gebruik CSS om je pagina mooier te maken.</li>
+  <li>Voeg een <strong>titel</strong> toe en geef deze een <strong>lettertype</strong> gedownload van <a href="https://fontesk.com">https://fontesk.com</a></li>
+  <li>Voeg via CSS een achtergrond afbeelding toe, deze kan je fullscreen zetten of herhalen als patroon.<br />
+<strong>Zorg ervoor dat je tekst duidelijk leesbaar blijft!</strong></li>
+</ol>
+
+<h1 id="stap-3-random-afbeelding-toevoegen">Stap 3: Random afbeelding toevoegen</h1>
+
+<p><img src="images/storyrandoimage.gif" alt="" class="frame frame" /></p>
+
+<p>Download enkele afbeeldingen en plaats een random afbeelding op je website via JavaScript-code.<br />
+<strong>Het is de bedoeling dat je een afbeelding toevoegt op je pagina, niet dat je de achtergrond afbeelding aanpast.</strong><br />
+Zorg dat alle afbeeldingen bij elkaar passen en niet een andere stijl of een ander thema hebben.</p>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">TIP</p>
+   <p>
+<p>Je kan A.I. image generators gebruiken om afbeeldingen in een gelijkaardige stijl en met een gelijkaardig onderwerp te genereren.</p>
+</p>
+
+</div>
+
+<h1 id="stap-4-random-css">Stap 4: Random CSS</h1>
+
+<p>Maak de CSS-styling van je pagina ook random.</p>
+
+<p>Bijvoorbeeld als je personage een <strong>wood elf</strong> is kan je zijn of haar naam in het <strong>groen</strong> zetten, maar als je personage een <strong>dragon</strong> is kan je zijn of haar naam in het <strong>rood</strong> zetten. Of als je een <strong>water magic potion</strong> drink kan je deze in een <strong>blauwe achtergrond</strong> geven.</p>
+
+<h1 id="stap-5-random-getal">Stap 5: Random getal</h1>
+
+<p>Naast random woorden kunnen we ook random getallen genereren.<br />
+Met deze code genereer je een willekeurig komma getal tussen 0 en 1:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>Om een random komma getal te genereren tussen bijvoorbeeld 0 en 9, kunnen we het vorige getal maal 10 doen, zodat het random getal ook 10 keer zo groot kan zijn:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Willen we geen komma getal, maar een geheel getal kan kunnen we het random komma getal afronden met de <code class="language-plaintext highlighter-rouge">Math.floor()</code> functie.</p>
+
+<p>Deze code geeft ons een willekeurig geheel getal tussen 0 en 9:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Willen we een random getal tussen 1 en 10 in plaats van tussen 0 en 9, dan kunnen we het random getal <code class="language-plaintext highlighter-rouge">+1</code> doen, zodat het geen random getal meer is tussen 0 en 9, maar tussen 1 en 10:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><strong>Voeg nu een random getal toe aan je verhaal.</strong></p>
+
+<h1 id="stap-6-variabele">Stap 6: Variabele</h1>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">info</p>
+   <p>
+<p>Variabelen zijn een essentieel concept in programmeren en worden gebruikt om gegevens op te slaan en te manipuleren.
+In JavaScript worden variabelen gedeclareerd met het sleutelwoord <code class="language-plaintext highlighter-rouge">var</code>, <code class="language-plaintext highlighter-rouge">let</code> of <code class="language-plaintext highlighter-rouge">const</code>.</p>
+</p>
+
+</div>
+
+<h2 id="var">Var</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</code></pre></div></div>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">info</p>
+   <p>
+<p>Dit is de <strong>oude manier</strong> van variabelen declareren in JavaScript en wordt <strong>niet</strong> vaak meer <strong>gebruikt</strong> omdat deze problemen geeft met scope.</p>
+</p>
+
+</div>
+
+<h2 id="let">Let</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</code></pre></div></div>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">info</p>
+   <p>
+<p>Dit is de <strong>moderne manier</strong> van variabelen declareren.
+<code class="language-plaintext highlighter-rouge">Let</code> zorgt voor block-scoping, wat betekent dat de variabele alleen toegankelijk is binnen het blok waarin deze is gedeclareerd.</p>
+</p>
+
+</div>
+
+<p>Let komt van het Engels en betekent <strong>laat</strong> of <strong>toestaan</strong>.<br />
+Bijvoorbeeld <code class="language-plaintext highlighter-rouge">let y = 10;</code> of <strong>Let’s give y a value of 10</strong>”.</p>
+
+<h2 id="const">Const</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">pi</span> <span class="o">=</span> <span class="mf">3.14</span><span class="p">;</span>
+</code></pre></div></div>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">info</p>
+   <p>
+<p>Met <code class="language-plaintext highlighter-rouge">const</code> declareer je een <strong>constante variabele</strong>, dit je zeggen dat je de variabelen later in je code niet meer kan veranderen.</p>
+</p>
+
+</div>
+
+<h2 id="getallen">Getallen</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">naam</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Maes</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">level</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+</code></pre></div></div>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">info</p>
+   <p>
+<p>Om tekst in een variabele te steken gebruik je <code class="language-plaintext highlighter-rouge">"</code> symbolen.</p>
+</p>
+
+</div>
+
+<p><strong>Declareer een variabele die een getal opslaat, en declareer een variabelen die een tekst op slaat en steek deze op meerdere plaatsen in je verhaal.</strong></p>
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 14/02/2025, last edited on 20/02/2025
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

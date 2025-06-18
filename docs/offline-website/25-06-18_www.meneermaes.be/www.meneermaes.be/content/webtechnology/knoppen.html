@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Knoppen</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Webtechnology</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Knoppen</header>
+
+        <!-- content -->
+        <h1 id="button--vs--a">&lt;button &gt; vs  &lt;a&gt;</h1>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+<div class="browserWindow" style="width: ;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/knop-vs-link.png" />
+</div>
+
+<p>In HTML zijn zowel de <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code>- als <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>-elementen bedoeld om interactieve elementen op een webpagina te creëren, maar ze hebben verschillende doeleinden en gedragingen.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>-elementen worden gebruikt om <strong>hyperlinks</strong> te maken, wat betekent dat het wordt gebruikt om van de ene webpagina naar de andere te linken.</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;button&gt;</code>-elementen worden meestal gebruikt in <strong>formulieren in combinatie met PHP</strong> om interactieve functionaliteit aan webpagina’s toe te voegen.</li>
+</ul>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">tip</p>
+   <p>
+<p>Aangezien de meeste knoppen op webpagina’s dienen om naar andere pagina’s te gaan we meestal <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>-elementen gebruiken.</p>
+</p>
+
+</div>
+
+<p>Een ander voordeel is dat <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>-elementen minder opmaak hebben en dus <strong>makkelijker zelf te stylen</strong> zijn.<br />
+Een link is enkel blauw met een underscore, terwijl een button heeft meer opmaak, en is dus moeilijker zelf te stylen.</p>
+
+<div class="browserWindow" style="width: ;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/knop-vs-link.png" />
+</div>
+
+<h1 id="hover--visited">Hover &amp; visited</h1>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">a</span><span class="nd">:visited</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="hover-animaties">Hover animaties</h1>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">a</span> <span class="p">{</span>
+    <span class="nl">transition</span><span class="p">:</span> <span class="m">0.5s</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="opdracht-knoppen-ontwerpen">Opdracht: Knoppen ontwerpen</h1>
+
+<ol>
+  <li>Maak een website met 3 <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>-elementen en 3 <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code>-elementen.</li>
+  <li>Geef elke knop een <strong>uniek design</strong>.<br />
+ Op deze pagina kan je informatie vinden over hoe je knoppen kan stylen: <a href="https://www.w3schools.com/css/css3_buttons.asp">https://www.w3schools.com/css/css3_buttons.asp</a></li>
+  <li>Gebruik <strong>minstens 3 verschillende webfonts</strong>.</li>
+  <li>Geef elke knop een <strong>uniek hover effect</strong>.</li>
+</ol>
+
+<!------------------>
+<!-- CSV TO ARRAY -->
+<!------------------>
+
+<!-- get the last dir in the path of the markdown file that is including this file -->
+
+<!-- turn the CSV into an array -->
+
+<!---------->
+<!-- PAGE -->
+<!---------->
+
+<!-- table -->
+<table>
+
+   <!-- header -->
+   <thead>
+      <tr>
+         <th>
+            <em>Puntenverdeling:</em>
+                   <!-- get the filename -->
+             <!-- replace all '-' with spaces -->
+            knoppen
+         </th>
+         <th></th>
+      </tr>
+   </thead>
+
+   <!-- body -->
+   <tbody>
+      
+      <tr>
+         <td>Je website heeft de juiste structuur (html en body en ...)</td>
+         <td class="punt"> 1</td>
+      </tr>
+      
+      <tr>
+         <td>Je website heeft een titel en favicon (in het juiste bestandstype)</td>
+         <td class="punt"> 1</td>
+      </tr>
+      
+      <tr>
+         <td>Je 6 knoppen hebben elk een uniek mooi en uitgebreid design</td>
+         <td class="punt"> 3</td>
+      </tr>
+      
+      <tr>
+         <td>Je gebruikt minstens 3 verschillende webfonts</td>
+         <td class="punt"> 3</td>
+      </tr>
+      
+      <tr>
+         <td>Je 6 knoppen hebben elk een uniek mooi en uitgebreid hover en visited effect</td>
+         <td class="punt"> 3</td>
+      </tr>
+      
+      <tr>
+         <td>Je hover effects maken gebruik van animaties</td>
+         <td class="punt"> 1</td>
+      </tr>
+      
+
+      <!-- Total row -->
+      <tr class="puntenTotaal">
+         <td>Totaal</td>
+         <td class="punt">
+            
+            
+            12
+         </td>
+      </tr>
+   </tbody>
+</table>
+
+<h1 id="uitdaging-knop-namaken">Uitdaging: Knop namaken</h1>
+
+<ol>
+  <li>Surf naar <a href="https://dribbble.com/">https://dribbble.com/</a> en zoek naar het woord <strong>button</strong>.</li>
+  <li>Kies een mooie knop.</li>
+  <li>Download de afbeelding of video van de knop en voeg hem toe aan je website.</li>
+  <li>Voeg een <strong>nieuwe knop</strong> toe aan je website, en probeer de knop die je gevonden hebt zo goed mogelijk na te maken.</li>
+</ol>
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 18/10/2024, last edited on 18/10/2024
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

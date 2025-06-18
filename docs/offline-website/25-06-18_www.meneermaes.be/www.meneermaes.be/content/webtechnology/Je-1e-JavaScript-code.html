@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Je 1e Javascript Code</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Webtechnology</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Je 1e Javascript Code</header>
+
+        <!-- content -->
+        <h1 id="1-maak-een-scriptjs-bestand-aan">1. Maak een script.js bestand aan</h1>
+
+<p><img src="images/jsfile.png" alt="" /></p>
+
+<h1 id="2-link-naar-je-javascript-bestand">2. Link naar je JavaScript-bestand</h1>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">href=</span><span class="s">"images/favicon.png"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;title&gt;</span>JavaScript basics<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"styles.css"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+
+        <span class="c">&lt;!-- html code ... -&gt;
+        &lt;!-- de script-tag moet onderaan body staan --&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"script.js"</span><span class="nt">&gt;&lt;/script&gt;</span> 
+
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h1 id="3-schrijf-javascript-code">3. Schrijf JavaScript code</h1>
+
+<h2 id="alert">Alert</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Dit is een ALERT!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p><img src="images/alert.png" alt="" /></p>
+
+<h2 id="consolelog">Console.log</h2>
+
+<p><strong>Vervang</strong> de code in script.js door deze code:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Script werkt!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p><img src="images/consolelog.png" alt="" /></p>
+
+<h2 id="html-code-toevoegen">HTML-code toevoegen</h2>
+
+<p><strong>Vervang</strong> de code in script.js door deze code:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">&lt;h1&gt;Hallo, JavaScript!&lt;/h1&gt;&lt;p&gt;Zo maak je HTML code via JavaScript.&lt;/p&gt;</span><span class="dl">"</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p><img src="images/hellojs.png" alt="" /></p>
+
+<p><strong>Multiline strings:</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">`
+        &lt;h1&gt;Hallo, JavaScript!&lt;/h1&gt;
+        &lt;p&gt;Zo maak je HTML code via JavaScript.&lt;/p&gt;
+    ;
+});
+</span></code></pre></div></div>
+
+<h2 id="random-word-toevoegen">Random word toevoegen</h2>
+
+<div class="browserWindow" style="width: ;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/randomword.gif" />
+</div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>Random word<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>Maneer Maes is <span class="nt">&lt;mark</span> <span class="na">id=</span><span class="s">"randomText"</span><span class="nt">&gt;&lt;/mark&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+
+<span class="c">&lt;!-- de script tag moet onderaan de pagina staan --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"script.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p><strong>Vervang</strong> de code in script.js door deze code:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Lijst met willekeurige woorden</span>
+    <span class="kd">let</span> <span class="nx">randomWords</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">awesome</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">cool</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">de beste</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">fantastisch</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">uitzonderlijk</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">indrukwekkend</span><span class="dl">"</span><span class="p">];</span>
+
+    <span class="c1">// Kies een willekeurig woord</span>
+    <span class="kd">let</span> <span class="nx">chosenWord</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">randomWords</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+
+    <span class="c1">// Voeg het gekozen woord toen aand de HTML-tag met id="randomText" </span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">randomText</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">randomWords</span><span class="p">[</span><span class="nx">chosenWord</span><span class="p">];</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h1 id="4-javascript-basisprincipes">4. JavaScript basisprincipes</h1>
+
+<h2 id="-puntkomma"><code class="language-plaintext highlighter-rouge">;</code> (puntkomma)</h2>
+
+<p>JavaScript gebruikt het puntkomma (;) symbool als een <strong>statement terminator</strong>, wat betekent dat het aangeeft waar een bepaald statement eindigt.</p>
+
+<p><strong>Je moet dus elke lijn code eindigen met een ; symbool!</strong></p>
+
+<p>Het gebruik van puntkomma’s in JavaScript is niet strikt noodzakelijk vanwege automatische puntkomma-invoeging. Dit wil zeggen dat wanneer je een ; symbool vergeet, JavaScript gaat gokken waar er ; symbolen moeten komen.
+Dit kan echter leiden tot onverwachte resultaten en bugs, vooral wanneer code minified (gecomprimeerd) wordt.
+Door puntkomma’s expliciet toe te voegen, maak je je code duidelijker en vermijd je mogelijke problemen.</p>
+
+<h2 id="script-srcscriptjsscript-onderaan-de-pagina"><code class="language-plaintext highlighter-rouge">&lt;script src="script.js"&gt;&lt;/script&gt;</code> (onderaan de pagina)</h2>
+
+<p>De code <code class="language-plaintext highlighter-rouge">&lt;script src="script.js"&gt;&lt;/script&gt;</code> moet helemaal onderaan <strong>in</strong> de body tag staan.</p>
+
+<p>De browser zal de HTML-content eerst renderen en dan pas het JavaScript-bestand laden.</p>
+<ul>
+  <li>Zo zullen de zichtbare delen van je pagina sneller worden weergegeven.</li>
+  <li>En zo zullen de id-tags er reeds zijn wanneer je ze wil aanpassen met html.</li>
+</ul>
+
+<h2 id="documentaddeventlistenerdomcontentloaded"><code class="language-plaintext highlighter-rouge">document.addEventListener("DOMContentLoaded")</code></h2>
+
+<p>De code <code class="language-plaintext highlighter-rouge">Document.addEventListener("DOMContentLoaded", function() {</code> zorgt ervoor dat de <strong>JavaScript-code pas wordt uitgevoerd nadat de HTML-pagina volledig is geladen</strong>.</p>
+
+<p>Het is belangrijk dat als je JavaScript-code je HTML-code aanpast dat deze HTML-code al helemaal geladen is. Anders probeer je HTML-code aan te passen die nog niet bestaad en zal je code niet werken.</p>
+
+<h2 id="comments">Comments</h2>
+
+<p>In JavaScript kun je op <strong>2 manieren opmerkingen (comments) toevoegen</strong> aan je code: <strong>enkelvoudige</strong> regelcomments en <strong>meerregelige</strong> comments.</p>
+
+<h3 id="enkelvoudige-regelcomments">Enkelvoudige regelcomments</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Dit is een enkelvoudige regelcomment</span>
+<span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// Je kunt ook comments op dezelfde regel als code plaatsen</span>
+</code></pre></div></div>
+
+<h3 id="meerregelige-comments">Meerregelige comments</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+Dit is een meerregelige comment.
+Je kunt hier meerdere regels tekst toevoegen.
+Deze comments beginnen met /* en eindigen met */</span><span class="p">.</span>
+<span class="o">*</span><span class="sr">/</span><span class="err">
+</span><span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</code></pre></div></div>
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 17/01/2025, last edited on 17/01/2025
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

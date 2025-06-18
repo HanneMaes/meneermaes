@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Arrays</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Webtechnology</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Arrays</header>
+
+        <!-- content -->
+        <blockquote>
+  <p>Een array is een lijst van waarden</p>
+</blockquote>
+
+<h1 id="arrays-gebruiken">Arrays gebruiken</h1>
+
+<h2 id="declaratie">Declaratie</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Brendan Eich</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">ECMAScript</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Node.js</span><span class="dl">"</span><span class="p">];</span>
+</code></pre></div></div>
+
+<p>In JavaScript kunnen types zelfs gemengd voorkomen in een array:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1995</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Brendan Eich</span><span class="dl">"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="dl">"</span><span class="s2">ECMAScript</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Node.js</span><span class="dl">"</span><span class="p">];</span>
+</code></pre></div></div>
+
+<p>Een lege array kun je als volgt <strong>aanmaken</strong>:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<h2 id="een-element-uit-een-array-opvragen">Een element uit een array opvragen</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1995</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Brendan Eich</span><span class="dl">"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="dl">"</span><span class="s2">ECMAScript</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Node.js</span><span class="dl">"</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="c1">// Geeft als uitvoer: 1995</span>
+</code></pre></div></div>
+
+<p>Gaan we met onze index voorbij het laatste element van de array, dan krijgen we in JavaScript geen foutmelding, maar bekomen we als waarde <code class="language-plaintext highlighter-rouge">undefined</code>:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1995</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Brendan Eich</span><span class="dl">"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="dl">"</span><span class="s2">ECMAScript</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Node.js</span><span class="dl">"</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">list</span><span class="p">[</span><span class="mi">99</span><span class="p">]);</span> <span class="c1">// Geeft als uitvoer: undefined</span>
+</code></pre></div></div>
+
+<p>Willen we een element terugvinden in een array, dan kunnen we daarvoor de methode indexOf gebruiken. IndexOf Geeft de index van de gezochte waarde. Komt het gezochte element niet voor in de array, dan retourneert indexOf de waarde -1:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1995</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Brendan Eich</span><span class="dl">"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="dl">"</span><span class="s2">ECMAScript</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Node.js</span><span class="dl">"</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">list</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="mi">1995</span><span class="p">));</span> <span class="c1">// Geeft als uitvoer: 0</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">list</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="dl">"</span><span class="s2">Brendan Eich</span><span class="dl">"</span><span class="p">));</span> <span class="c1">// Geeft als uitvoer: 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">list</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="dl">"</span><span class="s2">Brave Browser</span><span class="dl">"</span><span class="p">));</span> <span class="c1">// Geeft als uitvoer: -1</span>
+</code></pre></div></div>
+
+<h2 id="een-element-in-een-array-wijzigen">Een element in een array wijzigen</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1995</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Brendan Eich</span><span class="dl">"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="dl">"</span><span class="s2">ECMAScript</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Node.js</span><span class="dl">"</span><span class="p">];</span>
+<span class="nx">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Netscape</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">list</span><span class="p">);</span> <span class="c1">// Geeft als uitvoer: [1995, true, "Brendan Eich", 10, "ECMAScript", "Node.js"]</span>
+</code></pre></div></div>
+
+<h2 id="de-lengte-van-een-array-opvragen">De lengte van een array opvragen</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1995</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Brendan Eich</span><span class="dl">"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="dl">"</span><span class="s2">ECMAScript</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Node.js</span><span class="dl">"</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span> <span class="c1">// Geeft als uitvoer: 6</span>
+</code></pre></div></div>
+
+<h2 id="elementen-toevoegen-en-verwijderen">Elementen toevoegen en verwijderen</h2>
+
+<p>Een element <strong>toevoegen</strong> aan het <strong>einde</strong> van een array:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1995</span><span class="p">];</span>
+<span class="nx">list</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">"</span><span class="s2">Electron</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">list</span><span class="p">);</span> <span class="c1">// Geeft als uitvoer: [1995, "Electron"]</span>
+</code></pre></div></div>
+
+<p>Een element <strong>verwijderen</strong> aan het <strong>einde</strong> van een array:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1995</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Electron</span><span class="dl">"</span><span class="p">];</span>
+<span class="nx">list</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">list</span><span class="p">);</span> <span class="c1">// Geeft als uitvoer: [1995]</span>
+</code></pre></div></div>
+
+<p>Een element <strong>verwijderen</strong> aan het <strong>begin</strong> van een array:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1995</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Electron</span><span class="dl">"</span><span class="p">];</span>
+<span class="nx">list</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">list</span><span class="p">);</span> <span class="c1">// Geeft als uitvoer: ["Electron"]</span>
+</code></pre></div></div>
+
+<p>Een element <strong>toevoegen</strong> aan het <strong>begin</strong> van een array:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1995</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Electron</span><span class="dl">"</span><span class="p">];</span>
+<span class="nx">list</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="dl">"</span><span class="s2">JavaScript is not Java</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">list</span><span class="p">);</span> <span class="c1">// Geeft als uitvoer: ["JavaScript is not Java", 1995, "Electron"]</span>
+</code></pre></div></div>
+
+<h2 id="over-alle-elementen-van-een-array-loopen">Over alle elementen van een array loopen</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1995</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Electron</span><span class="dl">"</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">text</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">text</span> <span class="o">+=</span> <span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span> <span class="c1">// Geeft als uitvoer: 1995Electron</span>
+</code></pre></div></div>
+
+<h1 id="oefening-op-het-gebruik-van-arrays">Oefening op het gebruik van arrays</h1>
+
+<p>Tijdens deze oefening gaan we een lijst laten groeien en krimpen vanuit JavaScript</p>
+
+<div class="browserWindow" style="width: ;">
+    <div class="browserWindowUi">
+        <span>www</span>
+        <span></span>
+        <span>x</span>
+    </div>
+    <img src="images/arraysoef.gif" />
+</div>
+
+<p>Start met deze code:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+   <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+   <span class="c">&lt;!-- formulier --&gt;</span>
+   <span class="nt">&lt;form&gt;</span>
+      <span class="nt">&lt;label&gt;</span>Toe te voegen element:<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"textID"</span> <span class="na">placeholder=</span><span class="s">"Nieuw element"</span> <span class="nt">/&gt;</span>
+   <span class="nt">&lt;/form&gt;</span>
+
+   <span class="c">&lt;!-- knoppen --&gt;</span>
+   <span class="nt">&lt;br&gt;</span>
+   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Voeg toe <span class="nt">&lt;strong&gt;</span>onderaan<span class="nt">&lt;/strong&gt;</span> de lijst<span class="nt">&lt;/a&gt;&lt;br&gt;</span>
+   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Voeg toe <span class="nt">&lt;strong&gt;</span>bovenaan<span class="nt">&lt;/strong&gt;</span> de lijst<span class="nt">&lt;/a&gt;&lt;br&gt;</span>
+   <span class="nt">&lt;br&gt;</span>
+   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Verwijder het <span class="nt">&lt;strong&gt;</span>onderste<span class="nt">&lt;/strong&gt;</span> element<span class="nt">&lt;/a&gt;&lt;br&gt;</span>
+   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Verwijder het <span class="nt">&lt;strong&gt;</span>bovenste<span class="nt">&lt;/strong&gt;</span> element<span class="nt">&lt;/a&gt;&lt;br&gt;</span>
+   <span class="nt">&lt;br&gt;</span>
+
+   <span class="c">&lt;!-- lijst --&gt;</span>
+   De lijst:
+   <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"lijstID"</span><span class="nt">&gt;&lt;/ul&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 23/05/2025, last edited on 23/05/2025
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

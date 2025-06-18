@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Lokale bestanden & externe links</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Webtechnology</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Lokale bestanden & externe links</header>
+
+        <!-- content -->
+        <h1 id="externe-links">Externe Links</h1>
+
+<p>Externe links verwijzen naar media (afbeeldingen, video’s, …) die <strong>elders op internet zijn opgeslagen</strong>.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://example.com/foto.jpg"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p><strong>Voordelen:</strong></p>
+<ul>
+  <li>Bespaart opslagruimte in het project.</li>
+</ul>
+
+<p><strong>Nadelen:</strong></p>
+<ul>
+  <li>Mogelijk tragere laadtijden.</li>
+  <li>Risico op onbruikbare links bij verwijdering van de bron.</li>
+</ul>
+
+<h1 id="lokale-bestanden">Lokale Bestanden</h1>
+
+<p>Lokale media zijn bestanden die direct in de <strong>projectmap zijn opgeslagen</strong>.</p>
+
+<p><img src="images/local-image.png" alt="" width="500px" /></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/foto.jpg"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p><strong>Voordelen:</strong></p>
+<ul>
+  <li>Snellere laadtijden</li>
+  <li>Onafhankelijkheid van externe servers.</li>
+  <li>Offline beschikbaarheid.</li>
+</ul>
+
+<p><strong>Nadelen:</strong></p>
+<ul>
+  <li>Grotere projectomvang.</li>
+  <li>Meer opslagruimte vereist op hosting.</li>
+</ul>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">info</p>
+   <p><p>Het is <strong>aangeraden</strong> om met <strong>lokale bestanden</strong> te werken.</p>
+</p>
+
+</div>
+
+<h1 id="organisatie-van-lokale-bestanden">Organisatie van lokale bestanden</h1>
+
+<p>Bij het uploaden of delen van een website is het belangrijk om lokale <strong>mediabestanden correct mee te sturen</strong>, anders zullen deze niet meer werken op je website.</p>
+
+<p>Het is belangrijk de <strong>locatie van het bestand</strong> correct te noteren.</p>
+
+<h2 id="de-afbeelding-in-dezelfde-map-als-het-html-bestand">De afbeelding in dezelfde map als het .html bestand</h2>
+
+<p><img src="images/local-image2.png" alt="" width="500px" /></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"image.jpg"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h2 id="de-afbeelding-in-een-submap">De afbeelding in een submap</h2>
+
+<p><img src="images/local-image.png" alt="" width="500px" /></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"media/image.jpg"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h1 id="het-belang-van-relatieve-paden">Het belang van relatieve paden</h1>
+
+<p>Bij het verwijzen naar mediabestanden in je HTML-code is het <strong>cruciaal om relatieve paden te gebruiken</strong> in plaats van absolute paden.</p>
+
+<p><strong>Relatief pad:</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"media/foto.jpg"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p><strong>Absoluut pad:</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"C:/Users/Maes/Website/media/foto.jpg"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p><strong>Voordelen van het gebruik van relatieve paden:</strong></p>
+<ul>
+  <li><strong>Portabiliteit:</strong> Je project kan eenvoudig worden verplaatst naar een andere locatie of server zonder dat paden hoeven te worden aangepast.</li>
+  <li><strong>Compatibiliteit:</strong> Relatieve paden werken op verschillende besturingssystemen (Windows, macOS, Linux) zonder aanpassingen.</li>
+  <li><strong>Hosting:</strong> Bij het uploaden naar een webserver blijven relatieve paden correct functioneren, terwijl absolute paden vaak niet meer werken.</li>
+</ul>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">info</p>
+   <p><p>Het is <strong>aangeraden</strong> om <strong>altijd met relatieve paden</strong> te werken.</p>
+</p>
+
+</div>
+
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 20/09/2024, last edited on 20/09/2024
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

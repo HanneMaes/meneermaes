@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Zelf Aan De Slag Met Een Besturingssysteem</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Hardware</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Zelf Aan De Slag Met Een Besturingssysteem</header>
+
+        <!-- content -->
+        <blockquote>
+  <p>In dit hoofdstuk gaan we aan de slag met besturingssystemen die passen bij specifieke projecten.</p>
+</blockquote>
+
+<p><img src="images/distros.gif" alt="" /></p>
+<figcaption><a href="https://dribbble.com/shots/19045949-Distros-Only-Inside-a-Toolbox/attachments/14210303?mode=media">Jakub Steiner</a></figcaption>
+
+<h1 id="hoe-een-nieuw-os-installeren">Hoe een nieuw OS installeren?</h1>
+
+<details>
+   <summary>
+      Dual Boot
+   </summary>
+   <div class="toggleContent">
+      
+<p>Dual boot is een configuratie waarbij <strong>twee verschillende besturingssystemen op één computer</strong> zijn geïnstalleerd, zodat je bij het opstarten kunt kiezen welk besturingssysteem je wilt gebruiken.</p>
+
+<p>Het wordt vaak gebruikt om een nieuw besturingssysteem te <strong>leren of testen</strong>. Je kunt het nieuwe OS naast je bestaande systeem installeren en gebruiken om ermee vertrouwd te raken. Als je tevreden bent met het nieuwe besturingssysteem, kun je ervoor kiezen om het oude OS van de computer te verwijderen en alleen het nieuwe te behouden. Zo heb je de flexibiliteit om een nieuwe omgeving uit te proberen zonder meteen je huidige systeem op te geven.</p>
+
+<p><strong class="goodText">Voordelen</strong></p>
+<ul>
+  <li>Volledige toegang tot hardware</li>
+  <li>Optimale performance</li>
+  <li>Beste van twee werelden</li>
+</ul>
+
+<p><strong class="badText">Nadelen</strong></p>
+<ul>
+  <li>Complexe setup</li>
+  <li>Moet steeds herstarten wanneer je van OS wil veranderen</li>
+  <li>Elk OS heeft zijn eigen deel van de de harde schijf</li>
+</ul>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Live USB
+   </summary>
+   <div class="toggleContent">
+      
+<p>Je installeert het OS op een USB-stick, en start het OS op vanaf deze USB-stick. Je gebruikt de hardware van de computer, maar het OS dat op de USB-stick staan.</p>
+
+<p>Om een OS op een computer te installeren, werk je meestal met een live USB. Deze geeft je de optie om het besturingssysteem eerst te testen zonder iets aan je huidige installatie te veranderen en vervolgens het OS te installeren als je tevreden bent.</p>
+
+<p>Er zijn <strong>2 soorten</strong> Live USB-sticks:</p>
+<ul>
+  <li><strong>Tijdelijke opslag:</strong> nieuwe data verdwijnt zodra je de computer uitzet.</li>
+  <li><strong>Persistent opslag:</strong> sommige Live USB’s kun je configureren met een ‘persistent storage’, dit reserveert een deel van de USB-stick voor permanente opslag. Hiermee kun je veranderingen en bestanden bewaren, zelfs na herstart</li>
+</ul>
+
+<p><strong class="goodText">Voordelen</strong></p>
+<ul>
+  <li>Geen wijzigingen aan de computers</li>
+  <li>Draagbaar systeem: eens geïnstalleerd op de USB-stick werkt het op alle computers</li>
+  <li>Ideaal voor testen en reparatie</li>
+  <li>Meestal heb je de optie om het OS te installeren op je computer na het eerst te kunnen testen</li>
+</ul>
+
+<p><strong class="badText">Nadelen</strong></p>
+<ul>
+  <li>Langzamer dan geïnstalleerd systeem</li>
+  <li>Geen of beperkte opslagruimte</li>
+</ul>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Virtuele Machine (VM)
+   </summary>
+   <div class="toggleContent">
+      
+<p>Een applicatie dat je kan installeren op je computer, die een computer simuleert.<br />
+Het bekendste voorbeeld hier van is <strong>VirtualBox</strong>.</p>
+
+<p><strong class="goodText">Voordelen</strong></p>
+<ul>
+  <li>Veilig experimenteren zonder risico voor hoofdsysteem</li>
+  <li>Meerdere OS’en tegelijk kunnen draaien</li>
+  <li><strong>Ideaal voor testen en leren</strong></li>
+</ul>
+
+<p><strong class="badText">Nadelen</strong></p>
+<ul>
+  <li>Minder goede performance dan native installatie</li>
+  <li>Beperkte toegang tot hardware</li>
+</ul>
+
+   </div>
+</details>
+
+<h1 id="opdracht-linux-distributie-installatie">Opdracht: Linux-distributie installatie</h1>
+
+<h2 id="doelstelling">Doelstelling</h2>
+
+<p>In deze opdracht gaan jullie aan de slag met het kiezen en installeren van een Linux-distributie die past bij een specifiek gebruik of doel.</p>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">Projectverslag</p>
+   <p>
+<p>Creëer een <strong>projectverslag</strong> waarin je al je onderzoek, analyses en conclusies <strong>overzichtelijk</strong> vastlegt.<br />
+Zorg ervoor dat het verslag zowel de stappen van je proces als de uiteindelijke resultaten duidelijk weergeeft.</p>
+</p>
+
+</div>
+
+<h2 id="1-kies-een-scenario">1. Kies een scenario</h2>
+
+<p>Kies één van de volgende doelen waarvoor je Linux-distributie moet dienen, of bedenk er zelf een:</p>
+<ul>
+  <li>Gaming</li>
+  <li>Cybersecurity &amp; ethical hacking</li>
+  <li>Programming &amp; developing</li>
+  <li>Customizability (aanpasbaarheid)</li>
+  <li>Creativity: Graphic design, video &amp; music production</li>
+</ul>
+
+<p><strong>Voeg het doel toe aan je projectverslag</strong>.<br />
+Bedenk <strong>2 zaken die je wil doen of bereiken</strong> met je gekozen Linux-distributie, en voeg deze toe aan je projectverslag.</p>
+
+<h2 id="2-onderzoek">2. Onderzoek</h2>
+
+<ol>
+  <li>Zoek Linux-distributies op die passen bij je gekozen scenario.</li>
+  <li>Voeg een vergelijkingstabel toe aan je projectverslagt waarin je 2 Linux-distributies vergelijkt met criteria zoals:
+    <ul>
+      <li>Systeemvereisten</li>
+      <li>Gebruiksgemak</li>
+      <li><strong>Voeg extra criteria op die passen bij je gekozen scenario</strong></li>
+    </ul>
+  </li>
+  <li>Kies een Linux-distributie en beschrijf waarom je deze gekozen hebt boven de andere.</li>
+</ol>
+
+<h2 id="3-installatie">3. Installatie</h2>
+
+<p>Installeer de gekozen distributie in een virtuele machine door gebruik te maken van de software <a href="https://www.virtualbox.org">VirtualBox</a></p>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">info</p>
+   <p>
+<p>VirtualBox is een krachtige, gratis en <strong>open-source virtualisatie software</strong>. Het stelt gebruikers in staat om virtuele computers, ook wel <strong>virtuele machines (VM’s)</strong> genoemd, te creëren en te beheren op een gewone desktop of laptop computer.</p>
+</p>
+
+</div>
+
+<details>
+   <summary>
+      Wat is een Virtuele Machine?
+   </summary>
+   <div class="toggleContent">
+      
+<p>Een virtuele machine is een soort <strong>‘computer in een computer’</strong>. Het is een programma dat zich gedraagt als een aparte computer binnen je echte computer. <strong>Je kunt er een besturingssysteem op installeren</strong>, zoals Windows of Linux, zonder dat je je echte computer hoeft aan te passen. Alle onderdelen zoals opslag en geheugen worden virtueel nagebootst, maar ze gebruiken wel de echte hardware van je computer.</p>
+
+   </div>
+</details>
+
+<h2 id="4-voer-je-doel-uit">4. Voer je doel uit</h2>
+
+<p>Voer je twee specifieke taken uit.</p>
+
+<p>Wanneer dit gelukt is laat je dit zien aan de leerkracht en documenteer je dit in je projectverslag.</p>
+
+<h2 id="5-reflectie">5. Reflectie</h2>
+
+<p>Voeg de antwoorden op volgende vragen toe aan je projectverslagt:</p>
+<ol>
+  <li>Welke <strong>licentie</strong> heeft je gekozen Linux-distributie.<br />
+ Voorzie een <strong>screenshot</strong> van waar je deze informatie gevonden hebt.</li>
+  <li>Schrijf in je <strong>eigen woorden</strong> wat deze licentie betekend, wat mag wel, wat mag je niet en wat moet je…</li>
+  <li>Wat zijn <strong>voordelen en nadelen</strong> van het gebruik van een OS onder deze licentie?</li>
+  <li>Beschrijf hoe Linux bijdraagt aan 2 van de volgende zaken:
+    <ul>
+      <li>Samenhorigheid</li>
+      <li>Privacy</li>
+      <li>Duurzaamheid</li>
+      <li>Ongelijkheid verminderen</li>
+      <li>Digitale geletterdheid</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="puntenverdeling">Puntenverdeling</h2>
+
+<!------------------>
+<!-- CSV TO ARRAY -->
+<!------------------>
+
+<!-- get the last dir in the path of the markdown file that is including this file -->
+
+<!-- turn the CSV into an array -->
+
+<!---------->
+<!-- PAGE -->
+<!---------->
+
+<!-- table -->
+<table>
+
+   <!-- header -->
+   <thead>
+      <tr>
+         <th>
+            <em>Puntenverdeling:</em>
+                   <!-- get the filename -->
+             <!-- replace all '-' with spaces -->
+            zelf aan de slag met een besturingssysteem punten
+         </th>
+         <th></th>
+      </tr>
+   </thead>
+
+   <!-- body -->
+   <tbody>
+      
+      <tr>
+         <td>Grondig en overzichtelijk onderzoek naar 2 Linux-distributies</td>
+         <td class="punt"> 4</td>
+      </tr>
+      
+      <tr>
+         <td>Je kan zelfstandig een Linux-distributies installeren in een VM</td>
+         <td class="punt"> 2</td>
+      </tr>
+      
+      <tr>
+         <td>Je kan je 2 vooropgestelde taken uitvoeren</td>
+         <td class="punt"> 2</td>
+      </tr>
+      
+      <tr>
+         <td>Reflectie</td>
+         <td class="punt"> 4</td>
+      </tr>
+      
+
+      <!-- Total row -->
+      <tr class="puntenTotaal">
+         <td>Totaal</td>
+         <td class="punt">
+            
+            
+            12
+         </td>
+      </tr>
+   </tbody>
+</table>
+
+<!------------------>
+<!-- CSV TO ARRAY -->
+<!------------------>
+
+<!-- get the last dir in the path of the markdown file that is including this file -->
+
+<!-- turn the CSV into an array -->
+
+<!---------->
+<!-- PAGE -->
+<!---------->
+
+<!-- table -->
+<table>
+
+   <!-- header -->
+   <thead>
+      <tr>
+         <th></th>
+         <th>
+            <em>Doelen:</em>
+                   <!-- get the filename -->
+             <!-- replace all '-' with spaces -->
+            Zelf aan de slag met een besturingssysteem doelen
+         </th>
+      </tr>
+   </thead>
+
+   <!-- body -->
+   <tbody>
+      
+      <tr>
+         <td><em>BV3_13.03</em></td>
+         <td> De leerlingen gebruiken school- en vaktaal.</td>
+      </tr>
+      
+      <tr>
+         <td><em>BV3_04.01</em></td>
+         <td> De leerlingen gebruiken courante functionaliteiten van vergelijkbare toepassingen om digitale inhouden te creëren.</td>
+      </tr>
+      
+      <tr>
+         <td><em>BV3_04.02</em></td>
+         <td> De leerlingen respecteren ethische sociale en legale regels bij het gebruiken van digitale technologie.</td>
+      </tr>
+      
+   </tbody>
+
+</table>
+
+<h1 id="demonstratie">Demonstratie</h1>
+
+<p>Dit is niet alleen een kans om je werk te tonen, maar ook om inzichten en tips met je medestudenten te delen. Door jouw ervaringen en uitdagingen te bespreken, help je anderen om nieuwe perspectieven te ontdekken en Linux op een andere manier te benaderen. Zo leren we van elkaar en versterken we samen onze kennis.</p>
+
+<ol>
+  <li>Vertel wat je gekozen scenario is.</li>
+  <li>Vertel kort welk OS je hebt gekozen en waarom.
+ Waarom heb je deze distributie gekozen boven andere opties?</li>
+  <li>Wat waren je taken en laat zien hoe je deze uitvoerde.</li>
+  <li>Vertel hoe Linux bijdraagt aan 2 van de volgende zaken:
+    <ul>
+      <li>Samenhorigheid</li>
+      <li>Privacy</li>
+      <li>Duurzaamheid</li>
+      <li>Ongelijkheid verminderen</li>
+      <li>Digitale geletterdheid</li>
+    </ul>
+  </li>
+</ol>
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 23/10/2024, last edited on 11/02/2025
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

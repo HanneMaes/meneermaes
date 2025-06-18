@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Flexbox</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Webtechnology</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Flexbox</header>
+
+        <!-- content -->
+        <h1 id="flexbox-intro">Flexbox intro</h1>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/phWxA89Dy94?si=og4ADDivMCmBYykR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+<h1 id="flexbox-guide">Flexbox guide</h1>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">guide</p>
+   <p>
+<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a></p>
+</p>
+
+</div>
+
+<h1 id="oefening-01-knoppen-website-aanpassen">Oefening 01: Knoppen website aanpassen</h1>
+
+<p>Open de knoppen website van de vorige oefening en probeer deze composities na te maken door gebruik te maken van flexbox.<br />
+<strong>Neem telkens een screenshot als het gelukt is.</strong></p>
+
+<p><a href="oef-flexbox-composities.html">Oefening: Flexbox composities</a></p>
+
+<h1 id="oefening-02-navigatiebalk">Oefening 02: Navigatiebalk</h1>
+
+<p><img src="images/flexbox-navbar.png" alt="" /></p>
+
+<p>Maak een navigatiebalk die de lay-out heeft van de bovenstaande afbeelding.
+Het <strong>logo</strong> mag <strong>geen afbeelding</strong> zijn, maar moet <strong>puur CSS</strong> zijn.</p>
+
+<p>Een navigatiebalk zet je in de <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code>-tags</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;nav&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link 1<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link 2<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div></div>
+
+<h1 id="oefening-03-card-design">Oefening 03: Card design</h1>
+
+<p>Maak 1 of meerdere van onderstaande card designs na.<br />
+Het design moet niet exact het zelfde zijn, maar de layout wel.</p>
+
+<p>Ik heb ze zo gerangschikt dat de makkelijkste bovenaan staan en de moeilijkste onderaan.</p>
+
+<h2 id="layout-1-speelkaart">Layout 1: Speelkaart</h2>
+
+<p><img src="images/flexbox-speelkaart.jpg" alt="original-a10757d38c5dc65c49ebb3d710520f79.jpg" /></p>
+
+<h2 id="layout-2-bankkaart">Layout 2: Bankkaart</h2>
+
+<p><img src="images/flexbox-bankkaart.png" alt="ef0c60709387378574a68a25f31a024b.png" /></p>
+
+<h2 id="layout-3-meerdere-elementen">Layout 3: Meerdere elementen</h2>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">tip</p>
+   <p><p>Je zal <strong>flexbox-elementen in flexbox-elementen</strong> moeten gebruiken.</p>
+</p>
+
+</div>
+
+<p><img src="images/flexbox-layout3.png" alt="original-23ffb962fef5f00af0a840eb7a02b6d7.png" /></p>
+
+<h2 id="layout-4-boarding-pass">Layout 4: Boarding pass</h2>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">tip</p>
+   <p><p>Je zal <strong>flexbox-elementen in flexbox-elementen</strong> moeten gebruiken.</p>
+</p>
+
+</div>
+
+<p><img src="images/flexbox-Boarding-pass.png" alt="Screenshot from 2023-11-21 11-39-41.png" /></p>
+
+<h1 id="oefening-04-piet-mondriaan">Oefening 04: Piet Mondriaan</h1>
+
+<p>Maak dit kunstwerk van Piet Mondriaan na.</p>
+
+<p><img src="images/flexbox-mondriaan.jpeg" alt="Untitled" /></p>
+
+<h1 id="oefening-05-iphone">Oefening 05: iPhone</h1>
+
+<p>Maak een iPhone na in HTML en CSS, en geef het deze layout:</p>
+
+<p><img src="images/flexbox-iphone.png" alt="Untitled.png" /></p>
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 07/11/2024, last edited on 14/11/2024
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Bash Scripting</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Hardware</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Bash Scripting</header>
+
+        <!-- content -->
+        <h1 id="wat-is-bash">Wat is Bash?</h1>
+
+<p>Het is de taal waarmee je <strong>Linux</strong> &amp; <strong>MacOS</strong> kunt <strong>besturen via de terminal</strong>. In plaats van alles met je muis te doen, kun je met Bash direct commando’s invoeren om het systeem te bedienen. Het maakt het mogelijk om snel dingen te doen die je normaal met een grafische interface zou doen, zoals bestanden kopiëren, programma’s starten, of instellingen aanpassen.</p>
+
+<p>Wat Bash echt krachtig maakt, is dat je er ook mee kunt programmeren. Dit betekent dat je taken die je normaal handmatig zou uitvoeren (zoals een reeks commando’s achter elkaar uitvoeren) kunt <strong>automatiseren met een Bash-script</strong>. Hierdoor kun je dingen sneller, efficiënter of automatisch doen, zonder steeds weer hetzelfde handmatige werk te herhalen.</p>
+
+<p><strong>Bijvoorbeeld:</strong></p>
+
+<ul>
+  <li>Automatisch regelmatig back-ups maken van belangrijke bestanden of mappen.</li>
+  <li>Automatisch je systeem en softwarepakketten up-to-date houden.</li>
+  <li>Je kunt Bash gebruiken om meldingen naar jezelf of anderen te sturen wanneer bepaalde gebeurtenissen plaatsvinden</li>
+</ul>
+
+<h2 id="bash-op-servers">Bash op servers</h2>
+
+<p><strong>Linux is het meestgebruikte besturingssysteem voor servers wereldwijd</strong>. Het wordt vaak gekozen vanwege zijn stabiliteit, veiligheid, en open-source karakter. Omdat de meeste Linux-servers geen grafische gebruikersinterface (GUI) hebben, wordt <strong>alles via de terminal beheerd</strong>, wat betekent dat kennis van de Bash-shell cruciaal is voor serverbeheer.</p>
+
+<p><strong>Bijvoorbeeld:</strong></p>
+
+<ul>
+  <li>Wanneer je werkt met meerdere servers, kan het bijwerken van het systeem op elke server een tijdrovende taak zijn. Met Bash kun je updates automatisch uitvoeren op al je servers.</li>
+  <li>Met Bash kun je de gezondheid van je server controleren, zoals het controleren van de schijfruimte of het geheugen, en meldingen sturen als er een probleem is.</li>
+  <li>Het regelmatig maken van back-ups van je serverbestanden en databases is cruciaal. Met Bash kun je back-upscripts schrijven die dit automatisch doen, bijvoorbeeld door dagelijkse back-ups van je serverbestanden en MySQL-databases te maken.</li>
+  <li>Op een server wil je ervoor zorgen dat kritieke services, zoals een webserver of database, altijd actief blijven. Met Bash kun je automatisch controleren of deze services draaien en ze opnieuw starten als dat niet het geval is.</li>
+</ul>
+
+<h1 id="linux-of-git-bash">Linux of Git Bash</h1>
+
+<p>Tijdens deze opdracht zullen we werken met Bash, de shell waarmee je commando’s invoert in een Linux-omgeving.
+Je kan op 2 manieren met Bash werken:</p>
+
+<ul>
+  <li><strong>Git Bash</strong><br />
+ Git Bash is een programma waarmee je op een Windows-computer Linux-achtige commando’s kunt gebruiken. Het geeft je toegang tot de Bash-shell, die normaal gesproken op Linux en macOS wordt gebruikt.</li>
+  <li><strong>Een volledige Linux-versie in een virtuele machine</strong><br />
+Dit geeft je de complete Linux-ervaring.</li>
+</ul>
+
+<p>Je mag zelf kiezen welke optie je gebruikt om met Bash aan de slag te gaan.</p>
+
+<h1 id="bash-scripts-aanmaken-en-uitvoeren">Bash scripts aanmaken en uitvoeren</h1>
+
+<ol>
+  <li>Open de terminal
+    <ul>
+      <li>
+        <p>In de meeste Linux-distributies kun je de terminal openen door op <span class="btn">Ctrl</span>
+ <span class="btn">Alt</span>
+ <span class="btn">T</span></p>
+      </li>
+      <li>
+        <p>Of je kunt zoeken naar <strong>“Terminal”</strong> in het applicatiemenu.</p>
+      </li>
+    </ul>
+  </li>
+  <li>Kijken op welke locatie je zit: <code class="language-plaintext highlighter-rouge">pwd</code></li>
+  <li>Kijken welke bestanden er op deze locatie staan: <code class="language-plaintext highlighter-rouge">ls</code></li>
+  <li>Nieuwe bestanden aanmaken:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">touch bestand.txt</code></li>
+      <li><code class="language-plaintext highlighter-rouge">touch script.sh</code></li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="bash-syntax">Bash syntax</h1>
+
+<h2 id="de-bang-start-code">De Bang Start Code</h2>
+
+<p>Je bash script moet altijd beginnen met deze regel, zo weet je systeem dat het script met de Bash-shell moet worden uitgevoerd.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># Je bash script moet altijd starten met deze code</span>
+
+<span class="c"># De rest van je code ...</span>
+</code></pre></div></div>
+
+<h2 id="variabelen">Variabelen</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">naam</span><span class="o">=</span><span class="s2">"Maes"</span>
+<span class="nb">echo</span> <span class="s2">"Hallo, </span><span class="nv">$naam</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<h2 id="invoer">Invoer</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"Wat is je naam?"</span>
+<span class="nb">read </span>gebruikersnaam
+<span class="nb">echo</span> <span class="s2">"Hallo, </span><span class="nv">$gebruikersnaam</span><span class="s2">! Welkom bij mijn Bash-script."</span>
+</code></pre></div></div>
+
+<h2 id="if-statement">If-statement</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">[</span> <span class="nv">$naam</span> <span class="o">==</span> <span class="s2">"Maes"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"Je bent de beste leerkracht!"</span>
+<span class="k">else
+  </span><span class="nb">echo</span> <span class="s2">"Wie ben jij?"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<h2 id="for-loop">For Loop</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>i <span class="k">in</span> <span class="o">{</span>1..5<span class="o">}</span>
+<span class="k">do
+  </span><span class="nb">echo</span> <span class="s2">"Nummer </span><span class="nv">$i</span><span class="s2">"</span>
+<span class="k">done</span>
+</code></pre></div></div>
+
+<h2 id="while-loop">While Loop</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">count</span><span class="o">=</span>1
+<span class="k">while</span> <span class="o">[</span> <span class="nv">$count</span> <span class="nt">-le</span> 5 <span class="o">]</span>
+<span class="k">do
+  </span><span class="nb">echo</span> <span class="s2">"Telling: </span><span class="nv">$count</span><span class="s2">"</span>
+  <span class="o">((</span>count++<span class="o">))</span>
+<span class="k">done</span>
+</code></pre></div></div>
+
+<h2 id="functies">Functies</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>functie_naam<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">echo</span> <span class="s2">"Dit is een functie"</span>
+<span class="o">}</span>
+functie_naam
+</code></pre></div></div>
+
+<h1 id="opdracht-je-1e-bash-script">Opdracht: Je 1e Bash script</h1>
+
+<ol>
+  <li>Maak een nieuw bash script aan.</li>
+  <li>Zoek uit hoe je het script <strong>executable</strong> kan maken zodat je het kan uitvoeren.</li>
+  <li>Zoek uit hoe je het script uit kan voeren en voer het uit.</li>
+  <li>Maak script dat deze zaken gebruikt:
+    <ul>
+      <li>Read</li>
+      <li>Echo</li>
+      <li>If-statement</li>
+      <li>Loop</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Je <strong>upload</strong> zowel je <strong>script</strong> als een <strong>screenshot</strong> van het resultaat.</p>
+
+<!------------------>
+<!-- CSV TO ARRAY -->
+<!------------------>
+
+<!-- get the last dir in the path of the markdown file that is including this file -->
+
+<!-- turn the CSV into an array -->
+
+<!---------->
+<!-- PAGE -->
+<!---------->
+
+<!-- table -->
+<table>
+
+   <!-- header -->
+   <thead>
+      <tr>
+         <th></th>
+         <th>
+            <em>Doelen:</em>
+                   <!-- get the filename -->
+             <!-- replace all '-' with spaces -->
+            bash scripting
+         </th>
+      </tr>
+   </thead>
+
+   <!-- body -->
+   <tbody>
+      
+      <tr>
+         <td><em>BV3_04.01</em></td>
+         <td> De leerlingen gebruiken courante functionaliteiten van vergelijkbare toepassingen om digitale inhouden te creëren</td>
+      </tr>
+      
+      <tr>
+         <td><em>BV3_13.04</em></td>
+         <td> De leerlingen zoeken doelgericht informatie in diverse bronnen en verwerken die op een kritische en systematische manier.</td>
+      </tr>
+      
+   </tbody>
+
+</table>
+
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 15/01/2025, last edited on 12/02/2025
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

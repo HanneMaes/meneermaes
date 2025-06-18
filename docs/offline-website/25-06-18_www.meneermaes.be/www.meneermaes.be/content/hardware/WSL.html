@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>WSL</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Hardware</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">WSL</header>
+
+        <!-- content -->
+        <blockquote>
+  <p>WSL staat voor <strong>Windows Subsystem for Linux</strong></p>
+</blockquote>
+
+<h1 id="wat-is-wsl">Wat is WSL?</h1>
+
+<p>WSL is een manier om <strong>Linux op Windows</strong> te draaien, zonder dat je een virtuele machine hoeft te gebruiken of je computer hoeft te dual-booten.<br />
+Met WSL kun je gewoon in Windows blijven werken, maar toch gebruik maken van een echte Linux-omgeving, rechtstreeks vanuit je <strong>terminal</strong>.</p>
+
+<p><strong>Verschillende versies:</strong></p>
+
+<ul>
+  <li><strong>WSL 2</strong> draait een echte Linux-kernel in een lichte virtuele machine (met Hyper-V technologie). Veel sneller en beter compatibel.</li>
+  <li><strong>WSL 1</strong> daarentegen werkt meer als een tolk: het vertaalt Linux-commando’s naar Windows-opdrachten, wat handig is maar minder krachtig en soms niet volledig compatibel met alle Linux-tools.</li>
+</ul>
+
+<p><strong>Vandaag gebruiken we WSL 2</strong>, die is stabieler, sneller en krachtiger.</p>
+
+<p>In 2016 was het groot nieuws dat <strong>Microsoft samenwerkte met Canonical</strong> (van Ubuntu). Vroeger waren Microsoft en Linux <strong>bittere rivalen</strong>. Nu draaien ze hand in hand!</p>
+
+<h1 id="waarom-zou-je-wsl-gebruiken-als-iter">Waarom zou je WSL gebruiken als IT’er?</h1>
+
+<ul>
+  <li>Je kan dezelfde krachtige tools gebruiken zoals op een echte Linux-server.</li>
+  <li>De meeste servers waarop websites, apps of backend-diensten draaien, gebruiken Linux. Je kan applicaties lokaal bouwen én testen alsof ze op een echte Linux-server draaien.</li>
+  <li>Je kan leren werken met Linux zonder een aparte pc of dual-boot.</li>
+</ul>
+
+<h1 id="hoe-installeer-je-wsl">Hoe installeer je WSL</h1>
+
+<h2 id="voorwaarden">Voorwaarden</h2>
+
+<p>Windows 10 versie 2004 of hoger (build 19041)</p>
+
+<h2 id="via-powershell-aanbevolen">Via PowerShell <em>(aanbevolen)</em></h2>
+
+<ol>
+  <li>Druk op <strong>Start</strong>, typ <strong>PowerShell</strong></li>
+  <li>Klik <strong>rechts</strong> op <strong>Windows PowerShell</strong> &gt; <strong>Als administrator uitvoeren</strong></li>
+  <li>Voer dit commando uit <code class="language-plaintext highlighter-rouge">wsl --install</code><br />
+Dit installeert: het WSL-platform, de Linux-kernel, Ubuntu.</li>
+  <li>Herstart Windows.</li>
+</ol>
+
+<h2 id="via-de-microsoft-store">Via de Microsoft Store</h2>
+
+<ol>
+  <li>Ga naar de <strong>Microsoft Store</strong> en installeer <strong>Ubuntu</strong>, of een van de andere ondersteunde Linux-distributies.</li>
+  <li>Open Ubuntu WSL via het <strong>Start-menu</strong>.</li>
+  <li>Herstart Windows.</li>
+</ol>
+
+<h2 id="ubuntu-starten">Ubuntu starten</h2>
+
+<ol>
+  <li>Open <strong>Ubuntu</strong> via <strong>Start</strong> of open <strong>PowerShell</strong> en typ <code class="language-plaintext highlighter-rouge">wsl</code>.</li>
+  <li>Typ <code class="language-plaintext highlighter-rouge">uname -a</code> om te kijken op welk systeem je zit.<br />
+Uname staat voor “Unix Name” en toont <strong>systeeminformatie</strong>, de -a vlag betekent “all”, dus: toon alle beschikbare info.<br />
+Je zou iets moeten zien als <code class="language-plaintext highlighter-rouge">Linux DESKTOP-1234 5.15.90.1-microsoft-standard-WSL2 ...</code>.</li>
+</ol>
+
+<h1 id="wsl-tips">WSL tips</h1>
+
+<h2 id="toegang-tot-je-windows-bestanden-vanuit-wsl">Toegang tot je Windows bestanden vanuit WSL</h2>
+
+<p>Je hebt vanuit WSL toegang tot je bestanden in Windows door te navigeren naar <code class="language-plaintext highlighter-rouge">/mnt + de letter van de schijf</code>.<br />
+<strong>Bijvoorbeeld: <code class="language-plaintext highlighter-rouge">/mnt/c</code></strong></p>
+
+<h2 id="toegang-tot-je-wsl-bestanden-vanuit-windows">Toegang tot je WSL bestanden vanuit Windows</h2>
+
+<p>Je hebt vanuit Windows toegang tot je bestanden in WSL door te navigeren naar <code class="language-plaintext highlighter-rouge">\\wsl.localhost\</code>.</p>
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 22/04/2025, last edited on 11/06/2025
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

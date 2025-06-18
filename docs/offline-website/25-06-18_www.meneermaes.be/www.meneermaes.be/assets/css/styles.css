@@ -1,0 +1,785 @@
+/* ********* */
+/* VARIABLES */
+/* ********* */
+
+:root {
+  --dark: rgb(113, 68, 53);
+  --medium: rgb(205, 123, 96);
+  --light: rgb(227, 185, 169);
+  --light-transparant: rgba(227, 185, 169, 0.5);
+  --white: rgb(240, 240, 235);
+
+  --textDark: rgba(0, 0, 0, 0.75);
+  --text: rgba(0, 0, 0, 0.6);
+  --textLight: rgba(0, 0, 0, 0.3);
+
+  --colorGreen: rgb(0, 151, 106);
+  --colorRed: #a30031;
+  --colorBlue: #006097;
+
+  --animSpeed: 0.3s;
+
+  --contentWidth: 85%;
+  --contentWidthMax: 850px;
+  --roundness: 10px;
+  --borderWidth: 3px;
+
+  --spacingSmall: 5px;
+  --spacing: 20px;
+  --spacingBig: 70px;
+  --spacingSuperBig: 200px;
+}
+
+/* title font */
+@font-face {
+  font-family: titleFont;
+  src: url("fonts/legquinne/Legquinne-Regular.otf");
+}
+
+/* normal font */
+@font-face {
+  font-family: textFont;
+  src: url("https://www.meneermaes.be/assets/css/fonts/tt_ramillas/TT\ Ramillas\ Trial\ Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: textFont;
+  src: url("https://www.meneermaes.be/assets/css/fonts/tt_ramillas/TT\ Ramillas\ Trial\ Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: textFont;
+  src: url("https://www.meneermaes.be/assets/css/fonts/tt_ramillas/TT\ Ramillas\ Trial\ Medium.ttf");
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: textFont;
+  src: url("https://www.meneermaes.be/assets/css/fonts/tt_ramillas/TT\ Ramillas\ Trial\ Medium\ Italic.ttf");
+  font-weight: medium;
+  font-style: italic;
+}
+@font-face {
+  font-family: textFont;
+  src: url("https://www.meneermaes.be/assets/css/fonts/tt_ramillas/TT\ Ramillas\ Trial\ Light.ttf");
+  font-weight: light;
+  font-style: normal;
+}
+@font-face {
+  font-family: textFont;
+  src: url("https://www.meneermaes.be/assets/css/fonts/tt_ramillas/TT\ Ramillas\ Trial\ Light\ Italic.ttf");
+  font-weight: light;
+  font-style: italic;
+}
+@font-face {
+  font-family: textFont;
+  src: url("https://www.meneermaes.be/assets/css/fonts/tt_ramillas/TT\ Ramillas\ Trial\ Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: textFont;
+  src: url("https://www.meneermaes.be/assets/css/fonts/tt_ramillas/TT\ Ramillas\ Trial\ Bold\ Italic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: textFont;
+  src: url("https://www.meneermaes.be/assets/css/fonts/tt_ramillas/TT\ Ramillas\ Trial\ Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: textFont;
+  src: url("https://www.meneermaes.be/assets/css/fonts/tt_ramillas/TT\ Ramillas\ Trial\ Black\ Italic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* code font */
+@font-face {
+  font-family: codeFont;
+  src: url("fonts/CascadiaCode/CascadiaMono.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: codeFont;
+  src: url("fonts/CascadiaCode/CascadiaMonoItalic.woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* ****************** */
+/* horizontal spacing */
+/* ****************** */
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-left: var(--spacing);
+}
+
+p,
+ul,
+ol {
+  margin-left: calc(2 * var(--spacing));
+}
+
+.checkbox-interactive {
+  margin-left: calc(3 * var(--spacing));
+}
+
+/* **** */
+/* BODY */
+/* **** */
+
+body {
+  color: var(--text);
+  margin: 0;
+  font-family: textFont;
+}
+
+section {
+  background-color: var(--white);
+  background-image: url("../images/blenderstudiopattern.svg");
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: var(--spacingBig);
+}
+
+.mainSection {
+  /* make the page content be over the page info at the bottom */
+  position: relative; /* to make the z-index work */
+  z-index: 1;
+}
+
+.sectionContent {
+  width: var(--contentWidth);
+  max-width: var(--contentWidthMax);
+}
+
+hr {
+  height: 0px;
+  border: none;
+  border-top: 1px solid; /* Set the border width */
+  border-image: linear-gradient(
+      to right,
+      var(--white) 0%,
+      var(--text) 20%,
+      var(--text) 80%,
+      var(--white) 100%
+    )
+    1; /* Gradient with black at the start and end */
+  opacity: 0.3;
+  margin-top: calc(2 * var(--spacingBig));
+  margin-bottom: calc(2 * var(--spacingBig));
+}
+
+/* ********** */
+/* TYPOGRAPHY */
+/* ********** */
+
+header,
+h1,
+h2 {
+  font-family: titleFont;
+  color: var(--textDark);
+}
+
+header {
+  margin-top: var(--spacingBig);
+  margin-bottom: var(--spacingBig);
+  font-size: 70px;
+  background-color: none !important;
+  text-decoration: underline;
+  text-decoration-color: var(--light);
+}
+
+h1 {
+  margin-top: var(--spacingBig);
+  color: var(--medium);
+  font-size: 50px;
+}
+
+h2 {
+  margin-top: var(--spacingBig);
+  font-size: 35px;
+}
+
+h3 {
+  margin-top: var(--spacingBig);
+  font-size: 20px;
+}
+
+.opdrachtHeader,
+.oefeningHeader {
+  color: var(--medium);
+  text-decoration: underline;
+  text-decoration-color: var(--text);
+}
+.opdrachtHeader::before {
+  content: "🗸 ";
+  color: var(--text);
+}
+
+strong {
+  color: var(--textDark);
+}
+
+em {
+  color: var(--textLight);
+}
+
+blockquote {
+  color: var(--medium);
+  font-size: 1.7em;
+  font-style: italic;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* callout */
+
+.callout {
+  color: var(--textDark);
+
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
+  border-radius: var(--roundness);
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+.calloutGreen {
+  background-color: color-mix(in srgb, var(--colorGreen) 10%, transparent);
+  border: var(--borderWidth) solid
+    color-mix(in srgb, var(--colorGreen) 30%, transparent);
+}
+.calloutBlue {
+  background-color: color-mix(in srgb, var(--colorBlue) 20%, transparent);
+  border: var(--borderWidth) solid
+    color-mix(in srgb, var(--colorBlue) 60%, transparent);
+}
+
+.callout p {
+  padding: 20px;
+  margin: 0px;
+}
+
+.callout .title {
+  text-transform: capitalize;
+  color: color-mix(in srgb, var(--colorGreen) 60%, transparent);
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* toggles */
+
+details {
+  margin: var(--spacing);
+}
+summary {
+  cursor: pointer;
+  font-size: 1.3em;
+  text-decoration-color: var(--light);
+  text-decoration-thickness: 2px;
+
+  transition: all var(--animSpeed);
+}
+summary:hover {
+  color: var(--medium);
+}
+
+summary::marker {
+  /* the arrow/triangle */
+  color: var(--light);
+}
+
+.toggleContent {
+  padding-left: var(--spacing); /* spacing between the line and the text */
+  margin-left: 4px; /* to put the line right under the arrow */
+  border-left: var(--borderWidth) solid var(--light);
+}
+
+/* colored text */
+.goodText {
+  color: var(--colorGreen);
+  font-weight: bold;
+}
+.badText {
+  color: var(--colorRed);
+  font-weight: bold;
+}
+.blueText {
+  color: var(--colorBlue);
+  font-weight: bold;
+}
+
+/* checkbox interactive */
+
+.checkbox-interactive-label {
+  margin-left: var(--spacingSmall);
+}
+
+/* ***** */
+/* LINKS */
+/* ***** */
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--light);
+  text-decoration-thickness: 2px;
+
+  transition: all var(--animSpeed);
+}
+a:hover {
+  color: var(--medium);
+  opacity: 1;
+}
+
+/* extra styling for external links and .pdf files */
+a[href*='//']::after
+{
+  content: "↗";
+  color: var(--medium);
+}
+a[href*=".pdf"]::after {
+  content: "↗";
+  color: var(--medium);
+}
+
+/* extra styling for download links*/
+a[href*=".docx"]::after {
+  content: "↓";
+  color: var(--medium);
+}
+a[href="zelfstandige-opdrachten/beeldapparatuur.docx"]::after {
+  content: "↓";
+  color: var(--medium);
+}
+.portfolio::before {
+  content: "🌐 Portfolio website:";
+  font-style: italic;
+  padding-right: var(--spacingSmall);
+  color: var(--medium);
+}
+
+.opdracht::before {
+  content: "✏️ Opdracht";
+  font-style: italic;
+  padding-right: var(--spacingSmall);
+  color: var(--medium);
+}
+
+figcaption {
+  opacity: 0.5;
+}
+figcaption a {
+  font-style: italic;
+}
+figcaption::before {
+  content: "Credit: ";
+  color: var(--medium);
+}
+
+/* **** */
+/* CODE */
+/* **** */
+
+code.hljs.language-html::before {
+  content: "" !important;
+}
+.language-html code {
+  border: var(--borderWidth) solid #d4a200;
+}
+.language-html::before {
+  color: #d4a200;
+  content: "HTML";
+}
+
+code.hljs.language-css::before {
+  content: "" !important;
+}
+.language-css code {
+  border: var(--borderWidth) solid #f34a4a;
+}
+.language-css::before {
+  color: #f34a4a;
+  content: "CSS";
+}
+
+code.hljs.language-javascript::before {
+  content: "" !important;
+}
+.language-javascript code {
+  border: var(--borderWidth) solid #30b8ee;
+}
+.language-javascript::before {
+  color: #30b8ee;
+  content: "JavaScript";
+}
+
+code.hljs.language-latex::before {
+  content: "" !important;
+}
+.language-latex code {
+  border: var(--borderWidth) solid #00a7a7;
+}
+.language-latex::before {
+  color: #00a7a7;
+  content: "LaTeX";
+}
+
+.language-html::before,
+.language-css::before,
+.language-javascript::before,
+.language-latex::before {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-family: codeFont;
+  font-weight: bold;
+  font-style: italic;
+  margin-left: 8px;
+}
+
+code {
+  /* user-select: none; */
+  border-radius: var(--roundness);
+  font-family: codeFont;
+}
+
+pre {
+  margin-top: 0;
+}
+
+/* for some reason highlight.js doesn't style inline code blocks, so I do it here */
+code {
+  background-color: rgba(40, 44, 52, 1);
+  color: #abb2bf;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* ******************* */
+/* UI ELEMENTS IN TEXT */
+/* ******************* */
+
+.btn,
+.ui,
+.filePath {
+  font-family: codeFont;
+  font-size: 0.8em;
+  background-color: var(--light);
+  border-radius: 5px;
+  padding: 1px;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.btn,
+.ui {
+  text-transform: capitalize;
+}
+
+.btn {
+  border-bottom: var(--borderWidth) solid var(--medium);
+}
+
+.uiSeparator {
+  color: var(--medium);
+  font-weight: bold;
+}
+
+/* *************** */
+/* HEADER & FOOTER */
+/* *************** */
+
+footer {
+  color: var(--textLight);
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacingSuperBig);
+
+  display: flex;
+  justify-content: center;
+}
+
+.footerContent {
+  width: var(--contentWidth);
+  max-width: var(--contentWidthMax);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+
+footer a {
+  color: var(--textLight);
+}
+
+footer img {
+  /* signature */
+  opacity: 0.3; /* same as text in footer */
+}
+
+.pageInfo {
+  opacity: 0.2;
+  font-style: italic;
+  position: fixed;
+  bottom: 0;
+  padding: var(--spacing);
+
+  /* center content */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.curvedShadow {
+  opacity: 0.2;
+  width: 98vw;
+  height: 44px;
+}
+/* ***************** */
+/* BREADCRUMBS & TOC */
+/* ***************** */
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-radius: var(--roundness);
+
+  background-color: white;
+  margin: 30px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  transition: all var(--animSpeed);
+}
+nav:hover {
+  box-shadow: 0px 0px 0px var(--borderWidth) var(--light) inset;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/* breadcrumbs */
+
+.navDivider {
+  color: var(--light);
+  padding-left: var(--spacingSmall);
+  padding-right: var(--spacingSmall);
+  font-weight: 900;
+}
+
+/* toc */
+
+.toc {
+  top: 70px;
+}
+
+.tocHeader {
+  color: var(--medium);
+  text-decoration: underline;
+  text-decoration-color: var(--text);
+}
+
+.toc .h1Link,
+.toc .h2Link,
+.toc .h3Link,
+.toc .h4Link,
+.toc .h5Link,
+.toc .h6Link {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.toc .h2Link {
+  padding-left: 20px;
+}
+.toc .h3Link {
+  padding-left: 40px;
+}
+.toc .h4Link {
+  padding-left: 60px;
+}
+.toc .h5Link {
+  padding-left: 70px;
+}
+.toc .h6Link {
+  padding-left: 80px;
+}
+
+/* ****** */
+/* TABLES */
+/* ****** */
+
+table,
+th,
+td {
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+th {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* punten table */
+
+thead th {
+  text-transform: capitalize;
+}
+
+.puntenTotaal {
+  font-weight: bold;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.punt {
+  text-align: center;
+}
+
+/* ***** */
+/* LISTS */
+/* ***** */
+
+li::marker {
+  /* colorize sorted & unsorted list numbers and bullets */
+  color: var(--medium);
+}
+
+/* ***** */
+/* MEDIA */
+/* ***** */
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: var(--roundness);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  border-radius: var(--roundness);
+}
+
+/* special IMG classes */
+.square {
+  border-radius: 0px;
+}
+
+.wrap {
+  float: left;
+  padding-right: var(--spacing);
+}
+
+.frame {
+  border: var(--borderWidth) solid var(--light);
+}
+
+/* ****** */
+/* FRAMES */
+/* ****** */
+
+.browserWindow,
+.phone {
+  background-color: var(--medium);
+  border: var(--borderWidth) solid var(--light);
+  border-radius: var(--roundness);
+  display: inline-block;
+  margin-top: var(--spacingSmall);
+  margin-bottom: var(--spacingSmall);
+  margin-right: var(--spacingSmall);
+  vertical-align: top;
+}
+
+.browserWindow img {
+  margin: 0px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.phone img {
+  margin: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.browserWindowUi {
+  background-color: var(--light);
+  color: var(--medium);
+  font-size: 14px;
+  font-family: codeFont;
+  letter-spacing: 1px;
+  text-align: right;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 3px;
+
+  /* vertical center text */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phoneUi {
+  background-color: var(--light);
+  color: var(--medium);
+  font-size: 14px;
+  font-family: codeFont;
+  letter-spacing: 1px;
+  text-align: right;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 3px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ************* */
+/* MEDIA QUERIES */
+/* ************* */
+
+.landscapeROW-portraitCOLUMN {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (orientation: portrait) {
+  .landscapeROW-portraitCOLUMN {
+    display: flex;
+    flex-direction: column;
+  }
+}

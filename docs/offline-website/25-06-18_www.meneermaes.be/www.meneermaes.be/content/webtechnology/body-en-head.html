@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Body & Head</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Webtechnology</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Body & Head</header>
+
+        <!-- content -->
+        <h1 id="correcte-html-code">Correcte HTML-code</h1>
+
+<p>Tot hiertoe hebben we eigenlijk onvolledige websites gemaakt.<br />
+Dit is eigenlijk hoe de code van een website eruit moet zien:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">href=</span><span class="s">"images/favicon.ico"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Website title<span class="nt">&lt;/title&gt;</span>
+
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+
+        Hello world!
+
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>HTML-code werkt zonder deze tags, maar zal minder goed functioneren, hieronder overloop ik alle nieuwe HTML-tags.</p>
+
+<h2 id="doctype-html"><code class="language-plaintext highlighter-rouge">&lt;!doctype html&gt;</code></h2>
+
+<p>Dit is een <strong>singular</strong> HTML-tag die de computer laat weten met welke versie van HTML de code geschreven is.</p>
+
+<p>Deze tag geeft aan dat we werken met <strong>HTML5</strong>, de nieuwste versie van HTML.
+Ten opzichten van de vorige HTML-versies heeft HTML5 meer multimedia en mobiele functies.</p>
+
+<h2 id="html"><code class="language-plaintext highlighter-rouge">&lt;html&gt;</code></h2>
+
+<p>De <code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> tag geeft aan waar de HTML-code start en eindigt.</p>
+
+<h2 id="head"><code class="language-plaintext highlighter-rouge">&lt;head&gt;</code></h2>
+
+<p>De <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> tag bevat informatie die <strong>niet te zien is op de webpagina</strong> zelf, maar die nuttig is voor de browser of voor zoekmachines zoals Google.</p>
+
+<h2 id="body"><code class="language-plaintext highlighter-rouge">&lt;body&gt;</code></h2>
+
+<p>De <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> tag bevat de inhoud van de webpagina die <strong>zichtbaar is voor de gebruiker</strong>.</p>
+
+<h1 id="head-tags">Head tags</h1>
+
+<h2 id="meta-charsetutf-8-"><code class="language-plaintext highlighter-rouge">&lt;meta charset="UTF-8" /&gt;</code></h2>
+
+<p>De <code class="language-plaintext highlighter-rouge">&lt;meta charset="UTF-8" /&gt;</code> tag geeft aan met welk alfabet de website werkt.</p>
+
+<p>UTF-8 ondersteunt een brede reeks tekens, waaronder westerse karakters, maar ook karakters uit vele andere talen en speciale symbolen. Hierdoor kan de website teksten in verschillende talen en met verschillende speciale tekens zonder problemen weergeven.</p>
+
+<h2 id="meta-nameviewport-contentwidthdevice-width-"><code class="language-plaintext highlighter-rouge">&lt;meta name="viewport" content="width=device-width" /&gt;</code></h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;meta name="viewport" content="width=device-width" /&gt;</code> maakt een website responsive.</p>
+
+<p>Dat wil zeggen dat webpagina’s zich aanpassen aan de verschillende schermformaten van apparaten, zoals smartphones en tablets, en een betere gebruikerservaring bieden op deze apparaten.</p>
+
+<h2 id="titlewebsite-titletitle"><code class="language-plaintext highlighter-rouge">&lt;title&gt;Website title&lt;/title&gt;</code></h2>
+
+<p>De <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> tag geeft je website een titel.</p>
+
+<p>Deze titel is te zien is zowel de <strong>browser</strong> als in de zoekresultaten van zoekmachines zoals <strong>Google</strong>.</p>
+
+<p><img src="images/title.png" alt="" /></p>
+
+<h2 id="link-relicon-hrefimagesfaviconico-"><code class="language-plaintext highlighter-rouge">&lt;link rel="icon" href="images/favicon.ico" /&gt;</code></h2>
+
+<p>Deze tag geeft je website een <strong>favicon</strong>.</p>
+
+<p>Dit favicon is te zien in zowel de <strong>browser</strong> als in de zoekresultaten van zoekmachines zoals <strong>Google</strong>.</p>
+
+<p><img src="https://www.meneermaes.be/content/webtechnology/images/favicon.ico" alt="" /></p>
+
+<p>Het deel <code class="language-plaintext highlighter-rouge">"images/favicon.ico"</code> wil zeggen dat de afbeelding <code class="language-plaintext highlighter-rouge">favicon.ico</code> in een de folder <code class="language-plaintext highlighter-rouge">images</code> zit.</p>
+
+<p><img src="images/favicon-dir.png" alt="" /></p>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">tip</p>
+   <p><p>Bij websites is het gebruikelijk alle afbeeldingen in een folder genaamd images te zetten, zo maak je je folderstructuur duidelijker bij veel pagina’s met veel afbeeldingen.</p>
+</p>
+
+</div>
+
+<h2 id="ico-formaat">.ICO formaat</h2>
+
+<p>Het .ico-formaat wordt gebruikt voor icoon afbeeldingen. 
+Het heeft mogelijkheid om meerdere resoluties in één bestand op te slaan, ondersteuning voor transparantie, kleine bestandsgrootte en automatische herkenning door browsers.
+Dit zorgt ervoor dat de favicon er goed uitziet op verschillende apparaten en goed laadt, wat bijdraagt aan een consistente en professionele uitstraling van de website.</p>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">Info</p>
+   <p><p>Een favicon moet altijd in het <strong>.ICO</strong> formaat</p>
+</p>
+
+</div>
+
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 26/09/2024, last edited on 27/09/2024
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

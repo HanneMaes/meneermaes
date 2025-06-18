@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Display & Position</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Webtechnology</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Display & Position</header>
+
+        <!-- content -->
+        <blockquote>
+  <p>Nu is het tijd om zelf op te zoeken wat de css-properties <strong>display</strong> en <strong>position</strong> doen.</p>
+</blockquote>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen" data-aos="zoom-in">
+
+   <p class="title">Belangrijk</p>
+   <p>
+<p>Zelfstandig nieuwe zaken opzoeken is een waardevolle vaardigheid in webdesign, omdat de technologieën en best practices voortdurend evolueren. Door deze proactieve leerhouding ontwikkel je de flexibiliteit om in te spelen op veranderingen en innovaties naar de toekomst toe.</p>
+</p>
+
+</div>
+
+<h1 id="oefening-1-voorbeelden">Oefening 1: Voorbeelden</h1>
+
+<h2 id="display">Display</h2>
+
+<p>Maak een website waarin je uitlegt wat deze <strong>display-properties</strong> doen, voorzie ook <strong>duidelijke voorbeelden</strong> (voorbeelden gemaakt met code, geen afbeeldingen):</p>
+<ul>
+  <li>Block</li>
+  <li>Inline-block</li>
+  <li>Inline</li>
+  <li>None</li>
+</ul>
+
+<h2 id="position">Position</h2>
+
+<p>Maak een nieuwe pagina waarin je uitlegt wat deze <strong>position-properties</strong> doen, voorzie ook <strong>duidelijke voorbeelden</strong> (voorbeelden gemaakt met code, geen afbeeldingen):</p>
+<ul>
+  <li>Absolute</li>
+  <li>Fixed</li>
+  <li>Relative</li>
+  <li>Static</li>
+</ul>
+
+<h1 id="oefening-2-desktop-environment">Oefening 2: Desktop environment</h1>
+
+<h2 id="mac-style-dock">Mac style dock</h2>
+
+<p>Maak een nieuwe website met onderaan een dock.<br />
+Het dock heeft de volgende elementen: icoontjes, background, border en bolletjes.</p>
+
+<p><img src="images/desktop-environment-1.png" alt="Untitled" /></p>
+
+<h2 id="menu-bar">Menu bar</h2>
+
+<p>Geef je desktop environment een menu bar bovenaan en een wallpaper.</p>
+
+<p><img src="images/desktop-environment-2.png" alt="Untitled" /></p>
+
+<h2 id="window">Window</h2>
+
+<p>Geef je desktop environment een window.</p>
+
+<p>Het windows heeft icoontjes voor maximize, minimize en close.<br />
+Op Windows zien deze er zo uit, maar je mag zelf een design kiezen.<br />
+<img src="images/window-decorations.jpg" alt="Untitled" /></p>
+
+<p>De inhoud van het window mag je zelf kiezen.</p>
+
+<p><img src="images/desktop-environment-3.png" alt="Untitled" /></p>
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 15/11/2024, last edited on 09/01/2025
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Web Fonts</title>
+
+    <!-- apply custom CSS to some page -->
+    
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="mainSection">
+      <div class="sectionContent">
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
+
+        <!-- breadcrumbs: not on homepage -->
+        
+        <nav class="breadcrumbs">
+          <a href="../../index.html">⌂</a>
+
+          <!-- only show link to section when not on a section page -->
+          
+          <span class="navDivider">/</span>
+          
+          <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+          
+          <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+          <a href="index.html"
+            >Webtechnology</a
+          >
+          
+        </nav>
+        
+
+        <!-- table of contents -->
+        <!-- <nav>
+            <div class="tocHeader">Inhoudstafel</div>
+            <div id="toc" class="toc"></div>
+            </nav> -->
+
+        <!-- ------- -->
+        <!-- CONTENT -->
+        <!-- ------- -->
+
+        <!-- header -->
+        <header data-aos="fade-left">Web Fonts</header>
+
+        <!-- content -->
+        <p>Elke computer wordt geleverd met een standaard set lettertypen die zijn geïnstalleerd op het besturingssysteem. Deze <strong>lettertypen variëren afhankelijk van het besturingssysteem</strong> (zoals Windows, macOS, Linux) en de versie ervan. Omdat verschillende besturingssystemen verschillende lettertypen bevatten, kan een <strong>website er op de computer van de ontwerper anders uitzien dan op de computer van de bezoeker</strong>. Wat er goed uitziet op de ene computer, kan er anders uitzien op een andere computer als die niet hetzelfde lettertype heeft geïnstalleerd.</p>
+
+<p>Web fonts komen hier te hulp. Het zijn <strong>lettertypen die specifiek zijn ontworpen en geoptimaliseerd voor gebruik op websites</strong>.
+Wanneer een website een web font gebruikt, downloadt de browser van de gebruiker het specifieke lettertype. Hierdoor zien <strong>alle bezoekers van de website dezelfde lettertypen</strong>, ongeacht welk besturingssysteem ze gebruiken of welke lettertypen ze op hun computer hebben geïnstalleerd.</p>
+
+<h1 id="google-fonts">Google Fonts</h1>
+
+<p>Google Fonts is een <strong>gratis online dienst</strong> van Google waarmee web ontwikkelaars toegang krijgen tot een uitgebreide bibliotheek met verschillende lettertypen die ze kunnen gebruiken op hun websites.</p>
+
+<p><a href="https://fonts.google.com/">Browse Fonts - Google Fonts</a></p>
+
+<h2 id="hoe-google-fonts-gebruiken">Hoe Google Fonts gebruiken</h2>
+
+<ol>
+  <li>Surf naar <a href="https://fonts.google.com/">https://fonts.google.com/</a> en klik op het font dat je wil gebruiken.</li>
+  <li>
+    <p>Download het font door te klikken op de knop <strong>Download family</strong>.</p>
+
+    <p><img src="images/webfont-download.png" alt="Untitled" class="frame" /></p>
+  </li>
+  <li>Het gedownloade font zit in een ZIP-bestand, pak het bestand uit.</li>
+  <li>
+    <p>Kopieer het font-bestand. Je kan font-bestanden herkennen aan het <strong>icoontje</strong>, en aan de extensies <strong>.otf</strong>, <strong>.ttf</strong> en <strong>.woff</strong>.</p>
+
+    <p><img src="images/webfont-file.png" alt="Untitled" class="frame" /></p>
+  </li>
+  <li>
+    <p>Ga naar de folder van je website, maak een nieuwe folder aan genaamd <strong>fonts</strong> en plak hier je font-bestand in.</p>
+
+    <p><img src="images/webfont-folder.gif" alt="Untitled" class="frame" /></p>
+  </li>
+  <li>Voeg deze <strong>CSS-code</strong> toe aan je website:
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">@font-face</span> <span class="p">{</span>
+     <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'pacifico'</span><span class="p">;</span>
+     <span class="nl">src</span><span class="p">:</span> <span class="sx">url('fonts/Pacifico-Regular.ttf')</span><span class="p">;</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">@font-face</code> laat ons een font toevoegen aan de website.</li>
+      <li><code class="language-plaintext highlighter-rouge">font-family</code> is de <strong>naam van het font</strong>, deze naam mogen we zelf kiezen. 
+ Het makkelijkste is om de naam van het font op Google Fonts te kiezen.</li>
+      <li><code class="language-plaintext highlighter-rouge">src: url('fonts/Pacifico-Regular.ttf');</code> is de locatie van het font-bestand.
+ <code class="language-plaintext highlighter-rouge">fonts/bestandnaam.ttf</code> wil zeggen dat ons font-bestand in de folder genaamd fonts zit, daarna schrijven we de bestandsnaam van het font.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Gebruik het font in je CSS-code:</p>
+
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">h1</span> <span class="p">{</span>
+     <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'pacifico'</span><span class="p">;</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>Deze code wil zeggen dat we alle <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code> tags het font geven met de naam <strong>pacifico</strong>.
+ Dit is de naam die we in de vorige stap gekozen hebben.</p>
+  </li>
+</ol>
+
+<h1 id="️-opdracht-webfonts-toevoegen-aan-je-website">✏️ Opdracht: Webfonts toevoegen aan je website</h1>
+
+<p>Open een van je vorige websites en voeg <strong>minstens 2 verschillende webfonts</strong> toe.</p>
+
+<p>Om meerdere fonts te gebruiken moeten we <strong>2 keer</strong> de <code class="language-plaintext highlighter-rouge">@font-face</code> code gebruiken:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* Hier definiëren we het font, dit moet gebeuren voor we het font toekennen aan elementen */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'pacifico'</span><span class="p">;</span> <span class="c">/* deze naam mogen we kiezen */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('fonts/Pacifico-Regular.ttf')</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'roboto'</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('fonts/Roboto-Regular.ttf')</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Hier kennen we het font toen aan elementen */</span>
+<span class="nt">p</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="n">pacifico</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="n">roboto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+      </div>
+      <!-- sectionContent -->
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img
+        class="curvedShadow"
+        src="../../assets/images/curved_shadow.png"
+      />
+    </center>
+
+    <footer>
+      <div class="footerContent">
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl"
+              >CC BY-NC</a
+            >
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- page info -->
+    <div class="pageInfo landscapeROW-portraitCOLUMN">
+      Created on 18/10/2024, last edited on 25/10/2024
+    </div>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
