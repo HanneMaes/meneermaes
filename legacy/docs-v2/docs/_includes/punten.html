@@ -1,0 +1,56 @@
+<!------------------>
+<!-- CSV TO ARRAY -->
+<!------------------>
+
+<!-- get the last dir in the path of the markdown file that is including this file -->
+{% assign dir_segments = page.path | split: '/' %}
+{% assign subdirectory = dir_segments[1] %}
+
+<!-- turn the CSV into an array -->
+{% assign puntenverdeling = site.data[subdirectory][include.data] | csv_to_array %}
+
+<!---------->
+<!-- PAGE -->
+<!---------->
+
+<!-- title -->
+<!-- <h1>Puntenverdeling</h1> -->
+
+<!-- table -->
+<table>
+
+   <!-- header -->
+   <thead>
+      <tr>
+         <th>
+            <em>Puntenverdeling:</em>
+            {% assign filename = include.data | split: "." %}       <!-- get the filename -->
+            {% assign filename = filename[0] | replace: "-", " " %} <!-- replace all '-' with spaces -->
+            {{ filename }}
+         </th>
+         <th></th>
+      </tr>
+   </thead>
+
+   <!-- body -->
+   <tbody>
+      {% for row in puntenverdeling %}
+      <tr>
+         <td>{{ row.onderdeel }}</td>
+         <td class="punt">{{ row.punt }}</td>
+      </tr>
+      {% endfor %}
+
+      <!-- Total row -->
+      <tr class="puntenTotaal">
+         <td>Totaal</td>
+         <td class="punt">
+            {% assign total_punt = 0 %}
+            {% for row in puntenverdeling %}
+            {% assign total_punt = total_punt | plus: row.punt | plus: 0 %}
+            {% endfor %}
+            {{ total_punt }}
+         </td>
+      </tr>
+   </tbody>
+</table>

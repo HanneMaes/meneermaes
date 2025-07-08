@@ -1,4 +1,6 @@
-# maesbot/
+# Maesbot
+
+`maesbot/`
 *Tooling to make my life easier*
 
 ## maesbot/diff-file/ 
@@ -9,7 +11,9 @@ Automate everything that involves points, assignements, tests, ...
 
 ---
 
-# docs/
+# MeneerMaes.be
+
+`docs/`
 *Website for my course material: [https://www.meneermaes.be/](https://www.meneermaes.be/)*
 
 ## Dependencies
