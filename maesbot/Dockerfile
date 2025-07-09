@@ -1,28 +1,23 @@
 # Debian-based image with:
-#   - Python 3.11 preinstalled
-#   - bash, apt, and common CLI tools
-# A good base for running LibreOffice, PDF conversion, file copying, etc.
-FROM python:3.11-bullseye
+FROM debian:bullseye
 
-# Set environment vars to allow headless LibreOffice
-ENV DEBIAN_FRONTEND=noninteractive
-ENV HOME=/root
-
-# Install needed tools: bash, LibreOffice (for .odt -> .pdf), etc.
+# Install Python, pip, and LibreOffice
 RUN apt-get update && \
     apt-get install -y \
-    bash \
+    python3 python3-pip \
     libreoffice \
-    unzip \
-    make \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
+    unzip make bash && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Set working directory
+# Set working dir
 WORKDIR /app
 
-# Install Python dependencies
+# Copy and install dependencies
 COPY requirements-python.txt .
-RUN pip install --no-cache-dir -r requirements-python.txt
+RUN pip3 install --no-cache-dir -r requirements-python.txt
 
-# Copy the rest of the project
+# Copy project files
 COPY . .
+
+# Run script
+CMD ["python3", "taken-en-toetsen/1-yaml2doc.py"]
