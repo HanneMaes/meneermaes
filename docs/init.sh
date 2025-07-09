@@ -7,12 +7,13 @@ systemctl start docker
 # This reads the instructions in the Dockerfile and package the application's environment, dependencies, and configurations into a reusable Docker image
 # This image serves as a blueprint for containers, it is stored in the Docker daemon and can be used multiple times to start containers
 sudo docker build -t meneermaes-jekyll .
-   # Read the Dockerfile in the current directory (.) and builds an image tagged as meneermaes-jekyll
+# Read the Dockerfile in the current directory (.) and builds an image tagged (named) as meneermaes-jekyll
 
 # Run the Docker container with LiveReload enabled
 # Creates and starts a new container for a specific image
 # Runs any default commands specified in the image’s CMD or ENTRYPOINT
 sudo docker run \
+    --rm \
     -p 4000:4000 \
     -p 35729:35729 \
     -v $(pwd):/app \
@@ -22,6 +23,9 @@ sudo docker run \
     --force_polling \
     --host 0.0.0.0 \
     & # Run in background
+    # --rm to remove the container when it exits
+    # Every time you run a Docker container without --rm, Docker keeps it in the background (even after it stops)
+    # These containers accumulate over time and clutter your system.
 
 # Wait a few seconds for Jekyll to start
 sleep 5
