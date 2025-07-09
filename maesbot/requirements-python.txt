@@ -1,2 +1,3 @@
 odfdo
+odfpy
 pyyaml

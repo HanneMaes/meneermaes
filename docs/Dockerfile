@@ -1,6 +1,6 @@
 # Use Ruby as the base image
 # It's a Debian based image
-FROM ruby:3.1.2
+FROM ruby:3.1.2 # supports multi-architecture (multi-arch) builds, meaning it works natively on both Intel and ARM platforms (Zorin OS & Asahi)
 
 # Install dependencies
 RUN apt-get update && apt-get install -y build-essential nodejs
