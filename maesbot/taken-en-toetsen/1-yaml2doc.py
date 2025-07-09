@@ -44,6 +44,8 @@ title = Paragraph(assignment["assignment_title"])
 body.append(title)
 body.append(table)
 
+# Create output dir if it does not exist
+
 # Save output
-template.save("output/grading_database.odt")
+template.save("taken-en-toetsen/output/grading_database.odt")
 print("✅ File saved to output/grading_database.odt")
