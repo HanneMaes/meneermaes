@@ -2,6 +2,7 @@
 
 from odfdo import Document, Table, Row, Cell, Paragraph
 import yaml
+import os # To create directories
 
 # Load the assignment data
 with open("testdata/toets.yml") as f:
@@ -45,7 +46,11 @@ body.append(title)
 body.append(table)
 
 # Create output dir if it does not exist
+output_dir = "taken-en-toetsen/output"
+os.makedirs(output_dir, exist_ok=True)
 
 # Save output
 template.save("taken-en-toetsen/output/grading_database.odt")
+
+print()
 print("✅ File saved to output/grading_database.odt")
