@@ -1,0 +1,8 @@
+title: "Toest 1"
+assignement:
+  - desc: "1 **Create an ERD** with at least 5 entities and clear relationships."
+    max: 1
+  - desc: "1 Implement the database in Access. *Include primary & foreign keys.*"
+    max: 1
+  - desc: "1 Use a **form with validation** to input new data."
+    max: 1

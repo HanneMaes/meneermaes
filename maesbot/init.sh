@@ -19,7 +19,11 @@ sudo docker build -t maesbot .
   # -v $(pwd):/app to mount your current directory ($(pwd)) to /app inside the container
 
 # Run the container
-sudo docker run --rm -v "$(pwd):/app" maesbot
+sudo docker run $docker_volume_args --rm -it -v "$(pwd):/app" maesbot
    # --rm to remove the container when it exits
+   # -it to create an interactive shell, can I can input stuff via fzf
    # Every time you run a Docker container without --rm, Docker keeps it in the background (even after it stops)
    # These containers accumulate over time and clutter your system.
+
+# Fix ownership for entire project directory
+sudo chown -R "$(id -u):$(id -g)" .

@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     bash \
     make \
     unzip \
+    fzf \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
@@ -19,4 +20,4 @@ COPY requirements-python.txt .
 RUN pip install --no-cache-dir -r requirements-python.txt
 
 # Default command
-CMD ["python", "taken-en-toetsen/1-yaml2doc.py"]
+CMD ["bash", "menu.sh"]
