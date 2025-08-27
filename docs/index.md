@@ -18,6 +18,8 @@ date: 2024-03-13T10:31:28+01:00
 
 [Kantoorsoftware](content/kantoorsoftware/index)
 
+[Stage 5e jaar](content/stage-5e/index)
+
 ## 1e Graad
 
 [Basisoptie I.T.](content/basisoptie-it/index)
