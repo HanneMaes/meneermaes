@@ -1,8 +1,10 @@
 ---
 title: Flex
-last_modified_at: 2025-01-22 10:22:21 +0200
+last_modified_at: 2025-09-01 14:59:28 +0200
 date: Wed, sep 11, 2024  10:47:23 PM
 ---
+
+[Digitale kennismaking door integratie van digitale tools](Digitale-kennismaking-door-integratie-van-digitale-tools)
 
 [De Rechtbank](https://hannemaes.notion.site/De-rechtbank-39d66651fa324f0cab07ef142cbe37d3)
 
