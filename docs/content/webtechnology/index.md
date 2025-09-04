@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified_at: 2025-05-27 21:11:34 +0200
+last_modified_at: 2025-09-03 14:43:07 +0200
 date: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -28,8 +28,6 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 ## Je 1e code
 
 [Je 1e code](Je-1e-code)
-
-[Je 1e website](Je-1e-website)
 
 [Wat is een programmeertaal?](Wat-is-een-programmeertaal)
 

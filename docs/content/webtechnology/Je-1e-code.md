@@ -1,6 +1,6 @@
 ---
 title: Je 1e code
-last_modified_at: 2024-05-03T07:12:37
+last_modified_at: 2025-09-03 14:38:19 +0200
 date: Thu, Sep 12, 2024  20:47:23 PM
 ---
 
@@ -39,7 +39,7 @@ Wat we nu te zien krijgen is de **computer code** waaruit de afbeelding bestaat.
 
 Ik ga jullie nu laten zien hoe je onderstaande website maakt.  
 
-{% include callout.html type='vraag' content='Hoe lang zal het duren om deze simple Hello world website te maken.' %}
+{% include callout.html type='vraag' content='Hoe lang zal het duren om deze simple "Hello world" website te maken.' %}
 
 {% include browser.html img='images/hello-world.png' %}
 
