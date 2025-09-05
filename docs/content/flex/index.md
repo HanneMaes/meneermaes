@@ -4,8 +4,6 @@ last_modified_at: 2025-09-01 14:59:28 +0200
 date: Wed, sep 11, 2024  10:47:23 PM
 ---
 
-[Digitale kennismaking door integratie van digitale tools](https://hannemaes.notion.site/Digitale-kennismaking-door-integratie-van-digitale-tools-774aa903d9d943b5b2dcdaf09c409b86?pvs=74)
-
 [De Rechtbank](https://hannemaes.notion.site/De-rechtbank-39d66651fa324f0cab07ef142cbe37d3)
 
 [Spline](spline)
