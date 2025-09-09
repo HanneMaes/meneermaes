@@ -91,3 +91,18 @@ Gebruik de 3-stappenstructuur voor je presentatie of tekst:
 1. **Wat** is het? *(definitie/uitleg)*
 2. **Hoe** werkt het, **waarom** is het belangrijk? *(proces, werking, voorbeeld)*
 3. Wat vind **jij** ervan? *(mening + argumenten)*
+
+# Opdracht: Zoekstrategie
+
+Maak een overzicht van:
+1. Onderwerp/onderzoeksvraag
+2. Kernwoorden
+3. Synoniemen/vertalingen
+4. Gebruikte zoektermen
+5. Welke zoekactie gaf de beste resultaten en waarom?
+6. Gebruikte zoekmachine/website
+  - Resultaat bruikbaar? (ja/nee, waarom)
+
+**Tips**
+  - Kijk of de gevonden bronnen **relevant** zijn voor de vraag.
+  - Zoek **minstens twee onafhankelijke bronnen**.
