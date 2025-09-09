@@ -111,7 +111,8 @@ Maak een duidelijk overzicht van:
   - Kijk of de gevonden bronnen **relevant** zijn voor de vraag.
   - Zoek **minstens twee onafhankelijke bronnen**.
 
+{% include doelen.html data='zoekstrategie-doelen' %}
 
 {% include toggle.html title="Groepsopdracht?" content="
-test
+{% include doelen.html data='zoekstrategie-groepswerk-doelen' %}
 " %}
