@@ -114,6 +114,6 @@ Maak een duidelijk overzicht van:
   - Zoek **minstens twee onafhankelijke bronnen**.
 
 
-{% include toggle.html title="Groepsopdracht" content="
+{% include toggle.html title="Groepsopdracht?" content="
 test
 " %}
