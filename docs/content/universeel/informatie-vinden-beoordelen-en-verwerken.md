@@ -112,3 +112,8 @@ Maak een duidelijk overzicht van:
 **Tips**
   - Kijk of de gevonden bronnen **relevant** zijn voor de vraag.
   - Zoek **minstens twee onafhankelijke bronnen**.
+
+
+{% include toggle.html title="Groepsopdracht" content="
+test
+" %}
