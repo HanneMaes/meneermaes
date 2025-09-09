@@ -5,6 +5,8 @@ date: 2024-03-04T13:37:48+01:00
 
 <iframe src="https://docs.google.com/presentation/d/1KTVXaFKQ915TOTVHwjHIBEWzTI6VYSDx/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="515" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
+{% include doelen.html data='Zelf-aan-de-slag-met-een-besturingssysteem-doelen' %}
+
 # Opdracht 1: Servers
 
 1. Zoek **2 verschillende** servers waarmee jij in contact komt.
@@ -23,5 +25,6 @@ Zoek op het internet een artikel over één van de technologieën uit de present
 - Leg uit wat je standpunt is. Vind je het ethisch verantwoord of niet, en leg aan de hand van sterke argumenten uit waarom.
 
 {% include punten.html data='artikel-soorten-computers' %}
+
 
 
