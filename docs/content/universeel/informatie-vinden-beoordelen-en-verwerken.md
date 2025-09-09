@@ -48,7 +48,7 @@ Dat zijn woorden en begrippen die typisch zijn voor een bepaald **vak of een bep
 
 - Het maakt je uitleg **duidelijker en preciezer**.
 - Het toont dat je het onderwerp echt **begrijpt**.
-- Het helpt je om op hetzelfde **niveau** te praten als anderen in dat vakgebied *(leraren, klasgenoten, later collega’s)**.
+- Het helpt je om op hetzelfde **niveau** te praten als anderen in dat vakgebied *(leraren, klasgenoten, later collega’s)*.
 
 ### Hoe gebruik je vaktaal correct?
 
