@@ -65,7 +65,9 @@ Dat zijn woorden en begrippen die typisch zijn voor een bepaald **vak of een bep
 4. **Combineer zoekwoorden slim.**
 5. **Kies de juiste bronnen.** Voor wetenschappelijke info kan je beter een onderwijs- of nieuwswebsite gebruiken dan een forum.
 
-Tip: schrijf je zoekstrategie op. Zo zal deze concreter worden kan je achteraf tonen hoe je gewerkt hebt en kan je je zoekactie verbeteren.
+{% include callout.html type='Tip' content='
+Schrijf je zoekstrategie op. Zo zal deze concreter worden kan je achteraf tonen hoe je gewerkt hebt en kan je je zoekactie verbeteren.
+' %}
 
 # Bronnen beoordelen
 
@@ -77,7 +79,9 @@ Stel jezelf deze vragen:
 - **Waarom** is het geschreven? *(Informeren, overtuigen, reclame maken?)*
 - Wat zegt een **andere bron**? *(Controleer of meerdere bronnen hetzelfde bevestigen.)*
 
-Tip: Begin met een overzichtsbron (zoals Wikipedia), maar gebruik altijd nog een tweede, onafhankelijke bron.
+{% include callout.html type='Tip' content='
+Begin met een overzichtsbron (zoals Wikipedia), maar gebruik altijd nog een tweede, onafhankelijke bron.
+' %}
 
 # Informatie verwerken
 
