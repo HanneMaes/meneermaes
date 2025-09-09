@@ -94,7 +94,9 @@ Gebruik de 3-stappenstructuur voor je presentatie of tekst:
 
 # Opdracht: Zoekstrategie
 
-Maak een overzicht van:
+Maak een duidelijk overzicht van:
+{% include punten.html data='zoekstrategie' %}
+
 1. Onderwerp/onderzoeksvraag
 2. Kernwoorden
 3. Synoniemen/vertalingen
