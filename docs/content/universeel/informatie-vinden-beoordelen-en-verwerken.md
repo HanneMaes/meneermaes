@@ -112,7 +112,4 @@ Maak een duidelijk overzicht van:
   - Zoek **minstens twee onafhankelijke bronnen**.
 
 {% include doelen.html data='zoekstrategie-doelen' %}
-
-{% include toggle.html title="Groepsopdracht?" content="
 {% include doelen.html data='zoekstrategie-groepswerk-doelen' %}
-" %}
