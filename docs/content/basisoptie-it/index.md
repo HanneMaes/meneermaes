@@ -12,7 +12,7 @@ date: Wed, sep 15, 2024  14:03:23 PM
 
 # Programmeren
 
-[Python game development](https://hannemaes.notion.site/Python-Game-Development-f26abfaf2cdc4ff7967753b933cd206f?pvs=74)
+[Python Development](https://hannemaes.notion.site/Python-Game-Development-f26abfaf2cdc4ff7967753b933cd206f?pvs=74)
 
 # Tinkercad
 
