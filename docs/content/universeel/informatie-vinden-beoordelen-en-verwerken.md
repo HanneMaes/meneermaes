@@ -3,7 +3,8 @@ title: Informatie vinden, beoordelen en verwerken
 date: 2025-09-09T13:37:48+01:00
 ---
 
-In deze moderne wereld moet je vaak informatie opzoeken, maar gewoon googelen is niet genoeg.  
+> In deze moderne wereld moet je vaak informatie opzoeken, maar gewoon googelen is niet genoeg.  
+
 Om dat goed te doen moet je:
 - De juiste zoekwoorden gebruiken.
 - Goede bronnen van slechte onderscheiden.
@@ -25,15 +26,17 @@ Kenmerken van schooltaal:
 
 ## Vaktaal
 
-Naast schooltaal is er ook **vaktaal*.  
+Naast schooltaal is er ook **vaktaal**.  
 Dat zijn woorden en begrippen die typisch zijn voor een bepaald **vak of een bepaalde studie- of werkdomein**. Ze hebben vaak een precieze betekenis die je in het dagelijks leven niet of minder gebruikt.
 
-Kenmerken van vaktaal:
+### Kenmerken van vaktaal
+
 - **Specifiek**: vaktermen hebben vaak maar één duidelijke betekenis in een vak.
 - **Noodzakelijk**: zonder vaktaal kan je een onderwerp vaak niet goed uitleggen.
 - **Universeel**: vaktaal is voor iedereen binnen dat vakgebied herkenbaar *(bv. een arts, een leraar, een ICT’er begrijpt meteen waar het over gaat)*.
 
-Voorbeelden
+### Voorbeelden
+
 - Biologie: celkern, DNA, fotosynthese.
 - Geschiedenis: kolonisatie, industriële revolutie, propaganda.
 - Economie: inflatie, begrotingstekort, aandeelhouder.
@@ -41,12 +44,14 @@ Voorbeelden
   - Gewone taal: “De computer onthoudt dingen.”
   - Vaktaal: “De server slaat data op in een database.”
  
-Waarom is vaktaal belangrijk?
+### Waarom is vaktaal belangrijk?
+
 - Het maakt je uitleg **duidelijker en preciezer**.
 - Het toont dat je het onderwerp echt **begrijpt**.
 - Het helpt je om op hetzelfde **niveau** te praten als anderen in dat vakgebied *(leraren, klasgenoten, later collega’s)**.
 
-Hoe gebruik je vaktaal correct?
+### Hoe gebruik je vaktaal correct?
+
 - **Leer de betekenis:** noteer nieuwe vaktermen en zoek ze op.
 - **Oefen het gebruik:** probeer de term in een zin te gebruiken.
 - **Vermijd overdrijven:** gebruik vaktaal wanneer het helpt, maar maak je zinnen nog steeds begrijpelijk.
