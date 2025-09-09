@@ -10,7 +10,7 @@ date: 2024-03-04T13:37:48+01:00
 Volgende doelen zullen bij de opdrachten beoordeeld worden: 
 {% include doelen.html data='Zelf-aan-de-slag-met-een-besturingssysteem-doelen' %}
 
-[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken.md)
+Hier vind je **tips** over [Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken.md).
 
 # Opdracht 1: Servers
 
@@ -30,6 +30,7 @@ Zoek op het internet een artikel over één van de technologieën uit de present
 - Leg uit wat je standpunt is. Vind je het ethisch verantwoord of niet, en leg aan de hand van sterke argumenten uit waarom.
 
 {% include punten.html data='artikel-soorten-computers' %}
+
 
 
 
