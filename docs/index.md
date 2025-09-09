@@ -46,10 +46,6 @@ date: 2024-03-13T10:31:28+01:00
 
 [Linux for Hackers](content/uitbreiding/Linux%20Basics%20for%20Hackers.pdf)
 
-## Cyber Security
-
-[Personal Cybersecurity](https://www.notion.so/hannemaes/Personal-Cybersecurity-34710631d0d0491ea89f59c77185ea6e)
-
 ## Privacy
 
 [Contra Chrome: een kritische webcomic over Google Chrome](https://contrachrome.com/)
