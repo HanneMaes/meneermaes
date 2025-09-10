@@ -10,6 +10,6 @@ date: Wed, sep 11, 2024  10:47:23 PM
 
 [Spline](spline)
 
-[Python](https://hannemaes.notion.site/Python-Game-Development-f26abfaf2cdc4ff7967753b933cd206f?source=copy_link)
+[Python, Bash & Automation](https://hannemaes.notion.site/Python-Game-Development-f26abfaf2cdc4ff7967753b933cd206f?source=copy_link)
 
 [Linux](../hardware/Besturingssystemen)
