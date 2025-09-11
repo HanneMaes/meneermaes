@@ -40,7 +40,7 @@ Start met deze code:
 Maak deze website na:
 {% include browser.html img='images/namaken.png' width='500px' %}
 
-{% include callout.html type='tip' content='Gebruik nooit 2x `<br>` meteen na elkaar.' %}Hoe lang zal het duren om deze simple Hello world website te maken.
+{% include callout.html type='tip' content='Gebruik nooit 2x `<br>` meteen na elkaar.' %}
 
 {% include punten.html data='Zoek-zelf-html-tags' %}
 
