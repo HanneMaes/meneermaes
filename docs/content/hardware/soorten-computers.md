@@ -18,8 +18,6 @@ date: 2024-03-04T13:37:48+01:00
 3. Teken een diagram om uit te leggen wat de server doet en hoe jij deze gebruikt.
 
 {% include punten.html data='servers' %}
-{% include punten.html data='servers-doelen' %}
-{% include doelen.html data='soorten-computers-doelen' %}
 
 # Opdracht 2: Artikel
 
