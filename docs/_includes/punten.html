@@ -2,7 +2,8 @@
 {% assign subdirectory = dir_segments[1] %}
 
 <!-- load yaml data -->
-{% assign yaml_data = site.data[ subdirectory ][ include.data ] %}
+{% assign collection = site.data[subdirectory] %}
+{% assign yaml_data = collection[include.data] %}
 {% assign puntenverdeling = yaml_data.punten %}
 {% assign doelen = yaml_data.doelen %}
 
@@ -61,3 +62,8 @@
    </tbody>
 </table>
 {% endif %}
+
+<p>DEBUG: {{ page.path }}</p>
+<p>DEBUG subdirectory: {{ subdirectory }}</p>
+<p>DEBUG title: {{ site.data.universeel.zoekstrategie.title }}</p>
+<p>DEBUG doelen count: {{ site.data.universeel.zoekstrategie.doelen | size }}</p>
