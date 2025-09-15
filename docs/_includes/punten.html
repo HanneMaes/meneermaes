@@ -1,26 +1,29 @@
-<!-- get the last dir in the path of the markdown file that is including this file -->
 {% assign dir_segments = page.path | split: '/' %}
 {% assign subdirectory = dir_segments[1] %}
 
 <!-- load yaml data -->
 {% assign yaml_data = site.data[subdirectory][include.data] %}
 {% assign puntenverdeling = yaml_data.punten %}
+{% assign doelen = yaml_data.doelen %}
 
 <!-- table -->
 <table>
+
    <!-- header -->
    <thead>
       <tr>
-         <th>
-            <em>Puntenverdeling:</em>
-            {{ yaml_data.title }}
+         <th colspan="2">
+            <em>{{ yaml_data.title }}</em>
          </th>
-         <th></th>
       </tr>
    </thead>
 
-   <!-- body -->
    <tbody>
+      <!-- punten -->
+      {% if puntenverdeling %}
+      <tr>
+         <td colspan="2"><strong>Puntenverdeling</strong></td>
+      </tr>
       {% for row in puntenverdeling %}
       <tr>
          <td>{{ row.desc }}</td>
@@ -39,5 +42,19 @@
             {{ total_punt }}
          </td>
       </tr>
+      {% endif %}
+
+      <!-- doelen -->
+      {% if doelen %}
+      <tr>
+         <td colspan="2"><strong>Doelen</strong></td>
+      </tr>
+      {% for row in doelen %}
+      <tr>
+         <td><em>{{ row.nr }}</em></td>
+         <td>{{ row.desc }}</td>
+      </tr>
+      {% endfor %}
+      {% endif %}
    </tbody>
 </table>

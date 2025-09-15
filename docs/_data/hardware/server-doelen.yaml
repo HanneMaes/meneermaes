@@ -1,4 +1,4 @@
-title: Servers COMBO
+title: Servers
 punten:
    - desc: "Welke taken voert deze server uit en welke data gebruikt de server"
      max: 3
@@ -6,6 +6,3 @@ punten:
      max: 3
    - desc: "Diagram: overzichtelijke en duidelijk"
      max: 2
-doelen:
-   - nr: "BV3_04.01"
-     desc: "De leerlingen gebruiken doelgericht basisfunctionaliteiten van toepassingen om digitaal te communiceren."
