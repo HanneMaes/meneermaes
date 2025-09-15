@@ -69,8 +69,8 @@ Exporteer je Markdown document naar:
 - **.docx** (Microsoft Word)
 - **.html**
 
-{% include punten.html data='Onderzoek-naar-internettechnologie-kantoorsoftware' %}
-{% include punten.html data='Onderzoek-naar-internettechnologie-webtechnology' %}
+{% include punten-csv.html data='Onderzoek-naar-internettechnologie-kantoorsoftware' %}
+{% include punten-csv.html data='Onderzoek-naar-internettechnologie-webtechnology' %}
 
 ## Uploaden
 

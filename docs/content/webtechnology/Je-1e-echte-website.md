@@ -6,4 +6,4 @@ date: 2024-09-20 09:56:19 +0200
 
 > Maak een website over een persoon naar keuze.
 
-{% include punten.html data='Je-eerste-echte-website' %}
+{% include punten-csv.html data='Je-eerste-echte-website' %}

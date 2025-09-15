@@ -157,4 +157,4 @@ Verwerk de informatie die je tijdens de ["Soorten computers: Artikel"](../hardwa
 5. Verwijs naar het artikel via een **koppeling/hyperlink**.
 6. Zet op de laatste dia een afbeelding waar je op kan klikken om terug naar de 1e dia te gaan.
 
-{% include punten.html data='Powerpoint-basics' %}
+{% include punten-csv.html data='Powerpoint-basics' %}

@@ -17,4 +17,4 @@ Je upload **3 documenten**:
 - Je presentatie en handouts in **PDF-formaat**
 - Een **tekst-document** *(word, kladblok, ...)* met de **code** van je presentatie.
 
-{% include punten.html data='LaTeX-Presentatie' %}
+{% include punten-csv.html data='LaTeX-Presentatie' %}

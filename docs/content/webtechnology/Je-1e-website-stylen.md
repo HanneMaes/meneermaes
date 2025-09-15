@@ -13,7 +13,7 @@ date: 2024-10-10 11:55:25 +0200
 3. Nadien geef je **1 pagina een ander ontwerp**, door gebruikt te maken van een **ander CSS-bestand**.
 4. Ga **zelfstandig** opzoek naar **nieuwe CSS-attributen** om je website zo mooi mogelijk te maken.
 
-{% include punten.html data='Je-eerste-website-stylen' %}
+{% include punten-csv.html data='Je-eerste-website-stylen' %}
 
 # Uitdagingen
 

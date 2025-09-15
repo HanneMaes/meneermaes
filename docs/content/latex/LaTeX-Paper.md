@@ -51,7 +51,7 @@ Je upload **2 documenten**:
 - Je paper in **PDF-formaat**
 - Een **tekst-document** *(word, kladblok, ...)* met je **code**.
 
-{% include punten.html data='LaTeX-Paper' %}
+{% include punten-csv.html data='LaTeX-Paper' %}
 
 ## Extra dank aan de auteur
 

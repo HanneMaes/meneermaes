@@ -86,7 +86,7 @@ Maak een **overzichtelijk document in de cloud** waarin staat:
 - Hoe jullie elkaar op de hoogte houden
 - Waar jullie het materiaal gaan verzamelen
 
-{% include punten.html data='professioneel-materiaal-ontwikkelen-swot-punten' %}
+{% include punten-csv.html data='professioneel-materiaal-ontwikkelen-swot-punten' %}
 
 {% include doelen.html data='professioneel-materiaal-ontwikkelen-swot-doelen' %}
 
@@ -100,7 +100,7 @@ Maak per onderdeel dat aan je toegewezen is een Word-document met daarin:
 - Wat het onderdeel precies inhoudt, wat je er mee kan doen en waarom het handig is te gebruiken
 - Een werkend voorbeeld van je onderdeel
 
-{% include punten.html data='professioneel-materiaal-ontwikkelen-technische-beheering' %}
+{% include punten-csv.html data='professioneel-materiaal-ontwikkelen-technische-beheering' %}
 
 # 4. Style guide
 
@@ -124,7 +124,7 @@ Maak een style guide waarin jullie richtlijnen opstellen over:
 
 Gebruik de style guide als basis om de taakverdeling opnieuw te bekijken. Stel samen een plan op voor de uitwerking van zowel de handleiding in tekstvorm als de ingesproken presentatie.
 
-{% include punten.html data='professioneel-materiaal-ontwikkelen-style-guide' %}
+{% include punten-csv.html data='professioneel-materiaal-ontwikkelen-style-guide' %}
 
 # 5. Handleiding in tekstvorm uitwerken
 
@@ -155,7 +155,7 @@ Voordat je de presentatie als definitief beschouwt, laat een klasgenoot jouw wer
    Volgt de informatie elkaar op in een logische en begrijpelijke volgorde?
 - **Extra mogelijkheden:**  
    Zijn er functies of details die nog verder uitgewerkt kunnen worden voor meer helderheid of toegevoegde waarde?
-  {% include punten.html data='professioneel-materiaal-ontwikkelen-tekst' %}
+  {% include punten-csv.html data='professioneel-materiaal-ontwikkelen-tekst' %}
 
 # 6. Ingesproken presentatie
 
@@ -191,7 +191,7 @@ Voordat je de presentatie als definitief beschouwt, laat een klasgenoot jouw wer
 - **Extra mogelijkheden:**  
    Zijn er functies of details die nog verder uitgewerkt kunnen worden voor meer helderheid of toegevoegde waarde?
 
-{% include punten.html data='professioneel-materiaal-ontwikkelen-ingesproken' %}
+{% include punten-csv.html data='professioneel-materiaal-ontwikkelen-ingesproken' %}
 
 # 7. Demonstratie
 

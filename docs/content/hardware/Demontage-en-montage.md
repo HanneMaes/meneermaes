@@ -112,7 +112,7 @@ Monteer de computer, sluit alles aan **en test of de computer terug werkt**.
 
 ## Punterderdeling
 
-{% include punten.html data='demonteren-en-monteren-individueel' %}
+{% include punten-csv.html data='demonteren-en-monteren-individueel' %}
 
 # Reflectie
 

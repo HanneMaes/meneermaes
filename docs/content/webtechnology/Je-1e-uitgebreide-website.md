@@ -12,4 +12,4 @@ Zorg ervoor dat je vanaf elke pagina terug naar de startpagina kan gaan.
 
 Als je pagina's hebben de juiste `html`, `head` en `body` structuur.
 
-{% include punten.html data='Je-eerste-uitgebreide-website' %}
+{% include punten-csv.html data='Je-eerste-uitgebreide-website' %}

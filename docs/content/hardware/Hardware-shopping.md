@@ -85,4 +85,4 @@ Beide tools bieden de mogelijkheid om je setup te **bewaren** via een **URL**.
 
 ## Puntenverdeling
 
-{% include punten.html data='hardware-shopping' %}
+{% include punten-csv.html data='hardware-shopping' %}

@@ -17,4 +17,4 @@ date: 2024-11-12 13:16:19 +0200
 
 Iedereen onderzoek het gegeven component (of meerdere componenten), en maak een presentatie die onderstaande vragen beantwoorden:
 
-{% include punten.html data='onderdelen-van-een-computer' %} 
+{% include punten-csv.html data='onderdelen-van-een-computer' %} 

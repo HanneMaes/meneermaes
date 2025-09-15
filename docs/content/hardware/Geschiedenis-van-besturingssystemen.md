@@ -63,4 +63,4 @@ Wat is het, waarom werd het opgericht, door wie en waarom is het momenteel zo be
 
 ## Puntenverdeling
 
-{% include punten.html data='geschiedenis-van-besturingsystemen' %}
+{% include punten-csv.html data='geschiedenis-van-besturingsystemen' %}

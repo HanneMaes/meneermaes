@@ -58,7 +58,7 @@ a:hover {
 3. Gebruik **minstens 3 verschillende webfonts**.
 4. Geef elke knop een **uniek hover effect**.
 
-{% include punten.html data='knoppen' %}
+{% include punten-csv.html data='knoppen' %}
 
 # Uitdaging: Knop namaken
 

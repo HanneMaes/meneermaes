@@ -127,7 +127,7 @@ Voeg de antwoorden op volgende vragen toe aan je projectverslagt:
 
 ## Puntenverdeling
 
-{% include punten.html data='zelf-aan-de-slag-met-een-besturingssysteem-punten' %}
+{% include punten-csv.html data='zelf-aan-de-slag-met-een-besturingssysteem-punten' %}
 {% include doelen.html data='Zelf-aan-de-slag-met-een-besturingssysteem-doelen' %}
 
 # Demonstratie

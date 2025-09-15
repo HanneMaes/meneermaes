@@ -182,7 +182,7 @@ Druk op {% include btn.html btn='Copy Embed' %} om de embed code te kopiëren.
 ## Doelen & puntenverdeling
 
 {% include doelen.html data='spline-eindopdracht-doelen' %}
-{% include punten.html data='spline-eindopdracht' %}
+{% include punten-csv.html data='spline-eindopdracht' %}
 
 # Samenvoegen tot een complete website
 

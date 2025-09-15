@@ -156,4 +156,4 @@ Kies één van de onderstaande problemen en onderzoek dit grondig. Je presenteer
 
 ## Puntenverdeling
 
-{% include punten.html data='beweging-aan-je-werkplek' %}
+{% include punten-csv.html data='beweging-aan-je-werkplek' %}

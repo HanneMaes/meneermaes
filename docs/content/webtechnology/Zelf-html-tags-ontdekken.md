@@ -42,7 +42,7 @@ Maak deze website na:
 
 {% include callout.html type='tip' content='Gebruik nooit 2x `<br>` meteen na elkaar.' %}
 
-{% include punten.html data='Zoek-zelf-html-tags' %}
+{% include punten-csv.html data='Zoek-zelf-html-tags' %}
 
 # Opdracht 02: Afbeeldingen & video's
 
@@ -52,4 +52,4 @@ Maak deze website na:
 4. Zoek het verschil op tussen de `<br>` en `<p></p>` tags.  
     Leg op je website het verschil uitlegt en zorg ervoor dat je correct gebruikt maakt van deze tags.
 
-{% include punten.html data='Afbeeldingen-videos' %}
+{% include punten-csv.html data='Afbeeldingen-videos' %}

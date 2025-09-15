@@ -76,7 +76,7 @@ Hieronder een aantal veelgebruikte design systems:
 
 {% include callout.html type='tip' content='Om code weer te geven op een HTML-pagina zonder dat deze wordt uitgevoerd, kan je de [Highlight.js](https://highlightjs.org/) library gebruiken.' %}
 
-{% include punten.html data='Externe-libraries' %}
+{% include punten-csv.html data='Externe-libraries' %}
 
 # Local files vs hosted files
 

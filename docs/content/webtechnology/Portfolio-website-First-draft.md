@@ -16,4 +16,4 @@ Begin met het ontwerpen van een overzichtelijke en aantrekkelijke website. Zorg 
 
 Gebruik de informatie in de [Cheat Sheet](Cheat-Sheet) om je website te **publiceren** via **GitHub Pages**.
 
-{% include punten.html data='portfolio-website-1-first-draft' %}
+{% include punten-csv.html data='portfolio-website-1-first-draft' %}
