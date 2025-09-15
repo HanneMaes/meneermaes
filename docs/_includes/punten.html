@@ -6,24 +6,18 @@
 {% assign puntenverdeling = yaml_data.punten %}
 {% assign doelen = yaml_data.doelen %}
 
-<!-- table -->
+<!-- punten table -->
+{% if puntenverdeling %}
 <table>
-
-   <!-- header -->
    <thead>
       <tr>
-         <th colspan="2">
-            <em>{{ yaml_data.title }}</em>
+         <th>
+            <em>Puntenverdeling:</em> {{ yaml_data.title }}
          </th>
+         <th></th>
       </tr>
    </thead>
-
    <tbody>
-      <!-- punten -->
-      {% if puntenverdeling %}
-      <tr>
-         <td colspan="2"><strong>Puntenverdeling</strong></td>
-      </tr>
       {% for row in puntenverdeling %}
       <tr>
          <td>{{ row.desc }}</td>
@@ -42,19 +36,28 @@
             {{ total_punt }}
          </td>
       </tr>
-      {% endif %}
+   </tbody>
+</table>
+{% endif %}
 
-      <!-- doelen -->
-      {% if doelen %}
+<!-- doelen table -->
+{% if doelen %}
+<table>
+   <thead>
       <tr>
-         <td colspan="2"><strong>Doelen</strong></td>
+         <th></th>
+         <th>
+            <em>Doelen:</em> {{ yaml_data.title }}
+         </th>
       </tr>
+   </thead>
+   <tbody>
       {% for row in doelen %}
       <tr>
          <td><em>{{ row.nr }}</em></td>
          <td>{{ row.desc }}</td>
       </tr>
       {% endfor %}
-      {% endif %}
    </tbody>
 </table>
+{% endif %}
