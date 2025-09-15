@@ -1,0 +1,8 @@
+title: Servers
+punten:
+   - desc: "Welke taken voert deze server uit en welke data gebruikt de server"
+     max: 3
+   - desc: "Diagram: correct en volledig"
+     max: 3
+   - desc: "Diagram: overzichtelijke en duidelijk"
+     max: 2
