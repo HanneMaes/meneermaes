@@ -111,5 +111,5 @@ Maak een duidelijk overzicht van:
   - Kijk of de gevonden bronnen **relevant** zijn voor de vraag.
   - Zoek **minstens twee onafhankelijke bronnen**.
 
-{% include doelen.html data='zoekstrategie' %}
-{% include doelen.html data='zoekstrategie-groepswerk' %}
+{% include punten.html data='zoekstrategie' %}
+{% include punten.html data='zoekstrategie-groepswerk' %}
