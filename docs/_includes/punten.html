@@ -2,7 +2,7 @@
 {% assign subdirectory = dir_segments[1] %}
 
 <!-- load yaml data -->
-{% assign yaml_data = site.data[subdirectory][include.data] %}
+{% assign yaml_data = site.data[ subdirectory ][ include.data ] %}
 {% assign puntenverdeling = yaml_data.punten %}
 {% assign doelen = yaml_data.doelen %}
 
