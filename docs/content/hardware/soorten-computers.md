@@ -11,22 +11,21 @@ date: 2024-03-04T13:37:48+01:00
 [Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken.md).
 ' %}
 
-# Opdracht 1: Servers
+# Opdracht 1: Servers Diagram
 
 1. Zoek **2 verschillende** servers waarmee jij in contact komt.
 2. Vertel de klas welke **taken** deze server uitvoert en welke **data** de server nodig heeft.
-3. Teken een diagram om uit te leggen wat de server doet en hoe jij deze gebruikt.
+3. Teken een **diagram** om uit te leggen wat de server doet en hoe jij deze gebruikt.
 
-{% include punten.html data='servers' %}
+{% include punten.html data='servers-diagram' %}
 
 # Opdracht 2: Artikel
 
 Zoek op het internet een artikel over één van de technologieën uit de presentatie.
 
-- Leg de inhoud van het artikel uit aan de klas.
-- Leg uit doe de technologie of het apparaat uit je artikel technisch werkt.
-- Zoek minsten 1 parallel met één van de andere technologieën.
-- Leg uit wat je standpunt is. Vind je het ethisch verantwoord of niet, en leg aan de hand van sterke argumenten uit waarom.
+- Leg de **inhoud** van het artikel uit aan de klas.
+- Leg uit doe de technologie of het apparaat uit je artikel **technisch** werkt.
+- Zoek minsten 1 **parallel** met één van de andere technologieën.
+- Leg uit wat je **standpunt** is. Vind je het ethisch verantwoord of niet, en leg aan de hand van sterke **argumenten** uit waarom.
 
-{% include punten-csv.html data='artikel-soorten-computers' %}
-{% include doelen.html data='soorten-computers-doelen' %}
+{% include punten.html data='artikel-soorten-computers' %}

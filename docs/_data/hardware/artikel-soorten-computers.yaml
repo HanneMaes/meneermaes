@@ -1,0 +1,15 @@
+title: Artikel
+punten:
+   - desc: "Je legt de inhoud van het artikel duidelijk uit"
+     max: 2
+   - desc: "Je geeft een technische uitleg over de technologie of het apparaat"
+     max: 2
+   - desc: "Je gebruikt duidelijk beeldmateriaal om je uitleg te verduidelijken"
+     max: 2
+   - desc: "Je legt een link met minstens één van de andere technologieën"
+     max: 2
+   - desc: "Je neemt een standpunt in en hebt sterke argumenten"
+     max: 2
+doelen:
+   - nr: "BV3_04.01"
+     desc: "De leerlingen gebruiken courante functionaliteiten van vergelijkbare toepassingen om digitale inhouden te creëren."
