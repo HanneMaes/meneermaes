@@ -1,0 +1,18 @@
+title: Je 1e échte website
+punten:
+  - desc: "Correct gebruik van de p en br tags"
+    max: 3
+  - desc: "Unordered list"
+    max: 1
+  - desc: "Ordered list"
+    max: 1
+  - desc: "Afbeelding"
+    max: 1
+  - desc: "Gedownloade video"
+    max: 1
+  - desc: "Youtube video"
+    max: 1
+  - desc: "Comments en tabs om je code overzichtelijker te maken"
+    max: 3
+  - desc: "Hoe uitgebreid is je website? Maak je gebruik van andere tags?"
+    max: 6
