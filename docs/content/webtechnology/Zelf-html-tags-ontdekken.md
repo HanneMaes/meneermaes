@@ -52,4 +52,4 @@ Maak deze website na:
 4. Zoek het verschil op tussen de `<br>` en `<p></p>` tags.  
     Leg op je website het verschil uitlegt en zorg ervoor dat je correct gebruikt maakt van deze tags.
 
-{% include punten-csv.html data='Afbeeldingen-videos' %}
+{% include punten.html data='Afbeeldingen-videos' %}

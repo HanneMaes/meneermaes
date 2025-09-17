@@ -1,0 +1,12 @@
+title: Afbeeldingen &  video's
+punten:
+  - desc: "Je voegt op de correcte manier een afbeeling toe"
+    max: 1
+  - desc: "Je voegt op de correcte manier een video toe"
+    max: 1
+  - desc: "Je voeg 2 nieuwe HTML-tags toe"
+    max: 2
+  - desc: "Je legt het verschil uit tussen de br en p tags"
+    max: 2
+  - desc: "Je maakt correct gebruik van de br en p tags"
+    max: 2
