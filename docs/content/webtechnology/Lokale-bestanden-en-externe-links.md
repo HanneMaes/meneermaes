@@ -26,7 +26,7 @@ Lokale media zijn bestanden die direct in de **projectmap zijn opgeslagen**.
 ![](images/local-image.png){: width='500px' }
 
 ```html 
-<img src="images/foto.jpg">
+<img src="media/foto.jpg">
 ```
 
 **Voordelen:**
