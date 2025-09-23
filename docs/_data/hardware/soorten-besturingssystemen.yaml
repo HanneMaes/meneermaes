@@ -1,0 +1,16 @@
+title: Soorten besturingssystemen
+punten:
+   - desc: "Waar wordt het besturingssysteem voor gebruikt + voorbeelden"
+     max: 2
+   - desc: "Wat maakt het geschikt voor deze toepassingen"
+     max: 2
+   - desc: "Bedrijven / producten / diensten"
+     max: 2
+   - desc: "Verschillende versies"
+     max: 1
+   - desc: "Is het open-source of commercieel en hoe beïnvloedt dit de ontwikkeling"
+     max: 1
+   - desc: "Hoe ziet de toekomst van dit besturingssysteem eruit"
+     max: 1
+   - desc: "Beeldmateriaal"
+     max: 2

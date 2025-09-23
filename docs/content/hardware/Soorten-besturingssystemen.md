@@ -1,4 +1,4 @@
----
+--
 title: Soorten Besturingssystemen
 last_modified_at: 2024-10-23 12:27:50 +0200
 date: 2024-09-25 21:21:33 +0200
@@ -66,12 +66,12 @@ Bereid een korte presentatie voor waarin je de antwoorden op de onderzoeksvragen
 ## Presentaties
 
 Terwijl je naar de presentaties van je klasgenoten luistert, is het belangrijk om aandachtig te zijn. Jullie leren niet alleen van je eigen presentatie, maar ook van die van anderen.  
-{% include punten-csv.html data='soorten-besturingssystemen' %}
+{% include punten.html data='soorten-besturingssystemen' %}
 
 ## Inzichtsvragen
 
 Na de presentaties krijgen jullie allemaal enkele vragen over de besturingssystemen. Deze vragen zijn bedoeld om te testen of je alles goed hebt begrepen.
-{% include punten-csv.html data='soorten-besturingssystemen-inzichtsvragen' %}
+{% include punten.html data='soorten-besturingssystemen-inzichtsvragen' %}
 
 # Uitbreiding
 
