@@ -101,6 +101,7 @@ Emmet is een hulpmiddel in code-editors waarmee je webcode supersnel kan schrijv
 
 Voorbeelden:
 - Typ je `!` en druk je op {% include btn.html btn='Tab' %} of {% include btn.html btn='Enter' %}, dan krijg je:
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -114,7 +115,9 @@ Voorbeelden:
 </body>
 </html>
 ```
+
 - Typ je `link:favicon` en druk je op {% include btn.html btn='Tab' %} of {% include btn.html btn='Enter' %}, dan krijg je:
+
 ```html
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 ```
