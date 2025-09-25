@@ -91,6 +91,10 @@ Het .ico-formaat wordt gebruikt voor icoon afbeeldingen.
 Het heeft mogelijkheid om meerdere resoluties in één bestand op te slaan, ondersteuning voor transparantie, kleine bestandsgrootte en automatische herkenning door browsers.
 Dit zorgt ervoor dat de favicon er goed uitziet op verschillende apparaten en goed laadt, wat bijdraagt aan een consistente en professionele uitstraling van de website.
 
+<<<<<<< HEAD
 ![](images/ico-format.jpg){: .frame }
+=======
+![](images/ico-format.webp){: .frame }
+>>>>>>> 9f3ded04fa629a18fcbfc5cd3dfaa7e3c6babd6d
 
 {% include callout.html type='Info' content='Een favicon moet altijd in het **.ICO** formaat' %}
