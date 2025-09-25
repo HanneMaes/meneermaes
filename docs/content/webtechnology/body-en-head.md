@@ -99,7 +99,8 @@ Dit zorgt ervoor dat de favicon er goed uitziet op verschillende apparaten en go
 
 Emmet is een hulpmiddel in code-editors waarmee je webcode supersnel kan schrijven met **afkortingen die automatisch worden uitgebreid**.
 
-Voorbeelden:
+### HTML start code
+
 - Typ je `!` en druk je op {% include btn.html btn='Tab' %} of {% include btn.html btn='Enter' %}, dan krijg je:
 
 ```html
@@ -116,7 +117,9 @@ Voorbeelden:
 </html>
 ```
 
-- Typ je `link:favicon` en druk je op {% include btn.html btn='Tab' %} of {% include btn.html btn='Enter' %}, dan krijg je:
+### Favicon code
+
+Typ je `link:favicon` en druk je op {% include btn.html btn='Tab' %} of {% include btn.html btn='Enter' %}, dan krijg je:
 
 ```html
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
