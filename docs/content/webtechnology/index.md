@@ -14,8 +14,7 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 **Favicon**
 
-- [Convert image to favicon](https://convertico.com/favicon/)
-- [Emoji's](https://emojipedia.org/)
+- [Convert image to favicon](https://favicon.io/)
 
 **Web fonts**
 
