@@ -91,10 +91,31 @@ Het .ico-formaat wordt gebruikt voor icoon afbeeldingen.
 Het heeft mogelijkheid om meerdere resoluties in één bestand op te slaan, ondersteuning voor transparantie, kleine bestandsgrootte en automatische herkenning door browsers.
 Dit zorgt ervoor dat de favicon er goed uitziet op verschillende apparaten en goed laadt, wat bijdraagt aan een consistente en professionele uitstraling van de website.
 
-<<<<<<< HEAD
 ![](images/ico-format.jpg){: .frame }
-=======
-![](images/ico-format.webp){: .frame }
->>>>>>> 9f3ded04fa629a18fcbfc5cd3dfaa7e3c6babd6d
 
 {% include callout.html type='Info' content='Een favicon moet altijd in het **.ICO** formaat' %}
+
+## Emmet shortcodes
+
+Emmet is een hulpmiddel in code-editors waarmee je webcode supersnel kan schrijven met **afkortingen die automatisch worden uitgebreid**.
+
+Voorbeelden:
+- Typ je `!` en druk je op Tab of Enter, dan krijg je:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+- Typ je `link:favicon` en druk je op Tab of Enter, dan krijg je:
+```html
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+```
+    
