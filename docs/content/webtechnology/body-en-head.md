@@ -101,7 +101,7 @@ Emmet is een hulpmiddel in code-editors waarmee je webcode supersnel kan schrijv
 
 ### HTML start code
 
-- Typ je `!` en druk je op {% include btn.html btn='Tab' %} of {% include btn.html btn='Enter' %}, dan krijg je:
+Typ je `!` en druk je op {% include btn.html btn='Tab' %} of {% include btn.html btn='Enter' %}, dan krijg je:
 
 ```html
 <!DOCTYPE html>
