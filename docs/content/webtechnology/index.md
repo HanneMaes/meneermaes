@@ -6,19 +6,17 @@ date: Wed, Mar 20, 2024  3:36:23 PM
 
 # Hulpmiddelen
 
-**Web code**
+**Code**
 
 - [W3Schools](https://www.w3schools.com/)
 - [MDN](https://developer.mozilla.org)
+
+**Design**
+
+- [Image to Favicon](https://favicon.io/)
+- [Web Colors](https://htmlcolorcodes.com)
+- [Google Fonts](https://fonts.google.com/)
 - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-
-**Favicon**
-
-- [Convert image to favicon](https://favicon.io/)
-
-**Web fonts**
-
-- [Browse Fonts - Google Fonts](https://fonts.google.com/)
 
 ---
 
