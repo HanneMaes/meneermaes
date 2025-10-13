@@ -1,8 +1,0 @@
-title: "Toets 2"
-assignement:
-  - desc: "2 **Create an ERD** with at least 5 entities and clear relationships."
-    max: 2
-  - desc: "2 Implement the database in Access. *Include primary & foreign keys.*"
-    max: 2
-  - desc: "2 Use a **form with validation** to input new data."
-    max: 2

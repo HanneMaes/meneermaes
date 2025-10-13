@@ -8,7 +8,7 @@ date: 2024-03-04T13:37:48+01:00
 # Slim en kritisch informatie zoeken
 
 {% include callout.html type='Tip & Opdracht' content='
-[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken.md).
+[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
 ' %}
 
 # Opdracht 1: Servers Diagram

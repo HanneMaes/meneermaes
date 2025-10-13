@@ -15,3 +15,5 @@ date: Wed, sep 11, 2024  10:47:23 PM
 [Python: Automation]()
 
 [Linux](../hardware/Besturingssystemen)
+
+[De ethiek van Raspberry Pi](raspberrypi-ethiek)
