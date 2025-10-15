@@ -99,10 +99,10 @@ Gebruik de 3-stappenstructuur voor je presentatie of tekst:
 # Opdracht: Zoekstrategie
 
 Maak een duidelijk overzicht van:
-1. Onderwerp/onderzoeksvraag
-2. Kernwoorden
-3. Synoniemen/vertalingen
-4. Gebruikte zoektermen
+1. Wat is je **onderzoeksvraag**, wees zo specifiek mogelijk
+2. Welke **kernwoorden** kan je uit je onderzoeksvraag halen
+3. Zijn er synoniemen en/of vertalingen die je zou kunnen gebruiken bij het zoeken
+4. Bedenk **minstens 3**
 5. Welke zoekactie gaf de beste resultaten en waarom?
 6. Gebruikte zoekmachine/website
   - Resultaat bruikbaar? (ja/nee, waarom)

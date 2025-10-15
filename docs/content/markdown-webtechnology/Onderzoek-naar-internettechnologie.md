@@ -69,7 +69,13 @@ Exporteer je Markdown document naar:
 - **.docx** (Microsoft Word)
 - **.html**
 
-## Uploaden
+# Zoekstrategie
+
+{% include callout.html type='Tip & Opdracht' content='
+[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
+' %}
+
+# Uploaden
 
 Je uploadt de volgende bestanden:
 
@@ -77,6 +83,7 @@ Je uploadt de volgende bestanden:
 - Je **Markdown-bestanden**.
 - De **Word-documenten** die gegenereerd zijn uit je Markdown-bestanden.
 - De **HTML-bestanden** die gegenereerd zijn uit je Markdown-bestanden.
+- Een document waarin je je **zoekstrategie** bespreekt.
 
 # Puntenverdeling
 
