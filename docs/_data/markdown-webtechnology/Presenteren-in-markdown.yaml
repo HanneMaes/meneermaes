@@ -1,0 +1,20 @@
+title: Presenteren in Markdown
+punten:
+  - desc: "Hoe duidelijk en verstaanbaar leg je de technology uit"
+    max: 2
+  - desc: "Hoe duidelijk en leesbaar is je presentatiemateriaal"
+    max: 2
+  - desc: "Je hebt een thema"
+    max: 2
+  - desc: "Afbeelding waarvan je de grootte zelf bepaald"
+    max: 2
+  - desc: "Header en/of footer"
+    max: 2
+  - desc: "Header en/of footer met image"
+    max: 2
+  - desc: "Slide met background image"
+    max: 2
+  - desc: "Slide met background image op de helft van het scherm"
+    max: 2
+  - desc: "Je publiceert je presentatie via GitHub pages en maakt een link vanuit index.md"
+    max: 2

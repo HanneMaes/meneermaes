@@ -101,10 +101,10 @@ Gebruik de 3-stappenstructuur voor je presentatie of tekst:
 Maak een duidelijk overzicht van:
 1. Wat is je **onderzoeksvraag**, wees zo specifiek mogelijk
 2. Welke **kernwoorden** kan je uit je onderzoeksvraag halen
-3. Zijn er synoniemen en/of vertalingen die je zou kunnen gebruiken bij het zoeken
+3. Zijn er **synoniemen en/of vertalingen** die je zou kunnen gebruiken bij het zoeken
 4. Bedenk **minstens 3** zoekopdrachten
-5. Welke zoekactie gaf de beste resultaten en waarom?
-6. Vermeld je bronnen, en bespreek waarom deze betrouwbaar zijn
+5. Welke zoekactie gaf de beste resultaten en **waarom**?
+6. Vermeld je bronnen, en bespreek waarom deze **betrouwbaar** zijn
 
 **Tips**
   - Kijk of de gevonden bronnen **relevant** zijn voor de vraag.
