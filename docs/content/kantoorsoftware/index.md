@@ -24,6 +24,6 @@ date: Wed, sep 15, 2024  14:07:23 PM
 
 # Scripting
 
-[Markdown](../markdown/index)
+[Markdown](../markdown-kantoorsoftware/index)
 
 [LaTeX](../latex/index)
