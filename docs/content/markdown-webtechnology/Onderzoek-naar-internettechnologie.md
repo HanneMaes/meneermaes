@@ -5,8 +5,16 @@ date: 2024-03-04T13:37:48+01:00
 
 > In deze opdracht verdiep je je in verschillende internettechnologieën.
 > Je taak is om onderzoek te doen en uitleg te geven **1 onderwerp**.
->
-> Maak een **Markdown document** waarin je in eigen woorden je onderwerp toelicht.
+
+# Zoekstrategie
+
+{% include callout.html type='Tips & Opdracht' content='
+[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
+' %}
+
+# Onderzoek
+
+Maak een **Markdown document** waarin je in eigen woorden je onderwerp toelicht.
 
 **Onderwerpen**:
 
@@ -20,7 +28,7 @@ date: 2024-03-04T13:37:48+01:00
 - W3C
 - GIT
 
-# Te onderzoeken vragen
+## Te onderzoeken vragen
 
 **Bij alle onderwerpen**
 
@@ -60,7 +68,7 @@ date: 2024-03-04T13:37:48+01:00
 - **GIT**
   1. Bespreek enkele Git-commando's en hun toepassingen in een ontwikkelomgeving.
 
-# Je onderzoek beschrijven in Markdown
+## Je onderzoek beschrijven in Markdown
 
 Gebruik Markdown om je onderzoek op een **duidelijke en goed gestructureerde** manier weer te geven, en gebruik **afbeeldingen ter verduidelijking**.
 
@@ -69,13 +77,7 @@ Exporteer je Markdown document naar:
 - **.docx** (Microsoft Word)
 - **.html**
 
-# Zoekstrategie
-
-{% include callout.html type='Tip & Opdracht' content='
-[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
-' %}
-
-# Uploaden
+## Uploaden
 
 Je uploadt de volgende bestanden:
 
@@ -85,7 +87,7 @@ Je uploadt de volgende bestanden:
 - De **HTML-bestanden** die gegenereerd zijn uit je Markdown-bestanden.
 - Een document waarin je je **zoekstrategie** bespreekt.
 
-# Puntenverdeling
+## Puntenverdeling
 
 {% include punten.html data='Onderzoek-naar-internettechnologie' %}
 
