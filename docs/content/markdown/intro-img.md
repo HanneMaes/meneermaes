@@ -5,3 +5,6 @@ date: 2024-03-04T13:37:48+01:00
 ---
 
 ![markdown mysterie](images/markdown-mysterie.png)
+![markdown mysterie](images/markdown-mysterie-pdf.png)
+{% include browser.html img='images/markdown-mysterie-html.png' %}
+

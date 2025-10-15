@@ -12,6 +12,10 @@ date: Wed, sep 11, 2024  10:47:23 PM
 
 [De Rechtbank](https://hannemaes.notion.site/De-rechtbank-39d66651fa324f0cab07ef142cbe37d3)
 
+[Office Pakketten Verkennen](https://hannemaes.notion.site/Office-pakketten-verkennen-73d09585e8e34239a791bfb13135398a)
+
+[Open File Types]()
+
 [De Ethiek van Raspberry Pi](raspberrypi-ethiek)
 
 # Linux

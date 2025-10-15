@@ -6,6 +6,15 @@ date: Mon, oct 13, 2025  21:58:23 PM
 
 > Een onderzoekende inleidende opdracht rond de **ethische en maatschappelijke kant** van Raspberry Pi.
 
+# Verslag & Zoekstrategie
+
+Maak een **overzichtelijk en presentabel** verslag.  
+Vermeld al je bronnen en vermeld er ook bij **waarom deze brom betrouwbaar is**.
+
+{% include callout.html type='Tips:' content='
+[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
+' %}
+
 # Raspberry Pi Distro's
 
 Zoek **3 Linux-distributies** die op een Raspberry Pi draaien, en beantwoord deze vragen:
@@ -39,15 +48,6 @@ Onderzoek de stelling en:
 2. Wie profiteert er het **meeste** van zulke open hardware?
 3. Zijn er **risico’s** als iedereen alles kan bekijken?
 4. Hoe draagt de Pi bij aan **duurzaamheid**?
-
-# Verslag
-
-Maak een **overzichtelijk en presentabel** verslag.  
-Vermeld al je bronnen en vermeld er ook bij **waarom deze brom betrouwbaar is**.
-
-{% include callout.html type='Tips:' content='
-[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
-' %}
 
 # Punterverdeling
 
