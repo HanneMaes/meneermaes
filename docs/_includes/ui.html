@@ -1,11 +1,2 @@
-{% assign uiReplaced = include.ui 
-| replace: ', ', ',' %}  <!-- Remove trailing commas -->
-
-{% assign uiReplaced = uiReplaced
-| replace: ',', '<span class="uiSeparator"> \> </span>' 
-| replace: 'ham', '☰'
-| replace: 'rc', 'Rechter muisknop'
-| replace: 'lc', 'Linker muisknop'
-| replace: 'dc', 'Dubbelklik' %}
-
-<span class="ui"> {{ uiReplaced }} </span>
+{% assign keys = include.btn | replace: ', ', ',' | split: ',' %}
+{% for key in keys %}<span class="btn">{{ key }}</span>{% endfor %}
