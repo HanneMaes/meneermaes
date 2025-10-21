@@ -22,11 +22,13 @@ date: Wed, sep 11, 2024  10:47:23 PM
 
 [Linux](../hardware/Besturingssystemen)
 
-[Bash]()
+[Bash](bash)
 
 [De Ethiek van Raspberry Pi](raspberrypi-ethiek)
 
 # Python
+
+[Bash](bash)
 
 [Python](https://hannemaes.notion.site/Python-Game-Development-f26abfaf2cdc4ff7967753b933cd206f?source=copy_link)
 
