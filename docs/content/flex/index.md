@@ -26,6 +26,8 @@ date: Wed, sep 11, 2024  10:47:23 PM
 
 [De Ethiek van Raspberry Pi](raspberrypi-ethiek)
 
+[Raspberry Pi](raspberrypi)
+
 # Python
 
 [Bash](bash)

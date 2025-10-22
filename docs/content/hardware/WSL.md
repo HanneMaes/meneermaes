@@ -13,7 +13,7 @@ Met WSL kun je gewoon in Windows blijven werken, maar toch gebruik maken van een
 
 **Verschillende versies:**
 
-- **WSL 2** draait een echte Linux-kernel in een lichte virtuele machine (met Hyper-V technologie). Veel sneller en beter compatibel.
+- **WSL 2** draait een echte Linux-kernel in een lichte virtuele machine (met Hyper-V technologie). Veel sneller en beter compatibel.  
 - **WSL 1** daarentegen werkt meer als een tolk: het vertaalt Linux-commando’s naar Windows-opdrachten, wat handig is maar minder krachtig en soms niet volledig compatibel met alle Linux-tools.
 
 **Vandaag gebruiken we WSL 2**, die is stabieler, sneller en krachtiger.
