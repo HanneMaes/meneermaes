@@ -1,9 +1,7 @@
 title: Onderzoek naar Internettechnology
 punten:
   - desc: "Antwoorden op de vragen, ik zal extra vragen stellen om te zien of je het snapt"
-    max: 3
-  - desc: "Antwoorden op de inzichtsvragen"
-    max: 3
+    max: 9
   - desc: "Je publiceert je Markdown als een website via GitHub pages"
     max: 3
 doelen:
