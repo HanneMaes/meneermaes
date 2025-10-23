@@ -1,7 +1,7 @@
 ---
 title: Web Fonts
-last_modified_at: 2024-10-25 14:22:44 +0200
-date: 2024-10-18 14:22:42 +0200
+last_modified: 2024-10-25 14:22:44 +0200
+created: 2024-10-18 14:22:42 +0200
 ---
 
 Elke computer wordt geleverd met een standaard set lettertypen die zijn geïnstalleerd op het besturingssysteem. Deze **lettertypen variëren afhankelijk van het besturingssysteem** (zoals Windows, macOS, Linux) en de versie ervan. Omdat verschillende besturingssystemen verschillende lettertypen bevatten, kan een **website er op de computer van de ontwerper anders uitzien dan op de computer van de bezoeker**. Wat er goed uitziet op de ene computer, kan er anders uitzien op een andere computer als die niet hetzelfde lettertype heeft geïnstalleerd.

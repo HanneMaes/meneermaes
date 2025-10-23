@@ -1,7 +1,7 @@
 ---
 title: Knoppen en poorten
-last_modified_at: 2024-11-13 12:46:21 +0200
-date: 2024-11-12 11:01:28 +0200
+last_modified: 2024-11-13 12:46:21 +0200
+created: 2024-11-12 11:01:28 +0200
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yq9qzw8p7FI?si=CRwx-DLMMVM2zTew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

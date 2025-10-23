@@ -1,7 +1,7 @@
 ---
 title: Basisoptie I.T.
-last_modified_at: 2025-03-17 09:25:30 +0200
-date: Wed, sep 15, 2024  14:03:23 PM
+last_modified: 2025-03-17 09:25:30 +0200
+created: Wed, sep 15, 2024  14:03:23 PM
 ---
 
 # Kennismaking

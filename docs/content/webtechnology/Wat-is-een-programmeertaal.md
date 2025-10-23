@@ -1,7 +1,7 @@
 ---
 title: Wat is een programmeertaal?
-last_modified_at: 2024-05-03T07:12:37
-date: Fri, sep 13, 2024  9:20:23 AM
+last_modified: 2024-05-03T07:12:37
+created: Fri, sep 13, 2024  9:20:23 AM
 ---
 
 Je een website maken met alleen een tekstbestand. De tekst in dit tekstbestand is **HTML**, dit is een taal die webbrowsers begrijpen.  

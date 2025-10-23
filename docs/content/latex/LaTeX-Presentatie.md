@@ -1,7 +1,7 @@
 ---
 title: LaTeX Presentatie
-last_modified_at: 2024-05-28 15:25:19 +0200
-date: 2024-05-28 15:25:19 +0200
+last_modified: 2024-05-28 15:25:19 +0200
+created: 2024-05-28 15:25:19 +0200
 ---
 
 Zet je document om in een **presentatie** en voorzie er **handouts** bij.  

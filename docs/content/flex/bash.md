@@ -1,7 +1,7 @@
 ---
 title: Bash
-last_modified_at: 2025-10-21 09:07:28 +0200
-date: Thu, oct 21, 2025  09:07:23 PM
+last_modified: 2025-10-21 09:07:28 +0200
+created: Thu, oct 21, 2025  09:07:23 PM
 ---
 
 # Bash commands

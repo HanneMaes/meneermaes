@@ -1,7 +1,7 @@
 ---
 title: Arrays
-last_modified_at: 2025-05-23 13:15:25 +0200
-date: 2025-05-23 11:58:10 +0200
+last_modified: 2025-05-23 13:15:25 +0200
+created: 2025-05-23 11:58:10 +0200
 ---
 
 > Een array is een lijst van waarden 

@@ -1,7 +1,7 @@
 ---
 title: WSL
-last_modified_at: 2025-06-11 11:21:55 +0200
-date: 2025-04-22 13:28:45 +0200
+last_modified: 2025-06-11 11:21:55 +0200
+created: 2025-04-22 13:28:45 +0200
 ---
 
 > WSL staat voor **Windows Subsystem for Linux**

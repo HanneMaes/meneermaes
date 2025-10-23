@@ -1,6 +1,6 @@
 ---
 title: Informatie vinden, beoordelen en verwerken
-date: 2025-09-09T13:37:48+01:00
+created: 2025-09-09T13:37:48+01:00
 ---
 
 > In deze moderne wereld moet je vaak informatie opzoeken, maar gewoon googelen is niet genoeg.  

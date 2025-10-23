@@ -1,7 +1,7 @@
 ---
 title: Price calculator
-last_modified_at: 2024-06-05 08:26:45 +0200
-date: 2024-06-05 08:26:45 +0200
+last_modified: 2024-06-05 08:26:45 +0200
+created: 2024-06-05 08:26:45 +0200
 ---
 
 # Stap 1: Winst berekenen

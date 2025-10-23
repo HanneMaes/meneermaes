@@ -1,7 +1,7 @@
 ---
 title: Professioneel Materiaal Ontwikkelen
-last_modified_at: 2025-03-21 10:30:28 +0200
-date: 2024-11-01 16:18:57 +0200
+last_modified: 2025-03-21 10:30:28 +0200
+created: 2024-11-01 16:18:57 +0200
 ---
 
 Jullie hebben de afgelopen periode de basisbeginselen van Office-software onder de knie gekregen. Nu is het moment aangebroken om als klas een **professioneel product te ontwikkelen voor jullie medestudenten**.  

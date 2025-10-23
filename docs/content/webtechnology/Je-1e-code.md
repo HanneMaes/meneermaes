@@ -1,7 +1,7 @@
 ---
 title: Je 1e code
-last_modified_at: 2025-09-03 14:38:19 +0200
-date: Thu, Sep 12, 2024  20:47:23 PM
+last_modified: 2025-09-03 14:38:19 +0200
+created: Thu, Sep 12, 2024  20:47:23 PM
 ---
 
 # Bestand extensies

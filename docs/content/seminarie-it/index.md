@@ -1,7 +1,7 @@
 ---
 title: Seminarie I.T.
-last_modified_at: 2025-05-09 09:54:43 +0200
-date: 2025-01-19 15:37:26 +0200
+last_modified: 2025-05-09 09:54:43 +0200
+created: 2025-01-19 15:37:26 +0200
 ---
 
 [Digitale Kennismaking](https://www.notion.so/hannemaes/Digitale-kennismaking-met-Canva-14c2b51142cd8029ac34d6338316a551)

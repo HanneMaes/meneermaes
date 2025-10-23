@@ -1,7 +1,7 @@
 ---
 title: Xerox En Steve Jobs
-last_modified_at: 2024-09-19 15:37:38 +0200
-date: 2024-09-19 15:25:49 +0200
+last_modified: 2024-09-19 15:37:38 +0200
+created: 2024-09-19 15:25:49 +0200
 ---
 
 > Hoe Steven Jobs de uitvindingen van Xerox "leende" en er rijk mee werd.

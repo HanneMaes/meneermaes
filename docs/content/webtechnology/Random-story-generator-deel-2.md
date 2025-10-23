@@ -1,7 +1,7 @@
 ---
 title: Random Story Generator Deel 2
-last_modified_at: 2025-02-14 16:03:55 +0200
-date: 2025-02-14 15:47:54 +0200
+last_modified: 2025-02-14 16:03:55 +0200
+created: 2025-02-14 15:47:54 +0200
 ---
 
 # Stap 1: Knop die het verhaal toont

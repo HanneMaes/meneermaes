@@ -1,6 +1,6 @@
 ---
 title: Onderzoek naar internettechnologie
-date: 2024-03-04T13:37:48+01:00
+created: 2024-03-04T13:37:48+01:00
 ---
 
 > In deze opdracht verdiep je je in verschillende internettechnologieën.

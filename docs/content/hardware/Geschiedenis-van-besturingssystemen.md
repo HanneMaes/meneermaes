@@ -1,7 +1,7 @@
 ---
 title: Geschiedenis Van Besturingssystemen
-last_modified_at: 2024-10-01 20:56:25 +0200
-date: 2024-09-19 15:18:44 +0200
+last_modified: 2024-10-01 20:56:25 +0200
+created: 2024-09-19 15:18:44 +0200
 ---
 
 Tijdens deze oefening zullen jullie de belangrijkste gebeurtenissen in de geschiedenis van besturingssystemen onderzoeken.

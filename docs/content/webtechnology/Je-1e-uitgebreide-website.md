@@ -1,7 +1,7 @@
 ---
 title: Je 1e uitgebreide website
-last_modified_at: 2024-09-26 21:50:48 +0200
-date: 2024-09-26 21:46:06 +0200
+last_modified: 2024-09-26 21:50:48 +0200
+created: 2024-09-26 21:46:06 +0200
 ---
 
 > Maak een nieuwe website over een onderwerp naar keuze

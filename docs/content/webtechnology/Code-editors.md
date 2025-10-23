@@ -1,7 +1,7 @@
 ---
 title: Code Editors
-last_modified_at: 2024-09-19 22:30:49 +0200
-date: 2024-09-19 22:19:55 +0200
+last_modified: 2024-09-19 22:30:49 +0200
+created: 2024-09-19 22:19:55 +0200
 ---
 
 We kunnen HTML-code schrijven in kladblok, of elk ander tekst programma. Maar er zijn ook programma’s gespecialiseerd in het schrijven van code.

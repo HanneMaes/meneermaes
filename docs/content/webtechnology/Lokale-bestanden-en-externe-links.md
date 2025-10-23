@@ -1,7 +1,7 @@
 ---
 title: Lokale bestanden & externe links
-last_modified_at: 2024-09-20 16:42:24 +0200
-date: 2024-09-20 15:18:33 +0200
+last_modified: 2024-09-20 16:42:24 +0200
+created: 2024-09-20 15:18:33 +0200
 ---
 
 # Externe Links

@@ -1,7 +1,7 @@
 ---
 title: Hardware Shopping
-last_modified_at: 2025-04-23 11:39:19 +0200
-date: 2025-03-27 10:48:10 +0200
+last_modified: 2025-04-23 11:39:19 +0200
+created: 2025-03-27 10:48:10 +0200
 ---
 
 **Niet iedereen heeft dezelfde noden als het gaat om een computer.**  

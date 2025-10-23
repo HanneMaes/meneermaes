@@ -1,7 +1,7 @@
 ---
 title: Je 1e echte website
-last_modified_at: 2025-09-17 16:41:05 +0200
-date: 2024-09-20 09:56:19 +0200
+last_modified: 2025-09-17 16:41:05 +0200
+created: 2024-09-20 09:56:19 +0200
 ---
 
 > Maak een website over een persoon naar keuze.

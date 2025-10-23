@@ -1,7 +1,7 @@
 ---
 title: Ergonomie
-last_modified_at: 2025-05-22 14:00:21 +0200
-date: 2025-05-08 09:25:52 +0200
+last_modified: 2025-05-22 14:00:21 +0200
+created: 2025-05-08 09:25:52 +0200
 ---
 
 > Hoe is jullie bureau thuis ingericht?

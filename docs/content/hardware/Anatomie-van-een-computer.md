@@ -1,7 +1,7 @@
 ---
 title: Anatomie Van Een Computer
-last_modified_at: 2024-11-14 15:19:12 +0200
-date: 2024-11-12 10:58:54 +0200
+last_modified: 2024-11-14 15:19:12 +0200
+created: 2024-11-12 10:58:54 +0200
 ---
 
 [Input, Processing & Output](Input-Processing-Output)

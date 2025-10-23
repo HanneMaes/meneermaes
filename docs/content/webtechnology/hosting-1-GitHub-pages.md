@@ -1,7 +1,7 @@
 ---
 title: Hosting 1 Github Pages
-last_modified_at: 2025-03-28 16:29:57 +0200
-date: 2025-03-20 17:14:30 +0200
+last_modified: 2025-03-28 16:29:57 +0200
+created: 2025-03-20 17:14:30 +0200
 ---
 
 Tijdens deze opdracht gaan we een website **publiceren en onderhouden.** Kies een thema dat je persoonlijk interesseert. Dit kan variëren van hobby's, nieuws, tot persoonlijke projecten. Het belangrijkste is dat je gemotiveerd blijft om de **inhoud regelmatig bij te werken**.

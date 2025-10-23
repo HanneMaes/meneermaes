@@ -1,7 +1,7 @@
 ---
 title: Soorten Besturingssystemen
-last_modified_at: 2024-10-23 12:27:50 +0200
-date: 2024-09-25 21:21:33 +0200
+last_modified: 2024-10-23 12:27:50 +0200
+created: 2024-09-25 21:21:33 +0200
 ---
 
 

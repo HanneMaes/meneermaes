@@ -1,7 +1,7 @@
 ---
 title: Quiz
-last_modified_at: 2024-10-08 10:56:15 +0200
-date: 2024-10-01 14:57:04 +0200
+last_modified: 2024-10-08 10:56:15 +0200
+created: 2024-10-01 14:57:04 +0200
 ---
 
 > Nu is het tijd om te testen hoe goed jullie hebben opgelet!

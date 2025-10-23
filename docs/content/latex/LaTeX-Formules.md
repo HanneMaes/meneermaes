@@ -1,7 +1,7 @@
 ---
 title: LaTeX Formules
-last_modified_at: 2024-05-27 21:33:12 +0200
-date: 2024-05-27 21:33:12 +0200
+last_modified: 2024-05-27 21:33:12 +0200
+created: 2024-05-27 21:33:12 +0200
 ---
 
 1. Om een wiskunde formule in te voegen klik je bovenaan op de **insert math** knop.  

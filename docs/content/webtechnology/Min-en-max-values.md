@@ -1,7 +1,7 @@
 ---
 title: Min en max values
-last_modified_at: 2024-05-03T07:12:37
-date: Mon, Mar 25, 2024  4:03:05 PM
+last_modified: 2024-05-03T07:12:37
+created: Mon, Mar 25, 2024  4:03:05 PM
 ---
 
 In CSS stellen min en max values de **minimale en maximale grootte van een element** in. Dit is handig bij het ontwerpen van responsive websites, omdat het elementen kan helpen zich aan te passen aan verschillende schermgroottes en apparaten **zonder media-queries** te moeten gebruiken.

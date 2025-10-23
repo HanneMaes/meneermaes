@@ -1,7 +1,7 @@
 ---
 title: Geavanceerde CSS-Selectors
-last_modified_at: 2024-10-18 16:19:48 +0200
-date: 2024-10-18 14:01:36 +0200
+last_modified: 2024-10-18 16:19:48 +0200
+created: 2024-10-18 14:01:36 +0200
 ---
 
 > Test onderstaande code uit, en probeer te achterhalen wat ze doen

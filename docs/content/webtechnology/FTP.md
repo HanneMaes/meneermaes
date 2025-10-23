@@ -1,7 +1,7 @@
 ---
 title: FTP
-last_modified_at: 2025-05-27 21:35:49 +0200
-date: 2024-05-21 15:07:48 +0200
+last_modified: 2025-05-27 21:35:49 +0200
+created: 2024-05-21 15:07:48 +0200
 ---
 
 > Staat voor **"File Transfer Protocol"**.

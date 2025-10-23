@@ -1,7 +1,7 @@
 ---
 title: LaTeX Documenten
-last_modified_at: 2025-03-31 10:05:03 +0200
-date: 2024-05-27 21:29:48 +0200
+last_modified: 2025-03-31 10:05:03 +0200
+created: 2024-05-27 21:29:48 +0200
 ---
 
 ![](images/overleaf.svg){: .wrap }

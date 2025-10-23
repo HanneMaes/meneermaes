@@ -1,7 +1,7 @@
 ---
 title: Hardware Software & Besturingssysteem
-last_modified_at: 2024-09-19 15:18:19 +0200
-date: 2024-09-19 15:15:01 +0200
+last_modified: 2024-09-19 15:18:19 +0200
+created: 2024-09-19 15:15:01 +0200
 ---
 
 {% include toggle.html title="Wat is het verschil tussen hardware & software?" content="

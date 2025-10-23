@@ -1,7 +1,7 @@
 ---
 title: Spline
-last_modified_at: 2025-02-13 08:56:52 +0200
-date: Wed, sep 11, 2024  10:47:23 PM
+last_modified: 2025-02-13 08:56:52 +0200
+created: Wed, sep 11, 2024  10:47:23 PM
 ---
 
 > Dynasmische & interactieve 3D web graphics

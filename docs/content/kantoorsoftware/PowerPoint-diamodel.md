@@ -1,7 +1,7 @@
 ---
 title: Powerpoint Diamodel
-last_modified_at: 2024-10-06 21:32:33 +0200
-date: 2024-10-06 21:09:16 +0200
+last_modified: 2024-10-06 21:32:33 +0200
+created: 2024-10-06 21:09:16 +0200
 ---
 
 Stel dat je een presentatie hebt met een groot aantal dia’s. Je wenst het lettertype van de titel van elke dia aan te passen. Als je dit dia per dia gaat aanpassen, zal dit heel wat tijd in beslag nemen. Er is echter een andere manier van werken die heel wat efficiënter is, namelijk het werken met het diamodel.

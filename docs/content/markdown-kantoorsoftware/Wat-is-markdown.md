@@ -1,7 +1,7 @@
 ---
 title: Wat is Markdown
-last_modified_at: 2025-02-10 09:06:11 +0200
-date: 2024-03-04T13:37:48+01:00
+last_modified: 2025-02-10 09:06:11 +0200
+created: 2024-03-04T13:37:48+01:00
 ---
 
 Markdown is een **opmaaktaal** zoals HTML.  

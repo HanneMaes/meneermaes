@@ -1,7 +1,7 @@
 ---
 title: Input, Processing & Output
-last_modified_at: 2024-11-13 10:47:58 +0200
-date: 2024-11-12 11:03:04 +0200
+last_modified: 2024-11-13 10:47:58 +0200
+created: 2024-11-12 11:03:04 +0200
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DKGZlaPlVLY?si=mfSBDkaz3Ya0EiTC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

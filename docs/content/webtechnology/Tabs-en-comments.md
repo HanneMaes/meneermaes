@@ -1,7 +1,7 @@
 ---
 title: Tabs & comments
-last_modified_at: 2024-09-20 09:13:47 +0200
-date: 2024-09-20 09:02:25 +0200
+last_modified: 2024-09-20 09:13:47 +0200
+created: 2024-09-20 09:02:25 +0200
 ---
 
 # Tabs

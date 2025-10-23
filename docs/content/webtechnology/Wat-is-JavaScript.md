@@ -1,7 +1,7 @@
 ---
 title: Wat Is Javascript
-last_modified_at: 2025-01-17 14:35:55 +0200
-date: 2025-01-17 14:22:11 +0200
+last_modified: 2025-01-17 14:35:55 +0200
+created: 2025-01-17 14:22:11 +0200
 ---
 
 > JavaScript is een programmeertaal die **interactiviteit** toevoegt aan je website.

@@ -1,7 +1,7 @@
 ---
 title: Het If-statement
-last_modified_at: 2025-09-03 14:40:54 +0200
-date: 2024-06-05 10:59:12 +0200
+last_modified: 2025-09-03 14:40:54 +0200
+created: 2024-06-05 10:59:12 +0200
 ---
 
 Maak een webapp met een **textfield** en een **knop**.

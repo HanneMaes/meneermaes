@@ -1,7 +1,7 @@
 ---
 title: Webtechnology
-last_modified_at: 2025-09-03 14:43:07 +0200
-date: Wed, Mar 20, 2024  3:36:23 PM
+last_modified: 2025-09-03 14:43:07 +0200
+created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
 # Hulpmiddelen

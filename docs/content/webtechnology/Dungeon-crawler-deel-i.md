@@ -1,7 +1,7 @@
 ---
 title: Dungeon crawler I
-last_modified_at: 2024-06-10 16:06:47 +0200
-date: 2024-06-10 16:06:47 +0200
+last_modified: 2024-06-10 16:06:47 +0200
+created: 2024-06-10 16:06:47 +0200
 ---
 
 Mijn versie van het project is hier te vinden: [Dungeon Crawler browsergame](oefeningen/Dungeon-crawler/docs/index.html){:target='_blank'}

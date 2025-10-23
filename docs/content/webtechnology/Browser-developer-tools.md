@@ -1,7 +1,7 @@
 ---
 title: Browser Developer Tools
-last_modified_at: 2024-10-18 15:12:56 +0200
-date: 2024-10-18 15:09:21 +0200
+last_modified: 2024-10-18 15:12:56 +0200
+created: 2024-10-18 15:09:21 +0200
 ---
 
 Browser Developer Tools zijn **ingebouwde hulpmiddelen** in webbrowsers, om webdesigners te helpen.

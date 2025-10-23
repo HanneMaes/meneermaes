@@ -1,7 +1,7 @@
 ---
 title: Zelf HTML-tags ontdekken
-last_modified_at: 2024-09-19 22:41:05 +0200
-date: Wed, Mar 20, 2024  3:36:23 PM
+last_modified: 2024-09-19 22:41:05 +0200
+created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
 # Wat doen deze HTML-tags?

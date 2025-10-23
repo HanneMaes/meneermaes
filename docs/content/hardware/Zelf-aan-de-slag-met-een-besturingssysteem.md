@@ -1,7 +1,7 @@
 ---
 title: Zelf Aan De Slag Met Een Besturingssysteem
-last_modified_at: 2025-02-11 12:44:24 +0200
-date: 2024-10-23 15:39:25 +0200
+last_modified: 2025-02-11 12:44:24 +0200
+created: 2024-10-23 15:39:25 +0200
 ---
 
 > In dit hoofdstuk gaan we aan de slag met besturingssystemen die passen bij specifieke projecten.  

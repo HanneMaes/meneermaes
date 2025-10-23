@@ -1,7 +1,7 @@
 ---
 title: Bash Scripting
-last_modified_at: 2025-02-12 14:01:48 +0200
-date: 2025-01-15 15:21:22 +0200
+last_modified: 2025-02-12 14:01:48 +0200
+created: 2025-01-15 15:21:22 +0200
 ---
 
 # Wat is Bash?

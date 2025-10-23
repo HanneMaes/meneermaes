@@ -1,7 +1,7 @@
 ---
 title: Je 1e Javascript Code
-last_modified_at: 2025-01-17 14:52:52 +0200
-date: 2025-01-17 14:37:13 +0200
+last_modified: 2025-01-17 14:52:52 +0200
+created: 2025-01-17 14:37:13 +0200
 ---
 
 # 1. Maak een script.js bestand aan

@@ -1,7 +1,7 @@
 ---
 title: Project Character Creator
-last_modified_at: 2025-04-25 14:58:26 +0200
-date: 2025-04-25 14:51:19 +0200
+last_modified: 2025-04-25 14:58:26 +0200
+created: 2025-04-25 14:51:19 +0200
 ---
 
 Gebruik HTML, CSS en JavaScript om een character creator te bouwen, zoals je die vaak ziet in games.

@@ -1,7 +1,7 @@
 ---
 title: De Ethiek van Raspberry Pi
-last_modified_at: 2025-02-13 08:56:52 +0200
-date: Mon, oct 13, 2025  21:58:23 PM
+last_modified: 2025-02-13 08:56:52 +0200
+created: Mon, oct 13, 2025  21:58:23 PM
 ---
 
 > Een onderzoekende inleidende opdracht rond de **ethische en maatschappelijke kant** van Raspberry Pi.

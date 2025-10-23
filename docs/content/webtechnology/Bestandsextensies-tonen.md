@@ -1,7 +1,7 @@
 ---
 title: Bestandsextensies tonen
-last_modified_at: 2024-05-03T07:12:37
-date: 2024-04-05 14:49:09 +0200
+last_modified: 2024-05-03T07:12:37
+created: 2024-04-05 14:49:09 +0200
 ---
 
 In webdesign gebruiken we verschillende soorten bestanden. Het is belangrijk om de bestandsextensies zichtbaar te hebben, omdat dit ons helpt te weten welk type bestand we gebruiken.

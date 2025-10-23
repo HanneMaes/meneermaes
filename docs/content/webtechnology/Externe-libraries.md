@@ -1,6 +1,6 @@
 ---
 title: Externe libraries
-date: 2024-04-23 13:06:08 +0200
+created: 2024-04-23 13:06:08 +0200
 ---
 
 JavaScript- en CSS-libraries zijn verzamelingen van **voorgeprogrammeerde functies en stijlen** die kunnen worden gebruikt om de **ontwikkeling** van webpagina's te **versnellen en verbeteren**.

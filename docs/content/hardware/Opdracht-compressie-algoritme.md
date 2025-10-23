@@ -1,7 +1,7 @@
 ---
 title: Ontwerp je eigen compressie-algoritme
-last_modified_at: 2025-03-19 12:17:33 +0200
-date: 2025-03-12 16:29:00 +0200
+last_modified: 2025-03-19 12:17:33 +0200
+created: 2025-03-12 16:29:00 +0200
 ---
 
 # Experiment

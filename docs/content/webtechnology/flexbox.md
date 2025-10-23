@@ -1,7 +1,7 @@
 ---
 title: Flexbox
-last_modified_at: 2024-11-14 12:45:52 +0200
-date: 2024-11-07 20:57:12 +0200
+last_modified: 2024-11-14 12:45:52 +0200
+created: 2024-11-07 20:57:12 +0200
 ---
 
 # Flexbox intro

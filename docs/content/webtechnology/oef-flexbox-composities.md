@@ -1,7 +1,7 @@
 ---
 title: Flexbox composities
-last_modified_at: 2024-11-07 21:44:32 +0200
-date: 2024-11-07 21:12:19 +0200
+last_modified: 2024-11-07 21:44:32 +0200
+created: 2024-11-07 21:12:19 +0200
 ---
 
 # 1. Verticaal midden

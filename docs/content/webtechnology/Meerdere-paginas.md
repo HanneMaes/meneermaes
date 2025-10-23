@@ -1,7 +1,7 @@
 ---
 title: Meerdere Paginas
-last_modified_at: 2024-09-26 21:45:22 +0200
-date: 2024-09-26 21:21:30 +0200
+last_modified: 2024-09-26 21:45:22 +0200
+created: 2024-09-26 21:21:30 +0200
 ---
 
 # Link naar een andere website

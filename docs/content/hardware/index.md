@@ -1,7 +1,7 @@
 ---
 title: Hardware
-last_modified_at: 2025-03-27 10:47:59 +0200
-date: Wed, sep 04, 2024  10:47:23 PM
+last_modified: 2025-03-27 10:47:59 +0200
+created: Wed, sep 04, 2024  10:47:23 PM
 ---
 
 [Soorten computers](soorten-computers)

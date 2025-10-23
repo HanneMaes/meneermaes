@@ -1,7 +1,7 @@
 ---
 title: 'Media queries'
-last_modified_at: 2024-05-03T07:12:37
-date: Wed, Mar 20, 2024  3:36:23 PM
+last_modified: 2024-05-03T07:12:37
+created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
 Media queries stellen ons in staat om **specifieke CSS-regels** toe te passen op basis van de **eigenschappen van het apparaat**.

@@ -1,7 +1,7 @@
 ---
 title: Een korte geschiedenis
-last_modified_at: 2024-09-20 16:44:56 +0200
-date: 2024-09-19 21:55:45 +0200
+last_modified: 2024-09-20 16:44:56 +0200
+created: 2024-09-19 21:55:45 +0200
 ---
 
 > Hoe is het internet ontstaan en waarom heeft het veel gelijkenissen met word processing software?

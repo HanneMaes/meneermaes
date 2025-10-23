@@ -1,7 +1,7 @@
 ---
 title: Open Source
-last_modified_at: 2025-03-20 17:06:14 +0200
-date: 2025-03-20 17:00:44 +0200
+last_modified: 2025-03-20 17:06:14 +0200
+created: 2025-03-20 17:00:44 +0200
 ---
 
 > **Open source** wil zeggen dat de broncode van een softwareproject vrij beschikbaar is voor het publiek. **Iedereen kan** de broncode kan **bekijken, gebruiken, wijzigen en delen**.

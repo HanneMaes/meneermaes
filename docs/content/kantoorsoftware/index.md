@@ -1,7 +1,7 @@
 ---
 title: Kantoorsoftware
-last_modified_at: 2025-02-10 08:58:34 +0200
-date: Wed, sep 15, 2024  14:07:23 PM
+last_modified: 2025-02-10 08:58:34 +0200
+created: Wed, sep 15, 2024  14:07:23 PM
 ---
 
 # Kennismaking

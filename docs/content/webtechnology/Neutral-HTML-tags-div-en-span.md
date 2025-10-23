@@ -1,7 +1,7 @@
 ---
 title: "Neutral Html Tags:<br> div & span"
-last_modified_at: 2024-10-18 15:57:29 +0200
-date: 2024-10-18 09:10:08 +0200
+last_modified: 2024-10-18 15:57:29 +0200
+created: 2024-10-18 09:10:08 +0200
 ---
 
 Zowel `<div>` als `<span>` zijn veelgebruikte HTML-elementen die dienen als "containers" om inhoud te structureren.

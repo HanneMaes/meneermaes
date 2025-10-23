@@ -1,7 +1,7 @@
 ---
 title: Je 1e Website Stylen
-last_modified_at: 2024-10-10 12:16:11 +0200
-date: 2024-10-10 11:55:25 +0200
+last_modified: 2024-10-10 12:16:11 +0200
+created: 2024-10-10 11:55:25 +0200
 ---
 
 > Style je vorige website door gebruik te maken van CSS

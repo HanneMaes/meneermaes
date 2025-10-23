@@ -1,7 +1,7 @@
 ---
 title: Powerpoint Basics
-last_modified_at: 2024-10-07 09:05:26 +0200
-date: 2024-09-29 20:41:34 +0200
+last_modified: 2024-10-07 09:05:26 +0200
+created: 2024-09-29 20:41:34 +0200
 ---
 
 # Basis van een goede presentatie

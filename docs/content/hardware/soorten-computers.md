@@ -1,6 +1,6 @@
 ---
 title: Soorten computers
-date: 2024-03-04T13:37:48+01:00
+created: 2024-03-04T13:37:48+01:00
 ---
 
 <iframe src="https://docs.google.com/presentation/d/1KTVXaFKQ915TOTVHwjHIBEWzTI6VYSDx/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="515" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

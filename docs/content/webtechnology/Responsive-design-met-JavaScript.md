@@ -1,7 +1,7 @@
 ---
 title: Responsive design met JavaScript
-last_modified_at: 2024-05-03T07:12:37
-date: 2024-04-16 21:02:37 +0200
+last_modified: 2024-05-03T07:12:37
+created: 2024-04-16 21:02:37 +0200
 ---
 
 Het gebruik van **CSS** voor het maken van een responsieve website is over het algemeen de **beste aanpak** omdat CSS specifiek is ontworpen voor het stylen van webpagina's, inclusief het aanpassen van lay-outs op verschillende schermgroottes. **Het laden van CSS-bestanden is sneller en efficiënter dan het uitvoeren van JavaScript-code.**

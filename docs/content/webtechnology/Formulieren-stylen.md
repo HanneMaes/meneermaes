@@ -1,7 +1,7 @@
 ---
 title: Formulieren Stylen
-last_modified_at: 2025-04-24 16:34:32 +0200
-date: 2025-04-24 16:25:02 +0200
+last_modified: 2025-04-24 16:34:32 +0200
+created: 2025-04-24 16:25:02 +0200
 ---
 
 # Voorbeelden

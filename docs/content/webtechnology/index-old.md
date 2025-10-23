@@ -1,7 +1,7 @@
 ---
 title: Webtechnology
-last_modified_at: 2024-10-10 12:18:53 +0200
-date: Wed, Mar 20, 2024  3:36:23 PM
+last_modified: 2024-10-10 12:18:53 +0200
+created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
 # Cursus deel I

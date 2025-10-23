@@ -1,7 +1,7 @@
 ---
 title: LaTeX
-last_modified_at: 2024-05-20 14:05:53 +0200
-date: 2024-05-20 14:05:53 +0200
+last_modified: 2024-05-20 14:05:53 +0200
+created: 2024-05-20 14:05:53 +0200
 ---
 
 ![LaTeX logo](images/LaTeX-logo.svg)

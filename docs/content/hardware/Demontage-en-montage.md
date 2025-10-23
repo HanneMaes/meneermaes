@@ -1,7 +1,7 @@
 ---
 title: Demontage & Montage
-last_modified_at: 2025-05-08 10:54:09 +0200
-date: 2025-04-02 15:53:00 +0200
+last_modified: 2025-05-08 10:54:09 +0200
+created: 2025-04-02 15:53:00 +0200
 ---
 
 Tijdens deze opdracht gaan jullie in **groepjes van 2** een computer demonteren en weer correct in elkaar zetten.

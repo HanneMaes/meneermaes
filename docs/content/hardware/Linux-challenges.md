@@ -1,6 +1,6 @@
 ---
 title: Linux challenges
-date: 2024-11-28T13:37:48+01:00
+created: 2024-11-28T13:37:48+01:00
 ---
 
 # Terminal aanpassen

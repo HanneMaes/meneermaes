@@ -1,7 +1,7 @@
 ---
 title: Display & Position
-last_modified_at: 2025-01-09 10:50:21 +0200
-date: 2024-11-15 13:55:04 +0200
+last_modified: 2025-01-09 10:50:21 +0200
+created: 2024-11-15 13:55:04 +0200
 ---
 > Nu is het tijd om zelf op te zoeken wat de css-properties **display** en **position** doen.
 
