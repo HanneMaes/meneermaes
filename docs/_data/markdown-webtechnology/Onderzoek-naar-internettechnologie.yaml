@@ -2,6 +2,8 @@ title: Onderzoek naar Internettechnology
 punten:
   - desc: "Antwoorden op de vragen, ik zal extra vragen stellen om te zien of je het snapt"
     max: 9
+  - desc: "Je converteert je Markdown naar Word en HTML"
+    max: 3
   - desc: "Je publiceert je Markdown als een website via GitHub pages"
     max: 3
 doelen:

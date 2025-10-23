@@ -1,11 +1,11 @@
 title: Servers Diagram
 punten:
-   - desc: "Welke taken voert deze server uit en welke data gebruikt de server"
-     max: 3
-   - desc: "Diagram: correct en volledig"
-     max: 3
-   - desc: "Diagram: overzichtelijke en duidelijk"
-     max: 2
+  - desc: "Welke taken voert deze server uit en welke data gebruikt de server"
+    max: 3
+  - desc: "Diagram: correct en volledig"
+    max: 3
+  - desc: "Diagram: overzichtelijke en duidelijk"
+    max: 2
 doelen:
-   - nr: "BV3_04.01"
-     desc: "De leerlingen gebruiken courante functionaliteiten van vergelijkbare toepassingen om digitale inhouden te creëren."
+  - nr: "BV3_04.01"
+    desc: "De leerlingen gebruiken courante functionaliteiten van vergelijkbare toepassingen om digitale inhouden te creëren."
