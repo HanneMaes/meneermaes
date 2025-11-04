@@ -4,6 +4,14 @@
 <!-- load yaml data -->
 {% assign collection = site.data[subdirectory] %}
 {% assign yaml_data = collection[include.data] %}
+<!-- Debug info -->
+<div style="border: 1px solid red; padding: 10px; margin: 10px 0;">
+  <strong>Debug Info:</strong><br>
+  include.data: {{ include.data }}<br>
+  subdirectory: {{ subdirectory }}<br>
+  yaml_data exists: {{ yaml_data }}<br>
+  collection keys: {{ collection | map: 'first' | join: ', ' }}
+</div>
 {% assign puntenverdeling = yaml_data.punten %}
 {% assign doelen = yaml_data.doelen %}
 

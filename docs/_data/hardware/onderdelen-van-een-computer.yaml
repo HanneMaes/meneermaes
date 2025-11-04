@@ -1,0 +1,12 @@
+title: Onderdelen Van Een Computer
+punten:
+  - desc: "Hoe ziet dit component eruit? Laat zien aan de hand van foto’s."
+    max: 1
+  - desc: "Waar bevindt dit component zich in een computer? Laat zien aan de hand van foto’s."
+    max: 1
+  - desc: "Waar dient dit component voor?"
+    max: 3
+  - desc: "Bestaan er verschillende types van dit component? Zo ja welke?"
+    max: 2
+  - desc: "Tussen welke prijs kan je dit component vinden voor een computer? En wat zijn de verschillen tussen dure en goedkope versies van dit component?"
+    max: 1

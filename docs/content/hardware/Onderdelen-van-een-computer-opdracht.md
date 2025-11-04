@@ -1,6 +1,6 @@
 ---
 title: "Opdracht: Onderdelen Van Een Computer"
-last_modified: 2025-11-04 11:41:56 +0100
+last_modified: 2025-11-04 11:47:38 +0100
 created: 2024-11-12 13:16:19 +0200
 ---
 
