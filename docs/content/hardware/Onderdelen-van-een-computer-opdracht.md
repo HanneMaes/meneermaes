@@ -1,6 +1,6 @@
 ---
 title: "Opdracht: Onderdelen Van Een Computer"
-last_modified: 2024-11-13 10:49:57 +0200
+last_modified: 2025-11-04 11:05:28 +0100
 created: 2024-11-12 13:16:19 +0200
 ---
 
@@ -18,3 +18,4 @@ created: 2024-11-12 13:16:19 +0200
 Iedereen onderzoek het gegeven component (of meerdere componenten), en maak een presentatie die onderstaande vragen beantwoorden:
 
 {% include punten-csv.html data='onderdelen-van-een-computer' %} 
+{% include punten.html data='onderdelen-van-een-computer' %} 
