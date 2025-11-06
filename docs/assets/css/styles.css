@@ -142,6 +142,7 @@ body {
   color: var(--text);
   margin: 0;
   font-family: textFont;
+  font-weight: bold;
 }
 
 section {

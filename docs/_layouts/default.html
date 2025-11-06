@@ -32,11 +32,11 @@
         <!-- breadcrumbs: not on homepage -->
         {% unless page.url == '/' %}
         <nav class="breadcrumbs">
-          <a href="{{ site.baseurl }}/index">⌂</a>
+          <a href="{{ site.baseurl }}/index">Cursussen</a>
 
           <!-- only show link to section when not on a section page -->
           {% unless page.path contains '/index' %}
-          <span class="navDivider">/</span>
+          <span class="navDivider">/></span>
           {% assign current_path_parts = page.url | split: '/' %}
           <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
           {% assign sectionName = current_path_parts[2] %}
