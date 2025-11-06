@@ -92,14 +92,46 @@ document.addEventListener("DOMContentLoaded", function () {
     h1.setAttribute('data-aos', 'fade-right');
   });
 
+  // callout
   document.querySelectorAll('.callout').forEach(function(callout) {
     callout.setAttribute('data-aos', 'zoom-out');
+  });
+
+  // blockquote
+  document.querySelectorAll('blockquote p').forEach(function(bq) {
+    bq.setAttribute('data-aos', 'zoom-in');
   });
 
   // Initialize AOS AFTER adding attributes
   AOS.init({
     duration: 1000,
     once: true
+  });
+
+  /* ************************** */
+  /* HEADING ANCHOR LINKS       */
+  /* ************************** */
+
+  // Add anchor links to h1 and h2 tags
+  document.querySelectorAll('h1, h2').forEach(function(heading) {
+    if (!heading.id) { // Create an ID from the heading text if it doesn't have one
+      heading.id = heading.textContent
+        .trim()
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '') // Remove special characters
+        .replace(/\s+/g, '-')     // Replace spaces with hyphens
+        .replace(/--+/g, '-');    // Replace multiple hyphens with single
+    }
+    
+    // Create the link icon
+    var link = document.createElement('a');
+    link.href = '#' + heading.id;
+    link.className = 'heading-anchor';
+    link.innerHTML = '  ←'
+    link.title = 'Link to this section';
+    
+    // Add the link to the heading
+    heading.appendChild(link);
   });
 
 });
