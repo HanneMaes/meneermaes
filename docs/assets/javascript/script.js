@@ -82,4 +82,24 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.location.href.includes("/hidden/")) {
     document.querySelector(".breadcrumbs").style.display = "none";
   }
+
+  /* ***************** */
+  /* ANIMATE OS SCROLL */ 
+  /* ***************** */
+
+  // H1
+  document.querySelectorAll('h1').forEach(function(h1) {
+    h1.setAttribute('data-aos', 'fade-right');
+  });
+
+  document.querySelectorAll('.callout').forEach(function(callout) {
+    callout.setAttribute('data-aos', 'zoom-out');
+  });
+
+  // Initialize AOS AFTER adding attributes
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
 });
