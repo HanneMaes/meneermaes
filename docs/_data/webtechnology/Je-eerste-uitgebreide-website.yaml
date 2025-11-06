@@ -1,0 +1,20 @@
+title: Je Eerste Uitgebreide Website
+punten:
+  - desc: "Je hebt minstens 3 extra pagina’s"
+    max: 3
+  - desc: "Je startpagina heeft de correcte naam"
+    max: 2
+  - desc: "Al je pagina’s hebben de juiste structuur"
+    max: 3
+  - desc: "Je hebt een link naar een andere website"
+    max: 2
+  - desc: "Op elke pagina heb je minstens 1 link naar een ander deel van je pagina"
+    max: 2
+  - desc: "Elke pagina heeft een title & favicon"
+    max: 2
+  - desc: "Je hebt minsten 1 pagina’s met een ander favicon"
+    max: 2
+  - desc: "Je maakt gebruik van comments en tabs om je code duidelijker te maken"
+    max: 2
+  - desc: "Hoe uitgebreid is je website? Maak je gebruik van andere tags?"
+    max: 4

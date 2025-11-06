@@ -108,9 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
     once: true
   });
 
-  /* ************************** */
-  /* HEADING ANCHOR LINKS       */
-  /* ************************** */
+  /* ******************** */
+  /* HEADING ANCHOR LINKS */
+  /* ******************** */
 
   // Add anchor links to h1 and h2 tags
   document.querySelectorAll('h1, h2').forEach(function(heading) {
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var link = document.createElement('a');
     link.href = '#' + heading.id;
     link.className = 'heading-anchor';
-    link.innerHTML = '  ←'
+    link.innerHTML = '←'
     link.title = 'Link to this section';
     
     // Add the link to the heading
