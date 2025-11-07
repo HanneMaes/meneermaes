@@ -132,8 +132,8 @@ hr {
     )
     1; /* Gradient with black at the start and end */
   opacity: 0.3;
-  margin-top: calc(2 * var(--spacingBig));
-  margin-bottom: calc(2 * var(--spacingBig));
+  margin-top: var(--spacingBig);
+  margin-bottom: var(--spacingBig);
 }
 
 /* ********** */
