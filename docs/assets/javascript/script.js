@@ -18,6 +18,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  /* **************** */
+  /* SMOOTH SCROLLING */
+  /* **************** */
+  
+  // This css code: scroll-behavior: smooth; /* smooth scrolling for anchor links
+  // Only works for anchor links on the page, and I want them to also work when going to another page
+
+  window.addEventListener('load', function() { // Check if URL has a hash on page load
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  });
+  
   /* ***************** */
   /* TABLE OF CONTENTS */
   /* ***************** */

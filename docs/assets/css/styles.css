@@ -86,9 +86,9 @@ ol {
 /* BODY */
 /* **** */
 
-html {
-  scroll-behavior: smooth; /* smooth scrolling for anchor links */
-}
+/* html { */
+/*   scroll-behavior: smooth; /* smooth scrolling for anchor links */ */
+/* } */
 
 body {
   color: var(--text);
