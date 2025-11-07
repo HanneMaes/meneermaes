@@ -10,7 +10,7 @@
   --white: rgb(240, 240, 235);
 
   --textDark: rgba(0, 0, 0, 0.75);
-  --text: rgba(0, 0, 0, 0.6);
+  --text: rgba(0, 0, 0, 0.5);
   --textLight: rgba(0, 0, 0, 0.3);
 
   --colorGreen: rgb(0, 151, 106);
@@ -36,69 +36,7 @@
   src: url("fonts/legquinne/Legquinne-Regular.otf");
 }
 
-/* normal font */
-@font-face {
-  font-family: textFont;
-  src: url("fonts/tt_ramillas/TT\ Ramillas\ Trial\ Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: textFont;
-  src: url("fonts/tt_ramillas/TT\ Ramillas\ Trial\ Italic.ttf");
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: textFont;
-  src: url("fonts/tt_ramillas/TT\ Ramillas\ Trial\ Medium.ttf");
-  font-weight: medium;
-  font-style: normal;
-}
-@font-face {
-  font-family: textFont;
-  src: url("fonts/tt_ramillas/TT\ Ramillas\ Trial\ Medium\ Italic.ttf");
-  font-weight: medium;
-  font-style: italic;
-}
-@font-face {
-  font-family: textFont;
-  src: url("fonts/tt_ramillas/TT\ Ramillas\ Trial\ Light.ttf");
-  font-weight: light;
-  font-style: normal;
-}
-@font-face {
-  font-family: textFont;
-  src: url("fonts/tt_ramillas/TT\ Ramillas\ Trial\ Light\ Italic.ttf");
-  font-weight: light;
-  font-style: italic;
-}
-@font-face {
-  font-family: textFont;
-  src: url("fonts/tt_ramillas/TT\ Ramillas\ Trial\ Bold.ttf");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: textFont;
-  src: url("fonts/tt_ramillas/TT\ Ramillas\ Trial\ Bold\ Italic.ttf");
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: textFont;
-  src: url("fonts/tt_ramillas/TT\ Ramillas\ Trial\ Black.ttf");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: textFont;
-  src: url("fonts/tt_ramillas/TT\ Ramillas\ Trial\ Black\ Italic.ttf");
-  font-weight: 900;
-  font-style: italic;
-}
-
-/* code font */
+/* code fonts */
 @font-face {
   font-family: codeFont;
   src: url("fonts/CascadiaCode/CascadiaMono.woff2");
@@ -110,6 +48,16 @@
   src: url("fonts/CascadiaCode/CascadiaMonoItalic.woff2");
   font-weight: normal;
   font-style: italic;
+}
+
+/* paragraph fonts */
+@font-face {
+  font-family: paragraphText;
+  src: url("fonts/Bagnard.otf");
+}
+@font-face {
+  font-family: boldText;
+  src: url("fonts/BluuNext-Bold.otf");
 }
 
 /* ****************** */
@@ -141,13 +89,13 @@ ol {
 body {
   color: var(--text);
   margin: 0;
-  font-family: textFont;
+  font-family: paragraphText;
   font-weight: bold;
 }
 
 section {
   background-color: var(--white);
-  background-image: url("../images/blenderstudiopattern.svg");
+  /* background-image: url("../images/blenderstudiopattern.svg"); */
 
   display: flex;
   flex-direction: column;
@@ -233,6 +181,7 @@ h3 {
 }
 
 strong {
+  font-family: boldText;
   color: var(--textDark);
 }
 
@@ -243,7 +192,6 @@ em {
 blockquote {
   color: var(--medium);
   font-size: 1.7em;
-  font-style: italic;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-left: 0px;
