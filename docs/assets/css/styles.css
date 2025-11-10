@@ -170,6 +170,12 @@ h2 {
 h3 {
   margin-top: var(--spacingBig);
   font-size: 20px;
+  color: var(--textDark);
+}
+
+h4, h5, h6 {
+  margin-top: var(--spacingBig);
+  font-size: 20px;
 }
 
 .opdrachtHeader,
