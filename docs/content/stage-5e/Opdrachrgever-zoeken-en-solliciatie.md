@@ -1,7 +1,7 @@
 ---
 title: Opdrachrgever Zoeken En Solliciatie
 created: 2025-11-10 15:09:55 +0100
-last_modified: 2025-11-10 15:38:45 +0100
+last_modified: 2025-11-12 16:28:29 +0100
 ---
 
 Voor deze stage ga je zelf op zoek naar een externe opdrachtgever waarvoor je een website kunt bouwen.  
@@ -62,10 +62,17 @@ Automatisch gegenereerde of onpersoonlijke mails werken afschrikkend.
 
 # Opdracht: Solliciteren
 
+**Stap 1**
 1. Stel een sollicitatiebrief op
 2. Laat de brief controleren door de leerkracht
-3. Verwerk eventuele feedback
-4. Stuur je mail naar **minstens 3** mogelijke opdrachtgevers. Zet de **leerkracht in CC**.
+
+**Stap 2**
+1. Verwerk eventuele feedback
+2. Stuur je mail naar een mogelijk opdrachtgeven. Zet de **leerkracht in CC**.
+
+**Stap 3**
+1. Krijg je een **negatief antwoord** of heb je **na 1 week nog geen antwoord**.  
+  Stuur dan je mail naar **minstens 3 andere** mogelijke opdrachtgevers. Zet de **leerkracht in CC**.
 
 {% include callout.html type='Tip' content='
 Controleer voor het versturen van elke mail de namen van de ontvangers en hun organisatie.
