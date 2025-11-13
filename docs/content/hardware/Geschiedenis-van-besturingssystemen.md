@@ -1,6 +1,6 @@
 ---
 title: Geschiedenis Van Besturingssystemen
-last_modified: 2024-10-01 20:56:25 +0200
+last_modified: 2025-11-13 14:26:12 +0100
 created: 2024-09-19 15:18:44 +0200
 ---
 
@@ -63,4 +63,4 @@ Wat is het, waarom werd het opgericht, door wie en waarom is het momenteel zo be
 
 ## Puntenverdeling
 
-{% include punten-csv.html data='geschiedenis-van-besturingsystemen' %}
+{% include punten.html data='geschiedenis-van-besturingsystemen' %}

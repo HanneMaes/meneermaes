@@ -9,9 +9,9 @@
   --light-transparant: rgba(227, 185, 169, 0.5);
   --white: rgb(240, 240, 235);
 
-  --textDark: rgba(0, 0, 0, 0.75);
-  --text: rgba(0, 0, 0, 0.5);
-  --textLight: rgba(0, 0, 0, 0.3);
+  --textDark: rgba(0, 0, 0, 1);
+  --text: rgba(0, 0, 0, 0.4);
+  --textLight: rgba(0, 0, 0, 0.25);
 
   --colorGreen: rgb(0, 151, 106);
   --colorRed: #a30031;

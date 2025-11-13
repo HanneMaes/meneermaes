@@ -1,7 +1,7 @@
 ---
 title: Electron
 created: 2025-11-05 09:48:01 +0100
-last_modified: 2025-11-07 14:22:12 +0100
+last_modified: 2025-11-13 14:46:53 +0100
 ---
 
 # Wat is Electron?
@@ -64,14 +64,10 @@ Denk LEGO-dozen, maar oneindig veel, en je mag ze combineren hoe je wilt.
 - Geeft je toegang tot honderdduizenden kant-en-klare modules.
 - Het beheert je dependencies.
 
-# Opdracht 01: Tutorial
+# Opdracht: Electron App
 
-[Electrons Basics Tutorial](https://www.tutorialspoint.com/electron/index.htm)
-
-# Opdracht 02: Externe website
-
-Bouw een electron app van een **externe website**.
-
-# Opdracht 03: Lokale website
-
-Bouw een electron app van een **lokale website**.
+1. Volg de [Electrons Basics Tutorial](https://www.tutorialspoint.com/electron/index.htm) tot en met **Electron - Hello World**.
+2. Creeër een eigen app van een eigen website.
+3. Hervat de tutorial van **Electron - System Dialogs** tot en met **Electron - Webview**, en implementeer de technieken in je app.
+4. Bekijken **Electron - Defining Shortcuts** en geef je app shortcuts.
+5. Bekijk de onderdelen **Electron - Debugging** en **Electron - Packaging Apps** en package je app.

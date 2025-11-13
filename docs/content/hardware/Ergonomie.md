@@ -1,6 +1,6 @@
 ---
 title: Ergonomie
-last_modified: 2025-05-22 14:00:21 +0200
+last_modified: 2025-11-13 14:36:49 +0100
 created: 2025-05-08 09:25:52 +0200
 ---
 
@@ -156,4 +156,4 @@ Kies één van de onderstaande problemen en onderzoek dit grondig. Je presenteer
 
 ## Puntenverdeling
 
-{% include punten-csv.html data='beweging-aan-je-werkplek' %}
+{% include punten.html data='beweging-aan-je-werkplek' %}
