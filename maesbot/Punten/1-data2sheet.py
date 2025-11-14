@@ -3,15 +3,30 @@ import yaml  # For loading YAML configuration files
 import argparse  # For parsing command-line arguments
 import subprocess  # For running external commands (opening file manager)
 from odf.opendocument import OpenDocumentSpreadsheet  # Main ODF spreadsheet document
-from odf.style import Style, TableColumnProperties, TableCellProperties, ParagraphProperties  # For styling cells and columns
-from odf.table import Table, TableColumn, TableRow, TableCell  # For table structure elements
+from odf.style import (
+    Style,
+    TableColumnProperties,
+    TableCellProperties,
+    ParagraphProperties,
+)  # For styling cells and columns
+from odf.table import (
+    Table,
+    TableColumn,
+    TableRow,
+    TableCell,
+)  # For table structure elements
 from odf.text import P  # For paragraph text elements inside cells
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser()
-parser.add_argument('--input', required=True, help="Path to input YAML file")
-parser.add_argument('--output', required=True, help="Path to output directory")
-parser.add_argument('--students', nargs='+', required=True, help="List of student names (space-separated)")
+parser.add_argument("--input", required=True, help="Path to input YAML file")
+parser.add_argument("--output", required=True, help="Path to output directory")
+parser.add_argument(
+    "--students",
+    nargs="+",
+    required=True,
+    help="List of student names (space-separated)",
+)
 args = parser.parse_args()
 
 # Load YAML punten file
@@ -31,11 +46,12 @@ os.makedirs(args.output, exist_ok=True)
 
 # Extract data from YAML with defaults
 title = data.get("title", "punten")  # Get title or use "punten" as default
-punten = data.get("punten", [])      # Get list of assignments/points items
+punten = data.get("punten", [])  # Get list of assignments/points items
 
 # Create output folder structure: output_dir/basename/
 output_folder = os.path.join(args.output, basename)
 os.makedirs(output_folder, exist_ok=True)
+
 
 def create_spreadsheet(student_name, assignment_name):
     """
@@ -92,19 +108,30 @@ def create_spreadsheet(student_name, assignment_name):
 
     # Green background with left alignment (for total row description)
     green_left_align_style_name = "GreenLeftAlign"
-    green_left_align_style = Style(name=green_left_align_style_name, family="table-cell")
+    green_left_align_style = Style(
+        name=green_left_align_style_name, family="table-cell"
+    )
     green_left_align_style.addElement(TableCellProperties(backgroundcolor="#dde8cb"))
     green_left_align_style.addElement(ParagraphProperties(textalign="left"))
     doc.styles.addElement(green_left_align_style)
 
     # Green background with center alignment (for total row separator)
     green_center_align_style_name = "GreenCenterAlign"
-    green_center_align_style = Style(name=green_center_align_style_name, family="table-cell")
+    green_center_align_style = Style(
+        name=green_center_align_style_name, family="table-cell"
+    )
     green_center_align_style.addElement(TableCellProperties(backgroundcolor="#dde8cb"))
     green_center_align_style.addElement(ParagraphProperties(textalign="center"))
     doc.styles.addElement(green_center_align_style)
 
-    def make_cell(content, formula=None, value_type="string", value=None, bg_style=None, align_style=None):
+    def make_cell(
+        content,
+        formula=None,
+        value_type="string",
+        value=None,
+        bg_style=None,
+        align_style=None,
+    ):
         """
         Helper function to create table cells with optional formulas, values, and styles.
 
@@ -149,7 +176,7 @@ def create_spreadsheet(student_name, assignment_name):
     title_row = TableRow()
     for i in range(4):  # 4 columns total
         # Put combined title + student name in first column, leave others empty
-        content = f"{title} - {student_name}" if i == 0 else ""
+        content = f"{title}" if i == 0 else ""
         cell = TableCell()
         cell.setAttribute("stylename", grey_bg_style_name)
         p = P(text=content)
@@ -168,7 +195,14 @@ def create_spreadsheet(student_name, assignment_name):
         # Column 3: "/" separator (center-aligned)
         row.addElement(make_cell("/", align_style=center_align_style_name))
         # Column 4: Maximum points (left-aligned numeric)
-        row.addElement(make_cell(a["max"], value_type="float", value=a["max"], align_style=left_align_style_name))
+        row.addElement(
+            make_cell(
+                a["max"],
+                value_type="float",
+                value=a["max"],
+                align_style=left_align_style_name,
+            )
+        )
         table.addElement(row)
 
     # Create totals row with automatic sum formulas
@@ -210,10 +244,13 @@ def create_spreadsheet(student_name, assignment_name):
 
     # Create filename: student-assignment.ods
     safe_student_name = student_name.replace("/", "_")  # Make filename safe
-    output_file = os.path.join(output_folder, f"{safe_student_name} - {assignment_name}.ods")
+    output_file = os.path.join(
+        output_folder, f"{safe_student_name} - {assignment_name}.ods"
+    )
     doc.save(output_file)
 
     return output_file
+
 
 # Create spreadsheet for each student
 created_files = []
@@ -223,7 +260,9 @@ for student in args.students:
     print(f"\033[92m📗 Created: {os.path.basename(output_file)}\033[0m")
 
 print()
-print(f"✅ Successfully created {len(created_files)} spreadsheet(s) in: {output_folder}")
+print(
+    f"✅ Successfully created {len(created_files)} spreadsheet(s) in: {output_folder}"
+)
 
 # Automatically open the output folder in file manager
 try:
