@@ -138,19 +138,17 @@ document.addEventListener("DOMContentLoaded", function () {
   /* SEARCH */ 
   /* ****** */
 
- const searchInput = document.getElementById('search-input');
+  const searchInput = document.getElementById('search-input');
   const searchResults = document.getElementById('search-results');
   let pages = [];
 
-  // Fetch the search data
-  fetch('/search.json')
+  fetch('/search.json') // Fetch the search data
     .then(response => response.json())
     .then(data => {
       pages = data;
     });
 
-  // Search function
-  searchInput.addEventListener('input', function(e) {
+  searchInput.addEventListener('input', function(e) { // Search function
     const query = e.target.value.toLowerCase();
     
     if (query.length < 2) {

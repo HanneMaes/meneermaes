@@ -2,21 +2,11 @@
 layout: none
 ---
 [
-  {% for page in site.pages %
-  }
+  {% for page in site.pages %}
   {
-    "title": {
-      { page.title | jsonify
-      }
-    },
-    "url": {
-      { page.url | jsonify
-      }
-    }
-  }{% unless forloop.last %
-  },
-  {% endunless %
-  }
-  {% endfor %
-  }
+    "title": {{ page.title | jsonify }},
+    "url": {{ page.url | jsonify }}
+  }{% unless forloop.last %},
+  {% endunless %}
+  {% endfor %}
 ]
