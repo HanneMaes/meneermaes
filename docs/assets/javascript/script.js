@@ -134,4 +134,48 @@ document.addEventListener("DOMContentLoaded", function () {
     heading.appendChild(link);
   });
 
+  /* ****** */
+  /* SEARCH */ 
+  /* ****** */
+
+ const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+  let pages = [];
+
+  // Fetch the search data
+  fetch('/search.json')
+    .then(response => response.json())
+    .then(data => {
+      pages = data;
+    });
+
+  // Search function
+  searchInput.addEventListener('input', function(e) {
+    const query = e.target.value.toLowerCase();
+    
+    if (query.length < 2) {
+      searchResults.innerHTML = '';
+      return;
+    }
+
+    const results = pages.filter(page => 
+      page.title && page.title.toLowerCase().includes(query)
+    );
+
+    displayResults(results);
+  });
+
+  function displayResults(results) {
+    if (results.length === 0) {
+      searchResults.innerHTML = '<p>No results found</p>';
+      return;
+    }
+
+    const html = results.map(page => 
+      `<a href="${page.url}">${page.title}</a>`
+    ).join('');
+    
+    searchResults.innerHTML = html;
+  }
+
 });
