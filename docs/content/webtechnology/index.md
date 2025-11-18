@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified: 2025-11-05 09:49:23 +0100
+last_modified: 2025-11-18 21:55:59 +0100
 created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -97,6 +97,8 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 [Random story generator: Deel 2](Random-story-generator-deel-2)
 
 [Formulieren stylen](Formulieren-stylen)
+
+[LocalStorage](localStorage)
 
 [Project: Calculator](Project-Calculator)
 
