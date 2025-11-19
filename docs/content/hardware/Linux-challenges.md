@@ -5,14 +5,15 @@ created: 2024-11-28T13:37:48+01:00
 
 # Terminal aanpassen
 
-1. Leer hoe je het systeem kunt updaten en apps kan installeren via `apt`.
-2. Installeer `screenfetch` om systeem informatie weer te geven wanneer je de terminal opent.
-3. Zoek uit wat de functie van `.bashrc` is.
-4. Zoek uit hoe je tekstbestanden aan kan passen via `nano` of `vim`.
-5. Schrijf een script om een aangepaste begroeting en de huidige systeemdatum en -tijd weer te geven wanneer je de terminal opent.
-6. Gebruik een `alias` om het script makkelijker uit te voeren.
-7. Schrijf een "fortune cookie" script met willekeurige citaten of grappen en voeg dit toe aan je `.bashrc`.
-8. Gebruik `cowsay` of `figlet` in je "fortune cookie" script.
+2. Leer hoe je het systeem kunt updaten en apps kan installeren via `apt`.
+4. Installeer `screenfetch` om systeem informatie weer te geven wanneer je de terminal opent.
+6. Zoek uit wat de functie van `.bashrc` is.
+8. Zoek uit hoe je tekstbestanden aan kan passen via `nano` of `vim`.
+11. Zoek uit hoe je bestanden kan openen met hun **default app**.
+13. Schrijf een script om een aangepaste begroeting en de huidige systeemdatum en -tijd weer te geven wanneer je de terminal opent.
+13. Gebruik een `alias` om het script makkelijker uit te voeren.
+15. Schrijf een "fortune cookie" script met willekeurige citaten of grappen en voeg dit toe aan je `.bashrc`.
+17. Gebruik `cowsay` of `figlet` in je "fortune cookie" script.
 
 # Je eigen Linux server 
 
@@ -38,7 +39,7 @@ created: 2024-11-28T13:37:48+01:00
 2. Leer hoe je een eenvoudige file-sharing server start met `python3 -m http.server 8000`.
 3. Leer hoe je een lokale FTP-server opzet met `vsftpd` of `python3 -m pyftpdlib`.
 
-## Advances Servers
+## Advanced Servers
 
 1. Zet je eigen Nextcloud (Google Drive alternatief) server op.
 2. Zet je eigen Bitwarden password manager server op.
