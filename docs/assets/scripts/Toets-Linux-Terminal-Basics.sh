@@ -6,7 +6,7 @@ mkdir -p bash-toets/docs/extra
 mkdir -p bash-toets/projecten/alpha/data/verborgen
 mkdir -p bash-toets/projecten/alpha/scripts
 mkdir -p bash-toets/projecten/beta/analyse/debug-info
-mkdir -p bash-toets/scripts
+mkdir -p bash-toets/new-scripts
 
 # Config
 echo "TOKEN=XYZ123" >bash-toets/.config/hidden/.token
@@ -37,7 +37,7 @@ echo "Probleem A details" >"bash-toets/projecten/beta/analyse/debug-info/problee
 echo "Analyse B final" >"bash-toets/projecten/beta/analyse/debug-info/analyse B (final).txt"
 
 # Scripts root
-echo -e "#!/bin/bash\necho 'Open mij script uitgevoerd!'" >"bash-toets/scripts/open mij.sh"
+echo -e "#!/bin/bash\necho 'Open mij script uitgevoerd!'" >"bash-toets/new-scripts/open mij.sh"
 
 # FINISHED
 echo
