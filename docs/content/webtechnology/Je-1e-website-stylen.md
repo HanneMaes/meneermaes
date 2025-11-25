@@ -1,6 +1,6 @@
 ---
 title: Je 1e Website Stylen
-last_modified: 2024-10-10 12:16:11 +0200
+last_modified: 2025-11-25 18:44:08 +0100
 created: 2024-10-10 11:55:25 +0200
 ---
 
@@ -13,7 +13,7 @@ created: 2024-10-10 11:55:25 +0200
 3. Nadien geef je **1 pagina een ander ontwerp**, door gebruikt te maken van een **ander CSS-bestand**.
 4. Ga **zelfstandig** opzoek naar **nieuwe CSS-attributen** om je website zo mooi mogelijk te maken.
 
-{% include punten-csv.html data='Je-eerste-website-stylen' %}
+{% include punten.html data='Je-eerste-website-stylen' %}
 
 # Uitdagingen
 

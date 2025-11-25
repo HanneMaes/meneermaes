@@ -1,0 +1,19 @@
+title: Je Eerste Website Stylen
+punten:
+  - desc: "Elke pagina heeft CSS-styling"
+    max: 3
+  - desc: "Je CSS-bestand heeft de correcte naam"
+    max: 1
+  - desc: "Je geeft minstens 1 pagina een ander design door gebruik te maken van een ander CSS-bestand"
+    max: 2
+  - desc: "Je CSS heeft een goede structuur"
+    max: 3
+  - desc: "Je hebt enkel CSS-code in het .CSS-bestand"
+    max: 1
+  - desc: "Hoe uitgebreid is je styling"
+    max: 5
+doelen:
+  - nr: "13.BV3_13.04.BV3_13.04.01"
+    desc: "De leerlingen bepalen zelfstandig een geschikte zoekstrategie."
+  - nr: "13.BV3_13.04.BV3_13.04.03"
+    desc: "De leerlingen verwerken zelfstandig de informatie uit de bronnen i.f.v. een vooropgesteld doel."
