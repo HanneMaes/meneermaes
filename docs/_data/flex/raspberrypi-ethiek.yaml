@@ -1,10 +1,31 @@
 title: Raspberry Pi Ethiek
+punten:
+  - desc: "Raspberry Pi Distro’s: Is deze distro speciaal gemaakt voor de Raspberry Pi?"
+    max: 1.5
+  - desc: "Raspberry Pi Distro’s: Wat is het doel/doelpubloek van deze distro?"
+    max: 1.5
+  - desc: "Raspberry Pi Distro’s: Wat zijn de voor- of nadelen."
+    max: 1.5
+  - desc: "Stelling: Argument voor"
+    max: 1
+  - desc: "Stelling: Argument tegen"
+    max: 1
+  - desc: "Stelling: Eigen mening"
+    max: 1.5
+  - desc: "De Ethiek en Raspberry Pi: De Raspberry Pi is goedkoop en open"
+    max: 1
+  - desc: "De Ethiek en Raspberry Pi: Wie profiteert er het meeste van zulke open hardware?"
+    max: 1
+  - desc: "De Ethiek en Raspberry Pi: Zijn er risico’s als iedereen alles kan bekijken?"
+    max: 1
+  - desc: "De Ethiek en Raspberry Pi: Hoe draagt de Pi bij aan duurzaamheid?"
+    max: 1
 doelen:
-   - nr: "BV3_04.02"
-     desc: "De leerlingen respecteren ethische, sociale en legale regels bij het gebruiken van digitale technologie"
-   - nr: "BV3_13.03"
-     desc: "De leerlingen gebruiken school- en vaktaal."
-   - nr: "BV3_13.04.02"
-     desc: "De leerlingen beoordelen onder begeleiding op kritische wijze digitale en niet-digitale bronnen op bruikbaarheid op basis van aangereikte criteria."
-   - nr: "BV3_13.04.03"
-     desc: "De leerlingen verwerken onder begeleiding de informatie uit de aangereikte bronnen in functie van een vooropgesteld doel."
+  - nr: "BV3_04.02"
+    desc: "De leerlingen respecteren ethische, sociale en legale regels bij het gebruiken van digitale technologie"
+  - nr: "BV3_13.03"
+    desc: "De leerlingen gebruiken school- en vaktaal."
+  - nr: "BV3_13.04.02"
+    desc: "De leerlingen beoordelen onder begeleiding op kritische wijze digitale en niet-digitale bronnen op bruikbaarheid op basis van aangereikte criteria."
+  - nr: "BV3_13.04.03"
+    desc: "De leerlingen verwerken onder begeleiding de informatie uit de aangereikte bronnen in functie van een vooropgesteld doel."
