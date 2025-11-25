@@ -1,6 +1,6 @@
 ---
 title: Bash
-last_modified: 2025-11-21 14:03:23 +0100
+last_modified: 2025-11-25 09:22:28 +0100
 created: Thu, oct 21, 2025  09:07:23 PM
 ---
 
@@ -40,6 +40,7 @@ created: Thu, oct 21, 2025  09:07:23 PM
 | Coderen             | Afkoring | Functie                                            |
 |---------------------|----------|----------------------------------------------------|
 | `code bestand`      |          | Bestand openen in **VS Code**                      |
+| `codium bestand`    |          | Bestand openen in **VS Codium**                    |
 | `thonny bestand`    |          | Bestand openen in de **Raspberry Pi Code Editor**  |
 | `nano bestand`      |          | Bestand openen in de **Nano Terminal Code Editor** |
 | `python bestand.py` |          | Python code uitvoeren                              |
