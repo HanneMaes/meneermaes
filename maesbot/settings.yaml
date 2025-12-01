@@ -1,0 +1,5 @@
+paths:
+  private_settings: "/home/hanne/Documents/Nextcloud/School/Automatisatie/maesbot-private-data/private-settings.yaml"
+  # punten
+  punten_input_dir_website: "/home/hanne/Documents/meneermaes/docs/_data/"
+  punten_ouput_dir: "/home/hanne/Documents/Nextcloud/School/Automatie/maesbot-private-data/Punten/Generated Output/"

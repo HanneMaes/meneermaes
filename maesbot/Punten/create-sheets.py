@@ -278,4 +278,4 @@ except FileNotFoundError:
 ######################################################################################################
 # GUIDE
 
-# $ python3 1-data2sheet.py --input "/home/hanne/Documents/meneermaes/docs/_data/hardware/servers.yaml" --output "/home/hanne/Documents/Nextcloud/School/Automatie/maesbot-private-data/Punten/Generated Output/" --students "Jan Janssen" "Marie Peeters" "Tom De Vries" "Lisa Van Damme"
+# $ python3 create-sheets.py --input "/home/hanne/Documents/meneermaes/docs/_data/hardware/servers.yaml" --output "/home/hanne/Documents/Nextcloud/School/Automatie/maesbot-private-data/Punten/Generated Output/" --students "Jan Janssen" "Marie Peeters" "Tom De Vries" "Lisa Van Damme"
