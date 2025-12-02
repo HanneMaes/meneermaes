@@ -1,5 +1,12 @@
+# These paths are INSIDE the Docker container.
+# Docker Compose maps your host directories to these container paths.
+#
+# Host Path (Zorin/Asahi)              → Container Path
+#
+# /home/hanne/.../docs/_data/          → /data/input/
+# /home/hanne/.../maesbot-private-data → /data/private/
+
 paths:
-  private_settings: "/home/hanne/Documents/Nextcloud/School/Automatisatie/maesbot-private-data/private-settings.yaml"
-  # punten
-  punten_input_dir_website: "/home/hanne/Documents/meneermaes/docs/_data/"
-  punten_ouput_dir: "/home/hanne/Documents/Nextcloud/School/Automatie/maesbot-private-data/Punten/Generated Output/"
+  private_settings: "/data/private/private-settings.yaml"
+  punten_input_dir_website: "/data/input/"
+  punten_output_dir: "/data/private/Punten/Generated Output/"

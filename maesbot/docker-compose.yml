@@ -1,0 +1,39 @@
+# This file defines how Docker should run your maesbot container.
+# It replaces long 'docker run' commands with simple configuration.
+#
+# Usage:
+#   docker compose build             # Build the image
+#   docker compose run --rm maesbot  # Run the app
+#   docker compose up                # Run in foreground
+
+services:
+  maesbot: # Service name: "maesbot"
+    build:
+      context: . # Build from current directory
+      dockerfile: Dockerfile # Use this Dockerfile
+
+    image: maesbot:latest # Tag the built image with this name
+    container_name: maesbot # Name the running container
+
+    # Interactive mode (REQUIRED for InquirerPy fuzzy picker!)
+    stdin_open: true # Keep STDIN open (-i flag)
+    tty: true # Allocate a pseudo-TTY (-t flag)
+
+    # Volume mounts - Link host directories to container
+    # Format: "host_path:container_path:mode"
+    # - host_path: Path on your Zorin/Asahi machine
+    # - container_path: Path inside the container
+    # - mode: ro (read-only) or rw (read-write, default)
+    volumes:
+      - .:/app # Project code (your Python scripts) - read-write so you can edit
+      - /home/hanne/Documents/meneermaes/docs/_data:/data/input:ro # Input data directory - read-only for safety
+      - /home/hanne/Documents/Nextcloud/School/Automatisatie/maesbot-private-data:/data/private # Private data directory - read-write for generating outputs
+
+    # Working directory inside container
+    working_dir: /app
+
+    # Default command when you run 'docker compose up'
+    command: python main.py
+
+    # Restart policy
+    restart: "no" # "no" means don't restart automatically (good for interactive apps)

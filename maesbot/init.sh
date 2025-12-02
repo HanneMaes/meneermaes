@@ -1,59 +1,65 @@
 #!/bin/bash
-# ============================================================================
-# start.sh - Smart build and run script
-# ============================================================================
+# init.sh - Smart Docker Compose wrapper
 # This script:
-# 1. Checks if Docker is running
-# 2. Checks if image needs rebuilding (Dockerfile or requirements.txt changed)
-# 3. Rebuilds only if necessary
-# 4. Runs your application
-# ============================================================================
+# 1. Checks if Docker is running (starts it if needed)
+# 2. Checks if docker-compose.yml exists
+# 3. Builds image if needed
+# 4. Runs your application using Docker Compose
 
 set -e # Exit on any error
 
-IMAGE_NAME="maesbot:latest"
-BUILD_CONTEXT="."
-
-# ============================================================================
 # Colors for output
-# ============================================================================
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 RED='\033[0;31m'
 BLUE='\033[0;34m'
+CYAN='\033[0;36m'
+GREY='\033[0;37m'
+DARK_GREY='\033[1;30m'
 NC='\033[0m' # No Color
 
-# ============================================================================
+# Print everything in grey
+echo -e "${DARK_GREY}"
+
+# Check if docker-compose.yml exists
+if [ ! -f "docker-compose.yml" ]; then
+  echo -e "${RED}✗ Error: docker-compose.yml not found!${DARK_GREY}"
+  echo ""
+  echo "Please create docker-compose.yml in the current directory."
+  exit 1
+fi
+
 # Check if Docker is running, start if needed
-# ============================================================================
 echo "Checking Docker..."
 
 # Check if we need sudo for docker commands
 DOCKER_CMD="docker"
+COMPOSE_CMD="docker compose"
+
 if ! docker info >/dev/null 2>&1; then
   # Try with sudo
   if sudo docker info >/dev/null 2>&1; then
     DOCKER_CMD="sudo docker"
-    echo " Using sudo for Docker (run 'newgrp docker' or log out/in to fix)"
+    COMPOSE_CMD="sudo docker compose"
+    echo "Using sudo for Docker (run 'newgrp docker' or log out/in to fix)"
   fi
 fi
 
 # Now check if Docker is actually running
 if ! $DOCKER_CMD info >/dev/null 2>&1; then
-  echo " Docker daemon is not running"
+  echo "Docker daemon is not running"
   echo "Attempting to start Docker..."
   echo ""
 
   # Try to start Docker with systemctl
   if sudo systemctl start docker 2>/dev/null; then
-    # Wait a moment for Docker to fully start
-    sleep 3
+    sleep 3 # Wait for Docker to fully start
 
     # Check again
     if $DOCKER_CMD info >/dev/null 2>&1; then
       echo "Docker started successfully"
     else
-      echo -e "${RED}❌ Docker service started but daemon not responding${NC}"
+      echo -e "${RED}❌ Docker service started but daemon not responding${DARK_GREY}"
       echo ""
       echo "Troubleshooting steps:"
       echo "  1. Check status: sudo systemctl status docker"
@@ -62,8 +68,7 @@ if ! $DOCKER_CMD info >/dev/null 2>&1; then
       exit 1
     fi
   else
-    # systemctl failed, try alternative methods
-    echo "systemctl failed, trying alternative methods..."
+    echo "systemctl failed, trying alternative methods..." # systemctl failed, try alternative methods
 
     # Try with snap
     if command -v snap >/dev/null 2>&1; then
@@ -77,7 +82,7 @@ if ! $DOCKER_CMD info >/dev/null 2>&1; then
 
     # Final check
     if ! $DOCKER_CMD info >/dev/null 2>&1; then
-      echo -e "${RED}❌ Failed to start Docker${NC}"
+      echo -e "${RED}❌ Failed to start Docker${DARK_GREY}"
       echo ""
       echo "Please diagnose and start Docker manually:"
       echo "  sudo systemctl status docker    # Check service status"
@@ -94,33 +99,35 @@ else
 fi
 
 # ============================================================================
-# Check if rebuild is needed
+# Check if we need to build
 # ============================================================================
+echo "Checking if build is needed..."
+
 NEEDS_BUILD=false
 
 # Check if image exists
-if ! $DOCKER_CMD image inspect "$IMAGE_NAME" >/dev/null 2>&1; then
-  echo "Image doesn't exist, building..."
+if ! $DOCKER_CMD image inspect maesbot:latest >/dev/null 2>&1; then
+  echo "Image doesn't exist"
   NEEDS_BUILD=true
 else
   # Get image creation time
-  IMAGE_TIME=$($DOCKER_CMD image inspect -f '{{.Created}}' "$IMAGE_NAME")
+  IMAGE_TIME=$($DOCKER_CMD image inspect -f '{{.Created}}' maesbot:latest)
   IMAGE_TIMESTAMP=$(date -d "$IMAGE_TIME" +%s 2>/dev/null || echo 0)
 
-  # Check if Dockerfile is newer than image
+  # Check if Dockerfile changed
   if [ -f "Dockerfile" ]; then
     DOCKERFILE_TIMESTAMP=$(stat -c %Y Dockerfile 2>/dev/null || stat -f %m Dockerfile 2>/dev/null || echo 0)
     if [ "$DOCKERFILE_TIMESTAMP" -gt "$IMAGE_TIMESTAMP" ]; then
-      echo "Dockerfile changed, rebuilding..."
+      echo "Dockerfile changed"
       NEEDS_BUILD=true
     fi
   fi
 
-  # Check if requirements.txt is newer than image
+  # Check if requirements.txt changed
   if [ -f "requirements.txt" ]; then
     REQ_TIMESTAMP=$(stat -c %Y requirements.txt 2>/dev/null || stat -f %m requirements.txt 2>/dev/null || echo 0)
     if [ "$REQ_TIMESTAMP" -gt "$IMAGE_TIMESTAMP" ]; then
-      echo "  requirements.txt changed, rebuilding..."
+      echo "requirements.txt changed"
       NEEDS_BUILD=true
     fi
   fi
@@ -136,29 +143,17 @@ fi
 if [ "$NEEDS_BUILD" = true ]; then
   echo ""
   echo "Building image..."
-  $DOCKER_CMD build -t "$IMAGE_NAME" "$BUILD_CONTEXT"
+  $COMPOSE_CMD build
   echo "Build complete"
 fi
 
 # ============================================================================
 # Run the application
 # ============================================================================
-echo "Starting application..."
+echo "Starting MAESBOT"
 echo ""
 
-# Run with arguments if provided, otherwise run main.py
-if [ $# -eq 0 ]; then
-  # Default: run main.py
-  $DOCKER_CMD run -it --rm \
-    -v "$(pwd):/app" \
-    -w /app \
-    "$IMAGE_NAME" \
-    python main.py
-else
-  # Run with custom arguments
-  $DOCKER_CMD run -it --rm \
-    -v "$(pwd):/app" \
-    -w /app \
-    "$IMAGE_NAME" \
-    "$@"
-fi
+# Use docker compose to run
+# --rm: Remove container after exit
+# maesbot: Service name from docker-compose.yml
+$COMPOSE_CMD run --rm maesbot
