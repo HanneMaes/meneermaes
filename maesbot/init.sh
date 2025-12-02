@@ -118,7 +118,7 @@ else
   if [ -f "Dockerfile" ]; then
     DOCKERFILE_TIMESTAMP=$(stat -c %Y Dockerfile 2>/dev/null || stat -f %m Dockerfile 2>/dev/null || echo 0)
     if [ "$DOCKERFILE_TIMESTAMP" -gt "$IMAGE_TIMESTAMP" ]; then
-      echo "Dockerfile changed"
+      echo -e "${NC}Dockerfile changed${DARK_GREY}"
       NEEDS_BUILD=true
     fi
   fi
@@ -127,7 +127,7 @@ else
   if [ -f "requirements.txt" ]; then
     REQ_TIMESTAMP=$(stat -c %Y requirements.txt 2>/dev/null || stat -f %m requirements.txt 2>/dev/null || echo 0)
     if [ "$REQ_TIMESTAMP" -gt "$IMAGE_TIMESTAMP" ]; then
-      echo "requirements.txt changed"
+      echo -e "${NC}requirements.txt changed${DARK_GREY}"
       NEEDS_BUILD=true
     fi
   fi
