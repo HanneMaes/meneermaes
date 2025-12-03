@@ -9,14 +9,20 @@
 set -e # Exit on any error
 
 # Colors for output
+NC='\033[0m' # No Color
+CYAN='\033[0;36m'
+BRIGHT_CYAN='\033[1;36m'
 GREEN='\033[0;32m'
+BRIGHT_GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
 RED='\033[0;31m'
 BLUE='\033[0;34m'
-CYAN='\033[0;36m'
+MAGENTA='\033[0;35m'
+DARK_GREY='\033[0;90m'
 GREY='\033[0;37m'
-DARK_GREY='\033[1;30m'
-NC='\033[0m' # No Color
+BOLD='\033[1m'
+UNDERLINE='\033[4m'
+ITALIC='\033[3m'
 
 # Print everything in grey
 echo -e "${DARK_GREY}"
@@ -142,15 +148,15 @@ fi
 # ============================================================================
 if [ "$NEEDS_BUILD" = true ]; then
   echo ""
-  echo "Building image..."
+  echo -e "${NC}Building image..."
   $COMPOSE_CMD build
-  echo "Build complete"
+  echo -e "${NC}Build complete"
 fi
 
 # ============================================================================
 # Run the application
 # ============================================================================
-echo "Starting MAESBOT"
+echo -e "${DARK_GREY}Starting MAESBOT"
 echo ""
 
 # Use docker compose to run

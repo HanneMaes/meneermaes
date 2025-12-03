@@ -1,2 +1,26 @@
+# This file lists all Python packages your project needs
+# Docker installs these during the image build process
+#
+# Format: package_name==version (pinned version)
+#     or: package_name>=version (minimum version)
+#     or: package_name (latest version)
+#
+# Best practice: Pin major versions to avoid breaking changes
+
+# InquirerPy - Interactive fuzzy finder for terminal
 InquirerPy>=0.3.4
+
+# prompt-toolkit - Required by InquirerPy (may be auto-installed)
+# InquirerPy is built on top of prompt-toolkit
+prompt-toolkit>=3.0.0
+
+# pfzy - Fuzzy matching algorithm (optional but recommended)
+# Makes fuzzy search faster and more accurate
+pfzy>=0.3.4
+
+# PyYAML - For reading YAML files
 PyYAML>=6.0
+
+# odfpy - For creating OpenDocument Spreadsheet (.ods) files
+# Required by Punten/create-sheets.py
+odfpy>=1.4.1

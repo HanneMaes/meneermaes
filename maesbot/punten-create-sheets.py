@@ -16,6 +16,7 @@ from odf.table import (
     TableCell,
 )  # For table structure elements
 from odf.text import P  # For paragraph text elements inside cells
+from lib.colors import *  # Import the colors from colors.py
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser()
@@ -33,8 +34,7 @@ args = parser.parse_args()
 with open(args.input) as f:
     data = yaml.safe_load(f)
 
-print()
-print(f"Loaded input YAML from {args.input}")
+print(f"{DARK_GREY}Loaded input YAML from {args.input}")
 print(f"Creating sheets for {len(args.students)} students: {', '.join(args.students)}")
 print()
 

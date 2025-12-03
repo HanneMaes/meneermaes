@@ -4,7 +4,8 @@ import subprocess
 import sys
 import yaml
 from pathlib import Path
-from fuzzypicker import pick_yaml_file, pick_from_list
+from lib.fuzzypicker import pick_yaml_file, pick_from_list
+from lib.colors import *  # Import the colors from colors.py
 
 #############################################################################
 # Colors for output
@@ -114,7 +115,7 @@ def run_script(script_path: str, args: list = None) -> bool:
     """Run Python script with optional arguments"""
     script = Path(script_path)
     if not script.exists():
-        print(f"{RED}✗ Error: Script not found: {script}{NC}")
+        print(f"{RED}✗ Script not found: {script}{NC}")
         return False
 
     # Build command
@@ -122,20 +123,57 @@ def run_script(script_path: str, args: list = None) -> bool:
     if args:
         cmd.extend(args)
 
-    print(f"{YELLOW}$ {GREEN}{BOLD}{script.name}{NC}\n")
-
+    print()
+    print(f"{RED}       ●     ●")
+    print(f"{roboColor}       |     |")
+    print(f"{roboColor}      ╭───────╮")
+    print(f"{roboColor}      | {RED}|   |{roboColor} | {script.name}")
+    print(f"────────────────────────────────────────────────────────────────{NC}")
+    print()
     try:
         result = subprocess.run(cmd, check=True, text=True)
-        print(f"{BRIGHT_GREEN}✓ Script completed successfully{NC}\n")
+        print()
+        print(
+            f"{roboColor}────────────────────────────────────────────────────────────────{NC}"
+        )
+        print(
+            f"{roboColor}      |  {BLUE}...{roboColor}  | {YELLOW}{GREEN}{script.name} completed successfully{NC}"
+        )
+        print(f"{roboColor}      ╰───────╯")
+        print(f"{roboColor}         > <{NC}")
         return True
     except subprocess.CalledProcessError as e:
-        print(f"{RED}✗ Script failed with exit code {e.returncode}{NC}\n")
+        print()
+        print(
+            f"{roboColor}────────────────────────────────────────────────────────────────{NC}"
+        )
+        print(
+            f"{roboColor}      |  {BLUE}...{roboColor}  | {RED}{script.name} failed with exit code {e.returncode}{NC}"
+        )
+        print(f"{roboColor}      ╰───────╯")
+        print(f"{roboColor}         > <{NC}")
         return False
     except KeyboardInterrupt:
-        print(f"\n{YELLOW}Script interrupted by user{NC}\n")
+        print()
+        print(
+            f"{roboColor}─────────────────────────────────────────────────────────────────{NC}"
+        )
+        print(
+            f"{roboColor}      |  {BLUE}...{roboColor}  | {YELLOW}{script.name} interrupted by user{NC}"
+        )
+        print(f"{roboColor}      ╰───────╯")
+        print(f"{roboColor}         > <{NC}")
         return False
     except Exception as e:
-        print(f"{RED}✗ Error running script: {e}{NC}\n")
+        print()
+        print(
+            f"{roboColor}─────────────────────────────────────────────────────────────────{NC}"
+        )
+        print(
+            f"{roboColor}      |  {BLUE}...{roboColor}  | {RED}Error running {script.name}: {e}{NC}"
+        )
+        print(f"{roboColor}      ╰───────╯")
+        print(f"{roboColor}         > <{NC}")
         return False
 
 
@@ -192,7 +230,7 @@ if selected:
 
         # Run script
         run_script(
-            "Punten/create-sheets.py",
+            "punten-create-sheets.py",
             ["--input", input_file, "--output", output_dir, "--students", students],
         )
 
