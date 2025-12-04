@@ -229,7 +229,7 @@ if selected:
             sys.exit(1)
 
         # Run script
-        run_script(
+        success = run_script(
             "punten-create-sheets.py",
             ["--input", input_file, "--output", output_dir, "--students", students],
         )
@@ -240,4 +240,4 @@ if selected:
     elif selected == "Punten: Sheets to PDF":
         run_script("Punten/sheets-to-pdf.py")
 else:
-    print(f"\n{YELLOW}⚠️  No action selected{NC}\n")
+    print(f"\n{YELLOW}No action selected{NC}\n")

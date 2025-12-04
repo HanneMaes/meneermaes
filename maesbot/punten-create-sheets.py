@@ -17,6 +17,7 @@ from odf.table import (
 )  # For table structure elements
 from odf.text import P  # For paragraph text elements inside cells
 from lib.colors import *  # Import the colors from colors.py
+from pathlib import Path
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser()
@@ -34,8 +35,10 @@ args = parser.parse_args()
 with open(args.input) as f:
     data = yaml.safe_load(f)
 
-print(f"{DARK_GREY}Loaded input YAML from {args.input}")
-print(f"Creating sheets for {len(args.students)} students: {', '.join(args.students)}")
+print(f"{DARK_GREY}Loaded input YAML from {args.input}{NC}")
+print(
+    f"{DARK_GREY}Creating sheets for {len(args.students)} students: {', '.join(args.students)}{NC}"
+)
 print()
 
 # Extract base filename (without extension) for naming output files/folders
@@ -257,23 +260,46 @@ created_files = []
 for student in args.students:
     output_file = create_spreadsheet(student, basename)
     created_files.append(output_file)
-    print(f"\033[92m📗 Created: {os.path.basename(output_file)}\033[0m")
+    print(f"{BLUE}📊 Created: {os.path.basename(output_file)}{DARK_GREY}")
 
 print()
 print(
-    f"✅ Successfully created {len(created_files)} spreadsheet(s) in: {output_folder}"
+    f"{GREEN}Successfully created {len(created_files)} spreadsheet(s) in: {output_folder}{NC}"
 )
+print()
 
 # Automatically open the output folder in file manager
-try:
-    subprocess.run(["xdg-open", output_folder], check=True)
-except subprocess.CalledProcessError:
-    # Command failed (non-zero exit code)
-    print(f"❌ Could not open folder: {output_folder}")
-except FileNotFoundError:
-    # xdg-open command not found on system
-    print("❌ xdg-open not found. Please open the folder manually:")
-    print(output_folder)
+# try:
+#     subprocess.run(["xdg-open", output_folder], check=True)
+# except subprocess.CalledProcessError:
+#     # Command failed (non-zero exit code)
+#     print(f"{RED}✗ Could not open folder: {output_folder}{NC}")
+# except FileNotFoundError:
+#     # xdg-open command not found on system
+#     print(
+#         f"{RED}✗ xdg-open not found. Please open the folder manually: {output_folder}{NC}"
+#     )
+
+
+# Automatically open the output folder
+def save_folder_to_open(folder_path):
+    """Save folder path to be opened by host after container exits"""
+    in_docker = Path("/.dockerenv").exists()
+
+    if in_docker:
+        # In Docker - save the container path (init.sh will convert it)
+        with open("/app/.open_folder", "w") as f:
+            f.write(folder_path)  # Save as-is, don't convert
+        print(f"{DARK_GREY}Folder will open automatically after script completes")
+    else:
+        # Running natively - open directly
+        try:
+            subprocess.run(["xdg-open", folder_path], check=True)
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            print(f"{DARK_GREY}Path: {folder_path}")
+
+
+save_folder_to_open(output_folder)
 
 ######################################################################################################
 # GUIDE

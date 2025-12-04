@@ -104,9 +104,10 @@ else
   echo "Docker is running"
 fi
 
-# ============================================================================
+# ###########################################################################
 # Check if we need to build
-# ============================================================================
+# ###########################################################################
+
 echo "Checking if build is needed..."
 
 NEEDS_BUILD=false
@@ -143,9 +144,10 @@ else
   fi
 fi
 
-# ============================================================================
+# ###########################################################################
 # Build if needed
-# ============================================================================
+# ###########################################################################
+
 if [ "$NEEDS_BUILD" = true ]; then
   echo ""
   echo -e "${NC}Building image..."
@@ -153,9 +155,10 @@ if [ "$NEEDS_BUILD" = true ]; then
   echo -e "${NC}Build complete"
 fi
 
-# ============================================================================
+# ###########################################################################
 # Run the application
-# ============================================================================
+# ###########################################################################
+
 echo -e "${DARK_GREY}Starting MAESBOT"
 echo ""
 
@@ -163,3 +166,32 @@ echo ""
 # --rm: Remove container after exit
 # maesbot: Service name from docker-compose.yml
 $COMPOSE_CMD run --rm maesbot
+
+# ###########################################################################
+# Check if we should open a folder (post-execution)
+# ###########################################################################
+OPEN_FOLDER_FILE=".open_folder"
+
+if [ -f "$OPEN_FOLDER_FILE" ]; then
+  FOLDER_PATH=$(cat "$OPEN_FOLDER_FILE")
+  rm -f "$OPEN_FOLDER_FILE" # Force delete without prompt
+
+  # Convert container path to host path
+  FOLDER_PATH="${FOLDER_PATH/\/data\/input\//\/home\/hanne\/Documents\/meneermaes\/docs\/_data\/}"
+  FOLDER_PATH="${FOLDER_PATH/\/data\/private\//\/home\/hanne\/Documents\/Nextcloud\/School\/Automatisatie\/maesbot-private-data\/}"
+
+  echo ""
+  echo -e "${DARK_GREY}Opening: ${FOLDER_PATH}${NC}"
+
+  # Try to open the folder
+  if command -v xdg-open >/dev/null 2>&1; then
+    xdg-open "$FOLDER_PATH" 2>/dev/null &
+  elif command -v open >/dev/null 2>&1; then
+    # macOS
+    open "$FOLDER_PATH" 2>/dev/null &
+  else
+    echo -e "${YELLOW}Could not auto-open folder${NC}"
+    echo -e "${CYAN}Path: ${FOLDER_PATH}${NC}"
+  fi
+  echo ""
+fi
