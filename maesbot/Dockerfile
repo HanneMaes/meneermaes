@@ -11,6 +11,13 @@ ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PIP_NO_CACHE_DIR=1
 # Similar to 'cd /app' in bash
 WORKDIR /app
 
+# Let docker create files with more then read only permissions (by default files created by docker have read only permissions)
+# Create non-root user matching your host UID/GID
+ARG HOST_UID=1000
+ARG HOST_GID=1000
+RUN groupadd -g $HOST_GID appuser && \
+  useradd -u $HOST_UID -g $HOST_GID -m appuser
+
 # First, copy requirements.txt separately (Docker layer caching optimization)
 # If requirements.txt doesn't change, Docker reuses this layer and doesn't
 # reinstall packages on every build
@@ -24,6 +31,10 @@ RUN pip install --upgrade pip && \
 # Now copy all project files
 # The '.' at the end means "current directory in container" (/app)
 COPY . .
+
+# Also to let docker create files with more then read only permissions (by default files created by docker have read only permissions)
+# Switch to non-root user
+USER appuser
 
 # VOLUME ["/app/scripts"]
 # This would create a mount point for external data
