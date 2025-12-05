@@ -71,7 +71,7 @@ def create_spreadsheet(student_name, assignment_name):
     table = Table(name="Grading")
 
     # Define column widths for the 4 columns: Description, Score, "/", Max Points
-    for i, width in enumerate(("15cm", "0.6cm", "0.3cm", "0.6cm")):
+    for i, width in enumerate(("15cm", "0.6cm", "0.3cm", "0.6cm", "0.3cm", "15cm")):
         # Create unique style name for each column
         style_name = f"col_{i}_{width.replace('.', '_').replace('cm', 'cm')}"
         col_style = Style(name=style_name, family="table-column")
