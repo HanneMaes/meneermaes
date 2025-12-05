@@ -42,8 +42,7 @@ print(
 print()
 
 # Extract base filename (without extension) for naming output files/folders
-basename = os.path.splitext(os.path.basename(args.input))[0]
-
+basename = os.path.splitext(os.path.basename(args.input))[0].replace("-", " ")
 # Ensure output directory exists
 os.makedirs(args.output, exist_ok=True)
 
@@ -264,21 +263,8 @@ for student in args.students:
 
 print()
 print(
-    f"{GREEN}Successfully created {len(created_files)} spreadsheet(s) in: {output_folder}{NC}"
+    f"Successfully created {len(created_files)} spreadsheet(s) in: {output_folder}{NC}"
 )
-print()
-
-# Automatically open the output folder in file manager
-# try:
-#     subprocess.run(["xdg-open", output_folder], check=True)
-# except subprocess.CalledProcessError:
-#     # Command failed (non-zero exit code)
-#     print(f"{RED}✗ Could not open folder: {output_folder}{NC}")
-# except FileNotFoundError:
-#     # xdg-open command not found on system
-#     print(
-#         f"{RED}✗ xdg-open not found. Please open the folder manually: {output_folder}{NC}"
-#     )
 
 
 # Automatically open the output folder

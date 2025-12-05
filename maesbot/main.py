@@ -217,7 +217,6 @@ if selected:
         if not students:
             print(f"{RED}✗ No students selected{NC}\n")
             sys.exit(1)
-        students = " ".join(f'"{s}"' for s in students)  # Object to string
 
         # Get output directory
         output_dir = settings.get("paths", {}).get("punten_output_dir")
@@ -228,11 +227,13 @@ if selected:
             )
             sys.exit(1)
 
+        # Build arguments
+        args = ["--input", input_file, "--output", output_dir, "--students"]
+        args.extend(students)  # Add each student as a separate argument
+
         # Run script
-        success = run_script(
-            "punten-create-sheets.py",
-            ["--input", input_file, "--output", output_dir, "--students", students],
-        )
+        print(f"--students: {students}")
+        success = run_script("punten-create-sheets.py", args)
 
     # ###################### #
     # Punten: Sheets to PDF  #
