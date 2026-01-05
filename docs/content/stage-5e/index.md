@@ -22,6 +22,8 @@ Naast het ontwikkelen van de website nemen jullie ook deel aan een aantal bedrij
 
 Je stelt een **sollicitatiebrief** op en **zoekt zelf** een externe opdrachtgever.
 
+<span class='blueText'>Deadline: 1e week na de Kerstavakantie</span>
+
 Cursus: [Opdrachtgever zoeken & sollicitatie](Opdrachrgever-zoeken-en-solliciatie)
 
 ## 2. Kennismakingsgesprek
@@ -30,6 +32,8 @@ Eerste meeting met de opdrachtgever:
 - Verwachtingen bespreken
 - Doel en doelgroep van de website bepalen
 - Inhoud en functionaliteiten vastleggen
+
+<span class='blueText'>Deadline: 1 week voor de start van de stage</span>
 
 ## Week 1: Ontwikkeling & Tussentijdse Presentatie
 
