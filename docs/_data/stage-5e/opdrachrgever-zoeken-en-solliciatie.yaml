@@ -1,7 +1,9 @@
 title: Opdrachrgever Zoeken En Solliciatie
 punten:
-  - desc: "Raspberry Pi Distro’s: Is deze distro speciaal gemaakt voor de Raspberry Pi?"
+  - desc: ": "
     max: 1.5
 doelen:
-  - nr: "BV3_04.02"
-    desc: "De leerlingen respecteren ethische, sociale en legale regels bij het gebruiken van digitale technologie"
+  - nr: "BV3_13.03"
+    desc: "De leerlingen gebruiken school- en vaktaal."
+  - nr: "BK3_01.01.02"
+    desc: "De leerlingen passen strategieën toe om doelgericht te communiceren."
