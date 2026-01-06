@@ -1,6 +1,6 @@
 ---
 title: Flex
-last_modified: 2025-09-01 14:59:28 +0200
+last_modified: 2026-01-06 11:36:18 +0100
 created: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -18,16 +18,6 @@ created: Wed, sep 11, 2024  10:47:23 PM
 
 [De Ethiek van Raspberry Pi](raspberrypi-ethiek)
 
-# Linux
-
-[Linux](../hardware/Besturingssystemen)
-
-[Bash](bash)
-
-[De Ethiek van Raspberry Pi](raspberrypi-ethiek)
-
-[Raspberry Pi](raspberrypi)
-
 # Python
 
 [Bash](bash)
@@ -35,6 +25,24 @@ created: Wed, sep 11, 2024  10:47:23 PM
 [Python](https://hannemaes.notion.site/Python-Game-Development-f26abfaf2cdc4ff7967753b933cd206f?source=copy_link)
 
 [Python: Automation]()
+
+# Linux & Bash
+
+[WSL](WSL)
+
+[Bash](bash)
+
+[Bash scripting](Bash-scripting)
+
+[Linux challenges](Linux-challenges)
+
+## Raspberry Pi
+
+[De Ethiek van Raspberry Pi](raspberrypi-ethiek)
+
+[Raspberry Pi als server](raspberrypi-als-server)
+
+[Raspberry Pi als Wordpress server]()
 
 # Webtechnology
 
