@@ -1,6 +1,6 @@
 ---
 title: Flex
-last_modified: 2026-01-06 11:36:18 +0100
+last_modified: 2026-01-06 14:04:05 +0100
 created: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -22,7 +22,7 @@ created: Wed, sep 11, 2024  10:47:23 PM
 
 [Bash](bash)
 
-[Python](https://hannemaes.notion.site/Python-Game-Development-f26abfaf2cdc4ff7967753b933cd206f?source=copy_link)
+[Python: Basics](https://hannemaes.notion.site/Python-Game-Development-f26abfaf2cdc4ff7967753b933cd206f?source=copy_link)
 
 [Python: Automation]()
 

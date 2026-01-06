@@ -1,6 +1,6 @@
 ---
 title: Stage 5e Jaar
-last_modified: 2025-11-10 15:32:25 +0100
+last_modified: 2026-01-05 13:17:38 +0100
 created: thu, aug 25, 2025  5:09:21 PM
 ---
 
@@ -22,6 +22,8 @@ Naast het ontwikkelen van de website nemen jullie ook deel aan een aantal bedrij
 
 Je stelt een **sollicitatiebrief** op en **zoekt zelf** een externe opdrachtgever.
 
+<span class='blueText'>Deadline: 1e week na de Kerstavakantie</span>
+
 Cursus: [Opdrachtgever zoeken & sollicitatie](Opdrachrgever-zoeken-en-solliciatie)
 
 ## 2. Kennismakingsgesprek
@@ -31,7 +33,9 @@ Eerste meeting met de opdrachtgever:
 - Doel en doelgroep van de website bepalen
 - Inhoud en functionaliteiten vastleggen
 
-## 3. Week 1: Ontwikkeling & Tussentijdse Presentatie
+<span class='blueText'>Deadline: 1 week voor de start van de stage</span>
+
+## Week 1: Ontwikkeling & Tussentijdse Presentatie
 
 Tijdens deze week maak je een 1e versie van de website.  
 Op het einde van de week geef je een tussentijdse presentatie aan je opdrachtgever:
@@ -39,7 +43,7 @@ Op het einde van de week geef je een tussentijdse presentatie aan je opdrachtgev
 - Je krijgt feedback van zowel je opdrachtgever als de leerkracht
 - Je noteert verbeterpunten en maakt een planning om deze aan te pakken in week 2
 
-## 4. Week 2: Afwerking & Eindpresentatie
+## Week 2: Afwerking & Eindpresentatie
 
 In de tweede week werk je verder op basis van de gekregen feedback.  
 Op het einde van de week:
