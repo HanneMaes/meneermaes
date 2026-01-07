@@ -1,6 +1,6 @@
 ---
 title: Bash Scripting
-last_modified: 2026-01-07 09:05:14 +0100
+last_modified: 2026-01-07 09:11:05 +0100
 created: 2025-01-15 15:21:22 +0200
 ---
 
@@ -117,7 +117,9 @@ functie_naam() {
 functie_naam
 ```
 
-# Opdracht: Je 1e Bash script
+# Opdracht: Automatisatie nieuw project
+
+Je maakt vaak websites en moet telkens opnieuw dezelfde mappen aanmaken. Dat kost tijd. Daarom schrijf je een Bash-script dat dit werk automatisch voor jou doet.
 
 **Aanmaak**
 1. Maak een nieuw bash script aan.
@@ -133,14 +135,15 @@ functie_naam
   - script.js 
   - images/
   - blogposts/
-4. Laat een bericht zien dat de bestanden en folders aangemaakt zijn en toon ze ook.
+4. Laat een bericht zien dat de bestanden en folders aangemaakt zijn en toon ze in een boomstructuur.
 5. Vraag hoeveel blogposts de gebruiker wil hebben en maak dit aantal .html bestanden aan in de folder blogposts/
   - post-1.html
   - post-2.html 
   - ...
 6. Pas je script aan zodat de bestanden niet meer leeg aangemaakt worden.
   - .html bestanden bevatten de correct startcode en laden style.css in.
-  - style.css geeft de achtergrond en h1-hoofind een kleur.
+  - style.css geeft de achtergrond en h1-hoofind een kleur, vraag welke kleuren je wil gebruiken.
+  - Toon de code in styles.css zodat je kan controleren of de juiste kleuren gebruikt zijn.
 7. Geef alle .html bestanden dynamisch een titel en h1-hoofding.
   - index.html: de naam van de website.
   - post-1.html: Post 1.
