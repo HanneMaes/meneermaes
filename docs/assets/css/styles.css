@@ -53,7 +53,7 @@
 /* paragraph fonts */
 @font-face {
   font-family: paragraphText;
-  src: url("fonts/tests/ApfelGrotezk-Regular.woff");
+  src: url("fonts/tests/Infini/infini-regular.otf");
 }
 @font-face {
   font-family: paragraphTextSpecial;
