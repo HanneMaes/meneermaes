@@ -1,6 +1,6 @@
 ---
 title: Bash Scripting
-last_modified: 2025-02-12 14:01:48 +0200
+last_modified: 2026-01-07 08:54:23 +0100
 created: 2025-01-15 15:21:22 +0200
 ---
 
@@ -119,15 +119,24 @@ functie_naam
 
 # Opdracht: Je 1e Bash script
 
+**Aanmaak**
 1. Maak een nieuw bash script aan.
 2. Zoek uit hoe je het script **executable** kan maken zodat je het kan uitvoeren.
 3. Zoek uit hoe je het script uit kan voeren en voer het uit.
-4. Maak script dat deze zaken gebruikt:
-   - Read
-   - Echo
-   - If-statement
-   - Loop
 
-Je **upload** zowel je **script** als een **screenshot** van het resultaat.
+**Code**
+1. Laat het script vragen naar de naam van de website.
+2. Maak een folder aan met de naam van de website
+3. Maak in deze folder de volgende bestanden en subfolders aan:
+  - index.html
+  - style.css 
+  - script.js 
+  - images/
+  - blogposts/
+4. Laat een bericht zien dat de bestanden en folders aangemaakt zijn en toon ze ook.
+5. Vraag hoeveel blogposts de gebruiker wil hebben en maak dit aantal .html bestanden aan in de folder blogposts/
+  - post-1.html
+  - post-2.html 
+  - ...
 
 {% include doelen.html data='bash-scripting' %}
