@@ -1,6 +1,6 @@
 ---
 title: Bash Scripting
-last_modified: 2026-01-07 09:38:13 +0100
+last_modified: 2026-01-07 09:38:46 +0100
 created: 2025-01-15 15:21:22 +0200
 ---
 

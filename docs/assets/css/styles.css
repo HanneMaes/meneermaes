@@ -53,6 +53,10 @@
 /* paragraph fonts */
 @font-face {
   font-family: paragraphText;
+  src: url("fonts/tests/absans-main/fonts/Absans-Regular.otf");
+}
+@font-face {
+  font-family: paragraphTextSpecial;
   src: url("fonts/Bagnard.otf");
 }
 @font-face {
@@ -146,6 +150,9 @@ h2 {
   font-family: titleFont;
   color: var(--textDark);
 }
+h3, h4, h5, h6 {
+  font-family: paragraphTextSpecial;
+}
 
 header {
   margin-top: var(--spacingBig);
@@ -196,6 +203,7 @@ strong {
 
 em {
   color: var(--textLight);
+  font-family: paragraphTextSpecial;
 }
 
 blockquote {
@@ -205,6 +213,7 @@ blockquote {
   padding-bottom: 10px;
   margin-left: 0px;
   margin-right: 0px;
+  font-family: paragraphTextSpecial;
 }
 
 /* Heading anchor links */
