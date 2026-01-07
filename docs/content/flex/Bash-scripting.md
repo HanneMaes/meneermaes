@@ -1,6 +1,6 @@
 ---
 title: Bash Scripting
-last_modified: 2026-01-07 09:11:05 +0100
+last_modified: 2026-01-07 09:38:13 +0100
 created: 2025-01-15 15:21:22 +0200
 ---
 
@@ -119,32 +119,51 @@ functie_naam
 
 # Opdracht: Automatisatie nieuw project
 
-Je maakt vaak websites en moet telkens opnieuw dezelfde mappen aanmaken. Dat kost tijd. Daarom schrijf je een Bash-script dat dit werk automatisch voor jou doet.
+Je maakt vaak websites en moet telkens opnieuw dezelfde mappen aanmaken. **Dat kost tijd.** Daarom schrijf je een Bash-script dat dit werk automatisch voor jou doet.
 
-**Aanmaak**
-1. Maak een nieuw bash script aan.
-2. Zoek uit hoe je het script **executable** kan maken zodat je het kan uitvoeren.
-3. Zoek uit hoe je het script uit kan voeren en voer het uit.
+**Stap 1: Voorbereiding**
 
-**Code**
-1. Laat het script vragen naar de naam van de website.
-2. Maak een folder aan met de naam van de website
-3. Maak in deze folder de volgende bestanden en subfolders aan:
-  - index.html
-  - style.css 
-  - script.js 
-  - images/
-  - blogposts/
-4. Laat een bericht zien dat de bestanden en folders aangemaakt zijn en toon ze in een boomstructuur.
-5. Vraag hoeveel blogposts de gebruiker wil hebben en maak dit aantal .html bestanden aan in de folder blogposts/
-  - post-1.html
-  - post-2.html 
-  - ...
-6. Pas je script aan zodat de bestanden niet meer leeg aangemaakt worden.
-  - .html bestanden bevatten de correct startcode en laden style.css in.
-  - style.css geeft de achtergrond en h1-hoofind een kleur, vraag welke kleuren je wil gebruiken.
-  - Toon de code in styles.css zodat je kan controleren of de juiste kleuren gebruikt zijn.
-7. Geef alle .html bestanden dynamisch een titel en h1-hoofding.
-  - index.html: de naam van de website.
-  - post-1.html: Post 1.
-  - post-2.html: Post 2.
+1. Maak een nieuw Bash-script aan.
+2. Voeg de correcte shebang toe bovenaan `(#!/bin/bash)`.
+3. Maak het script executable zodat je het kan uitvoeren `chmod +x scriptnaam.sh`.
+4. Voer het script uit om te testen `bash scriptnaam.sh`.
+
+**Stap 2: Projectinformatie**
+
+1. Laat het script de gebruiker vragen naar de naam van de website.
+2. Maak een map aan met de naam van de website.
+
+**Stap 3: Basisbestanden en mappen**
+
+1. Maak in deze map de volgende bestanden en submappen aan:
+  - {% include filePath.html fileOrPath='index.html' %} 
+  - {% include filePath.html fileOrPath='style.css' %}
+  - {% include filePath.html fileOrPath='script.js' %}
+  - {% include filePath.html fileOrPath='images/' %} 
+  - {% include filePath.html fileOrPath='blogposts/' %}
+2. Laat een bericht zien dat de bestanden en mappen aangemaakt zijn.  
+  Toon de structuur van de mappen in een boomstructuur via `tree`.
+
+**Stap 4: Blogposts genereren**
+
+1. Vraag hoeveel blogposts de gebruiker wil hebben.
+2. Maak dit aantal {% include filePath.html fileOrPath='.html' %} bestanden aan in de map {% include filePath.html fileOrPath='blogposts/' %}:
+  - {% include filePath.html fileOrPath='post-1.html' %}
+  - {% include filePath.html fileOrPath='post-2.html' %}
+  - {% include filePath.html fileOrPath='etc...' %}
+
+**Stap 5: Dynamische inhoud**
+
+1. Pas het script aan zodat de bestanden niet meer leeg zijn:
+2. De {% include filePath.html fileOrPath='.html' %} bestanden bevatten de correcte startcode `<!DOCTYPE html>`, `<html>`, ...
+3. De bestanden laden automatisch {% include filePath.html fileOrPath='style.css' %} in.
+4. Pas {% include filePath.html fileOrPath='style.css' %} aan zodat de gebruiker zelf de achtergrondkleur en kleur van de `<h1>` kan kiezen. Je vraagt in je script naar deze kleuren.
+5. Toon de inhoud van {% include filePath.html fileOrPath='style.css' %} zodat je kan controleren of de juiste kleuren gebruikt zijn.
+
+**Stap 6: Dynamische titels en koppen**
+
+1. Geef alle {% include filePath.html fileOrPath='.html' %} bestanden een dynamische `title` en `<h1>` hoofding:
+  - {% include filePath.html fileOrPath='index.html' %}: de naam van de website
+  - {% include filePath.html fileOrPath='post-1.html' %}: Post 1
+  - {% include filePath.html fileOrPath='post-2.html' %}: Post 2
+  - {% include filePath.html fileOrPath='etc...' %}
