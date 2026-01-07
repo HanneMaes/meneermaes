@@ -53,7 +53,7 @@
 /* paragraph fonts */
 @font-face {
   font-family: paragraphText;
-  src: url("fonts/tests/absans-main/fonts/Absans-Regular.otf");
+  src: url("fonts/tests/ApfelGrotezk-Regular.woff");
 }
 @font-face {
   font-family: paragraphTextSpecial;
