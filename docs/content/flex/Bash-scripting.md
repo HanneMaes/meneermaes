@@ -1,6 +1,6 @@
 ---
 title: Bash Scripting
-last_modified: 2026-01-07 09:01:17 +0100
+last_modified: 2026-01-07 09:05:14 +0100
 created: 2025-01-15 15:21:22 +0200
 ---
 
@@ -140,4 +140,8 @@ functie_naam
   - ...
 6. Pas je script aan zodat de bestanden niet meer leeg aangemaakt worden.
   - .html bestanden bevatten de correct startcode en laden style.css in.
-  - style.css geeft de achtergrond en h1-titels een kleur.
+  - style.css geeft de achtergrond en h1-hoofind een kleur.
+7. Geef alle .html bestanden dynamisch een titel en h1-hoofding.
+  - index.html: de naam van de website.
+  - post-1.html: Post 1.
+  - post-2.html: Post 2.
