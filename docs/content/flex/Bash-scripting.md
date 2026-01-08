@@ -1,6 +1,6 @@
 ---
 title: Bash Scripting
-last_modified: 2026-01-07 09:38:46 +0100
+last_modified: 2026-01-08 14:34:31 +0100
 created: 2025-01-15 15:21:22 +0200
 ---
 
@@ -117,7 +117,7 @@ functie_naam() {
 functie_naam
 ```
 
-# Opdracht: Automatisatie nieuw project
+# Opdracht 1: Automatisatie nieuw project
 
 Je maakt vaak websites en moet telkens opnieuw dezelfde mappen aanmaken. **Dat kost tijd.** Daarom schrijf je een Bash-script dat dit werk automatisch voor jou doet.
 
@@ -167,3 +167,66 @@ Je maakt vaak websites en moet telkens opnieuw dezelfde mappen aanmaken. **Dat k
   - {% include filePath.html fileOrPath='post-1.html' %}: Post 1
   - {% include filePath.html fileOrPath='post-2.html' %}: Post 2
   - {% include filePath.html fileOrPath='etc...' %}
+
+# Opdracht 2: Backup- & opruimscript
+
+Je gebruikt een Raspberry Pi als kleine server. Na een tijdje staan er veel bestanden in je home-folder: oude logs, testbestanden, tijdelijke bestanden, ...
+
+Om overzicht te houden wil je met één script:
+- Belangrijke mappen back-uppen
+- Oude bestanden opruimen
+- Dit meerdere keren kunnen uitvoeren zonder alles opnieuw te typen
+
+**Stap 1: Systeeminformatie tonen**
+
+Maak een script aan dat:
+- Een welkombericht toont
+- De huidige datum toont met het `date` of `$(date '+%H:%M:%S')` command
+- De huidige map toont
+- Toont hoeveel ruimte de huidige map in beslag neemt met het `du -hs` command. Toon niet enkel het getal maar zet het in een zin zodat het duidelijk is wat de betekenis is.
+
+**Stap 2: Backups maken**
+
+Maak een **functie** die een backup maakt van een map. Deze functie krijgt **2 argumenten**:
+- De naam van de map die geback-upt moet worden
+- De naam van de backup-map
+
+Voeg de datum van de backup toe aan het einde van de bestandsnaam.
+
+**Stap 3: Menu**
+
+Gebruik een **while-loop** om een menu te tonen dat blijft herhalen.  
+Het menu bevat minstens:
+- Backup maken van een map
+- Oude bestanden opruimen
+- Stoppen
+
+Zolang de gebruiker niet kiest om te stoppen, blijft het script zich herhalen.
+
+**Stap 4: Opruimen van oude bestanden**
+
+Vraag aan de gebruiker:
+- Een map
+- Het aantal dagen
+
+Verwijder bestanden die ouder zijn dan het opgegeven aantal dagen.
+
+**Voorbeeld**: stel dat je alle bestanden ouder dan 7 dagen uit een map ~/testmap wilt verwijderen:
+```sh 
+# TOON bestanden ouder dan 7 dagen
+find ~/testmap -type f -mtime +7 
+  # find: zoekt bestanden/mappen
+  # ~/testmap: de map waarin gezocht wordt
+  # -type f: alleen gewone bestanden (geen mappen)
+  # -mtime +7: bestanden die meer dan 7 dagen oud zijn
+  # -delete:  verwijdert de gevonden bestanden
+
+# VERWIJDER bestanden ouder dan 7 dagen
+find ~/testmap -type f -mtime +7 -delete
+```
+
+Als dit gedaan is toon je:
+- Hoeveel ruimte de map in beslag nam voor de opkuis
+- Hoeveel bestanden zijn verwijderd.
+- Hoeveel ruimte de map nu in beslag neemt.
+- Hoeveel percent kleiner de map geworden is.

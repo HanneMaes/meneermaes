@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified: 2025-11-18 21:55:59 +0100
+last_modified: 2026-01-08 12:28:31 +0100
 created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -98,13 +98,13 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 [Formulieren stylen](Formulieren-stylen)
 
-[LocalStorage](localStorage)
-
 [Project: Calculator](Project-Calculator)
 
-[Project: Character creator](Project-Character-creator)
-
 [Arrays](Arrays)
+
+[LocalStorage](localStorage)
+
+[Project: Character creator](Project-Character-creator)
 
 # Responsive Design
 
