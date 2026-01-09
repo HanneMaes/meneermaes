@@ -1,6 +1,6 @@
 ---
 title: Bash Scripting
-last_modified: 2026-01-09 13:25:18 +0100
+last_modified: 2026-01-09 14:43:34 +0100
 created: 2025-01-15 15:21:22 +0200
 ---
 
@@ -70,6 +70,12 @@ naam="Maes"
 echo "Hallo, $naam"
 ```
 
+| Syntax        | Betekenis           | Opmerking            |
+|---------------|---------------------|----------------------|
+| `naam="Maes"` | variabele instellen | geen spaties rond =  |
+| `leeftijd=18` | numerieke variabele | bash kent geen types |
+| `$naam`       | waarde gebruiken    | altijd met $         |
+
 ## Invoer
 
 ```bash
@@ -77,6 +83,12 @@ echo "Wat is je naam?"
 read gebruikersnaam
 echo "Hallo, $gebruikersnaam! Welkom bij mijn Bash-script."
 ```
+
+| Syntax                  | Betekenis                         | Staat voor |
+|-------------------------|-----------------------------------|------------|
+| `read -p "Naam: " naam` | invoer vragen                     | p = prompt |
+| `read -s wachtwoord`    | verborgen invoer                  | s = silent |
+| `read -r tekst`         | geen escape-interpretatie bij `\` | r = raw    |
 
 ## If-statement
 
@@ -88,6 +100,15 @@ else
 fi
 ```
 
+| Operator | Betekenis             | Staat voor            |
+|----------|-----------------------|-----------------------|
+| `-eq`    | gelijk aan            | equal                 |
+| `-ne`    | niet gelijk aan       | not equal             |
+| `-lt`    | kleiner dan           | less than             |
+| `-le`    | kleiner of gelijk aan | less than or equal    |
+| `-gt`    | groter dan            | greater than          |
+| `-ge`    | groter of gelijk aan  | greater than or equal |
+
 ## For Loop
 
 ```bash
@@ -96,6 +117,13 @@ do
   echo "Nummer $i"
 done
 ```
+
+| Vorm                    | Betekenis   | Wanneer gebruiken                               |
+|-------------------------|-------------|-------------------------------------------------|
+| `for i in 1 2 3`        | vaste lijst | eenvoudige herhaling                            |
+| `for i in {1..5}`       | bereik      | tellen                                          |
+| `for file in *.txt`     | bestanden   | alle bestanden die eindigen op .txt in deze map |
+| `for ((i=0; i<5; i++))` | C-stijl     | gevorderd                                       |
 
 ## While Loop
 
@@ -116,6 +144,13 @@ functie_naam() {
 }
 functie_naam
 ```
+
+| Syntax          | Betekenis           | Opmerking          |
+|-----------------|---------------------|--------------------|
+| `functie() { }` | functie definiëren  | standaard          |
+| `functie`       | functie oproepen    | zonder ()          |
+| `echo "tekst"`  | waarde “teruggeven” | via output         |
+| `$1, $2`        | parameters          | positie-argumenten |
 
 # Opdracht 1: Automatisatie nieuw project
 
