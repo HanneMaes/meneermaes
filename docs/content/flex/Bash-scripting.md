@@ -1,6 +1,6 @@
 ---
 title: Bash Scripting
-last_modified: 2026-01-08 14:34:31 +0100
+last_modified: 2026-01-09 13:25:18 +0100
 created: 2025-01-15 15:21:22 +0200
 ---
 
@@ -183,17 +183,23 @@ Maak een script aan dat:
 - Een welkombericht toont
 - De huidige datum toont met het `date` of `$(date '+%H:%M:%S')` command
 - De huidige map toont
-- Toont hoeveel ruimte de huidige map in beslag neemt met het `du -hs` command. Toon niet enkel het getal maar zet het in een zin zodat het duidelijk is wat de betekenis is.
 
-**Stap 2: Backups maken**
+**Stap 2: Grootte functie**
 
-Maak een **functie** die een backup maakt van een map. Deze functie krijgt **2 argumenten**:
-- De naam van de map die geback-upt moet worden
-- De naam van de backup-map
+Schrijf een functie die:
+- Eén argument krijgt: de naam van een map
+- De grootte van deze map berekent met het `du -hs` command. 
+- De functie **geeft deze grootte terug** zodat je ze later in je code kan gebruiken.
+- Gebruik deze functie om de grootte te tonen van de huidige map, toon niet enkel het getal maar zet het in een zin zodat het duidelijk is wat de betekenis is.
 
-Voeg de datum van de backup toe aan het einde van de bestandsnaam.
+**Stap 3: Backups maken**
 
-**Stap 3: Menu**
+1. Maak een **functie** die een backup maakt van een map. Deze functie krijgt **2 argumenten**:
+  - De naam van de **map** die geback-upt moet worden
+  - De naam van de **backup-map**
+2. Voeg de datum van de backup toe aan het einde van de bestandsnaam.
+
+**Stap 4: Menu**
 
 Gebruik een **while-loop** om een menu te tonen dat blijft herhalen.  
 Het menu bevat minstens:
@@ -203,15 +209,12 @@ Het menu bevat minstens:
 
 Zolang de gebruiker niet kiest om te stoppen, blijft het script zich herhalen.
 
-**Stap 4: Opruimen van oude bestanden**
+**Stap 5: Opruimen van oude bestanden**
 
-Vraag aan de gebruiker:
-- Een map
-- Het aantal dagen
-
-Verwijder bestanden die ouder zijn dan het opgegeven aantal dagen.
-
-**Voorbeeld**: stel dat je alle bestanden ouder dan 7 dagen uit een map ~/testmap wilt verwijderen:
+1. Vraag aan de gebruiker:
+  - Een map
+  - Het aantal dagen
+2. Toon alle bestanden in de map die ouders zijn dan het opgegeven aantal dagen met die command:
 ```sh 
 # TOON bestanden ouder dan 7 dagen
 find ~/testmap -type f -mtime +7 
@@ -220,13 +223,18 @@ find ~/testmap -type f -mtime +7
   # -type f: alleen gewone bestanden (geen mappen)
   # -mtime +7: bestanden die meer dan 7 dagen oud zijn
   # -delete:  verwijdert de gevonden bestanden
-
+```
+3. Vraag of het OK is deze bestanden te verwijderen en verwijder ze met die command:
+```sh 
 # VERWIJDER bestanden ouder dan 7 dagen
 find ~/testmap -type f -mtime +7 -delete
 ```
-
-Als dit gedaan is toon je:
-- Hoeveel ruimte de map in beslag nam voor de opkuis
+4. Daarna toon je:
+- Hoeveel ruimte de map in beslag nam *(door gebruik te maken van je eigen functie)* voor de opkuis
 - Hoeveel bestanden zijn verwijderd.
-- Hoeveel ruimte de map nu in beslag neemt.
+- Hoeveel ruimte de map nu in beslag neemt *(door gebruik te maken van je eigen functie)*.
 - Hoeveel percent kleiner de map geworden is.
+
+## Uitbreiding
+
+Gebruik **Rclone** om je backup-map up te loaden naar **Google Drive**.
