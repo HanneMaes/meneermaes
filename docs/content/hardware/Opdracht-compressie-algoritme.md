@@ -34,20 +34,11 @@ Maandag werk ik aan een taak en eet ik thuis met mijn familie na een lange dag. 
 
 **Puntenschaal compressie**
 
-| Verkorting                  | Gecomprimeerde lengte | Score        |
-| --------------------------- | --------------------- | ------------ |
-| Minder dan 10%              | 480 – 533 karakters   | 1/5          |
-| 10% – 24%                   | 405 – 479 karakters   | 2/5          |
-| 25% – 39%                   | 325 – 404 karakters   | 3/5          |
-| 40% – 54%                   | 245 – 324 karakters   | 4/5          |
-| 55% of meer                 | ≤ 244 karakters       | 5/5          |
-
 | Verkorting + decompressie-instructies | Gecomprimeerde lengte | Score |
 | ------------------------------------- | --------------------- | ----- |
 | ?% – ?%                               | ≤ 544 karakters       | 2/4   |
-| ?% – ?%                               | ≤ 471 karakters       | 3/4   |
-
-
+| ?% – ?%                               | ≤ 475 karakters       | 3/4   |
+| ?% – ?%                               | ≤ 435 karakters       | 4/4   |
 
 # Uitbreiding: Algoritme digitaliseren
 
