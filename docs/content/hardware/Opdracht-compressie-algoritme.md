@@ -14,9 +14,10 @@ created: 2025-03-12 16:29:00 +0200
 4. Schrijf de decompressie-instructies:
    - Schrijf duidelijke en korte instructies zodat iemand anders jouw gecomprimeerde tekst kan terugzetten naar de originele tekst.
    - Zorg dat je instructies stap-voor-stap zijn en geen fouten bevatten.
+   - **Voeg de decompressie-instructies toe aan de gecomprimeerde tekst, zodat ze in hetzelfde bestand zitten**
 5. Wissel en decomprimeer:
-   - Geef jouw gecomprimeerde tekst en instructies aan een ander groepje.
-   - Ontvang de gecomprimeerde tekst en instructies van een ander groepje.
+   - Geef jouw gecomprimeerde tekst aan een ander groepje.
+   - Ontvang de gecomprimeerde tekst van een ander groepje.
    - Probeer de tekst te decomprimeren met behulp van de instructies die je hebt gekregen.
 
 ## Te comprimeren tekst
@@ -40,6 +41,13 @@ Maandag werk ik aan een taak en eet ik thuis met mijn familie na een lange dag. 
 | 25% – 39%                   | 325 – 404 karakters   | 3/5          |
 | 40% – 54%                   | 245 – 324 karakters   | 4/5          |
 | 55% of meer                 | ≤ 244 karakters       | 5/5          |
+
+| Verkorting + decompressie-instructies | Gecomprimeerde lengte | Score |
+| ------------------------------------- | --------------------- | ----- |
+| ?% – ?%                               | ≤ 544 karakters       | 2/4   |
+| ?% – ?%                               | ≤ 471 karakters       | 3/4   |
+
+
 
 # Uitbreiding: Algoritme digitaliseren
 
