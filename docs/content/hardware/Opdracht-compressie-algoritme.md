@@ -1,12 +1,12 @@
 ---
 title: Ontwerp je eigen compressie-algoritme
-last_modified: 2025-03-19 12:17:33 +0200
+last_modified: 2026-01-12 15:05:46 +0100
 created: 2025-03-12 16:29:00 +0200
 ---
 
-# Experiment
+# Opdracht: Je eigen compressie-algoritme
 
-1. Verdeel jullie in **groepjes van 2**.
+1. Verdeel jullie in **groepjes**.
 2. Elk groepje krijgt een korte tekst om mee te werken.
 3. Comprimeer de tekst:
    - Bedenk een manier om deze tekst korter te maken. Dit is jouw compressie-algoritme.
@@ -29,9 +29,19 @@ Maandag werk ik aan een taak en eet ik thuis met mijn familie na een lange dag. 
 - **Correctheid**: Kan de tekst perfect worden gedecomprimeerd met de instructies?
 - **Creativiteit**: Hoe slim of origineel is de methode?
 
-> Wie kan de tekst het beste comprimeren en decomprimeerbaar houden?
+{% include punten.html data='je-eigen-compressie-algoritme' %}
 
-# Algoritme digitaliseren
+**Puntenschaal compressie**
+
+| Verkorting                  | Gecomprimeerde lengte | Score        |
+| --------------------------- | --------------------- | ------------ |
+| Minder dan 10%              | 480 – 533 karakters   | 1/5          |
+| 10% – 24%                   | 405 – 479 karakters   | 2/5          |
+| 25% – 39%                   | 325 – 404 karakters   | 3/5          |
+| 40% – 54%                   | 245 – 324 karakters   | 4/5          |
+| 55% of meer                 | ≤ 244 karakters       | 5/5          |
+
+# Uitbreiding: Algoritme digitaliseren
 
 Maak een digitale versie van je eigen compressie en decompressie algoritmen.  
 Kies zelf de programmeertaal, maar hou er rekening mee dat je deze zaken moet doen:
