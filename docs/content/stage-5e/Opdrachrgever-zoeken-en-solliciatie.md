@@ -77,3 +77,7 @@ Automatisch gegenereerde of onpersoonlijke mails werken afschrikkend.
 {% include callout.html type='Tip' content='
 Controleer voor het versturen van elke mail de namen van de ontvangers en hun organisatie.
 ' %}
+
+# Evaluatie
+
+{% include punten.html data='opdrachrgever-zoeken-en-solliciatie' %}

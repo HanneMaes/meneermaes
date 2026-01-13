@@ -1,6 +1,6 @@
 ---
 title: Je 1e Javascript Code
-last_modified: 2025-01-17 14:52:52 +0200
+last_modified: 2026-01-08 12:25:37 +0100
 created: 2025-01-17 14:37:13 +0200
 ---
 
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 **Vervang** de code in script.js door deze code:
 
-```jsx
+```javascript
 document.addEventListener("DOMContentLoaded", function() {
     console.log('Script werkt!');
 });
@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.innerHTML = `
         <h1>Hallo, JavaScript!</h1>
         <p>Zo maak je HTML code via JavaScript.</p>
+      `
     ;
 });
 ```

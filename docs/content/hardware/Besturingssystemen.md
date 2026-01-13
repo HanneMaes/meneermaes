@@ -1,10 +1,8 @@
 ---
 title: Besturingssystemen
-last_modified: 2025-04-22 13:27:31 +0200
+last_modified: 2026-01-06 10:05:16 +0100
 created: 2024-09-18 12:21:40 +0200
 ---
-
-# Besturingssystemen
 
 [Hardware, software & besturingssysteem](Hardware-software-besturingssysteem)
 
@@ -16,12 +14,5 @@ created: 2024-09-18 12:21:40 +0200
 
 [Soorten besturingssystemen](Soorten-besturingssystemen){: .opdracht }
 
-# Linux & Bash
-
 [Zelf aan de slag met een besturingssysteem](Zelf-aan-de-slag-met-een-besturingssysteem){: .opdracht }
 
-[WSL](WSL)
-
-[Bash scripting](Bash-scripting)
-
-[Linux challenges](Linux-challenges)
