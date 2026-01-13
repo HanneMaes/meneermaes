@@ -1,6 +1,6 @@
 title: Je eigen compressie-algoritme
 punten:
   - desc: "Compressie: Hoeveel korter is de tekst geworden"
-    max: 5
+    max: 4
   - desc: "Decompressie-instructies: Volledig, duidelijk en foutloos"
     max: 3
