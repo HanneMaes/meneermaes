@@ -314,7 +314,7 @@ summary::marker {
   font-weight: bold;
 }
 .deadline::before {
-  content: "→ Deadline ";
+  content: "→ Deadline";
 }
 
 /* checkbox interactive */

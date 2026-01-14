@@ -1,6 +1,6 @@
 ---
 title: Stage 5e Jaar
-last_modified: 2026-01-14 15:21:22 +0100
+last_modified: 2026-01-14 15:29:54 +0100
 created: thu, aug 25, 2025  5:09:21 PM
 ---
 
@@ -33,9 +33,9 @@ Eerste meeting met de opdrachtgever:
 - Doel en doelgroep van de website bepalen
 - Inhoud en functionaliteiten vastleggen
 
-<span class='deadline'>voorbereiding: 3e week na de Kerstavakantie</span>
+<span class='deadline'> voorbereiding: 3e week na de Kerstavakantie</span>
 
-<span class='deadline'>afsprakendocument: 2 weken voor de start van de stage</span>
+<span class='deadline'> afsprakendocument: 2 weken voor de start van de stage</span>
 
 Cursus: [Kennismakingsgesprek](Kennismakingsgesprek)
 
