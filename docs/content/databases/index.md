@@ -1,6 +1,6 @@
 ---
 title: Databases
-last_modified: 2026-01-06 13:16:25 +0100
+last_modified: 2026-01-14 11:19:26 +0100
 created: Wed, sep 04, 2024  10:47:23 PM
 ---
 
@@ -18,7 +18,7 @@ Formulier: **[Vragen bij het thuis verwerken van leerstof](https://docs.google.c
 
 ### 2. SQL 
 
-[WAMP: installatie & gebruik](wamp-installatie-en-gebruik)
+[WAMP & XAMPP: installatie & gebruik](wamp-xampp-installatie-en-gebruik)
 
 [Cursus SQL](https://bazandpoort.notion.site/Cursus-SQL-3048434a07034c5f809e7f78b5913375)
 

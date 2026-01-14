@@ -1,7 +1,7 @@
 ---
-title: Wamp Installatie & Gebruik
+title: Wamp & XAMPP Installatie & Gebruik
 created: 2026-01-06 13:05:54 +0100
-last_modified: 2026-01-07 12:11:00 +0100
+last_modified: 2026-01-14 11:20:09 +0100
 ---
 
 # WAMP 
@@ -34,7 +34,7 @@ last_modified: 2026-01-07 12:11:00 +0100
 
 ## Gebruik
 
-1. Apache > Start > Admin
+1. Apache > Start
 2. MySQL > Start > Admin
 
 **Bij error: MySQL shutdown unexcpectedly, ...**{: .badText }
