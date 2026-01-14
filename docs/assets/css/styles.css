@@ -53,7 +53,7 @@
 /* paragraph fonts */
 @font-face {
   font-family: paragraphText;
-  src: url("fonts/tests/Infini/infini-regular.otf");
+  src: url("fonts/Infini/infini-regular.otf");
 }
 @font-face {
   font-family: paragraphTextSpecial;
@@ -307,6 +307,14 @@ summary::marker {
 .blueText {
   color: var(--colorBlue);
   font-weight: bold;
+}
+
+.deadline {
+  color: var(--colorBlue);
+  font-weight: bold;
+}
+.deadline::before {
+  content: "→ Deadline ";
 }
 
 /* checkbox interactive */

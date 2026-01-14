@@ -1,0 +1,21 @@
+title: Opdrachrgever Zoeken En Solliciatie
+punten:
+  - desc: "Voorbereiding op het gesprek"
+    max: 3
+  - desc: "Doel & doelgroep bepalen"
+    max: 1
+  - desc: "Inhoud bespreken"
+    max: 3
+  - desc: "Communicatie-afspraken"
+    max: 3
+  - desc: "Feedbackmomenten"
+    max: 3
+  - desc: "Afsprakendocument"
+    max: 3
+doelen:
+  - nr: "BK3_02.01.01"
+    desc: "De leerlingen informeren zich over de opgelegde specificaties van de opdracht."
+  - nr: "BK3_01.01.02"
+    desc: "De leerlingen passen strategieën toe om doelgericht te communiceren."
+  - nr: "BV3_13.03"
+    desc: "De leerlingen gebruiken school- en vaktaal."
