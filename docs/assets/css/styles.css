@@ -342,24 +342,24 @@ a:hover {
 
 /* extra styling for external links and .pdf files */
 a[href*='//']::after {
-  content: "&#32;↗";
+  content: "\00A0↗";
   color: var(--medium);
   /* margin-left: var(--spacingSmall); */
 }
 a[href*=".pdf"]::after {
-  content: "&#32;↗";
+  content: "\00A0↗";
   color: var(--medium);
   /* margin-left: var(--spacingSmall); */
 }
 
 /* extra styling for download links*/
 a[href*=".docx"]::after {
-  content: "&#32;↓";
+  content: "\00A0↓";
   color: var(--medium);
   /* margin-left: var(--spacingSmall); */
 }
 a[href="zelfstandige-opdrachten/beeldapparatuur.docx"]::after {
-  content: "&#32;↓";
+  content: "\00A0↓";
   color: var(--medium);
   /* margin-left: var(--spacingSmall); */
 }
