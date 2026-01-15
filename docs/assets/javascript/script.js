@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // });
   // document.getElementById('toc').innerHTML = tocHTML;
 
-  /* ************ */
-  /* TARGET BLANK */
-  /* ************ */
+  /* ************* */
+  /* TARGET _BLANK */
+  /* ************* */
 
   // Add target _blank to all external links
   var links = document.querySelectorAll("a");

@@ -341,24 +341,27 @@ a:hover {
 }
 
 /* extra styling for external links and .pdf files */
-a[href*='//']::after
-{
+a[href*='//']::after {
   content: "↗";
   color: var(--medium);
+  /* margin-left: var(--spacingSmall); */
 }
 a[href*=".pdf"]::after {
   content: "↗";
   color: var(--medium);
+  /* margin-left: var(--spacingSmall); */
 }
 
 /* extra styling for download links*/
 a[href*=".docx"]::after {
   content: "↓";
   color: var(--medium);
+  /* margin-left: var(--spacingSmall); */
 }
 a[href="zelfstandige-opdrachten/beeldapparatuur.docx"]::after {
   content: "↓";
   color: var(--medium);
+  /* margin-left: var(--spacingSmall); */
 }
 .portfolio::before {
   content: "🌐 Portfolio website:";
