@@ -1,13 +1,13 @@
 ---
 title: Soorten Besturingssystemen
-last_modified: 2025-11-25 18:00:44 +0100
+last_modified: 2026-01-15 14:30:03 +0100
 created: 2024-09-25 21:21:33 +0200
 ---
 
 
 Besturingssystemen zijn overal om ons heen te vinden, van onze telefoons en computers tot geavanceerde machines en IoT-apparaten.
 
-In deze opdracht gaan jullie niet alleen onderzoeken hoe verschillende besturingssystemen werken, maar ook hoe ze orden toegepast in verschillende situaties en wat hun specifieke voordelen en nadelen zijn.
+In deze opdracht gaan jullie niet alleen onderzoeken hoe verschillende besturingssystemen werken, maar ook hoe ze worden toegepast in verschillende situaties en wat hun specifieke voordelen en nadelen zijn.
 
 Dit helpt jullie niet alleen te begrijpen welke systemen in bepaalde omgevingen worden gebruikt, maar ook waarom deze systemen in die specifieke situaties het beste werken.
 
