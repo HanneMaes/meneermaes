@@ -1,17 +1,15 @@
-title: Opdrachrgever Zoeken En Solliciatie
+title: Afsprakendocument
 punten:
-  - desc: "Voorbereiding op het gesprek"
-    max: 3
   - desc: "Doel & doelgroep bepalen"
     max: 1
   - desc: "Inhoud bespreken"
-    max: 3
+    max: 2
   - desc: "Communicatie-afspraken"
-    max: 3
+    max: 2
   - desc: "Feedbackmomenten"
-    max: 3
+    max: 2
   - desc: "Afsprakendocument"
-    max: 3
+    max: 5
 doelen:
   - nr: "BK3_02.01.01"
     desc: "De leerlingen informeren zich over de opgelegde specificaties van de opdracht."

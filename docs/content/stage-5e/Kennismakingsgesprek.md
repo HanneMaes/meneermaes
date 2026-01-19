@@ -1,7 +1,7 @@
 ---
 title: Kennismakingsgesprek
 created: 2026-01-14 13:49:41 +0100
-last_modified: 2026-01-14 15:00:15 +0100
+last_modified: 2026-01-19 10:52:22 +0100
 ---
 
 Na het vinden van een opdrachtgever volgt een **eerste kennismakingsgesprek**.  
@@ -81,6 +81,11 @@ Controleer **spelling en inhoud** voordat je het verstuurt.
 - Gestructureerd is
 - Foutloos geschreven is
 
-# Evaluatie
+# Evaluaties
 
-{% include punten.html data='kennismakingsgesprek' %}
+## Voorbereiding
+
+{% include punten.html data='kennismakingsgesprek-voorbereiding' %}
+
+## Afsprakendocument
+{% include punten.html data='kennismakingsgesprek-afsprakendocument' %}
