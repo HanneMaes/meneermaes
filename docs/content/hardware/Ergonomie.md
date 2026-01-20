@@ -114,6 +114,10 @@ Als je geen aanpassingen hoeft te doen aan bijvoorbeeld je monitor, leg dan in h
 
 - Zorg ervoor dat je benen comfortabel kunnen bewegen en dat er geen obstakels zijn.
 
+## 3. Puntenverdeling
+
+{% include punten.html data='check-je-werkplek' %}
+
 # Opdracht 2: Beweging aan je werkplek
 
 Voor deze opdracht werk je in **groepjes van 2**.
