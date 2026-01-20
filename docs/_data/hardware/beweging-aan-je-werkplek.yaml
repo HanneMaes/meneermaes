@@ -8,3 +8,6 @@ punten:
     max: 2
   - desc: "Veelgemaakte fouten"
     max: 3
+doelen:
+  - nr: "BK3_01.04"
+    desc: "De leerlingen handelen veilig, ergonomisch en hygiënisch."
