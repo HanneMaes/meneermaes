@@ -1,0 +1,9 @@
+title: Check Je Werkplek
+punten:
+  - desc: "Analyse van je huidige werkplek"
+    max: 1
+  - desc: "Aanpassingen voor een betere ergonomie"
+    max: 4
+doelen:
+  - nr: "BV3_04.01"
+    desc: "De leerlingen gebruiken courante functionaliteiten van vergelijkbare toepassingen om digitale inhouden te creëren."
