@@ -1,6 +1,6 @@
 ---
 title: Bash Scripting
-last_modified: 2026-01-09 14:43:34 +0100
+last_modified: 2026-01-21 17:22:10 +0100
 created: 2025-01-15 15:21:22 +0200
 ---
 
@@ -54,10 +54,11 @@ Je mag zelf kiezen welke optie je gebruikt om met Bash aan de slag te gaan.
 
 ## De Bang Start Code
 
-Je bash script moet altijd beginnen met deze regel, zo weet je systeem dat het script met de Bash-shell moet worden uitgevoerd.
+Je bash script moet **altijd** beginnen met deze regel.  
+Zo weet het systeem dat het script met de Bash-shell moet worden uitgevoerd.
 
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
 # Je bash script moet altijd starten met deze code
 
 # De rest van je code ...
@@ -70,11 +71,16 @@ naam="Maes"
 echo "Hallo, $naam"
 ```
 
-| Syntax        | Betekenis           | Opmerking            |
-|---------------|---------------------|----------------------|
-| `naam="Maes"` | variabele instellen | geen spaties rond =  |
-| `leeftijd=18` | numerieke variabele | bash kent geen types |
-| `$naam`       | waarde gebruiken    | altijd met $         |
+| Syntax        | Betekenis           | Opmerking                 |
+|---------------|---------------------|---------------------------|
+| `naam="Maes"` | variabele instellen | **geen spaties** rond `=` |
+| `leeftijd=18` | numerieke variabele | bash kent geen types      |
+| `$naam`       | waarde gebruiken    | altijd met `$`            |
+
+**Veelgemaakte fouten**
+- Fout: `naam = "Maes"` (spaties maken er een command van)
+- Fout: `$naam="Maes"`
+- Juist: `naam="Maes"`
 
 ## Invoer
 
@@ -90,15 +96,19 @@ echo "Hallo, $gebruikersnaam! Welkom bij mijn Bash-script."
 | `read -s wachtwoord`    | verborgen invoer                  | s = silent |
 | `read -r tekst`         | geen escape-interpretatie bij `\` | r = raw    |
 
-## If-statement
+## If-statement *(modern Bash)*
 
 ```bash
-if [ $naam == "Maes" ]; then
+naam="Maes"
+
+if [[ $naam == "Maes" ]]; then
   echo "Je bent de beste leerkracht!"
 else
   echo "Wie ben jij?"
 fi
 ```
+
+### Getallen
 
 | Operator | Betekenis             | Staat voor            |
 |----------|-----------------------|-----------------------|
@@ -109,28 +119,84 @@ fi
 | `-gt`    | groter dan            | greater than          |
 | `-ge`    | groter of gelijk aan  | greater than or equal |
 
+### Strings
+
+| Operator   | Betekenis   |
+| ---------- | ----------- |
+| `$a == $b` | Gelijk aan  |
+| `-z $a`    | Leeg        |
+| `-n $a`    | Niet leeg   |
+
+## Wiskundige berekeningen
+
+Wiskundige berekeningen zet je tussen `(( ... ))`.
+
+**Waarom?**
+- Bash behandelt alles standaard als tekst.
+- `(( ... ))` vertelt Bash: **dit is rekenwerk**.
+
+```bash
+a=4 
+b=7
+
+# Zonder (( )): tekst
+echo $a + $b # Output: 4 + 7
+
+# Met (( )): rekenen
+echo $(( $a + $b )) # Output: 11
+```
+
+**Waarom is `$` nodig in `echo $(( $a + $b ))`?**
+- `$(( ... ))` is geen “variabele”  
+  `(( ... ))` is een rekenconstructie, geen variabele.  
+  Je zet er een rekensom in, en Bash geeft het resultaat terug.
+- `$a` en `$b` zijn variabelen  
+  Om de waarde van een variabele te gebruiken, moet je `$` ervoor zetten:
+  - `a` = de naam van de variabele
+  - `$a` = de waarde van de variabele
+
+```bash
+a=4
+
+echo a    # geeft: a
+echo $a   # geeft: 4
+
+# Dus in de som:
+$(( $a + $b ))
+```
+
+**Betekent:**
+- Neem de waarde van a (`$a`)
+- Neem de waarde van b (`$b`)
+- Tel ze op
+- Geef het resultaat terug
+
+
+| Schrijfwijze     | Betekenis                 |
+| ---------------- | -----------------------   |
+| `a`              | De string "a"             |
+| `$a`             | Waarde van de variabele a |
+| `$(( $a + $b ))` | Tel de waarden op     |
+
 ## For Loop
 
 ```bash
-for i in {1..5}
-do
+for ((i=1; i<=5; i++)); do
   echo "Nummer $i"
 done
 ```
 
-| Vorm                    | Betekenis   | Wanneer gebruiken                               |
-|-------------------------|-------------|-------------------------------------------------|
-| `for i in 1 2 3`        | vaste lijst | eenvoudige herhaling                            |
-| `for i in {1..5}`       | bereik      | tellen                                          |
-| `for file in *.txt`     | bestanden   | alle bestanden die eindigen op .txt in deze map |
-| `for ((i=0; i<5; i++))` | C-stijl     | gevorderd                                       |
+| Vorm                | Betekenis   | Wanneer gebruiken                               |
+|---------------------|-------------|-------------------------------------------------|
+| `for i in 1 2 3`    | vaste lijst | eenvoudige herhaling                            |
+| `for i in {1..5}`   | bereik      | tellen                                          |
+| `for file in *.txt` | bestanden   | alle bestanden die eindigen op .txt in deze map |
 
-## While Loop
+## While Loop *(modern Bash)*
 
 ```bash
 count=1
-while [ $count -le 5 ]
-do
+while (( count <= 5 )); do
   echo "Telling: $count"
   ((count++))
 done
@@ -138,11 +204,24 @@ done
 
 ## Functies
 
+### Basis functie
+
 ```bash
 functie_naam() {
   echo "Dit is een functie"
 }
+
 functie_naam
+```
+
+### Functie met parameters
+
+```bash
+groet() {
+  echo "Hallo $1"
+}
+
+groet Maes
 ```
 
 | Syntax          | Betekenis           | Opmerking          |
