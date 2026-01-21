@@ -37,6 +37,7 @@ last_modified: 2026-01-14 11:20:09 +0100
 1. Apache > Start
 2. MySQL > Start > Admin
 
-**Bij error: MySQL shutdown unexcpectedly, ...**{: .badText }
-1. Open task manager ctrl, shift, esc.
+**Bij error: MySQL shutdown unexcpectedly, ...**{: .badText }  
+**MySQL stopt meteen nadat je op de start knop gedrukt hebt**{: .badText }
+1. Open Task Manager (ctrl-shift-esc).
 2. Alles met SQL sluiten.
