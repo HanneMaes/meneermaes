@@ -158,7 +158,7 @@ Math.floor(-2.9); // -3
 
 {% include callout.html type='info' content='
 `Math.floor()` is een JavaScript-functie die een getal naar beneden afrondt naar het dichtstbijzijnde gehele getal.
-%}
+' %}
 
 “Floor” kan je zien als de vloer: alles wat erboven zweeft, valt naar beneden.
 
