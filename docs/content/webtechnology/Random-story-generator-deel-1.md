@@ -108,7 +108,7 @@ Let komt van het Engels en betekent **laat** of **toestaan**.
 Bijvoorbeeld `let y = 10;` of **Let’s give y a value of 10**”.
 
 
-**Var**
+### Var *(niet gebruiken)*
 
 ```javascript
 var x = 5;
@@ -151,7 +151,7 @@ Math.floor(4.9);  // 4
 Math.floor(4.1);  // 4
 Math.floor(4.0);  // 4
 
-# Negatieve getallen
+// Negatieve getallen
 Math.floor(-2.1); // -3
 Math.floor(-2.9); // -3
 ```
