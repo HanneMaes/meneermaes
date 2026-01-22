@@ -141,8 +141,8 @@ x = "vijf"; // nu een string
 
 {% include callout.html type='info' content='
 In JavaScript moet je geen datatype kiezen bij het aanmaken van een variabele omdat JavaScript dynamisch getypeerd is.  
-Dat betekent dat het datatype automatisch bepaald wordt door de waarde die je erin stopt, en dat dat type later zelfs kan veranderen.' 
-%}
+Dat betekent dat het datatype automatisch bepaald wordt door de waarde die je erin stopt, en dat dat type later zelfs kan veranderen.
+' %}
 
 ## Getallen afronden
 
