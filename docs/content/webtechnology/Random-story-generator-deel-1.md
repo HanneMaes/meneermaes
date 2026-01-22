@@ -93,16 +93,6 @@ Variabelen zijn een essentieel concept in programmeren en worden gebruikt om geg
 In JavaScript worden variabelen gedeclareerd met het sleutelwoord `var`, `let` of `const`.
 ' %}
 
-## Var
-
-```javascript
-var x = 5;
-```
-
-{% include callout.html type='info' content='
-Dit is de **oude manier** van variabelen declareren in JavaScript en wordt **niet** vaak meer **gebruikt** omdat deze problemen geeft met scope.
-' %}
-
 ## Let
 
 ```javascript
@@ -117,6 +107,17 @@ Dit is de **moderne manier** van variabelen declareren.
 Let komt van het Engels en betekent **laat** of **toestaan**.  
 Bijvoorbeeld `let y = 10;` of **Let’s give y a value of 10**”.
 
+
+### Var
+
+```javascript
+var x = 5;
+```
+
+{% include callout.html type='info' content='
+Dit is de **oude manier** van variabelen declareren in JavaScript en wordt **niet** vaak meer **gebruikt** omdat deze problemen geeft met scope.
+' %}
+
 ## Const
 
 ```javascript
@@ -127,15 +128,20 @@ const pi = 3.14;
 Met `const` declareer je een **constante variabele**, dit je zeggen dat je de variabelen later in je code niet meer kan veranderen.
 ' %}
 
-## Getallen
+## Datatypes
 
 ```javascript
-let naam = "Maes";
-let level = 100;
+let naam = "Maes";       // string
+let level = 100;         // number
+let isLeerkracht = true; // boolean
+
+let x = 5;       // number
+x = "vijf";      // nu een string
 ```
 
 {% include callout.html type='info' content='
-Om tekst in een variabele te steken gebruik je `"` symbolen.
-' %}
+In JavaScript moet je geen datatype kiezen bij het aanmaken van een variabele omdat JavaScript dynamisch getypeerd is.  
+Dat betekent dat het datatype automatisch bepaald wordt door de waarde die je erin stopt, en dat dat type later zelfs kan veranderen.' 
+%}
 
 **Declareer een variabele die een getal opslaat, en declareer een variabelen die een tekst op slaat en steek deze op meerdere plaatsen in je verhaal.**
