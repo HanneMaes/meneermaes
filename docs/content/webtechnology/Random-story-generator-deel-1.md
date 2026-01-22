@@ -108,7 +108,7 @@ Let komt van het Engels en betekent **laat** of **toestaan**.
 Bijvoorbeeld `let y = 10;` of **Let’s give y a value of 10**”.
 
 
-### Var
+**Var**
 
 ```javascript
 var x = 5;
@@ -135,13 +135,31 @@ let naam = "Maes";       // string
 let level = 100;         // number
 let isLeerkracht = true; // boolean
 
-let x = 5;       // number
-x = "vijf";      // nu een string
+let x = 5;  // number
+x = "vijf"; // nu een string
 ```
 
 {% include callout.html type='info' content='
 In JavaScript moet je geen datatype kiezen bij het aanmaken van een variabele omdat JavaScript dynamisch getypeerd is.  
 Dat betekent dat het datatype automatisch bepaald wordt door de waarde die je erin stopt, en dat dat type later zelfs kan veranderen.' 
 %}
+
+## Getallen afronden
+
+```javascript
+Math.floor(4.9);  // 4
+Math.floor(4.1);  // 4
+Math.floor(4.0);  // 4
+
+# Negatieve getallen
+Math.floor(-2.1); // -3
+Math.floor(-2.9); // -3
+```
+
+{% include callout.html type='info' content='
+`Math.floor()` is een JavaScript-functie die een getal naar beneden afrondt naar het dichtstbijzijnde gehele getal.
+%}
+
+“Floor” kan je zien als de vloer: alles wat erboven zweeft, valt naar beneden.
 
 **Declareer een variabele die een getal opslaat, en declareer een variabelen die een tekst op slaat en steek deze op meerdere plaatsen in je verhaal.**
