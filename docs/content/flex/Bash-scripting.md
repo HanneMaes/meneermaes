@@ -153,35 +153,30 @@ $(( $a + $b ))
 naam="Maes"
 leeftijd=21
 
+# [[ ... ]] Voor strings, bestanden en logische tests
 if [[ $naam == "Maes" ]]; then
   echo "Naam klopt"
 fi
 
-if (( age -eq 21 )); then
+# (( ... )) Voor rekenkundige vergelijkingen
+# Geen gebruik van $ voor de variabele
+if (( leeftijd == 21 )); then
   echo "Leeftijd klopt"
 fi
 
 
 ```
 
-### Getallen
-
-| Operator | Betekenis             | Staat voor            |
-|----------|-----------------------|-----------------------|
-| `-eq`    | gelijk aan            | equal                 |
-| `-ne`    | niet gelijk aan       | not equal             |
-| `-lt`    | kleiner dan           | less than             |
-| `-le`    | kleiner of gelijk aan | less than or equal    |
-| `-gt`    | groter dan            | greater than          |
-| `-ge`    | groter of gelijk aan  | greater than or equal |
-
-### Strings
-
 | Operator   | Betekenis   |
 | ---------- | ----------- |
-| `$a == $b` | Gelijk aan  |
-| `-z $a`    | Leeg        |
-| `-n $a`    | Niet leeg   |
+| `==`     | gelijk aan            |
+| `!=`     | niet gelijk aan       |
+| `<`      | kleiner dan           |
+| `<=`     | kleiner of gelijk aan |
+| `>`      | groter dan            |
+| `>=`     | groter of gelijk aan  |
+| `-z $a`    | String: leeg        |
+| `-n $a`    | String: niet leeg   |
 
 ## For Loop
 
