@@ -96,37 +96,6 @@ echo "Hallo, $gebruikersnaam! Welkom bij mijn Bash-script."
 | `read -s wachtwoord`    | verborgen invoer                  | s = silent |
 | `read -r tekst`         | geen escape-interpretatie bij `\` | r = raw    |
 
-## If-statement *(modern Bash)*
-
-```bash
-naam="Maes"
-
-if [[ $naam == "Maes" ]]; then
-  echo "Je bent de beste leerkracht!"
-else
-  echo "Wie ben jij?"
-fi
-```
-
-### Getallen
-
-| Operator | Betekenis             | Staat voor            |
-|----------|-----------------------|-----------------------|
-| `-eq`    | gelijk aan            | equal                 |
-| `-ne`    | niet gelijk aan       | not equal             |
-| `-lt`    | kleiner dan           | less than             |
-| `-le`    | kleiner of gelijk aan | less than or equal    |
-| `-gt`    | groter dan            | greater than          |
-| `-ge`    | groter of gelijk aan  | greater than or equal |
-
-### Strings
-
-| Operator   | Betekenis   |
-| ---------- | ----------- |
-| `$a == $b` | Gelijk aan  |
-| `-z $a`    | Leeg        |
-| `-n $a`    | Niet leeg   |
-
 ## Wiskundige berekeningen
 
 Wiskundige berekeningen zet je tussen `(( ... ))`.
@@ -177,6 +146,42 @@ $(( $a + $b ))
 | `a`              | De string "a"             |
 | `$a`             | Waarde van de variabele a |
 | `$(( $a + $b ))` | Tel de waarden op     |
+
+## If-statement *(modern Bash)*
+
+```bash
+naam="Maes"
+leeftijd=21
+
+if [[ $naam == "Maes" ]]; then
+  echo "Naam klopt"
+fi
+
+if (( age -eq 21 )); then
+  echo "Leeftijd klopt"
+fi
+
+
+```
+
+### Getallen
+
+| Operator | Betekenis             | Staat voor            |
+|----------|-----------------------|-----------------------|
+| `-eq`    | gelijk aan            | equal                 |
+| `-ne`    | niet gelijk aan       | not equal             |
+| `-lt`    | kleiner dan           | less than             |
+| `-le`    | kleiner of gelijk aan | less than or equal    |
+| `-gt`    | groter dan            | greater than          |
+| `-ge`    | groter of gelijk aan  | greater than or equal |
+
+### Strings
+
+| Operator   | Betekenis   |
+| ---------- | ----------- |
+| `$a == $b` | Gelijk aan  |
+| `-z $a`    | Leeg        |
+| `-n $a`    | Niet leeg   |
 
 ## For Loop
 
