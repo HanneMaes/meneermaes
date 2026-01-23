@@ -163,8 +163,6 @@ fi
 if (( leeftijd == 21 )); then
   echo "Leeftijd klopt"
 fi
-
-
 ```
 
 | Operator   | Betekenis   |
@@ -175,8 +173,8 @@ fi
 | `<=`     | kleiner of gelijk aan |
 | `>`      | groter dan            |
 | `>=`     | groter of gelijk aan  |
-| `-z $a`    | String: leeg        |
-| `-n $a`    | String: niet leeg   |
+| `-z $a`    | **String:** leeg        |
+| `-n $a`    | **String:** niet leeg   |
 
 ## For Loop
 
