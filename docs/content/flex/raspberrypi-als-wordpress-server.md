@@ -9,7 +9,7 @@ Een CMS (Content Management System) is software waarmee je een **website kan beh
 
 Via een CMS heb je een website waarbij jij, of de persoon of het bedrijf waarvoor je de website maakt, **de inhoud kan beheren via een UI**, in plaats van HTML-bestanden te moeten schrijven en uploaden.
 
-## Voordelen van WordPress
+## Voordelen van WordPress{: goodText }
 
 - Open-source en gratis
 - Grote community van ontwikkelaars:  
@@ -20,7 +20,7 @@ Via een CMS heb je een website waarbij jij, of de persoon of het bedrijf waarvoo
   *Kennis ervan is een concrete meerwaarde voor webdevelopers*  
   *Veel freelance en professionele opdrachten draaien rond WordPress*
 
-## Nadelen van WordPress
+## Nadelen van WordPress{: badText }
 
 - WordPress websites zijn groter:  
   *Het gebruikt een databse*  
@@ -62,5 +62,6 @@ Een Raspberry Pi gebruiken als Wordpress server heeft grote educatieve waarde:
 - Een commerciële dienst die WordPress voor jou host
 - Beperkte vrijheid, zeker in de gratis en goedkope formules
 - Minder controle over code, plugins en data
+
 
 
