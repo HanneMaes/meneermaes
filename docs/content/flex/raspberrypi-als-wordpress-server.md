@@ -1,4 +1,7 @@
 ---
+title: Raspberry Pi als Wordpress Server
+created: 2026-01-27T15:28:48+01:00
+---
 
 Vandaag draait ongeveer **40% van alle websites wereldwijd** op WordPress.  
 Dat maakt het veruit het meest gebruikte CMS ter wereld. Van kleine hobbyprojecten tot professionele platforms.
@@ -62,6 +65,7 @@ Een Raspberry Pi gebruiken als Wordpress server heeft grote educatieve waarde:
 - Een commerciële dienst die WordPress voor jou host
 - Beperkte vrijheid, zeker in de gratis en goedkope formules
 - Minder controle over code, plugins en data
+
 
 
 
