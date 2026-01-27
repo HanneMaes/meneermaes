@@ -42,7 +42,7 @@ created: Wed, sep 11, 2024  10:47:23 PM
 
 [Raspberry Pi als server](raspberrypi-als-server)
 
-[Raspberry Pi als Wordpress server]()
+[Raspberry Pi als Wordpress server](raspberrypi-als-wordpress-server)
 
 # Webtechnology
 
