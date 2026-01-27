@@ -6,6 +6,8 @@ created: Thu, jan 27, 2026  14:20:23 PM
 
 # Wat is Wordpress
 
+![Wordpress logo](images/wordpress.png)
+
 WordPress is een open-source **contentmanagementsysteem (CMS)** waarmee je websites kan bouwen en beheren zonder alles van nul te moeten programmeren.
 
 Vandaag draait ongeveer **40% van alle websites wereldwijd** op WordPress.  
@@ -28,5 +30,6 @@ Een Raspberry Pi gebruiken als Wordpress server heeft grote educatieve waarde:
   Een Raspberry Pi is goedkoop, energiezuinig en perfect voor experimenten en leren.
 
 ## WordPress.org vs WordPress.com
+
 
 
