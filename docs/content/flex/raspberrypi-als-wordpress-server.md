@@ -1,10 +1,6 @@
 ---
-
 title: Raspberry Pi als Wordpress Server
-
-last\_modified: 2026-01-06 14:04:05 +0100
-
-created: Wed, sep 11, 2024  10:47:23 PM
-
+last_modified: 2025-03-17 09:25:30 +0200
+created: Thu, jan 27, 2026  14:20:23 PM
 ---
 
