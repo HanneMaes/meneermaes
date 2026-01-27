@@ -22,23 +22,23 @@ Via een CMS heb je een website waarbij jij, of de persoon of het bedrijf waarvoo
 ## Voordelen van WordPress
 
 - Open-source en gratis
-- Grote community van ontwikkelaars:
+- Grote community van ontwikkelaars:  
   *Duizenden thema’s en plugins*
 - Veel documentatie en ondersteuning online
-- Relevant op de arbeidsmarkt:
+- Relevant op de arbeidsmarkt:  
   *WordPress wordt massaal gebruikt in de praktijk*  
   *Kennis ervan is een concrete meerwaarde voor webdevelopers*  
   *Veel freelance en professionele opdrachten draaien rond WordPress*
 
 ## Nadelen van WordPress
 
-- WordPress websites zijn groter
+- WordPress websites zijn groter:  
   *Het gebruikt een databse*  
   *Het voert PHP-code uit op elke pagina*  
-- Veiligheid vraagt aandacht
+- Veiligheid vraagt aandacht:  
   *Populair doelwit voor aanvallen*
   *Slechte plugins of verouderde installaties vormen risico’s*
-- Prestatieproblemen
+- Prestatieproblemen:  
   *Te veel plugins kunnen een site traag maken*  
   *Thema’s zijn vaak zwaar en inefficiënt*  
 
@@ -51,14 +51,14 @@ Veel gebruikers denken dat WordPress codevrij is, maar in de realiteit blijft ke
 ## Waarom WordPress hosten op je eigen Raspberry Pi
 
 Een Raspberry Pi gebruiken als Wordpress server heeft grote educatieve waarde:
-- **Volledige controle**
-  Je beheert zelf het besturingssysteem, de webserver, de database en WordPress. Niets is verborgen.
-- **Digitale autonomie**
-  Je bent niet afhankelijk van grote platformen of cloudproviders. Je begrijpt waar je data staat en hoe die wordt beheerd.
-- **Geen hosting geheimen meer**
-  Je leert wat hosting écht betekent: configuratie, beveiliging, updates en foutopsporing.
-- **Kosten en duurzaamheid**
-  Een Raspberry Pi is goedkoop, energiezuinig en perfect voor experimenten en leren.
+- Volledige controle.  
+  *Je beheert zelf het besturingssysteem, de webserver, de database en WordPress. Niets is verborgen.*
+- Digitale autonomie:
+  *Je bent niet afhankelijk van grote platformen of cloudproviders. Je begrijpt waar je data staat en hoe die wordt beheerd.*
+- Geen hosting geheimen meer:
+  *Je leert wat hosting écht betekent: configuratie, beveiliging, updates en foutopsporing.*
+- Kosten en duurzaamheid:
+  *Een Raspberry Pi is goedkoop, energiezuinig en perfect voor experimenten en leren.*
 
 ## WordPress.org vs WordPress.com
 
@@ -72,3 +72,4 @@ Een Raspberry Pi gebruiken als Wordpress server heeft grote educatieve waarde:
 - Een commerciële dienst die WordPress voor jou host
 - Beperkte vrijheid, zeker in de gratis en goedkope formules
 - Minder controle over code, plugins en data
+
