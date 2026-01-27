@@ -72,5 +72,3 @@ Een Raspberry Pi gebruiken als Wordpress server heeft grote educatieve waarde:
 - Een commerciële dienst die WordPress voor jou host
 - Beperkte vrijheid, zeker in de gratis en goedkope formules
 - Minder controle over code, plugins en data
-
-
