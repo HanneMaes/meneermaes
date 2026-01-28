@@ -3,6 +3,12 @@ title: Raspberry Pi als Wordpress Server
 created: 2026-01-27T15:28:48+01:00
 ---
 
+# Wat is Wordpress
+
+![Wordpress logo](images/wordpress.png)
+
+WordPress is een open-source **contentmanagementsysteem (CMS)** waarmee je websites kan bouwen en beheren zonder alles van nul te moeten programmeren.
+
 Vandaag draait ongeveer **40% van alle websites wereldwijd** op WordPress.  
 Dat maakt het veruit het meest gebruikte CMS ter wereld. Van kleine hobbyprojecten tot professionele platforms.
 
@@ -65,6 +71,7 @@ Een Raspberry Pi gebruiken als Wordpress server heeft grote educatieve waarde:
 - Een commerciële dienst die WordPress voor jou host
 - Beperkte vrijheid, zeker in de gratis en goedkope formules
 - Minder controle over code, plugins en data
+
 
 
 
