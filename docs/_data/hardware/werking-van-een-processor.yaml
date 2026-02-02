@@ -1,0 +1,33 @@
+title: De werking van een processor
+punten:
+  - desc: "Zoekstrategie: Zoektermen & bronnen"
+    max: 3
+  - desc: "Zoekstrategie: Criteria"
+    max: 4
+  - desc: "Vragen deel 1: Wat is een processor"
+    max: 2
+  - desc: "Vragen deel 2: Von Neumann-architectuur"
+    max: 3
+  - desc: "Vragen deel 3: Interne opbouw van de processor"
+    max: 5
+  - desc: "Vragen deel 4: Werking van de processor"
+    max: 3
+  - desc: "Vragen deel 5: Processor in de praktijk"
+    max: 3
+  - desc: "Reflectie"
+    max: 3
+doelen:
+  - nr: "BV3_04.01"
+    desc: "De leerlingen gebruiken courante functionaliteiten van vergelijkbare toepassingen om digitale inhouden te creëren."
+  - nr: "BV3_13.02"
+    desc: "De leerlingen zetten (meta)cognitieve leer- en regulatiestrategieën in om zich leerinhouden eigen te maken."
+  - nr: "BV3_13.03"
+    desc: "De leerlingen gebruiken school- en vaktaal."
+  - nr: "BV3_13.04"
+    desc: "De leerlingen zoeken doelgericht informatie in diverse bronnen en verwerken die op een kritische en systematische manier."
+  - nr: "BV3_13.04.01 Subdoel 01"
+    desc: "De leerlingen bepalen zelfstandig een geschikte zoekstrategie."
+  - nr: "BV3_13.04. 02 Subdoel 02"
+    desc: "De leerlingen beoordelen op kritische wijze digitale en niet-digitale bronnen op bruikbaarheid op basis van aangereikte criteria."
+  - nr: "BV3_13.04.03 Subdoel 03"
+    desc: "De leerlingen verwerken zelfstandig de informatie uit de bronnen i.f.v. een vooropgesteld doel."

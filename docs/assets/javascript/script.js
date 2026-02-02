@@ -87,11 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ANIMATE OS SCROLL */ 
   /* ***************** */
 
-  // H1
-  document.querySelectorAll('h1').forEach(function(h1) {
-    h1.setAttribute('data-aos', 'fade-right');
-  });
-
   // callout
   document.querySelectorAll('.callout').forEach(function(callout) {
     callout.setAttribute('data-aos', 'zoom-out');
