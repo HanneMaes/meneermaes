@@ -6,7 +6,7 @@
    height="700"
    id="svg2"
    sodipodi:docname="blenderstudiopattern.svg"
-   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -21,12 +21,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.89714286"
-     inkscape:cx="353.34395"
-     inkscape:cy="350.55732"
-     inkscape:window-width="3840"
-     inkscape:window-height="2084"
+     inkscape:cx="353.90127"
+     inkscape:cy="351.11465"
+     inkscape:window-width="3072"
+     inkscape:window-height="1675"
      inkscape:window-x="0"
-     inkscape:window-y="40"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <defs
@@ -89,5 +89,5 @@
      id="rect2"
      x="0"
      y="0"
-     style="display:inline;opacity:0.7" />
+     style="display:inline;opacity:0.3" />
 </svg>
