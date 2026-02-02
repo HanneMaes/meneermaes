@@ -33,9 +33,9 @@ Eerste meeting met de opdrachtgever:
 - Doel en doelgroep van de website bepalen
 - Inhoud en functionaliteiten vastleggen
 
-<span class='deadline'> voorbereiding: 3e week na de Kerstavakantie</span>
+<span class='deadline'> voorbereiding: De week voor de Krokusvakantie</span>
 
-<span class='deadline'> afsprakendocument: 2 weken voor de start van de stage</span>
+<span class='deadline'> afsprakendocument: 2e week na de Krokusvakantie</span>
 
 Cursus: [Kennismakingsgesprek](Kennismakingsgesprek)
 
