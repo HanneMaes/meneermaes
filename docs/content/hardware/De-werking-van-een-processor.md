@@ -41,7 +41,7 @@ Vereisten:
 - Eigen formuleringen (niet kopiëren)
 - Bronnenlijst onderaan
 
-## 1. Zoekstrategie
+## Zoekstrategie
 
 ### Zoektermen & bronnen
 
@@ -65,7 +65,7 @@ Gebruik minstens **3 verschillende bronnen** en beoordeel ze aan de hand van dez
 [Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
 ' %}
 
-## 2. Vragen
+## Vragen
 
 Beantwoord onderstaande vragen op basis van je onderzoek:
 
@@ -106,7 +106,7 @@ Beantwoord onderstaande vragen op basis van je onderzoek:
 - Videobewerking
 - Dagelijks computergebruik?
 
-## 3. Reflectie
+## Reflectie
 
 Beantwoord op het einde deze vragen:
 1. Wat vond je **moeilijk** aan deze opdracht?
