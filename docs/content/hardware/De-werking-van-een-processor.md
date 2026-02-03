@@ -85,8 +85,7 @@ Beantwoord onderstaande vragen op basis van je onderzoek:
 
 ### Deel 3: Interne opbouw van de processor
 
-1. Uit welke onderdelen bestaat een processor?
-2. Wat is de functie van:
+1. Wat is de functie van deze onderdelen van een processor:
 - de ALU?
 - de Control Unit?
 - registers?
