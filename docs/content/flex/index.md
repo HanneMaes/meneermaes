@@ -40,9 +40,9 @@ created: Wed, sep 11, 2024  10:47:23 PM
 
 [De Ethiek van Raspberry Pi](raspberrypi-ethiek)
 
-[Raspberry Pi als server](raspberrypi-als-server)
-
 [Raspberry Pi als Wordpress server](raspberrypi-als-wordpress-server)
+
+[Raspberry Pi als server](raspberrypi-als-server)
 
 # Webtechnology
 
