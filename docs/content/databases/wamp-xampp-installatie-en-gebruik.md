@@ -41,3 +41,7 @@ last_modified: 2026-01-14 11:20:09 +0100
 **MySQL stopt meteen nadat je op de start knop gedrukt hebt**{: .badText }
 1. Open Task Manager (ctrl-shift-esc).
 2. Alles met SQL sluiten.
+
+**Als al de rest niet werkt**{: .badText }  
+1. Uninstall XAMPP
+2. Reinstall XAMPP
