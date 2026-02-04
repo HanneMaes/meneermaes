@@ -112,6 +112,7 @@ Onderzoeksvragen:
 3. Waarom heeft WordPress een **database** nodig?
 4. Wat is de rol van **PHP** binnen WordPress?
 5. Maak een eenvoudig **schema** dat toont hoe deze onderdelen samenwerken.
+6. Wat zijn **VNC**, **SSH** en **Raspberry Pi Connect**? Geef minstens 1 voordeel van elke technologie.
 
 Reflectie:
 1. Welke begrippen waren **nieuw** voor mij?
@@ -161,6 +162,7 @@ Documenteer het **volledige verloop** duidelijk in je logboek, inclusief gemaakt
 ## Puntenverdeling
 
 {% include punten.html data='raspberry-pi-als-wordpress-server' %}
+
 
 
 
