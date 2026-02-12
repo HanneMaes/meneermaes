@@ -129,3 +129,91 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
   <li><a href="#"></a></li>
 </ul>
 ```
+
+## Niveau 4: Attributen en tekst
+
+### Oef 4.1: Link met tekst
+```html
+<a href="contact.html">Contacteer ons</a>
+
+### Oef 4.2: Afbeelding
+```html
+<img src="image.jpg" alt="Beschrijving">
+```
+
+### Oef 4.3: Genummerde classes
+```html
+<ul>
+  <li class="item-1"></li>
+  <li class="item-2"></li>
+  <li class="item-3"></li>
+  <li class="item-4"></li>
+</ul>
+```
+
+## Niveau 5: Groepering
+
+### Oef 5.1: Header + nav
+```html
+<header>
+  <h1></h1>
+  <nav>
+    <ul>
+      <li></li>
+      <li></li>
+    </ul>
+  </nav>
+</header>
+```
+
+### Oef 5.2: Artikelstructuur
+```html
+<article>
+  <h2></h2>
+  <p></p>
+  <p></p>
+  <a href="#"></a>
+</article>
+```
+
+## Niveau 6: Uitdagingen
+
+### Oef 6.1: Drie kaarten
+```html
+<section class="cards">
+  <div class="card">
+    <h3></h3>
+    <p></p>
+    <a href="#"></a>
+  </div>
+  <div class="card">
+    <h3></h3>
+    <p></p>
+    <a href="#"></a>
+  </div>
+  <div class="card">
+    <h3></h3>
+    <p></p>
+    <a href="#"></a>
+  </div>
+</section>
+```
+
+### Oef 6.2: Complexe layout
+```html
+<div class="container">
+  <header>
+    <h1></h1>
+  </header>
+  <main>
+    <section>
+      <h2></h2>
+      <p></p>
+      <p></p>
+    </section>
+  </main>
+  <footer>
+    <p></p>
+  </footer>
+</div>
+```
