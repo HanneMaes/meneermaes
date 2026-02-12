@@ -75,3 +75,29 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ```html
 <h1>Welkom</h1>
 ```
+
+## Niveau 2: Meerdere elementen
+
+### Oef 2.1: Siblings
+```html
+<h1></h1>
+<p></p>
+
+
+### Oef 2.2: Genest
+```html
+<ul>
+  <li></li>
+</ul>
+```
+
+### Oef 2.3: Meerdere kinderen
+```html
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+```
+
+
