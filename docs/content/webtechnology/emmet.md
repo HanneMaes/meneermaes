@@ -89,6 +89,44 @@ Geeft:
 </div>
 ```
 
+**Praktisch voorbeeld**
+Stel je wil dit:
+```html
+<section>
+  <div>
+    <h3></h3>
+    <p></p>
+  </div>
+  <div>
+    <h3></h3>
+    <p></p>
+  </div>
+</section>
+```
+
+Dit kan enkel via groeperingen:
+```HTML
+section>div*2>(h3+p)
+```
+Emmet begrijpt nu:
+1. Maak een section
+2. Maak daarin 2 divs
+3. In elke div komt het blok (h3+p)
+Haakjes zorgen ervoor dat h3+p binnen elke div terechtkomt.
+
+Wanneer **moet** je groeperen?
+- Wanneer je meerdere siblings samen wil vermenigvuldigen
+- Wanneer je een complexe structuur als één geheel wil behandelen
+- Wanneer je vermenigvuldiging niet alleen op het laatste element mag slaan
+
+**Wat is het verschil tussen deze 2 Emmet regels?**
+```html
+div>(h1+p)*2
+```
+```html
+div>h1+p*2
+```
+
 # Oefeningen
 
 Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
@@ -277,9 +315,11 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 
 # Wedstrijd: Wie wordt de Emmet KONING?
 
+Je zal HTML-code te zien krijgen en moet deze zo efficiënt weten te schrijven via Emmet.
+
 ## Puntensysteem
 
 | --- | --- |
-| Je kan de gegeven code typen via Emmet | `+1 punt` |
+| Je kan de gegeven code schrijven via Emmet | `+1 punt` |
 | Je kan de gegeven code schrijven in de **kortste expressie** | `+1 punt` |
 | Je kan **als snelste** de gegeven code typen via Emmet in **1 regel** | `+ 1 punt` |
