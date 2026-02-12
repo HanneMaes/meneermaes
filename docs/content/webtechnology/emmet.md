@@ -34,7 +34,7 @@ Wat je typt is belangrijk, maar **waar je het typt** is minstens even belangrijk
 - Of je binnen een bepaald HTML-element werkt
 - Of je in een attribuut zit
 
-# De Bouwstenen
+## De Bouwstenen
 
 Belangrijkste bouwstenen:  
 {% raw %}
@@ -54,6 +54,40 @@ Iedereen krijgt een bouwsteen toegewegen:
 1. Surf naar [https://www.emmet.io/](https://www.emmet.io/) *(de officiele website)*.
 2. Zoek uit wat de functie van je bouwsteen is.
 3. Geef een kleine demo aan de klas.
+
+## Groepen `()`
+
+Groepen zorgen ervoor dat je structuur niet uit elkaar valt als een kaartenhuis zodra je begint te vermenigvuldigen of siblings toe te voegen. Denk eraan als **wiskunde voor HTML: eerst wat tussen de haakjes staat, daarna de rest**.
+
+Zonder groepering werkt Emmet strikt van **links naar rechts**. **Met groepering zeg jij: deze blokken horen samen**.
+
+**Simpel voorbeeld:**
+Emmet zonder groepering:
+```html
+div>h1+p*2
+```
+Geeft:
+```html
+<div>
+  <h1></h1>
+  <p></p>
+  <p></p>
+</div>
+```
+
+Emmet met groepering:
+```html
+div>(h1+p)*2
+```
+Geeft:
+```html
+<div>
+  <h1></h1>
+  <p></p>
+  <h1></h1>
+  <p></p>
+</div>
+```
 
 # Oefeningen
 
