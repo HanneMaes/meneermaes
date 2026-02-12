@@ -56,12 +56,22 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 
 ## Niveau 1: Opwarming
 
-### Oef 1.1
+### Oef 1.1: Element
 ```html
 <p></p>
 ```
 
-### Oef 1.2
+### Oef 1.2: Element met class
 ```html
 <div class="container"></div>
+```
+
+### Oef 1.3: Element met id
+```html
+<section id="about"></section>
+```
+
+### Oef 1.4: Element met tekst
+```html
+<h1>Welkom</h1>
 ```
