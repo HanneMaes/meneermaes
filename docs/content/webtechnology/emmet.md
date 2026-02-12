@@ -36,16 +36,19 @@ Wat je typt is belangrijk, maar **waar je het typt** is minstens even belangrijk
 
 # De Bouwstenen
 
-Belangrijkste bouwstenen:
+Belangrijkste bouwstenen:  
+{% raw %}
 | Shortcut | Functie |
-| --- | --- |
-| `>` | child *(geneste elementen)* |
-| `+` | sibling *(naast elkaar)* |
-| `*` | vermenigvuldiging |
-| `.` | class |
-| `#` | id |
+| ---- | --- |
+| `>`  | child *(geneste elementen)* |
+| `+`  | sibling *(naast elkaar)* |
+| `*`  | vermenigvuldiging |
+| `.`  | class |
+| `#`  | id |
 | `{}` | tekstinhoud |
 | `[]` | attributen |
+| `$`  | nummering |
+{% endraw %}
 
 Iedereen krijgt een bouwsteen toegewegen:  
 1. Surf naar [https://www.emmet.io/](https://www.emmet.io/) *(de officiele website)*.
