@@ -62,21 +62,25 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ## Niveau 1: Opwarming
 
 ### Oef 1.1: Element
+
 ```html
 <p></p>
 ```
 
 ### Oef 1.2: Element met class
+
 ```html
 <div class="container"></div>
 ```
 
 ### Oef 1.3: Element met id
+
 ```html
 <section id="about"></section>
 ```
 
 ### Oef 1.4: Element met tekst
+
 ```html
 <h1>Welkom</h1>
 ```
@@ -84,12 +88,14 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ## Niveau 2: Meerdere elementen
 
 ### Oef 2.1: Siblings
+
 ```html
 <h1></h1>
 <p></p>
 ```
 
 ### Oef 2.2: Genest
+
 ```html
 <ul>
   <li></li>
@@ -97,6 +103,7 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ```
 
 ### Oef 2.3: Meerdere kinderen
+
 ```html
 <ul>
   <li></li>
@@ -108,6 +115,7 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ## Niveau 3: Combinaties
 
 ### Oef 3.1: Structuur met siblings én nesting
+
 ```html
 <div class="card">
   <h2></h2>
@@ -116,6 +124,7 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ```
 
 ### Oef 3.2: Navigatie
+
 ```html
 <nav>
   <ul>
@@ -127,6 +136,7 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ```
 
 ### Oef 3.3: Links
+
 ```html
 <ul>
   <li><a href="#"></a></li>
@@ -138,16 +148,19 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ## Niveau 4: Attributen en tekst
 
 ### Oef 4.1: Link met tekst
+
 ```html
 <a href="contact.html">Contacteer ons</a>
 ```
 
 ### Oef 4.2: Afbeelding
+
 ```html
 <img src="image.jpg" alt="Beschrijving">
 ```
 
 ### Oef 4.3: Genummerde classes
+
 ```html
 <ul>
   <li class="item-1"></li>
@@ -160,6 +173,7 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ## Niveau 5: Groepering
 
 ### Oef 5.1: Header + nav
+
 ```html
 <header>
   <h1></h1>
@@ -173,6 +187,7 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ```
 
 ### Oef 5.2: Artikelstructuur
+
 ```html
 <article>
   <h2></h2>
@@ -185,6 +200,7 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ## Niveau 6: Uitdagingen
 
 ### Oef 6.1: Drie kaarten
+
 ```html
 <section class="cards">
   <div class="card">
@@ -206,6 +222,7 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ```
 
 ### Oef 6.2: Complexe layout
+
 ```html
 <div class="container">
   <header>
