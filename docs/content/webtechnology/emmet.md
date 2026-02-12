@@ -11,5 +11,16 @@ veel typwerk. Emmet is een hulpmiddel dat dit werk drastisch versnelt.
 
 Emmet is een plugin (ingebouwd in o.a. VS Code) waarmee je **via afkortingen automatisch HTML- en CSS-code genereert**.
 
+Je typt:
+```html
+ul>li*3
+```
 
-
+Je krijgt:
+```html
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+```
