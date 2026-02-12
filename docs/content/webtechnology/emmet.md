@@ -105,7 +105,7 @@ Stel je wil dit:
 ```
 
 Dit kan enkel via groeperingen:
-```HTML
+```html
 section>div*2>(h3+p)
 ```
 Emmet begrijpt nu:
