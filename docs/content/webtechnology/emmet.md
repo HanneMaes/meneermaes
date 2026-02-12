@@ -247,6 +247,5 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 
 | --- | --- |
 | Je kan de gegeven code typen via Emmet | `+1 punt` |
-| Je kan de gegeven code typen via Emmet in **1 regel** | `+2 punt` |
-| Je kan de gegeven code schrijven in de **kortste expressie** | `+3 punten` |
-| Je kan **als snelste** de gegeven code typen via Emmet in **1 regel** | `1 bonuspunt` |
+| Je kan de gegeven code schrijven in de **kortste expressie** | `+1 punt` |
+| Je kan **als snelste** de gegeven code typen via Emmet in **1 regel** | `+ 1 punt` |
