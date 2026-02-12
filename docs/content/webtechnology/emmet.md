@@ -6,6 +6,8 @@ last_modified: 2026-02-12 10:53:01 +0100
 
 # Wat is Emmet?
 
+![alt text](images/emmet.png){: width='150px' }
+
 HTML schrijven is vaak repetitief: veel tags, veel geneste structuren, 
 veel typwerk. Emmet is een hulpmiddel dat dit werk drastisch versnelt.
 
