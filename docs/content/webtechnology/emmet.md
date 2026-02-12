@@ -52,13 +52,16 @@ Iedereen krijgt een bouwsteen toegewegen:
 
 # Oefeningen
 
-Probeer de gegeven HTML-code zo efficient mogelijk te schrijven.
+Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 
 ## Niveau 1: Opwarming
 
-- ```html
+**1**
+```html
 <p></p>
 ```
-- ```html
+
+**2**
+```html
 <div class="container"></div>
 ```
