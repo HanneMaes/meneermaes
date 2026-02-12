@@ -82,7 +82,7 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ```html
 <h1></h1>
 <p></p>
-
+```
 
 ### Oef 2.2: Genest
 ```html
@@ -100,4 +100,32 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 </ul>
 ```
 
+## Niveau 3: Combinaties
 
+### Oef 3.1: Structuur met siblings én nesting
+```html
+<div class="card">
+  <h2></h2>
+  <p></p>
+</div>
+```
+
+### Oef 3.2: Navigatie
+```html
+<nav>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</nav>
+```
+
+### Oef 3.3: Links
+```html
+<ul>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+</ul>
+```
