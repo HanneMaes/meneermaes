@@ -135,6 +135,7 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 ### Oef 4.1: Link met tekst
 ```html
 <a href="contact.html">Contacteer ons</a>
+```
 
 ### Oef 4.2: Afbeelding
 ```html
