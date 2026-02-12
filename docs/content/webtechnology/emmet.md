@@ -11,20 +11,6 @@ veel typwerk. Emmet is een hulpmiddel dat dit werk drastisch versnelt.
 
 Emmet is een plugin (ingebouwd in o.a. VS Code) waarmee je **via afkortingen automatisch HTML- en CSS-code genereert**.
 
-Je typt:
-```html
-ul>li*3
-```
-
-Je krijgt:
-```html
-<ul>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
-```
-
 ## Voordelen
 
 - Sneller werken
@@ -39,7 +25,14 @@ Emmet is standaard ingebouwd in de meeste code editors, zo niet in er waarschijn
 2. Druk op Tab of Enter
 3. De code wordt gegenereerd
 
-Emmet is **contextgevoelig** ...
+Emmet is **contextgevoelig**.  
+Wat je typt is belangrijk, maar **waar je het typt** is minstens even belangrijk.
+
+**Dezelfde afkorting** kan dus iets totaal **anders opleveren** afhankelijk van:
+- Of je in een HTML-bestand zit
+- Of je in een CSS-bestand zit
+- Of je binnen een bepaald HTML-element werkt
+- Of je in een attribuut zit
 
 # De Bouwstenen
 
@@ -52,8 +45,9 @@ Belangrijkste bouwstenen:
 - `{}` tekstinhoud
 - `[]` attributen
 
-Iedereen krijgt een bouwsteen toegewegen.  
+Iedereen krijgt een bouwsteen toegewegen:  
 1. Surf naar [https://www.emmet.io/](https://www.emmet.io/) *(de officiele website)*.
 2. Zoek uit wat de functie van je bouwsteen is.
 3. Geef een kleine demo aan de klas.
 
+# Oefeningen
