@@ -37,8 +37,8 @@ Wat je typt is belangrijk, maar **waar je het typt** is minstens even belangrijk
 # De Bouwstenen
 
 Belangrijkste bouwstenen:
-- `>` child (geneste elementen)
-- `+` sibling (naast elkaar)
+- `>` child *(geneste elementen)*
+- `+` sibling *(naast elkaar)*
 - `*` vermenigvuldiging
 - `.` class
 - `#` id
