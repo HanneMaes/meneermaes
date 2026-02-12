@@ -126,6 +126,8 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 # Verdieping 
 
+[Cookies](cookies)
+
 [Emmet](emmet)
 
 [Markdown](../markdown-webtechnology/index)
