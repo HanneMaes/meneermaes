@@ -43,7 +43,7 @@ Emmet is **contextgevoelig** ...
 
 # De Bouwstenen
 
-Belangrijkste bouwstenen.
+Belangrijkste bouwstenen:
 - `>` child (geneste elementen)
 - `+` sibling (naast elkaar)
 - `*` vermenigvuldiging
