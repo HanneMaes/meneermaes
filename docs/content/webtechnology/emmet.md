@@ -51,3 +51,14 @@ Iedereen krijgt een bouwsteen toegewegen:
 3. Geef een kleine demo aan de klas.
 
 # Oefeningen
+
+Probeer de gegeven HTML-code zo efficient mogelijk te schrijven.
+
+## Niveau 1: Opwarming
+
+- ```html
+<p></p>
+```
+- ```html
+<div class="container"></div>
+```
