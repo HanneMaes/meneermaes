@@ -56,12 +56,12 @@ Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.
 
 ## Niveau 1: Opwarming
 
-**1**
+### Oef 1.1
 ```html
 <p></p>
 ```
 
-**2**
+### Oef 1.2
 ```html
 <div class="container"></div>
 ```
