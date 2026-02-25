@@ -1,7 +1,7 @@
 ---
 title: Emmet
 created: 2026-02-12 10:53:01 +0100
-last_modified: 2026-02-12 10:53:01 +0100
+last_modified: 2026-02-25 15:11:21 +0100
 ---
 
 # Wat is Emmet?
@@ -321,7 +321,7 @@ Je zal HTML-code te zien krijgen en moet deze zo efficiënt weten te schrijven v
 
 ## Puntensysteem
 
-| --- | --- |
-| Je kan de gegeven code schrijven via Emmet | `+1 punt` |
-| Je kan de gegeven code schrijven in de **kortste expressie** | `+1 punt` |
-| Je kan **als snelste** de gegeven code typen via Emmet in **1 regel** | `+ 1 punt` |
+| ---                                                                   | ---       |
+| Je kan de gegeven code schrijven via Emmet                            | `+1 punt` |
+| Je kan de gegeven code schrijven in de **kortste expressie**          | `+1 punt` |
+| Je kan **als snelste** de gegeven code typen via Emmet in **1 regel** | `+1 punt` |
