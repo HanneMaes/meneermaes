@@ -10,6 +10,8 @@ created: 2025-01-19 15:37:26 +0200
 
 [De Rechbank](https://hannemaes.notion.site/De-rechtbank-1A-1ca2b51142cd8065a6ecf25f4ed06881?pvs=4)
 
+[Privacy op het Internet](https://www.notion.so/hannemaes/Privacy-op-het-Internet-1ed2b51142cd81e58d70d75a6a2c5793?source=copy_link)
+
 [Friend Zone Escape Game](https://www.notion.so/hannemaes/Friend-Zone-Escape-Game-1ed2b51142cd81988f63fd012202d43a?pvs=4)
 
 [Reclamewijsheid & E-commerce](https://www.notion.so/hannemaes/Reclamewijsheid-E-commerce-1ed2b51142cd810eb32cf210aa55bd88?pvs=4)
