@@ -163,6 +163,69 @@ Documenteer het **volledige verloop** duidelijk in je logboek, inclusief gemaakt
 
 {% include punten.html data='raspberry-pi-als-wordpress-server' %}
 
+# Van lege installatie naar echte website
+
+Nu je WordPress hebt geïnstalleerd, gaan we experimenteren.  
+Niet meteen plugins installeren. Niet meteen thema’s aanpassen.
+
+Eerst begrijpen we de basis.
+
+## Stap 1: Minimalistische website maken
+
+Maak een eenvoudige website met:
+- Een homepage
+- Minstens 2 andere pagina's
+- Een blogbericht
+
+Beperk jezelf tot:
+- Standaard thema's
+- Geen page builders
+- Geen extra plugins
+
+## Stap 2: Verdiepend onderzoek
+
+Kies **minstens 2** van onderstaande uitbreidingen.
+
+Je onderzoekt:
+- Wat het technisch doet
+- Welke risico’s of nadelen eraan verbonden zijn
+- Hoe je het correct installeert of configureert
+
+### Lijst Geavanceerde Opties
+
+**Beveiliging**
+- HTTPS installeren (Let’s Encrypt)
+- Firewall configureren
+- WordPress beveiligen tegen brute force
+- Bestandsrechten onderzoeken
+
+**Prestatie**
+- Caching plugin testen
+- Database optimaliseren
+- Afbeeldingen comprimeren
+- Meten met PageSpeed
+
+**Netwerk & Externe Toegang**
+- Port forwarding instellen
+- Dynamic DNS gebruiken
+- Website extern bereikbaar maken
+- Uitleggen waarom dit risico’s inhoudt
+
+**Database Diepgaander**
+- Tabellenstructuur analyseren
+- Zelf SQL-query uitvoeren
+- Back-up en restore uitvoeren
+
+**Thema-aanpassing**
+- Child theme maken
+- CSS aanpassen
+- PHP-wijziging maken
+
+**Automatisatie**
+- Automatische back-ups
+- Cron jobs begrijpen
+- Updates automatiseren
+
 
 
 
