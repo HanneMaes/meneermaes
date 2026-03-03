@@ -160,29 +160,20 @@ fi
 echo -e "${DARK_GREY}Starting MAESBOT"
 echo ""
 
+OPEN_FOLDER_FILE="/tmp/.open_folder"
+
 # Use docker compose to run
 # --rm: Remove container after exit
 # maesbot: Service name from docker-compose.yml
 $COMPOSE_CMD run --rm maesbot
 
-if [ -f "$OPEN_FOLDER_FILE" ]; then
-  FOLDER_PATH=$(cat "$OPEN_FOLDER_FILE")
-  rm -f "$OPEN_FOLDER_FILE"
-
-  # Convert container path to host path (existing logic)
-  FOLDER_PATH="${FOLDER_PATH/\/data\/input\//\/home\/hanne\/Documents\/meneermaes\/docs\/_data\/}"
-  FOLDER_PATH="${FOLDER_PATH/\/data\/private\//\/home\/hanne\/Documents\/Nextcloud\/School\/Automatisatie\/maesbot-private-data\/}"
-
-  echo -e "${DARK_GREY}Fixing file permissions in: ${FOLDER_PATH}${NC}"
-
-  echo ""
-  echo -e "${DARK_GREY}Opening: ${FOLDER_PATH}${NC}"
-
-fi
+# After $COMPOSE_CMD run --rm maesbot, add:
+echo "Checking for file: $OPEN_FOLDER_FILE"
+ls -la /tmp/.open_folder 2>/dev/null && echo "File exists" || echo "File NOT found"
+cat /tmp/.open_folder 2>/dev/null && echo "File contents above" || echo "Could not read file"
 
 # ###########################################################################
 # Check if we should open a folder (post-execution)
-OPEN_FOLDER_FILE=".open_folder"
 
 if [ -f "$OPEN_FOLDER_FILE" ]; then
   FOLDER_PATH=$(cat "$OPEN_FOLDER_FILE")

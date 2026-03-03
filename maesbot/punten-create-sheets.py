@@ -274,7 +274,7 @@ def save_folder_to_open(folder_path):
 
     if in_docker:
         # In Docker - save the container path (init.sh will convert it)
-        with open("/app/.open_folder", "w") as f:
+        with open("/tmp/.open_folder", "w") as f:
             f.write(folder_path)  # Save as-is, don't convert
         print(f"{DARK_GREY}Folder will open automatically after script completes")
     else:
