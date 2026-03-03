@@ -9,7 +9,7 @@ punten:
   - desc: "Vragen deel 2: Von Neumann-architectuur"
     max: 3
   - desc: "Vragen deel 3: Interne opbouw van de processor"
-    max: 5
+    max: 4
   - desc: "Vragen deel 4: Werking van de processor"
     max: 3
   - desc: "Vragen deel 5: Processor in de praktijk"
