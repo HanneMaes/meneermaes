@@ -49,3 +49,7 @@ created: 2024-03-13T10:31:28+01:00
 ## Privacy
 
 [Contra Chrome: een kritische webcomic over Google Chrome](https://contrachrome.com/)
+
+## Grafisch Design
+
+[Blender3D](https://hannemaes.notion.site/Blender-Primitive-Animals-a2a10975022142e7b167b9029a6d7831)
