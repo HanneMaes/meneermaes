@@ -30,6 +30,12 @@ Formulier: **[Vragen bij het thuis verwerken van leerstof](https://docs.google.c
 - *User:* root
 - *Password:* leeg laten
 
+*Web root folder:*
+- *WAMP:* `C:\wamp64\www`
+- *XAMPP:* `C:\xampp\htdocs`
+
+*Localhost webpage:* `http://localhost/`
+
 ### 4. Normalisatie
 
 [Cursus Normalisatie](https://bazandpoort.notion.site/Cursus-Normalisatie-5652b49414ca4d2798cdc3e91cb621ae?pvs=4)
