@@ -273,6 +273,17 @@ Wat gebeurt er technisch?
 
 ### Het DNS (Domain Name System) protocol
 
+DNS zorgt ervoor dat **domeinnamen worden vertaald naar IP-adressen**.
+
+Voorbeeld:
+1. Wanneer je typt: `meneermaes.be`
+2. Moet de computer eerst weten welk IP-adres daarbij hoort, bijvoorbeeld: `142.250.74.14`
+DNS zorgt voor die vertaling.
+
+DNS werkt een beetje zoals de contactenlijst in een smartphone.  
+Je onthoudt de naam "Mama", maar de telefoon weet dat het nummer bijvoorbeeld `0475 12 34 56` is.  
+Zo onthouden mensen websitenamen, terwijl computers werken met IP-adressen.
+
 ## Foutdetectie
 
 Tijdens het transport van data kunnen fouten optreden. Dit kan bijvoorbeeld gebeuren door:
