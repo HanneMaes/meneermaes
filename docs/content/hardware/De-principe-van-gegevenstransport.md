@@ -214,3 +214,25 @@ Voorbeeld:
   Als het aantal niet klopt, weet de computer dat er een fout in de transmissie is gebeurd.
 
 Parity kan fouten **detecteren**, maar meestal **niet corrigeren**.
+
+### Checksums en CRC
+
+Voor **grotere hoeveelheden data** worden **complexere controles** gebruikt.  
+
+Voor het verzenden:
+1. Wordt een wiskundige berekening uitgevoerd op de data.  
+2. De uitkomst van deze berekening wordt meegestuurd met het datapakket.
+
+Wanneer de ontvanger het pakket ontvangt:
+1. Voert hij dezelfde berekening opnieuw uit
+2. Vergelijkt hij de uitkomst met de meegestuurde waarde
+3. Als beide waarden niet overeenkomen, betekent dit dat de data onderweg veranderd is en dat het pakket opnieuw moet worden verzonden.
+
+Foutdetectie wordt voortdurend gebruikt in het dagelijks gebruik van technologie:
+- Bij het streamen van video’s (YouTube, Netflix)
+- Bij het downloaden van bestanden
+- Bij online gaming
+- Bij wifi-verbindingen
+- Bij bestandsoverdracht tussen computers
+
+Dankzij foutdetectie kunnen computers controleren of de ontvangen data nog correct is en indien nodig **automatisch een nieuw pakket aanvragen**.
