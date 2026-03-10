@@ -14,7 +14,7 @@ Stel je voor dat je een WhatsApp-bericht naar je vriend stuurt. Dat bericht moet
 **Kan je een voorbeeld geven uit je iegen app-wereld waar data snel of foutloos moet aankomen, en wat er fout loopt als dit niet gebeurt?**
 " %}
 
-# Het versturen van data
+# Data opgedeeld
 
 ## Bits
 
@@ -26,7 +26,7 @@ Alles op een computer *(tekst, foto, video, geluid)* wordt uiteindelijk vertaald
 Een stukje van een groter bestand, zoals een video die in stukjes wordt verstuurd.  
 Een pakket is een **verzameling bits** die samen een klein deel van een bestand of bericht vormen. Computers **splitsen grote bestanden op** in pakketten zodat ze sneller en betrouwbaarder kunnen worden verzonden.
 
-**Een pakket bestaat uit minstens 2 delen:**
+> Een pakket bestaat uit minstens 2 delen:
 
 ### Payload
 
@@ -68,11 +68,11 @@ Op het moederbord zijn het dunne koperbaantjes die over het PCB (de groene print
 
 ## De verschillende bussen
 
-- Data-bus:  
+- **Data-bus:**  
   De snelweg waar bits over rijden (de eigenlijke info).
-- Adres-bus:  
+- **Adres-bus:**  
   Verkeersborden die aangeven naar welk huis (geheugenadres) een bit moet.
-- Control-bus:  
+- **Control-bus:**  
   Verkeerslichten en verkeersregels, bijvoorbeeld: “CPU, stop met lezen, RAM mag nu schrijven”.
 
 Voorbeeld:  
@@ -82,15 +82,13 @@ Je speelt een nummer op je computer of gsm. De CPU vraagt RAM om het bestand tij
 
 Bits kunnen op verschillende manieren over de bus reizen:
 
-- **Serieel transport:**
-  1 bit tegelijk, zoals een smalle weg waar auto’s één voor één over moeten.  
-  Voordeel: betrouwbaar, minder kans op botsingen.  
-  Voorbeeld: USB-stick of Wi-Fi. Bits reizen een voor een van of naar de computer.
-- **Parallel transport:**
-  Meerdere bits tegelijk, zoals een brede snelweg met meerdere rijstroken.  
-  Voordeel: sneller.  
-  Nadeel: als de weg te lang of te smal is, kunnen auto’s botsen.  
-  Voorbeeld: de data-bus van het moederbord, die RAM en CPU snel laat communiceren.
+- **Serieel transport: 1 bit tegelijk**, zoals een smalle weg waar auto’s één voor één over moeten.  
+  - Voordeel: betrouwbaar, minder kans op botsingen.  
+  - Voorbeeld: USB-stick of Wi-Fi. Bits reizen een voor een van of naar de computer.
+- **Parallel transport: meerdere bits tegelijk**, zoals een brede snelweg met meerdere rijstroken.  
+  - Voordeel: sneller.  
+  - Nadeel: als de weg te lang of te smal is, kunnen auto’s botsen.  
+  - Voorbeeld: de data-bus van het moederbord, die RAM en CPU snel laat communiceren.
 
 ### Serieel of parallel?
 
@@ -102,6 +100,6 @@ Bits kunnen op verschillende manieren over de bus reizen:
 ### Vuistregel
 
 {% include toggle.html title="Kan je een vuistregel verzinnen om te bepalen welke data serieel en welke parallel worden verzonden?" content="
-- Alles wat via kabel of draadloos naar buiten gaat: serieel.
-- Alles binnen de computer zelf: meestal parallel.
+- Alles wat via kabel of draadloos **naar buiten** gaat: **serieel**.
+- Alles **binnen** de computer/smartphone zelf: meestal **parallel**.
 " %}
