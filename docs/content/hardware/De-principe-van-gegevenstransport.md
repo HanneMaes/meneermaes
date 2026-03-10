@@ -51,11 +51,37 @@ Dit kan een stukje van een video zijn, een fragment van een bestand, of een stuk
 
 Alles wat je doet op een computer of laptop gaat via "digitale snelwegen": **de bus van het moederbord**. Stel je voor dat je laptop een mini-stad is, met wegen, verkeerslichten en voertuigen.
 
-**De verschillende bussen**
+**Waar zitten ze?**
+De bussen zitten ingebakken in het moederbord zelf.  
+Ze verbinden bijvoorbeeld:
+- CPU ↔ RAM (meestal via de front-side bus of moderne DMI/PCIe lanes)
+- CPU ↔ uitbreidingskaarten (via PCIe-bussen)
+- CPU ↔ opslagapparaten (via SATA of NVMe PCIe lanes)
+
+In moderne moederborden zijn het dunne kopersporen op het PCB (de groene printplaat).
+
+[Moederbord bussen](images/bussen.png)
+
+## De verschillende bussen
+
 - Data-bus: de snelweg waar bits over rijden (de eigenlijke info).
 - Adres-bus: verkeersborden die aangeven naar welk huis (geheugenadres) een bit moet.
 - Control-bus: verkeerslichten en verkeersregels, bijvoorbeeld: “CPU, stop met lezen, RAM mag nu schrijven”.
 
-Voorbeeld:
-
+Voorbeeld:  
 Je speelt een nummer op je computer of gsm. De CPU vraagt RAM om het bestand tijdelijk te bewaren. Bits reizen van opslag → RAM → CPU.
+
+## Serieel vs parallel transport
+
+Bits kunnen op verschillende manieren over de bus reizen:
+
+**Serieel transport:** 1 bit tegelijk, zoals een smalle weg waar auto’s één voor één over moeten.
+
+Voordeel: betrouwbaar, minder kans op botsingen.  
+Voorbeeld: USB-stick of Wi-Fi. Bits reizen een voor een van of naar de computer.
+
+**Parallel transport:** meerdere bits tegelijk, zoals een brede snelweg met meerdere rijstroken.
+
+Voordeel: sneller.  
+Nadeel: als de weg te lang of te smal is, kunnen auto’s botsen.  
+Voorbeeld: de data-bus van het moederbord, die RAM en CPU snel laat communiceren.
