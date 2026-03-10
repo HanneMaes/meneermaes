@@ -236,3 +236,12 @@ Foutdetectie wordt voortdurend gebruikt in het dagelijks gebruik van technologie
 - Bij bestandsoverdracht tussen computers
 
 Dankzij foutdetectie kunnen computers controleren of de ontvangen data nog correct is en indien nodig **automatisch een nieuw pakket aanvragen**.
+
+## Kort samengevat
+
+| --- | --- |
+| Routers | Sturen datapakketten door naar hun volgende bestemming, zoals verkeersagenten. |
+| Servers | Slaan data op en verdelen deze verder, zoals postkantoren. |
+| Datapakketten | Kunnen verschillende routes volgen maar worden bij de bestemming opnieuw correct samengesteld. |
+| Protocollen | Bepalen hoe data wordt verzonden en gecontroleerd. |
+| Foutdetectie | Zorgt ervoor dat fouten tijdens het transport worden opgespoord. |
