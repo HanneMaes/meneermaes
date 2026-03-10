@@ -47,3 +47,15 @@ Dit kan een stukje van een video zijn, een fragment van een bestand, of een stuk
 | Header  | Informatie over bestemming, volgorde en type data |
 | Payload | De eigenlijke data die het pakket vervoert        |
 
+# Systeembus
+
+Alles wat je doet op een computer of laptop gaat via "digitale snelwegen": **de bus van het moederbord**. Stel je voor dat je laptop een mini-stad is, met wegen, verkeerslichten en voertuigen.
+
+**De verschillende bussen**
+- Data-bus: de snelweg waar bits over rijden (de eigenlijke info).
+- Adres-bus: verkeersborden die aangeven naar welk huis (geheugenadres) een bit moet.
+- Control-bus: verkeerslichten en verkeersregels, bijvoorbeeld: “CPU, stop met lezen, RAM mag nu schrijven”.
+
+Voorbeeld:
+
+Je speelt een nummer op je computer of gsm. De CPU vraagt RAM om het bestand tijdelijk te bewaren. Bits reizen van opslag → RAM → CPU.
