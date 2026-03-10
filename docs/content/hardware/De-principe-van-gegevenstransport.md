@@ -212,6 +212,8 @@ Je kan dit vergelijken met taalregels in een gesprek. Als twee personen dezelfde
 
 Een van de **belangrijkste protocollen** op het internet is **TCP/IP**.
 
+### Het TCP/IP protocol
+
 TCP/IP staat voor:
 - Transmission Control Protocol (TCP)
 - Internet Protocol (IP)
@@ -230,6 +232,46 @@ TCP (Transmission Control Protocol) zorgt voor:
 - Het opnieuw samenstellen van de pakketten in de juiste volgorde
 
 **Als een pakket verloren gaat, vraagt TCP automatisch om het pakket opnieuw te versturen.**
+
+### HTTP (HyperText Transfer Protocol)
+
+HTTP is het protocol dat gebruikt wordt om **webpagina’s van een webserver naar een browser te sturen**.  
+Wanneer je een website opent, vraagt je browser de inhoud van de website op bij een server via HTTP.
+
+**Hoe werkt het?**
+1. Je typt een website in de browser, bijvoorbeeld `meneermaes.be`.
+2. De browser stuurt een HTTP-request naar de webserver.
+3. De server stuurt een HTTP-response terug met de webpagina.
+4. De browser toont de HTML, afbeeldingen en andere inhoud.
+
+HTTP is **niet versleuteld**, dus in theorie kan iemand op hetzelfde netwerk de data onderscheppen.
+
+### HTTPS (HyperText Transfer Protocol Secure)
+
+HTTPS is de **veilige versie van HTTP**.  
+Het werkt hetzelfde, maar de verbinding is versleuteld.  
+Deze beveiliging gebeurt met behulp van TLS (Transport Layer Security).
+
+De versleuteling zorgt ervoor dat:
+- Niemand de inhoud van de communicatie kan lezen
+- Niemand de data onderweg kan aanpassen
+
+HTTPS wordt gebruikt bij websites waar privacy belangrijk is, zoals:
+- Online bankieren
+- Webshops
+- Sociale media
+- E-maildiensten
+
+Je kan HTTPS herkennen aan:
+- Een slotje in de browser
+- Een adres dat begint met `https://`
+
+Wat gebeurt er technisch?
+1. Browser en server maken een beveiligde verbinding.
+2. Ze wisselen encryptiesleutels uit.
+3. Daarna wordt alle communicatie versleuteld verstuurd.
+
+### Het DNS (Domain Name System) protocol
 
 ## Foutdetectie
 
