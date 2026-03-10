@@ -110,7 +110,7 @@ Wanneer data via een netwerk of het internet wordt verstuurd, gebeurt dit niet a
 
 ## Router
 
-> Een router is een netwerkapparaat dat datapakketten doorstuurt naar hun volgende bestemming.
+> Een router is een netwerkapparaat dat **datapakketten doorstuurt** naar hun volgende bestemming.
 
 De verkeersagenten van het internet:  
 Je kan een router vergelijken met een verkeersagent op een kruispunt. Net zoals een verkeersagent beslist welke auto welke richting uit mag, beslist een router via welke route een datapakket verder moet reizen.
@@ -122,3 +122,47 @@ Wanneer je een foto verstuurt via WhatsApp:
 4. Uiteindelijk komen ze aan bij de server van WhatsApp.
 
 Elke router kijkt naar het **bestemmingsadres in de header van het pakket** en beslist welke weg het pakket verder moet volgen.
+
+## Server
+
+> Een server is een **computer die diensten of gegevens aanbiedt** aan andere computers op het netwerk.
+
+Het postkantoor van het internet:  
+Net zoals een postkantoor pakketten tijdelijk bewaart, sorteert en verder verdeelt, kan een server:
+- Datapakketten ontvangen
+- Gegevens opslaan
+- Pakketten doorsturen naar andere computers
+
+{% include toggle.html title="Kan je geven van servers en welke taken ze uitvoeren?" content="
+- Instagram servers bewaren foto's en video's.
+- Spotify servers sturen muziek naar je toestel.
+- Game servers verbinden spelers met elkaar in een online spel.
+" %}
+
+## Verschillende routes voor verschillende pakketten
+
+Datapakketten hoeven niet altijd dezelfde route te volgen.
+
+Je kan dit vergelijken met pakketjes die via verschillende wegen naar hetzelfde huis worden gebracht. Als er ergens file is, kan een pakket een andere weg nemen.
+
+In een netwerk kan dit bijvoorbeeld gebeuren wanneer:
+- Een netwerkverbinding tijdelijk druk is
+- Een router overbelast is
+- Een kortere route beschikbaar wordt
+
+Hierdoor kan het gebeuren dat:
+- pakket 1 via route A reist
+- pakket 2 via route B reist
+- ...
+
+Wanneer alle pakketten **aankomen** bij de bestemming, **zet de computer ze opnieuw in de juiste volgorde** zodat het oorspronkelijke bestand weer correct wordt opgebouwd.
+
+## Netwerkprotocollen
+
+Om ervoor te zorgen dat al deze processen correct verlopen, gebruiken computers netwerkprotocollen.
+
+> Een protocol is een set afspraken of **regels die bepalen hoe computers met elkaar communiceren**.
+
+Je kan dit vergelijken met taalregels in een gesprek. Als twee personen dezelfde taal spreken en dezelfde regels volgen, begrijpen ze elkaar. Computers hebben ook zulke regels nodig.
+
+Een van de **belangrijkste protocollen** op het internet is **TCP/IP**.
