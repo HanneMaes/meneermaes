@@ -58,7 +58,7 @@ Ze verbinden bijvoorbeeld:
 - CPU ↔ uitbreidingskaarten (via PCIe-bussen)
 - CPU ↔ opslagapparaten (via SATA of NVMe PCIe lanes)
 
-In moderne moederborden zijn het dunne kopersporen op het PCB (de groene printplaat).
+Op het moederbord zijn het dunne koperbaantjes die over het PCB (de groene printplaat) lopen. Ze lijken op kleine lijntjes die van het ene component naar het andere gaan.
 
 ![Moederbord bussen](images/bussen.png)
 
