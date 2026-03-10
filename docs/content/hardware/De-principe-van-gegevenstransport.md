@@ -103,3 +103,22 @@ Bits kunnen op verschillende manieren over de bus reizen:
 - Alles wat via kabel of draadloos **naar buiten** gaat: **serieel**.
 - Alles **binnen** de computer/smartphone zelf: meestal **parallel**.
 " %}
+
+# Gegevenstransport buiten de computer
+
+Wanneer data via een netwerk of het internet wordt verstuurd, gebeurt dit niet als één groot geheel. De informatie wordt eerst opgedeeld in kleine datapakketten. Elk pakket bevat een stukje van het oorspronkelijke bestand en kan apart worden verstuurd.
+
+## Router
+
+> Een router is een netwerkapparaat dat datapakketten doorstuurt naar hun volgende bestemming.
+
+De verkeersagenten van het internet:  
+Je kan een router vergelijken met een verkeersagent op een kruispunt. Net zoals een verkeersagent beslist welke auto welke richting uit mag, beslist een router via welke route een datapakket verder moet reizen.
+
+Wanneer je een foto verstuurt via WhatsApp:
+1. Je smartphone verdeelt de foto in meerdere datapakketten. 
+2. Deze pakketten vertrekken via je wifi-router.
+3. Routers op het internet sturen de pakketten telkens door naar de volgende router.
+4. Uiteindelijk komen ze aan bij de server van WhatsApp.
+
+Elke router kijkt naar het **bestemmingsadres in de header van het pakket** en beslist welke weg het pakket verder moet volgen.
