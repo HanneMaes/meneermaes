@@ -85,3 +85,6 @@ Bits kunnen op verschillende manieren over de bus reizen:
   Voordeel: sneller.  
   Nadeel: als de weg te lang of te smal is, kunnen auto’s botsen.  
   Voorbeeld: de data-bus van het moederbord, die RAM en CPU snel laat communiceren.
+
+**Serieel vs parallel?**
+{% include toggle.html title="Wat is gegevenstransport?" content="test" %}
