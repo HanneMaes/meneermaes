@@ -170,7 +170,7 @@ Niet meteen plugins installeren. Niet meteen thema’s aanpassen.
 
 Eerst begrijpen we de basis.
 
-## Stap 1: Minimalistische website maken
+## Stap 1: Groepswerk minimalistische website maken
 
 Maak een eenvoudige website met:
 - Een homepage
@@ -181,6 +181,8 @@ Beperk jezelf tot:
 - Standaard thema's
 - Geen page builders
 - Geen extra plugins
+
+{% include punten.html data='minimalistische-wordpress-website' %}
 
 ## Stap 2: Verdiepend onderzoek
 
@@ -225,6 +227,7 @@ Je onderzoekt:
 - Automatische back-ups
 - Cron jobs begrijpen
 - Updates automatiseren
+
 
 
 
