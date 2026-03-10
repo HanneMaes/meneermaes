@@ -133,7 +133,7 @@ Net zoals een postkantoor pakketten tijdelijk bewaart, sorteert en verder verdee
 - Gegevens opslaan
 - Pakketten doorsturen naar andere computers
 
-{% include toggle.html title="Kan je geven van servers en welke taken ze uitvoeren?" content="
+{% include toggle.html title="Kan je voorbeelden geven van servers en welke taken ze uitvoeren?" content="
 - Instagram servers bewaren foto's en video's.
 - Spotify servers sturen muziek naar je toestel.
 - Game servers verbinden spelers met elkaar in een online spel.
@@ -281,7 +281,7 @@ Voorbeeld:
 DNS zorgt voor die vertaling.
 
 DNS werkt een beetje zoals de contactenlijst in een smartphone.  
-Je onthoudt de naam "Mama", maar de telefoon weet dat het nummer bijvoorbeeld `0475 12 34 56` is.  
+Je onthoudt de naam `Mama`, maar de telefoon weet dat het nummer bijvoorbeeld `0475 12 34 56` is.  
 Zo onthouden mensen websitenamen, terwijl computers werken met IP-adressen.
 
 ## Foutdetectie
