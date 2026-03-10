@@ -157,6 +157,51 @@ Hierdoor kan het gebeuren dat:
 
 Wanneer alle pakketten **aankomen** bij de bestemming, **zet de computer ze opnieuw in de juiste volgorde** zodat het oorspronkelijke bestand weer correct wordt opgebouwd.
 
+### Ik dacht dat data over het internet altijs serieel werd verzonden?
+
+Het lijkt tegenstrijdig, maar dat komt omdat **serieel transport** en **verschillende routes** op het internet over **twee verschillende niveaus** gaan.
+
+**Serieel transport: hoe bits fysiek worden verstuurd:**  
+Wanneer we zeggen dat moderne verbindingen serieel zijn, bedoelen we dat de bits één voor één over een verbinding worden gestuurd.
+
+Bijvoorbeeld bij:
+- Ethernet
+- Glasvezel
+- Wi-Fi
+
+Daar worden bits dus na elkaar verstuurd: `1 → 0 → 1 → 1 → 0 → 0 → 1`.
+
+Dus op **één kabel** of verbinding gaan de bits sequentieel (achter elkaar).
+
+**Datapakketten: hoe informatie wordt georganiseerd:**  
+Voordat data verstuurd wordt, wordt een groot bestand eerst opgedeeld in pakketten.
+
+Een video kan worden opgesplitst in:
+- Pakket 1
+- Pakket 2
+- ...
+
+Elk pakket bevat:
+- Een header (adres en info)
+- Een payload (stukje van de video)
+
+Die pakketten worden daarna via het netwerk **serieel** verstuurd.  
+Hoewel de **bits binnen één verbinding serieel** worden verstuurd, kunnen verschillende **pakketten via verschillende routes door het internet**reizen.
+
+**Waarom?**  
+Omdat het internet uit heel veel routers en verbindingen bestaat. Routers kiezen telkens de beste volgende stap.
+
+**Samengevat:**  
+Serieel transport
+- Gaat over hoe bits over een verbinding reizen
+- Bits worden één voor één verstuurd
+
+Netwerkroutes
+- Gaat over hoe pakketten door het internet bewegen
+- Verschillende pakketten kunnen via verschillende routes reizen
+
+Deze twee ideeën bestaan tegelijk, maar op **verschillende niveaus van de communicatie**.
+
 ## Netwerkprotocollen
 
 Om ervoor te zorgen dat al deze processen correct verlopen, gebruiken computers netwerkprotocollen.
