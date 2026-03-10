@@ -87,4 +87,4 @@ Bits kunnen op verschillende manieren over de bus reizen:
   Voorbeeld: de data-bus van het moederbord, die RAM en CPU snel laat communiceren.
 
 **Serieel vs parallel?**
-{% include toggle.html title="Wat is gegevenstransport?" content="test" %}
+{% include toggle.html title="RAM-gebruik tijdens gamen?" content="Parallel" %}
