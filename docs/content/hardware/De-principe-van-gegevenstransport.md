@@ -99,7 +99,7 @@ Bits kunnen op verschillende manieren over de bus reizen:
 {% include toggle.html title="Bluetooth gamecontroller?" content="**Serieel** draadloos" %}
 {% include toggle.html title="Cloud-sync apps (Google Drive, OneDrive, Nextcloud)?" content="Alles wat over internet gaat, wordt **serieel** verzonden via kabel of Wi-Fi." %}
 
-#### Vuistregel
+### Vuistregel
 
 {% include toggle.html title="Kan je een vuistregel verzinnen om te bepalen welke data serieel en welke parallel worden verzonden?" content="
 - Alles wat via kabel of draadloos naar buiten gaat: serieel.
