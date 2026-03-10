@@ -170,7 +170,7 @@ Niet meteen plugins installeren. Niet meteen thema’s aanpassen.
 
 Eerst begrijpen we de basis.
 
-## Stap 1: Groepswerk minimalistische website maken
+## Opdracht: Groepswerk minimalistische website maken
 
 Maak een eenvoudige website met:
 - Een homepage
@@ -227,6 +227,7 @@ Je onderzoekt:
 - Automatische back-ups
 - Cron jobs begrijpen
 - Updates automatiseren
+
 
 
 
