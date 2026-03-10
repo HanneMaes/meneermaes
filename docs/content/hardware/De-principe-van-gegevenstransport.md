@@ -86,5 +86,13 @@ Bits kunnen op verschillende manieren over de bus reizen:
   Nadeel: als de weg te lang of te smal is, kunnen auto’s botsen.  
   Voorbeeld: de data-bus van het moederbord, die RAM en CPU snel laat communiceren.
 
-**Serieel vs parallel?**
+### Serieel of parallel?
+
 {% include toggle.html title="RAM-gebruik tijdens gamen?" content="Parallel" %}
+{% include toggle.html title="Surfen op internet?" content="Alles wat over internet gaat, wordt **serieel** verzonden via kabel of Wi-Fi." %}
+{% include toggle.html title="Bluetooth gamecontroller?" content="**Serieel** draadloos" %}
+{% include toggle.html title="Cloud-sync apps (Google Drive, OneDrive, Nextcloud)?" content="Alles wat over internet gaat, wordt **serieel** verzonden via kabel of Wi-Fi." %}
+
+**Korte vuistregel:**
+- Alles wat via kabel of draadloos naar buiten gaat: serieel.
+- Alles binnen de computer zelf: meestal parallel.
