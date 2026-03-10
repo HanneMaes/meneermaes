@@ -166,3 +166,51 @@ Om ervoor te zorgen dat al deze processen correct verlopen, gebruiken computers 
 Je kan dit vergelijken met taalregels in een gesprek. Als twee personen dezelfde taal spreken en dezelfde regels volgen, begrijpen ze elkaar. Computers hebben ook zulke regels nodig.
 
 Een van de **belangrijkste protocollen** op het internet is **TCP/IP**.
+
+TCP/IP staat voor:
+- Transmission Control Protocol (TCP)
+- Internet Protocol (IP)
+
+Deze twee protocollen werken samen om datapakketten correct te versturen.
+
+IP (Internet Protocol) zorgt voor:
+- Het adresseren van computers op het netwerk
+- Het bepalen waar een pakket naartoe moet
+
+**Elke computer op het internet heeft een IP-adres**, vergelijkbaar met een huisadres.
+
+TCP (Transmission Control Protocol) zorgt voor:
+- Het opdelen van data in pakketten
+- Het controleren of alle pakketten aankomen
+- Het opnieuw samenstellen van de pakketten in de juiste volgorde
+
+**Als een pakket verloren gaat, vraagt TCP automatisch om het pakket opnieuw te versturen.**
+
+## Foutdetectie
+
+Tijdens het transport van data kunnen fouten optreden. Dit kan bijvoorbeeld gebeuren door:
+- Storing op een kabel
+- Interferentie bij draadloze verbindingen
+- Overbelasting van het netwerk
+- Hardwareproblemen
+
+Daarom gebruiken computers verschillende methodes voor foutdetectie. Hiermee kan de computer controleren of de ontvangen data nog correct is.
+
+### Parity bits
+
+Een parity bit is een eenvoudige methode om fouten te detecteren.
+
+Bij deze methode wordt aan een reeks bits één extra controlebit toegevoegd.  
+Deze controlebit zorgt ervoor dat het aantal 1-bits:
+- Even is (even parity)
+- Of oneven is (odd parity)
+
+Voorbeeld:
+1. Data: `1011001`
+2. Aantal 1's = 4 (even)
+3. Bij even parity voegen we een 0 toe zodat het aantal 1's even blijft.
+4. Verzonden data: `1011001``0`
+5. Wanneer de ontvanger de data ontvangt, telt hij opnieuw het aantal 1’s.
+  Als het aantal niet klopt, weet de computer dat er een fout in de transmissie is gebeurd.
+
+Parity kan fouten **detecteren**, maar meestal **niet corrigeren**.
