@@ -100,8 +100,19 @@ for (var i in list) {
 console.log(text); // Geeft als uitvoer: 1995Electron
 ```
 
-
 # Oefening op het gebruik van arrays
+
+## Oefening 1: Kennismaken met arrays
+
+1. Maak een array met drie fruitsoorten.
+2. Print de array naar de console.
+3. Print het 2e element naar de console.
+4. Print het laatste element maar de console.
+5. Voeg vooraan een element toe.
+6. Verander het laatste element en print dit naar de console.
+7. Maak een webpagina die alle elementen van de array print in een genummerde lijst.
+
+## Oefening 2: Geavanceerde pagina met arrays
 
 Tijdens deze oefening gaan we een lijst laten groeien en krimpen vanuit JavaScript
 
