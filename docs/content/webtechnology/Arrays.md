@@ -37,11 +37,10 @@ console.log(list[99]); // Geeft als uitvoer: undefined
 ```
 
 Willen we een element terugvinden in een array, dan kunnen we daarvoor de methode indexOf gebruiken. IndexOf Geeft de index van de gezochte waarde. Komt het gezochte element niet voor in de array, dan retourneert indexOf de waarde -1:
-
 ```javascript
 let list = [1995, true, "Brendan Eich", 10, "ECMAScript", "Node.js"];
 console.log(list.indexOf(1995)); // Geeft als uitvoer: 0
-console.log(list.indexOf("Brendan Eich")); // Geeft als uitvoer: 1
+console.log(list.indexOf("Brendan Eich")); // Geeft als uitvoer: 2
 console.log(list.indexOf("Brave Browser")); // Geeft als uitvoer: -1
 ```
 
@@ -101,8 +100,19 @@ for (var i in list) {
 console.log(text); // Geeft als uitvoer: 1995Electron
 ```
 
-
 # Oefening op het gebruik van arrays
+
+## Oefening 1: Kennismaken met arrays
+
+1. Maak een array met drie fruitsoorten.
+2. Print de array naar de console.
+3. Print het 2e element naar de console.
+4. Print het laatste element maar de console.
+5. Voeg vooraan een element toe.
+6. Verander het laatste element en print dit naar de console.
+7. Maak een webpagina die alle elementen van de array print in een genummerde lijst.
+
+## Oefening 2: Geavanceerde pagina met arrays
 
 Tijdens deze oefening gaan we een lijst laten groeien en krimpen vanuit JavaScript
 

@@ -110,7 +110,7 @@ Wanneer data via een netwerk of het internet wordt verstuurd, gebeurt dit niet a
 
 ## Router
 
-> Een router is een netwerkapparaat dat datapakketten doorstuurt naar hun volgende bestemming.
+> Een router is een netwerkapparaat dat **datapakketten doorstuurt** naar hun volgende bestemming.
 
 De verkeersagenten van het internet:  
 Je kan een router vergelijken met een verkeersagent op een kruispunt. Net zoals een verkeersagent beslist welke auto welke richting uit mag, beslist een router via welke route een datapakket verder moet reizen.
@@ -122,3 +122,224 @@ Wanneer je een foto verstuurt via WhatsApp:
 4. Uiteindelijk komen ze aan bij de server van WhatsApp.
 
 Elke router kijkt naar het **bestemmingsadres in de header van het pakket** en beslist welke weg het pakket verder moet volgen.
+
+## Server
+
+> Een server is een **computer die diensten of gegevens aanbiedt** aan andere computers op het netwerk.
+
+Het postkantoor van het internet:  
+Net zoals een postkantoor pakketten tijdelijk bewaart, sorteert en verder verdeelt, kan een server:
+- Datapakketten ontvangen
+- Gegevens opslaan
+- Pakketten doorsturen naar andere computers
+
+{% include toggle.html title="Kan je voorbeelden geven van servers en welke taken ze uitvoeren?" content="
+- Instagram servers bewaren foto's en video's.
+- Spotify servers sturen muziek naar je toestel.
+- Game servers verbinden spelers met elkaar in een online spel.
+" %}
+
+## Verschillende routes voor verschillende pakketten
+
+Datapakketten hoeven niet altijd dezelfde route te volgen.
+
+Je kan dit vergelijken met pakketjes die via verschillende wegen naar hetzelfde huis worden gebracht. Als er ergens file is, kan een pakket een andere weg nemen.
+
+In een netwerk kan dit bijvoorbeeld gebeuren wanneer:
+- Een netwerkverbinding tijdelijk druk is
+- Een router overbelast is
+- Een kortere route beschikbaar wordt
+
+Hierdoor kan het gebeuren dat:
+- pakket 1 via route A reist
+- pakket 2 via route B reist
+- ...
+
+Wanneer alle pakketten **aankomen** bij de bestemming, **zet de computer ze opnieuw in de juiste volgorde** zodat het oorspronkelijke bestand weer correct wordt opgebouwd.
+
+### Ik dacht dat data over het internet altijs serieel werd verzonden?
+
+Het lijkt tegenstrijdig, maar dat komt omdat **serieel transport** en **verschillende routes** op het internet over **twee verschillende niveaus** gaan.
+
+**Serieel transport: hoe bits fysiek worden verstuurd:**  
+Wanneer we zeggen dat moderne verbindingen serieel zijn, bedoelen we dat de bits één voor één over een verbinding worden gestuurd.
+
+Bijvoorbeeld bij:
+- Ethernet
+- Glasvezel
+- Wi-Fi
+
+Daar worden bits dus na elkaar verstuurd: `1 → 0 → 1 → 1 → 0 → 0 → 1`.
+
+Dus op **één kabel** of verbinding gaan de bits sequentieel (achter elkaar).
+
+**Datapakketten: hoe informatie wordt georganiseerd:**  
+Voordat data verstuurd wordt, wordt een groot bestand eerst opgedeeld in pakketten.
+
+Een video kan worden opgesplitst in:
+- Pakket 1
+- Pakket 2
+- ...
+
+Elk pakket bevat:
+- Een header (adres en info)
+- Een payload (stukje van de video)
+
+Die pakketten worden daarna via het netwerk **serieel** verstuurd.  
+Hoewel de **bits binnen één verbinding serieel** worden verstuurd, kunnen verschillende **pakketten via verschillende routes door het internet**reizen.
+
+**Waarom?**  
+Omdat het internet uit heel veel routers en verbindingen bestaat. Routers kiezen telkens de beste volgende stap.
+
+**Samengevat:**  
+Serieel transport
+- Gaat over hoe bits over een verbinding reizen
+- Bits worden één voor één verstuurd
+
+Netwerkroutes
+- Gaat over hoe pakketten door het internet bewegen
+- Verschillende pakketten kunnen via verschillende routes reizen
+
+Deze twee ideeën bestaan tegelijk, maar op **verschillende niveaus van de communicatie**.
+
+## Netwerkprotocollen
+
+Om ervoor te zorgen dat al deze processen correct verlopen, gebruiken computers netwerkprotocollen.
+
+> Een protocol is een set afspraken of **regels die bepalen hoe computers met elkaar communiceren**.
+
+Je kan dit vergelijken met taalregels in een gesprek. Als twee personen dezelfde taal spreken en dezelfde regels volgen, begrijpen ze elkaar. Computers hebben ook zulke regels nodig.
+
+Een van de **belangrijkste protocollen** op het internet is **TCP/IP**.
+
+### Het TCP/IP protocol
+
+TCP/IP staat voor:
+- Transmission Control Protocol (TCP)
+- Internet Protocol (IP)
+
+Deze twee protocollen werken samen om datapakketten correct te versturen.
+
+IP (Internet Protocol) zorgt voor:
+- Het adresseren van computers op het netwerk
+- Het bepalen waar een pakket naartoe moet
+
+**Elke computer op het internet heeft een IP-adres**, vergelijkbaar met een huisadres.
+
+TCP (Transmission Control Protocol) zorgt voor:
+- Het opdelen van data in pakketten
+- Het controleren of alle pakketten aankomen
+- Het opnieuw samenstellen van de pakketten in de juiste volgorde
+
+**Als een pakket verloren gaat, vraagt TCP automatisch om het pakket opnieuw te versturen.**
+
+### HTTP (HyperText Transfer Protocol)
+
+HTTP is het protocol dat gebruikt wordt om **webpagina’s van een webserver naar een browser te sturen**.  
+Wanneer je een website opent, vraagt je browser de inhoud van de website op bij een server via HTTP.
+
+**Hoe werkt het?**
+1. Je typt een website in de browser, bijvoorbeeld `meneermaes.be`.
+2. De browser stuurt een HTTP-request naar de webserver.
+3. De server stuurt een HTTP-response terug met de webpagina.
+4. De browser toont de HTML, afbeeldingen en andere inhoud.
+
+HTTP is **niet versleuteld**, dus in theorie kan iemand op hetzelfde netwerk de data onderscheppen.
+
+### HTTPS (HyperText Transfer Protocol Secure)
+
+HTTPS is de **veilige versie van HTTP**.  
+Het werkt hetzelfde, maar de verbinding is versleuteld.  
+Deze beveiliging gebeurt met behulp van TLS (Transport Layer Security).
+
+De versleuteling zorgt ervoor dat:
+- Niemand de inhoud van de communicatie kan lezen
+- Niemand de data onderweg kan aanpassen
+
+HTTPS wordt gebruikt bij websites waar privacy belangrijk is, zoals:
+- Online bankieren
+- Webshops
+- Sociale media
+- E-maildiensten
+
+Je kan HTTPS herkennen aan:
+- Een slotje in de browser
+- Een adres dat begint met `https://`
+
+Wat gebeurt er technisch?
+1. Browser en server maken een beveiligde verbinding.
+2. Ze wisselen encryptiesleutels uit.
+3. Daarna wordt alle communicatie versleuteld verstuurd.
+
+### Het DNS (Domain Name System) protocol
+
+DNS zorgt ervoor dat **domeinnamen worden vertaald naar IP-adressen**.
+
+Voorbeeld:
+1. Wanneer je typt: `meneermaes.be`
+2. Moet de computer eerst weten welk IP-adres daarbij hoort, bijvoorbeeld: `142.250.74.14`
+DNS zorgt voor die vertaling.
+
+DNS werkt een beetje zoals de contactenlijst in een smartphone.  
+Je onthoudt de naam `Mama`, maar de telefoon weet dat het nummer bijvoorbeeld `0475 12 34 56` is.  
+Zo onthouden mensen websitenamen, terwijl computers werken met IP-adressen.
+
+## Foutdetectie
+
+Tijdens het transport van data kunnen fouten optreden. Dit kan bijvoorbeeld gebeuren door:
+- Storing op een kabel
+- Interferentie bij draadloze verbindingen
+- Overbelasting van het netwerk
+- Hardwareproblemen
+
+Daarom gebruiken computers verschillende methodes voor foutdetectie. Hiermee kan de computer controleren of de ontvangen data nog correct is.
+
+### Parity bits
+
+Een parity bit is een eenvoudige methode om fouten te detecteren.
+
+Bij deze methode wordt aan een reeks bits één extra controlebit toegevoegd.  
+Deze controlebit zorgt ervoor dat het aantal 1-bits:
+- Even is (even parity)
+- Of oneven is (odd parity)
+
+Voorbeeld:
+1. Data: `1011001`
+2. Aantal 1's = 4 (even)
+3. Bij even parity voegen we een 0 toe zodat het aantal 1's even blijft.
+4. Verzonden data: `1011001``0`
+5. Wanneer de ontvanger de data ontvangt, telt hij opnieuw het aantal 1’s.
+  Als het aantal niet klopt, weet de computer dat er een fout in de transmissie is gebeurd.
+
+Parity kan fouten **detecteren**, maar meestal **niet corrigeren**.
+
+### Checksums en CRC
+
+Voor **grotere hoeveelheden data** worden **complexere controles** gebruikt.  
+
+Voor het verzenden:
+1. Wordt een wiskundige berekening uitgevoerd op de data.  
+2. De uitkomst van deze berekening wordt meegestuurd met het datapakket.
+
+Wanneer de ontvanger het pakket ontvangt:
+1. Voert hij dezelfde berekening opnieuw uit
+2. Vergelijkt hij de uitkomst met de meegestuurde waarde
+3. Als beide waarden niet overeenkomen, betekent dit dat de data onderweg veranderd is en dat het pakket opnieuw moet worden verzonden.
+
+Foutdetectie wordt voortdurend gebruikt in het dagelijks gebruik van technologie:
+- Bij het streamen van video’s (YouTube, Netflix)
+- Bij het downloaden van bestanden
+- Bij online gaming
+- Bij wifi-verbindingen
+- Bij bestandsoverdracht tussen computers
+
+Dankzij foutdetectie kunnen computers controleren of de ontvangen data nog correct is en indien nodig **automatisch een nieuw pakket aanvragen**.
+
+## Kort samengevat
+
+| --- | --- |
+| Routers | Sturen datapakketten door naar hun volgende bestemming, zoals verkeersagenten. |
+| Servers | Slaan data op en verdelen deze verder, zoals postkantoren. |
+| Datapakketten | Kunnen verschillende routes volgen maar worden bij de bestemming opnieuw correct samengesteld. |
+| Protocollen | Bepalen hoe data wordt verzonden en gecontroleerd. |
+| Foutdetectie | Zorgt ervoor dat fouten tijdens het transport worden opgespoord. |
