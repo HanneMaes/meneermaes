@@ -104,15 +104,15 @@ console.log(text); // Geeft als uitvoer: 1995Electron
 
 | Functie | Code |
 |-----------|---------------|
-| Array declareren | `let list = [1, 2, 3];` |
-| Element opvragen | `list[index]` | 
-| Index zoeken | `list.indexOf(value)` |
-| Element wijzigen | `list[index] = waarde` |
+| Array declareren | `let list = ["waarde0", "waarde1"];` |
+| Element opvragen | `list[0]` | 
+| Index zoeken | `list.indexOf("waarde")` |
+| Element wijzigen | `list[0] = "waarde"` |
 | Lengte van array | `list.length` |
-| Toevoegen **achteraan** | `list.push(value)` |
+| Toevoegen **achteraan** | `list.push("waarde")` |
 | Verwijderen **achteraan** | `list.pop()` | 
 | Verwijderen **vooraan** | `list.shift()` |
-| Toevoegen **vooraan** | `list.unshift(value)` |
+| Toevoegen **vooraan** | `list.unshift("waarde")` |
 | Over array loopen | `for (var i in list)` | 
 
 # Oefeningen
