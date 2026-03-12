@@ -37,11 +37,10 @@ console.log(list[99]); // Geeft als uitvoer: undefined
 ```
 
 Willen we een element terugvinden in een array, dan kunnen we daarvoor de methode indexOf gebruiken. IndexOf Geeft de index van de gezochte waarde. Komt het gezochte element niet voor in de array, dan retourneert indexOf de waarde -1:
-
 ```javascript
 let list = [1995, true, "Brendan Eich", 10, "ECMAScript", "Node.js"];
 console.log(list.indexOf(1995)); // Geeft als uitvoer: 0
-console.log(list.indexOf("Brendan Eich")); // Geeft als uitvoer: 1
+console.log(list.indexOf("Brendan Eich")); // Geeft als uitvoer: 2
 console.log(list.indexOf("Brave Browser")); // Geeft als uitvoer: -1
 ```
 
