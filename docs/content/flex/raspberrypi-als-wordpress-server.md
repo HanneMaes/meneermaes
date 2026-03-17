@@ -196,36 +196,36 @@ Je onderzoekt:
 ### Lijst Geavanceerde Opties
 
 **Categorie 1: Beveiliging**
-- 1.1: HTTPS installeren (Let’s Encrypt)
-- 1.2: Firewall configureren
-- 1.3: WordPress beveiligen tegen brute force
-- 1.4: Bestandsrechten onderzoeken
+- *1.1:* HTTPS installeren (Let’s Encrypt)
+- *1.2:* Firewall configureren
+- *1.3:* WordPress beveiligen tegen brute force
+- *1.4:* Bestandsrechten onderzoeken
 
 **Categorie 2: Prestatie**
-- 2.1: Caching plugin testen
-- 2.2: Database optimaliseren
-- 2.3: Afbeeldingen comprimeren
-- 2.4: Meten met PageSpeed
+- *2.1:* Caching plugin testen
+- *2.2:* Database optimaliseren
+- *2.3:* Afbeeldingen comprimeren
+- *2.4:* Meten met PageSpeed
 
 **Categorie 3: Netwerk & Externe Toegang**
-- 3.1: Port forwarding instellen
-- 3.2: Dynamic DNS gebruiken
-- 3.3: Website extern bereikbaar maken
-- 3.4: Uitleggen waarom dit risico’s inhoudt
+- *3.1:* Port forwarding instellen
+- *3.2:* Dynamic DNS gebruiken
+- *3.3:* Website extern bereikbaar maken
+- *3.4:* Uitleggen waarom dit risico’s inhoudt
 
 **Categorie 4: Database Diepgaander**
-- 4.1: Tabellenstructuur analyseren
-- 4.2: Zelf SQL-query uitvoeren
-- 4.3: Back-up en restore uitvoeren
+- *4.1:* Tabellenstructuur analyseren
+- *4.2:* Zelf SQL-query uitvoeren
+- *4.3:* Back-up en restore uitvoeren
 
 **Categorie 5: Thema-aanpassing**
-- 5.1: Child theme maken
-- 5.2: CSS aanpassen
-- 5.3: PHP-wijziging maken
+- *5.1:* Child theme maken
+- *5.2:* CSS aanpassen
+- *5.3:* PHP-wijziging maken
 
 **Categorie 6: Automatisatie**
-- 6.1: Automatische back-ups
-- 6.2: Cron jobs begrijpen
-- 6.3: Updates automatiseren
+- *6.1:* Automatische back-ups
+- *6.2:* Cron jobs begrijpen
+- *6.3:* Updates automatiseren
 
 
