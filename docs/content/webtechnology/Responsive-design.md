@@ -20,7 +20,7 @@ img {
 
 img {
   width: 50%;
-  mix-width: 50px;
+  min-width: 50px;
 }
 ```
 
