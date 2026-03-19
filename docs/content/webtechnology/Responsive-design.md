@@ -87,7 +87,7 @@ body {
 
 Bij gelijke specificiteit geldt: de laatste regel wint.  
 Dus zelfs als de media query actief is, wordt die overschreven door `.body { background: blue; }`  
-Je website zal dus alijd blauw zijn.
+**Je website zal dus alijd blauw zijn.**
 
 Correcte code:
 ```css
@@ -102,7 +102,7 @@ body {
 }
 ```
 
-> Daarom zet je media queries vaak **onderaan** het bestand
+> Daarom zet je media queries best **onderaan** het bestand!
 
 # Praktische tips
 
