@@ -45,7 +45,7 @@ img {
 ### Media queries: Scherm breedte
 
 ```css
-/* Schermen breder van 700px */
+/* Schermen breder dan 700px */
 @media screen and (min-width: 700px) {
   body {
     background-color: black;
