@@ -186,7 +186,7 @@ Beperk jezelf tot:
 
 ## Stap 2: Verdiepend onderzoek
 
-Kies **minstens 2** van onderstaande uitbreidingen.
+Kies **minstens 2** van onderstaande categorieën.
 
 Je onderzoekt:
 - Wat het technisch doet
