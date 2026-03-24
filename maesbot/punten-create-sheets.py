@@ -1,4 +1,5 @@
-import os  # For file system operations (paths, directories)
+import os
+import sys  # For file system operations (paths, directories)
 import yaml  # For loading YAML configuration files
 import argparse  # For parsing command-line arguments
 import subprocess  # For running external commands (opening file manager)
@@ -35,7 +36,7 @@ args = parser.parse_args()
 with open(args.input) as f:
     data = yaml.safe_load(f)
 
-print(f"{DARK_GREY}Loaded input YAML from {args.input}{NC}")
+print(f"{DARK_GREY}Loaded input YAML from {args.input}{NC}", file=sys.stderr)
 print(
     f"{DARK_GREY}Creating sheets for {len(args.students)} students: {', '.join(args.students)}{NC}"
 )
@@ -259,7 +260,7 @@ created_files = []
 for student in args.students:
     output_file = create_spreadsheet(student, basename)
     created_files.append(output_file)
-    print(f"{BLUE}📊 Created: {os.path.basename(output_file)}{DARK_GREY}")
+    print(f"{BLUE}📊 Created: {os.path.basename(output_file)}{DARK_GREY}", file=sys.stderr)
 
 print()
 print(
@@ -273,17 +274,14 @@ def save_folder_to_open(folder_path):
     in_docker = Path("/.dockerenv").exists()
 
     if in_docker:
-        # In Docker - save the container path (init.sh will convert it)
-        with open("/tmp/.open_folder", "w") as f:
-            f.write(folder_path)  # Save as-is, don't convert
-        print(f"{DARK_GREY}Folder will open automatically after script completes")
+        with open("/tmp/maesbot_output_dir/folder", "w") as f:
+            f.write(folder_path)
+        print(f"{DARK_GREY}Folder will open automatically after script completes{NC}", file=sys.stderr)
     else:
-        # Running natively - open directly
         try:
             subprocess.run(["xdg-open", folder_path], check=True)
         except (subprocess.CalledProcessError, FileNotFoundError):
-            print(f"{DARK_GREY}Path: {folder_path}")
-
+            print(f"{DARK_GREY}Path: {folder_path}{NC}", file=sys.stderr)
 
 save_folder_to_open(output_folder)
 

@@ -1,7 +1,9 @@
 #!/bin/sh
 
-# Start docker
-systemctl start docker
+# Start docker (works on both WSL and native NixOS)
+if command -v systemctl &> /dev/null && systemctl is-system-running &> /dev/null 2>&1; then
+    sudo systemctl start docker
+fi
 
 # Build docker image
 # This reads the instructions in the Dockerfile and package the application's environment, dependencies, and configurations into a reusable Docker image
@@ -27,8 +29,11 @@ sudo docker run \
     # Every time you run a Docker container without --rm, Docker keeps it in the background (even after it stops)
     # These containers accumulate over time and clutter your system.
 
-# Wait a few seconds for Jekyll to start
-sleep 5
+# Wait for Jekyll to be ready
+echo "Waiting for Jekyll..."
+until curl -s http://127.0.0.1:4000/ > /dev/null; do
+    sleep 1
+done 
 
 # Open website in default browser
 if command -v wslview &> /dev/null; then

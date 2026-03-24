@@ -160,41 +160,34 @@ fi
 echo -e "${DARK_GREY}Starting MAESBOT"
 echo ""
 
-OPEN_FOLDER_FILE="/tmp/.open_folder"
+# ###########################################################################
+# Open a folder if needed
 
-# Use docker compose to run
-# --rm: Remove container after exit
-# maesbot: Service name from docker-compose.yml
+# Run the container and capture the output folder path
+mkdir -p /tmp/maesbot_output_dir
+chmod 777 /tmp/maesbot_output_dir
+
 $COMPOSE_CMD run --rm maesbot
 
-# After $COMPOSE_CMD run --rm maesbot, add:
-echo "Checking for file: $OPEN_FOLDER_FILE"
-ls -la /tmp/.open_folder 2>/dev/null && echo "File exists" || echo "File NOT found"
-cat /tmp/.open_folder 2>/dev/null && echo "File contents above" || echo "Could not read file"
+FOLDER_PATH=$(cat /tmp/maesbot_output_dir/folder 2>/dev/null)
+rm -f /tmp/maesbot_output_dir/folder
 
-# ###########################################################################
-# Check if we should open a folder (post-execution)
+# Convert container path to host path
+FOLDER_PATH="${FOLDER_PATH/\/data\/input\//\/home\/hanne\/Documents\/meneermaes\/docs\/_data\/}"
+FOLDER_PATH="${FOLDER_PATH/\/data\/private\//\/home\/hanne\/Documents\/Nextcloud\/School\/Automatisatie\/maesbot-private-data\/}"
 
-if [ -f "$OPEN_FOLDER_FILE" ]; then
-  FOLDER_PATH=$(cat "$OPEN_FOLDER_FILE")
-  rm -f "$OPEN_FOLDER_FILE" # Force delete without prompt
-
-  # Convert container path to host path
-  FOLDER_PATH="${FOLDER_PATH/\/data\/input\//\/home\/hanne\/Documents\/meneermaes\/docs\/_data\/}"
-  FOLDER_PATH="${FOLDER_PATH/\/data\/private\//\/home\/hanne\/Documents\/Nextcloud\/School\/Automatisatie\/maesbot-private-data\/}"
-
-  echo ""
-  echo -e "${DARK_GREY}Opening: ${FOLDER_PATH}${NC}"
-
-  # Try to open the folder
-  if command -v xdg-open >/dev/null 2>&1; then
+# Open the folder if a path was returned
+if [ -n "$FOLDER_PATH" ]; then
+  echo -e "\n${DARK_GREY}Opening: ${FOLDER_PATH}${NC}"
+  if command -v wslview >/dev/null 2>&1; then
+    WIN_PATH=$(wslpath -w "$FOLDER_PATH")
+    wslview "$WIN_PATH" 2>/dev/null &
+  elif command -v xdg-open >/dev/null 2>&1; then
     xdg-open "$FOLDER_PATH" 2>/dev/null &
   elif command -v open >/dev/null 2>&1; then
-    # macOS
     open "$FOLDER_PATH" 2>/dev/null &
   else
-    echo -e "${YELLOW}Could not auto-open folder${NC}"
-    echo -e "${CYAN}Path: ${FOLDER_PATH}${NC}"
+    echo -e "${RED}✗ Could not auto-open folder${NC}"
+    echo -e "${RED}Path: ${FOLDER_PATH}${NC}"
   fi
-  echo ""
 fi

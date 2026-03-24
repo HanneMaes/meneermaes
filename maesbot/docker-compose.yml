@@ -30,6 +30,7 @@ services:
       - .:/app # Project code (your Python scripts) - read-write so you can edit
       - /home/hanne/Documents/meneermaes/docs/_data:/data/input:ro # Input data directory - read-only for safety
       - /home/hanne/Documents/Nextcloud/School/Automatisatie/maesbot-private-data:/data/private # Private data directory - read-write for generating outputs
+      - /tmp/maesbot_output_dir:/tmp/maesbot_output_dir # For passing folder path back to host to open folders
 
     # Working directory inside container
     working_dir: /app

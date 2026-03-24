@@ -232,7 +232,6 @@ if selected:
         args.extend(students)  # Add each student as a separate argument
 
         # Run script
-        print(f"--students: {students}")
         success = run_script("punten-create-sheets.py", args)
 
     # ###################### #
