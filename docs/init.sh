@@ -30,5 +30,9 @@ sudo docker run \
 # Wait a few seconds for Jekyll to start
 sleep 5
 
-# Open website in Firefox
-firefox http://127.0.0.1:4000/
+# Open website in default browser
+if command -v wslview &> /dev/null; then
+    wslview http://127.0.0.1:4000/ # WSL
+else
+    xdg-open http://127.0.0.1:4000/ # Pure Linux
+fi
