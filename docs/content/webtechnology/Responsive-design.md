@@ -10,7 +10,7 @@ created: 2025-04-04 10:48:04 +0200
 
 # Hoe maak je een website responsive?
 
-### Min- en max-values
+## Min- en max-values
 
 ```css
 img {
@@ -20,11 +20,11 @@ img {
 
 img {
   width: 50%;
-  mix-width: 50px;
+  min-width: 50px;
 }
 ```
 
-### Media queries: Oriëntatie (Liggend/Portret)
+## Media queries: Oriëntatie (Liggend/Portret)
 
 ```css
 /* Portretmodus */
@@ -42,10 +42,10 @@ img {
 }
 ```
 
-### Media queries: Scherm breedte
+## Media queries: Scherm breedte
 
 ```css
-/* Schermen breder van 700px */
+/* Schermen breder dan 700px */
 @media screen and (min-width: 700px) {
   body {
     background-color: black;
@@ -66,6 +66,43 @@ img {
   }
 }
 ```
+
+## Media queries: volgorde is belangrijk
+
+Media queries mag je **overal in je CSS-bestand** zetten. Wat telt, is de **volgorde van je code**.
+
+> De **laatste** regel wint!
+
+```css
+@media (min-width: 768px) {
+  body {
+    background: red;
+  }
+}
+
+body {
+  background: blue;
+}
+```
+
+Bij gelijke specificiteit geldt: de laatste regel wint.  
+Dus zelfs als de media query actief is, wordt die overschreven door `.body { background: blue; }`  
+**Je website zal dus alijd blauw zijn.**
+
+Correcte code:
+```css
+body {
+  background: blue;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: red;
+  }
+}
+```
+
+> Daarom zet je media queries best **onderaan** het bestand!
 
 # Praktische tips
 

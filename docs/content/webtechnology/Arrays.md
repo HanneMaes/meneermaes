@@ -100,7 +100,22 @@ for (var i in list) {
 console.log(text); // Geeft als uitvoer: 1995Electron
 ```
 
-# Oefening op het gebruik van arrays
+# Overzicht
+
+| Functie | Code |
+|-----------|---------------|
+| Array declareren | `let list = ["waarde0", "waarde1"];` |
+| Element opvragen | `list[0]` | 
+| Index zoeken | `list.indexOf("waarde")` |
+| Element wijzigen | `list[0] = "waarde"` |
+| Lengte van array | `list.length` |
+| Toevoegen **achteraan** | `list.push("waarde")` |
+| Verwijderen **achteraan** | `list.pop()` | 
+| Verwijderen **vooraan** | `list.shift()` |
+| Toevoegen **vooraan** | `list.unshift("waarde")` |
+| Over array loopen | `for (var i in list)` | 
+
+# Oefeningen
 
 ## Oefening 1: Kennismaken met arrays
 
