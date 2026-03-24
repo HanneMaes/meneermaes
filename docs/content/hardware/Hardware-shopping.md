@@ -1,8 +1,10 @@
 ---
 title: Hardware Shopping
-last_modified: 2025-04-23 11:39:19 +0200
+last_modified: 2026-03-24 10:04:10 +0100
 created: 2025-03-27 10:48:10 +0200
 ---
+
+> Jij bent een **IT-consultant** en moeten een setup samenstellen voor een klant
 
 **Niet iedereen heeft dezelfde noden als het gaat om een computer.**  
 In deze opdracht krijg je een scenario waarin je een computer moet samenstellen op basis van de behoeften van een specifieke persoon.
@@ -19,7 +21,7 @@ Daarna stel je een PC samen en motiveer je jouw keuzes.
 6. **Grafisch ontwerper**
 7. **Hardcore gamer/streamer**
 
-# Opdracht: Hardware Shopping
+# Verslag
 
 Je mag de opdracht uitwerken op één van de volgende manieren:
 
@@ -28,19 +30,31 @@ Je mag de opdracht uitwerken op één van de volgende manieren:
 - **Presentatie**  
    Zorg voor een duidelijk en grafisch interessante presentatie.
 
+# Opdracht 1: Noden
+
 ## Noden
 
 1. Waarvoor zal de PC het meest gebruikt worden.
-2. Naar welke onderdelen vertaalt zich dat, welke onderdelen zijn dus het belangrijkste.
-3. Welke onderdelen zijn minder belangrijk.
-4. Zijn er extra onderdelen, poorten of externe hardware die nuttig kunnen zijn?
+2. Naar welke onderdelen vertaalt zich dat, welke **2 onderdelen** zijn dus het **belangrijkste**.
+3. Welke **2 onderdelen** zijn minder **belangrijk**.
+4. Zijn er **extra** onderdelen, poorten of externe hardware die nuttig kunnen zijn?
 
 ## Besturingssysteem
 
-- Welk Besturingssysteem leent zich het beste bij dit scenario, en waarom?
-- Waarom lenen de andere Besturingssystemen zich minder bij dit scenario.
+1. Welk **besturingssysteem** leent zich het beste bij dit scenario, en waarom?
+2. Waarom lenen de andere besturingssystemen zich minder bij dit scenario.
 
-## Koop de onderdelen
+## Voeding 
+
+Zoek op en noteer in je document:
+1. Wat gebeurt er bij te **zwakke voeding**?
+2. Wat is **overkill**?
+
+## Puntenverdeling
+
+{% include punten.html data='hardware-shopping-1-noden' %}
+
+# Opdracht 2: Koop de onderdelen
 
 Stel voor beide budgetten een **volledige PC** samen en motiveer je keuzes.
 
@@ -66,9 +80,10 @@ Vergelijk kort de goedkopere en duurdere configuratie:
 
 - Wat zijn de belangrijkste verschillen?
 - Welke compromissen moest je maken binnen het lage budget?
+- Welke **2 dingen** zou je **niet** kunnen doen met jouw **goedkope setup**?
 - Wat krijg je extra bij het hogere budget?
 
-### PC build tools
+## PC build tools
 
 Via deze webtools kan je zelf een PC samenstellen:
 
@@ -85,4 +100,26 @@ Beide tools bieden de mogelijkheid om je setup te **bewaren** via een **URL**.
 
 ## Puntenverdeling
 
-{% include punten-csv.html data='hardware-shopping' %}
+{% include punten.html data='hardware-shopping-2-aankoop' %}
+
+# Opdracht 3: Besparing & Backups
+
+## Besparing 
+
+De klant zegt last-minute: “**Je moet €200 besparen**”.
+- Wat schrap je?
+
+## Backupstrategie
+
+**Stel: Je laptop crasht / wordt gestolen / ransomware**
+
+1. Wat is de **3-2-1 regel** en is deze nodig voor je klant?
+2. Welke **backupstrategie** wou jij opstellen voor je klant?
+3. Welke **hardware en/of substriptions** zou jij hiervoor aankopen en bereken de **jaarlijkse kosten**?
+4. Wat ga je back-uppen? Waar? Hoe vaak?
+5. Hoe zorg je ervoor dat zo veel mogelijk automatisch gebeurt, en wat moet de klant zelf nog doen?
+6. Hoe zou je alles **terugzetten** na een crash?
+
+## Puntenverdeling
+
+{% include punten.html data='hardware-shopping-3-besparing-backups' %}
