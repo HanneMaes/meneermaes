@@ -1,12 +1,16 @@
 ---
 title: De Werking Van Een Processor
 created: 2026-02-02 11:29:45 +0100
-last_modified: 2026-03-26 14:12:42 +0100
+last_modified: 2026-03-26 14:16:25 +0100
 ---
 
 In deze opdracht onderzoek je hoe een **processor (CPU)** werkt en hoe verschillende onderdelen samenwerken om programma’s uit te voeren.
 
 Je leert niet alleen wat een processor doet, maar ook hoe je doelgericht informatie opzoekt, beoordeelt en verwerkt tot een duidelijk digitaal eindproduct.
+
+Tijdens deze opdracht gaan jullie zelfstandig de werking van de processor onderzoeken. Jullie notities en bevindingen zelf worden **niet met punten beoordeeld**, maar jullie **zoekstrategie en reflectie wel**.
+
+Later krijgen jullie een **toets over de leerstof**, en **inzichtsvragen** die wel op punten zullen staan. Deze vragen zijn bedoeld om te controleren of jullie echt begrijpen wat jullie hebben onderzocht en ingediend.
 
 # Doelen
 
