@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified: 2026-03-26 11:33:59 +0100
+last_modified: 2026-03-26 12:35:57 +0100
 created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -134,6 +134,6 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 [Markdown](../markdown-webtechnology/index)
 
-[Three.js](https://www.youtube.com/watch?v=UMqNHi1GDAE)
+[Three.js](three-js)
 
 [Electron](electron)
