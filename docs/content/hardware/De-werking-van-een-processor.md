@@ -1,7 +1,7 @@
 ---
 title: De Werking Van Een Processor
 created: 2026-02-02 11:29:45 +0100
-last_modified: 2026-03-26 14:16:25 +0100
+last_modified: 2026-03-26 14:23:02 +0100
 ---
 
 In deze opdracht onderzoek je hoe een **processor (CPU)** werkt en hoe verschillende onderdelen samenwerken om programma’s uit te voeren.
@@ -118,4 +118,4 @@ Beantwoord op het einde deze vragen:
 
 # Puntenverdeling
 
-{% include punten.html data='werking-van-een-processor-inzichtsvragen' %}
+{% include punten.html data='werking-van-een-processor-inhoudsvragen' %}
