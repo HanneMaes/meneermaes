@@ -1,6 +1,6 @@
 ---
 title: Hardware Shopping
-last_modified: 2026-03-24 10:04:10 +0100
+last_modified: 2026-03-31 12:01:03 +0200
 created: 2025-03-27 10:48:10 +0200
 ---
 
@@ -107,7 +107,7 @@ Beide tools bieden de mogelijkheid om je setup te **bewaren** via een **URL**.
 ## Besparing 
 
 De klant zegt last-minute: “**Je moet €200 besparen**”.
-- Wat schrap je?
+- Wat schrap je, bij beide builds?
 
 ## Backupstrategie
 
