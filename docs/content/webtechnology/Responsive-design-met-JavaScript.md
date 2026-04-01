@@ -105,12 +105,12 @@ Geef je gallery een **responsive menu**:
 ```
 
 De display-eigenschap in CSS bepaalt hoe een element wordt weergegeven.
-- 'none': Het element wordt **niet weergegeven** op de pagina, alsof het niet bestaat.
-- 'block': Het element wordt weergegeven als een block en neemt standaard de volledige breedte van zijn container in, waardoor het dit element niet op dezelfde regels zal weergegeven worden.  
+- `none`: Het element wordt **niet weergegeven** op de pagina, alsof het niet bestaat.
+- `block`: Het element wordt weergegeven als een block en neemt standaard de volledige breedte van zijn container in, waardoor het dit element niet op dezelfde regels zal weergegeven worden.  
 Een `<div>` heeft `display: block;`.
-- 'inline': Het element staat op dezelfde regel en neemt alleen zoveel breedte in als nodig is.  
+- `inline`: Het element staat op dezelfde regel en neemt alleen zoveel breedte in als nodig is.  
 Een `<span>` heeft `display: inline;`.
-- 'inline-block': Combineert de eigenschappen van inline en block. Het element wordt weergegeven in dezelfde regel als omliggende inhoud, maar kan ook breedte en hoogte hebben zoals een block.
+- `inline-block`: Combineert de eigenschappen van inline en block. Het element wordt weergegeven in dezelfde regel als omliggende inhoud, maar kan ook breedte en hoogte hebben zoals een block.
 
 ### Z-index
 
