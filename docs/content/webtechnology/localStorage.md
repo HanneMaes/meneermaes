@@ -19,13 +19,13 @@ De data blijft bewaard over browser-sessies heen: sluit je de tab of browser, da
 
 ```javascript
 // Iets opslaan
-localStorage.setItem("naam", "Yasmin");
+localStorage.setItem("waarde", 3);
 
 // Iets uitlezen
-const naam = localStorage.getItem("naam"); // "Yasmin"
+const naam = localStorage.getItem("waarde"); // 3
 
 // Eén item verwijderen
-localStorage.removeItem("naam");
+localStorage.removeItem("waarde");
 
 // Alles verwijderen
 localStorage.clear();
