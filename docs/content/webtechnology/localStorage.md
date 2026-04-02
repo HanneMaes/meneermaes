@@ -12,7 +12,9 @@ De data blijft bewaard over browser-sessies heen: sluit je de tab of browser, da
 # Werken met LocalStorage
 
 - Je slaagt data op met **key-value pairs**.
-- LocalStorage is **per origin** (per URL): `http://example.com` en `https://example.com` hebben een aparte opslag, `http://example.com/page1` en `example.com/page2` hebben dezelfde opslag. 
+- LocalStorage is **per origin** (per URL):
+  - `http://example.com/page1` en `example.com/page2` hebben **dezelfd**e opslag. 
+  - `http://example.com` en `https://example.com` hebben een **aparte** opslag .
 - Als de gebruiker cookies blokkeert, kan het zijn dat de browser ook blokkering toepast op het opslaan van data via localStorage.
 
 ```javascript
