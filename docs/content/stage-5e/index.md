@@ -1,6 +1,6 @@
 ---
 title: Stage 5e Jaar
-last_modified: 2026-01-14 15:32:48 +0100
+last_modified: 2026-04-10 12:01:58 +0200
 created: thu, aug 25, 2025  5:09:21 PM
 ---
 
@@ -47,6 +47,8 @@ Op het einde van de week geef je een tussentijdse presentatie aan je opdrachtgev
 - Je krijgt feedback van zowel je opdrachtgever als de leerkracht
 - Je noteert verbeterpunten en maakt een planning om deze aan te pakken in week 2
 
+Cursus: [Stage weken](stage-weken)
+
 ## Week 2: Afwerking & Eindpresentatie
 
 In de tweede week werk je verder op basis van de gekregen feedback.  
@@ -54,3 +56,5 @@ Op het einde van de week:
 - Je presenteert je afgewerkte website aan de opdrachtgever en de leerkracht
 - Je licht keuzes toe (design, structuur, functionaliteit…)
 - Je draagt de website officieel over aan de opdrachtgever (files, uitleg, toegang indien van toepassing)
+
+Cursus: [Stage weken](stage-weken)
