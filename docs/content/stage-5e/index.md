@@ -1,6 +1,6 @@
 ---
 title: Stage 5e Jaar
-last_modified: 2026-04-10 12:01:58 +0200
+last_modified: 2026-04-20 11:25:14 +0200
 created: thu, aug 25, 2025  5:09:21 PM
 ---
 
@@ -39,22 +39,19 @@ Eerste meeting met de opdrachtgever:
 
 Cursus: [Kennismakingsgesprek](Kennismakingsgesprek)
 
-## Week 1: Ontwikkeling & Tussentijdse Presentatie
+## 3. Stage op school
 
-Tijdens deze week maak je een 1e versie van de website.  
-Op het einde van de week geef je een tussentijdse presentatie aan je opdrachtgever:
-- Je toont de voorlopige versie van je website
-- Je krijgt feedback van zowel je opdrachtgever als de leerkracht
+**Week 1: Ontwikkeling & tussentijdse presentatie**
+
+- Tijdens deze week maak je een 1e versie van de website
+- Op het einde van de week geef je een tussentijdse presentatie aan je opdrachtgever
 - Je noteert verbeterpunten en maakt een planning om deze aan te pakken in week 2
 
-Cursus: [Stage weken](stage-weken)
+**Week 2: Afwerking, handleiding & eindpresentatie**
 
-## Week 2: Afwerking & Eindpresentatie
-
-In de tweede week werk je verder op basis van de gekregen feedback.  
-Op het einde van de week:
-- Je presenteert je afgewerkte website aan de opdrachtgever en de leerkracht
-- Je licht keuzes toe (design, structuur, functionaliteit…)
+- In de tweede week werk je verder op basis van de gekregen feedback.  
+- Je maakt een handleiding voor je opdrachtgever waarin je uitlegt hoe de website later aangepast kan worden
+- Op het einde van de week presenteert je afgewerkte website aan de opdrachtgever en de leerkracht
 - Je draagt de website officieel over aan de opdrachtgever (files, uitleg, toegang indien van toepassing)
 
-Cursus: [Stage weken](stage-weken)
+Cursus: [Stage op school](stage-op-school)
