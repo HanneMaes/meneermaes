@@ -1,6 +1,6 @@
 ---
 title: Stage 5e Jaar
-last_modified: 2026-04-20 11:25:14 +0200
+last_modified: 2026-04-20 14:00:59 +0200
 created: thu, aug 25, 2025  5:09:21 PM
 ---
 
@@ -11,7 +11,7 @@ Dit kan een onderneming, vzw, sportclub, zelfstandige of andere organisatie zijn
 
 De stage vindt plaats op **school**, tijdens de projectweken van 27 april t.e.m. 8 mei.
 
-Het eindresultaat is een **volledige website** die voldoet aan de verwachtingen van de opdrachtgever, professioneel wordt gepresenteerd en echt in gebruik zal genomen worden.
+Het eindresultaat is een statische website, ontwikkeld met HTML, CSS en JavaScript. De website voldoet aan de verwachtingen van de opdrachtgever, wordt professioneel gepresenteerd en zal effectief in gebruik genomen worden.
 
 **Bedrijfsbezoeken**:  
 Naast het ontwikkelen van de website nemen jullie ook deel aan een aantal bedrijfsbezoeken doorheen het schooljaar.

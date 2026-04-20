@@ -1,7 +1,7 @@
 ---
 title: Kennismakingsgesprek
 created: 2026-01-14 13:49:41 +0100
-last_modified: 2026-01-19 10:52:22 +0100
+last_modified: 2026-04-20 13:35:41 +0200
 ---
 
 Na het vinden van een opdrachtgever volgt een **eerste kennismakingsgesprek**.  
@@ -18,16 +18,6 @@ Tijdens dit gesprek of deze gesprekken:
 - Spreken jullie af **hoe en wanneer er gecommuniceerd wordt** tijdens de projectweken
 - Leggen jullie vast **wie wat tegen wanneer aanlevert**
 - Bepalen jullie **hoe feedback zal verlopen**
-
-# Voorbereiding op het gesprek
-
-Voor je het gesprek voert, bereid je het volgende voor:
-- Basisinformatie over de organisatie en/of persoon
-- Enkele voorbeeldvragen
-- Een document om afspraken te noteren: dit document bevat zo veel mogelijk structuur en invulvelden zodat je snel de belangrijkste informatie kan vastleggen en zowel je eigen tijd als die van de opdrachtgever efficiënt gebruikt.
-
-Zorg dat je **de voorbereiding vóór het gesprek aan de leerkracht bezorgt**.  
-Zo kan er tijdig feedback gegeven worden en ben je optimaal voorbereid.
 
 # Wat wordt besproken tijdens het gesprek?
 
@@ -64,6 +54,16 @@ Wie is de **doelgroep**?
 - Binnen welke termijn feedback wordt verwerkt?
 
 > Wees duidelijk, stel vragen en durf verwachtingen bij te sturen.
+
+# Voorbereiding op het gesprek
+
+Voor je het gesprek voert, bereid je het volgende voor:
+- Basisinformatie over de organisatie en/of persoon
+- Voorbeeldvragen
+- Een document om afspraken te noteren: dit document bevat zo veel mogelijk structuur en invulvelden zodat je snel de belangrijkste informatie kan vastleggen en zowel je eigen tijd als die van de opdrachtgever efficiënt gebruikt.
+
+Zorg dat je **de voorbereiding vóór het gesprek aan de leerkracht bezorgt**.  
+Zo kan er tijdig feedback gegeven worden en ben je optimaal voorbereid.
 
 # Afsprakendocument
 
