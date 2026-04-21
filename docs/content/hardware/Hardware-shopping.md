@@ -119,14 +119,41 @@ De klant zegt last-minute: “**Je moet €200 besparen**”.
 
 ## Backupstrategie
 
-**Stel: Je laptop crasht / wordt gestolen / ransomware**
+Stel je voor dat er iets misgaat met de laptop van je klant, bijvoorbeeld:
+- de laptop crasht
+- de laptop wordt gestolen
+- de laptop wordt getroffen door ransomware
 
-1. Wat is de **3-2-1 regel** en is deze nodig voor je klant?
-2. Welke **backupstrategie** wou jij opstellen voor je klant?
-3. Welke **hardware en/of substriptions** zou jij hiervoor aankopen en bereken de **jaarlijkse kosten**?
-4. Wat ga je back-uppen? Waar? Hoe vaak?
-5. Hoe zorg je ervoor dat zo veel mogelijk automatisch gebeurt, en wat moet de klant zelf nog doen?
-6. Hoe zou je alles **terugzetten** na een crash?
+**Jij moet een betrouwbare backupstrategie uitwerken zodat de klant zo weinig mogelijk data verliest en snel weer kan werken.**
+
+### 1. Wat is de 3-2-1 regel?
+- Leg in je eigen woorden uit wat de 3-2-1 backupregel is  
+- Is deze regel nodig voor jouw klant? Waarom wel of niet?
+
+### 2. Jouw gekozen backupstrategie
+- Beschrijf welke aanpak jij kiest *(cloud backup, externe harde schijf, combinatie, ...)*?
+- Leg uit waarom jouw keuze goed past bij deze klant
+
+### 3. Hardware en/of abonnementen
+- Welke tools ga je gebruiken *(externe harde schijf, NAS, cloudopslag, ...)*?
+- Welke abonnementen?
+- Bereken ook:
+   - De jaarlijkse kostprijs
+   - Toon duidelijk hoe je aan dit bedrag komt
+
+### 4. Wat, waar en hoe vaak back-uppen?
+- Wat wordt geback-upt *(documenten, foto’s, volledige systeem, ...)*?
+- Waar wordt welke data opgeslagen?
+- Hoe vaak gebeurt de backup?
+
+### 5. Automatisatie vs. gebruiker
+- Hoe zorg je ervoor dat alles zo automatisch mogelijk verloopt?
+- Wat moet de klant zelf nog doen *(schijf aansluiten, wachtwoorden onthouden, ...)*?
+
+Doel: **zo weinig mogelijk kans op menselijke fouten**
+
+### 6. Herstellen na een probleem
+- Hoe zet je alles terug na een crash of aanval *(bestanden herstellen, eventueel volledige laptop opnieuw installeren, ...)*
 
 ## Puntenverdeling
 
