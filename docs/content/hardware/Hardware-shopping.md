@@ -1,6 +1,6 @@
 ---
 title: Hardware Shopping
-last_modified: 2026-03-31 12:01:03 +0200
+last_modified: 2026-04-03 11:33:36 +0200
 created: 2025-03-27 10:48:10 +0200
 ---
 
@@ -29,6 +29,14 @@ Je mag de opdracht uitwerken op één van de volgende manieren:
    Maak een duidelijke structuur met titels, tabellen, een inhoudstafel, ...
 - **Presentatie**  
    Zorg voor een duidelijk en grafisch interessante presentatie.
+
+# Monderlinge Toelichting 
+
+Voor deze opdracht is het belangrijk dat je niet enkel een correcte pc-samenstelling maakt, maar ook aantoont dat je begrijpt **waarom** je deze keuzes maakt.
+
+Daarom zal je jouw voorstel mondeling toelichten alsof je in gesprek bent met de klant. Je legt in je eigen woorden uit welke onderdelen je gekozen hebt, hoe ze aansluiten bij de noden van de klant en waarom ze binnen het budget passen.
+
+Je moet ook kunnen antwoorden op bijkomende vragen over je keuzes en eventueel alternatieven bespreken.
 
 # Opdracht 1: Noden
 
