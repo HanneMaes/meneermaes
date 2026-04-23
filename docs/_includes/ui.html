@@ -1,2 +1,2 @@
-{% assign keys = include.btn | replace: ', ', ',' | split: ',' %}
-{% for key in keys %}<span class="btn">{{ key }}</span>{% endfor %}
+{%- assign items = include.ui | split: ',' -%}
+<span class="ui">{%- for item in items -%}{{- item | strip -}}{%- unless forloop.last -%}<span class="uiSeparator"> &gt; </span>{%- endunless -%}{%- endfor -%}</span>

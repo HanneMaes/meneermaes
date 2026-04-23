@@ -1,7 +1,7 @@
 ---
 title: LocalStorage
 created: 2025-11-18 21:56:00 +0100
-last_modified: 2026-03-26 15:22:27 +0100
+last_modified: 2026-04-23 11:42:21 +0200
 ---
 
 # Wat is LocalStorage
@@ -30,6 +30,22 @@ localStorage.removeItem("waarde");
 // Alles verwijderen
 localStorage.clear();
 ```
+
+## LocalStorage in Developer Tools
+
+Je kan via de {% include btn.html btn="F12" %} **Developer Tools** bekijken wat er in je localStorage zit:
+
+### Firefox
+
+{% include btn.html btn="F12" %} {% include ui.html ui='Storage, Local Storage, Website Name' %}
+
+{% include browser.html img='images/localstorage-devtools-firefox.png' %}
+
+### Chrome & Chromium Browsers
+
+{% include btn.html btn="F12" %} {% include ui.html ui='Application, Local Storage, Website Name' %}
+
+{% include browser.html img='images/localstorage-devtools-chrome.png' %}
 
 # Oefening: Dark & Light mode
 
