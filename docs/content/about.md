@@ -1,6 +1,6 @@
 ---
 title: About
-last_modified: 2024-05-03T07:12:37
+last_modified: 2026-04-23 12:35:22 +0200
 created: 2024-03-13T10:33:28+01:00
 ---
 
