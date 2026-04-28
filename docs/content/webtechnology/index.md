@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified: 2026-03-26 12:35:57 +0100
+last_modified: 2026-04-28 09:09:46 +0200
 created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -108,6 +108,8 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 [Project: Clicker game](Project-clicker-game)
 
+[URL Query Parameters](URL-query-parameters)
+
 # Responsive Design
 
 [Responsive design](Responsive-design)
@@ -119,6 +121,8 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 [Open-source](open-source)
 
 [GitHub Pages](hosting-1-GitHub-pages){: .opdracht }
+
+[Testing](testing)
 
 [Licenties](licenties)
 
