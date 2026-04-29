@@ -27,15 +27,21 @@
   </head>
 
   <body>
-    <section class="mainSection">
-      <div class="sectionContent">
-        <!-- ------- -->
-        <!-- SIDEBAR -->
-        <!-- ------- -->
+    <section>
+
+      <!-- ------------------------- -->
+      <!-- SIDEBAR: BREADCRUMBS, TOC -->
+      <!-- ------------------------- -->
+
+      <aside>
+
+        <!-- ----------- -->
+        <!-- BREADCRUMBS -->
+        <!-- ----------- -->
 
         <!-- breadcrumbs: not on homepage -->
         {% unless page.url == '/' %}
-        <nav data-aos="fade-down" data-aos-delay="300" class="breadcrumbs">
+        <nav data-aos="fade-right" data-aos-delay="300" class="breadcrumbs">
           <a href="{{ site.baseurl }}/index#cursussen">Cursussen</a>
 
           <!-- only show link to section when not on a section page -->
@@ -52,23 +58,30 @@
         </nav>
         {% endunless %}
 
-        <!-- table of contents -->
-        <!-- <nav>
-            <div class="tocHeader">Inhoudstafel</div>
-            <div id="toc" class="toc"></div>
-            </nav> -->
+        <!-- ----------------- -->
+        <!-- TABLE OF CONTENTS -->
+        <!-- ----------------- -->
 
-        <!-- ------- -->
-        <!-- CONTENT -->
-        <!-- ------- -->
+        <nav data-aos="fade-right" data-aos-delay="600" class="toc">
+          <div id="toc"></div>
+        </nav>
+
+      </aside>
+
+      <!-- ------ -->
+      <!-- CURSUS -->
+      <!-- ------ -->
+
+      <article>
 
         <!-- header -->
-        <header data-aos="flip-down">{{ page.title }}</header>
+        <header data-aos="fade-down">{{ page.title }}</header>
 
         <!-- content -->
         {{ content }}
-      </div>
-      <!-- sectionContent -->
+
+      </article>
+
     </section>
 
     <!-- ------ -->

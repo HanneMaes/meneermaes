@@ -102,25 +102,28 @@ body {
   background-image: url("../images/blenderstudiopattern.svg");
 }
 
+/* de pagina zonder de footer */
 section {
   background-color: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
   padding-bottom: var(--spacingBig);
-}
 
-.mainSection {
+  display: flex;
+  flex-direction: row;
+
   /* make the page content be over the page info at the bottom */
   position: relative; /* to make the z-index work */
   z-index: 1;
 }
 
-.sectionContent {
+/* de cursus zelf */
+article {
   width: var(--contentWidth);
   max-width: var(--contentWidthMax);
+}
+
+/* sidebar */
+aside {
+  /* background-color: rgba(0,0,0,0.2); */
 }
 
 hr {
@@ -552,21 +555,21 @@ footer img {
 /* ***************** */
 
 nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  border-radius: var(--roundness);
+  font-size: 13px;
 
+  border-radius: var(--roundness);
   background-color: white;
+
   margin: 30px;
   padding: 10px;
   padding-left: 15px;
   padding-right: 15px;
 
-  transition: all var(--animSpeed);
+  transition: box-shadow var(--animSpeed)
 }
 nav:hover {
-  box-shadow: 0px 0px 0px var(--borderWidth) var(--light) inset;
+  box-shadow: 0px 0px 0px var(--borderWidth) var(--light) inset,
+              0px 10px 40px color-mix(in srgb, var(--medium) 30%, transparent);
 }
 
 nav a {
@@ -574,6 +577,9 @@ nav a {
 }
 
 /* breadcrumbs */
+
+.breadcrumbs {
+}
 
 .navDivider {
   color: var(--light);
@@ -585,39 +591,34 @@ nav a {
 /* toc */
 
 .toc {
-  top: 70px;
 }
 
-.tocHeader {
-  color: var(--medium);
-  text-decoration: underline;
-  text-decoration-color: var(--text);
+.toc a {
+  display: block;
 }
 
-.toc .h1Link,
-.toc .h2Link,
-.toc .h3Link,
-.toc .h4Link,
-.toc .h5Link,
-.toc .h6Link {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.h1Link {
+  margin-top: 5px;
 }
-
-.toc .h2Link {
-  padding-left: 20px;
+.h2Link {
+  padding-left: 15px;
+  opacity: 0.8;
 }
-.toc .h3Link {
-  padding-left: 40px;
+.h3Link {
+  padding-left: 30px;
+  opacity: 0.6;
 }
-.toc .h4Link {
+.h4Link {
+  padding-left: 45px;
+  opacity: 0.4;
+}
+.h5Link {
   padding-left: 60px;
+  opacity: 0.4;
 }
-.toc .h5Link {
-  padding-left: 70px;
-}
-.toc .h6Link {
-  padding-left: 80px;
+.h6Link {
+  padding-left: 75px;
+  opacity: 0.3;
 }
 
 /* ****** */
@@ -774,4 +775,10 @@ iframe {
     display: flex;
     flex-direction: column;
   }
+
+  /* hide sidebar on small screens */
+  @media (max-width: 800px) {
+    aside {
+      display: none;
+    }
 }

@@ -1,7 +1,7 @@
 ---
 title: Stage Op School
 created: 2026-04-10 12:05:26 +0200
-last_modified: 2026-04-22 11:27:08 +0200
+last_modified: 2026-04-29 11:13:46 +0200
 ---
 
 # Algemene organisatie
@@ -34,6 +34,8 @@ Tijdens deze week werk je aan een eerste versie van je website.
 
 Op het einde van de week geef je een online tussentijdse presentatie aan je opdrachtgever.
 Op basis van de feedback van je opdrachtgever en de leerkracht stel je een planning op voor week 2.
+
+## Feedback momenet
 
 # Week 2 
 

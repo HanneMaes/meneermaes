@@ -22,18 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
   /* TABLE OF CONTENTS */
   /* ***************** */
 
-  // var tocHTML = "";
-  // console.log("TOC");
-  // headers.forEach(function (header) { // Loop through each header
+  var tocHTML = "";
 
-  // 	// trim text
-  // 	var maxLetters = 40;
-  // 	var headerText = header.innerHTML.length > maxLetters ? header.innerHTML.substring(0, maxLetters) + '...' : header.innerHTML;
+  // Loop through each header
+  headers.forEach(function (header) { 
 
-  // 	// create HTML
-  // 	tocHTML += '<a class="' + header.localName + 'Link">' + headerText + '<a><br>';
-  // });
-  // document.getElementById('toc').innerHTML = tocHTML;
+  	// trim text
+  	var maxLetters = 20;
+  	var headerText = header.innerHTML.length > maxLetters ? header.innerHTML.substring(0, maxLetters) + '...' : header.innerHTML;
+
+  	// create HTML
+  	tocHTML += '<a class="' + header.localName + 'Link">' + headerText + '<a>';
+
+  });
+  document.getElementById('toc').innerHTML = tocHTML;
 
   /* ************* */
   /* TARGET _BLANK */
