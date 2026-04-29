@@ -1,0 +1,33 @@
+title: Raspberry Pi Ethiek
+punten:
+  - desc: "Zoekstrategie en bronkritiek"
+    max: 3
+  - desc: "Technisch vooronderzoek"
+    max: 3
+  - desc: "Technisch vooronderzoek reflectie"
+    max: 1
+  - desc: "Installatie OS"
+    max: 1
+  - desc: "Installatie OS reflectie" 
+    max: 1
+  - desc: "Installatie WordPress" 
+    max: 5
+  - desc: "Installatie WordPress reflectie" 
+    max: 1
+  - desc: "Digitaal document: overzichtelijk, professioneel, correcte school- en vaktaal"
+    max: 3
+doelen:
+  - nr: "13.BV3_13.01"
+    desc: "De leerlingen reflecteren cyclisch, vakspecifiek en vakoverschrijdend over het eigen leerproces en sturen het op basis daarvan doelgericht bij."
+  - nr: "13.BV3_13.02"
+    desc: "De leerlingen zetten (meta)cognitieve leer- en regulatiestrategieën in om zich leerinhouden eigen te maken."
+  - nr: "13.BV3_13.03"
+    desc: "De leerlingen gebruiken school- en vaktaal."
+  - nr: "13.BV3_13.04"
+    desc: "De leerlingen zoeken doelgericht informatie in diverse bronnen en verwerken die op een kritische en systematische manier."
+  - nr: "13.BV3_13.04.BV3_13.04.01 Subdoel 01"
+    desc: "De leerlingen bepalen zelfstandig een geschikte zoekstrategie."
+  - nr: "13.BV3_13.04.BV3_13.04. 02 Subdoel 02"
+    desc: "De leerlingen beoordelen op kritische wijze digitale en niet-digitale bronnen op bruikbaarheid op basis van aangereikte criteria."
+  - nr: "13.BV3_13.04.BV3_13.04.03 Subdoel 03"
+    desc: "De leerlingen verwerken zelfstandig de informatie uit de bronnen i.f.v. een vooropgesteld doel."
