@@ -228,4 +228,9 @@ Je onderzoekt:
 - *6.2:* Cron jobs begrijpen
 - *6.3:* Updates automatiseren
 
+## Demonstratie 
 
+De demonstratie is niet enkel een moment om je resultaat te tonen, maar ook een **peer learning-moment**.  
+In IT gebeurt dat voortdurend: developers leren via documentatie, code reviews maar ook zeer veel door **informatie met elkaar te delen**.
+
+{% include punten.html data='wordpress-verdiepend-onderzoek' %}
