@@ -109,6 +109,7 @@ section {
 
   display: flex;
   flex-direction: row;
+  justify-content: center;
 
   /* make the page content be over the page info at the bottom */
   position: relative; /* to make the z-index work */
@@ -119,11 +120,6 @@ section {
 article {
   width: var(--contentWidth);
   max-width: var(--contentWidthMax);
-}
-
-/* sidebar */
-aside {
-  /* background-color: rgba(0,0,0,0.2); */
 }
 
 hr {
@@ -554,13 +550,25 @@ footer img {
 /* BREADCRUMBS & TOC */
 /* ***************** */
 
+/* sidebar */
+aside {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: calc(100% - var(--contentWidth) / 2);
+  max-width: calc(100vw - var(--contentWidthMax) /2);
+}
+
 nav {
+  width: fit-content; /* make div not bigger then content */
   font-size: 13px;
 
   border-radius: var(--roundness);
   background-color: white;
 
   margin: 30px;
+  margin-bottom: 0px;
   padding: 10px;
   padding-left: 15px;
   padding-right: 15px;
@@ -569,7 +577,7 @@ nav {
 }
 nav:hover {
   box-shadow: 0px 0px 0px var(--borderWidth) var(--light) inset,
-              0px 10px 40px color-mix(in srgb, var(--medium) 30%, transparent);
+              0px 15px 40px color-mix(in srgb, var(--medium) 35%, transparent);
 }
 
 nav a {
@@ -777,7 +785,7 @@ iframe {
   }
 
   /* hide sidebar on small screens */
-  @media (max-width: 800px) {
+  @media (max-width: 600px) {
     aside {
       display: none;
     }
