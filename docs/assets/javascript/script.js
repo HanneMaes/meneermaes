@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   headers.forEach(function (header) { 
 
   	// trim text
-  	var maxLetters = 20; //30;
+  	var maxLetters = 30;
   	var headerText = header.innerHTML.length > maxLetters ? header.innerHTML.substring(0, maxLetters) + '...' : header.innerHTML;
 
   	// create HTML

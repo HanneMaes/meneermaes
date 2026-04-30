@@ -52,9 +52,8 @@
           <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
           {% assign sectionName = current_path_parts[2] %}
           <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
-          <a href="{{ site.baseurl }}/content/{{ sectionName }}/index"
-            >{{ sectionName | capitalize }}</a
-          >
+          <a href="{{ site.baseurl }}/content/{{ sectionName }}/index">
+            {{ sectionName | capitalize }}</a>
           {% endunless %}
         </nav>
 
@@ -77,12 +76,15 @@
       <article>
 
         <!-- header -->
-        <header data-aos="fade-down">{{ page.title }}</header>
+        <header data-aos="fade-left">{{ page.title }}</header>
 
         <!-- content -->
         {{ content }}
 
       </article>
+
+      <!-- right sidebar: empty for now, but needs to be here so <article> gets centered -->
+      <div class="rightSidebar"></div>
 
     </section>
 

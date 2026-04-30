@@ -20,7 +20,7 @@
   --animSpeed: 0.3s;
 
   --contentWidth: 85%;
-  --contentWidthMax: 850px;
+  --contentWidthMax: 850px; /* a bit smaller then most tablet screens, so they get nice padding */
   --roundness: 10px;
   --borderWidth: 3px;
 
@@ -120,6 +120,12 @@ section {
 article {
   width: var(--contentWidth);
   max-width: var(--contentWidthMax);
+  flex-shrink: 0; /* so it never gets squeezed */
+}
+
+/* right sidebar: empty for now, but needs to be here so <article> gets centered */
+.rightSidebar {
+  flex: 1;
 }
 
 hr {
@@ -552,12 +558,8 @@ footer img {
 
 /* sidebar */
 aside {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-
-  width: calc(100% - var(--contentWidth) / 2);
-  max-width: calc(100vw - var(--contentWidthMax) /2);
+  flex: 1; /* takes up all space left of the article */
+  flex-shrink: 0;
 }
 
 nav {
@@ -784,9 +786,9 @@ iframe {
     flex-direction: column;
   }
 
-  /* hide sidebar on small screens */
-  @media (max-width: 600px) {
-    aside {
+  /* hide sidebars on small screens */
+  @media (max-width: 1000px) { /* a bit smaller then most tablet screens, so they still get the sidebar */
+    aside, .rightSidebar {
       display: none;
     }
 }
