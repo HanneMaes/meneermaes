@@ -33,14 +33,14 @@
       <!-- SIDEBAR: BREADCRUMBS, TOC -->
       <!-- ------------------------- -->
 
+      <!-- not on homepage -->
+      {% unless page.url == '/' %}
       <aside>
 
         <!-- ----------- -->
         <!-- BREADCRUMBS -->
         <!-- ----------- -->
 
-        <!-- breadcrumbs: not on homepage -->
-        {% unless page.url == '/' %}
         <nav data-aos="fade-right" data-aos-delay="300" class="breadcrumbs">
           <a href="{{ site.baseurl }}/index#cursussen">Cursussen</a>
 
@@ -56,7 +56,6 @@
           >
           {% endunless %}
         </nav>
-        {% endunless %}
 
         <!-- ----------------- -->
         <!-- TABLE OF CONTENTS -->
@@ -66,6 +65,7 @@
           <div id="toc"></div>
         </nav>
 
+      {% endunless %}
       </aside>
 
       <!-- ------ -->

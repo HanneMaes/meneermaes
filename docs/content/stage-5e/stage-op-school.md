@@ -1,7 +1,7 @@
 ---
 title: Stage Op School
 created: 2026-04-10 12:05:26 +0200
-last_modified: 2026-04-29 11:13:46 +0200
+last_modified: 2026-04-30 11:49:27 +0200
 ---
 
 # Algemene organisatie
@@ -9,69 +9,6 @@ last_modified: 2026-04-29 11:13:46 +0200
 Je werkt tijdens de stage in het IT-lokaal aan je project.
 De leerkracht bij wie je normaal les hebt, houdt toezicht.
 Meneer Maes ondersteunt je tijdens zijn lesuren.
-
-## Logboek
-
-Je houdt een persoonlijk logboek bij tijdens de volledige stageperiode.
-Hierin noteer je wanneer en hoe je aan je website hebt gewerkt, zowel op school als thuis.
-
-De leerkrachten gebruiken dit logboek om je werkproces op te volgen.
-
-**Voor elke dag een nieuwe entry met:**
-- Datum
-- Wat heb je gedaan?
-- Wat ging goed / minder goed?
-- Tijdsduur
-
-**Afspraken:**
-- Schrijf in volledige zinnen
-- Gebruik correcte spelling en leestekens
-- Houd het kort, maar duidelijk
-
-# Week 1 
-
-Tijdens deze week werk je aan een eerste versie van je website.
-
-Op het einde van de week geef je een online tussentijdse presentatie aan je opdrachtgever.
-Op basis van de feedback van je opdrachtgever en de leerkracht stel je een planning op voor week 2.
-
-## Feedback momenet
-
-# Week 2 
-
-Tijdens deze week werk je je website volledig af.
-
-## Handleiding
-
-Daarnaast maak je een handleiding voor je opdrachtgever waarin je uitlegt hoe de website later aangepast kan worden.
-Deze handleiding moet duidelijk en begrijpelijk zijn voor iemand zonder technische kennis.
-
-## Eindpresentatie
-
-Op het einde van de stage stel je jouw afgewerkte website voor aan de opdrachtgever en de leerkracht.  
-Je geeft ook een duidelijke en gestructureerde presentatie (in het gekregen template).  
-Zo toon je niet alleen het eindresultaat, maar ook je denkproces, keuzes en leerervaringen.
-
-**Wat moet er zeker in de eindpresentatie zitten?**
-- Voorstelling van de klant
-- Het doel van de website en de keuzes die hieruit voortvloeiden
-- Gebruikte technologieën en technieken
-- De belangrijkste keuzes op vlak van design en functionaliteiten en de motivatie achter deze keuzes
-- Je demonstreert hoe de opdrachtgever de website zelf kan aanpassen en waar de handleiding te vinden is
-- Een kritische terugblik op je eigen werkproces en resultaat
-  - Bespreek wat goed is verlopen en waarom.
-  - Geef ook aan wat minder goed ging en wat je een volgende keer anders zou aanpakken.
-  - Toon aan wat je geleerd hebt tijdens dit project en hoe je jezelf verder wil verbeteren.
-
-# Evaluatie
-
-De evaluatie bestaat uit verschillende onderdelen, samen goed voor een **totaal van 50 punten**.
-
-{% include punten.html data='website' %}
-{% include punten.html data='samenwerking' %}
-{% include punten.html data='logboek' %}
-{% include punten.html data='eindpresentatie' %}
-{% include punten.html data='handleiding' %}
 
 # Gebruik van AI-tools
 
@@ -132,3 +69,124 @@ Er zal gevraagd worden om:
   Bijvoorbeeld om je teksten na te kijken op spelling en formulering, of om je code te laten controleren op logica.
 
 > Je gebruikt AI als ondersteuning, niet als vervanging van je eigen werk en inzicht
+
+# Week 1 
+
+## Maandag: logboek
+
+> Op de eerste dag van de stage maak je een persoonlijk logboek aan en **deel** je dit met de **leerkracht** 
+
+Je houdt een persoonlijk logboek bij tijdens de volledige stageperiode.
+Hierin noteer je wanneer en hoe je aan je website hebt gewerkt, zowel op school als thuis.
+
+De leerkrachten gebruiken dit logboek om je werkproces op te volgen.
+
+**Voor elke dag een nieuwe entry met:**
+- Datum
+- Wat heb je gedaan?
+- Wat ging goed / minder goed?
+- Tijdsduur
+
+**Afspraken:**
+- Schrijf in volledige zinnen
+- Gebruik correcte spelling en leestekens
+- Houd het kort, maar duidelijk
+
+## Vrijdag: feedback momenet
+
+Op het einde van week 1 geef je een *(online)* tussentijdse presentatie aan je opdrachtgever.  
+Het doel van deze presentatie is om je eerste versie van de website te tonen en **feedback** te verzamelen.
+
+**Dit moet zeker besproken worden:**
+- Hoe je project tot nu toe verloopt
+- Welke keuzes je al gemaakt hebt qua design, structuur, functies
+- Welke problemen je al bent tegengekomen
+- **Waar je nog twijfelt of hulp nodig hebt**
+
+Tijdens deze presentatie **vraag je actief feedback** aan je opdrachtgever:
+- Is de inhoud duidelijk en bruikbaar?
+- Past het design bij wat je voor ogen had?
+- Mist er nog informatie of functionaliteit?
+- Zijn er aanpassingen die nog gemaakt moeten worden?
+
+### Vereisten voor het eerste feedbackmoment
+
+Het is belangrijk dat je project al een **duidelijk en realistisch** beeld geeft van het uiteindelijke afgewerkte resultaat.
+
+**Waar moet je website aan voldoen:**
+- **Makkelijk te bekijken**  
+  Je website is eenvoudig toegankelijk. Idealiter staat hij al online, zodat je opdrachtgever hem vlot kan openen en testen.
+- **Mobile friendly**  
+  Je opdrachtgever zal je website vaak eerst op een gsm bekijken. Een slechte mobiele ervaring geeft meteen een verkeerde indruk.  
+  Layoutproblemen op mobiel los je beter vroeg op dan op het einde.
+- **Enkele pagina’s volledig afgewerkt**  
+  Het is beter dat je een aantal pagina’s volledig af hebt, dan dat je op elke pagina een klein stukje hebt uitgewerkt.  
+  Zo krijgt je opdrachtgever een duidelijk beeld van het uiteindelijke niveau van afwerking.
+- **Duidelijke structuur en navigatie**  
+  De belangrijkste pagina’s zijn aanwezig en de navigatie werkt logisch en overzichtelijk.
+
+> Het doel is niet dat je website al volledig af is, maar wel dat je iets toont waarop **zinvolle feedback** gegeven kan worden.
+
+### Checklist
+
+Gebruik deze checklist om te controleren of je klaar bent voor het presentatiemoment:
+{% include checkbox-interactive.html text='De opdrachtgever kan mijn website bekijken' %}
+{% include checkbox-interactive.html text='Ik weet wat ik al gedaan heb en wat nog niet af is' %}
+{% include checkbox-interactive.html text='Ik weet welke vragen ik ga stellen' %}
+
+### Aanvulling logboek
+
+Na je tussentijdse presentatie voeg je de huidige stand van je project, de gekregen feedback en de planning voor week 2 op basis van deze feedback toe aan je logboek.
+
+#### Voor het gesprek
+
+- **Huidige stand van zaken:** wat is al afgewerkt, wat werkt al goed, wat is nog niet af, ...
+- **Gemaakte keuzes:** belangrijkste keuzes op vlak van design en functionaliteit en een korte motivatie waarom je deze keuzes gemaakt hebt
+- **Problemen en oplossingen:** welke problemen ben je al tegengekomen en hoe heb je deze **proberen** op te lossen
+- **Waar heb je nog hulp of feedback bij nodig?**
+
+#### Na het gesprek
+
+- **Feedback van opdrachtgever en leerkracht:** noteer dit zo concreet mogelijk
+- **Planning voor week 2**: Welke aanpassingen en toevoegingen ga je maken, en **wanneer ga je deze maken**. Hou er rekening mee dat je ook een **handleiding en eindpresentatie** moet maken.
+
+**Afspraken:**
+- Schrijf in **duidelijke en volledige zinnen**
+- Gebruik **correcte spelling**
+- Houd het document **overzichtelijk en beknopt**
+
+# Week 2 
+
+## Handleiding
+
+Daarnaast maak je een handleiding voor je opdrachtgever waarin je uitlegt hoe de website later aangepast kan worden.
+Deze handleiding moet duidelijk en begrijpelijk zijn voor iemand zonder technische kennis.
+
+## Eindpresentatie
+
+Op het einde van de stage stel je jouw afgewerkte website voor aan de opdrachtgever en de leerkracht.  
+Je geeft ook een duidelijke en gestructureerde presentatie (in het gekregen template).  
+Zo toon je niet alleen het eindresultaat, maar ook je denkproces, keuzes en leerervaringen.
+
+**Wat moet er zeker in de eindpresentatie zitten?**
+- Voorstelling van de klant
+- Het doel van de website en de keuzes die hieruit voortvloeiden
+- Gebruikte technologieën en technieken
+- De belangrijkste keuzes op vlak van design en functionaliteiten en de motivatie achter deze keuzes
+- Je demonstreert hoe de opdrachtgever de website zelf kan aanpassen en waar de handleiding te vinden is
+- Een kritische terugblik op je eigen werkproces en resultaat
+  - Bespreek wat goed is verlopen en waarom.
+  - Geef ook aan wat minder goed ging en wat je een volgende keer anders zou aanpakken.
+  - Toon aan wat je geleerd hebt tijdens dit project en hoe je jezelf verder wil verbeteren.
+
+# Evaluatie
+
+De evaluatie bestaat uit verschillende onderdelen, samen goed voor een **totaal van 50 punten**.
+
+{% include punten.html data='website' %}
+{% include punten.html data='samenwerking' %}
+{% include punten.html data='logboek' %}
+{% include punten.html data='eindpresentatie' %}
+{% include punten.html data='handleiding' %}
+
+
