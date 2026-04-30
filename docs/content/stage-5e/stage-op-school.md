@@ -1,7 +1,7 @@
 ---
 title: Stage Op School
 created: 2026-04-10 12:05:26 +0200
-last_modified: 2026-04-30 11:49:27 +0200
+last_modified: 2026-04-30 12:45:42 +0200
 ---
 
 # Algemene organisatie
@@ -95,7 +95,7 @@ De leerkrachten gebruiken dit logboek om je werkproces op te volgen.
 ## Vrijdag: feedback momenet
 
 Op het einde van week 1 geef je een *(online)* tussentijdse presentatie aan je opdrachtgever.  
-Het doel van deze presentatie is om je eerste versie van de website te tonen en **feedback** te verzamelen.
+Het doel van deze presentatie is om je eerste versie van de website te tonen en **feedback te verzamelen**.
 
 **Dit moet zeker besproken worden:**
 - Hoe je project tot nu toe verloopt
@@ -140,15 +140,20 @@ Na je tussentijdse presentatie voeg je de huidige stand van je project, de gekre
 
 #### Voor het gesprek
 
-- **Huidige stand van zaken:** wat is al afgewerkt, wat werkt al goed, wat is nog niet af, ...
-- **Gemaakte keuzes:** belangrijkste keuzes op vlak van design en functionaliteit en een korte motivatie waarom je deze keuzes gemaakt hebt
-- **Problemen en oplossingen:** welke problemen ben je al tegengekomen en hoe heb je deze **proberen** op te lossen
+- **Huidige stand van zaken**  
+  Wat is al afgewerkt, wat werkt al goed, wat is nog niet af, ...
+- **Gemaakte keuzes**  
+  Belangrijkste keuzes op vlak van design en functionaliteit en een korte motivatie waarom je deze keuzes gemaakt hebt
+- **Problemen en oplossingen**  
+  Welke problemen ben je al tegengekomen en hoe heb je deze **proberen** op te lossen
 - **Waar heb je nog hulp of feedback bij nodig?**
 
 #### Na het gesprek
 
-- **Feedback van opdrachtgever en leerkracht:** noteer dit zo concreet mogelijk
-- **Planning voor week 2**: Welke aanpassingen en toevoegingen ga je maken, en **wanneer ga je deze maken**. Hou er rekening mee dat je ook een **handleiding en eindpresentatie** moet maken.
+- **Feedback van opdrachtgever en leerkracht**  
+  Noteer dit zo concreet mogelijk
+- **Planning voor week 2**  
+  Welke aanpassingen en toevoegingen ga je maken, en **wanneer ga je deze maken**. Hou er rekening mee dat je ook een **handleiding en eindpresentatie** moet maken.
 
 **Afspraken:**
 - Schrijf in **duidelijke en volledige zinnen**
@@ -181,11 +186,12 @@ Zo toon je niet alleen het eindresultaat, maar ook je denkproces, keuzes en leer
 
 # Evaluatie
 
-De evaluatie bestaat uit verschillende onderdelen, samen goed voor een **totaal van 50 punten**.
+De evaluatie bestaat uit verschillende onderdelen, samen goed voor een **totaal van 85 punten**.
 
-{% include punten.html data='website' %}
 {% include punten.html data='samenwerking' %}
 {% include punten.html data='logboek' %}
+{% include punten.html data='website-v1' %}
+{% include punten.html data='website-finaal' %}
 {% include punten.html data='eindpresentatie' %}
 {% include punten.html data='handleiding' %}
 

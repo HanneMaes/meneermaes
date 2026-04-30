@@ -1,6 +1,12 @@
 title: Logboek
 punten:
-  - desc: "Volledigheid en opbouw volgens afspraak"
+  - desc: "Je deelt het logboek tijdig met de leerkacht"
+    max: 1
+  - desc: "Elke dag een entry, aangemaakt op de dag zelf, geschreven volgend de afspraken"
     max: 3
+  - desc: "Feedbackmoment: voor het gesprek (tijdig volgens de deadline toegevoegd)"
+    max: 2
+  - desc: "Feedbackmoment: na het gesprek (tijdig volgens de deadline toegevoegd)"
+    max: 2
   - desc: "Zelfevaluatie"
     max: 2
