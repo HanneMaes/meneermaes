@@ -27,7 +27,7 @@
   --spacingSmall: 5px;
   --spacing: 20px;
   --spacingBig: 70px;
-  --spacingSuperBig: 200px;
+  --spacingSuperBig: 400px;
 }
 
 /* title font */
@@ -508,7 +508,7 @@ code {
 
 footer {
   color: var(--textLight);
-  padding-top: var(--spacing);
+  padding: var(--spacing);
   padding-bottom: var(--spacingSuperBig);
 
   display: flex;
@@ -516,17 +516,21 @@ footer {
 }
 
 .footerContent {
-  width: var(--contentWidth);
-  max-width: var(--contentWidthMax);
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
+  width: 100vw;
+
+  padding: var(--spacingBig);
 }
 
 footer a {
   color: var(--textLight);
+}
+
+footer p {
+  margin: 0;
 }
 
 footer img {
@@ -537,98 +541,23 @@ footer img {
 .pageInfo {
   opacity: 0.2;
   font-style: italic;
-  position: fixed;
-  bottom: 0;
-  padding: var(--spacing);
+  text-align: right;
 
-  /* center content */
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  /* put it to the right of the page, even the it's in a div with a fixed width */
+  position: absolute;
+  bottom: calc(var(--spacing) * 2);
+  right:  calc(var(--spacing) * 2);
+
+  transition: all var(--animSpeed);
+}
+.pageInfo:hover {
+  opacity: 1;
 }
 
 .curvedShadow {
   opacity: 0.2;
   width: 98vw;
   height: 44px;
-}
-/* ***************** */
-/* BREADCRUMBS & TOC */
-/* ***************** */
-
-/* sidebar */
-aside {
-  flex: 1; /* takes up all space left of the article */
-  flex-shrink: 0;
-}
-
-nav {
-  width: fit-content; /* make div not bigger then content */
-  font-size: 13px;
-
-  border-radius: var(--roundness);
-  background-color: white;
-
-  margin: 30px;
-  margin-bottom: 0px;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-
-  transition: box-shadow var(--animSpeed)
-}
-nav:hover {
-  box-shadow: 0px 0px 0px var(--borderWidth) var(--light) inset,
-              0px 15px 40px color-mix(in srgb, var(--medium) 35%, transparent);
-}
-
-nav a {
-  text-decoration: none;
-}
-
-/* breadcrumbs */
-
-.breadcrumbs {
-}
-
-.navDivider {
-  color: var(--light);
-  padding-left: var(--spacingSmall);
-  padding-right: var(--spacingSmall);
-  font-weight: 900;
-}
-
-/* toc */
-
-.toc {
-}
-
-.toc a {
-  display: block;
-}
-
-.h1Link {
-  margin-top: 7px;
-}
-.h2Link {
-  padding-left: 15px;
-  opacity: 0.8;
-}
-.h3Link {
-  padding-left: 30px;
-  opacity: 0.6;
-}
-.h4Link {
-  padding-left: 45px;
-  opacity: 0.4;
-}
-.h5Link {
-  padding-left: 60px;
-  opacity: 0.4;
-}
-.h6Link {
-  padding-left: 75px;
-  opacity: 0.3;
 }
 
 /* ****** */
@@ -771,6 +700,94 @@ iframe {
   align-items: center;
 }
 
+/* ***************** */
+/* BREADCRUMBS & TOC */
+/* ***************** */
+
+.icon {
+  border-radius: 0px;
+  opacity: 0.4 !important;
+  width: 17px !important;
+  margin: 0 !important;
+}
+
+/* sidebar */
+aside {
+  flex: 1; /* takes up all space left of the article */
+  flex-shrink: 0;
+
+  /* make it stay on the same position, even when scrolling */
+  position: sticky;
+  top: 30px;
+  align-self: flex-start;
+}
+
+nav {
+  width: fit-content; /* make div not bigger then content */
+  font-size: 13px;
+
+  border-radius: var(--roundness);
+  background-color: white;
+
+  margin: 30px;
+  margin-bottom: 0px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  transition: box-shadow var(--animSpeed);
+}
+nav:hover {
+  box-shadow: 0px 0px 0px var(--borderWidth) var(--light) inset,
+              0px 15px 40px color-mix(in srgb, var(--medium) 35%, transparent);
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/* breadcrumbs */
+
+.navDivider {
+  color: var(--light);
+  padding-left: var(--spacingSmall);
+  padding-right: var(--spacingSmall);
+  font-weight: 900;
+}
+
+/* toc */
+
+.toc {
+}
+
+.toc a {
+  display: block;
+}
+
+.h1Link {
+  margin-top: 7px;
+}
+.h2Link {
+  padding-left: 15px;
+  opacity: 0.8;
+}
+.h3Link {
+  padding-left: 30px;
+  opacity: 0.6;
+}
+.h4Link {
+  padding-left: 45px;
+  opacity: 0.4;
+}
+.h5Link {
+  padding-left: 60px;
+  opacity: 0.4;
+}
+.h6Link {
+  padding-left: 75px;
+  opacity: 0.3;
+}
+
 /* ************* */
 /* MEDIA QUERIES */
 /* ************* */
@@ -785,6 +802,7 @@ iframe {
     display: flex;
     flex-direction: column;
   }
+}
 
   /* hide sidebars on small screens */
   @media (max-width: 1000px) { /* a bit smaller then most tablet screens, so they still get the sidebar */

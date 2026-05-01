@@ -33,16 +33,25 @@
       <!-- SIDEBAR: BREADCRUMBS, TOC -->
       <!-- ------------------------- -->
 
-      <!-- not on homepage -->
-      {% unless page.url == '/' %}
-      <aside>
+      <aside data-aos="fade-right" data-aos-delay="300"> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
+
+        <!-- not on homepage -->
+        {% unless page.url == '/' %}
+
+        <!-- ------ -->
+        <!-- SEARCH -->
+        <!-- ------ -->
+
+        <!-- <nav> -->
+        <!--   <a href="{{ site.baseurl }}/index#cursussen"><img class="icon" src="{{ site.baseurl }}/assets/images/search.svg"/></a> -->
+        <!-- </nav> -->
 
         <!-- ----------- -->
         <!-- BREADCRUMBS -->
         <!-- ----------- -->
 
-        <!-- removed AOS because it breaks the hover anims --><!-- <nav data-aos="fade-right" data-aos-delay="300" class="breadcrumbs"> -->
-        <nav class="breadcrumbs">
+        <nav>
+      
           <a href="{{ site.baseurl }}/index#cursussen">Cursussen</a>
 
           <!-- only show link to section when not on a section page -->
@@ -55,18 +64,19 @@
           <a href="{{ site.baseurl }}/content/{{ sectionName }}/index">
             {{ sectionName | capitalize }}</a>
           {% endunless %}
+
         </nav>
 
         <!-- ----------------- -->
         <!-- TABLE OF CONTENTS -->
         <!-- ----------------- -->
 
-        <!-- removed AOS because it breaks the hover anims --><!-- <nav data-aos="fade-right" data-aos-delay="600" class="toc"> -->
         <nav class="toc">
           <div id="toc"></div>
         </nav>
 
-      {% endunless %}
+        {% endunless %}
+
       </aside>
 
       <!-- ------ -->
@@ -81,6 +91,13 @@
         <!-- content -->
         {{ content }}
 
+        <!-- page info -->
+        <div class="pageInfo">
+          Last edited: {{ page.last_modified | date: "%d/%m/%Y" }}
+          <br>
+          Created: {{ page.created | date: "%d/%m/%Y" }}
+        </div>
+
       </article>
 
       <!-- right sidebar: empty for now, but needs to be here so <article> gets centered -->
@@ -94,10 +111,7 @@
 
     <!-- curved shadow -->
     <center>
-      <img
-        class="curvedShadow"
-        src="{{ site.baseurl }}/assets/images/curved_shadow.png"
-      />
+      <img class="curvedShadow" src="{{ site.baseurl }}/assets/images/curved_shadow.png"/>
     </center>
 
     <footer>
@@ -127,13 +141,6 @@
         />
       </div>
     </footer>
-
-    <!-- page info -->
-    <div class="pageInfo landscapeROW-portraitCOLUMN">
-      last edited on {{ page.last_modified | date: "%d/%m/%Y" }}
-      <br>
-      Created on {{ page.created | date: "%d/%m/%Y" }}
-    </div>
 
     <!-- ---------- -->
     <!-- JAVASCRIPT -->
