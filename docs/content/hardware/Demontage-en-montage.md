@@ -1,6 +1,6 @@
 ---
 title: Demontage & Montage
-last_modified: 2025-05-08 10:54:09 +0200
+last_modified: 2026-05-04 09:25:32 +0200
 created: 2025-04-02 15:53:00 +0200
 ---
 
@@ -76,13 +76,25 @@ Plaats de foto in het document, heeft de computer een **stroomschakelaar** dan z
 - Wat zou je de volgende keer anders doen?
 
 # Opdracht: Individueel werken
+## 1. Eerste test 
 
-## 1. veiligheidsmaatregelen
+Voor je begint met het demonteren van de computer, moet je eerst **controleren of de computer correct werkt**.
+
+1. Start de computer op.
+2. Controleer of het besturingssysteem laadt.
+3. Test kort de basisfuncties (toetsenbord, muis, scherm, eventueel internet, ...).
+4. Noteer in je document wat wel en niet werkt.
+
+{% include callout.html type='Belangrijk' content='
+Als je deze stap niet uitvoert, kan nadien niet bewezen worden dat de computer oorspronkelijk werkte. Eventuele problemen na de demontage worden dan als jouw verantwoordelijkheid beschouwd.
+' %}
+
+## 2. Veiligheidsmaatregelen
 
 Maak een document aan en noteer welke **veiligheidsmaatregelen** je getroffen hebt voor je begint met het demonteren van de computer.  
 Laat je voorbereidingen ook zien aan de hand één of meerdere foto's.
 
-## 2. Onderdelen onderzoeken
+## 3. Onderdelen onderzoeken
 
 Je krijgt willekeurig **3 onderdelen**, per onderdeel noteer je:
 
@@ -91,7 +103,7 @@ Je krijgt willekeurig **3 onderdelen**, per onderdeel noteer je:
 3. Wat zou er gebeuren als dit onderdeel **stuk** is?
 4. Waarop moet je letten als je dit onderdeel zou vervangen.
 
-## 3. Demontage
+## 4. Demontage
 
 ### Voorbereiding
 
@@ -104,7 +116,7 @@ Voor je begint, noteer je in je document **hoe je ervoor zult zorgen dat je acht
 2. Neem een foto van het **moederbord zonder onderdelen**.
 3. Neem een foto van je **werkplek met losse onderdelen**.
 
-## 4. Montage
+## 5. Montage
 
 Monteer de computer, sluit alles aan **en test of de computer terug werkt**.
 
