@@ -1,6 +1,6 @@
 ---
 title: Demontage & Montage
-last_modified: 2026-05-05 10:59:54 +0200
+last_modified: 2026-05-05 11:52:42 +0200
 created: 2025-04-02 15:53:00 +0200
 ---
 
@@ -126,7 +126,7 @@ Monteer de computer, sluit alles aan **en test of de computer terug werkt**.
 
 ## Punterderdeling
 
-{% include punten-csv.html data='demonteren-en-monteren-individueel' %}
+{% include punten.html data='demonteren-en-monteren-individueel' %}
 
 # Reflectie
 

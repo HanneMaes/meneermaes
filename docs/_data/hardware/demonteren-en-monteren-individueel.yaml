@@ -1,0 +1,16 @@
+title: Demonteren En Monteren Individueel
+punten:
+  - desc: "Vragen onderdeel 1 (-0.5 per fout antwoord)"
+    max: 1
+  - desc: "Vragen onderdeel 2 (-0.5 per fout antwoord)"
+    max: 1
+  - desc: "Vragen onderdeel 3 (-0.5 per fout antwoord)"
+    max: 1
+  - desc: "Voorbereiding"
+    max: 2
+  - desc: "Demontage"
+    max: 2
+  - desc: "Montage"
+    max: 2
+  - desc: "Je document is duidelijk en overzichtelijk"
+    max: 2
