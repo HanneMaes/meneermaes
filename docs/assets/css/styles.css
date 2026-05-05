@@ -27,7 +27,7 @@
   --spacingSmall: 5px;
   --spacing: 20px;
   --spacingBig: 70px;
-  --spacingSuperBig: 400px;
+  --spacingSuperBig: 250px;
 }
 
 /* title font */
@@ -713,7 +713,7 @@ iframe {
 
 /* sidebar */
 aside {
-  flex: 1; /* takes up all space left of the article */
+  flex: 1; /* takes up all space left */
   flex-shrink: 0;
 
   /* make it stay on the same position, even when scrolling */

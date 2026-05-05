@@ -1,6 +1,6 @@
 ---
 title: Demontage & Montage
-last_modified: 2026-05-04 09:25:32 +0200
+last_modified: 2026-05-05 10:59:54 +0200
 created: 2025-04-02 15:53:00 +0200
 ---
 
@@ -89,9 +89,11 @@ Voor je begint met het demonteren van de computer, moet je eerst **controleren o
 Als je deze stap niet uitvoert, kan nadien niet bewezen worden dat de computer oorspronkelijk werkte. Eventuele problemen na de demontage worden dan als jouw verantwoordelijkheid beschouwd.
 ' %}
 
+**Maak een document aan en noteer wat je gestest hebt en wat werkt en wat niet werkt.**
+
 ## 2. Veiligheidsmaatregelen
 
-Maak een document aan en noteer welke **veiligheidsmaatregelen** je getroffen hebt voor je begint met het demonteren van de computer.  
+Voeg de **veiligheidsmaatregelen** je getroffen hebt voor je begint met het demonteren van de computer toe aan het document.  
 Laat je voorbereidingen ook zien aan de hand één of meerdere foto's.
 
 ## 3. Onderdelen onderzoeken
