@@ -1,7 +1,7 @@
 ---
 title: Stage Op School
 created: 2026-04-10 12:05:26 +0200
-last_modified: 2026-04-30 12:45:42 +0200
+last_modified: 2026-05-06 09:35:28 +0200
 ---
 
 # Algemene organisatie
@@ -170,7 +170,7 @@ Deze handleiding moet duidelijk en begrijpelijk zijn voor iemand zonder technisc
 ## Eindpresentatie
 
 Op het einde van de stage stel je jouw afgewerkte website voor aan de opdrachtgever en de leerkracht.  
-Je geeft ook een duidelijke en gestructureerde presentatie (in het gekregen template).  
+Je geeft ook een duidelijke en gestructureerde presentatie (in het gekregen sjabloon).  
 Zo toon je niet alleen het eindresultaat, maar ook je denkproces, keuzes en leerervaringen.
 
 **Wat moet er zeker in de eindpresentatie zitten?**
