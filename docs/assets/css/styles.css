@@ -345,6 +345,12 @@ a:hover {
   opacity: 1;
 }
 
+.downloadLink {
+  background-color: var(--medium);
+  padding-left: var(--spacingSmall);
+  padding-right: var(--spacingSmall);
+}
+
 /* extra styling for external links and .pdf files */
 a[href*='//']::after {
   content: "\00A0↗";
