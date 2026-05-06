@@ -348,6 +348,8 @@ a:hover {
 .downloadLink {
   background-color: var(--medium);
   padding: var(--spacing);
+  padding-top: calc(var(--spacing) / 2);
+  padding-bottom: calc(var(--spacing) / 2);
   text-decoration: none;
   color: var(--white) !important;
   border-radius: var(--roundness);
@@ -355,15 +357,13 @@ a:hover {
   transition: all var(--animSpeed);
 }
 .downloadLink::before {
-  content: "▽ V v Download: ";
+  content: "▽ Download: ";
   opacity: 0.5;
-  padding-right: var(--spacing);
+  padding-right: calc(var(--spacing) / 2);
 }
 .downloadLink:hover {
-  color: var(--medium);
-  background-color: var(--light);
-  box-shadow: 0px 0px 0px var(--borderWidth) var(--dark) inset,
-              0px 0px 40px color-mix(in srgb, var(--medium) 35%, transparent);
+  box-shadow: 0px 0px 0px var(--borderWidth) var(--light) inset,
+              0px 15px 40px color-mix(in srgb, var(--medium) 35%, transparent);
 }
 
 /* extra styling for external links and .pdf files */
