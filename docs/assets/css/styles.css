@@ -357,8 +357,8 @@ a:hover {
   transition: all var(--animSpeed);
 }
 .downloadLink::before {
-  content: "▽\00a0\00a0 Download: ";
-  color: var(--textLight);
+  content: "Download: ";
+  opacity: 0.66;
   padding-right: calc(var(--spacing) / 2);
 }
 .downloadLink:hover {
