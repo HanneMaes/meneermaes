@@ -184,6 +184,8 @@ Zo toon je niet alleen het eindresultaat, maar ook je denkproces, keuzes en leer
   - Geef ook aan wat minder goed ging en wat je een volgende keer anders zou aanpakken.
   - Toon aan wat je geleerd hebt tijdens dit project en hoe je jezelf verder wil verbeteren.
 
+{% include callout.html name='Sjabloon presentatie' link='downloads/sjabloon-stage-presentatie.odp' %}
+
 # Evaluatie
 
 De evaluatie bestaat uit verschillende onderdelen, samen goed voor een **totaal van 85 punten**.
