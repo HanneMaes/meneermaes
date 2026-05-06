@@ -184,7 +184,7 @@ Zo toon je niet alleen het eindresultaat, maar ook je denkproces, keuzes en leer
   - Geef ook aan wat minder goed ging en wat je een volgende keer anders zou aanpakken.
   - Toon aan wat je geleerd hebt tijdens dit project en hoe je jezelf verder wil verbeteren.
 
-{% include download.html name='Sjabloon presentatie' link='downloads/sjabloon-stage-presentatie.odp' %}
+{% include download.html name='Sjabloon presentatie' link='downloads/sjabloon-stage-presentatie.pptx' %}
 
 # Evaluatie
 
