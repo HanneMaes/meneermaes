@@ -357,13 +357,13 @@ a:hover {
   transition: all var(--animSpeed);
 }
 .downloadLink::before {
-  content: "▽ Download: ";
+  content: "▽\00a0\00a0 Download: ";
   opacity: 0.5;
   padding-right: calc(var(--spacing) / 2);
 }
 .downloadLink:hover {
   box-shadow: 0px 0px 0px var(--borderWidth) var(--light) inset,
-              0px 15px 40px color-mix(in srgb, var(--medium) 35%, transparent);
+              0px 15px 40px color-mix(in srgb, var(--medium) 66%, transparent);
 }
 
 /* extra styling for external links and .pdf files */
