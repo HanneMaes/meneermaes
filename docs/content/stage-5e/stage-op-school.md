@@ -1,7 +1,7 @@
 ---
 title: Stage Op School
 created: 2026-04-10 12:05:26 +0200
-last_modified: 2026-05-06 09:35:28 +0200
+last_modified: 2026-05-06 09:53:48 +0200
 ---
 
 # Algemene organisatie
@@ -179,7 +179,7 @@ Zo toon je niet alleen het eindresultaat, maar ook je denkproces, keuzes en leer
 - Gebruikte technologieën en technieken
 - De belangrijkste keuzes op vlak van design en functionaliteiten en de motivatie achter deze keuzes
 - Je demonstreert hoe de opdrachtgever de website zelf kan aanpassen en waar de handleiding te vinden is
-- Een kritische terugblik op je eigen werkproces en resultaat
+- Reflectie: een kritische terugblik op je eigen werkproces en resultaat
   - Bespreek wat goed is verlopen en waarom.
   - Geef ook aan wat minder goed ging en wat je een volgende keer anders zou aanpakken.
   - Toon aan wat je geleerd hebt tijdens dit project en hoe je jezelf verder wil verbeteren.
