@@ -345,6 +345,27 @@ a:hover {
   opacity: 1;
 }
 
+.downloadLink {
+  background-color: var(--medium);
+  padding: var(--spacing);
+  padding-top: calc(var(--spacing) / 2);
+  padding-bottom: calc(var(--spacing) / 2);
+  text-decoration: none;
+  color: var(--white) !important;
+  border-radius: var(--roundness);
+
+  transition: all var(--animSpeed);
+}
+.downloadLink::before {
+  content: "Download: ";
+  opacity: 0.66;
+  padding-right: calc(var(--spacing) / 2);
+}
+.downloadLink:hover {
+  box-shadow: 0px 0px 0px var(--borderWidth) var(--light) inset,
+              0px 15px 40px color-mix(in srgb, var(--medium) 66%, transparent);
+}
+
 /* extra styling for external links and .pdf files */
 a[href*='//']::after {
   content: "\00A0↗";
