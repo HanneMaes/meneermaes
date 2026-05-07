@@ -1,7 +1,7 @@
 ---
 title: Stage Op School
 created: 2026-04-10 12:05:26 +0200
-last_modified: 2026-05-07 09:56:11 +0200
+last_modified: 2026-05-07 10:39:20 +0200
 ---
 
 # Algemene organisatie
@@ -185,6 +185,95 @@ Zo toon je niet alleen het eindresultaat, maar ook je denkproces, keuzes en leer
   - Toon aan wat je geleerd hebt tijdens dit project en hoe je jezelf verder wil verbeteren.
 
 {% include download.html name='Sjabloon presentatie' link='downloads/sjabloon-stage-presentatie.pptx' %}
+
+## Extra uitdaging *(optioneel)*
+
+Ben je vroeger klaar met de basis van je website?  
+Dan kan je extra functionaliteiten of technieken toevoegen om je project verder uit te breiden.
+
+### Begin pas aan extra’s wanneer 
+
+- Alle gevraagde onderdelen van de opdrachtgever **volledig** afgewerkt zijn
+- Je website stabiel werkt
+- Je website mobile friendly is
+- **Alle** feedback verwerkt is
+- Je handleiding en eindpresentatie in orde zijn
+
+{% include callout.html type='Belangrijk' content='
+Een eenvoudige website die volledig afgewerkt is, is veel sterker dan een half afgewerkte website met veel extra’s!
+' %}
+
+**Extra functionaliteiten leveren enkel een meerwaarde op wanneer:**
+- Ze degelijk uitgewerkt zijn
+- Ze passen bij de website en doelgroep
+- Je ze zelf begrijpt en kan uitleggen
+
+{% include callout.html type='Belangrijk' content='
+Meer functies toevoegen is niet automatisch beter.  
+Kwaliteit, afwerking en gebruiksvriendelijkheid blijven het belangrijkst.
+' %}
+
+### Mogelijke uitbreidingen
+
+#### Domeinnaam
+Voeg aan je handleiding toe hoe je opdrachtgever een eigen domeinnaam kan kopen en koppelen aan de website.  
+Een eigen domeinnaam zorgt ervoor dat je website er professioneler uitziet.
+
+#### Scrollanimaties met AOS.js
+Met AOS.js kan je elementen laten verschijnen wanneer je naar beneden scrollt.  
+**Belangrijk:**
+- Gebruik animaties subtiel
+- Overdrijf niet: te veel animaties maken een website onrustig
+
+#### Hover-effecten
+Voorbeelden:
+- Knoppen die van kleur veranderen
+- Afbeeldingen die licht vergroten
+- Cards met schaduw-effecten
+Mogelijke technieken:
+- CSS transition
+- CSS transform
+
+#### Contactformulier met validatie
+Een contactformulier laat bezoekers berichten sturen.
+Controleer of:
+- Verplichte velden ingevuld zijn
+- Een e-mailadres correct geschreven is
+Zoektermen:
+- Html form validation
+- Javascript form validation
+Belangrijk: 
+- Toon duidelijke foutmeldingen
+- Maak het formulier gebruiksvriendelijk
+
+#### Nieuws- of blogsysteem met Jekyll
+Met Jekyll kan je eenvoudig nieuwsberichten of blogposts toevoegen.  
+Mogelijke toepassingen: 
+- Nieuwsberichten voor een vereniging
+- Updates van evenementen
+- Artikels of aankondigingen
+Zoektermen 
+- Jekyll blog tutorial
+- Github pages jekyll
+
+#### Betere SEO
+SEO helpt zoekmachines je website beter te begrijpen.  
+Zoektermen
+- Seo basics website
+- Html meta description
+
+#### Geanimeerde navigatie
+Maak je navigatie interactiever en duidelijker.  
+Voorbeelden: 
+- Onderlijning die animeert
+- Hamburger-menu met animatie
+- Navigatie die mee scrollt
+- Actieve pagina visueel aanduiden
+Zoektermen:  
+- Animated navbar css
+- Hamburger menu animation
+Belangrijk:  
+- De navigatie moet vooral duidelijk en gebruiksvriendelijk blijven.
 
 # Evaluatie
 
