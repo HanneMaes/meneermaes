@@ -1,7 +1,7 @@
 ---
 title: Stage Op School
 created: 2026-04-10 12:05:26 +0200
-last_modified: 2026-05-06 09:53:48 +0200
+last_modified: 2026-05-07 09:56:11 +0200
 ---
 
 # Algemene organisatie
@@ -184,11 +184,7 @@ Zo toon je niet alleen het eindresultaat, maar ook je denkproces, keuzes en leer
   - Geef ook aan wat minder goed ging en wat je een volgende keer anders zou aanpakken.
   - Toon aan wat je geleerd hebt tijdens dit project en hoe je jezelf verder wil verbeteren.
 
-<<<<<<< HEAD
-{% include callout.html name='Sjabloon presentatie' link='downloads/sjabloon-stage-presentatie.odp' %}
-=======
 {% include download.html name='Sjabloon presentatie' link='downloads/sjabloon-stage-presentatie.pptx' %}
->>>>>>> 6bed874eeddd191195e5261a3c234917643bd98d
 
 # Evaluatie
 
