@@ -1,7 +1,7 @@
 ---
 title: Stage Op School
 created: 2026-04-10 12:05:26 +0200
-last_modified: 2026-05-07 12:24:49 +0200
+last_modified: 2026-05-07 12:39:08 +0200
 ---
 
 # Algemene organisatie
@@ -192,6 +192,19 @@ Zo toon je niet alleen het eindresultaat, maar ook je denkproces, keuzes en leer
   - Toon aan wat je geleerd hebt tijdens dit project en hoe je jezelf verder wil verbeteren.
 
 {% include download.html name='Sjabloon presentatie' link='downloads/sjabloon-stage-presentatie.pptx' %}
+
+## Officiële overdracht
+
+Laat je opdrachtgever een eigen GitHub-account aanmaken en transfer daarna de repository naar die account of organisatie.
+
+Dit zijn de logische opties:
+- **Repository overdragen**  
+  Het properst, want de opdrachtgever wordt volledig **eigenaar** van code en hosting op GitHub Pages.  
+  Dan krijgt de opdrachtgever de broncode, commitgeschiedenis en het beheer van de GitHub Pages-site in eigen handen.  
+  [GitHub Docs: Transferring a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository)
+- **Opdrachtgever als collaborator toevoegen**  
+  Handig als je nog tijdelijk support moeten geven, maar de site blijft dan **niet volledig van de opdrachtgever**.  
+  [GitHub Docs: Inviting collaborators to a personal repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository)
 
 ## Extra uitdaging *(optioneel)*
 
