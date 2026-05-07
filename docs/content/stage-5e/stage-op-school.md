@@ -1,7 +1,7 @@
 ---
 title: Stage Op School
 created: 2026-04-10 12:05:26 +0200
-last_modified: 2026-05-07 11:07:03 +0200
+last_modified: 2026-05-07 12:24:49 +0200
 ---
 
 # Algemene organisatie
@@ -162,6 +162,13 @@ Na je tussentijdse presentatie voeg je de huidige stand van je project, de gekre
 
 # Week 2 
 
+## Testing 
+
+Een website die alleen op jouw laptop werkt, is geen website maar een hobbyproject.  
+Je moet controleren of je site vlot **laadt en bruikbaar is op elke telefoon, tablet, laptop en in elke browser**.
+
+[Je website goed testen](../webtechnology/testing) is heel belangrijk, anders loopt je opdrachtgever klanten of gebruikers mis omdat je site niet goed werkt waar zij hem openen.
+
 ## Handleiding
 
 Daarnaast maak je een handleiding voor je opdrachtgever waarin je uitlegt hoe de website later aangepast kan worden.
@@ -216,65 +223,75 @@ Kwaliteit, afwerking en gebruiksvriendelijkheid blijven het belangrijkst.
 ### Mogelijke uitbreidingen
 
 #### Domeinnaam
+
 Voeg aan je handleiding toe hoe je opdrachtgever een eigen domeinnaam kan kopen en koppelen aan de website.  
-Een eigen domeinnaam zorgt ervoor dat je website er professioneler uitziet.
+Een eigen domeinnaam zorgt ervoor dat de website er professioneler uitziet.
 
 #### Scrollanimaties met AOS.js
-Met AOS.js kan je elementen laten verschijnen wanneer je naar beneden scrollt.  
-**Belangrijk:**
+
+Met [AOS.js](https://michalsnik.github.io/aos/) kan je elementen laten verschijnen wanneer je naar beneden scrollt.  
+
+Belangrijk:
 - Gebruik animaties subtiel
 - Overdrijf niet: te veel animaties maken een website onrustig
 
 #### Hover-effecten
+
 Voorbeelden:
 - Knoppen die van kleur veranderen
 - Afbeeldingen die licht vergroten
 - Cards met schaduw-effecten
+
 Mogelijke technieken:
 - CSS transition
 - CSS transform
 
-#### Contactformulier met validatie
+#### Contactformulier
+
 Een contactformulier laat bezoekers berichten sturen.
+
 Controleer of:
 - Verplichte velden ingevuld zijn
 - Een e-mailadres correct geschreven is
+
 Zoektermen:
 - Html form validation
 - Javascript form validation
+
 Belangrijk: 
 - Toon duidelijke foutmeldingen
 - Maak het formulier gebruiksvriendelijk
 
-#### Nieuws- of blogsysteem met Jekyll
-Met Jekyll kan je eenvoudig nieuwsberichten of blogposts toevoegen.  
+#### Nieuws- of blogsysteem met Jekyll & Github Pages
+
+Met Jekyll & Github Pages kan je eenvoudig nieuwsberichten of blogposts toevoegen.  
+
 Mogelijke toepassingen: 
 - Nieuwsberichten voor een vereniging
 - Updates van evenementen
 - Artikels of aankondigingen
-Zoektermen 
-- Jekyll blog tutorial
-- Github pages jekyll
 
 #### Betere SEO
+
 SEO helpt zoekmachines je website beter te begrijpen.  
-Zoektermen
-- Seo basics website
-- Html meta description
+
+Zoektermen: 
+- SEO basics website
+- URL SEO checker
 
 #### Geanimeerde navigatie
+
 Maak je navigatie interactiever en duidelijker.  
+
 Voorbeelden: 
 - Onderlijning die animeert
 - Hamburger-menu met animatie
 - Navigatie die mee scrollt
 - Actieve pagina visueel aanduiden
-Zoektermen:  
-- Animated navbar css
-- Hamburger menu animation
+
 Belangrijk:  
 - De navigatie moet vooral duidelijk en gebruiksvriendelijk blijven.
-stage-op
+
 # Evaluatie
 
 De evaluatie bestaat uit verschillende onderdelen, samen goed voor een **totaal van 85 punten**.
