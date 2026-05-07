@@ -1,6 +1,6 @@
 title: Website Finaal
 punten:
-  - desc: "Inhoud is volledig, relevant en afgestemd op de doelgroep"
+  - desc: "Inhoud is volledig, relevant en afgestemd op de doelgroep (zal besproken worden met opdrachtgever)"
     max: 3
   - desc: "Duidelijke structuur en logische navigatie en makkelijk te gebruiken"
     max: 3
@@ -14,5 +14,5 @@ punten:
     max: 5
   - desc: "Basis accessibility toegepast (alt-teksten, semantische HTML, leesbaarheid, …)"
     max: 3
-  - desc: "Consistente en verzorgde vormgeving, met aandacht voor details"
+  - desc: "Consistente en verzorgde vormgeving, met aandacht voor details (zal besproken worden met opdrachtgever)"
     max: 3
