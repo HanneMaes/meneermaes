@@ -1,7 +1,7 @@
 ---
 title: Stage Op School
 created: 2026-04-10 12:05:26 +0200
-last_modified: 2026-05-07 13:30:57 +0200
+last_modified: 2026-05-07 14:29:43 +0200
 ---
 
 # Algemene organisatie
@@ -307,7 +307,7 @@ Belangrijk:
 
 # Evaluatie
 
-De evaluatie bestaat uit verschillende onderdelen, samen goed voor een **totaal van 85 punten**.
+De evaluatie bestaat uit verschillende onderdelen, samen goed voor een **totaal van 75 punten**.
 
 {% include punten.html data='samenwerking' %}
 {% include punten.html data='logboek' %}

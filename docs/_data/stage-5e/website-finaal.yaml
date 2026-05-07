@@ -1,8 +1,18 @@
 title: Website Finaal
 punten:
-  - desc: "Inhoud"
-    max: 10
-  - desc: "Technische uitwerking"
-    max: 20
-  - desc: "Opmaak en gebruiksvriendelijkheid"
-    max: 10
+  - desc: "Inhoud is volledig, relevant en afgestemd op de doelgroep"
+    max: 3
+  - desc: "Duidelijke structuur en logische navigatie en makkelijk te gebruiken"
+    max: 3
+  - desc: "Code en technieken correct toegepast"
+    max: 5
+  - desc: "Website werkt stabiel zonder fouten"
+    max: 5
+  - desc: "Code is overzichtelijk en gestructureerd"
+    max: 3
+  - desc: "Responsive design op mobiel, tablet en desktop"
+    max: 5
+  - desc: "Basis accessibility toegepast (alt-teksten, semantische HTML, leesbaarheid, …)"
+    max: 3
+  - desc: "Consistente en verzorgde vormgeving, met aandacht voor details"
+    max: 3

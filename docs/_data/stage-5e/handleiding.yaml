@@ -1,6 +1,8 @@
 title: Handleiding
 punten:
-  - desc: "Duidelijkhied en volledigheid van de handleiding"
-    max: 5
-  - desc: "Taal"
-    max: 5
+  - desc: "Handleiding legt duidelijk uit hoe de website aangepast kan worden en is voldoende gedetailleerd"
+    max: 3
+  - desc: "Duidelijke structuur met titels, tussentitels en een overzichetlijke opmaak"
+    max: 1
+  - desc: "Gebruiksvriendelijkeheid: afbeeldingen, werkende links en overzichtelijke opmaak"
+    max: 1
