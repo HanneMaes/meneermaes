@@ -8,10 +8,12 @@ punten:
     max: 1
   - desc: "Belangrijkste keuzes en motivatie erachter"
     max: 1
+  - desc: "Responsive, testing  & optimalisatie"
+    max: 1
   - desc: "Demonstratie en locatie handleiding"
     max: 1
   - desc: "Reflectie: wat liep goed, minder goed, wat zou je anders aanpakken, wat heb je geleerd?"
-    max: 2
+    max: 1
   - desc: "Correcte spelling, volledige en duidelijke zinnen en professioneel taalgebruik"
     max: 1
   - desc: "Zakelijke lay-out en duidelijke structuur"
