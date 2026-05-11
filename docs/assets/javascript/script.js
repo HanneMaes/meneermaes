@@ -102,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize AOS AFTER adding attributes
   AOS.init({
     duration: 1000,
-    once: true
   });
 
   /* ******************** */
