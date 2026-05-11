@@ -4,7 +4,7 @@
 
 :root {
   --dark: rgb(113, 68, 53);
-  --medium: rgb(205, 123, 96);
+  --medium: rgb(205, 123, 96); /* #CD7B60 */
   --light: rgb(227, 185, 169);
   --light-transparant: rgba(227, 185, 169, 0.5);
   --white: rgb(240, 240, 235);

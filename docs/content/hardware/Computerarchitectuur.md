@@ -1,6 +1,6 @@
 ---
 title: Computerarchitectuur
-last_modified: 2026-03-09 15:29:53 +0100
+last_modified: 2026-05-11 22:08:42 +0200
 created: 2024-11-12 10:58:54 +0200
 ---
 
@@ -19,3 +19,5 @@ created: 2024-11-12 10:58:54 +0200
 [De werking van een processor](De-werking-van-een-processor){: .opdracht }
 
 [De principe van gegevenstransport](De-principe-van-gegevenstransport)
+
+[De voeding](De-voeding)

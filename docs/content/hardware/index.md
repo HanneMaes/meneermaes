@@ -1,6 +1,6 @@
 ---
 title: Hardware
-last_modified: 2026-03-24 09:20:21 +0100
+last_modified: 2026-05-11 21:25:02 +0200
 created: Wed, sep 04, 2024  10:47:23 PM
 ---
 
@@ -15,8 +15,6 @@ created: Wed, sep 04, 2024  10:47:23 PM
 # Opzoekopdrachten
 
 [Beeldapparatuur](zelfstandige-opdrachten/beeldapparatuur.docx){: .opdracht }
-
-[Gelijk- en wisselspanning](zelfstandige-opdrachten/gelijkspanning-en-wisselspanning.docx){: .opdracht }
 
 [Processorkoeling](zelfstandige-opdrachten/processorkoeling.docx){: .opdracht }
 
