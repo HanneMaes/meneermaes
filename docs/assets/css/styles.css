@@ -776,6 +776,17 @@ nav a {
 nav ul {
   margin-left: var(--spacing);
   padding-left: 0px;
+  list-style: none; /* remove bullet point */
+}
+
+.toc ul  li::marker {
+  content: "- "; /* custom bullet point */
+}
+.linksOutgoing  li::marker {
+  content: "→ ";  /* custom bullet point */
+}
+.linksIncoming  li::marker {
+  content: '← ';  /* custom bullet point */
 }
 
 /* breadcrumbs */
@@ -818,16 +829,6 @@ li:has(.h3Link) { opacity: 0.6; }
 li:has(.h4Link) { opacity: 0.4; }
 li:has(.h5Link) { opacity: 0.4; }
 li:has(.h6Link) { opacity: 0.3; }
-
-/* links */ 
-
-.linksOutgoing::before {
-  content: '→';
-}
-
-.linksIncoming::after {
-  content: '←';
-}
 
 /* ************* */
 /* MEDIA QUERIES */
