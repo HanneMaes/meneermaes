@@ -782,6 +782,7 @@ nav ul {
 .toc ul  li::marker {
   content: "· "; /* custom bullet point */
   color: currentColor; /* use the element’s current text color */
+  opacity: 0.5;
 }
 .linksOutgoing  li::marker {
   content: "→ ";  /* custom bullet point */
