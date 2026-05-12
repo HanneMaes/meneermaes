@@ -4,7 +4,7 @@ created: 2026-05-11 20:56:26 +0200
 last_modified: 2026-05-11 22:29:02 +0200
 ---
 
-> Wordt vaak een **PSU of Power Supply Unit** genoemd.
+> Wordt vaak ook de **PSU of Power Supply Unit** genoemd.
 
 {% include toggle.html title="Hoe ziet een voeding er uit?" content="
 ![voeding](images/voeding.jpg){: .frame }
