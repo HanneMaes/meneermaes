@@ -85,14 +85,14 @@
         <nav class="links">
 
           <em>Uitgaande links</em>
-          <ul id="outgoingLinks"></ul>
+          <ul class="outgoingLinks" id="outgoingLinks"></ul>
 
           <!-- not on homapage and index pages -->
           {% assign lastChar = page.url | slice: -1 %}
           {% unless page.url == '/' or lastChar == '/' %}
 
             <em>Inkomende links</em>
-            <ul id="incomingLinks"></ul>
+            <ul class="incomingLinks" id="incomingLinks"></ul>
 
           {% endunless %}
 
