@@ -64,7 +64,7 @@ Hierbij licht je de technische werking van je website toe.
 Je moet kunnen uitleggen:
 - Hoe je website opgebouwd is
 - Hoe je code werkt
-- Zaarom je bepaalde technische keuzes gemaakt hebt
+- Waarom je bepaalde technische keuzes gemaakt hebt
 - Hoe je problemen hebt opgelost
 
-Er zal ook gevraagd worden om kleine aanpassingen live uit te voeren.
+Er zal ook gevraagd worden om **live aanpassingen** uit te voeren.
