@@ -1,7 +1,7 @@
 ---
 title: De Voeding
 created: 2026-05-11 20:56:26 +0200
-last_modified: 2026-05-11 22:29:02 +0200
+last_modified: 2026-05-12 11:05:54 +0200
 ---
 
 > Wordt vaak een **PSU of Power Supply Unit** genoemd.
@@ -13,8 +13,6 @@ last_modified: 2026-05-11 22:29:02 +0200
 
 ![voeding](images/voeding-case.jpg){: .frame }
 " %}
-
-# Waarom heeft een computer een voeding nodig?
 
 {% include toggle.html title="Waarom kan je een computer niet gewoon rechtstreeks in het stopcontact steken?" content="
 Een stopcontact levert **wisselstroom (AC)**.  
@@ -31,7 +29,24 @@ Daarom gebruikt een computer een voeding (PSU) die:
 - De stroom veilig verdeelt
 " %}
 
-# Spanning
+# Spanning & vermogen
+
+{% include toggle.html title="Wat zijn wissel- en gelijkstroom?" content="
+**Gelijkstroom (DC)**  
+Bij gelijkstroom stroomt elektriciteit altijd in **dezelfde richting**.  
+Dat is **stabieler en veiliger** voor elektronische onderdelen.  
+
+**Wisselstroom (AC)**  
+Bij wisselstroom **verandert de richting** van de stroom voortdurend.  
+Dit is de soort stroom uit het **stopcontact**.  
+In Europa verandert die richting 50 keer per seconde.  
+Wisselstroom veel praktischer voor:
+- Elektriciteit over lange afstanden vervoeren
+- Hele steden van stroom voorzien
+
+Wanneer elektriciteit door kabels reist gaat een deel verloren als warmte.  
+Bij lange afstanden wil je dus zo weinig mogelijk stroomverlies.
+" %}
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SR3IR8OaNBg?si=sng9loEDrMFpHRuK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -55,23 +70,6 @@ Vergelijk de spanning en het vermogen van deze vergelijkingen:
 - Een grote waterstroom: *spanning en vermogen?*
 " %}
 
-{% include toggle.html title="Wat zijn wissel- en gelijkstroom?" content="
-**Gelijkstroom (DC)**  
-Bij gelijkstroom stroomt elektriciteit altijd in **dezelfde richting**.  
-Dat is **stabieler en veiliger** voor elektronische onderdelen.  
-
-**Wisselstroom (AC)**  
-Bij wisselstroom **verandert de richting** van de stroom voortdurend.  
-Dit is de soort stroom uit het **stopcontact**.  
-In Europa verandert die richting 50 keer per seconde.  
-Wisselstroom veel praktischer voor:
-- Elektriciteit over lange afstanden vervoeren
-- Hele steden van stroom voorzien
-
-Wanneer elektriciteit door kabels reist gaat een deel verloren als warmte.  
-Bij lange afstanden wil je dus zo weinig mogelijk stroomverlies.
-" %}
-
 {% include toggle.html title="Gebruikt een computer AC of DC?" content="
 > Gelijkstroom (DC)
 
@@ -92,7 +90,7 @@ Download en maak deze oefening: [Gelijk- en wisselspanning](zelfstandige-opdrach
   3.2 Laptop 
   3.3 Gaming PC
 
-# Efficiëntie
+# PSU efficiëntie
 
 {% include toggle.html title="Een voeding haalt 500W uit het stopcontact, maar levert maar 425W aan de computer. Wat gebeurt er met de rest?" content="
 De overige energie gaat vooral verloren als **warmte**.  

@@ -74,7 +74,28 @@
         <!-- ----------------- -->
 
         <nav class="toc">
-          <div id="toc"></div>
+          <em>Inhoudstafel</em>
+          <ul id="toc"></ul>
+        </nav>
+
+        <!-- --------------------------- -->
+        <!-- Incoming and outgoing links -->
+        <!-- --------------------------- -->
+
+        <nav class="links">
+
+          <em>Uitgaande links</em>
+          <ul id="outgoingLinks"></ul>
+
+          <!-- not on homapage and index pages -->
+          {% assign lastChar = page.url | slice: -1 %}
+          {% unless page.url == '/' or lastChar == '/' %}
+
+            <em>Inkomende links</em>
+            <ul id="incomingLinks"></ul>
+
+          {% endunless %}
+
         </nav>
 
       </aside>
