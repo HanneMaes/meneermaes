@@ -781,14 +781,15 @@ nav ul {
 
 .toc ul  li::marker {
   content: "· "; /* custom bullet point */
-  color: currentColor; /* use the element’s current text color */
-  opacity: 0.33;
+  color: color-mix(in srgb, currentColor 10%, transparent); /* use the element’s current text color */
 }
 .outgoingLinks li::marker {
   content: "→ "; /* custom bullet point */
+  color: var(--light);
 }
 .incomingLinks li::marker {
   content: "← "; /* custom bullet point */
+  color: var(--light);
 }
 
 /* breadcrumbs */
