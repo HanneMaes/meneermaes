@@ -774,7 +774,7 @@ nav a {
 }
 
 nav ul {
-  margin-left: var(--spacing);
+  margin-left: var(--spacingSmall);
   padding-left: 0px;
   list-style: none; /* remove bullet point */
 }
