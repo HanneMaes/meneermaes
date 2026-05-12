@@ -55,3 +55,16 @@ Cursus: [Kennismakingsgesprek](Kennismakingsgesprek)
 - Je draagt de website officieel over aan de opdrachtgever (files, uitleg, toegang indien van toepassing)
 
 Cursus: [Stage op school](stage-op-school)
+
+## 4. Technische verdediging
+
+Na de stage weken zal er een technische verdediging plaatsvinden tijdens de lesuren.  
+Hierbij licht je de technische werking van je website toe.
+
+Je moet kunnen uitleggen:
+- Hoe je website opgebouwd is
+- Hoe je code werkt
+- Zaarom je bepaalde technische keuzes gemaakt hebt
+- Hoe je problemen hebt opgelost
+
+Er zal ook gevraagd worden om kleine aanpassingen live uit te voeren.
