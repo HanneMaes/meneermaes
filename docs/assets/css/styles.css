@@ -781,7 +781,7 @@ nav ul {
 
 .toc ul  li::marker {
   content: "· "; /* custom bullet point */
-  color: color-mix(in srgb, currentColor 50%, transparent); /* use the element’s current text color */
+  color: color-mix(in srgb, currentColor 66%, transparent); /* use the element’s current text color */
 }
 .outgoingLinks li::marker {
   content: "→ "; /* custom bullet point */
