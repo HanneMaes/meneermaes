@@ -1,6 +1,6 @@
 ---
 title: Flex
-last_modified: 2026-05-13 16:21:31 +0200
+last_modified: 2026-05-18 14:44:27 +0200
 created: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -17,6 +17,8 @@ created: Wed, sep 11, 2024  10:47:23 PM
 [Open File Types]()
 
 [De Ethiek van Raspberry Pi](raspberrypi-ethiek)
+
+[Zelfstandige opdracht: Algoritmen & A.I.](https://www.notion.so/hannemaes/Zelfstandige-opdracht-Algoritmen-A-I-8265f1966b524048b6a9f25c3f698eef?source=copy_link)
 
 # Python
 
@@ -49,3 +51,7 @@ created: Wed, sep 11, 2024  10:47:23 PM
 [Spline](spline)
 
 [Raspberry Pi als Wordpress server](raspberrypi-als-wordpress-server)
+
+# Ontdekken & Onderzoeken
+
+[Leren door te delen](https://hannemaes.notion.site/Leren-Door-Te-Delen-97ea1bf8480e451794382a8f257b376d)

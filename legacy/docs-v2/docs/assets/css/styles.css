@@ -472,12 +472,6 @@ nav a {
 	top: 70px;
 }
 
-.tocHeader {
-	color: var(--medium);
-	text-decoration: underline;
-	text-decoration-color: var(--text);
-}
-
 .toc .h1Link, .toc .h2Link, .toc .h3Link, .toc .h4Link, .toc .h5Link, .toc .h6Link {
 	margin-top: 	10px;
 	margin-bottom: 10px;
