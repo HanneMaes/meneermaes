@@ -6,8 +6,6 @@ punten:
     max: 3
   - desc: "Code en technieken correct toegepast"
     max: 5
-  - desc: "Website werkt stabiel zonder fouten"
-    max: 5
   - desc: "Code is overzichtelijk en gestructureerd"
     max: 3
   - desc: "Responsive design op mobiel, tablet en desktop"
