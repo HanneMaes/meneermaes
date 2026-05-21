@@ -1,13 +1,14 @@
 ---
 title: Url Query Parameters
 created: 2026-04-28 09:08:56 +0200
-last_modified: 2026-05-21 12:06:03 +0200
+last_modified: 2026-05-21 12:29:12 +0200
 ---
 
 # Wat zijn Query Parameters
 Query parameters zijn **gegevens** die je meegeeft in een **URL**.  
 Ze komen achter een vraagteken `?` en bestaan uit **key–value pairs**.
 
+`index.html?mode=dark`  
 `index.html?mode=dark&theme=tokyoNight`
 - `?` start de parameters
 - `=` koppelt sleutel en waarde
@@ -15,10 +16,9 @@ Ze komen achter een vraagteken `?` en bestaan uit **key–value pairs**.
 
 Deze parameters kan je ophalen via JavaScript:
 ```javascript
-const params = new URLSearchParams(window.location.search);
-
-let mode = params.get("mode");
-let themeName = params.get("theme");
+const params = new URLSearchParams(window.location.search); // Maak een variabelen die parameters uit de URL kan lezen
+let mode = params.get("mode"); // haal "mode" uit de URL
+let themeName = params.get("theme"); // haal "theme" uit de URL
 ```
 
 {% include callout.html type='tip' content='
@@ -34,7 +34,7 @@ Er zijn twee veelgebruikte manieren om query parameters te gebruiken.
 De eenvoudigste manier is parameters meteen in een hyperlink zetten.
 
 ```html
-<a href="index.html?mode=dark&ui=true">Activate Dark Mode</a>
+<a href="index.html?mode=dark">Activate Dark Mode</a>
 ```
 
 Dit gebruik je wanneer je naar een andere pagina gaat.
@@ -44,9 +44,9 @@ Dit gebruik je wanneer je naar een andere pagina gaat.
 Je kunt ook de URL wijzigen **zonder de pagina opnieuw te laden**.
 
 ```javascript
-const url = new URL(window.location);
-url.searchParams.set("mode", "dark");
-history.replaceState({}, "", url);
+const url = new URL(window.location); // Maak een variabelen van de URL
+url.searchParams.set("mode", "dark"); // Zet of overschrijft de query parameter "mode" met de waarde "dark"
+history.replaceState({}, "", url); Vervangt de huidige URL in de adresbalk zonder de pagina te herladen zonder een nieuwe stap toe te voegen aan de browsergeschiedenis
 ```
 
 Nieuwe URL: `index.html?mode=dark`
@@ -54,7 +54,7 @@ Nieuwe URL: `index.html?mode=dark`
 De pagina **herlaadt niet**, maar de URL is wel aangepast.
 
 Gebruik live aanpassen wanneer:
-- De URL moet meeveranderen terwijl de gebruiker werkt
+- De URL moet meeveranderen terwijl de gebruiker zaken aanpaszaken aanpast
 - Je state wilt bewaren zonder refresh
 - Filters onmiddellijk veranderen
 - Je een single page application (SPA) maakt
@@ -95,7 +95,7 @@ Waarom?
 - URL blijft netjes
 
 Gebruik localStorage wanneer je zegt:
-**> Dit is een persoonlijke voorkeur**
+> Dit is een persoonlijke voorkeur
 
 ## Database
 
