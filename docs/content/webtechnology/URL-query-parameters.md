@@ -1,7 +1,7 @@
 ---
 title: Url Query Parameters
 created: 2026-04-28 09:08:56 +0200
-last_modified: 2026-04-28 11:02:25 +0200
+last_modified: 2026-05-21 12:04:11 +0200
 ---
 
 # Wat zijn Query Parameters
@@ -108,3 +108,11 @@ Gebruik een database voor gegevens die permanent of gedeeld moeten worden:
 **Gebruik een database wanneer je zegt:**
 > Dit moet permanent opgeslagen worden
 
+# Opdracht 1: Themable website 
+
+Maak een website waarbij je via een menu het thema volledig kan aanpassen.  
+Denk bijvoorbeeld aan:
+- Mode: dark, light 
+- Colors: colorful, muted, black and white, flashy 
+- Background: color, image, animated 
+- ...
