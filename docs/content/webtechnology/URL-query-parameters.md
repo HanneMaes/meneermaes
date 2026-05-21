@@ -1,7 +1,7 @@
 ---
 title: Url Query Parameters
 created: 2026-04-28 09:08:56 +0200
-last_modified: 2026-05-21 12:29:12 +0200
+last_modified: 2026-05-21 12:33:10 +0200
 ---
 
 # Wat zijn Query Parameters
@@ -46,7 +46,7 @@ Je kunt ook de URL wijzigen **zonder de pagina opnieuw te laden**.
 ```javascript
 const url = new URL(window.location); // Maak een variabelen van de URL
 url.searchParams.set("mode", "dark"); // Zet of overschrijft de query parameter "mode" met de waarde "dark"
-history.replaceState({}, "", url); Vervangt de huidige URL in de adresbalk zonder de pagina te herladen zonder een nieuwe stap toe te voegen aan de browsergeschiedenis
+history.replaceState({}, "", url); // Vervangt de huidige URL in de adresbalk zonder de pagina te herladen zonder een nieuwe stap toe te voegen aan de browsergeschiedenis
 ```
 
 Nieuwe URL: `index.html?mode=dark`
@@ -54,7 +54,7 @@ Nieuwe URL: `index.html?mode=dark`
 De pagina **herlaadt niet**, maar de URL is wel aangepast.
 
 Gebruik live aanpassen wanneer:
-- De URL moet meeveranderen terwijl de gebruiker zaken aanpaszaken aanpast
+- De URL moet meeveranderen terwijl de gebruiker zaken aanpast
 - Je state wilt bewaren zonder refresh
 - Filters onmiddellijk veranderen
 - Je een single page application (SPA) maakt
@@ -80,6 +80,7 @@ Soms is het handig om gegevens niet in localStorage of een database op te slaan,
   Alles zit gewoon in de URL.
 
 **Gebruik URL parameters wanneer de gebruiker mag kunnen zeggen:**
+
 > Ik wil deze exacte pagina-toestand kunnen bookmarken of delen
 
 ## LocalStorage
@@ -94,7 +95,8 @@ Waarom?
 - Blijft lokaal bewaard
 - URL blijft netjes
 
-Gebruik localStorage wanneer je zegt:
+**Gebruik localStorage wanneer je zegt:**
+
 > Dit is een persoonlijke voorkeur
 
 ## Database
@@ -106,6 +108,7 @@ Gebruik een database voor gegevens die permanent of gedeeld moeten worden:
 - Posts of comments
 
 **Gebruik een database wanneer je zegt:**
+
 > Dit moet permanent opgeslagen worden
 
 # Opdracht 1: Themable website 
