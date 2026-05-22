@@ -1,6 +1,6 @@
 ---
 title: Demontage & Montage
-last_modified: 2026-05-05 11:52:42 +0200
+last_modified: 2026-05-22 11:37:17 +0200
 created: 2025-04-02 15:53:00 +0200
 ---
 
@@ -20,6 +20,8 @@ In deze video krijg je een kort overzicht van hoe je de belangrijkste onderdelen
    Gebruik een bakje of plakband om schroeven en kleine componenten niet kwijt te raken.
 - **Let op scherpe randen**  
    Sommige computerbehuizingen en onderdelen hebben scherpe metalen randen, werk voorzichtig om snijwonden te voorkomen.
+
+{% include punten.html data='demonteren-en-monteren-veiligheidsmaatregelen' %}
 
 # Opdracht: In groep kennismaken met de binnenkant van een computer
 
