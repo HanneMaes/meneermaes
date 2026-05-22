@@ -1,6 +1,6 @@
 ---
 title: Demontage & Montage
-last_modified: 2026-05-22 11:37:17 +0200
+last_modified: 2026-05-22 12:14:51 +0200
 created: 2025-04-02 15:53:00 +0200
 ---
 
@@ -51,7 +51,7 @@ Plaats de foto in het document, heeft de computer een **stroomschakelaar** dan z
    Zet alle onderdelen die je kan herkennen in het documenten.  
    **Dit kan je doen door de foto te annoteren of per onderdeel een aparte foto te nemen en er de naam van het onderdeel bij te zetten.**
 
-{% include callout.html type='Tip' content='Kijk bij de [Hardware Shopping](Hardware-shopping) opdracht welke onderdelen er allemaal in een computer zitten.' %}
+{% include callout.html type='Tip' content='Kijk bij de [Hardware Shopping](Hardware-shopping#opdracht-2-koop-de-onderdelen) opdracht welke onderdelen er allemaal in een computer zitten.' %}
 
 ## 4. Demonteren & monteren
 
