@@ -1,6 +1,6 @@
 ---
 title: Computerarchitectuur
-last_modified: 2026-05-11 22:08:42 +0200
+last_modified: 2026-05-25 21:16:10 +0200
 created: 2024-11-12 10:58:54 +0200
 ---
 
@@ -20,4 +20,4 @@ created: 2024-11-12 10:58:54 +0200
 
 [De principe van gegevenstransport](De-principe-van-gegevenstransport)
 
-[De voeding](De-voeding)
+[De Voeding](De-voeding)
