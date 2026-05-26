@@ -1,7 +1,7 @@
 ---
 title: De Voeding
 created: 2026-05-11 20:56:26 +0200
-last_modified: 2026-05-26 11:44:12 +0200
+last_modified: 2026-05-26 11:45:37 +0200
 ---
 
 > Wordt vaak ook de **PSU of Power Supply Unit** genoemd.
@@ -370,7 +370,7 @@ Gevolg:
 
 Een voeding levert alleen het vermogen dat onderdelen nodig hebben.  
 Een `600W` vs `1000W` voeding maakt je PC niet sneller als allebei voldoende zijn voor je systeem.  
-De voeding "duwt" geen extra prestaties in je onderdelen.
+De voeding 'duwt' geen extra prestaties in je onderdelen.
 
 De voeding zorgt enkel dat:
 - genoeg energie beschikbaar is
