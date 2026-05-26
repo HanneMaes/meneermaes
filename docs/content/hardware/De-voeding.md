@@ -1,7 +1,7 @@
 ---
 title: De Voeding
 created: 2026-05-11 20:56:26 +0200
-last_modified: 2026-05-25 22:51:07 +0200
+last_modified: 2026-05-26 11:44:12 +0200
 ---
 
 > Wordt vaak ook de **PSU of Power Supply Unit** genoemd.
@@ -85,10 +85,10 @@ Download en maak deze oefening: [Gelijk- en wisselspanning](zelfstandige-opdrach
 1. Hoeveel spanning gebruiken deze componenten?  
   ![Open case](images/spanning-componenten.png)
 2. *Onderzoeksvraag:* Waarom zou een videokaart meer stroom nodig hebben dan een USB-stick?
-3. Wat is het vermogen van deze toestellen?
-  3.1 LED-lamp
-  3.2 Laptop 
-  3.3 Gaming PC
+3. Wat is het vermogen van deze toestellen?  
+  a. LED-lamp  
+  b. Laptop  
+  c. Gaming PC
 
 # PSU efficiëntie
 
@@ -270,9 +270,9 @@ Waarom?
 " %}
 
 {% include toggle.html title="Stap 2: Efficiëntie kiezen" content="
-80 PLUS Bronze: basis
-80 PLUS Gold: standaard gaming PC
-80 PLUS Platinum: high-end / servers
+- 80 PLUS **Bronze**: basis
+- 80 PLUS **Gold**: standaard gaming PC
+- 80 PLUS **Platinum**: high-end / servers
 
 Meer efficiëntie = minder warmte en verbruik
 " %}
@@ -282,8 +282,10 @@ Een voeding is niet alleen een kwestie van genoeg Watt hebben.
 Je moet ook genoeg **juiste kabels en aansluitingen** hebben voor je onderdelen.
 
 Dit zijn de belangrijkste kabels: 
-- PCIe kabels voor GPU
-- SATA kabels voor SSD/HDD
+- PCIe kabels voor GPU  
+  ![PCIe cable](images/pcie-cable.png){: width='300px' }
+- SATA kabels voor SSD/HDD  
+  ![SATA cable](images/sata-cable.png){: width='300px' }
 - CPU power (8-pin of 4+4 pin)
 
 Niet alle kabels van een voeding gaan naar dezelfde plaats.  
@@ -367,12 +369,20 @@ Gevolg:
 > Niet waar
 
 Een voeding levert alleen het vermogen dat onderdelen nodig hebben.  
-Een `1000W` voeding maakt een computer niet sneller dan een `600W` voeding.
+Een `600W` vs `1000W` voeding maakt je PC niet sneller als allebei voldoende zijn voor je systeem.  
+De voeding "duwt" geen extra prestaties in je onderdelen.
 
 De voeding zorgt enkel dat:
 - genoeg energie beschikbaar is
 - de spanning stabiel blijft
 - onderdelen veilig kunnen werken
+
+Als je voeding **te weinig vermogen heeft:
+- kan je PC uitvallen onder load (gaming, renderen)
+- kan de GPU/CPU niet op volle snelheid draaien (throttling)
+- kan het systeem instabiel worden
+
+In dat geval lijkt het alsof je PC trager is, maar dat komt niet door minder snelheid van de voeding zelf, wel door bescherming of instabiliteit van het systeem.
 " %}
 
 {% include toggle.html title="Een voeding met hogere efficiëntie verspilt meestal minder energie" content="
