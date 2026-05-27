@@ -750,8 +750,8 @@ nav {
   border-radius: var(--roundness);
   background-color: white;
 
-  margin: calc(2 * var(--spacingSmall));
-  margin-left: var(--spacingSmall);
+  margin: var(--spacingSmall);
+  margin-left: calc(2 * var(--spacingSmall));
   margin-bottom: 0px;
 
   padding: 15px;
