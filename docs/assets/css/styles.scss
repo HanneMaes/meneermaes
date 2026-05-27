@@ -1,3 +1,15 @@
+---
+---
+
+/* **** */
+/* SASS */ 
+/* **** */
+/* Jekyll processes .scss files automatically as long as the file starts with two lines of triple dashes */
+
+/* SASS VARIABLES: because normal variables don't work in @media */ 
+$contentWidthMax: 800px;
+$sidebarWidthMax: 200px;
+
 /* ********* */
 /* VARIABLES */
 /* ********* */
@@ -20,7 +32,8 @@
   --animSpeed: 0.3s;
 
   --contentWidth: 85%;
-  --contentWidthMax: 850px; /* a bit smaller then most tablet screens, so they get nice padding */
+  --contentWidthMax: #{$contentWidthMax};
+  --sidebarWidthMax: #{$sidebarWidthMax};
   --roundness: 10px;
   --borderWidth: 3px;
 
@@ -109,7 +122,7 @@ section {
 
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 
   /* make the page content be over the page info at the bottom */
   position: relative; /* to make the z-index work */
@@ -121,11 +134,14 @@ article {
   width: var(--contentWidth);
   max-width: var(--contentWidthMax);
   flex-shrink: 0; /* so it never gets squeezed */
+  padding-left: var(--spacingBig);
 }
 
 /* right sidebar: empty for now, but needs to be here so <article> gets centered */
 .rightSidebar {
-  flex: 1;
+  flex: 1 999 0px; /* grow, shrink aggressively, start at 0 */
+  min-width: 0;
+  max-width: var(--sidebardWidthMax);
 }
 
 hr {
@@ -734,8 +750,8 @@ iframe {
 
 /* sidebar */
 aside {
-  flex: 1; /* takes up all space left */
-  flex-shrink: 0;
+  flex: 0 1 var(--sidebardWidthMax); /* don't grow, shrink normally (after rightSidebar), start at var(--sidebardWidthMax) */
+  min-width: 0;
 
   /* make it stay on the same position, even when scrolling */
   position: sticky;
@@ -745,17 +761,19 @@ aside {
 
 nav {
   width: fit-content; /* make div not bigger then content */
+  max-width: var(--sidebardWidthMax);
   font-size: 13px;
 
   border-radius: var(--roundness);
   background-color: white;
 
-  margin: var(--spacingSmall);
-  margin-left: calc(2 * var(--spacingSmall));
-  margin-bottom: 0px;
+  margin: calc(2 * var(--spacingSmall));
+  margin-top:   0px;
+  margin-right: 0px;
 
   padding: 15px;
-  padding-top: 10px;
+  padding-top:    10px;
+  padding-bottom: 10px;
 
   box-shadow: 0px 0px 0px var(--borderWidth) color-mix(in srgb, var(--text) 33%, transparent) inset;
   transition: box-shadow var(--animSpeed);
@@ -768,6 +786,7 @@ nav:hover {
 nav em {
   color: var(--medium);
   font-weight: normal;
+  font-style:  normal;
 }
 
 nav a {
@@ -776,7 +795,10 @@ nav a {
 
 nav ul {
   margin-left: var(--spacingSmall);
+  margin-bottom: 0px;
+
   padding-left: 0px;
+
   list-style: none; /* remove bullet point */
 }
 
@@ -850,9 +872,12 @@ li:has(.h6Link) { opacity: 0.3; }
   }
 }
 
-  /* hide sidebars on small screens */
-  @media (max-width: 1000px) { /* a bit smaller then most tablet screens, so they still get the sidebar */
-    aside, .rightSidebar {
-      display: none;
-    }
+@media (max-width: $contentWidthMax + $sidebarWidthMax) {
+  aside, .rightSidebar {
+    display: none;
+  }
+
+  article {
+    padding-left: var(--spacing);
+  }
 }
