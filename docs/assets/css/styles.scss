@@ -134,14 +134,15 @@ article {
   width: var(--contentWidth);
   max-width: var(--contentWidthMax);
   flex-shrink: 0; /* so it never gets squeezed */
-  padding-left: var(--spacingBig);
+
+  padding-left:  var(--spacingBig);
 }
 
 /* right sidebar: empty for now, but needs to be here so <article> gets centered */
 .rightSidebar {
   flex: 1 999 0px; /* grow, shrink aggressively, start at 0 */
   min-width: 0;
-  max-width: var(--sidebardWidthMax);
+  max-width: $sidebarWidthMax;
 }
 
 hr {
@@ -878,6 +879,6 @@ li:has(.h6Link) { opacity: 0.3; }
   }
 
   article {
-    padding-left: var(--spacing);
+    padding-left:  var(--spacing);
   }
 }
