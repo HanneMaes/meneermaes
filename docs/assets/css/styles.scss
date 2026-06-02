@@ -288,6 +288,14 @@ h2:hover .heading-anchor {
   font-weight: 900;
   font-style: italic;
 }
+.calloutGreen .title {
+  background-color: color-mix(in srgb, var(--colorGreen) 10%, transparent);
+  color: color-mix(in srgb, var(--colorGreen) 30%, transparent);
+}
+.calloutBlue .title {
+  background-color: color-mix(in srgb, var(--colorBlue) 20%, transparent);
+  color: color-mix(in srgb, var(--colorBlue) 60%, transparent);
+}
 
 /* toggles */
 
