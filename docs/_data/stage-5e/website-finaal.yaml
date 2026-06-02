@@ -3,14 +3,14 @@ punten:
   - desc: "Inhoud is volledig, relevant en afgestemd op de doelgroep (zal besproken worden met opdrachtgever)"
     max: 3
   - desc: "Duidelijke structuur en logische navigatie en makkelijk te gebruiken"
-    max: 3
+    max: 2
   - desc: "Code en technieken correct toegepast"
     max: 5
   - desc: "Code is overzichtelijk en gestructureerd"
-    max: 3
+    max: 1
   - desc: "Responsive design op mobiel, tablet en desktop"
-    max: 5
+    max: 4
   - desc: "Basis accessibility toegepast (alt-teksten, semantische HTML, leesbaarheid, …)"
-    max: 3
+    max: 2
   - desc: "Consistente en verzorgde vormgeving, met aandacht voor details (zal besproken worden met opdrachtgever)"
     max: 3
