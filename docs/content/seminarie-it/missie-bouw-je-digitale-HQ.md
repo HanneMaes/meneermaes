@@ -121,7 +121,8 @@ Elke digitale agent moet dit protocol **kennen en toepassen**:
   *Het originele + 2 extra kopieën*
 - **2 verschillende soorten** opslag  
   *Laptop, smartphone, usb-stick, ...*
-- **1 externe kopie** *Een andere plek of toestel buiten je hoofdwerkplek*
+- **1 externe kopie**  
+  *Een andere plek of toestel buiten je hoofdwerkplek*
 
 **Waarom is dit zo belangrijk?**
 - Je laptop kan crashen of kapot gaan
@@ -162,24 +163,23 @@ Je bent nu officieel aangesteld als: **Digital Hoofdkwartier System Designer** J
 
 ## Stap 1: Position Check 
 
+{% include callout.html type='Opdracht' content='
+Maak een **nieuw document** aan en geef het als naam: **3-2-1-backups**.  
+' %}
+
 Voordat je begint, denk even na als echte agent: **In welk deel van je digitale hoofdkwartier ga je deze opdracht plaatsen?**
 - `Opdrachten/Bezig`
 - `Opdrachten/Afgewerkt`
-- `Opdrachten/Afgewerkt`
 - `Back-ups`
 - In een andere map?
-
-{% include callout.html type='Opdracht' content='
-Maak een **nieuw document** aan in deze map, geef het als naam: **3-2-1-backups**.  
-' %}
 
 ## Stap 2: Je eigen back-up strategie
 
 {% include callout.html type='Opdracht' content='
 Beantwoord in het document deze vragen:
-1. Waar leeft jouw **originele** werk?
-2. Wat is jouw **tweede** kopie?
-4. Wanneer maak je deze **tweede** kopie?
+1. Waar plaats je jouw **originele** bestanden?
+2. Waar zet je je **eerste** kopie?
+4. Wanneer maak je deze **eerste** kopie?
 5. Wat is je **externe back-up**?
 6. Wanneer maak je deze **externe** backup?
 7. Hoe zorg je ervoor dat je het maken van back-ups niet vergeet? *(routine, checklist, reminder, ...)*
@@ -197,7 +197,7 @@ Een Zip-bestand is een soort digitale koffer waar je heel veel mappen en bestand
 2. De computer 'perst' de bestanden samen, waardoor het minder opslagruimte (MB's) inneemt.
 " %}
 
-{% include toggle.html title="Snelle check: Kan je een bestand bewerken terwijl het nog ín een Zip-map zit?" content="
+{% include toggle.html title="Kan je een bestand bewerken terwijl het nog ín een Zip-map zit?" content="
 Nee, dat kan niet direct. Als je een bestand inside een zip-map aanpast, worden de wijzigingen vaak niet goed opgeslagen. Je moet de zip-map altijd eerst uitpakken (unzippen of extraheren) voordat je in de bestanden gaat werken.
 " %}
 
