@@ -57,19 +57,19 @@ School
 | `Opdrachten/Afgewerkt` | Alles wat **volledig afgewerkt** is                     |
 | `Back-ups`             | Reservekopieën van **belangrijke** bestanden            |
 
-{% include toggle.html title="Je hebt net je taak voor Engels ingediend via Smartschool en de leerkracht heeft het verbeterd. Wat doe je nu met je Word-document?" content="
+{% include toggle.html title="1. Je hebt net je taak voor Engels ingediend via Smartschool en de leerkracht heeft het verbeterd. Wat doe je nu met je Word-document?" content="
 Je verplaatst het document van `Opdrachten/Bezig` naar `Opdrachten/Afgewerkt`. De taak is helemaal afgerond, maar je gooit hem niet weg. Als je later moet studeren voor het examen, kun je je taak hier snel terugvinden om te herhalen.
 " %}
 
-{% include toggle.html title="In welke map zet je een opdracht voor Frans waar je volgende week voor moet studeren?" content="
+{% include toggle.html title="2. In welke map zet je een opdracht voor Frans waar je volgende week voor moet studeren?" content="
 In deze structuur hoort een taak of toets waar je nog mee bezig bent (of voor moet leren) in de map `Opdrachten/Bezig`. Pas als de toets voorbij is en je er niets meer voor hoeft te doen, verplaats je deze naar `Opdrachten/Afgewerkt`. Het is slim om deze mappenstructuur straks voor al je schoolvakken te gebruiken!
 " %}
 
-{% include toggle.html title="Je hebt uren gewerkt aan een heel belangrijk jaarwerk. Je wil er absoluut zeker van zijn dat je dit niet kwijtraakt als je computer crasht. In welke map zet je een extra kopie?" content="
+{% include toggle.html title="3. Je hebt uren gewerkt aan een heel belangrijk jaarwerk. Je wil er absoluut zeker van zijn dat je dit niet kwijtraakt als je computer crasht. In welke map zet je een extra kopie?" content="
 Hiervoor gebruik je de map `Back-ups`. Dit is de veilige zone waar je reservekopieën bewaart van bestanden die je echt niet mag verliezen.
 " %}
 
-{% include toggle.html title="Je hebt een Word-document geopend, maar je twijfelt of je het in 'Bezig' of 'Afgewerkt' moet zetten. Waar kijk je naar om te beslissen?" content="
+{% include toggle.html title="4. Je hebt een Word-document geopend, maar je twijfelt of je het in 'Bezig' of 'Afgewerkt' moet zetten. Waar kijk je naar om te beslissen?" content="
 Je kijkt naar de status van de opdracht: Moet ik er nog iets aan aanpassen? Moet de leerkracht het nog nakijken? Is het antwoord 'ja', dan is het `Bezig`. Is het helemaal klaar en hoef je er nooit meer in te werken? Dan is het `Afgewerkt`.
 " %}
 
@@ -96,12 +96,12 @@ Waarom? Omdat kleuren je helpen om **sneller te herkennen, minder te moeten zoek
 - **Verwijder** oude of dubbele bestanden
 - Gebruik dezelfde structuur in **andere vakken**
 
-{% include toggle.html title="Je hebt een document opgeslagen met de naam `document11.docx`. Volgende maand heb je dit bestand dringend nodig voor een toets. Welke regel is hier niet gevolgd en waarom is dit een probleem?" content="
+{% include toggle.html title="1. Je hebt een document opgeslagen met de naam `document11.docx`. Volgende maand heb je dit bestand dringend nodig voor een toets. Welke regel is hier niet gevolgd en waarom is dit een probleem?" content="
 Je hebt de regel **gebruik duidelijke bestandsnamen** genegeerd. Aan de naam `document11` kun je onmogelijk zien waarover de taak gaat of voor welk vak het is.  
 **Wat zou een betere naam zijn?**
 " %}
 
-{% include toggle.html title="In je map `Wiskunde` staan de volgende bestanden: `oefeningen.pdf`, `oefeningen_nieuw.pdf`, `oefeningen_echt_nieuw.pdf` en `oefeningen_klaar.pdf`. Welke actie moet je als digitale agent nu ondernemen?" content="
+{% include toggle.html title="2. In je map `Wiskunde` staan de volgende bestanden: `oefeningen.pdf`, `oefeningen_nieuw.pdf`, `oefeningen_echt_nieuw.pdf` en `oefeningen_klaar.pdf`. Welke actie moet je als digitale agent nu ondernemen?" content="
 Je moet de regel **verwijder oude of dubbele bestanden** toepassen. Dit soort namen zorgt voor enorme verwarring. Kijk welk bestand het juiste en meest recente is, geef dat een duidelijke naam en verwijder de oude versies die je niet meer nodig hebt.
 " %}
 
@@ -131,19 +131,19 @@ Elke digitale agent moet dit protocol **kennen en toepassen**:
 
 > Maar met het 3-2-1 protocol blijft je werk altijd herstelbaar.
 
-{% include toggle.html title="Wat gebeurt er met je bestanden als je laptop in het water valt, maar je hebt wél de 3-2-1 regel gebruikt?" content="
+{% include toggle.html title="1. Wat gebeurt er met je bestanden als je laptop in het water valt, maar je hebt wél de 3-2-1 regel gebruikt?" content="
 Je laptop is dan helaas kapot, maar je bestanden zijn volledig veilig! Omdat je de 3-2-1 regel hebt toegepast, heb je nog minstens twee andere kopieën (bijvoorbeeld op een USB-stick én in de cloud). Je kunt direct op een andere computer inloggen en weer verder aan het werk.
 " %}
 
-{% include toggle.html title="Je hebt je taak opgeslagen op je laptop én op een USB-stick. Je laptop zit in je boekentas en je USB-stick steekt in het zijvakje van diezelfde boekentas. Je fietst door een enorme storm en je boekentas wordt volledig doordrenkt met water: je laptop én je USB-stick zijn kapot. Welk deel van de 3-2-1 regel had dit kunnen voorkomen?" content="
+{% include toggle.html title="2. Je hebt je taak opgeslagen op je laptop én op een USB-stick. Je laptop zit in je boekentas en je USB-stick steekt in het zijvakje van diezelfde boekentas. Je fietst door een enorme storm en je boekentas wordt volledig doordrenkt met water: je laptop én je USB-stick zijn kapot. Welk deel van de 3-2-1 regel had dit kunnen voorkomen?" content="
 Dit had voorkomen kunnen worden door de '1' uit de regel: **1 externe kopie** (een kopie op een andere plek). Omdat beide kopieën op exact dezelfde fysieke plek waren (in je boekentas), ben je ze nu allebei kwijt. Als je een derde kopie in de cloud had staan, was er niets aan de hand geweest.
 " %}
 
-{% include toggle.html title="Je bent heel goed bezig: je hebt je bestand opgeslagen op je laptop, op de harde schijf van je broer én op de computer van je mama. Je hebt dus 3 kopieën. Plots slaat de bliksem in bij jullie thuis en gaan alle computers in huis tegelijk kapot. Welke fout tegen de 3-2-1 regel is hier gemaakt?" content="
+{% include toggle.html title="3. Je bent heel goed bezig: je hebt je bestand opgeslagen op je laptop, op de harde schijf van je broer én op de computer van je mama. Je hebt dus 3 kopieën. Plots slaat de bliksem in bij jullie thuis en gaan alle computers in huis tegelijk kapot. Welke fout tegen de 3-2-1 regel is hier gemaakt?" content="
 Ook hier is de fout dat er geen **externe kopie buiten het huis** was. Hoewel je 3 kopieën had op verschillende toestellen, stonden ze allemaal in hetzelfde gebouw. Bij een brand of blikseminslag ben je dan alsnog alles kwijt. Een back-up in de cloud (die in een ander gebouw staat) had dit opgelost.
 " %}
 
-{% include toggle.html title="Een hacker blokkeert jouw Google-account en je kunt plotseling niet meer inloggen in je Google Drive-cloud waar al je schoolwerk staat. Gelukkig pas jij de 3-2-1 regel toe. Waarom is dit voor jou geen ramp?" content="
+{% include toggle.html title="4. Een hacker blokkeert jouw Google-account en je kunt plotseling niet meer inloggen in je Google Drive-cloud waar al je schoolwerk staat. Gelukkig pas jij de 3-2-1 regel toe. Waarom is dit voor jou geen ramp?" content="
 Omdat de regel zegt dat je **2 verschillende soorten opslag** moet gebruiken. Je hebt je bestanden niet alléén in de cloud staan, maar je hebt ook een lokale kopie op de harde schijf van je laptop of op een fysieke USB-stick. Je kunt dus gewoon bij je bestanden terwijl Google jouw account herstelt.
 " %}
 
