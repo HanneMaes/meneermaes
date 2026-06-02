@@ -224,13 +224,12 @@ Je gaat nu een **volledige reservekopie** van je digitale hoofdkwartier veiligst
 
 {% include callout.html type='Opdracht' content='
 **Missie instructies:**
-1. Download protocol:  
-   Download jouw volledige mapstructuur van Google Drive naar je computer.
-2. Unzip:
+1. Download jouw volledige mapstructuur van Google Drive naar je computer.
+2. Unzip:  
    Pak het .zip-bestand uit en controleer of alles correct is.
-3. Zip:
+3. Zip:  
    Maak een nieuw .zip-bestand van je mappenstrucuur en geef het de naam `laatste missie.zip`.
-2. Smartschool Drop:  
+2. Smartschool Upload:  
    Upload het nieuwe .zip-bestand in de juiste uploadzone.
 ' %}
 
