@@ -1,7 +1,7 @@
 ---
 title: 'Missie: Bouw Je Digitale Hoofdkwartier'
 created: 2026-06-01 16:42:44 +0200
-last_modified: 2026-06-01 21:52:33 +0200
+last_modified: 2026-06-02 14:17:33 +0200
 ---
 
 # Digitale Hoofdkwartier
@@ -61,15 +61,15 @@ School
 Je verplaatst het document van `Opdrachten/Bezig` naar `Opdrachten/Afgewerkt`. De taak is helemaal afgerond, maar je gooit hem niet weg. Als je later moet studeren voor het examen, kun je je taak hier snel terugvinden om te herhalen.
 " %}
 
-{% include toggle.html title="2. In welke map zet je een opdracht voor Frans waar je volgende week voor moet studeren?" content="
+{% include toggle.html title="2. In welke map zet je een toets voor Frans waar je volgende week voor moet studeren?" content="
 In deze structuur hoort een taak of toets waar je nog mee bezig bent (of voor moet leren) in de map `Opdrachten/Bezig`. Pas als de toets voorbij is en je er niets meer voor hoeft te doen, verplaats je deze naar `Opdrachten/Afgewerkt`. Het is slim om deze mappenstructuur straks voor al je schoolvakken te gebruiken!
 " %}
 
-{% include toggle.html title="3. Je hebt uren gewerkt aan een heel belangrijk jaarwerk. Je wil er absoluut zeker van zijn dat je dit niet kwijtraakt als je computer crasht. In welke map zet je een extra kopie?" content="
+{% include toggle.html title="3. Je hebt uren gewerkt aan een heel belangrijke opdracht. Je wil er absoluut zeker van zijn dat je dit niet kwijtraakt als je computer crasht. In welke map zet je een extra kopie?" content="
 Hiervoor gebruik je de map `Back-ups`. Dit is de veilige zone waar je reservekopieën bewaart van bestanden die je echt niet mag verliezen.
 " %}
 
-{% include toggle.html title="4. Je hebt een Word-document geopend, maar je twijfelt of je het in 'Bezig' of 'Afgewerkt' moet zetten. Waar kijk je naar om te beslissen?" content="
+{% include toggle.html title="4. Je hebt een Word-document, maar je twijfelt of je het in 'Bezig' of 'Afgewerkt' moet zetten. Waar kijk je naar om te beslissen?" content="
 Je kijkt naar de status van de opdracht: Moet ik er nog iets aan aanpassen? Moet de leerkracht het nog nakijken? Is het antwoord 'ja', dan is het `Bezig`. Is het helemaal klaar en hoef je er nooit meer in te werken? Dan is het `Afgewerkt`.
 " %}
 
@@ -80,7 +80,7 @@ Waarom? Omdat kleuren je helpen om **sneller te herkennen, minder te moeten zoek
 
 {% include callout.html type='Opdracht' content='
 1. Maak de mappenstructuur na in Google Drive
-2. **Plaats een screenshot** van je gekleurde mappen op een **logische plaats in de mappenstructuur**.
+2. **Plaats duidelijke screenshots** van je gekleurde mappen op een **logische plaats in de mappenstructuur**.
 ' %}
 
 > In een goed georganiseerd hoofdkwartier zie je in één oogopslag waar alles zit
