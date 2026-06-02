@@ -30,14 +30,16 @@ Je krijgt een korte onderzoeksmissie. Je werkt zelfstandig en gaat **op ontdekki
 
 > Succes, agent. De cloud wacht op je!
 
+{% include callout.html type='Opdracht' content='
 [Start je missie hier](https://docs.google.com/forms/d/e/1FAIpQLSe7hmulW4m1Md8eI-knUQsOFmL1XVu5XoybQ6SwH8L9smtBRw/viewform?usp=publish-editor)
+' %}
 
 ## Stap 2: Bouw je Digitale hoofdkwartier
 
 Agent, je onderzoek is **geslaagd**.  
 Nu is het tijd om je kennis om te zetten in **actie**.
 
-Dit is de mappenstructuur die we zo meteen gaam bouwen in **Google Drive**:
+Dit is de mappenstructuur die we zo meteen gaan bouwen in **Google Drive**:
 ```
 School
 └── Seminarie IT
@@ -60,7 +62,10 @@ School
 Geef **elke map een eigen kleur** en gebruik altijd **dezelfde kleur per soort map**.  
 Waarom? Omdat kleuren je helpen om **sneller te herkennen, minder te moeten zoeken**.
 
-**Upload een screenshot** van je gekleurde mappen op een **logische plaats in de mappenstructuur**.
+{% include callout.html type='Opdracht' content='
+1. Maak de mappenstructuur na in Google Drive
+2. **Upload een screenshot** van je gekleurde mappen op een **logische plaats in de mappenstructuur**.
+' %}
 
 > In een goed georganiseerd hoofdkwartier zie je in één oogopslag waar alles zit
 
@@ -125,10 +130,13 @@ Voordat je begint, denk even na als echte agent: **In welk deel van je digitale 
 - `Back-ups`
 - In een andere map?
 
+{% include callout.html type='Opdracht' content='
 Maak een **nieuw document** aan in deze map, geef het als naam: **3-2-1-backups**.  
+' %}
 
 ## Stap 2: Je eigen back-up strategie
 
+{% include callout.html type='Opdracht' content='
 Beantwoord in het document deze vragen:
 1. Waar leeft jouw **originele** werk?
 2. Wat is jouw **tweede** kopie?
@@ -137,6 +145,7 @@ Beantwoord in het document deze vragen:
 6. Wanneer maak je deze **externe** backup?
 7. Hoe zorg je ervoor dat je het maken van back-ups niet vergeet? *(routine, checklist, reminder, ...)*
 8. Kan je automatisch back-ups maken?
+' %}
 
 # Smartschool Cloud
 
@@ -159,6 +168,7 @@ Maar... een echte cyberagent stopt nooit zonder een **laatste veiligheidscontrol
 
 Je gaat nu een **volledige reservekopie** van je digitale hoofdkwartier veiligstellen in de **uploadzone van Smartschool**.
 
+{% include callout.html type='Opdracht' content='
 **Missie instructies:**
 1. Download protocol:  
   Download jouw volledige mapstructuur van Google Drive naar je computer.
@@ -168,6 +178,7 @@ Je gaat nu een **volledige reservekopie** van je digitale hoofdkwartier veiligst
   Maak een nieuw .zip-bestand van je mappenstrucuur en geef het de naam `laatste missie.zip`.
 2. Smartschool Drop:  
   Upload het nieuwe .zip-bestand in de juiste uploadzone.
+' %}
 
 > MISSION COMPLETE!
 
