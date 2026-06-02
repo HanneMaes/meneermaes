@@ -26,7 +26,7 @@ Vanaf vandaag start je met je eerste missie. Jouw taak is eenvoudig, maar belang
 
 Er is een probleem: digitale bestanden raken vaak kwijt, staan op de verkeerde plaats of zijn niet goed beveiligd. **Aan jou om dit mysterie op te lossen**.
 
-Je krijgt een korte onderzoeksmissie. Je werkt zelfstandig and gaat **op ontdekking in de wereld van de cloud** en bestandsopslag. Door goed na te denken en de vragen in te vullen, verzamel je de informatie die je nodig hebt om straks je eigen slimme en veilige digitale werkplek te bouwen.
+Je krijgt een korte onderzoeksmissie. Je werkt zelfstandig en gaat **op ontdekking in de wereld van de cloud** en bestandsopslag. Door goed na te denken en de vragen in te vullen, verzamel je de informatie die je nodig hebt om straks je eigen slimme en veilige digitale werkplek te bouwen.
 
 > Succes, agent. De cloud wacht op je!
 
