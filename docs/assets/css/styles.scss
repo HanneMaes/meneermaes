@@ -263,7 +263,7 @@ h2:hover .heading-anchor {
 
   display: inline-flex;
   flex-direction: row;
-  align-items: center;
+  align-items:flex-start;
 }
 .calloutGreen {
   background-color: color-mix(in srgb, var(--colorGreen) 10%, transparent);
@@ -284,18 +284,16 @@ h2:hover .heading-anchor {
 
 .callout .title {
   text-transform: capitalize;
-  color: color-mix(in srgb, var(--colorGreen) 60%, transparent);
+  color: var(--white)
   font-size: 20px;
   font-weight: 900;
   font-style: italic;
 }
 .calloutGreen .title {
   background-color: color-mix(in srgb, var(--colorGreen) 30%, transparent);
-  color: color-mix(in srgb, var(--colorGreen) 10%, transparent);
 }
 .calloutBlue .title {
   background-color: color-mix(in srgb, var(--colorBlue) 60%, transparent);
-  color: color-mix(in srgb, var(--colorBlue) 20%, transparent);
 }
 
 /* toggles */
