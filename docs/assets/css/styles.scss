@@ -263,7 +263,7 @@ h2:hover .heading-anchor {
 
   display: inline-flex;
   flex-direction: row;
-  align-items:flex-start;
+  align-items:stretch;
 }
 .calloutGreen {
   background-color: color-mix(in srgb, var(--colorGreen) 10%, transparent);
@@ -279,7 +279,6 @@ h2:hover .heading-anchor {
 .callout p {
   padding: 20px;
   margin: 0px;
-  height: 100%;
 }
 
 .callout .title {
@@ -289,7 +288,6 @@ h2:hover .heading-anchor {
   font-weight: 900;
   font-style: italic;
   border-radius: var(--roundness);
-  height: 100%;
 }
 .calloutGreen .title {
   background-color: color-mix(in srgb, var(--colorGreen) 30%, transparent);
