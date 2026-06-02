@@ -147,6 +147,14 @@ Beantwoord in het document deze vragen:
 8. Kan je automatisch back-ups maken?
 ' %}
 
+# Zip-Bestanden
+
+{% include toggle.html title="Wat zijn Zip-bestanden?" content="
+	Kort antwoord hier
+' %}
+
+<iframe src="https://docs.google.com/presentation/d/1u4FkgOik4mR6MOjioZtaNv4KDVSgZ6VB/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="515" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
 # Smartschool Cloud
 
 ![The Cloud](images/cloud-end.png)
