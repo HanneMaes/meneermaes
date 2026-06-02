@@ -64,7 +64,7 @@ Waarom? Omdat kleuren je helpen om **sneller te herkennen, minder te moeten zoek
 
 {% include callout.html type='Opdracht' content='
 1. Maak de mappenstructuur na in Google Drive
-2. **Upload een screenshot** van je gekleurde mappen op een **logische plaats in de mappenstructuur**.
+2. **Plaats een screenshot** van je gekleurde mappen op een **logische plaats in de mappenstructuur**.
 ' %}
 
 > In een goed georganiseerd hoofdkwartier zie je in één oogopslag waar alles zit
@@ -151,7 +151,7 @@ Beantwoord in het document deze vragen:
 
 {% include toggle.html title="Wat zijn Zip-bestanden?" content="
 	Kort antwoord hier
-' %}
+" %}
 
 <iframe src="https://docs.google.com/presentation/d/1u4FkgOik4mR6MOjioZtaNv4KDVSgZ6VB/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="515" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
