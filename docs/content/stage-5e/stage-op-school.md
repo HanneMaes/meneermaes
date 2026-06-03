@@ -307,8 +307,6 @@ Belangrijk:
 
 # Evaluatie
 
-De evaluatie bestaat uit verschillende onderdelen, samen goed voor een **totaal van 75 punten**.
-
 {% include punten.html data='samenwerking' %}
 {% include punten.html data='logboek' %}
 {% include punten.html data='website-v1' %}
