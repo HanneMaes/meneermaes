@@ -1,7 +1,7 @@
 ---
 title: Browser Based Multiplayer Game
 created: 2026-06-04 10:32:55 +0200
-last_modified: 2026-06-04 11:49:13 +0200
+last_modified: 2026-06-04 12:04:14 +0200
 ---
 
 # Database aanmaken 
@@ -29,17 +29,17 @@ Dit is een voorbeeld van gameplay, maar je mag uiterraard je eigen regels gebrui
 1. Je start het spel met `100 goud/cash/...`.
 2. Je kan 3 soorten `soldaten/spaceships/...` kopen:
   - **Werkers**:  
-      - Verdienen: `3 goud/cash/...` per uur
-      - Attack: `1`
-      - Defence: `1`
-  - **Verdedigers**:
-      - Verdienen: `1 goud/cash/...` per uur
-      - Attack: `1`
-      - Defence: `3`
-  - **Aanvallers**:
-      - Verdienen `1 goud/cash/...` per uur
-      - Attack: `3`
-      - Defence: `1`
+      Verdienen: `3 goud/cash/...` per uur  
+      Attack: `1`  
+      Defence: `1`  
+  - **Verdedigers**:  
+      Verdienen: `1 goud/cash/...` per uur  
+      Attack: `1`  
+      Defence: `3`  
+  - **Aanvallers**:  
+      Verdienen `1 goud/cash/...` per uur  
+      Attack: `3`  
+      Defence: `1`  
 3. `Goud/cash/...` bij verdienen:
   1. Elke keer dat je op de pagina komt haal je uit de database het tijdstip van de vorige keer dat je op de pagina kwam.
   2. Bereken hoeveel tijd ver streken is en hoeveel `goud/cash/...` je in die tijd verdient hebt, update je database.
@@ -54,7 +54,7 @@ Maak een **World Map** en plaats de naam of het icoontje van elke speler op de j
 
 ## User Settings in LocalStorage *(JS)*
 
-Maak een menu met settings die de user kan aanpassen en sla dit op in [LocalStorage](../webtechnology/localStorage)  
+Maak een **menu met settings** die de user kan aanpassen en sla dit op in [LocalStorage](../webtechnology/localStorage)  
 Denk hierbij aan:
 - Dark/light mode 
 - Lettertype
