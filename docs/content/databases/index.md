@@ -42,3 +42,9 @@ Formulier: **[Vragen bij het thuis verwerken van leerstof](https://docs.google.c
 
 # Wat zijn databases?
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Tk1t3WKK-ZY?si=O0TRh54k9UFDbal2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+# Integrated Projects 
+
+[Browser based multiplayer game](../integrated-projects/browser-based-multiplayer-game)

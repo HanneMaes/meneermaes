@@ -128,6 +128,12 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 [FTP](FTP)
 
+---
+
+# Integrated Projects 
+
+[Browser based multiplayer game](../integrated-projects/browser-based-multiplayer-game)
+
 --- 
 
 # Verdieping 
