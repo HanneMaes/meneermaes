@@ -25,3 +25,9 @@ created: Wed, sep 04, 2024  10:47:23 PM
 [Demontage & montage](Demontage-en-montage)
 
 [Ergonomie](Ergonomie)
+
+---
+
+# Integrated Projects 
+
+[Browser based multiplayer game](../integrated-projects/browser-based-multiplayer-game)
