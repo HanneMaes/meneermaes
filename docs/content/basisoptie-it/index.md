@@ -1,6 +1,6 @@
 ---
 title: Basisoptie I.T.
-last_modified: 2026-03-24 15:22:36 +0100
+last_modified: 2026-06-09 14:09:44 +0200
 created: Wed, sep 15, 2024  14:03:23 PM
 ---
 
@@ -10,14 +10,16 @@ created: Wed, sep 15, 2024  14:03:23 PM
 
 [Zelfstandige inhaalopdracht: Digitale kennismaking via online tools](https://hannemaes.notion.site/Zelfstandige-inhaalopdracht-Digitale-kennismaking-via-online-tools-d465e05da6f044fdba720cc56abcf47b?pvs=4){: .opdracht }
 
+# CAD
+
+CAD staat voor **Computer-Aided Design**.
+
+[TinkerCad CodeBlocks](https://hannemaes.notion.site/TinkerCad-CodeBlocks-49d41492409b42afafa84ed086035eee)
+
 # Programmeren
 
 [Python Development](https://hannemaes.notion.site/Python-Game-Development-f26abfaf2cdc4ff7967753b933cd206f?pvs=74)
 
-# Tinkercad
-
-[TinkerCad CodeBlocks](https://hannemaes.notion.site/TinkerCad-CodeBlocks-49d41492409b42afafa84ed086035eee)
-
-# The Wick Editor 
+[Robocode](../robocode/index)
 
 [The Wick Editor: Je eigen game studio](https://hannemaes.notion.site/Je-eigen-game-studio-eee33d9fece8454a8a38508222f723eb)

@@ -1,6 +1,6 @@
 ---
 title: Meneer Maes
-last_modified: 2026-06-09 09:15:14 +0200
+last_modified: 2026-06-09 09:58:33 +0200
 created: 2024-03-13T10:31:28+01:00
 ---
 
@@ -43,6 +43,8 @@ created: 2024-03-13T10:31:28+01:00
 ## Programmeren
 
 [EarSketch: Muziek programmeren](content/uitbreiding/earsketch)
+
+[Robocode](content/robocode/index)
 
 [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
 
