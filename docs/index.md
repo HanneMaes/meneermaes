@@ -1,6 +1,6 @@
 ---
 title: Meneer Maes
-last_modified: 2026-05-27 09:12:04 +0200
+last_modified: 2026-06-09 09:15:14 +0200
 created: 2024-03-13T10:31:28+01:00
 ---
 
@@ -25,6 +25,16 @@ created: 2024-03-13T10:31:28+01:00
 [Basisoptie I.T.](content/basisoptie-it/index)
 
 [Seminarie I.T.](content/seminarie-it/index)
+
+--- 
+
+# Tools 
+
+[Create and share beautiful images of your code](https://carbon.now.sh/)
+
+[Wrap screenshots in a browser frame](https://browserframe.com/)
+
+[ASCII Symbols Table](https://ss64.com/ascii.html)
 
 ---
 
