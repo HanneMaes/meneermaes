@@ -1,6 +1,6 @@
 ---
 title: Flex
-last_modified: 2026-05-18 14:44:27 +0200
+last_modified: 2026-06-09 14:47:37 +0200
 created: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -27,6 +27,8 @@ created: Wed, sep 11, 2024  10:47:23 PM
 [Python: Basics](https://hannemaes.notion.site/Python-Game-Development-f26abfaf2cdc4ff7967753b933cd206f?source=copy_link)
 
 [Python: Automation]()
+
+[Robocode](../robocode/index)
 
 # Linux & Bash
 
