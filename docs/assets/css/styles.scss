@@ -823,6 +823,10 @@ nav ul {
   content: "· "; /* custom bullet point */
   color: color-mix(in srgb, currentColor 66%, transparent); /* use the element’s current text color */
 }
+.toc ul li.h1Link::marker { /* no bullet for h1 */
+  content: "" !important;
+}
+
 .outgoingLinks li::marker {
   content: "→ "; /* custom bullet point */
   color: var(--light);
