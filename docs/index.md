@@ -1,6 +1,6 @@
 ---
 title: Meneer Maes
-last_modified: 2026-06-16 10:55:24 +0200
+last_modified: 2026-06-16 12:36:49 +0200
 created: 2024-03-13T10:31:28+01:00
 ---
 
@@ -28,7 +28,9 @@ created: 2024-03-13T10:31:28+01:00
 
 --- 
 
-# Pedogogisch 
+# Pedagogisch 
+
+[AI als leerhulp bij programmeren](content/pedagogisch/AI-als-leerhulp-bij-programmeren)
 
 [Waarom ik je van buiten laat leren en niet laat opzoeken](content/pedagogisch/waarom-ik-van-buiten-laat-leren-en-niet-opzoeken)
 
