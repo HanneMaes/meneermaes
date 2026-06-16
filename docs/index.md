@@ -1,6 +1,6 @@
 ---
 title: Meneer Maes
-last_modified: 2026-06-09 09:58:33 +0200
+last_modified: 2026-06-16 10:55:24 +0200
 created: 2024-03-13T10:31:28+01:00
 ---
 
@@ -25,6 +25,12 @@ created: 2024-03-13T10:31:28+01:00
 [Basisoptie I.T.](content/basisoptie-it/index)
 
 [Seminarie I.T.](content/seminarie-it/index)
+
+--- 
+
+# Pedogogisch 
+
+[Waarom ik je van buiten laat leren en niet laat opzoeken](content/pedagogisch/waarom-ik-van-buiten-laat-leren-en-niet-opzoeken)
 
 --- 
 
