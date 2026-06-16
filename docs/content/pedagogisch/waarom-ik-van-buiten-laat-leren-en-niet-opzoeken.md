@@ -1,7 +1,7 @@
 ---
 title: Van buiten leren of opzoeken?
 created: 2026-06-16 09:43:15 +0200
-last_modified: 2026-06-16 12:51:01 +0200
+last_modified: 2026-06-16 12:51:37 +0200
 ---
 
 # Meer dan een antwoord vinden
@@ -122,7 +122,7 @@ Het doel is dus niet dat je letterlijk droge theorie vanbuiten leert om ze daarn
 
 Dan word je niet iemand die alleen code zoekt en kopieert, maar iemand die **zelf kan bouwen, testen, aanpassen en verbeteren**. En dat is precies wat echte programmeervaardigheid betekent.
 
-# Wil je meer weten
+# Wil je meer weten?
 
 - [Thomas More over toetsing als leerversterker](https://thomasmore.be/nl/expertisecentrum-onderwijs-en-leren/blog/laten-we-het-even-over-toetsen-hebben-toetsing-als)
 - [Bjork over desirable difficulties](https://bjorklab.psych.ucla.edu/wp-content/uploads/sites/13/2016/07/RBjork_inpress.pdf)

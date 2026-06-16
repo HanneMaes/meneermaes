@@ -1,7 +1,7 @@
 ---
 title: AI Als Leerhulp Bij Programmeren
 created: 2026-06-16 12:33:07 +0200
-last_modified: 2026-06-16 12:50:46 +0200
+last_modified: 2026-06-16 12:51:46 +0200
 ---
 
 # AI is krachtig, maar gevaarlijk
@@ -90,7 +90,7 @@ AI is een enorm krachtig hulpmiddel bij het leren programmeren. Maar het verschi
 
 Als je nog leert programmeren, moet AI vooral een coach, uitlegger en feedbackpartner zijn. Als programmeren later je job is, mag AI ook een productiviteitstool zijn. Maar in beide gevallen blijft hetzelfde gelden: **begrip eerst, automatisering daarna**.
 
-# Wil je meer weten
+# Wil je meer weten?
 
 - [Students' use of artificial intelligence tools while learning programming - VUB Research Portal](https://researchportal.vub.be/nl/publications/students-use-of-artificial-intelligence-tools-while-learning-prog/)
 - [Integration of AI into Peer Feedback: Students’ Perceptions and Experiences in a Programming Course](https://open.metu.edu.tr/handle/11511/119419)
