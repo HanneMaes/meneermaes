@@ -1,7 +1,7 @@
 ---
 title: AI Als Leerhulp Bij Programmeren
 created: 2026-06-16 12:33:07 +0200
-last_modified: 2026-06-16 12:58:17 +0200
+last_modified: 2026-06-16 13:02:18 +0200
 ---
 
 # AI is krachtig, maar gevaarlijk
@@ -96,7 +96,7 @@ AI kan overtuigend klinken en toch fout zijn. Gebruik dus altijd je cursus, voor
 
 # Verantwoord AI-gebruik in de klas
 
-{% include callout.html type='Tip' content='
+{% include callout.html type='Regels' content='
 - Gebruik AI als ondersteuning, niet als vervanging van je eigen werk.
 - Wees eerlijk over wanneer en hoe je AI hebt gebruikt.
 - Deel geen gevoelige persoonlijke gegevens of onnodige schooldata.
