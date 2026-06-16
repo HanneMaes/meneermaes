@@ -1,7 +1,7 @@
 ---
 title: AI Als Leerhulp Bij Programmeren
 created: 2026-06-16 12:33:07 +0200
-last_modified: 2026-06-16 12:51:46 +0200
+last_modified: 2026-06-16 12:54:50 +0200
 ---
 
 # AI is krachtig, maar gevaarlijk
@@ -34,19 +34,27 @@ Dat maakt AI zo sterk als leerpartner: je kunt onmiddellijk doorvragen, om een e
 
 ## 1. Uitleg op maat
 
+{% include callout.html type='Tip' content='
 Soms snap je een uitleg in de les of cursus niet meteen. Dan kan AI dezelfde leerstof op een andere manier uitleggen, stap voor stap, eenvoudiger of net met een extra voorbeeld. Dat helpt vooral wanneer je vastzit op één concept en een tweede invalshoek nodig hebt.
+'}
 
 ## 2. Code verduidelijken
 
+{% include callout.html type='Tip' content='
 AI kan bestaande code regel per regel helpen verklaren. Dat is nuttig als je wil begrijpen wat een stuk code doet, waarom iets fout loopt of welke structuur gebruikt wordt.
+'}
 
 ## 3. Hulp bij vastlopen
 
+{% include callout.html type='Tip' content='
 Als je vastloopt, kan AI je helpen om de fout beter te begrijpen, mogelijke oorzaken te zien en een volgende stap te kiezen. Dat is veel waardevoller dan gewoon meteen de volledige oplossing laten genereren.
+'}
 
 ## 4. Feedback op je werk
 
+{% include callout.html type='Tip' content='
 AI kan ook snelle, persoonlijke feedback geven op code of oefeningen. Dit is vooral nuttig wanneer ze je helpt om logische fouten te zien, revisies te maken en beter te begrijpen wat ze moeten verbeteren.
+'}
 
 # Wanneer AI je leren juist saboteert
 
@@ -58,31 +66,43 @@ AI wordt een probleem wanneer je het gebruikt om het lastige **denkwerk over te 
 
 ## 1. Gebruik AI om te begrijpen
 
+{% include callout.html type='Tip' content='
 Gebruik AI om leerstof te laten uitleggen, code te laten verduidelijken, concepten te verhelderen en feedback te krijgen. Laat AI je helpen om **meer te begrijpen**, niet om minder te denken.
+'}
 
 ## 2. Vraag altijd door
 
+{% include callout.html type='Tip' content='
 Zorg dat je het antwoord **echt begrijpt**. Aarzel niet om door te vragen als iets onduidelijk is. Vraag bijvoorbeeld om een eenvoudigere uitleg, een kleiner voorbeeld of een vergelijking met iets dat je al kent.
+'}
 
 ## 3. Herschrijf oplossingen zelf
 
+{% include callout.html type='Tip' content='
 Lees een AI-antwoord niet alleen. Sluit het venster en probeer de oplossing daarna **zelf opnieuw te schrijven**. Als je dat niet kunt, dan heb je het waarschijnlijk nog niet geleerd.
+'}
 
 ## 4. Gebruik altijd minstens één AI-vrije poging
 
+{% include callout.html type='Tip' content='
 Probeer een oefening eerst zelf. Denk na, test iets uit, **maak fouten**. Gebruik AI pas daarna als hulp om verder te geraken. Dat helpt om je eigen denkproces te trainen in plaats van het uit te besteden.
+'}
 
 ## 5. Controleer alles kritisch
 
+{% include callout.html type='Tip' content='
 AI kan overtuigend klinken en toch fout zijn. Gebruik dus altijd je cursus, voorbeelden, output en tests om te controleren of het antwoord klopt.
+'}
 
 # Verantwoord AI-gebruik in de klas
 
+{% include callout.html type='Tip' content='
 - Gebruik AI als ondersteuning, niet als vervanging van je eigen werk.
 - Wees eerlijk over wanneer en hoe je AI hebt gebruikt.
 - Deel geen gevoelige persoonlijke gegevens of onnodige schooldata.
 - Neem AI-antwoorden nooit automatisch over zonder controle.
 - Onthoud dat jij verantwoordelijk blijft voor wat je indient.
+'}
 
 # Conclusie
 

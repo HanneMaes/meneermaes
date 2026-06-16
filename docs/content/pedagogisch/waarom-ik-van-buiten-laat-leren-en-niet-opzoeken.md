@@ -1,7 +1,7 @@
 ---
 title: Van buiten leren of opzoeken?
 created: 2026-06-16 09:43:15 +0200
-last_modified: 2026-06-16 12:51:37 +0200
+last_modified: 2026-06-16 12:55:03 +0200
 ---
 
 # Meer dan een antwoord vinden
