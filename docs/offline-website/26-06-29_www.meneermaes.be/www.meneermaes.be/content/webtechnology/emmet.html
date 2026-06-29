@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/libraries/aos/aos.css">
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Emmet</title>
+
+    <!-- apply custom CSS to some pages -->
+    
+
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section>
+
+      <!-- ------------------------- -->
+      <!-- SIDEBAR: BREADCRUMBS, TOC -->
+      <!-- ------------------------- -->
+
+      <aside data-aos="fade-right" data-aos-delay="300"> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
+
+        <!-- ------ -->
+        <!-- SEARCH -->
+        <!-- ------ -->
+
+        <!-- <nav> -->
+        <!--   <a href="/index#cursussen"><img class="icon" src="/assets/images/search.svg"/></a> -->
+        <!-- </nav> -->
+
+        <!-- ----------- -->
+        <!-- BREADCRUMBS -->
+        <!-- ----------- -->
+
+        <!-- not on homepage -->
+        
+
+          <nav>
+        
+            <a href="../../index.html#cursussen">Cursussen</a>
+
+            <!-- only show link to section when not on a section page -->
+            
+            <span class="navDivider">/</span>
+            
+            <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+            
+            <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+            <a href="index.html">
+              Webtechnology</a>
+            
+
+          </nav>
+
+        
+
+        <!-- ----------------- -->
+        <!-- TABLE OF CONTENTS -->
+        <!-- ----------------- -->
+
+        <nav class="toc">
+          <em>Inhoudstafel</em>
+          <ul id="toc"></ul>
+        </nav>
+
+        <!-- --------------------------- -->
+        <!-- Incoming and outgoing links -->
+        <!-- --------------------------- -->
+
+        <nav class="links">
+
+          <!-- not on homapage and index pages -->
+          
+          
+
+            <em>Inkomende links</em>
+            <ul class="incomingLinks" id="incomingLinks"></ul>
+
+          
+
+          <em>Uitgaande links</em>
+          <ul class="outgoingLinks" id="outgoingLinks"></ul>
+
+        </nav>
+
+      </aside>
+
+      <!-- ------ -->
+      <!-- CURSUS -->
+      <!-- ------ -->
+
+      <article>
+
+        <!-- header -->
+        <header data-aos="fade-left">Emmet</header>
+
+        <!-- content -->
+        <h1 id="wat-is-emmet">Wat is Emmet?</h1>
+
+<p><img src="images/emmet.png" alt="alt text" width="150px" /></p>
+
+<p>HTML schrijven is vaak repetitief: veel tags, veel geneste structuren, 
+veel typwerk. Emmet is een hulpmiddel dat dit werk drastisch versnelt.</p>
+
+<p>Emmet is een plugin (ingebouwd in o.a. VS Code) waarmee je <strong>via afkortingen automatisch HTML- en CSS-code genereert</strong>.</p>
+
+<h2 id="voordelen">Voordelen</h2>
+
+<ul>
+  <li>Sneller werken</li>
+  <li>Minder typfouten</li>
+  <li>Focus op structuur en inhoud, niet op syntax</li>
+</ul>
+
+<p>Emmet is standaard ingebouwd in de meeste code editors, zo niet in er waarschijnlijk een Emmet plugin die je kan gebruiken.</p>
+
+<h1 id="hoe-gebruik-je-emmet">Hoe gebruik je Emmet?</h1>
+
+<ol>
+  <li>Typ een Emmet-afkorting</li>
+  <li>Druk op Tab of Enter</li>
+  <li>De code wordt gegenereerd</li>
+</ol>
+
+<p>Emmet is <strong>contextgevoelig</strong>.<br />
+Wat je typt is belangrijk, maar <strong>waar je het typt</strong> is minstens even belangrijk.</p>
+
+<p><strong>Dezelfde afkorting</strong> kan dus iets totaal <strong>anders opleveren</strong> afhankelijk van:</p>
+<ul>
+  <li>Of je in een HTML-bestand zit</li>
+  <li>Of je in een CSS-bestand zit</li>
+  <li>Of je binnen een bepaald HTML-element werkt</li>
+  <li>Of je in een attribuut zit</li>
+</ul>
+
+<h2 id="de-bouwstenen">De Bouwstenen</h2>
+
+<p>Belangrijkste bouwstenen:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shortcut</th>
+      <th>Functie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;</code></td>
+      <td>child <em>(geneste elementen)</em></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">+</code></td>
+      <td>sibling <em>(naast elkaar)</em></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*</code></td>
+      <td>vermenigvuldiging</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.</code></td>
+      <td>class</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">#</code></td>
+      <td>id</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">{}</code></td>
+      <td>tekstinhoud</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[]</code></td>
+      <td>attributen</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$</code></td>
+      <td>nummering</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Iedereen krijgt een bouwsteen toegewegen:</p>
+<ol>
+  <li>Surf naar <a href="https://www.emmet.io/">https://www.emmet.io/</a> <em>(de officiele website)</em>.</li>
+  <li>Zoek uit wat de functie van je bouwsteen is.</li>
+  <li>Geef een kleine demo aan de klas.</li>
+</ol>
+
+<h2 id="groepen-">Groepen <code class="language-plaintext highlighter-rouge">()</code></h2>
+
+<p>Groepen zorgen ervoor dat je structuur niet uit elkaar valt als een kaartenhuis zodra je begint te vermenigvuldigen of siblings toe te voegen. Denk eraan als <strong>wiskunde voor HTML: eerst wat tussen de haakjes staat, daarna de rest</strong>.</p>
+
+<p>Zonder groepering werkt Emmet strikt van <strong>links naar rechts</strong>. <strong>Met groepering zeg jij: deze blokken horen samen</strong>.</p>
+
+<p><strong>Simpel voorbeeld:</strong>
+Emmet zonder groepering:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div&gt;h1+p*2
+</code></pre></div></div>
+<p>Geeft:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;h1&gt;&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>Emmet met groepering:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div&gt;(h1+p)*2
+</code></pre></div></div>
+<p>Geeft:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;h1&gt;&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;h1&gt;&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p><strong>Praktisch voorbeeld</strong>
+Stel je wil dit:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;h3&gt;&lt;/h3&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;h3&gt;&lt;/h3&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<p>Dit kan enkel via groeperingen:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>section&gt;div*2&gt;(h3+p)
+</code></pre></div></div>
+<p>Emmet begrijpt nu:</p>
+<ol>
+  <li>Maak een section</li>
+  <li>Maak daarin 2 divs</li>
+  <li>In elke div komt het blok (h3+p)
+Haakjes zorgen ervoor dat h3+p binnen elke div terechtkomt.</li>
+</ol>
+
+<p>Wanneer <strong>moet</strong> je groeperen?</p>
+<ul>
+  <li>Wanneer je meerdere siblings samen wil vermenigvuldigen</li>
+  <li>Wanneer je een complexe structuur als één geheel wil behandelen</li>
+  <li>Wanneer je vermenigvuldiging niet alleen op het laatste element mag slaan</li>
+</ul>
+
+<p><strong>Wat is het verschil tussen deze 2 Emmet regels?</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div&gt;(h1+p)*2
+</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div&gt;h1+p*2
+</code></pre></div></div>
+
+<h1 id="oefeningen">Oefeningen</h1>
+
+<p>Probeer de gegeven HTML-code zo efficiënt mogelijk te schrijven.</p>
+
+<h2 id="niveau-1-opwarming">Niveau 1: Opwarming</h2>
+
+<h3 id="oef-11-element">Oef 1.1: Element</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<h3 id="oef-12-element-met-class">Oef 1.2: Element met class</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="oef-13-element-met-id">Oef 1.3: Element met id</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"about"</span><span class="nt">&gt;&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<h3 id="oef-14-element-met-tekst">Oef 1.4: Element met tekst</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>Welkom<span class="nt">&lt;/h1&gt;</span>
+</code></pre></div></div>
+
+<h2 id="niveau-2-meerdere-elementen">Niveau 2: Meerdere elementen</h2>
+
+<h3 id="oef-21-siblings">Oef 2.1: Siblings</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<h3 id="oef-22-genest">Oef 2.2: Genest</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<h3 id="oef-23-meerdere-kinderen">Oef 2.3: Meerdere kinderen</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<h2 id="niveau-3-combinaties">Niveau 3: Combinaties</h2>
+
+<h3 id="oef-31-structuur-met-siblings-én-nesting">Oef 3.1: Structuur met siblings én nesting</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2&gt;&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="oef-32-navigatie">Oef 3.2: Navigatie</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;nav&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div></div>
+
+<h3 id="oef-33-links">Oef 3.3: Links</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<h2 id="niveau-4-attributen-en-tekst">Niveau 4: Attributen en tekst</h2>
+
+<h3 id="oef-41-link-met-tekst">Oef 4.1: Link met tekst</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"contact.html"</span><span class="nt">&gt;</span>Contacteer ons<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<h3 id="oef-42-afbeelding">Oef 4.2: Afbeelding</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"image.jpg"</span> <span class="na">alt=</span><span class="s">"Beschrijving"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="oef-43-genummerde-classes">Oef 4.3: Genummerde classes</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-1"</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-2"</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-3"</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-4"</span><span class="nt">&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<h2 id="niveau-5-groepering">Niveau 5: Groepering</h2>
+
+<h3 id="oef-51-header--nav">Oef 5.1: Header + nav</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;header&gt;</span>
+  <span class="nt">&lt;h1&gt;&lt;/h1&gt;</span>
+  <span class="nt">&lt;nav&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+</code></pre></div></div>
+
+<h3 id="oef-52-artikelstructuur">Oef 5.2: Artikelstructuur</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;article&gt;</span>
+  <span class="nt">&lt;h2&gt;&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;/article&gt;</span>
+</code></pre></div></div>
+
+<h2 id="niveau-6-uitdagingen">Niveau 6: Uitdagingen</h2>
+
+<h3 id="oef-61-drie-kaarten">Oef 6.1: Drie kaarten</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"cards"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;&lt;/h3&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;&lt;/h3&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;&lt;/h3&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<h3 id="oef-62-complexe-layout">Oef 6.2: Complexe layout</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;h1&gt;&lt;/h1&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;main&gt;</span>
+    <span class="nt">&lt;section&gt;</span>
+      <span class="nt">&lt;h2&gt;&lt;/h2&gt;</span>
+      <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;/main&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h1 id="wedstrijd-wie-wordt-de-emmet-koning">Wedstrijd: Wie wordt de Emmet KONING?</h1>
+
+<p>Je zal HTML-code te zien krijgen en moet deze zo efficiënt weten te schrijven via Emmet.</p>
+
+<h2 id="puntensysteem">Puntensysteem</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Je kan de gegeven code schrijven via Emmet</td>
+      <td><code class="language-plaintext highlighter-rouge">+1 punt</code></td>
+    </tr>
+    <tr>
+      <td>Je kan de gegeven code schrijven in de <strong>kortste expressie</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">+1 punt</code></td>
+    </tr>
+    <tr>
+      <td>Je kan <strong>als snelste</strong> de gegeven code typen via Emmet in <strong>1 regel</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">+1 punt</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+        <!-- page info -->
+        <div class="pageInfo">
+          Last edited: 25/02/2026
+          <br>
+          Created: 12/02/2026
+        </div>
+
+      </article>
+
+      <!-- right sidebar: empty for now, but needs to be here so <article> gets centered -->
+      <div class="rightSidebar"></div>
+
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img class="curvedShadow" src="../../assets/images/curved_shadow.png"/>
+    </center>
+
+    <footer>
+      <div class="footerContent">
+
+        <!-- licentie -->
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a>
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+
+        <!-- search -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search pages...">
+          <div id="search-results"></div>
+        </div>
+
+        <!-- signature -->
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

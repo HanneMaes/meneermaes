@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/libraries/aos/aos.css">
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>De Werking Van Een Processor</title>
+
+    <!-- apply custom CSS to some pages -->
+    
+
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section>
+
+      <!-- ------------------------- -->
+      <!-- SIDEBAR: BREADCRUMBS, TOC -->
+      <!-- ------------------------- -->
+
+      <aside data-aos="fade-right" data-aos-delay="300"> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
+
+        <!-- ------ -->
+        <!-- SEARCH -->
+        <!-- ------ -->
+
+        <!-- <nav> -->
+        <!--   <a href="/index#cursussen"><img class="icon" src="/assets/images/search.svg"/></a> -->
+        <!-- </nav> -->
+
+        <!-- ----------- -->
+        <!-- BREADCRUMBS -->
+        <!-- ----------- -->
+
+        <!-- not on homepage -->
+        
+
+          <nav>
+        
+            <a href="../../index.html#cursussen">Cursussen</a>
+
+            <!-- only show link to section when not on a section page -->
+            
+            <span class="navDivider">/</span>
+            
+            <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+            
+            <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+            <a href="index.html">
+              Hardware</a>
+            
+
+          </nav>
+
+        
+
+        <!-- ----------------- -->
+        <!-- TABLE OF CONTENTS -->
+        <!-- ----------------- -->
+
+        <nav class="toc">
+          <em>Inhoudstafel</em>
+          <ul id="toc"></ul>
+        </nav>
+
+        <!-- --------------------------- -->
+        <!-- Incoming and outgoing links -->
+        <!-- --------------------------- -->
+
+        <nav class="links">
+
+          <!-- not on homapage and index pages -->
+          
+          
+
+            <em>Inkomende links</em>
+            <ul class="incomingLinks" id="incomingLinks"></ul>
+
+          
+
+          <em>Uitgaande links</em>
+          <ul class="outgoingLinks" id="outgoingLinks"></ul>
+
+        </nav>
+
+      </aside>
+
+      <!-- ------ -->
+      <!-- CURSUS -->
+      <!-- ------ -->
+
+      <article>
+
+        <!-- header -->
+        <header data-aos="fade-left">De Werking Van Een Processor</header>
+
+        <!-- content -->
+        <p>In deze opdracht onderzoek je hoe een <strong>processor (CPU)</strong> werkt en hoe verschillende onderdelen samenwerken om programma’s uit te voeren.</p>
+
+<p>Je leert niet alleen wat een processor doet, maar ook hoe je doelgericht informatie opzoekt, beoordeelt en verwerkt tot een duidelijk digitaal eindproduct.</p>
+
+<p>Tijdens deze opdracht gaan jullie zelfstandig de werking van de processor onderzoeken. Jullie notities en bevindingen zelf worden <strong>niet met punten beoordeeld</strong>, maar jullie <strong>zoekstrategie en reflectie wel</strong>.</p>
+
+<p>Later krijgen jullie een <strong>toets over de leerstof</strong>, en <strong>inzichtsvragen</strong> die wel op punten zullen staan. Deze vragen zijn bedoeld om te controleren of jullie echt begrijpen wat jullie hebben onderzocht en ingediend.</p>
+
+<h1 id="doelen">Doelen</h1>
+
+<ul>
+  <li>Je kan de werking en opbouw van een processor uitleggen met de <strong>correcte vaktaal</strong>.</li>
+  <li>Je kan informatie doelgericht opzoeken in <strong>meerdere bronnen</strong>.</li>
+  <li>Je kan bronnen <strong>kritisch beoordelen</strong> op betrouwbaarheid en bruikbaarheid.</li>
+  <li>Je kan informatie verwerken tot een <strong>gestructureerd</strong> digitaal document.</li>
+  <li>Je kan <strong>reflecteren</strong> over je eigen leerproces en gebruikte strategieën.</li>
+</ul>
+
+<h1 id="begrippen">Begrippen</h1>
+
+<p>De volgende begrippen moeten correct gebruikt worden:</p>
+<ul>
+  <li>CPU (Central Processing Unit)</li>
+  <li>ALU (Arithmetic Logic Unit)</li>
+  <li>Control Unit</li>
+  <li>Registers</li>
+  <li>Cache (L1, L2, L3)</li>
+  <li>Klokfrequentie</li>
+  <li>Fetch–Decode–Execute-cyclus</li>
+  <li>Instruction set</li>
+  <li>Core / multicore</li>
+  <li>Von Neumann-architectuur</li>
+</ul>
+
+<h1 id="eindproduct">Eindproduct</h1>
+
+<p>Je eindproduct is een digitaal document, gemaakt in een tool naar keuze.</p>
+
+<p>Vereisten:</p>
+<ul>
+  <li>Duidelijke structuur (titels, tussentitels)</li>
+  <li>Correcte vaktaal</li>
+  <li>Schema’s of afbeeldingen (met bronvermelding)</li>
+  <li>Eigen formuleringen (niet kopiëren)</li>
+  <li>Bronnenlijst onderaan</li>
+</ul>
+
+<h2 id="zoekstrategie">Zoekstrategie</h2>
+
+<h3 id="zoektermen--bronnen">Zoektermen &amp; bronnen</h3>
+
+<p>Noteer kort maar duidelijk:</p>
+<ul>
+  <li>Welke zoektermen heb je gebruikt?</li>
+  <li>Welke bronnen heb je geraadpleegd?
+    <ul>
+      <li>Websites</li>
+      <li>Video’s</li>
+      <li>…</li>
+    </ul>
+  </li>
+  <li>Waarom heb je voor deze bronnen gekozen?</li>
+</ul>
+
+<h3 id="criteria">Criteria</h3>
+
+<p>Gebruik minstens <strong>3 verschillende bronnen</strong> en beoordeel ze aan de hand van deze criteria:</p>
+<ul>
+  <li>Betrouwbaarheid</li>
+  <li>Actualiteit</li>
+  <li>Doelgroep</li>
+  <li>Objectiviteit</li>
+</ul>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen">
+
+   <p class="title">Tips:</p>
+
+   <div>
+      <p>
+<p><a href="../universeel/informatie-vinden-beoordelen-en-verwerken.html">Informatie vinden, beoordelen en verwerken</a></p>
+</p>
+   </div>
+
+</div>
+
+<h2 id="vragen">Vragen</h2>
+
+<p>Beantwoord onderstaande vragen op basis van je onderzoek:</p>
+
+<h3 id="deel-1-wat-is-een-processor">Deel 1: Wat is een processor?</h3>
+
+<ol>
+  <li>Wat is een processor en wat is zijn functie in een computer?</li>
+  <li>Waar bevindt de processor zich in een computersysteem?</li>
+</ol>
+
+<h3 id="deel-2-von-neumann-architectuur">Deel 2: Von Neumann-architectuur</h3>
+
+<ol>
+  <li>Wat wordt bedoeld met de von Neumann-architectuur?</li>
+  <li>Waarom werd deze architectuur ontwikkeld en in welke historische context?</li>
+  <li>Hoe communiceren CPU, geheugen, invoer en uitvoer met elkaar volgens de von Neumann-architectuur?</li>
+  <li>Waarom worden programma-instructies en data in hetzelfde geheugen opgeslagen?</li>
+  <li>Wat is het von Neumann-knelpunt?</li>
+  <li>Wat is het verschil tussen de von Neumann-architectuur en de Harvard-architectuur?</li>
+</ol>
+
+<h3 id="deel-3-interne-opbouw-van-de-processor">Deel 3: Interne opbouw van de processor</h3>
+
+<ol>
+  <li>Wat is de functie van deze onderdelen van een processor:
+    <ul>
+      <li>de ALU?</li>
+      <li>de Control Unit?</li>
+      <li>registers?</li>
+      <li>cachegeheugen?</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="deel-4-werking-van-de-processor">Deel 4: Werking van de processor</h3>
+
+<ol>
+  <li>Leg stap voor stap de fetch–decode–execute-cyclus uit.</li>
+  <li>Waarom is klokfrequentie belangrijk?</li>
+  <li>Wat is het verschil tussen een single-core en multi-core processor?</li>
+</ol>
+
+<h3 id="deel-5-processor-in-de-praktijk">Deel 5: Processor in de praktijk</h3>
+
+<ol>
+  <li>Waarom zijn moderne processors efficiënter dan oudere?</li>
+  <li>Welke invloed heeft de processor op prestaties bij:
+    <ul>
+      <li>Gamen</li>
+      <li>Videobewerking</li>
+      <li>Dagelijks computergebruik?</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="reflectie">Reflectie</h2>
+
+<p>Beantwoord op het einde deze vragen:</p>
+<ol>
+  <li>Wat vond je <strong>moeilijk</strong> aan deze opdracht?</li>
+  <li>Welke strategie hielp je om de leerstof te <strong>begrijpen</strong>?</li>
+  <li>Wat zou je volgende keer <strong>anders aanpakken</strong> bij een opzoekopdracht?</li>
+</ol>
+
+<h1 id="puntenverdeling">Puntenverdeling</h1>
+
+<!-- load yaml data -->
+
+<!-- punten table -->
+
+<table>
+   <thead>
+      <tr>
+         <th>
+            <em>Puntenverdeling:</em> De werking van een processor
+         </th>
+         <th></th>
+      </tr>
+   </thead>
+   <tbody>
+      
+      <tr>
+         <td>Zoekstrategie: Zoektermen &amp; bronnen</td>
+         <td class="punt">3</td>
+      </tr>
+      
+      <tr>
+         <td>Zoekstrategie: Criteria</td>
+         <td class="punt">4</td>
+      </tr>
+      
+      <tr>
+         <td>Reflectie</td>
+         <td class="punt">3</td>
+      </tr>
+      
+      <tr>
+         <td>Inzichtsvragen</td>
+         <td class="punt">5</td>
+      </tr>
+      
+
+      <!-- Total row -->
+      <tr class="puntenTotaal">
+         <td>Totaal</td>
+         <td class="punt">
+            
+            
+            15
+         </td>
+      </tr>
+   </tbody>
+</table>
+
+<!-- doelen table -->
+
+<table>
+   <thead>
+      <tr>
+         <th></th>
+         <th>
+            <em>Doelen:</em> De werking van een processor
+         </th>
+      </tr>
+   </thead>
+   <tbody>
+      
+      <tr>
+         <td><em>BV3_04.01</em></td>
+         <td>De leerlingen gebruiken courante functionaliteiten van vergelijkbare toepassingen om digitale inhouden te creëren.</td>
+      </tr>
+      
+      <tr>
+         <td><em>BV3_13.02</em></td>
+         <td>De leerlingen zetten (meta)cognitieve leer- en regulatiestrategieën in om zich leerinhouden eigen te maken.</td>
+      </tr>
+      
+      <tr>
+         <td><em>BV3_13.03</em></td>
+         <td>De leerlingen gebruiken school- en vaktaal.</td>
+      </tr>
+      
+      <tr>
+         <td><em>BV3_13.04</em></td>
+         <td>De leerlingen zoeken doelgericht informatie in diverse bronnen en verwerken die op een kritische en systematische manier.</td>
+      </tr>
+      
+      <tr>
+         <td><em>BV3_13.04.01 Subdoel 01</em></td>
+         <td>De leerlingen bepalen zelfstandig een geschikte zoekstrategie.</td>
+      </tr>
+      
+      <tr>
+         <td><em>BV3_13.04. 02 Subdoel 02</em></td>
+         <td>De leerlingen beoordelen op kritische wijze digitale en niet-digitale bronnen op bruikbaarheid op basis van aangereikte criteria.</td>
+      </tr>
+      
+      <tr>
+         <td><em>BV3_13.04.03 Subdoel 03</em></td>
+         <td>De leerlingen verwerken zelfstandig de informatie uit de bronnen i.f.v. een vooropgesteld doel.</td>
+      </tr>
+      
+   </tbody>
+</table>
+
+
+
+        <!-- page info -->
+        <div class="pageInfo">
+          Last edited: 26/03/2026
+          <br>
+          Created: 02/02/2026
+        </div>
+
+      </article>
+
+      <!-- right sidebar: empty for now, but needs to be here so <article> gets centered -->
+      <div class="rightSidebar"></div>
+
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img class="curvedShadow" src="../../assets/images/curved_shadow.png"/>
+    </center>
+
+    <footer>
+      <div class="footerContent">
+
+        <!-- licentie -->
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a>
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+
+        <!-- search -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search pages...">
+          <div id="search-results"></div>
+        </div>
+
+        <!-- signature -->
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/libraries/aos/aos.css">
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Quiz</title>
+
+    <!-- apply custom CSS to some pages -->
+    
+
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section>
+
+      <!-- ------------------------- -->
+      <!-- SIDEBAR: BREADCRUMBS, TOC -->
+      <!-- ------------------------- -->
+
+      <aside data-aos="fade-right" data-aos-delay="300"> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
+
+        <!-- ------ -->
+        <!-- SEARCH -->
+        <!-- ------ -->
+
+        <!-- <nav> -->
+        <!--   <a href="/index#cursussen"><img class="icon" src="/assets/images/search.svg"/></a> -->
+        <!-- </nav> -->
+
+        <!-- ----------- -->
+        <!-- BREADCRUMBS -->
+        <!-- ----------- -->
+
+        <!-- not on homepage -->
+        
+
+          <nav>
+        
+            <a href="../../index.html#cursussen">Cursussen</a>
+
+            <!-- only show link to section when not on a section page -->
+            
+            <span class="navDivider">/</span>
+            
+            <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+            
+            <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+            <a href="index.html">
+              Hardware</a>
+            
+
+          </nav>
+
+        
+
+        <!-- ----------------- -->
+        <!-- TABLE OF CONTENTS -->
+        <!-- ----------------- -->
+
+        <nav class="toc">
+          <em>Inhoudstafel</em>
+          <ul id="toc"></ul>
+        </nav>
+
+        <!-- --------------------------- -->
+        <!-- Incoming and outgoing links -->
+        <!-- --------------------------- -->
+
+        <nav class="links">
+
+          <!-- not on homapage and index pages -->
+          
+          
+
+            <em>Inkomende links</em>
+            <ul class="incomingLinks" id="incomingLinks"></ul>
+
+          
+
+          <em>Uitgaande links</em>
+          <ul class="outgoingLinks" id="outgoingLinks"></ul>
+
+        </nav>
+
+      </aside>
+
+      <!-- ------ -->
+      <!-- CURSUS -->
+      <!-- ------ -->
+
+      <article>
+
+        <!-- header -->
+        <header data-aos="fade-left">Quiz</header>
+
+        <!-- content -->
+        <blockquote>
+  <p>Nu is het tijd om te testen hoe goed jullie hebben opgelet!</p>
+</blockquote>
+
+<p>Iedereen stuurt mij <strong>3 quizvragen</strong> over het onderwerp dat jullie hebben onderzocht.<br />
+Zorg ervoor dat de vragen variëren in moeilijkheid en dat ze gaan over zaken die we <strong>tijdens de les hebben besproken</strong>.</p>
+
+<p>Op die manier kunnen we een uitdagende en leuke quiz samenstellen.</p>
+
+<h1 id="wat-heb-ik-nodig">Wat heb ik nodig?</h1>
+
+<p><strong>3 Vragen</strong>
+Dit zijn de mogelijke type van vragen:</p>
+<ul>
+  <li>Ja/nee vraag</li>
+  <li>Meerkeuze vraag met 4 mogelijke antwoorden.</li>
+</ul>
+
+<p>Je stuur met zowel de vraag als <strong>juiste en foute antwoorden én je laat met weten wat het correcte antwoord is</strong>.</p>
+
+
+        <!-- page info -->
+        <div class="pageInfo">
+          Last edited: 08/10/2024
+          <br>
+          Created: 01/10/2024
+        </div>
+
+      </article>
+
+      <!-- right sidebar: empty for now, but needs to be here so <article> gets centered -->
+      <div class="rightSidebar"></div>
+
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img class="curvedShadow" src="../../assets/images/curved_shadow.png"/>
+    </center>
+
+    <footer>
+      <div class="footerContent">
+
+        <!-- licentie -->
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a>
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+
+        <!-- search -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search pages...">
+          <div id="search-results"></div>
+        </div>
+
+        <!-- signature -->
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

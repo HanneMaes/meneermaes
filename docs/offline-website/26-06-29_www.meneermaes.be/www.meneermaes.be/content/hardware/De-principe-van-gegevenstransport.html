@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/libraries/aos/aos.css">
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>De Principe Van Gegevenstransport</title>
+
+    <!-- apply custom CSS to some pages -->
+    
+
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section>
+
+      <!-- ------------------------- -->
+      <!-- SIDEBAR: BREADCRUMBS, TOC -->
+      <!-- ------------------------- -->
+
+      <aside data-aos="fade-right" data-aos-delay="300"> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
+
+        <!-- ------ -->
+        <!-- SEARCH -->
+        <!-- ------ -->
+
+        <!-- <nav> -->
+        <!--   <a href="/index#cursussen"><img class="icon" src="/assets/images/search.svg"/></a> -->
+        <!-- </nav> -->
+
+        <!-- ----------- -->
+        <!-- BREADCRUMBS -->
+        <!-- ----------- -->
+
+        <!-- not on homepage -->
+        
+
+          <nav>
+        
+            <a href="../../index.html#cursussen">Cursussen</a>
+
+            <!-- only show link to section when not on a section page -->
+            
+            <span class="navDivider">/</span>
+            
+            <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+            
+            <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+            <a href="index.html">
+              Hardware</a>
+            
+
+          </nav>
+
+        
+
+        <!-- ----------------- -->
+        <!-- TABLE OF CONTENTS -->
+        <!-- ----------------- -->
+
+        <nav class="toc">
+          <em>Inhoudstafel</em>
+          <ul id="toc"></ul>
+        </nav>
+
+        <!-- --------------------------- -->
+        <!-- Incoming and outgoing links -->
+        <!-- --------------------------- -->
+
+        <nav class="links">
+
+          <!-- not on homapage and index pages -->
+          
+          
+
+            <em>Inkomende links</em>
+            <ul class="incomingLinks" id="incomingLinks"></ul>
+
+          
+
+          <em>Uitgaande links</em>
+          <ul class="outgoingLinks" id="outgoingLinks"></ul>
+
+        </nav>
+
+      </aside>
+
+      <!-- ------ -->
+      <!-- CURSUS -->
+      <!-- ------ -->
+
+      <article>
+
+        <!-- header -->
+        <header data-aos="fade-left">De Principe Van Gegevenstransport</header>
+
+        <!-- content -->
+        <h1 id="wat-is-gegevenstransport">Wat is gegevenstransport?</h1>
+
+<details>
+   <summary>
+      Wat is gegevenstransport?
+   </summary>
+   <div class="toggleContent">
+      
+<blockquote>
+  <p>Het verplaatsen van informatie van A naar B.</p>
+</blockquote>
+
+<p>Stel je voor dat je een WhatsApp-bericht naar je vriend stuurt. Dat bericht moet van jouw telefoon naar de telefoon van je vriend reizen. Het kan via wifi of 4G, soms gaat het via verschillende servers en routers, en uiteindelijk komt het aan. Als één stap niet goed verloopt, komt het bericht verkeerd aan of helemaal niet. Computers doen hetzelfde, maar dan duizenden keren per seconde.</p>
+
+<p><strong>Kan je een voorbeeld geven uit je iegen app-wereld waar data snel of foutloos moet aankomen, en wat er fout loopt als dit niet gebeurt?</strong></p>
+
+   </div>
+</details>
+
+<h1 id="data-opgedeeld">Data opgedeeld</h1>
+
+<h2 id="bits">Bits</h2>
+
+<p>Een bit is de kleinste eenheid van digitale informatie: <strong>een 0 of een 1</strong>.<br />
+Alles op een computer <em>(tekst, foto, video, geluid)</em> wordt uiteindelijk vertaald naar reeksen van bits.</p>
+
+<h2 id="pakket">Pakket</h2>
+
+<p>Een stukje van een groter bestand, zoals een video die in stukjes wordt verstuurd.<br />
+Een pakket is een <strong>verzameling bits</strong> die samen een klein deel van een bestand of bericht vormen. Computers <strong>splitsen grote bestanden op</strong> in pakketten zodat ze sneller en betrouwbaarder kunnen worden verzonden.</p>
+
+<blockquote>
+  <p>Een pakket bestaat uit minstens 2 delen:</p>
+</blockquote>
+
+<h3 id="payload">Payload</h3>
+
+<p>De <strong>eigenlijke data</strong> die het pakketje vervoert.<br />
+Dit kan een stukje van een video zijn, een fragment van een bestand, of een stukje tekst in een chat.</p>
+
+<h3 id="header">Header</h3>
+
+<p>De header van een datapakket bevat <strong>belangrijke informatie over het pakket</strong>:</p>
+<ul>
+  <li>Waar het naartoe moet (IP-adres, poortnummer)</li>
+  <li>Volgorde van het pakket (zodat de ontvanger ze correct kan samenvoegen)</li>
+  <li>Eventueel type data of instructies voor foutcontrole</li>
+</ul>
+
+<p>Zoals het adres op een envelop, zo weet de postbode waar hij het heen moet brengen.</p>
+
+<h2 id="overzicht">Overzicht</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Betekenis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bit</td>
+      <td>Kleinste eenheid digitale info: 0 of 1</td>
+    </tr>
+    <tr>
+      <td>Pakket</td>
+      <td>Verzameling bits, deel van een bestand</td>
+    </tr>
+    <tr>
+      <td>Pakket: Header</td>
+      <td>Informatie over bestemming, volgorde en type data</td>
+    </tr>
+    <tr>
+      <td>Pakket: Payload</td>
+      <td>De eigenlijke data die het pakket vervoert</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="systeembus">Systeembus</h1>
+
+<p>Alles wat je doet op een computer of laptop gaat via “digitale snelwegen”: <strong>de bus van het moederbord</strong>. Stel je voor dat je laptop een mini-stad is, met wegen, verkeerslichten en voertuigen.</p>
+
+<p><strong>Waar zitten ze?</strong><br />
+De bussen zitten ingebakken in het moederbord zelf.<br />
+Ze verbinden bijvoorbeeld:</p>
+<ul>
+  <li>CPU ↔ RAM (meestal via de front-side bus of moderne DMI/PCIe lanes)</li>
+  <li>CPU ↔ uitbreidingskaarten (via PCIe-bussen)</li>
+  <li>CPU ↔ opslagapparaten (via SATA of NVMe PCIe lanes)</li>
+</ul>
+
+<p>Op het moederbord zijn het dunne koperbaantjes die over het PCB (de groene printplaat) lopen. Ze lijken op kleine lijntjes die van het ene component naar het andere gaan.</p>
+
+<p><img src="images/bussen.png" alt="Moederbord bussen" /></p>
+
+<h2 id="de-verschillende-bussen">De verschillende bussen</h2>
+
+<ul>
+  <li><strong>Data-bus:</strong><br />
+De snelweg waar bits over rijden (de eigenlijke info).</li>
+  <li><strong>Adres-bus:</strong><br />
+Verkeersborden die aangeven naar welk huis (geheugenadres) een bit moet.</li>
+  <li><strong>Control-bus:</strong><br />
+Verkeerslichten en verkeersregels, bijvoorbeeld: “CPU, stop met lezen, RAM mag nu schrijven”.</li>
+</ul>
+
+<p>Voorbeeld:<br />
+Je speelt een nummer op je computer of gsm. De CPU vraagt RAM om het bestand tijdelijk te bewaren. Bits reizen van opslag → RAM → CPU.</p>
+
+<h2 id="serieel-vs-parallel-transport">Serieel vs parallel transport</h2>
+
+<p>Bits kunnen op verschillende manieren over de bus reizen:</p>
+
+<ul>
+  <li><strong>Serieel transport: 1 bit tegelijk</strong>, zoals een smalle weg waar auto’s één voor één over moeten.
+    <ul>
+      <li>Voordeel: betrouwbaar, minder kans op botsingen.</li>
+      <li>Voorbeeld: USB-stick of Wi-Fi. Bits reizen een voor een van of naar de computer.</li>
+    </ul>
+  </li>
+  <li><strong>Parallel transport: meerdere bits tegelijk</strong>, zoals een brede snelweg met meerdere rijstroken.
+    <ul>
+      <li>Voordeel: sneller.</li>
+      <li>Nadeel: als de weg te lang of te smal is, kunnen auto’s botsen.</li>
+      <li>Voorbeeld: de data-bus van het moederbord, die RAM en CPU snel laat communiceren.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="serieel-of-parallel">Serieel of parallel?</h3>
+
+<details>
+   <summary>
+      RAM-gebruik tijdens gamen?
+   </summary>
+   <div class="toggleContent">
+      <p>Parallel</p>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Surfen op internet?
+   </summary>
+   <div class="toggleContent">
+      <p>Alles wat over internet gaat, wordt <strong>serieel</strong> verzonden via kabel of Wi-Fi.</p>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Bluetooth gamecontroller?
+   </summary>
+   <div class="toggleContent">
+      <p><strong>Serieel</strong> draadloos</p>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Cloud-sync apps (Google Drive, OneDrive, Nextcloud)?
+   </summary>
+   <div class="toggleContent">
+      <p>Alles wat over internet gaat, wordt <strong>serieel</strong> verzonden via kabel of Wi-Fi.</p>
+
+   </div>
+</details>
+
+<h3 id="vuistregel">Vuistregel</h3>
+
+<details>
+   <summary>
+      Kan je een vuistregel verzinnen om te bepalen welke data serieel en welke parallel worden verzonden?
+   </summary>
+   <div class="toggleContent">
+      
+<ul>
+  <li>Alles wat via kabel of draadloos <strong>naar buiten</strong> gaat: <strong>serieel</strong>.</li>
+  <li>Alles <strong>binnen</strong> de computer/smartphone zelf: meestal <strong>parallel</strong>.</li>
+</ul>
+
+   </div>
+</details>
+
+<h1 id="gegevenstransport-buiten-de-computer">Gegevenstransport buiten de computer</h1>
+
+<p>Wanneer data via een netwerk of het internet wordt verstuurd, gebeurt dit niet als één groot geheel. De informatie wordt eerst opgedeeld in kleine datapakketten. Elk pakket bevat een stukje van het oorspronkelijke bestand en kan apart worden verstuurd.</p>
+
+<h2 id="router">Router</h2>
+
+<blockquote>
+  <p>Een router is een netwerkapparaat dat <strong>datapakketten doorstuurt</strong> naar hun volgende bestemming.</p>
+</blockquote>
+
+<p>De verkeersagenten van het internet:<br />
+Je kan een router vergelijken met een verkeersagent op een kruispunt. Net zoals een verkeersagent beslist welke auto welke richting uit mag, beslist een router via welke route een datapakket verder moet reizen.</p>
+
+<p>Wanneer je een foto verstuurt via WhatsApp:</p>
+<ol>
+  <li>Je smartphone verdeelt de foto in meerdere datapakketten.</li>
+  <li>Deze pakketten vertrekken via je wifi-router.</li>
+  <li>Routers op het internet sturen de pakketten telkens door naar de volgende router.</li>
+  <li>Uiteindelijk komen ze aan bij de server van WhatsApp.</li>
+</ol>
+
+<p>Elke router kijkt naar het <strong>bestemmingsadres in de header van het pakket</strong> en beslist welke weg het pakket verder moet volgen.</p>
+
+<h2 id="server">Server</h2>
+
+<blockquote>
+  <p>Een server is een <strong>computer die diensten of gegevens aanbiedt</strong> aan andere computers op het netwerk.</p>
+</blockquote>
+
+<p>Het postkantoor van het internet:<br />
+Net zoals een postkantoor pakketten tijdelijk bewaart, sorteert en verder verdeelt, kan een server:</p>
+<ul>
+  <li>Datapakketten ontvangen</li>
+  <li>Gegevens opslaan</li>
+  <li>Pakketten doorsturen naar andere computers</li>
+</ul>
+
+<details>
+   <summary>
+      Kan je voorbeelden geven van servers en welke taken ze uitvoeren?
+   </summary>
+   <div class="toggleContent">
+      
+<ul>
+  <li>Instagram servers bewaren foto’s en video’s.</li>
+  <li>Spotify servers sturen muziek naar je toestel.</li>
+  <li>Game servers verbinden spelers met elkaar in een online spel.</li>
+</ul>
+
+   </div>
+</details>
+
+<h2 id="verschillende-routes-voor-verschillende-pakketten">Verschillende routes voor verschillende pakketten</h2>
+
+<p>Datapakketten hoeven niet altijd dezelfde route te volgen.</p>
+
+<p>Je kan dit vergelijken met pakketjes die via verschillende wegen naar hetzelfde huis worden gebracht. Als er ergens file is, kan een pakket een andere weg nemen.</p>
+
+<p>In een netwerk kan dit bijvoorbeeld gebeuren wanneer:</p>
+<ul>
+  <li>Een netwerkverbinding tijdelijk druk is</li>
+  <li>Een router overbelast is</li>
+  <li>Een kortere route beschikbaar wordt</li>
+</ul>
+
+<p>Hierdoor kan het gebeuren dat:</p>
+<ul>
+  <li>pakket 1 via route A reist</li>
+  <li>pakket 2 via route B reist</li>
+  <li>…</li>
+</ul>
+
+<p>Wanneer alle pakketten <strong>aankomen</strong> bij de bestemming, <strong>zet de computer ze opnieuw in de juiste volgorde</strong> zodat het oorspronkelijke bestand weer correct wordt opgebouwd.</p>
+
+<h3 id="ik-dacht-dat-data-over-het-internet-altijs-serieel-werd-verzonden">Ik dacht dat data over het internet altijs serieel werd verzonden?</h3>
+
+<p>Het lijkt tegenstrijdig, maar dat komt omdat <strong>serieel transport</strong> en <strong>verschillende routes</strong> op het internet over <strong>twee verschillende niveaus</strong> gaan.</p>
+
+<p><strong>Serieel transport: hoe bits fysiek worden verstuurd:</strong><br />
+Wanneer we zeggen dat moderne verbindingen serieel zijn, bedoelen we dat de bits één voor één over een verbinding worden gestuurd.</p>
+
+<p>Bijvoorbeeld bij:</p>
+<ul>
+  <li>Ethernet</li>
+  <li>Glasvezel</li>
+  <li>Wi-Fi</li>
+</ul>
+
+<p>Daar worden bits dus na elkaar verstuurd: <code class="language-plaintext highlighter-rouge">1 → 0 → 1 → 1 → 0 → 0 → 1</code>.</p>
+
+<p>Dus op <strong>één kabel</strong> of verbinding gaan de bits sequentieel (achter elkaar).</p>
+
+<p><strong>Datapakketten: hoe informatie wordt georganiseerd:</strong><br />
+Voordat data verstuurd wordt, wordt een groot bestand eerst opgedeeld in pakketten.</p>
+
+<p>Een video kan worden opgesplitst in:</p>
+<ul>
+  <li>Pakket 1</li>
+  <li>Pakket 2</li>
+  <li>…</li>
+</ul>
+
+<p>Elk pakket bevat:</p>
+<ul>
+  <li>Een header (adres en info)</li>
+  <li>Een payload (stukje van de video)</li>
+</ul>
+
+<p>Die pakketten worden daarna via het netwerk <strong>serieel</strong> verstuurd.<br />
+Hoewel de <strong>bits binnen één verbinding serieel</strong> worden verstuurd, kunnen verschillende <strong>pakketten via verschillende routes door het internet</strong>reizen.</p>
+
+<p><strong>Waarom?</strong><br />
+Omdat het internet uit heel veel routers en verbindingen bestaat. Routers kiezen telkens de beste volgende stap.</p>
+
+<p><strong>Samengevat:</strong><br />
+Serieel transport</p>
+<ul>
+  <li>Gaat over hoe bits over een verbinding reizen</li>
+  <li>Bits worden één voor één verstuurd</li>
+</ul>
+
+<p>Netwerkroutes</p>
+<ul>
+  <li>Gaat over hoe pakketten door het internet bewegen</li>
+  <li>Verschillende pakketten kunnen via verschillende routes reizen</li>
+</ul>
+
+<p>Deze twee ideeën bestaan tegelijk, maar op <strong>verschillende niveaus van de communicatie</strong>.</p>
+
+<h2 id="netwerkprotocollen">Netwerkprotocollen</h2>
+
+<p>Om ervoor te zorgen dat al deze processen correct verlopen, gebruiken computers netwerkprotocollen.</p>
+
+<blockquote>
+  <p>Een protocol is een set afspraken of <strong>regels die bepalen hoe computers met elkaar communiceren</strong>.</p>
+</blockquote>
+
+<p>Je kan dit vergelijken met taalregels in een gesprek. Als twee personen dezelfde taal spreken en dezelfde regels volgen, begrijpen ze elkaar. Computers hebben ook zulke regels nodig.</p>
+
+<p>Een van de <strong>belangrijkste protocollen</strong> op het internet is <strong>TCP/IP</strong>.</p>
+
+<h3 id="het-tcpip-protocol">Het TCP/IP protocol</h3>
+
+<p>TCP/IP staat voor:</p>
+<ul>
+  <li>Transmission Control Protocol (TCP)</li>
+  <li>Internet Protocol (IP)</li>
+</ul>
+
+<p>Deze twee protocollen werken samen om datapakketten correct te versturen.</p>
+
+<p>IP (Internet Protocol) zorgt voor:</p>
+<ul>
+  <li>Het adresseren van computers op het netwerk</li>
+  <li>Het bepalen waar een pakket naartoe moet</li>
+</ul>
+
+<p><strong>Elke computer op het internet heeft een IP-adres</strong>, vergelijkbaar met een huisadres.</p>
+
+<p>TCP (Transmission Control Protocol) zorgt voor:</p>
+<ul>
+  <li>Het opdelen van data in pakketten</li>
+  <li>Het controleren of alle pakketten aankomen</li>
+  <li>Het opnieuw samenstellen van de pakketten in de juiste volgorde</li>
+</ul>
+
+<p><strong>Als een pakket verloren gaat, vraagt TCP automatisch om het pakket opnieuw te versturen.</strong></p>
+
+<h3 id="http-hypertext-transfer-protocol">HTTP (HyperText Transfer Protocol)</h3>
+
+<p>HTTP is het protocol dat gebruikt wordt om <strong>webpagina’s van een webserver naar een browser te sturen</strong>.<br />
+Wanneer je een website opent, vraagt je browser de inhoud van de website op bij een server via HTTP.</p>
+
+<p><strong>Hoe werkt het?</strong></p>
+<ol>
+  <li>Je typt een website in de browser, bijvoorbeeld <code class="language-plaintext highlighter-rouge">meneermaes.be</code>.</li>
+  <li>De browser stuurt een HTTP-request naar de webserver.</li>
+  <li>De server stuurt een HTTP-response terug met de webpagina.</li>
+  <li>De browser toont de HTML, afbeeldingen en andere inhoud.</li>
+</ol>
+
+<p>HTTP is <strong>niet versleuteld</strong>, dus in theorie kan iemand op hetzelfde netwerk de data onderscheppen.</p>
+
+<h3 id="https-hypertext-transfer-protocol-secure">HTTPS (HyperText Transfer Protocol Secure)</h3>
+
+<p>HTTPS is de <strong>veilige versie van HTTP</strong>.<br />
+Het werkt hetzelfde, maar de verbinding is versleuteld.<br />
+Deze beveiliging gebeurt met behulp van TLS (Transport Layer Security).</p>
+
+<p>De versleuteling zorgt ervoor dat:</p>
+<ul>
+  <li>Niemand de inhoud van de communicatie kan lezen</li>
+  <li>Niemand de data onderweg kan aanpassen</li>
+</ul>
+
+<p>HTTPS wordt gebruikt bij websites waar privacy belangrijk is, zoals:</p>
+<ul>
+  <li>Online bankieren</li>
+  <li>Webshops</li>
+  <li>Sociale media</li>
+  <li>E-maildiensten</li>
+</ul>
+
+<p>Je kan HTTPS herkennen aan:</p>
+<ul>
+  <li>Een slotje in de browser</li>
+  <li>Een adres dat begint met <code class="language-plaintext highlighter-rouge">https://</code></li>
+</ul>
+
+<p>Wat gebeurt er technisch?</p>
+<ol>
+  <li>Browser en server maken een beveiligde verbinding.</li>
+  <li>Ze wisselen encryptiesleutels uit.</li>
+  <li>Daarna wordt alle communicatie versleuteld verstuurd.</li>
+</ol>
+
+<h3 id="het-dns-domain-name-system-protocol">Het DNS (Domain Name System) protocol</h3>
+
+<p>DNS zorgt ervoor dat <strong>domeinnamen worden vertaald naar IP-adressen</strong>.</p>
+
+<p>Voorbeeld:</p>
+<ol>
+  <li>Wanneer je typt: <code class="language-plaintext highlighter-rouge">meneermaes.be</code></li>
+  <li>Moet de computer eerst weten welk IP-adres daarbij hoort, bijvoorbeeld: <code class="language-plaintext highlighter-rouge">142.250.74.14</code>
+DNS zorgt voor die vertaling.</li>
+</ol>
+
+<p>DNS werkt een beetje zoals de contactenlijst in een smartphone.<br />
+Je onthoudt de naam <code class="language-plaintext highlighter-rouge">Mama</code>, maar de telefoon weet dat het nummer bijvoorbeeld <code class="language-plaintext highlighter-rouge">0475 12 34 56</code> is.<br />
+Zo onthouden mensen websitenamen, terwijl computers werken met IP-adressen.</p>
+
+<h2 id="foutdetectie">Foutdetectie</h2>
+
+<p>Tijdens het transport van data kunnen fouten optreden. Dit kan bijvoorbeeld gebeuren door:</p>
+<ul>
+  <li>Storing op een kabel</li>
+  <li>Interferentie bij draadloze verbindingen</li>
+  <li>Overbelasting van het netwerk</li>
+  <li>Hardwareproblemen</li>
+</ul>
+
+<p>Daarom gebruiken computers verschillende methodes voor foutdetectie. Hiermee kan de computer controleren of de ontvangen data nog correct is.</p>
+
+<h3 id="parity-bits">Parity bits</h3>
+
+<p>Een parity bit is een eenvoudige methode om fouten te detecteren.</p>
+
+<p>Bij deze methode wordt aan een reeks bits één extra controlebit toegevoegd.<br />
+Deze controlebit zorgt ervoor dat het aantal 1-bits:</p>
+<ul>
+  <li>Even is (even parity)</li>
+  <li>Of oneven is (odd parity)</li>
+</ul>
+
+<p>Voorbeeld:</p>
+<ol>
+  <li>Data: <code class="language-plaintext highlighter-rouge">1011001</code></li>
+  <li>Aantal 1’s = 4 (even)</li>
+  <li>Bij even parity voegen we een 0 toe zodat het aantal 1’s even blijft.</li>
+  <li>Verzonden data: <code class="language-plaintext highlighter-rouge">1011001</code><code class="language-plaintext highlighter-rouge">0</code></li>
+  <li>Wanneer de ontvanger de data ontvangt, telt hij opnieuw het aantal 1’s.
+  Als het aantal niet klopt, weet de computer dat er een fout in de transmissie is gebeurd.</li>
+</ol>
+
+<p>Parity kan fouten <strong>detecteren</strong>, maar meestal <strong>niet corrigeren</strong>.</p>
+
+<h3 id="checksums-en-crc">Checksums en CRC</h3>
+
+<p>Voor <strong>grotere hoeveelheden data</strong> worden <strong>complexere controles</strong> gebruikt.</p>
+
+<p>Voor het verzenden:</p>
+<ol>
+  <li>Wordt een wiskundige berekening uitgevoerd op de data.</li>
+  <li>De uitkomst van deze berekening wordt meegestuurd met het datapakket.</li>
+</ol>
+
+<p>Wanneer de ontvanger het pakket ontvangt:</p>
+<ol>
+  <li>Voert hij dezelfde berekening opnieuw uit</li>
+  <li>Vergelijkt hij de uitkomst met de meegestuurde waarde</li>
+  <li>Als beide waarden niet overeenkomen, betekent dit dat de data onderweg veranderd is en dat het pakket opnieuw moet worden verzonden.</li>
+</ol>
+
+<p>Foutdetectie wordt voortdurend gebruikt in het dagelijks gebruik van technologie:</p>
+<ul>
+  <li>Bij het streamen van video’s (YouTube, Netflix)</li>
+  <li>Bij het downloaden van bestanden</li>
+  <li>Bij online gaming</li>
+  <li>Bij wifi-verbindingen</li>
+  <li>Bij bestandsoverdracht tussen computers</li>
+</ul>
+
+<p>Dankzij foutdetectie kunnen computers controleren of de ontvangen data nog correct is en indien nodig <strong>automatisch een nieuw pakket aanvragen</strong>.</p>
+
+<h2 id="kort-samengevat">Kort samengevat</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Routers</td>
+      <td>Sturen datapakketten door naar hun volgende bestemming, zoals verkeersagenten.</td>
+    </tr>
+    <tr>
+      <td>Servers</td>
+      <td>Slaan data op en verdelen deze verder, zoals postkantoren.</td>
+    </tr>
+    <tr>
+      <td>Datapakketten</td>
+      <td>Kunnen verschillende routes volgen maar worden bij de bestemming opnieuw correct samengesteld.</td>
+    </tr>
+    <tr>
+      <td>Protocollen</td>
+      <td>Bepalen hoe data wordt verzonden en gecontroleerd.</td>
+    </tr>
+    <tr>
+      <td>Foutdetectie</td>
+      <td>Zorgt ervoor dat fouten tijdens het transport worden opgespoord.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+        <!-- page info -->
+        <div class="pageInfo">
+          Last edited: 02/03/2026
+          <br>
+          Created: 02/03/2026
+        </div>
+
+      </article>
+
+      <!-- right sidebar: empty for now, but needs to be here so <article> gets centered -->
+      <div class="rightSidebar"></div>
+
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img class="curvedShadow" src="../../assets/images/curved_shadow.png"/>
+    </center>
+
+    <footer>
+      <div class="footerContent">
+
+        <!-- licentie -->
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a>
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+
+        <!-- search -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search pages...">
+          <div id="search-results"></div>
+        </div>
+
+        <!-- signature -->
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

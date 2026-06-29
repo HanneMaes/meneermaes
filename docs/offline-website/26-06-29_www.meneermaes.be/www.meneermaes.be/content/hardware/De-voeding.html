@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/libraries/aos/aos.css">
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>De Voeding</title>
+
+    <!-- apply custom CSS to some pages -->
+    
+
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section>
+
+      <!-- ------------------------- -->
+      <!-- SIDEBAR: BREADCRUMBS, TOC -->
+      <!-- ------------------------- -->
+
+      <aside data-aos="fade-right" data-aos-delay="300"> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
+
+        <!-- ------ -->
+        <!-- SEARCH -->
+        <!-- ------ -->
+
+        <!-- <nav> -->
+        <!--   <a href="/index#cursussen"><img class="icon" src="/assets/images/search.svg"/></a> -->
+        <!-- </nav> -->
+
+        <!-- ----------- -->
+        <!-- BREADCRUMBS -->
+        <!-- ----------- -->
+
+        <!-- not on homepage -->
+        
+
+          <nav>
+        
+            <a href="../../index.html#cursussen">Cursussen</a>
+
+            <!-- only show link to section when not on a section page -->
+            
+            <span class="navDivider">/</span>
+            
+            <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+            
+            <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+            <a href="index.html">
+              Hardware</a>
+            
+
+          </nav>
+
+        
+
+        <!-- ----------------- -->
+        <!-- TABLE OF CONTENTS -->
+        <!-- ----------------- -->
+
+        <nav class="toc">
+          <em>Inhoudstafel</em>
+          <ul id="toc"></ul>
+        </nav>
+
+        <!-- --------------------------- -->
+        <!-- Incoming and outgoing links -->
+        <!-- --------------------------- -->
+
+        <nav class="links">
+
+          <!-- not on homapage and index pages -->
+          
+          
+
+            <em>Inkomende links</em>
+            <ul class="incomingLinks" id="incomingLinks"></ul>
+
+          
+
+          <em>Uitgaande links</em>
+          <ul class="outgoingLinks" id="outgoingLinks"></ul>
+
+        </nav>
+
+      </aside>
+
+      <!-- ------ -->
+      <!-- CURSUS -->
+      <!-- ------ -->
+
+      <article>
+
+        <!-- header -->
+        <header data-aos="fade-left">De Voeding</header>
+
+        <!-- content -->
+        <blockquote>
+  <p>Wordt vaak ook de <strong>PSU of Power Supply Unit</strong> genoemd.</p>
+</blockquote>
+
+<details>
+   <summary>
+      Hoe ziet een voeding er uit?
+   </summary>
+   <div class="toggleContent">
+      
+<p><img src="images/voeding.jpg" alt="voeding" class="frame" /></p>
+
+<p><strong>Waar zit de voeding?</strong></p>
+
+<p><img src="images/voeding-case.jpg" alt="voeding" class="frame" /></p>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Waarom kan je een computer niet gewoon rechtstreeks in het stopcontact steken?
+   </summary>
+   <div class="toggleContent">
+      
+<p>Een stopcontact levert <strong>wisselstroom (AC)</strong>.<br />
+Computeronderdelen zijn gemaakt om te werken met lage <strong>gelijkstroom (DC)</strong>.</p>
+
+<p>Als je een computer rechtstreeks op het stopcontact zou aansluiten:</p>
+<ul>
+  <li>Krijgen onderdelen veel te veel spanning</li>
+  <li>Zou de stroom voortdurend van richting veranderen</li>
+  <li>Zouden componenten beschadigd raken of doorbranden</li>
+</ul>
+
+<p>Daarom gebruikt een computer een voeding (PSU) die:</p>
+<ul>
+  <li>De stroom omzet</li>
+  <li>De spanning verlaagt</li>
+  <li>De stroom veilig verdeelt</li>
+</ul>
+
+   </div>
+</details>
+
+<h1 id="spanning--vermogen">Spanning &amp; vermogen</h1>
+
+<details>
+   <summary>
+      Wat zijn wissel- en gelijkstroom?
+   </summary>
+   <div class="toggleContent">
+      
+<p><strong>Gelijkstroom (DC)</strong><br />
+Bij gelijkstroom stroomt elektriciteit altijd in <strong>dezelfde richting</strong>.<br />
+Dat is <strong>stabieler en veiliger</strong> voor elektronische onderdelen.</p>
+
+<p><strong>Wisselstroom (AC)</strong><br />
+Bij wisselstroom <strong>verandert de richting</strong> van de stroom voortdurend.<br />
+Dit is de soort stroom uit het <strong>stopcontact</strong>.<br />
+In Europa verandert die richting 50 keer per seconde.<br />
+Wisselstroom veel praktischer voor:</p>
+<ul>
+  <li>Elektriciteit over lange afstanden vervoeren</li>
+  <li>Hele steden van stroom voorzien</li>
+</ul>
+
+<p>Wanneer elektriciteit door kabels reist gaat een deel verloren als warmte.<br />
+Bij lange afstanden wil je dus zo weinig mogelijk stroomverlies.</p>
+
+   </div>
+</details>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SR3IR8OaNBg?si=sng9loEDrMFpHRuK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+<details>
+   <summary>
+      Wat zijn spanning en vermogen?
+   </summary>
+   <div class="toggleContent">
+      
+<p><strong>Spanning (Volt)</strong><br />
+Spanning geeft aan hoe sterk elektriciteit <strong>duwt</strong>.<br />
+Je kan dit vergelijken met waterdruk in een waterleiding.<br />
+Hoe hoger de spanning hoe krachtiger de elektrische stroom kan bewegen.</p>
+
+<p><strong>Vermogen (Watt)</strong><br />
+Vermogen geeft aan hoeveel energie een toestel <strong>gebruikt of levert</strong>.<br />
+Je kan dit vergelijken met hoeveel water per seconde door een waterleiding stroomt.</p>
+
+<p><strong>Vergelijking:</strong></p>
+<ul>
+  <li>Spanning (Volt) is de waterdruk.</li>
+  <li>Vermogen (Watt) is hoeveel water er effectief beweegt.</li>
+</ul>
+
+<p><strong>Een hoge spanning betekent niet automatisch hoog vermogen.</strong><br />
+Vergelijk de spanning en het vermogen van deze vergelijkingen:</p>
+<ul>
+  <li>Een dun straaltje water onder hoge druk: <em>spanning en vermogen?</em></li>
+  <li>Een grote waterstroom: <em>spanning en vermogen?</em></li>
+</ul>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Gebruikt een computer AC of DC?
+   </summary>
+   <div class="toggleContent">
+      
+<blockquote>
+  <p>Gelijkstroom (DC)</p>
+</blockquote>
+
+<p>De voeding zet daarom <strong>AC uit het stopcontact</strong> om naar <strong>DC voor de computer</strong>.</p>
+
+   </div>
+</details>
+
+<h2 id="opdracht-gelijk--en-wisselspanning">Opdracht: Gelijk- en wisselspanning</h2>
+
+<p>Download en maak deze oefening: <a href="zelfstandige-opdrachten/gelijkspanning-en-wisselspanning.docx" class="opdracht">Gelijk- en wisselspanning</a></p>
+
+<h2 id="opdracht-spanningen-in-een-computer">Opdracht: Spanningen in een computer</h2>
+
+<ol>
+  <li>Hoeveel spanning gebruiken deze componenten?<br />
+  <img src="images/spanning-componenten.png" alt="Open case" /></li>
+  <li><em>Onderzoeksvraag:</em> Waarom zou een videokaart meer stroom nodig hebben dan een USB-stick?</li>
+  <li>Wat is het vermogen van deze toestellen?<br />
+  a. LED-lamp<br />
+  b. Laptop<br />
+  c. Gaming PC</li>
+</ol>
+
+<h1 id="psu-efficiëntie">PSU efficiëntie</h1>
+
+<details>
+   <summary>
+      Een voeding haalt 500W uit het stopcontact, maar levert maar 425W aan de computer. Wat gebeurt er met de rest?
+   </summary>
+   <div class="toggleContent">
+      
+<p>De overige energie gaat vooral verloren als <strong>warmte</strong>.</p>
+
+<p>Geen enkele voeding werkt perfect efficiënt.<br />
+Daarom hebben voedingen <strong>ventilatoren, koeling, heatsinks</strong>.</p>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Waarom hechten datacenters veel belang aan efficiente voedingen?
+   </summary>
+   <div class="toggleContent">
+      
+<p>Datacenters bevatten <strong>duizenden</strong> computers en servers.<br />
+Zelfs kleine energieverliezen worden daardoor enorm groot.</p>
+
+<p>Efficiënte voedingen zijn belangrijk omdat ze:</p>
+<ul>
+  <li>Minder elektriciteit verspillen</li>
+  <li>Minder warmte produceren</li>
+  <li>Lagere elektriciteitskosten geven</li>
+  <li>Minder zware koeling nodig hebben</li>
+  <li>Beter zijn voor het milieu</li>
+</ul>
+
+<p>Minder warmte betekent ook:</p>
+<ul>
+  <li>Minder airconditioning</li>
+  <li>Minder risico op oververhitting</li>
+  <li>Betrouwbaardere servers</li>
+</ul>
+
+   </div>
+</details>
+
+<h2 id="certificaten">Certificaten</h2>
+
+<details>
+   <summary>
+      Wat betekent 80 PLUS op een voeding?
+   </summary>
+   <div class="toggleContent">
+      
+<p>80 PLUS is een <strong>certificering voor de efficiëntie</strong> van een voeding.</p>
+
+<p>Een voeding met 80 PLUS:</p>
+<ul>
+  <li>Zet minstens <strong>80%</strong> van de energie om in <strong>bruikbare stroom</strong></li>
+  <li>Maximaal <strong>20%</strong> gaat verloren als <strong>warmte</strong></li>
+</ul>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Bestaan er 60 PLUS of 70 PLUS voedingen?
+   </summary>
+   <div class="toggleContent">
+      
+<p><strong>Nee</strong>. De officiële certificering begint bij 80 PLUS.</p>
+
+<p>Daarna komen:</p>
+<ul>
+  <li>Bronze</li>
+  <li>Silver</li>
+  <li>Gold</li>
+  <li>Platinum</li>
+  <li>Titanium</li>
+</ul>
+
+<p>Waarom geen 60 PLUS of 70 PLUS?</p>
+<ul>
+  <li>80% efficiëntie vroeger een praktische minimumstandaard werd</li>
+  <li>Onder 80% wordt beschouwd als te inefficiënt voor moderne PC’s</li>
+  <li>De organisatie (CLEAResult / 80 PLUS programma) heeft nooit lagere tiers toegevoegd</li>
+</ul>
+
+<p>Een voeding zonder certificaat kan dus 60%, 70% of 75% efficiënt zijn maar die mag zich gewoon geen <strong>80 PLUS</strong> noemen.</p>
+<ul>
+  <li>80 PLUS: start van certificering</li>
+  <li>Alles daaronder: geen certificaat</li>
+</ul>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Kiezen tussen bronze, silver, gold ... wat is het verschil echt?
+   </summary>
+   <div class="toggleContent">
+      
+<p>De 80 PLUS certificaten zeggen niet hoeveel vermogen een voeding levert, maar <strong>hoe efficiënt ze energie omzet</strong>.</p>
+
+<p>Een voeding haalt stroom uit het stopcontact (AC) en zet die om naar DC.<br />
+Niet alles wordt nuttige stroom, een deel gaat verloren als <strong>warmte</strong>.</p>
+
+<p><strong>Voorbeelden bij een PC die <code class="language-plaintext highlighter-rouge">500W</code> nodig heeft:</strong></p>
+
+<ul>
+  <li>80 PLUS <strong>Bronze</strong> (~82% efficiënt)
+    <ul>
+      <li>Uit stopcontact: ~<code class="language-plaintext highlighter-rouge">610W</code></li>
+      <li>Verlies: ~<code class="language-plaintext highlighter-rouge">110W</code> warmte</li>
+    </ul>
+  </li>
+  <li>80 PLUS <strong>Gold</strong> (~90% efficiënt)
+    <ul>
+      <li>Uit stopcontact: ~<code class="language-plaintext highlighter-rouge">555W</code></li>
+      <li>Verlies: ~<code class="language-plaintext highlighter-rouge">55W</code> warmte</li>
+    </ul>
+  </li>
+  <li>80 PLUS <strong>Platinum</strong> (~92–94%)
+    <ul>
+      <li>Uit stopcontact: ~<code class="language-plaintext highlighter-rouge">535W</code></li>
+      <li>Verlies: ~<code class="language-plaintext highlighter-rouge">35</code>–<code class="language-plaintext highlighter-rouge">45W</code> warmte</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Bronze</strong></p>
+<ul>
+  <li>Goedkoper</li>
+  <li>Meer warmte</li>
+  <li>Iets hoger verbruik</li>
+</ul>
+
+<p><strong>Gold</strong></p>
+<ul>
+  <li>Beste balans</li>
+  <li>Standaard voor gaming PC’s</li>
+  <li>Minder warmte, stiller</li>
+</ul>
+
+<p><strong>Platinum &amp; Titanium</strong></p>
+<ul>
+  <li>Zeer efficiënt</li>
+  <li>Minder koeling nodig</li>
+  <li><strong>Vaak in servers of high-end systemen</strong></li>
+</ul>
+
+<blockquote>
+  <p>Efficiëntie verandert NIET hoeveel je PC kan gebruiken, WEL hoeveel energie je uit het stopcontact trekt</p>
+</blockquote>
+
+   </div>
+</details>
+
+<h1 id="soorten-voedingen">Soorten voedingen</h1>
+
+<h2 id="atx-voeding-standaard-pc-voeding">ATX voeding (standaard PC voeding)</h2>
+
+<details>
+   <summary>
+      ATX voedingen
+   </summary>
+   <div class="toggleContent">
+      
+<p>De meest gebruikte voeding in desktopcomputers.</p>
+
+<p>Kenmerken:</p>
+<ul>
+  <li>Grote rechthoekige voeding</li>
+  <li>Past in standaard PC cases</li>
+  <li>Heeft vaste kabels of modulaire kabels</li>
+  <li>Levert meerdere spanningen (<code class="language-plaintext highlighter-rouge">+12V</code>, <code class="language-plaintext highlighter-rouge">+5V</code>, <code class="language-plaintext highlighter-rouge">+3.3V</code>)</li>
+</ul>
+
+<p><img src="images/psu-atx.png" alt="ATX PSU" /></p>
+
+<p>Wordt gebruikt in:</p>
+<ul>
+  <li>Gaming PC’s</li>
+  <li>Kantoorcomputers</li>
+  <li>Workstations</li>
+</ul>
+
+   </div>
+</details>
+
+<h2 id="sfx-voeding-kleine-pcs">SFX voeding (kleine PC’s)</h2>
+
+<details>
+   <summary>
+      SFX voedingen
+   </summary>
+   <div class="toggleContent">
+      
+<p>Een kleinere versie van ATX.</p>
+
+<p>Kenmerken:</p>
+<ul>
+  <li>Compact formaat</li>
+  <li>Voor mini-PC’s</li>
+  <li>Minder vermogen mogelijk</li>
+  <li>Vaak duurder per watt</li>
+</ul>
+
+<p><img src="images/psu-atx-vs-sfx.png" alt="ATX vs SFX PSU" /></p>
+
+<p>Wordt gebruikt in:</p>
+<ul>
+  <li>Mini ITX builds</li>
+  <li>Kleine gaming setups</li>
+</ul>
+
+   </div>
+</details>
+
+<h2 id="laptop-voedingen-extern">Laptop voedingen (extern)</h2>
+
+<details>
+   <summary>
+      Laptop adapters
+   </summary>
+   <div class="toggleContent">
+      
+<p>Laptop voedingen zitten buiten de computer.</p>
+
+<p>Kenmerken:</p>
+<ul>
+  <li>Zet AC om naar DC buiten de laptop</li>
+  <li>Vaak <code class="language-plaintext highlighter-rouge">19V</code> output</li>
+  <li>Compact maar krachtig</li>
+  <li>Specifiek per laptopmodel</li>
+</ul>
+
+<p><img src="images/laptop-psu.png" alt="laptop PSU" /></p>
+
+<p>Nadeel:</p>
+<ul>
+  <li>Niet universeel</li>
+  <li>Vaak moeilijk te vervangen</li>
+</ul>
+
+   </div>
+</details>
+
+<h1 id="hoe-kies-je-een-voeding">Hoe kies je een voeding</h1>
+
+<details>
+   <summary>
+      Stap 1: Hoeveel vermogen heb je nodig?
+   </summary>
+   <div class="toggleContent">
+      
+<p>Een voeding moet genoeg vermogen leveren voor <strong>alle onderdelen samen</strong>.<br />
+In de praktijk verbruiken onderdelen niet altijd maximaal tegelijk, maar je moet er wel vanuit gaan dat dit kan gebeuren.</p>
+
+<p>Typisch verbruik per onderdeel:</p>
+<ul>
+  <li><strong>CPU (processor)</strong><br />
+<code class="language-plaintext highlighter-rouge">65W tot 150W</code><br />
+Krachtige CPU’s (gaming/rendering) verbruiken meer</li>
+  <li><strong>GPU (videokaart)</strong><br />
+<code class="language-plaintext highlighter-rouge">100W tot 400W+</code><br />
+Dit is meestal het grootste verbruik in een PC</li>
+  <li><strong>Moederbord + RAM + opslag</strong><br />
+<code class="language-plaintext highlighter-rouge">30W tot 80W</code><br />
+Relatief stabiel en laag verbruik</li>
+  <li><strong>Andere (fans, USB, RGB, etc.)</strong><br />
+<code class="language-plaintext highlighter-rouge">10W tot 30W</code> extra</li>
+</ul>
+
+<p><strong>Veiligheidsmargage</strong><br />
+Tel alles samen en voeg 20–30% marge toe.</p>
+
+<p>Waarom?</p>
+<ul>
+  <li>Componenten kunnen pieken (kortstondig meer verbruik)</li>
+  <li>Voeding werkt efficiënter rond 50–70% belasting</li>
+  <li>Je voorkomt dat de voeding constant op maximum draait</li>
+</ul>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Stap 2: Efficiëntie kiezen
+   </summary>
+   <div class="toggleContent">
+      
+<ul>
+  <li>80 PLUS <strong>Bronze</strong>: basis</li>
+  <li>80 PLUS <strong>Gold</strong>: standaard gaming PC</li>
+  <li>80 PLUS <strong>Platinum</strong>: high-end / servers</li>
+</ul>
+
+<p>Meer efficiëntie = minder warmte en verbruik</p>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Stap 3: Aansluitingen controleren
+   </summary>
+   <div class="toggleContent">
+      
+<p>Een voeding is niet alleen een kwestie van genoeg Watt hebben.<br />
+Je moet ook genoeg <strong>juiste kabels en aansluitingen</strong> hebben voor je onderdelen.</p>
+
+<p>Dit zijn de belangrijkste kabels:</p>
+<ul>
+  <li>PCIe kabels voor GPU<br />
+<img src="images/pcie-cable.png" alt="PCIe cable" width="300px" /></li>
+  <li>SATA kabels voor SSD/HDD<br />
+<img src="images/sata-cable.png" alt="SATA cable" width="300px" /></li>
+  <li>CPU power (8-pin of 4+4 pin)</li>
+</ul>
+
+<p>Niet alle kabels van een voeding gaan naar dezelfde plaats.<br />
+Sommige kabels gaan <strong>eerst naar het moederbord</strong>, andere gaan <strong>rechtstreeks naar onderdelen</strong>.</p>
+<ul>
+  <li>De CPU krijgt zijn stroom via een aansluiting op het moederbord</li>
+  <li>PCIe kabel (GPU): krachtige videokaarten hebben vaak extra stroom nodig. Die kabel gaat meestal rechtstreeks naar de videokaart.</li>
+  <li>SATA power (voor SSD’s, HDD’s, RGB controllers, fan hubs, …). Deze kabel gaat rechtstreeks naar het apparaat.</li>
+  <li>RAM gaat via het moederbord</li>
+</ul>
+
+<p><img src="images/psu-connectors.png" alt="PSU connectors" /></p>
+
+<p><strong>Veelgemaakte beginnersfouten:</strong></p>
+<ul>
+  <li>Denken dat alle voedingen dezelfde kabels hebben</li>
+  <li>Vergeten GPU kabels te tellen</li>
+  <li>Niet checken hoeveel SSD’s/HDD’s je hebt</li>
+</ul>
+
+   </div>
+</details>
+
+<h2 id="oefening-kies-een-voeding">Oefening: Kies een voeding</h2>
+
+<p>Je bouwt een PC met:</p>
+<ul>
+  <li>Ryzen 5 CPU <code class="language-plaintext highlighter-rouge">95W</code></li>
+  <li>RTX 4070 <code class="language-plaintext highlighter-rouge">200W</code></li>
+  <li>2 SSD’s</li>
+  <li>1 moederbord + RAM</li>
+</ul>
+
+<p>Vragen:</p>
+<ul>
+  <li>Schat totaal verbruik</li>
+  <li>Welke voeding (Watt) kies je?</li>
+  <li>Welke efficiëntie (Bronze/Gold/Platinum)?</li>
+  <li>Waarom is <code class="language-plaintext highlighter-rouge">500W</code> hier waarschijnlijk te weinig?</li>
+</ul>
+
+<h1 id="veiligheid">Veiligheid</h1>
+
+<details>
+   <summary>
+      Waarom kan een voeding gevaarlijk zijn?
+   </summary>
+   <div class="toggleContent">
+      
+<p>Een voeding werkt met netspanning <code class="language-plaintext highlighter-rouge">230V</code>.</p>
+
+<p>Risico’s:</p>
+<ul>
+  <li>Elektrische schok</li>
+  <li>Condensatoren blijven geladen (zelfs uit!)</li>
+  <li>Kortsluiting bij slechte kabels</li>
+</ul>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Wat mag je nooit doen?
+   </summary>
+   <div class="toggleContent">
+      
+<ul>
+  <li>Een voeding openen</li>
+  <li>Kabels aanpassen zonder kennis</li>
+  <li>Een voeding gebruiken met beschadigde kabels</li>
+  <li>Een PSU testen zonder behuizing of bescherming</li>
+</ul>
+
+   </div>
+</details>
+
+<h2 id="quiz">Quiz</h2>
+
+<blockquote>
+  <p>Waar of niet waar?</p>
+</blockquote>
+
+<details>
+   <summary>
+      Een voeding zet gelijkstroom (DC) om naar wisselstroom (AC)
+   </summary>
+   <div class="toggleContent">
+      
+<blockquote>
+  <p>Niet waar</p>
+</blockquote>
+
+<p>Een voeding doet net het omgekeerde.</p>
+<ul>
+  <li>Een stopcontact levert wisselstroom (AC).</li>
+  <li>Computeronderdelen werken op gelijkstroom (DC).</li>
+</ul>
+
+<p>De voeding zet dus AC om naar DC</p>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Een voeding is veilig zodra de PC uit staat
+   </summary>
+   <div class="toggleContent">
+      
+<blockquote>
+  <p>Niet waar</p>
+</blockquote>
+
+<p>Een PC uitschakelen betekent niet dat de voeding volledig "leeg" of veilig is.</p>
+
+<p>Wat gebeurt er echt?</p>
+<ul>
+  <li>De PC staat uit, maar de voeding blijft verbonden met <code class="language-plaintext highlighter-rouge">230V</code> stopcontact</li>
+  <li>Binnenin de PSU zitten condensatoren, die kunnen nog kort energie opslaan</li>
+</ul>
+
+<p>Gevolg:</p>
+<ul>
+  <li>Je kan nog steeds een elektrische schok krijgen</li>
+  <li>Daarom is "uit" niet hetzelfde als "veilig"</li>
+</ul>
+
+<p><strong>Altijd de stekker uit het stopcontact halen voor je aan een voeding werkt</strong></p>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Een krachtigere voeding maakt je computer sneller
+   </summary>
+   <div class="toggleContent">
+      
+<blockquote>
+  <p>Niet waar</p>
+</blockquote>
+
+<p>Een voeding levert alleen het vermogen dat onderdelen nodig hebben.<br />
+Een <code class="language-plaintext highlighter-rouge">600W</code> vs <code class="language-plaintext highlighter-rouge">1000W</code> voeding maakt je PC niet sneller als allebei voldoende zijn voor je systeem.<br />
+De voeding ‘duwt’ geen extra prestaties in je onderdelen.</p>
+
+<p>De voeding zorgt enkel dat:</p>
+<ul>
+  <li>genoeg energie beschikbaar is</li>
+  <li>de spanning stabiel blijft</li>
+  <li>onderdelen veilig kunnen werken</li>
+</ul>
+
+<p>Als je voeding **te weinig vermogen heeft:</p>
+<ul>
+  <li>kan je PC uitvallen onder load (gaming, renderen)</li>
+  <li>kan de GPU/CPU niet op volle snelheid draaien (throttling)</li>
+  <li>kan het systeem instabiel worden</li>
+</ul>
+
+<p>In dat geval lijkt het alsof je PC trager is, maar dat komt niet door minder snelheid van de voeding zelf, wel door bescherming of instabiliteit van het systeem.</p>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Een voeding met hogere efficiëntie verspilt meestal minder energie
+   </summary>
+   <div class="toggleContent">
+      
+<blockquote>
+  <p>Waar</p>
+</blockquote>
+
+<p>Een efficiëntere voeding:</p>
+<ul>
+  <li>produceert minder warmte</li>
+  <li>verbruikt minder elektriciteit</li>
+  <li>werkt vaak stiller</li>
+</ul>
+
+   </div>
+</details>
+
+
+
+        <!-- page info -->
+        <div class="pageInfo">
+          Last edited: 26/05/2026
+          <br>
+          Created: 11/05/2026
+        </div>
+
+      </article>
+
+      <!-- right sidebar: empty for now, but needs to be here so <article> gets centered -->
+      <div class="rightSidebar"></div>
+
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img class="curvedShadow" src="../../assets/images/curved_shadow.png"/>
+    </center>
+
+    <footer>
+      <div class="footerContent">
+
+        <!-- licentie -->
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a>
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+
+        <!-- search -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search pages...">
+          <div id="search-results"></div>
+        </div>
+
+        <!-- signature -->
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

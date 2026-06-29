@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/libraries/aos/aos.css">
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Bash Scripting</title>
+
+    <!-- apply custom CSS to some pages -->
+    
+
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section>
+
+      <!-- ------------------------- -->
+      <!-- SIDEBAR: BREADCRUMBS, TOC -->
+      <!-- ------------------------- -->
+
+      <aside data-aos="fade-right" data-aos-delay="300"> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
+
+        <!-- ------ -->
+        <!-- SEARCH -->
+        <!-- ------ -->
+
+        <!-- <nav> -->
+        <!--   <a href="/index#cursussen"><img class="icon" src="/assets/images/search.svg"/></a> -->
+        <!-- </nav> -->
+
+        <!-- ----------- -->
+        <!-- BREADCRUMBS -->
+        <!-- ----------- -->
+
+        <!-- not on homepage -->
+        
+
+          <nav>
+        
+            <a href="../../index.html#cursussen">Cursussen</a>
+
+            <!-- only show link to section when not on a section page -->
+            
+            <span class="navDivider">/</span>
+            
+            <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+            
+            <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+            <a href="index.html">
+              Flex</a>
+            
+
+          </nav>
+
+        
+
+        <!-- ----------------- -->
+        <!-- TABLE OF CONTENTS -->
+        <!-- ----------------- -->
+
+        <nav class="toc">
+          <em>Inhoudstafel</em>
+          <ul id="toc"></ul>
+        </nav>
+
+        <!-- --------------------------- -->
+        <!-- Incoming and outgoing links -->
+        <!-- --------------------------- -->
+
+        <nav class="links">
+
+          <!-- not on homapage and index pages -->
+          
+          
+
+            <em>Inkomende links</em>
+            <ul class="incomingLinks" id="incomingLinks"></ul>
+
+          
+
+          <em>Uitgaande links</em>
+          <ul class="outgoingLinks" id="outgoingLinks"></ul>
+
+        </nav>
+
+      </aside>
+
+      <!-- ------ -->
+      <!-- CURSUS -->
+      <!-- ------ -->
+
+      <article>
+
+        <!-- header -->
+        <header data-aos="fade-left">Bash Scripting</header>
+
+        <!-- content -->
+        <h1 id="wat-is-bash">Wat is Bash?</h1>
+
+<p>Het is de taal waarmee je <strong>Linux</strong> &amp; <strong>MacOS</strong> kunt <strong>besturen via de terminal</strong>. In plaats van alles met je muis te doen, kun je met Bash direct commando’s invoeren om het systeem te bedienen. Het maakt het mogelijk om snel dingen te doen die je normaal met een grafische interface zou doen, zoals bestanden kopiëren, programma’s starten, of instellingen aanpassen.</p>
+
+<p>Wat Bash echt krachtig maakt, is dat je er ook mee kunt programmeren. Dit betekent dat je taken die je normaal handmatig zou uitvoeren (zoals een reeks commando’s achter elkaar uitvoeren) kunt <strong>automatiseren met een Bash-script</strong>. Hierdoor kun je dingen sneller, efficiënter of automatisch doen, zonder steeds weer hetzelfde handmatige werk te herhalen.</p>
+
+<p><strong>Bijvoorbeeld:</strong></p>
+
+<ul>
+  <li>Automatisch regelmatig back-ups maken van belangrijke bestanden of mappen.</li>
+  <li>Automatisch je systeem en softwarepakketten up-to-date houden.</li>
+  <li>Je kunt Bash gebruiken om meldingen naar jezelf of anderen te sturen wanneer bepaalde gebeurtenissen plaatsvinden</li>
+</ul>
+
+<h2 id="bash-op-servers">Bash op servers</h2>
+
+<p><strong>Linux is het meestgebruikte besturingssysteem voor servers wereldwijd</strong>. Het wordt vaak gekozen vanwege zijn stabiliteit, veiligheid, en open-source karakter. Omdat de meeste Linux-servers geen grafische gebruikersinterface (GUI) hebben, wordt <strong>alles via de terminal beheerd</strong>, wat betekent dat kennis van de Bash-shell cruciaal is voor serverbeheer.</p>
+
+<p><strong>Bijvoorbeeld:</strong></p>
+
+<ul>
+  <li>Wanneer je werkt met meerdere servers, kan het bijwerken van het systeem op elke server een tijdrovende taak zijn. Met Bash kun je updates automatisch uitvoeren op al je servers.</li>
+  <li>Met Bash kun je de gezondheid van je server controleren, zoals het controleren van de schijfruimte of het geheugen, en meldingen sturen als er een probleem is.</li>
+  <li>Het regelmatig maken van back-ups van je serverbestanden en databases is cruciaal. Met Bash kun je back-upscripts schrijven die dit automatisch doen, bijvoorbeeld door dagelijkse back-ups van je serverbestanden en MySQL-databases te maken.</li>
+  <li>Op een server wil je ervoor zorgen dat kritieke services, zoals een webserver of database, altijd actief blijven. Met Bash kun je automatisch controleren of deze services draaien en ze opnieuw starten als dat niet het geval is.</li>
+</ul>
+
+<h1 id="linux-of-git-bash">Linux of Git Bash</h1>
+
+<p>Tijdens deze opdracht zullen we werken met Bash, de shell waarmee je commando’s invoert in een Linux-omgeving.
+Je kan op 2 manieren met Bash werken:</p>
+
+<ul>
+  <li><strong>Git Bash</strong><br />
+ Git Bash is een programma waarmee je op een Windows-computer Linux-achtige commando’s kunt gebruiken. Het geeft je toegang tot de Bash-shell, die normaal gesproken op Linux en macOS wordt gebruikt.</li>
+  <li><strong>Een volledige Linux-versie in een virtuele machine</strong><br />
+Dit geeft je de complete Linux-ervaring.</li>
+</ul>
+
+<p>Je mag zelf kiezen welke optie je gebruikt om met Bash aan de slag te gaan.</p>
+
+<h1 id="bash-scripts-aanmaken-en-uitvoeren">Bash scripts aanmaken en uitvoeren</h1>
+
+<ol>
+  <li>Open de terminal
+    <ul>
+      <li>In de meeste Linux-distributies kun je de terminal openen door op 
+<span class="btn">Ctrl</span></li>
+    </ul>
+  </li>
+</ol>
+
+<p><span class="btn">Alt</span></p>
+
+<p><span class="btn">T</span></p>
+
+<ul>
+  <li>Of je kunt zoeken naar <strong>“Terminal”</strong> in het applicatiemenu.
+    <ol>
+      <li>Kijken op welke locatie je zit: <code class="language-plaintext highlighter-rouge">pwd</code></li>
+      <li>Kijken welke bestanden er op deze locatie staan: <code class="language-plaintext highlighter-rouge">ls</code></li>
+      <li>Nieuwe bestanden aanmaken:</li>
+    </ol>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">touch bestand.txt</code></li>
+  <li><code class="language-plaintext highlighter-rouge">touch script.sh</code></li>
+</ul>
+
+<h1 id="bash-syntax">Bash syntax</h1>
+
+<h2 id="de-bang-start-code">De Bang Start Code</h2>
+
+<p>Je bash script moet <strong>altijd</strong> beginnen met deze regel.<br />
+Zo weet het systeem dat het script met de Bash-shell moet worden uitgevoerd.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="c"># Je bash script moet altijd starten met deze code</span>
+
+<span class="c"># De rest van je code ...</span>
+</code></pre></div></div>
+
+<h2 id="variabelen">Variabelen</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">naam</span><span class="o">=</span><span class="s2">"Maes"</span>
+<span class="nb">echo</span> <span class="s2">"Hallo, </span><span class="nv">$naam</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Syntax</th>
+      <th>Betekenis</th>
+      <th>Opmerking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">naam="Maes"</code></td>
+      <td>variabele instellen</td>
+      <td><strong>geen spaties</strong> rond <code class="language-plaintext highlighter-rouge">=</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">leeftijd=18</code></td>
+      <td>numerieke variabele</td>
+      <td>bash kent geen types</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$naam</code></td>
+      <td>waarde gebruiken</td>
+      <td>altijd met <code class="language-plaintext highlighter-rouge">$</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Veelgemaakte fouten</strong></p>
+<ul>
+  <li>Fout: <code class="language-plaintext highlighter-rouge">naam = "Maes"</code> (spaties maken er een command van)</li>
+  <li>Fout: <code class="language-plaintext highlighter-rouge">$naam="Maes"</code></li>
+  <li>Juist: <code class="language-plaintext highlighter-rouge">naam="Maes"</code></li>
+</ul>
+
+<h2 id="invoer">Invoer</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"Wat is je naam?"</span>
+<span class="nb">read </span>gebruikersnaam
+<span class="nb">echo</span> <span class="s2">"Hallo, </span><span class="nv">$gebruikersnaam</span><span class="s2">! Welkom bij mijn Bash-script."</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Syntax</th>
+      <th>Betekenis</th>
+      <th>Staat voor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">read -p "Naam: " naam</code></td>
+      <td>invoer vragen</td>
+      <td>p = prompt</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">read -s wachtwoord</code></td>
+      <td>verborgen invoer</td>
+      <td>s = silent</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">read -r tekst</code></td>
+      <td>geen escape-interpretatie bij <code class="language-plaintext highlighter-rouge">\</code></td>
+      <td>r = raw</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="wiskundige-berekeningen">Wiskundige berekeningen</h2>
+
+<p>Wiskundige berekeningen zet je tussen <code class="language-plaintext highlighter-rouge">(( ... ))</code>.</p>
+
+<p><strong>Waarom?</strong></p>
+<ul>
+  <li>Bash behandelt alles standaard als tekst.</li>
+  <li><code class="language-plaintext highlighter-rouge">(( ... ))</code> vertelt Bash: <strong>dit is rekenwerk</strong>.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">a</span><span class="o">=</span>4 
+<span class="nv">b</span><span class="o">=</span>7
+
+<span class="c"># Zonder (( )): tekst</span>
+<span class="nb">echo</span> <span class="nv">$a</span> + <span class="nv">$b</span> <span class="c"># Output: 4 + 7</span>
+
+<span class="c"># Met (( )): rekenen</span>
+<span class="nb">echo</span> <span class="k">$((</span> <span class="nv">$a</span> <span class="o">+</span> <span class="nv">$b</span> <span class="k">))</span> <span class="c"># Output: 11</span>
+</code></pre></div></div>
+
+<p><strong>Waarom is <code class="language-plaintext highlighter-rouge">$</code> nodig in <code class="language-plaintext highlighter-rouge">echo $(( $a + $b ))</code>?</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">$(( ... ))</code> is geen “variabele”<br />
+<code class="language-plaintext highlighter-rouge">(( ... ))</code> is een rekenconstructie, geen variabele.<br />
+Je zet er een rekensom in, en Bash geeft het resultaat terug.</li>
+  <li><code class="language-plaintext highlighter-rouge">$a</code> en <code class="language-plaintext highlighter-rouge">$b</code> zijn variabelen<br />
+Om de waarde van een variabele te gebruiken, moet je <code class="language-plaintext highlighter-rouge">$</code> ervoor zetten:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">a</code> = de naam van de variabele</li>
+      <li><code class="language-plaintext highlighter-rouge">$a</code> = de waarde van de variabele</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">a</span><span class="o">=</span>4
+
+<span class="nb">echo </span>a    <span class="c"># geeft: a</span>
+<span class="nb">echo</span> <span class="nv">$a</span>   <span class="c"># geeft: 4</span>
+
+<span class="c"># Dus in de som:</span>
+<span class="k">$((</span> <span class="nv">$a</span> <span class="o">+</span> <span class="nv">$b</span> <span class="k">))</span>
+</code></pre></div></div>
+
+<p><strong>Betekent:</strong></p>
+<ul>
+  <li>Neem de waarde van a (<code class="language-plaintext highlighter-rouge">$a</code>)</li>
+  <li>Neem de waarde van b (<code class="language-plaintext highlighter-rouge">$b</code>)</li>
+  <li>Tel ze op</li>
+  <li>Geef het resultaat terug</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Schrijfwijze</th>
+      <th>Betekenis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">a</code></td>
+      <td>De string “a”</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$a</code></td>
+      <td>Waarde van de variabele a</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$(( $a + $b ))</code></td>
+      <td>Tel de waarden op</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="if-statement-modern-bash">If-statement <em>(modern Bash)</em></h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">naam</span><span class="o">=</span><span class="s2">"Maes"</span>
+<span class="nv">leeftijd</span><span class="o">=</span>21
+
+<span class="c"># [[ ... ]] Voor strings, bestanden en logische tests</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$naam</span> <span class="o">==</span> <span class="s2">"Maes"</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"Naam klopt"</span>
+<span class="k">fi</span>
+
+<span class="c"># (( ... )) Voor rekenkundige vergelijkingen</span>
+<span class="c"># Geen gebruik van $ voor de variabele</span>
+<span class="k">if</span> <span class="o">((</span> leeftijd <span class="o">==</span> 21 <span class="o">))</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"Leeftijd klopt"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Betekenis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">==</code></td>
+      <td>gelijk aan</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">!=</code></td>
+      <td>niet gelijk aan</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;</code></td>
+      <td>kleiner dan</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;=</code></td>
+      <td>kleiner of gelijk aan</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;</code></td>
+      <td>groter dan</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;=</code></td>
+      <td>groter of gelijk aan</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-z $a</code></td>
+      <td><strong>String:</strong> leeg</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-n $a</code></td>
+      <td><strong>String:</strong> niet leeg</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="for-loop">For Loop</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="o">((</span><span class="nv">i</span><span class="o">=</span>1<span class="p">;</span> i&lt;<span class="o">=</span>5<span class="p">;</span> i++<span class="o">))</span><span class="p">;</span> <span class="k">do
+  </span><span class="nb">echo</span> <span class="s2">"Nummer </span><span class="nv">$i</span><span class="s2">"</span>
+<span class="k">done</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vorm</th>
+      <th>Betekenis</th>
+      <th>Wanneer gebruiken</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">for i in 1 2 3</code></td>
+      <td>vaste lijst</td>
+      <td>eenvoudige herhaling</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">for i in {1..5}</code></td>
+      <td>bereik</td>
+      <td>tellen</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">for file in *.txt</code></td>
+      <td>bestanden</td>
+      <td>alle bestanden die eindigen op .txt in deze map</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="while-loop-modern-bash">While Loop <em>(modern Bash)</em></h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">count</span><span class="o">=</span>1
+<span class="k">while</span> <span class="o">((</span> count &lt;<span class="o">=</span> 5 <span class="o">))</span><span class="p">;</span> <span class="k">do
+  </span><span class="nb">echo</span> <span class="s2">"Telling: </span><span class="nv">$count</span><span class="s2">"</span>
+  <span class="o">((</span>count++<span class="o">))</span>
+<span class="k">done</span>
+</code></pre></div></div>
+
+<h2 id="functies">Functies</h2>
+
+<h3 id="basis-functie">Basis functie</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>functie_naam<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">echo</span> <span class="s2">"Dit is een functie"</span>
+<span class="o">}</span>
+
+functie_naam
+</code></pre></div></div>
+
+<h3 id="functie-met-parameters">Functie met parameters</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>groet<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">echo</span> <span class="s2">"Hallo </span><span class="nv">$1</span><span class="s2">"</span>
+<span class="o">}</span>
+
+groet Maes
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Syntax</th>
+      <th>Betekenis</th>
+      <th>Opmerking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">functie() { }</code></td>
+      <td>functie definiëren</td>
+      <td>standaard</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">functie</code></td>
+      <td>functie oproepen</td>
+      <td>zonder ()</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">echo "tekst"</code></td>
+      <td>waarde “teruggeven”</td>
+      <td>via output</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$1, $2</code></td>
+      <td>parameters</td>
+      <td>positie-argumenten</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="opdracht-1-automatisatie-nieuw-project">Opdracht 1: Automatisatie nieuw project</h1>
+
+<p>Je maakt vaak websites en moet telkens opnieuw dezelfde mappen aanmaken. <strong>Dat kost tijd.</strong> Daarom schrijf je een Bash-script dat dit werk automatisch voor jou doet.</p>
+
+<p><strong>Stap 1: Voorbereiding</strong></p>
+
+<ol>
+  <li>Maak een nieuw Bash-script aan.</li>
+  <li>Voeg de correcte shebang toe bovenaan <code class="language-plaintext highlighter-rouge">(#!/bin/bash)</code>.</li>
+  <li>Maak het script executable zodat je het kan uitvoeren <code class="language-plaintext highlighter-rouge">chmod +x scriptnaam.sh</code>.</li>
+  <li>Voer het script uit om te testen <code class="language-plaintext highlighter-rouge">bash scriptnaam.sh</code>.</li>
+</ol>
+
+<p><strong>Stap 2: Projectinformatie</strong></p>
+
+<ol>
+  <li>Laat het script de gebruiker vragen naar de naam van de website.</li>
+  <li>Maak een map aan met de naam van de website.</li>
+</ol>
+
+<p><strong>Stap 3: Basisbestanden en mappen</strong></p>
+
+<ol>
+  <li>Maak in deze map de volgende bestanden en submappen aan:
+    <ul>
+      <li><span class="filePath">
+ index.html
+</span></li>
+      <li><span class="filePath">
+ style.css
+</span></li>
+      <li><span class="filePath">
+ script.js
+</span></li>
+      <li><span class="filePath">
+ images/
+</span></li>
+      <li><span class="filePath">
+ blogposts/
+</span></li>
+    </ul>
+  </li>
+  <li>Laat een bericht zien dat de bestanden en mappen aangemaakt zijn.<br />
+  Toon de structuur van de mappen in een boomstructuur via <code class="language-plaintext highlighter-rouge">tree</code>.</li>
+</ol>
+
+<p><strong>Stap 4: Blogposts genereren</strong></p>
+
+<ol>
+  <li>Vraag hoeveel blogposts de gebruiker wil hebben.</li>
+  <li>Maak dit aantal <span class="filePath">
+ .html
+</span> bestanden aan in de map <span class="filePath">
+ blogposts/
+</span>:
+    <ul>
+      <li><span class="filePath">
+ post-1.html
+</span></li>
+      <li><span class="filePath">
+ post-2.html
+</span></li>
+      <li><span class="filePath">
+ etc…
+</span></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Stap 5: Dynamische inhoud</strong></p>
+
+<ol>
+  <li>Pas het script aan zodat de bestanden niet meer leeg zijn:</li>
+  <li>De <span class="filePath">
+ .html
+</span> bestanden bevatten de correcte startcode <code class="language-plaintext highlighter-rouge">&lt;!DOCTYPE html&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;html&gt;</code>, …</li>
+  <li>De bestanden laden automatisch <span class="filePath">
+ style.css
+</span> in.</li>
+  <li>Pas <span class="filePath">
+ style.css
+</span> aan zodat de gebruiker zelf de achtergrondkleur en kleur van de <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code> kan kiezen. Je vraagt in je script naar deze kleuren.</li>
+  <li>Toon de inhoud van <span class="filePath">
+ style.css
+</span> zodat je kan controleren of de juiste kleuren gebruikt zijn.</li>
+</ol>
+
+<p><strong>Stap 6: Dynamische titels en koppen</strong></p>
+
+<ol>
+  <li>Geef alle <span class="filePath">
+ .html
+</span> bestanden een dynamische <code class="language-plaintext highlighter-rouge">title</code> en <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code> hoofding:
+    <ul>
+      <li><span class="filePath">
+ index.html
+</span>: de naam van de website</li>
+      <li><span class="filePath">
+ post-1.html
+</span>: Post 1</li>
+      <li><span class="filePath">
+ post-2.html
+</span>: Post 2</li>
+      <li><span class="filePath">
+ etc…
+</span></li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="opdracht-2-backup---opruimscript">Opdracht 2: Backup- &amp; opruimscript</h1>
+
+<p>Je gebruikt een Raspberry Pi als kleine server. Na een tijdje staan er veel bestanden in je home-folder: oude logs, testbestanden, tijdelijke bestanden, …</p>
+
+<p>Om overzicht te houden wil je met één script:</p>
+<ul>
+  <li>Belangrijke mappen back-uppen</li>
+  <li>Oude bestanden opruimen</li>
+  <li>Dit meerdere keren kunnen uitvoeren zonder alles opnieuw te typen</li>
+</ul>
+
+<p><strong>Stap 1: Systeeminformatie tonen</strong></p>
+
+<p>Maak een script aan dat:</p>
+<ul>
+  <li>Een welkombericht toont</li>
+  <li>De huidige datum toont met het <code class="language-plaintext highlighter-rouge">date</code> of <code class="language-plaintext highlighter-rouge">$(date '+%H:%M:%S')</code> command</li>
+  <li>De huidige map toont</li>
+</ul>
+
+<p><strong>Stap 2: Grootte functie</strong></p>
+
+<p>Schrijf een functie die:</p>
+<ul>
+  <li>Eén argument krijgt: de naam van een map</li>
+  <li>De grootte van deze map berekent met het <code class="language-plaintext highlighter-rouge">du -hs</code> command.</li>
+  <li>De functie <strong>geeft deze grootte terug</strong> zodat je ze later in je code kan gebruiken.</li>
+  <li>Gebruik deze functie om de grootte te tonen van de huidige map, toon niet enkel het getal maar zet het in een zin zodat het duidelijk is wat de betekenis is.</li>
+</ul>
+
+<p><strong>Stap 3: Backups maken</strong></p>
+
+<ol>
+  <li>Maak een <strong>functie</strong> die een backup maakt van een map. Deze functie krijgt <strong>2 argumenten</strong>:
+    <ul>
+      <li>De naam van de <strong>map</strong> die geback-upt moet worden</li>
+      <li>De naam van de <strong>backup-map</strong></li>
+    </ul>
+  </li>
+  <li>Voeg de datum van de backup toe aan het einde van de bestandsnaam.</li>
+</ol>
+
+<p><strong>Stap 4: Menu</strong></p>
+
+<p>Gebruik een <strong>while-loop</strong> om een menu te tonen dat blijft herhalen.<br />
+Het menu bevat minstens:</p>
+<ul>
+  <li>Backup maken van een map</li>
+  <li>Oude bestanden opruimen</li>
+  <li>Stoppen</li>
+</ul>
+
+<p>Zolang de gebruiker niet kiest om te stoppen, blijft het script zich herhalen.</p>
+
+<p><strong>Stap 5: Opruimen van oude bestanden</strong></p>
+
+<ol>
+  <li>Vraag aan de gebruiker:
+    <ul>
+      <li>Een map</li>
+      <li>Het aantal dagen</li>
+    </ul>
+  </li>
+  <li>Toon alle bestanden in de map die ouders zijn dan het opgegeven aantal dagen met die command:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># TOON bestanden ouder dan 7 dagen</span>
+find ~/testmap <span class="nt">-type</span> f <span class="nt">-mtime</span> +7 
+  <span class="c"># find: zoekt bestanden/mappen</span>
+  <span class="c"># ~/testmap: de map waarin gezocht wordt</span>
+  <span class="c"># -type f: alleen gewone bestanden (geen mappen)</span>
+  <span class="c"># -mtime +7: bestanden die meer dan 7 dagen oud zijn</span>
+  <span class="c"># -delete:  verwijdert de gevonden bestanden</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Vraag of het OK is deze bestanden te verwijderen en verwijder ze met die command:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># VERWIJDER bestanden ouder dan 7 dagen</span>
+find ~/testmap <span class="nt">-type</span> f <span class="nt">-mtime</span> +7 <span class="nt">-delete</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Daarna toon je:
+    <ul>
+      <li>Hoeveel ruimte de map in beslag nam <em>(door gebruik te maken van je eigen functie)</em> voor de opkuis</li>
+      <li>Hoeveel bestanden zijn verwijderd.</li>
+      <li>Hoeveel ruimte de map nu in beslag neemt <em>(door gebruik te maken van je eigen functie)</em>.</li>
+      <li>Hoeveel percent kleiner de map geworden is.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="uitbreiding">Uitbreiding</h2>
+
+<p>Gebruik <strong>Rclone</strong> om je backup-map up te loaden naar <strong>Google Drive</strong>.</p>
+
+
+        <!-- page info -->
+        <div class="pageInfo">
+          Last edited: 21/01/2026
+          <br>
+          Created: 15/01/2025
+        </div>
+
+      </article>
+
+      <!-- right sidebar: empty for now, but needs to be here so <article> gets centered -->
+      <div class="rightSidebar"></div>
+
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img class="curvedShadow" src="../../assets/images/curved_shadow.png"/>
+    </center>
+
+    <footer>
+      <div class="footerContent">
+
+        <!-- licentie -->
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a>
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+
+        <!-- search -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search pages...">
+          <div id="search-results"></div>
+        </div>
+
+        <!-- signature -->
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

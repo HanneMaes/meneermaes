@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/libraries/aos/aos.css">
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Raspberry Pi als Wordpress Server</title>
+
+    <!-- apply custom CSS to some pages -->
+    
+
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section>
+
+      <!-- ------------------------- -->
+      <!-- SIDEBAR: BREADCRUMBS, TOC -->
+      <!-- ------------------------- -->
+
+      <aside data-aos="fade-right" data-aos-delay="300"> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
+
+        <!-- ------ -->
+        <!-- SEARCH -->
+        <!-- ------ -->
+
+        <!-- <nav> -->
+        <!--   <a href="/index#cursussen"><img class="icon" src="/assets/images/search.svg"/></a> -->
+        <!-- </nav> -->
+
+        <!-- ----------- -->
+        <!-- BREADCRUMBS -->
+        <!-- ----------- -->
+
+        <!-- not on homepage -->
+        
+
+          <nav>
+        
+            <a href="../../index.html#cursussen">Cursussen</a>
+
+            <!-- only show link to section when not on a section page -->
+            
+            <span class="navDivider">/</span>
+            
+            <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+            
+            <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+            <a href="index.html">
+              Flex</a>
+            
+
+          </nav>
+
+        
+
+        <!-- ----------------- -->
+        <!-- TABLE OF CONTENTS -->
+        <!-- ----------------- -->
+
+        <nav class="toc">
+          <em>Inhoudstafel</em>
+          <ul id="toc"></ul>
+        </nav>
+
+        <!-- --------------------------- -->
+        <!-- Incoming and outgoing links -->
+        <!-- --------------------------- -->
+
+        <nav class="links">
+
+          <!-- not on homapage and index pages -->
+          
+          
+
+            <em>Inkomende links</em>
+            <ul class="incomingLinks" id="incomingLinks"></ul>
+
+          
+
+          <em>Uitgaande links</em>
+          <ul class="outgoingLinks" id="outgoingLinks"></ul>
+
+        </nav>
+
+      </aside>
+
+      <!-- ------ -->
+      <!-- CURSUS -->
+      <!-- ------ -->
+
+      <article>
+
+        <!-- header -->
+        <header data-aos="fade-left">Raspberry Pi als Wordpress Server</header>
+
+        <!-- content -->
+        <h1 id="wat-is-wordpress">Wat is Wordpress</h1>
+
+<p><img src="images/wordpress.png" alt="Wordpress logo" /></p>
+
+<p>WordPress is een open-source <strong>contentmanagementsysteem (CMS)</strong> waarmee je websites kan bouwen en beheren zonder alles van nul te moeten programmeren.</p>
+
+<p>Vandaag draait ongeveer <strong>40% van alle websites wereldwijd</strong> op WordPress.<br />
+Dat maakt het veruit het meest gebruikte CMS ter wereld. Van kleine hobbyprojecten tot professionele platforms.</p>
+
+<h2 id="wat-is-een-cms">Wat is een CMS</h2>
+
+<p>Een CMS (Content Management System) is software waarmee je een <strong>website kan beheren</strong> zonder dat je elke pagina handmatig moet programmeren.</p>
+
+<p>Via een CMS heb je een website waarbij jij, of de persoon of het bedrijf waarvoor je de website maakt, <strong>de inhoud kan beheren via een UI</strong>, in plaats van HTML-bestanden te moeten schrijven en uploaden.</p>
+
+<h2 id="voordelen-van-wordpress">Voordelen van WordPress</h2>
+
+<ul>
+  <li>Open-source en gratis</li>
+  <li>Grote community van ontwikkelaars:<br />
+<em>Duizenden thema’s en plugins</em></li>
+  <li>Veel documentatie en ondersteuning online</li>
+  <li>Relevant op de arbeidsmarkt:<br />
+<em>WordPress wordt massaal gebruikt in de praktijk</em><br />
+<em>Kennis ervan is een concrete meerwaarde voor webdevelopers</em><br />
+<em>Veel freelance en professionele opdrachten draaien rond WordPress</em></li>
+</ul>
+
+<h2 id="nadelen-van-wordpress">Nadelen van WordPress</h2>
+
+<ul>
+  <li>WordPress websites zijn groter:<br />
+<em>Het gebruikt een databse</em><br />
+<em>Het voert PHP-code uit op elke pagina</em></li>
+  <li>Veiligheid vraagt aandacht:<br />
+<em>Populair doelwit voor aanvallen</em>
+<em>Slechte plugins of verouderde installaties vormen risico’s</em></li>
+  <li>Prestatieproblemen:<br />
+<em>Te veel plugins kunnen een site traag maken</em><br />
+<em>Thema’s zijn vaak zwaar en inefficiënt</em></li>
+</ul>
+
+<blockquote>
+  <p>WordPress is een <strong>algemene oplossing</strong>, geen wondermiddel</p>
+</blockquote>
+
+<h2 id="illusie-van-geen-code-nodig">Illusie van “geen code nodig”</h2>
+
+<p>Veel gebruikers denken dat WordPress codevrij is, maar in de realiteit blijft kennis van HTML, CSS, PHP en SQL belangrijk.</p>
+
+<h2 id="waarom-wordpress-hosten-op-je-eigen-raspberry-pi">Waarom WordPress hosten op je eigen Raspberry Pi</h2>
+
+<p>Een Raspberry Pi gebruiken als Wordpress server heeft grote educatieve waarde:</p>
+<ul>
+  <li>Volledige controle.<br />
+<em>Je beheert zelf het besturingssysteem, de webserver, de database en WordPress. Niets is verborgen.</em></li>
+  <li>Digitale autonomie:
+<em>Je bent niet afhankelijk van grote platformen of cloudproviders. Je begrijpt waar je data staat en hoe die wordt beheerd.</em></li>
+  <li>Geen hosting geheimen meer:
+<em>Je leert wat hosting écht betekent: configuratie, beveiliging, updates en foutopsporing.</em></li>
+  <li>Kosten en duurzaamheid:
+<em>Een Raspberry Pi is goedkoop, energiezuinig en perfect voor experimenten en leren.</em></li>
+</ul>
+
+<h2 id="wordpressorg-vs-wordpresscom">WordPress.org vs WordPress.com</h2>
+
+<p><strong>WordPress.org</strong></p>
+<ul>
+  <li>De <strong>open-source</strong> software die je zelf downloadt en installeert</li>
+  <li>Volledige vrijheid: eigen hosting, thema’s, plugins en code</li>
+  <li>Jij bent verantwoordelijk voor onderhoud en beveiliging</li>
+  <li>Dit is wat professionele developers gebruiken</li>
+</ul>
+
+<p><strong>WordPress.com</strong></p>
+<ul>
+  <li>Een commerciële dienst die WordPress voor jou host</li>
+  <li>Beperkte vrijheid, zeker in de gratis en goedkope formules</li>
+  <li>Minder controle over code, plugins en data</li>
+</ul>
+
+<h1 id="opdracht-raspberry-pi-als-wordpress-server">Opdracht: Raspberry Pi als WordPress server</h1>
+
+<p>Je krijgt <strong>geen stappenplan</strong>. In plaats daarvan ga je zelf op zoek naar informatie, probeer je oplossingen uit en reflecteer je regelmatig over je leerproces.</p>
+
+<p>Het einddoel is tweeledig:</p>
+<ul>
+  <li><strong>Product</strong>: een werkende WordPress-installatie op je Raspberry Pi</li>
+  <li><strong>Proces</strong>: aantonen dat je doelgericht onderzocht, kritisch informatie verwerkte en je leerproces kon bijsturen, in een <strong>duidelijk, gestructureerd en professioneel digitaal document</strong></li>
+</ul>
+
+<h2 id="zoekstrategie-en-bronkritiek">Zoekstrategie en bronkritiek</h2>
+
+<p>Voor je begint, bepaal je hoe je informatie zal zoeken.<br />
+Noteer alles duidelijk in het document.</p>
+
+<p>Noteer:</p>
+<ol>
+  <li>In welke taal ga ik zoeken?</li>
+  <li>Welke soorten bronnen verwacht ik te gebruiken?</li>
+</ol>
+
+<p>Noteer bij het maken van je onderzoek:</p>
+<ol>
+  <li>Welke zoektermen ga ik gebruiken?</li>
+  <li>Kies minstens <strong>2 verschillende</strong> bronnen.</li>
+  <li>Welke bron vertrouw ik het meest? Waarom?</li>
+</ol>
+
+<p>Je kan AI-tools gebruiken als ondersteuning, maar <strong>AI is geen bron</strong>.<br />
+Je mag AI gebruiken om:</p>
+<ul>
+  <li>Je vraag beter te formuleren</li>
+  <li>Vaktermen te laten uitleggen in eenvoudigere taal</li>
+  <li>Mogelijke zoektermen of invalshoeken te bedenken</li>
+</ul>
+
+<p>Je mag AI niet gebruiken als:</p>
+<ul>
+  <li>Eindantwoord dat je zomaar overneemt</li>
+  <li>Vervanging van echte bronnen</li>
+</ul>
+
+<h2 id="technisch-vooronderzoek">Technisch vooronderzoek</h2>
+
+<p>Onderzoeksvragen:</p>
+<ol>
+  <li>Welk <strong>besturingssysteem</strong> draait meestal op een Raspberry Pi?</li>
+  <li>Wat is de <strong>functie van een webserver</strong>?</li>
+  <li>Waarom heeft WordPress een <strong>database</strong> nodig?</li>
+  <li>Wat is de rol van <strong>PHP</strong> binnen WordPress?</li>
+  <li>Maak een eenvoudig <strong>schema</strong> dat toont hoe deze onderdelen samenwerken.</li>
+  <li>Wat zijn <strong>VNC</strong>, <strong>SSH</strong> en <strong>Raspberry Pi Connect</strong>? Geef minstens 1 voordeel van elke technologie.</li>
+</ol>
+
+<p>Reflectie:</p>
+<ol>
+  <li>Welke begrippen waren <strong>nieuw</strong> voor mij?</li>
+  <li><strong>Hoe</strong> heb ik geprobeerd ze te begrijpen (lezen, video, schema, uitleg vragen)?</li>
+</ol>
+
+<h2 id="installatie-os">Installatie OS</h2>
+
+<p>Voor je begint te installeren, voeg je een <strong>logboek</strong> toe aan het document. Dit logboek gebruik je tijdens de <strong>hele opdracht</strong>.</p>
+
+<blockquote>
+  <p>Een logboek is geen stappenplan achteraf, maar een verslag tijdens het werken.</p>
+</blockquote>
+
+<p>Het logboek toont hoe je denkt en leert, niet alleen wat er lukt.
+Tijdens deze opdracht is het <strong>niet erg om fouten te maken</strong>. Integendeel: <strong>fouten zijn vaak leerrijker</strong> dan wanneer alles meteen lukt. Wanneer iets niet werkt, documenteer dit dan zorgvuldig:</p>
+<ul>
+  <li>Welke foutmelding of probleem je tegenkwam.</li>
+  <li>Welke stappen je hebt ondernomen om het probleem op te lossen.</li>
+</ul>
+
+<p>Nu ga je <strong>praktisch</strong> aan de slag met het installeren van een besturingssysteem (OS) op een Raspberry Pi.</p>
+
+<p>Je werkt onderzoekend:</p>
+<ul>
+  <li>Je volgt geen blind stappenplan</li>
+  <li>Je probeert te begrijpen wat elke stap doet.</li>
+  <li>Je staat stil bij keuzes die je maakt.</li>
+</ul>
+
+<p><strong>Stappen:</strong></p>
+<ol>
+  <li>Schrijf in je logboek welk OS heb ik gekozen en <strong>waarom</strong>?</li>
+  <li>Voeg <strong>screenshots</strong> toe om te documenteren hoe je het OS hebt kunnen installeren.</li>
+</ol>
+
+<p><strong>Reflectie:</strong></p>
+<ul>
+  <li>Wat ging vlot? Waarom?</li>
+  <li>Waar liep ik vast?</li>
+  <li>Welke strategie gebruikte ik?</li>
+  <li>Wat zou ik volgende keer anders aanpakken?</li>
+</ul>
+
+<h2 id="installatie-wordpress">Installatie WordPress</h2>
+
+<p>Nu de Raspberry Pi een OS heeft, is het tijd om <strong>WordPress te installeren</strong>:</p>
+<ol>
+  <li>Zoek doelgericht naar bronnen die je kunnen helpen bij de installatie.</li>
+  <li>Beoordeel deze bronnen kritisch en kies er één waarmee je aan de slag gaat.
+    <ul>
+      <li>Merk je tijdens de installatie dat een andere bron toch geschikter is, dan mag je van bron veranderen. Dit maakt deel uit van een realistisch leerproces.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Documenteer het <strong>volledige verloop</strong> duidelijk in je logboek, inclusief gemaakte keuzes, ondernomen stappen en screenshots ter ondersteuning.</p>
+
+<p><strong>Reflectie:</strong></p>
+<ul>
+  <li>Wat zou ik anders aanpakken als ik opnieuw moest beginnen?</li>
+  <li>Wat heb ik geleerd dat ook nuttig is voor andere IT-opdrachten?</li>
+</ul>
+
+<h2 id="puntenverdeling">Puntenverdeling</h2>
+
+<!-- load yaml data -->
+
+<!-- punten table -->
+
+<table>
+   <thead>
+      <tr>
+         <th>
+            <em>Puntenverdeling:</em> Raspberry Pi Ethiek
+         </th>
+         <th></th>
+      </tr>
+   </thead>
+   <tbody>
+      
+      <tr>
+         <td>Zoekstrategie en bronkritiek</td>
+         <td class="punt">3</td>
+      </tr>
+      
+      <tr>
+         <td>Technisch vooronderzoek</td>
+         <td class="punt">3</td>
+      </tr>
+      
+      <tr>
+         <td>Technisch vooronderzoek reflectie</td>
+         <td class="punt">1</td>
+      </tr>
+      
+      <tr>
+         <td>Installatie OS</td>
+         <td class="punt">1</td>
+      </tr>
+      
+      <tr>
+         <td>Installatie OS reflectie</td>
+         <td class="punt">1</td>
+      </tr>
+      
+      <tr>
+         <td>Installatie WordPress</td>
+         <td class="punt">5</td>
+      </tr>
+      
+      <tr>
+         <td>Installatie WordPress reflectie</td>
+         <td class="punt">1</td>
+      </tr>
+      
+      <tr>
+         <td>Digitaal document: overzichtelijk, professioneel, correcte school- en vaktaal</td>
+         <td class="punt">3</td>
+      </tr>
+      
+
+      <!-- Total row -->
+      <tr class="puntenTotaal">
+         <td>Totaal</td>
+         <td class="punt">
+            
+            
+            18
+         </td>
+      </tr>
+   </tbody>
+</table>
+
+<!-- doelen table -->
+
+<table>
+   <thead>
+      <tr>
+         <th></th>
+         <th>
+            <em>Doelen:</em> Raspberry Pi Ethiek
+         </th>
+      </tr>
+   </thead>
+   <tbody>
+      
+      <tr>
+         <td><em>13.BV3_13.01</em></td>
+         <td>De leerlingen reflecteren cyclisch, vakspecifiek en vakoverschrijdend over het eigen leerproces en sturen het op basis daarvan doelgericht bij.</td>
+      </tr>
+      
+      <tr>
+         <td><em>13.BV3_13.02</em></td>
+         <td>De leerlingen zetten (meta)cognitieve leer- en regulatiestrategieën in om zich leerinhouden eigen te maken.</td>
+      </tr>
+      
+      <tr>
+         <td><em>13.BV3_13.03</em></td>
+         <td>De leerlingen gebruiken school- en vaktaal.</td>
+      </tr>
+      
+      <tr>
+         <td><em>13.BV3_13.04</em></td>
+         <td>De leerlingen zoeken doelgericht informatie in diverse bronnen en verwerken die op een kritische en systematische manier.</td>
+      </tr>
+      
+      <tr>
+         <td><em>13.BV3_13.04.BV3_13.04.01 Subdoel 01</em></td>
+         <td>De leerlingen bepalen zelfstandig een geschikte zoekstrategie.</td>
+      </tr>
+      
+      <tr>
+         <td><em>13.BV3_13.04.BV3_13.04. 02 Subdoel 02</em></td>
+         <td>De leerlingen beoordelen op kritische wijze digitale en niet-digitale bronnen op bruikbaarheid op basis van aangereikte criteria.</td>
+      </tr>
+      
+      <tr>
+         <td><em>13.BV3_13.04.BV3_13.04.03 Subdoel 03</em></td>
+         <td>De leerlingen verwerken zelfstandig de informatie uit de bronnen i.f.v. een vooropgesteld doel.</td>
+      </tr>
+      
+   </tbody>
+</table>
+
+<h1 id="van-lege-installatie-naar-echte-website">Van lege installatie naar echte website</h1>
+
+<p>Nu je WordPress hebt geïnstalleerd, gaan we experimenteren.<br />
+Niet meteen plugins installeren. Niet meteen thema’s aanpassen.</p>
+
+<p>Eerst begrijpen we de basis.</p>
+
+<h2 id="opdracht-groepswerk-minimalistische-website-maken">Opdracht: Groepswerk minimalistische website maken</h2>
+
+<p>Maak een eenvoudige website met:</p>
+<ul>
+  <li>Een homepage</li>
+  <li>Minstens 2 andere pagina’s</li>
+  <li>Een blogbericht</li>
+</ul>
+
+<p>Beperk jezelf tot:</p>
+<ul>
+  <li>Standaard thema’s</li>
+  <li>Geen page builders</li>
+  <li>Geen extra plugins</li>
+</ul>
+
+<!-- load yaml data -->
+
+<!-- punten table -->
+
+<table>
+   <thead>
+      <tr>
+         <th>
+            <em>Puntenverdeling:</em> Minimalistische Wordpress website
+         </th>
+         <th></th>
+      </tr>
+   </thead>
+   <tbody>
+      
+      <tr>
+         <td>Homepage</td>
+         <td class="punt">2</td>
+      </tr>
+      
+      <tr>
+         <td>Twee andere pagina’s</td>
+         <td class="punt">2</td>
+      </tr>
+      
+      <tr>
+         <td>Blogbericht</td>
+         <td class="punt">2</td>
+      </tr>
+      
+
+      <!-- Total row -->
+      <tr class="puntenTotaal">
+         <td>Totaal</td>
+         <td class="punt">
+            
+            
+            6
+         </td>
+      </tr>
+   </tbody>
+</table>
+
+<!-- doelen table -->
+
+<table>
+   <thead>
+      <tr>
+         <th></th>
+         <th>
+            <em>Doelen:</em> Minimalistische Wordpress website
+         </th>
+      </tr>
+   </thead>
+   <tbody>
+      
+      <tr>
+         <td><em>BV3_04.01</em></td>
+         <td>De leerlingen gebruiken courante functionaliteiten van vergelijkbare toepassingen om digitale inhouden te creëren.</td>
+      </tr>
+      
+      <tr>
+         <td><em>BV3_05.01.BV3_05.01.01 Subdoel 01</em></td>
+         <td>De leerlingen dragen in groepsactiviteiten actief bij aan de uitwerking van een gezamenlijk resultaat.</td>
+      </tr>
+      
+      <tr>
+         <td><em>13.BV3_13.04.BV3_13.04.01 Subdoel 01</em></td>
+         <td>De leerlingen bepalen zelfstandig een geschikte zoekstrategie.</td>
+      </tr>
+      
+   </tbody>
+</table>
+
+<h2 id="stap-2-verdiepend-onderzoek">Stap 2: Verdiepend onderzoek</h2>
+
+<p>Kies <strong>minstens 2</strong> van onderstaande <strong>categorieën</strong>.</p>
+
+<p>Je onderzoekt:</p>
+<ul>
+  <li>Wat het technisch doet</li>
+  <li>Welke risico’s of nadelen eraan verbonden zijn</li>
+  <li>Hoe je het correct installeert of configureert</li>
+</ul>
+
+<h3 id="lijst-geavanceerde-opties">Lijst Geavanceerde Opties</h3>
+
+<p><strong>Categorie 1: Beveiliging</strong></p>
+<ul>
+  <li><em>1.1:</em> HTTPS installeren (Let’s Encrypt)</li>
+  <li><em>1.2:</em> Firewall configureren</li>
+  <li><em>1.3:</em> WordPress beveiligen tegen brute force</li>
+  <li><em>1.4:</em> Bestandsrechten onderzoeken</li>
+</ul>
+
+<p><strong>Categorie 2: Prestatie</strong></p>
+<ul>
+  <li><em>2.1:</em> Caching plugin testen</li>
+  <li><em>2.2:</em> Database optimaliseren</li>
+  <li><em>2.3:</em> Afbeeldingen comprimeren</li>
+  <li><em>2.4:</em> Meten met PageSpeed</li>
+</ul>
+
+<p><strong>Categorie 3: Netwerk &amp; Externe Toegang</strong></p>
+<ul>
+  <li><em>3.1:</em> Port forwarding instellen</li>
+  <li><em>3.2:</em> Dynamic DNS gebruiken</li>
+  <li><em>3.3:</em> Website extern bereikbaar maken</li>
+  <li><em>3.4:</em> Uitleggen waarom dit risico’s inhoudt</li>
+</ul>
+
+<p><strong>Categorie 4: Database Diepgaander</strong></p>
+<ul>
+  <li><em>4.1:</em> Tabellenstructuur analyseren</li>
+  <li><em>4.2:</em> Zelf SQL-query uitvoeren</li>
+  <li><em>4.3:</em> Back-up en restore uitvoeren</li>
+</ul>
+
+<p><strong>Categorie 5: Thema-aanpassing</strong></p>
+<ul>
+  <li><em>5.1:</em> Child theme maken</li>
+  <li><em>5.2:</em> CSS aanpassen</li>
+  <li><em>5.3:</em> PHP-wijziging maken</li>
+</ul>
+
+<p><strong>Categorie 6: Automatisatie</strong></p>
+<ul>
+  <li><em>6.1:</em> Automatische back-ups</li>
+  <li><em>6.2:</em> Cron jobs begrijpen</li>
+  <li><em>6.3:</em> Updates automatiseren</li>
+</ul>
+
+<h2 id="demonstratie">Demonstratie</h2>
+
+<p>De demonstratie is niet enkel een moment om je resultaat te tonen, maar ook een <strong>peer learning-moment</strong>.<br />
+In IT gebeurt dat voortdurend: developers leren via documentatie, code reviews maar ook zeer veel door <strong>informatie met elkaar te delen</strong>.</p>
+
+<!-- load yaml data -->
+
+<!-- punten table -->
+
+<table>
+   <thead>
+      <tr>
+         <th>
+            <em>Puntenverdeling:</em> Demonstratie verdiepend onderzoek
+         </th>
+         <th></th>
+      </tr>
+   </thead>
+   <tbody>
+      
+      <tr>
+         <td>Technische uitleg over je onderwerpen</td>
+         <td class="punt">1</td>
+      </tr>
+      
+      <tr>
+         <td>Zijn er nadelen aan verbonden</td>
+         <td class="punt">1</td>
+      </tr>
+      
+      <tr>
+         <td>Demonstratie over hoe je het activeert/instelt</td>
+         <td class="punt">3</td>
+      </tr>
+      
+
+      <!-- Total row -->
+      <tr class="puntenTotaal">
+         <td>Totaal</td>
+         <td class="punt">
+            
+            
+            5
+         </td>
+      </tr>
+   </tbody>
+</table>
+
+<!-- doelen table -->
+
+<table>
+   <thead>
+      <tr>
+         <th></th>
+         <th>
+            <em>Doelen:</em> Demonstratie verdiepend onderzoek
+         </th>
+      </tr>
+   </thead>
+   <tbody>
+      
+      <tr>
+         <td><em>13.BV3_13.02</em></td>
+         <td>De leerlingen zetten (meta)cognitieve leer- en regulatiestrategieën in om zich leerinhouden eigen te maken.</td>
+      </tr>
+      
+      <tr>
+         <td><em>13.BV3_13.03</em></td>
+         <td>De leerlingen gebruiken school- en vaktaal.</td>
+      </tr>
+      
+      <tr>
+         <td><em>13.BV3_13.04.BV3_13.04.03 Subdoel 03</em></td>
+         <td>De leerlingen verwerken zelfstandig de informatie uit de bronnen i.f.v. een vooropgesteld doel</td>
+      </tr>
+      
+   </tbody>
+</table>
+
+
+
+        <!-- page info -->
+        <div class="pageInfo">
+          Last edited: 
+          <br>
+          Created: 27/01/2026
+        </div>
+
+      </article>
+
+      <!-- right sidebar: empty for now, but needs to be here so <article> gets centered -->
+      <div class="rightSidebar"></div>
+
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img class="curvedShadow" src="../../assets/images/curved_shadow.png"/>
+    </center>
+
+    <footer>
+      <div class="footerContent">
+
+        <!-- licentie -->
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a>
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+
+        <!-- search -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search pages...">
+          <div id="search-results"></div>
+        </div>
+
+        <!-- signature -->
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

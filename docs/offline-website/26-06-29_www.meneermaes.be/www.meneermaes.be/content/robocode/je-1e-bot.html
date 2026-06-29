@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/libraries/aos/aos.css">
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Je 1e Bot</title>
+
+    <!-- apply custom CSS to some pages -->
+    
+
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section>
+
+      <!-- ------------------------- -->
+      <!-- SIDEBAR: BREADCRUMBS, TOC -->
+      <!-- ------------------------- -->
+
+      <aside data-aos="fade-right" data-aos-delay="300"> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
+
+        <!-- ------ -->
+        <!-- SEARCH -->
+        <!-- ------ -->
+
+        <!-- <nav> -->
+        <!--   <a href="/index#cursussen"><img class="icon" src="/assets/images/search.svg"/></a> -->
+        <!-- </nav> -->
+
+        <!-- ----------- -->
+        <!-- BREADCRUMBS -->
+        <!-- ----------- -->
+
+        <!-- not on homepage -->
+        
+
+          <nav>
+        
+            <a href="../../index.html#cursussen">Cursussen</a>
+
+            <!-- only show link to section when not on a section page -->
+            
+            <span class="navDivider">/</span>
+            
+            <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+            
+            <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+            <a href="index.html">
+              Robocode</a>
+            
+
+          </nav>
+
+        
+
+        <!-- ----------------- -->
+        <!-- TABLE OF CONTENTS -->
+        <!-- ----------------- -->
+
+        <nav class="toc">
+          <em>Inhoudstafel</em>
+          <ul id="toc"></ul>
+        </nav>
+
+        <!-- --------------------------- -->
+        <!-- Incoming and outgoing links -->
+        <!-- --------------------------- -->
+
+        <nav class="links">
+
+          <!-- not on homapage and index pages -->
+          
+          
+
+            <em>Inkomende links</em>
+            <ul class="incomingLinks" id="incomingLinks"></ul>
+
+          
+
+          <em>Uitgaande links</em>
+          <ul class="outgoingLinks" id="outgoingLinks"></ul>
+
+        </nav>
+
+      </aside>
+
+      <!-- ------ -->
+      <!-- CURSUS -->
+      <!-- ------ -->
+
+      <article>
+
+        <!-- header -->
+        <header data-aos="fade-left">Je 1e Bot</header>
+
+        <!-- content -->
+        <h1 id="folders">Folders</h1>
+
+<p><strong>Robocode moet weten waar jouw robot staat opgeslagen.</strong>
+Elke robot krijgt een <strong>eigen map</strong> in een hoofdmap.</p>
+
+<ol>
+  <li>Maak een hoofdmap met de naam <code class="language-plaintext highlighter-rouge">bots-naam</code>.</li>
+  <li>Zet je robot in een eigen map binnen bots.</li>
+  <li>Voeg dan de map bots toe bij de instellingen, zodat Robocode je robots kan vinden: open Robocode.</li>
+  <li>
+    <p>Ga bovenaan naar <span class="ui">Config<span class="uiSeparator"> &gt; </span>Bot Root Directories<span class="uiSeparator"> &gt; </span>Add</span></p>
+  </li>
+  <li>Kies de map bots die je hebt gemaakt.</li>
+  <li>Klik op <code class="language-plaintext highlighter-rouge">OK</code>.</li>
+</ol>
+
+<h1 id="je-bot-instellen">Je Bot Instellen</h1>
+
+<p><strong>Je robot heeft informatie nodig, zoals een naam en versie.</strong></p>
+
+<p>Maak in de map van je robot een bestand met de naam: <code class="language-plaintext highlighter-rouge">naam.json</code></p>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen">
+
+   <p class="title">Belangrijk</p>
+
+   <div>
+      <p>
+<p>De naam van het .json-bestand moet <strong>hetzelfde</strong> zijn als de map van je robot.</p>
+</p>
+   </div>
+
+</div>
+
+<p>Plak deze code in het bestand:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My First Bot"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"authors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"Jouw naam"</span><span class="w"> </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mijn eerste robot"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">version</code> en <code class="language-plaintext highlighter-rouge">authors</code> zijn verplicht.<br />
+Zonder deze gegevens werkt je robot niet.</p>
+
+<h1 id="je-bot-programmeren">Je Bot Programmeren</h1>
+
+<p>Maak een 2e bestand met de naam: <code class="language-plaintext highlighter-rouge">naam.py</code></p>
+
+<!-- belangrijk: RED -->
+<!-- oef: BLUE -->
+<!-- all de rest: GREEN -->
+
+<!-- content -->
+<div class="callout calloutGreen">
+
+   <p class="title">Belangrijk</p>
+
+   <div>
+      <p>
+<p>De naam van het .py-bestand moet <strong>hetzelfde</strong> zijn als de map van je robot.</p>
+</p>
+   </div>
+
+</div>
+
+<h2 id="base-code">Base Code</h2>
+
+<p>Plak deze code in het bestand:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">robocode_tank_royale.bot_api</span> <span class="kn">import</span> <span class="n">Bot</span>
+
+
+<span class="k">class</span> <span class="nc">MyFirstBot</span><span class="p">(</span><span class="n">Bot</span><span class="p">):</span>
+
+  <span class="c1"># Wordt uitgevoerd wanneer een nieuwe ronde start
+</span>  <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+
+    <span class="c1"># Herhaal zolang de robot 'leeft'
+</span>    <span class="k">while</span> <span class="bp">self</span><span class="p">.</span><span class="n">running</span><span class="p">:</span>
+
+      <span class="bp">self</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+      <span class="bp">self</span><span class="p">.</span><span class="n">turn_gun_left</span><span class="p">(</span><span class="mi">360</span><span class="p">)</span>
+      <span class="bp">self</span><span class="p">.</span><span class="n">back</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+      <span class="bp">self</span><span class="p">.</span><span class="n">turn_gun_left</span><span class="p">(</span><span class="mi">360</span><span class="p">)</span>
+
+      <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+  <span class="n">bot</span> <span class="o">=</span> <span class="n">MyFirstBot</span><span class="p">()</span>
+  <span class="n">bot</span><span class="p">.</span><span class="n">start</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+  <span class="n">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Met deze code blijft je robot steeds opnieuw bewegen:</p>
+<ol>
+  <li>Hij gaat 100 stappen vooruit</li>
+  <li>Draait zijn gun 360°</li>
+  <li>Gaat 100 stappen achteruit</li>
+  <li>Draait opnieuw 360°</li>
+</ol>
+
+<p><strong>Dit herhaalt zich steeds in een lus, zodat de robot blijft bewegen.</strong></p>
+
+<p>Zolang de code in run blijft, kan de robot blijven werken.<br />
+Als je uit run zou gaan, stopt de robot met nieuwe acties.</p>
+
+<p>Daarom gebruik je een lus die blijft lopen zolang de robot actief is.</p>
+
+<p>Als de robot moet stoppen, geeft running() automatisch False terug.<br />
+Dan stopt de lus en eindigt de run-functie netjes.</p>
+
+<h2 id="event-handlers">Event Handlers</h2>
+
+<p>Event handlers zijn “reacties” van je robot op dingen die gebeuren.</p>
+<ul>
+  <li>Ze starten altijd met <code class="language-plaintext highlighter-rouge">on_...</code></li>
+  <li>Ze worden <strong>automatisch</strong> uitgevoerd als iets gebeurt</li>
+</ul>
+
+<h3 id="on_scanned_bot">on_scanned_bot()</h3>
+
+<p>Als je robot een andere robot ziet, gebeurt dit event automatisch.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">robocode_tank_royale.bot_api.events</span> <span class="kn">import</span> <span class="n">ScannedBotEvent</span>
+
+<span class="k">class</span> <span class="nc">MyFirstBot</span><span class="p">(</span><span class="n">Bot</span><span class="p">):</span>
+    <span class="p">...</span>
+    <span class="c1"># Schiet met het kanon wanneer een vijand wordt gezien
+</span>    <span class="k">def</span> <span class="nf">on_scanned_bot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span> <span class="n">ScannedBotEvent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fire</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Wat gebeurt er?</strong></p>
+<ol>
+  <li>Robot scant een andere robot</li>
+  <li><code class="language-plaintext highlighter-rouge">on_scanned_bot()</code> wordt automatisch gestart</li>
+  <li>Je robot vuurt met zijn kanon</li>
+</ol>
+
+<h3 id="on_hit_by_bullet">on_hit_by_bullet()</h3>
+
+<p>Als je robot geraakt wordt wordt <code class="language-plaintext highlighter-rouge">on_hit_by_bullet()</code> automatisch uitgevoerd</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">robocode_tank_royale.bot_api.events</span> <span class="kn">import</span> <span class="n">HitByBulletEvent</span>
+
+<span class="k">class</span> <span class="nc">MyFirstBot</span><span class="p">(</span><span class="n">Bot</span><span class="p">):</span>
+    <span class="p">...</span>
+    <span class="c1"># Wordt geraakt door een kogel: draai weg van de kogel
+</span>    <span class="k">def</span> <span class="nf">on_hit_by_bullet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span> <span class="n">HitByBulletEvent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="c1"># Berekent uit welke richting de kogel kwam
+</span>        <span class="n">bearing</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">calc_bearing</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">bullet</span><span class="p">.</span><span class="n">direction</span><span class="p">)</span>
+
+        <span class="c1"># Draai 90° weg van de kogel
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">turn_right</span><span class="p">(</span><span class="mi">90</span> <span class="o">-</span> <span class="n">bearing</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Wat gebeurt er?</strong></p>
+<ol>
+  <li>Je robot wordt geraakt</li>
+  <li>Hij berekent van welke kant de kogel kwam</li>
+  <li>Hij draait 90° weg van die richting</li>
+  <li>Zo probeert hij volgende kogels te vermijden</li>
+</ol>
+
+<h2 id="alles-samenvoegen">Alles samenvoegen</h2>
+
+<p>Hier zetten we alle onderdelen van je robot samen in één codebestand:</p>
+<ul>
+  <li>start van de robot (run)</li>
+  <li>beweging in een lus</li>
+  <li>reageren als je een robot ziet</li>
+  <li>reageren als je geraakt wordt</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">robocode_tank_royale.bot_api.bot</span> <span class="kn">import</span> <span class="n">Bot</span>
+<span class="kn">from</span> <span class="nn">robocode_tank_royale.bot_api.events</span> <span class="kn">import</span> <span class="n">HitByBulletEvent</span>
+
+<span class="k">class</span> <span class="nc">MyFirstBot</span><span class="p">(</span><span class="n">Bot</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Blijf lopen zolang de robot actief is
+</span>        <span class="k">while</span> <span class="bp">self</span><span class="p">.</span><span class="n">running</span><span class="p">():</span>
+          <span class="c1"># code hier ...
+</span>
+    <span class="c1"># Als we een andere robot zien → schiet
+</span>    <span class="k">def</span> <span class="nf">on_scanned_bot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="c1"># code hier ...
+</span>
+    <span class="c1"># Als we geraakt worden → draai weg van de kogel
+</span>    <span class="k">def</span> <span class="nf">on_hit_by_bullet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span> <span class="n">HitByBulletEvent</span><span class="p">):</span>
+        <span class="c1"># code hier ...
+</span></code></pre></div></div>
+
+<h1 id="je-bot-kleur-geven">Je Bot Kleur geven</h1>
+
+<p><strong>Je kan je robot een eigen look geven door kleuren in te stellen.</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">robocode_tank_royale.bot_api</span> <span class="kn">import</span> <span class="n">Bot</span><span class="p">,</span> <span class="n">Color</span>
+
+<span class="k">class</span> <span class="nc">MyFirstBot</span><span class="p">(</span><span class="n">Bot</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+
+      <span class="c1"># Kleuren instellen
+</span>      <span class="bp">self</span><span class="p">.</span><span class="n">body_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">RED</span>
+      <span class="bp">self</span><span class="p">.</span><span class="n">turret_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">BLACK</span>
+      <span class="bp">self</span><span class="p">.</span><span class="n">radar_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">CYAN</span>
+
+      <span class="k">while</span> <span class="bp">self</span><span class="p">.</span><span class="n">running</span><span class="p">():</span>
+</code></pre></div></div>
+
+<p><strong>Wat doet dit?</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">self.body_color</code>: kleur van het lichaam van je robot</li>
+  <li><code class="language-plaintext highlighter-rouge">self.turret_color</code>: kleur van het kanon</li>
+  <li><code class="language-plaintext highlighter-rouge">self.radar_color</code>: kleur van de radar</li>
+</ul>
+
+
+        <!-- page info -->
+        <div class="pageInfo">
+          Last edited: 09/06/2026
+          <br>
+          Created: 09/06/2026
+        </div>
+
+      </article>
+
+      <!-- right sidebar: empty for now, but needs to be here so <article> gets centered -->
+      <div class="rightSidebar"></div>
+
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img class="curvedShadow" src="../../assets/images/curved_shadow.png"/>
+    </center>
+
+    <footer>
+      <div class="footerContent">
+
+        <!-- licentie -->
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a>
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+
+        <!-- search -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search pages...">
+          <div id="search-results"></div>
+        </div>
+
+        <!-- signature -->
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

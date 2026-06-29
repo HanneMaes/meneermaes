@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/libraries/aos/aos.css">
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Three Js</title>
+
+    <!-- apply custom CSS to some pages -->
+    
+
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section>
+
+      <!-- ------------------------- -->
+      <!-- SIDEBAR: BREADCRUMBS, TOC -->
+      <!-- ------------------------- -->
+
+      <aside data-aos="fade-right" data-aos-delay="300"> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
+
+        <!-- ------ -->
+        <!-- SEARCH -->
+        <!-- ------ -->
+
+        <!-- <nav> -->
+        <!--   <a href="/index#cursussen"><img class="icon" src="/assets/images/search.svg"/></a> -->
+        <!-- </nav> -->
+
+        <!-- ----------- -->
+        <!-- BREADCRUMBS -->
+        <!-- ----------- -->
+
+        <!-- not on homepage -->
+        
+
+          <nav>
+        
+            <a href="../../index.html#cursussen">Cursussen</a>
+
+            <!-- only show link to section when not on a section page -->
+            
+            <span class="navDivider">/</span>
+            
+            <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+            
+            <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+            <a href="index.html">
+              Webtechnology</a>
+            
+
+          </nav>
+
+        
+
+        <!-- ----------------- -->
+        <!-- TABLE OF CONTENTS -->
+        <!-- ----------------- -->
+
+        <nav class="toc">
+          <em>Inhoudstafel</em>
+          <ul id="toc"></ul>
+        </nav>
+
+        <!-- --------------------------- -->
+        <!-- Incoming and outgoing links -->
+        <!-- --------------------------- -->
+
+        <nav class="links">
+
+          <!-- not on homapage and index pages -->
+          
+          
+
+            <em>Inkomende links</em>
+            <ul class="incomingLinks" id="incomingLinks"></ul>
+
+          
+
+          <em>Uitgaande links</em>
+          <ul class="outgoingLinks" id="outgoingLinks"></ul>
+
+        </nav>
+
+      </aside>
+
+      <!-- ------ -->
+      <!-- CURSUS -->
+      <!-- ------ -->
+
+      <article>
+
+        <!-- header -->
+        <header data-aos="fade-left">Three Js</header>
+
+        <!-- content -->
+        <h1 id="reference-code">Reference Code</h1>
+
+<h2 id="geometry">Geometry</h2>
+
+<h3 id="icosphere-bal">Icosphere (bal)</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">geo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">IcosahedronGeometry</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="materials">Materials</h2>
+
+<h3 id="basis-geen-shading-alleen-kleur">Basis (geen shading, alleen kleur)</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">mat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">MeshBasicMaterial</span><span class="p">({</span> <span class="na">color</span><span class="p">:</span> <span class="mh">0xccff</span> <span class="p">})</span>
+</code></pre></div></div>
+
+<h3 id="standaard-licht-en-schaduw-maar-geen-reflecties">Standaard (licht en schaduw, maar geen reflecties)</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">mat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">MeshStandardMaterial</span><span class="p">({</span> 
+	<span class="na">color</span><span class="p">:</span> <span class="mh">0xffffff</span><span class="p">,</span>
+	<span class="na">flatShading</span><span class="p">:</span> <span class="kc">true</span> <span class="c1">// true: geen gladde overgangen tussen vlakken, false: gladde schaduw</span>
+<span class="p">})</span> 
+</code></pre></div></div>
+
+<h3 id="wireframe-alleen-lijnen-geen-vlakken">Wireframe (alleen lijnen, geen vlakken)</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">wireMaterial</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">MeshBasicMaterial</span><span class="p">({</span>
+	<span class="na">color</span><span class="p">:</span> <span class="mh">0xffffff</span><span class="p">,</span>
+	<span class="na">wireframe</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h2 id="animatie">Animatie</h2>
+
+<h3 id="rotatie">Rotatie</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">mesh</span><span class="p">.</span><span class="nx">rotation</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="nx">t</span> <span class="o">*</span> <span class="mf">0.0001</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="scaling-loop">Scaling loop</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">mesh</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">setScalar</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span> <span class="mf">0.001</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1.0</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h1 id="tutorial">Tutorial</h1>
+
+<p><a href="https://www.youtube.com/watch?v=UMqNHi1GDAE">Video Tutorial</a></p>
+
+<h2 id="opdracht-1-wireframe-ball-challenges">Opdracht 1: Wireframe Ball Challenges</h2>
+
+<h3 id="startcode">Startcode</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Getting Started with Three.js<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+      <span class="nt">body</span> <span class="p">{</span>
+        <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"importmap"</span><span class="nt">&gt;</span>
+			<span class="p">{</span>
+				<span class="dl">"</span><span class="s2">imports</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+					<span class="dl">"</span><span class="s2">three</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js</span><span class="dl">"</span><span class="p">,</span>
+          			<span class="dl">"</span><span class="s2">jsm/</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/</span><span class="dl">"</span>
+        		<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"module"</span> <span class="na">src=</span><span class="s">"index.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Import the Three.js library</span>
+<span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">THREE</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">three</span><span class="dl">'</span><span class="p">;</span> 
+<span class="k">import</span> <span class="p">{</span> <span class="nx">OrbitControls</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">jsm/controls/OrbitControls.js</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="c1">// Maak het HTML object aan waarnaar we zullen renderen</span>
+<span class="kd">const</span> <span class="nx">w</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">h</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">renderer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">WebGLRenderer</span><span class="p">({</span> <span class="na">antialias</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
+<span class="nx">renderer</span><span class="p">.</span><span class="nx">setSize</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">h</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">renderer</span><span class="p">.</span><span class="nx">domElement</span><span class="p">);</span>
+
+<span class="c1">// Maak een camera</span>
+<span class="kd">const</span> <span class="nx">fov</span> <span class="o">=</span> <span class="mi">75</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">aspect</span> <span class="o">=</span> <span class="nx">w</span> <span class="o">/</span> <span class="nx">h</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">near</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">far</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">camera</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">PerspectiveCamera</span><span class="p">(</span><span class="nx">fov</span><span class="p">,</span> <span class="nx">aspect</span><span class="p">,</span> <span class="nx">near</span><span class="p">,</span> <span class="nx">far</span><span class="p">);</span>
+<span class="nx">camera</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">z</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+<span class="c1">// Maak een scene</span>
+<span class="kd">const</span> <span class="nx">scene</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">Scene</span><span class="p">();</span>
+
+<span class="c1">// Voeg controls toe zodat we kunnen rondkijken met de muis</span>
+<span class="kd">const</span> <span class="nx">controls</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">OrbitControls</span><span class="p">(</span><span class="nx">camera</span><span class="p">,</span> <span class="nx">renderer</span><span class="p">.</span><span class="nx">domElement</span><span class="p">);</span>
+<span class="nx">controls</span><span class="p">.</span><span class="nx">enableDamping</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// Voegt een beetje traagheid toe aan de controls</span>
+<span class="nx">controls</span><span class="p">.</span><span class="nx">dampingFactor</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">;</span> <span class="c1">// Hoeveel traagheid</span>
+
+<span class="c1">// Maak een 3D vorm</span>
+<span class="kd">const</span> <span class="nx">geo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">IcosahedronGeometry</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+
+<span class="c1">// Material: standaard (licht en schaduw, maar geen reflecties)</span>
+<span class="kd">const</span> <span class="nx">mat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">MeshStandardMaterial</span><span class="p">({</span> 
+	<span class="na">color</span><span class="p">:</span> <span class="mh">0xffffff</span><span class="p">,</span>
+	<span class="na">flatShading</span><span class="p">:</span> <span class="kc">true</span> <span class="c1">// true: geen gladde overgangen tussen vlakken, false: gladde schaduw</span>
+<span class="p">})</span> 
+
+<span class="c1">// Maak een mesh aan door de 3D vorm en het materiaal te combineren</span>
+<span class="kd">const</span> <span class="nx">mesh</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">Mesh</span><span class="p">(</span><span class="nx">geo</span><span class="p">,</span> <span class="nx">mat</span><span class="p">);</span>
+<span class="nx">scene</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">mesh</span><span class="p">);</span>
+
+<span class="c1">// Materiaal: wireframe (alleen lijnen, geen vlakken)</span>
+<span class="kd">const</span> <span class="nx">wireMaterial</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">MeshBasicMaterial</span><span class="p">({</span>
+	<span class="na">color</span><span class="p">:</span> <span class="mh">0xffffff</span><span class="p">,</span>
+	<span class="na">wireframe</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+
+<span class="c1">// Voeg het wireframe materiaal toe aan dezelfde mesh</span>
+<span class="kd">const</span> <span class="nx">wireframe</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">Mesh</span><span class="p">(</span><span class="nx">geo</span><span class="p">,</span> <span class="nx">wireMaterial</span><span class="p">);</span>
+<span class="nx">wireframe</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">setScalar</span><span class="p">(</span><span class="mf">1.001</span><span class="p">);</span> <span class="c1">// Maak het wireframe iets groter zodat het niet precies op de vlakken ligt</span>
+<span class="nx">mesh</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">wireframe</span><span class="p">);</span>
+
+<span class="c1">// Licht</span>
+<span class="kd">const</span> <span class="nx">hemiLight</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">HemisphereLight</span><span class="p">(</span><span class="mh">0x0099ff</span><span class="p">,</span> <span class="mh">0xaa5500</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="nx">scene</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">hemiLight</span><span class="p">);</span>
+
+<span class="c1">// Maak een animatielus</span>
+<span class="kd">function</span> <span class="nx">animate</span><span class="p">(</span><span class="nx">t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span>
+
+	<span class="c1">// Vraag de browser om de volgende frame te renderen</span>
+	<span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">animate</span><span class="p">);</span>
+
+	<span class="c1">// Pas de scale van het object aan volgens de cosinus van de tijd</span>
+	<span class="c1">//mesh.scale.setScalar(Math.cos(t * 0.001) + 1.0);</span>
+	<span class="nx">controls</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span> <span class="c1">// Update de controls (voor de damping)</span>
+<span class="p">}</span>
+<span class="nx">animate</span><span class="p">();</span>
+
+	<span class="c1">// Rotatie animatie</span>
+	<span class="nx">mesh</span><span class="p">.</span><span class="nx">rotation</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="nx">t</span> <span class="o">*</span> <span class="mf">0.0001</span><span class="p">;</span>
+
+	<span class="c1">// Render de scene met de camera</span>
+	<span class="nx">renderer</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">scene</span><span class="p">,</span> <span class="nx">camera</span><span class="p">);</span>
+
+</code></pre></div></div>
+
+<h3 id="niveau-1-kleine-aanpassingen">Niveau 1: Kleine aanpassingen</h3>
+
+<ol>
+  <li>Verander de kleur van het object.</li>
+  <li>Geef de wireframe een andere kleur.</li>
+  <li>Laat het object draaien rond een andere as (of meerdere asses)</li>
+  <li>Pas de snelheid van de rotatie aan.</li>
+  <li>Verander de positie van de camera.</li>
+</ol>
+
+<h3 id="niveau-2-combineren">Niveau 2: Combineren</h3>
+
+<ol>
+  <li>Voeg een tweede mesh toe.</li>
+  <li>Geef het een andere animatie.</li>
+</ol>
+
+
+        <!-- page info -->
+        <div class="pageInfo">
+          Last edited: 26/03/2026
+          <br>
+          Created: 26/03/2026
+        </div>
+
+      </article>
+
+      <!-- right sidebar: empty for now, but needs to be here so <article> gets centered -->
+      <div class="rightSidebar"></div>
+
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img class="curvedShadow" src="../../assets/images/curved_shadow.png"/>
+    </center>
+
+    <footer>
+      <div class="footerContent">
+
+        <!-- licentie -->
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a>
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+
+        <!-- search -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search pages...">
+          <div id="search-results"></div>
+        </div>
+
+        <!-- signature -->
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

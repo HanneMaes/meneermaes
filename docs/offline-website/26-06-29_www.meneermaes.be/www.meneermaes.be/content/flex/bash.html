@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/libraries/aos/aos.css">
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="../../assets/images/favicon-prod.ico"
+    />
+
+    <title>Bash</title>
+
+    <!-- apply custom CSS to some pages -->
+    
+
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+  </head>
+
+  <body>
+    <section>
+
+      <!-- ------------------------- -->
+      <!-- SIDEBAR: BREADCRUMBS, TOC -->
+      <!-- ------------------------- -->
+
+      <aside data-aos="fade-right" data-aos-delay="300"> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
+
+        <!-- ------ -->
+        <!-- SEARCH -->
+        <!-- ------ -->
+
+        <!-- <nav> -->
+        <!--   <a href="/index#cursussen"><img class="icon" src="/assets/images/search.svg"/></a> -->
+        <!-- </nav> -->
+
+        <!-- ----------- -->
+        <!-- BREADCRUMBS -->
+        <!-- ----------- -->
+
+        <!-- not on homepage -->
+        
+
+          <nav>
+        
+            <a href="../../index.html#cursussen">Cursussen</a>
+
+            <!-- only show link to section when not on a section page -->
+            
+            <span class="navDivider">/</span>
+            
+            <!-- current_path_parts splits the page.url by '/' to get individual parts of the URL -->
+            
+            <!-- section_name retrieves the word that comes after 'content' by accessing the second element in the current_path_parts array -->
+            <a href="index.html">
+              Flex</a>
+            
+
+          </nav>
+
+        
+
+        <!-- ----------------- -->
+        <!-- TABLE OF CONTENTS -->
+        <!-- ----------------- -->
+
+        <nav class="toc">
+          <em>Inhoudstafel</em>
+          <ul id="toc"></ul>
+        </nav>
+
+        <!-- --------------------------- -->
+        <!-- Incoming and outgoing links -->
+        <!-- --------------------------- -->
+
+        <nav class="links">
+
+          <!-- not on homapage and index pages -->
+          
+          
+
+            <em>Inkomende links</em>
+            <ul class="incomingLinks" id="incomingLinks"></ul>
+
+          
+
+          <em>Uitgaande links</em>
+          <ul class="outgoingLinks" id="outgoingLinks"></ul>
+
+        </nav>
+
+      </aside>
+
+      <!-- ------ -->
+      <!-- CURSUS -->
+      <!-- ------ -->
+
+      <article>
+
+        <!-- header -->
+        <header data-aos="fade-left">Bash</header>
+
+        <!-- content -->
+        <h1 id="bash-commands">Bash commands</h1>
+
+<h2 id="navigatie">Navigatie</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Navigatie</th>
+      <th>Afkorting</th>
+      <th>Functie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pwd</code></td>
+      <td>Print working directory</td>
+      <td>De locatie waar we zitten</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ls</code></td>
+      <td>List</td>
+      <td>Lijst met inhoud van de folder waarin we zitten</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ls -a</code></td>
+      <td>List all</td>
+      <td>Lijst met <strong>hidden files en folders</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ls -l</code></td>
+      <td>List in long format</td>
+      <td>Lijst met <strong>info</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ls -al</code></td>
+      <td>List all in long format</td>
+      <td>Lijst met <strong>info &amp; hidden files</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tree .</code> <br /> <code class="language-plaintext highlighter-rouge">tree folder/folder/</code></td>
+      <td> </td>
+      <td>Lijst in boomstructuur</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cd folder</code> <br /> <code class="language-plaintext highlighter-rouge">cd folder/folder/</code></td>
+      <td>Change directory</td>
+      <td>Naar een andere locatie gaan</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cd ..</code> <br /> <code class="language-plaintext highlighter-rouge">cd ../..</code></td>
+      <td>Change directory</td>
+      <td>Een locatie <strong>hoger</strong> gaan</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cd - </code></td>
+      <td>Change directory</td>
+      <td>Naar de <strong>vorige</strong> locatie gaan</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cd</code></td>
+      <td>Change directory</td>
+      <td>Naar de <strong>startlocatie</strong> gaan</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="bestanden-en-folders-beheren">Bestanden en folders beheren</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aanmaken</th>
+      <th>Afkoring</th>
+      <th>Functie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">touch</code></td>
+      <td> </td>
+      <td><strong>Bestand</strong> aanmaken</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mkdir</code></td>
+      <td>Make directory</td>
+      <td><strong>Folder</strong> aanmaken</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">rm</code></td>
+      <td>Remove</td>
+      <td><strong>Bestand</strong> verwijderen</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">rm -r</code></td>
+      <td>Remove recursive</td>
+      <td><strong>Folder</strong> verwijderen</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cp file1 file2</code></td>
+      <td>Copy</td>
+      <td><strong>Bestanden</strong> kopiëren</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cp -r dir1 dir2</code></td>
+      <td>Copy recursive</td>
+      <td><strong>Folder</strong> kopiëren</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mv file1 file2</code></td>
+      <td>Move</td>
+      <td><strong>Bestanden</strong> verplaatsen/<strong>hernoemen</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mv -r dir1 dir2</code></td>
+      <td>Move recursive</td>
+      <td><strong>Folder</strong> verplaatsen/<strong>hernoemen</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cat file</code></td>
+      <td>Concatenate</td>
+      <td>Inhoud van een (tekst)file bekijken</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="coderen">Coderen</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Coderen</th>
+      <th>Afkoring</th>
+      <th>Functie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">code bestand</code></td>
+      <td> </td>
+      <td>Bestand openen in <strong>VS Code</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">codium bestand</code></td>
+      <td> </td>
+      <td>Bestand openen in <strong>VS Codium</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">thonny bestand</code></td>
+      <td> </td>
+      <td>Bestand openen in de <strong>Raspberry Pi Code Editor</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">nano bestand</code></td>
+      <td> </td>
+      <td>Bestand openen in de <strong>Nano Terminal Code Editor</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">python bestand.py</code></td>
+      <td> </td>
+      <td>Python code uitvoeren</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="command-line-shortcuts">Command line shortcuts</h1>
+
+<p><span class="btn">Ctrl</span><span class="btn">c</span>
+: <strong>Stop</strong> het command dat aan het runnen is/<strong>verwijder</strong> het command dat je aan het typen bent.</p>
+
+<p><span class="btn">Ctrl</span><span class="btn">a</span>
+: Ga naar het <strong>begin</strong> van de lijn.</p>
+
+<p><span class="btn">Ctrl</span><span class="btn">e</span>
+: Ga naar het <strong>einde</strong> van de lijn.</p>
+
+<p><span class="btn">Ctrl</span><span class="btn">Shift</span><span class="btn">c</span>
+: <strong>Copy</strong>.</p>
+
+<p><span class="btn">Ctrl</span><span class="btn">Shift</span><span class="btn">v</span>
+: <strong>Paste</strong>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">command 1 &amp;&amp; command 2 &amp;&amp; command 3</code>: Commands <strong>chainen</strong> <em>(na elkaar uitvoeren)</em>.</p>
+
+<h1 id="terminologie">Terminologie</h1>
+
+<details>
+   <summary>
+      Terminal
+   </summary>
+   <div class="toggleContent">
+      
+<p>Een <strong>programma</strong> waarin je tekstcommando’s kan typen.</p>
+
+<p><img src="images/terminal.png" alt="" width="600px" /></p>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Console
+   </summary>
+   <div class="toggleContent">
+      
+<p>Soms gebruikt men het woord console als synoniem voor terminal, maar eigenlijk verwijst een console naar de <strong>vroegere fysieke computer</strong> met enkel een toetsenbord en een tekstscherm, zonder grafische interface.</p>
+
+<p><img src="images/console.jpg" alt="" width="600px" /></p>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Command line
+   </summary>
+   <div class="toggleContent">
+      
+<p>De <strong>regel</strong> waar jij je commando’s typt.<br />
+Het is niet het venster, maar de input-lijn zelf.</p>
+
+<p><img src="images/commandline.png" alt="" width="600px" /></p>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Shell
+   </summary>
+   <div class="toggleContent">
+      
+<p>De software die jouw commando <strong>interpreteert en uitvoert</strong>.<br />
+Dat is wat er draait in de terminal.</p>
+
+   </div>
+</details>
+
+<details>
+   <summary>
+      Bash
+   </summary>
+   <div class="toggleContent">
+      
+<p>Bash is een <strong>shell-taal</strong> waarin je <strong>commmands &amp; scripts</strong> kan schrijven.<br />
+Er zijn meerdere shell-talen zoals:</p>
+<ul>
+  <li>PowerShell <em>(op Windows)</em></li>
+  <li>Zsh <em>(op MacOS &amp; Linux)</em></li>
+  <li>Bash <em>(op MacOS &amp; Linux)</em></li>
+  <li>…</li>
+</ul>
+
+<p><img src="images/shell-taal.png" alt="" width="600px" /></p>
+
+   </div>
+</details>
+
+
+
+        <!-- page info -->
+        <div class="pageInfo">
+          Last edited: 25/11/2025
+          <br>
+          Created: 21/10/2025
+        </div>
+
+      </article>
+
+      <!-- right sidebar: empty for now, but needs to be here so <article> gets centered -->
+      <div class="rightSidebar"></div>
+
+    </section>
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <!-- curved shadow -->
+    <center>
+      <img class="curvedShadow" src="../../assets/images/curved_shadow.png"/>
+    </center>
+
+    <footer>
+      <div class="footerContent">
+
+        <!-- licentie -->
+        <div>
+          <!-- <p><a href="content/about">About</a></p> -->
+          <p>Licentie:</p>
+          <p>
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.nl">CC BY-NC</a>
+          </p>
+          <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a></p>
+        </div>
+
+        <!-- search -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search pages...">
+          <div id="search-results"></div>
+        </div>
+
+        <!-- signature -->
+        <img
+          width="107px"
+          height="60px"
+          src="../../assets/images/signatureBlack.gif"
+        />
+      </div>
+    </footer>
+
+    <!-- ---------- -->
+    <!-- JAVASCRIPT -->
+    <!-- ---------- -->
+
+    <!-- aos.js -->
+    <script src="../../assets/libraries/aos/aos.js"></script>
+
+    <!-- my javascript -->
+    <script src="../../assets/javascript/script.js"></script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/latex.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
