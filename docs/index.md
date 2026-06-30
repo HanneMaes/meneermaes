@@ -1,6 +1,6 @@
 ---
 title: Meneer Maes
-last_modified: 2026-06-30 14:11:51 +0200
+last_modified: 2026-06-30 14:21:34 +0200
 created: 2024-03-13T10:31:28+01:00
 ---
 
@@ -61,6 +61,8 @@ created: 2024-03-13T10:31:28+01:00
 [Pro web typography](https://prowebtype.com/)
 
 ## Linux
+
+[Linux Cursus van HoGent (Hogeschool Gent)](https://hogenttin.github.io/linux-training-hogent/)
 
 [Linux Journey: alles over Linux](https://linuxjourney.com/)
 
