@@ -117,7 +117,7 @@ body {
 /* de pagina zonder de footer */
 section {
   background-color: var(--white);
-  padding-bottom: var(--spacingBig);
+  padding-bottom: var(--spacing);
 
   display: flex;
   flex-direction: row;
@@ -596,11 +596,7 @@ footer img {
   opacity: 0.2;
   font-style: italic;
   text-align: right;
-
-  /* put it to the right of the page, even the it's in a div with a fixed width */
-  position: absolute;
-  bottom: calc(var(--spacing) * 2);
-  right:  calc(var(--spacing) * 2);
+  padding-top: 50px;
 
   transition: all var(--animSpeed);
 }
