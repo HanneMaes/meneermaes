@@ -1,0 +1,42 @@
+<!------------------>
+<!-- CSV TO ARRAY -->
+<!------------------>
+
+<!-- get the last dir in the path of the markdown file that is including this file -->
+{% assign dir_segments = page.path | split: '/' %}
+{% assign subdirectory = dir_segments[1] %}
+
+<!-- turn the CSV into an array -->
+{% assign puntenverdeling = site.data[subdirectory][include.data] | csv_to_array %}
+
+<!---------->
+<!-- PAGE -->
+<!---------->
+
+<!-- table -->
+<table>
+
+   <!-- header -->
+   <thead>
+      <tr>
+         <th></th>
+         <th>
+            <em>Doelen:</em>
+            {% assign filename = include.data | split: "." %}       <!-- get the filename -->
+            {% assign filename = filename[0] | replace: "-", " " %} <!-- replace all '-' with spaces -->
+            {{ filename }}
+         </th>
+      </tr>
+   </thead>
+
+   <!-- body -->
+   <tbody>
+      {% for row in puntenverdeling %}
+      <tr>
+         <td><em>{{ row.nr }}</em></td>
+         <td>{{ row.doel }}</td>
+      </tr>
+      {% endfor %}
+   </tbody>
+
+</table>

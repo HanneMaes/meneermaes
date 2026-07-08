@@ -1,0 +1,30 @@
+{% assign dir_segments = page.path | split: '/' %}
+{% assign subdirectory = dir_segments[1] %}
+
+<!-- load yaml data -->
+{% assign collection = site.data[subdirectory] %}
+{% assign yaml_data = collection[include.data] %}
+{% assign jaarplanning = yaml_data.planning %}
+
+<!-- planning -->
+<table>
+  <tr>
+      <td colspan="2">
+        <em>Jaarplanning</em>
+      </td>
+  </tr>
+
+  {% for row in jaarplanning %}
+  <tr>
+      <td>{{ row.periode }}</td>
+      <td>
+
+        {% for item in row.inhoud %}
+        <em>· </em> {{ item }}{% unless forloop.last %}<br>{% endunless %}
+        {% endfor %}
+
+      </td>
+  </tr>
+  {% endfor %}
+
+</table>

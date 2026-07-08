@@ -1,0 +1,5 @@
+planning:
+  - periode: "Semester 1"
+    inhoud: ["Access", "SQL"]
+  - periode: "Semester 2"
+    inhoud: ["Normalisatieregels van Codd", "PHP"]
