@@ -1,7 +1,7 @@
 ---
 title: Stage Op School
 created: 2026-04-10 12:05:26 +0200
-last_modified: 2026-05-07 14:29:43 +0200
+last_modified: 2026-07-08 13:17:24 +0200
 ---
 
 # Algemene organisatie
@@ -307,6 +307,8 @@ Belangrijk:
 
 # Evaluatie
 
+## Punten
+
 {% include punten.html data='samenwerking' %}
 {% include punten.html data='logboek' %}
 {% include punten.html data='website-v1' %}
@@ -314,4 +316,6 @@ Belangrijk:
 {% include punten.html data='eindpresentatie' %}
 {% include punten.html data='handleiding' %}
 
+## Doelen 
 
+{% include punten.html data='doelen' %} 

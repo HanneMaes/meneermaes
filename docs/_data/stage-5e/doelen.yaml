@@ -1,0 +1,14 @@
+title: Doelen
+doelen:
+  - nr: "BK3_01.02"
+    desc: "De leerlingen handelen kwaliteitsbewust"
+  - nr: "BK3_01.05"
+    desc: "De leerlingen bouwen de eigen deskundigheid op"
+  - nr: "BK3_02.07"
+    desc: "De leerlingen ontwikkelen een responsive webapplicatie"
+  - nr: "BK3_02.08"
+    desc: "De leerlingen lichten de actuele ontwikkelingen toe"
+  - nr: "BK3_02.10"
+    desc: "De leerlingen gebruiken specifieke kantoorsoftware"
+  - nr: "BK3_02.11.01"
+    desc: "De leerlingen realiseren een project volgens de principes van het technische proces met betrekking tot een website maken"
