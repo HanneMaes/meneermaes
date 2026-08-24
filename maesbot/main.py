@@ -196,7 +196,8 @@ print()
 settings = load_settings("settings.yaml")
 
 # Show main menu
-actions = ["Punten: Create Sheets", "Punten: Sheets to PDF"]
+actions = ["Punten: Create Sheets"]
+# actions = ["Punten: Create Sheets", "Punten: Sheets to PDF"]
 selected = pick_from_list(
     actions, "What can I do for my Master?", message_color="#bade87"
 )
@@ -205,6 +206,7 @@ if selected:
     # ##################### #
     # Punten: Create Sheets #
     # ##################### #
+
     if selected == "Punten: Create Sheets":
         # Select input YAML file
         input_file = select_input_yaml(settings)
@@ -237,7 +239,8 @@ if selected:
     # ###################### #
     # Punten: Sheets to PDF  #
     # ###################### #
-    elif selected == "Punten: Sheets to PDF":
-        run_script("Punten/sheets-to-pdf.py")
+
+    # elif selected == "Punten: Sheets to PDF":
+    #     run_script("Punten/sheets-to-pdf.py")
 else:
     print(f"\n{YELLOW}No action selected{NC}\n")

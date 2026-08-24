@@ -1,0 +1,5 @@
+planning:
+  - periode: "Semester 1"
+    inhoud: ["HTML", "CSS"]
+  - periode: "Semester 2"
+    inhoud: ["JavaScript", "Responsive Design", "Hosting"]

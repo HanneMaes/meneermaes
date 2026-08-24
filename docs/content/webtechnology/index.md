@@ -1,8 +1,10 @@
 ---
 title: Webtechnology
-last_modified: 2026-04-28 09:09:46 +0200
+last_modified: 2026-08-24 15:49:43 +0200
 created: Wed, Mar 20, 2024  3:36:23 PM
 ---
+
+{% include planning.html data='planning' %} 
 
 # Hulpmiddelen
 
