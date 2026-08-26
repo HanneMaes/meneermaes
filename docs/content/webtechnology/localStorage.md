@@ -1,7 +1,7 @@
 ---
 title: LocalStorage
 created: 2025-11-18 21:56:00 +0100
-last_modified: 2026-04-23 11:42:21 +0200
+last_modified: 2026-08-26 11:21:19 +0200
 ---
 
 # Wat is LocalStorage
@@ -19,13 +19,13 @@ De data blijft bewaard over browser-sessies heen: sluit je de tab of browser, da
 
 ```javascript
 // Iets opslaan
-localStorage.setItem("waarde", 3);
+localStorage.setItem("varName", 3);
 
 // Iets uitlezen
-const naam = localStorage.getItem("waarde"); // 3
+const naam = localStorage.getItem("varName"); // 3
 
 // Eén item verwijderen
-localStorage.removeItem("waarde");
+localStorage.removeItem("vaName");
 
 // Alles verwijderen
 localStorage.clear();
