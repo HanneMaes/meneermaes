@@ -1,8 +1,12 @@
 ---
 title: Flex
-last_modified: 2026-06-09 14:47:37 +0200
+last_modified: 2026-08-31 15:25:20 +0200
 created: Wed, sep 11, 2024  10:47:23 PM
 ---
+
+# Kennismaking
+
+[Digitale kennismaking door integratie van digitale tools](https://hannemaes.notion.site/Digitale-kennismaking-door-integratie-van-digitale-tools-80d9b5dbe8964d0d9404b582e05973b3)
 
 # Cybersecurity
 
