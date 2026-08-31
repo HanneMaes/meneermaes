@@ -12,6 +12,13 @@ Formulier: **[Vragen bij het thuis verwerken van leerstof](https://docs.google.c
 *Om het formulier in te kunnen vullen moet je ingelogd zijn met je* Zandpoort email.
 ' %}
 
+# Wat zijn databases?
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Tk1t3WKK-ZY?si=O0TRh54k9UFDbal2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# The Manga Guide to Databases
+
+[The Manga Guide to Databases](https://nostarch.com/mg_databases.htm)
+
 # Cursussen
 
 ### 1. Access
@@ -27,9 +34,6 @@ Formulier: **[Vragen bij het thuis verwerken van leerstof](https://docs.google.c
 ### 3. Normalisatie
 
 [Cursus Normalisatie](https://bazandpoort.notion.site/Cursus-Normalisatie-5652b49414ca4d2798cdc3e91cb621ae?pvs=4)
-
-# Wat zijn databases?
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Tk1t3WKK-ZY?si=O0TRh54k9UFDbal2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### 4. PHP
 
