@@ -17,6 +17,9 @@ created: 2024-03-04T13:37:48+01:00
 2. Vertel de klas welke **taken** deze server uitvoert en welke **data** de server nodig heeft.
 3. Teken een **diagram** om uit te leggen wat de server doet en hoe jij deze gebruikt.
 
+Voorbeeld van een diagram:  
+![diagram](images/diagram.png){: width='500px' }  
+
 {% include punten.html data='servers-diagram' %}
 
 # Opdracht 2: Artikel
