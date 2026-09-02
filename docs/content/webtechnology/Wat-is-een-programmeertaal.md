@@ -1,6 +1,6 @@
 ---
 title: Wat is een programmeertaal?
-last_modified: 2024-05-03T07:12:37
+last_modified: 2026-09-02 22:44:37 +0200
 created: Fri, sep 13, 2024  9:20:23 AM
 ---
 

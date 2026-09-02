@@ -1,6 +1,6 @@
 ---
 title: Stage 5e Jaar
-last_modified: 2026-09-01 19:53:55 +0200
+last_modified: 2026-09-02 22:13:11 +0200
 created: thu, aug 25, 2025  5:09:21 PM
 ---
 
@@ -9,7 +9,7 @@ created: thu, aug 25, 2025  5:09:21 PM
 Tijdens deze stage werken jullie in opdracht van een **externe partner** aan een **professionele website**.  
 Dit kan een onderneming, vzw, sportclub, zelfstandige of andere organisatie zijn.
 
-De stage vindt plaats op **school**, tijdens de projectweken eind april: **?/04/2027 – ?/4/2027**.
+De stage vindt plaats op **school**, tijdens de project weken eind april: **?/04/2027 – ?/4/2027**.
 
 Het eindresultaat is een statische website, ontwikkeld met HTML, CSS en JavaScript. De website voldoet aan de verwachtingen van de opdrachtgever, wordt professioneel gepresenteerd en zal effectief in gebruik genomen worden.
 
@@ -22,7 +22,7 @@ Naast het ontwikkelen van de website nemen jullie ook deel aan een aantal bedrij
 
 Je stelt een **sollicitatiebrief** op en **zoekt zelf** een externe opdrachtgever.
 
-<span class='deadline'>: 1e week na de Kerstavakantie</span>
+<span class='deadline'>: 1e week na de Kerstvakantie</span>
 
 Cursus: [Opdrachtgever zoeken & sollicitatie](Opdrachrgever-zoeken-en-solliciatie)
 
@@ -35,7 +35,7 @@ Eerste meeting met de opdrachtgever:
 
 <span class='deadline'> voorbereiding: De week voor de Krokusvakantie</span>
 
-<span class='deadline'> afsprakendocument: 2e week na de Krokusvakantie</span>
+<span class='deadline'> afspraken document: 2e week na de Krokusvakantie</span>
 
 Cursus: [Kennismakingsgesprek](Kennismakingsgesprek)
 
@@ -45,7 +45,7 @@ Cursus: [Kennismakingsgesprek](Kennismakingsgesprek)
 
 - Tijdens deze week maak je een 1e versie van de website
 - Op het einde van de week geef je een tussentijdse presentatie aan je opdrachtgever
-- Je noteert verbeterpunten en maakt een planning om deze aan te pakken in week 2
+- Je noteert verbeter punten en maakt een planning om deze aan te pakken in week 2
 
 **Week 2: Afwerking, handleiding & eindpresentatie**
 
