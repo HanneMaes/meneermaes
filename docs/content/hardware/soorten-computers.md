@@ -3,13 +3,9 @@ title: Soorten computers
 created: 2024-03-04T13:37:48+01:00
 ---
 
+# Theorie 
+
 <iframe src="https://docs.google.com/presentation/d/1KTVXaFKQ915TOTVHwjHIBEWzTI6VYSDx/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="515" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-# Slim en kritisch informatie zoeken
-
-{% include callout.html type='Tips & Opdracht' content='
-[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
-' %}
 
 # Opdracht 1: Servers Diagram
 
@@ -22,9 +18,15 @@ Voorbeeld van een diagram:
 
 {% include punten.html data='servers-diagram' %}
 
-# Opdracht 2: Artikel
+# Opdracht 2: Artikel Zoeken
 
 Zoek op het internet een artikel over één van de technologieën uit de presentatie.
+
+{% include callout.html type='Tips & Opdracht' content='
+[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
+' %}
+
+# Opdracht 3: Artikel Kritisch Presentaren
 
 - Leg de **inhoud** van het artikel uit aan de klas.
 - Leg uit doe de technologie of het apparaat uit je artikel **technisch** werkt.
