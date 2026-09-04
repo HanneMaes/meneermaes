@@ -1,8 +1,14 @@
 ---
 title: Hardware
-last_modified: 2026-05-11 21:25:02 +0200
+last_modified: 2026-09-04 09:32:53 +0200
 created: Wed, sep 04, 2024  10:47:23 PM
 ---
+
+# Kennismaking
+
+[Digitale kennismaking door integratie van digitale tools](https://hannemaes.notion.site/Digitale-kennismaking-door-integratie-van-digitale-tools-774aa903d9d943b5b2dcdaf09c409b86)
+
+# Opbouw & werking van een computersysteem
 
 [Soorten computers](soorten-computers)
 
@@ -11,8 +17,6 @@ created: Wed, sep 04, 2024  10:47:23 PM
 [Computerarchitectuur](Computerarchitectuur)
 
 [Datacompressie, backups & datarecovery](Datacompressie)
-
-# Opzoekopdrachten
 
 [Beeldapparatuur](zelfstandige-opdrachten/beeldapparatuur.docx){: .opdracht }
 
