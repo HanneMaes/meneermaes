@@ -1,6 +1,6 @@
 ---
 title: Flex
-last_modified: 2026-08-31 15:25:20 +0200
+last_modified: 2026-09-04 14:26:08 +0200
 created: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -34,7 +34,7 @@ created: Wed, sep 11, 2024  10:47:23 PM
 
 [Robocode](../robocode/index)
 
-# Linux & Bash
+# Linux
 
 [WSL](WSL)
 
@@ -42,7 +42,7 @@ created: Wed, sep 11, 2024  10:47:23 PM
 
 [Bash scripting](Bash-scripting)
 
-[Linux challenges](Linux-challenges)
+[Bash challenges](Bash-challenges)
 
 ## Raspberry Pi
 
