@@ -18,6 +18,16 @@ ARG HOST_GID=1000
 RUN groupadd -g $HOST_GID appuser && \
   useradd -u $HOST_UID -g $HOST_GID -m appuser
 
+# LibreOffice (headless) for converting filled-in ODT report cards to PDF.
+# Only Writer + Calc components + fonts, to keep the image reasonably small.
+RUN apt-get update && \
+  apt-get install -y --no-install-recommends \
+  libreoffice-writer \
+  libreoffice-calc \
+  fonts-dejavu \
+  fonts-liberation && \
+  rm -rf /var/lib/apt/lists/*
+
 # First, copy requirements.txt separately (Docker layer caching optimization)
 # If requirements.txt doesn't change, Docker reuses this layer and doesn't
 # reinstall packages on every build

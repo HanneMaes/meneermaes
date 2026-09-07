@@ -91,7 +91,6 @@ def select_students():
         print(f"{RED}✗ Error: No classes found in private-settings.yaml{NC}\n")
         return []
 
-    # Pick a class
     class_names = list(klassen.keys())
     selected_class = pick_from_list(
         class_names, "Select class:", message_color="#d787d7"
@@ -101,9 +100,8 @@ def select_students():
         print(f"{YELLOW}No class selected{NC}\n")
         return []
 
-    # Parse students from string format: '"Name 1", "Name 2"'
-    students_str = klassen[selected_class]
-    students = [s.strip().strip('"') for s in students_str.strip('"').split('", "')]
+    students = klassen[selected_class] or []
+    students = [str(s).strip() for s in students]
 
     return students, selected_class
 
@@ -196,8 +194,8 @@ print()
 settings = load_settings("settings.yaml")
 
 # Show main menu
-actions = ["Punten: Create Sheets"]
-# actions = ["Punten: Create Sheets", "Punten: Sheets to PDF"]
+# actions = ["Punten: Create Sheets"]
+actions = ["Punten: Create Sheets", "Punten: Sheets to PDF"]
 selected = pick_from_list(
     actions, "What can I do for my Master?", message_color="#bade87"
 )

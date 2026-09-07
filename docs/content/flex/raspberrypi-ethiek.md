@@ -1,19 +1,10 @@
 ---
 title: De Ethiek van Raspberry Pi
-last_modified: 2025-02-13 08:56:52 +0200
+last_modified: 2026-09-07 10:29:32 +0200
 created: Mon, oct 13, 2025  21:58:23 PM
 ---
 
 > Een onderzoekende inleidende opdracht rond de **ethische en maatschappelijke kant** van Raspberry Pi.
-
-# Verslag & Zoekstrategie
-
-Maak een **overzichtelijk en presentabel** verslag.  
-Vermeld al je bronnen en vermeld er ook bij **waarom deze brom betrouwbaar is**.
-
-{% include callout.html type='Tips:' content='
-[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
-' %}
 
 # Raspberry Pi Distro's
 
@@ -41,6 +32,14 @@ Onderzoek de stelling en:
 - Bespreek een argument **voor**.
 - Bespreek een argument **tegen**.
 - Bespreek je **eigen mening**.
+
+## Verslag & Zoekstrategie
+
+Maak een verslag over de Zoekstrategie die je gebruikt het om deze vraag te beantwoorden.
+
+{% include callout.html type='Tips:' content='
+[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
+' %}
 
 # De Ethiek en Raspberry Pi 
 
