@@ -72,13 +72,7 @@ Een Raspberry Pi gebruiken als Wordpress server heeft grote educatieve waarde:
 - Beperkte vrijheid, zeker in de gratis en goedkope formules
 - Minder controle over code, plugins en data
 
-# Opdracht: Raspberry Pi als WordPress server
-
-Je krijgt **geen stappenplan**. In plaats daarvan ga je zelf op zoek naar informatie, probeer je oplossingen uit en reflecteer je regelmatig over je leerproces.
-
-Het einddoel is tweeledig:
-- **Product**: een werkende WordPress-installatie op je Raspberry Pi
-- **Proces**: aantonen dat je doelgericht onderzocht, kritisch informatie verwerkte en je leerproces kon bijsturen, in een **duidelijk, gestructureerd en professioneel digitaal document**
+# Opdracht: Logboek aanvullen
 
 ## Zoekstrategie en bronkritiek
 
@@ -107,44 +101,14 @@ Je mag AI niet gebruiken als:
 ## Technisch vooronderzoek
 
 Onderzoeksvragen:
-1. Welk **besturingssysteem** draait meestal op een Raspberry Pi?
-2. Wat is de **functie van een webserver**?
-3. Waarom heeft WordPress een **database** nodig?
-4. Wat is de rol van **PHP** binnen WordPress?
-5. Maak een eenvoudig **schema** dat toont hoe deze onderdelen samenwerken.
-6. Wat zijn **VNC**, **SSH** en **Raspberry Pi Connect**? Geef minstens 1 voordeel van elke technologie.
+1. Wat is de **functie van een webserver**?
+2. Waarom heeft WordPress een **database** nodig?
+3. Wat is de rol van **PHP** binnen WordPress?
+4. Maak een eenvoudig **schema** dat toont hoe deze onderdelen samenwerken.
 
 Reflectie:
 1. Welke begrippen waren **nieuw** voor mij?
 2. **Hoe** heb ik geprobeerd ze te begrijpen (lezen, video, schema, uitleg vragen)?
-
-## Installatie OS
-
-Voor je begint te installeren, voeg je een **logboek** toe aan het document. Dit logboek gebruik je tijdens de **hele opdracht**.
-
-> Een logboek is geen stappenplan achteraf, maar een verslag tijdens het werken.
-
-Het logboek toont hoe je denkt en leert, niet alleen wat er lukt.
-Tijdens deze opdracht is het **niet erg om fouten te maken**. Integendeel: **fouten zijn vaak leerrijker** dan wanneer alles meteen lukt. Wanneer iets niet werkt, documenteer dit dan zorgvuldig:
-- Welke foutmelding of probleem je tegenkwam.
-- Welke stappen je hebt ondernomen om het probleem op te lossen.
-
-Nu ga je **praktisch** aan de slag met het installeren van een besturingssysteem (OS) op een Raspberry Pi.
-
-Je werkt onderzoekend:
-- Je volgt geen blind stappenplan
-- Je probeert te begrijpen wat elke stap doet.
-- Je staat stil bij keuzes die je maakt.
-
-**Stappen:**
-1. Schrijf in je logboek welk OS heb ik gekozen en **waarom**?  
-2. Voeg **screenshots** toe om te documenteren hoe je het OS hebt kunnen installeren.
-
-**Reflectie:**
-- Wat ging vlot? Waarom?
-- Waar liep ik vast?
-- Welke strategie gebruikte ik?
-- Wat zou ik volgende keer anders aanpakken?
 
 ## Installatie WordPress 
 

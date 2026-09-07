@@ -1,6 +1,6 @@
 ---
 title: De Ethiek van Raspberry Pi
-last_modified: 2026-09-07 10:35:21 +0200
+last_modified: 2026-09-07 10:58:06 +0200
 created: Mon, oct 13, 2025  21:58:23 PM
 ---
 
@@ -11,7 +11,7 @@ created: Mon, oct 13, 2025  21:58:23 PM
 Zoek **3 Linux-distributies** die op een Raspberry Pi draaien, en beantwoord deze vragen:
 
 - Is deze distro speciaal gemaakt voor de **Raspberry Pi**?
-- Wat is het **doel/doelpubloek** van deze distro?
+- Wat is het **doel/doelpubliek** van deze distro?
 - Wat zijn de **voor- of nadelen**.
 
 # De Ethiek van Linux & Open-Source
@@ -40,6 +40,10 @@ Maak een verslag over de zoekstrategie die je gebruikt het om deze vraag te bean
 {% include callout.html type='Tips:' content='
 [Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
 ' %}
+
+# Remote access
+
+1. Wat zijn **VNC**, **SSH** en **Raspberry Pi Connect**? Geef minstens 1 voordeel van elke technologie.
 
 # De Ethiek en Raspberry Pi 
 

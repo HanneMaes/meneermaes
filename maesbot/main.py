@@ -238,7 +238,8 @@ if selected:
     # Punten: Sheets to PDF  #
     # ###################### #
 
-    # elif selected == "Punten: Sheets to PDF":
-    #     run_script("Punten/sheets-to-pdf.py")
+    elif selected == "Punten: Sheets to PDF":
+        run_script("punten-sheets-to-pdf.py")
+
 else:
     print(f"\n{YELLOW}No action selected{NC}\n")

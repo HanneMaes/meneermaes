@@ -12,6 +12,8 @@ punten:
     max: 1
   - desc: "Stelling: Eigen mening"
     max: 1.5
+  - desc: "Remote Access"
+    max: 3
   - desc: "De Ethiek en Raspberry Pi: De Raspberry Pi is goedkoop en open"
     max: 1
   - desc: "De Ethiek en Raspberry Pi: Wie profiteert er het meeste van zulke open hardware?"

@@ -1,6 +1,6 @@
 ---
 title: Flex
-last_modified: 2026-09-04 14:26:08 +0200
+last_modified: 2026-09-07 10:56:24 +0200
 created: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -47,6 +47,8 @@ created: Wed, sep 11, 2024  10:47:23 PM
 ## Raspberry Pi
 
 [De Ethiek van Raspberry Pi](raspberrypi-ethiek)
+
+[Setting up a Raspberry Pi](Setting-up-a-Raspberry-Pi)
 
 [Raspberry Pi als Wordpress server](raspberrypi-als-wordpress-server)
 

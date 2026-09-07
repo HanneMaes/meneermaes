@@ -1,317 +1,457 @@
-import os  # For file system operations (paths, directories)
-import argparse  # For parsing command-line arguments
-import subprocess  # For running external commands (opening file manager)
-import zipfile  # For reading ODS and ODT files (they are ZIP archives)
-import xml.etree.ElementTree as ET  # For parsing XML content
-import tempfile  # For temporary files during conversion
-import shutil  # For file operations
+#!/usr/bin/env python3
+"""
+Punten: Sheets to PDF
 
-# Template location
-TEMPLATE_PATH = "/home/hanne/Documents/Nextcloud/School/maesbot-private-data/Punten/Templates/Taak-toets.odt"
+Reads filled-in grading .ods sheets (created by punten-create-sheets.py) and
+generates one PDF report card per student, based on the Taak-toets.odt
+template.
 
-# Parse command-line arguments
-parser = argparse.ArgumentParser(description="Extract points from ODS files and create PDF reports using ODT template")
-parser.add_argument('--input', required=True, help="Directory containing ODS files")
-parser.add_argument('--output', required=True, help="Path to output directory for PDFs")
-args = parser.parse_args()
+Requires:
+  - LibreOffice ('soffice' binary) available in the container, for the
+    ODT -> PDF conversion.
+  - The .ods sheets must have been opened, filled in, and SAVED in
+    LibreOffice Calc, so the calculated totals are cached in the file
+    (this script does not evaluate spreadsheet formulas itself).
+"""
 
-# Ensure output directory exists
-os.makedirs(args.output, exist_ok=True)
+import os
+import re
+import sys
+import shutil
+import zipfile
+import tempfile
+import subprocess
+from pathlib import Path
+from datetime import datetime
 
-def extract_data_from_ods(ods_file_path):
-    """
-    Extract grading data from an ODS spreadsheet file.
-    
-    Args:
-        ods_file_path: Path to the .ods file
-    
-    Returns:
-        Dictionary containing student name, assignments, and totals
-    """
+import yaml
+from odf.opendocument import load as load_ods
+from odf.table import Table, TableRow, TableCell
+from odf.teletype import extractText
+
+from lib.fuzzypicker import pick_from_list
+from lib.colors import *  # noqa: F401,F403  (color constants used below)
+
+
+#############################################################################
+# Settings
+
+
+def load_settings(settings_path="settings.yaml"):
+    settings_file = Path(settings_path)
+    if not settings_file.exists():
+        print(f"{RED}✗ Error: {settings_path} not found!{NC}")
+        sys.exit(1)
     try:
-        # ODS files are ZIP archives containing XML files
-        with zipfile.ZipFile(ods_file_path, 'r') as zip_file:
-            # Read the content.xml file which contains the actual data
-            content_xml = zip_file.read('content.xml')
-            
-        # Parse the XML content
-        root = ET.fromstring(content_xml)
-        
-        # Define XML namespaces used in ODS files
-        namespaces = {
-            'office': 'urn:oasis:names:tc:opendocument:xmlns:office:1.0',
-            'table': 'urn:oasis:names:tc:opendocument:xmlns:table:1.0',
-            'text': 'urn:oasis:names:tc:opendocument:xmlns:text:1.0'
-        }
-        
-        # Find the table element
-        table_elem = root.find('.//table:table', namespaces)
-        if table_elem is None:
-            print(f"❌ No table found in {ods_file_path}")
-            return None
-            
-        rows = table_elem.findall('.//table:table-row', namespaces)
-        if len(rows) < 2:
-            print(f"❌ Not enough rows in {ods_file_path}")
-            return None
-        
-        # Extract student name from title row (first row, first cell)
-        title_cell = rows[0].find('.//text:p', namespaces)
-        title_text = title_cell.text if title_cell is not None and title_cell.text else "Unknown"
-        
-        # Extract student name from title (assumes format "Assignment - Student Name")
-        student_name = "Unknown Student"
-        assignment_title = args.title
-        if " - " in title_text:
-            parts = title_text.split(" - ", 1)
-            assignment_title = parts[0]
-            student_name = parts[1]
-        
-        # Extract assignment data from data rows (skip first row which is title)
-        assignments = []
-        total_points = 0
-        max_total = 0
-        
-        # Process each data row (excluding title and total rows)
-        for row in rows[1:-1]:  # Skip first (title) and last (total) row
-            cells = row.findall('.//table:table-cell', namespaces)
-            if len(cells) >= 4:
-                # Extract description from first cell
-                desc_elem = cells[0].find('.//text:p', namespaces)
-                description = desc_elem.text if desc_elem is not None and desc_elem.text else ""
-                
-                # Extract score from second cell
-                score_elem = cells[1].find('.//text:p', namespaces)
-                score_text = score_elem.text if score_elem is not None and score_elem.text else "0"
-                try:
-                    score = float(score_text) if score_text.strip() else 0
-                except ValueError:
-                    score = 0
-                
-                # Extract max points from fourth cell
-                max_elem = cells[3].find('.//text:p', namespaces)
-                max_text = max_elem.text if max_elem is not None and max_elem.text else "0"
-                try:
-                    max_points = float(max_text) if max_text.strip() else 0
-                except ValueError:
-                    max_points = 0
-                
-                if description.strip():  # Only add if description is not empty
-                    assignments.append({
-                        'description': description,
-                        'score': score,
-                        'max_points': max_points
-                    })
-                    total_points += score
-                    max_total += max_points
-        
-        return {
-            'student_name': student_name,
-            'assignment_title': assignment_title,
-            'assignments': assignments,
-            'total_score': total_points,
-            'total_max': max_total,
-            'percentage': (total_points / max_total * 100) if max_total > 0 else 0
-        }
-        
+        with open(settings_file, "r") as f:
+            return yaml.safe_load(f)
     except Exception as e:
-        print(f"❌ Error reading {ods_file_path}: {str(e)}")
+        print(f"{RED}✗ Error loading {settings_path}: {e}{NC}\n")
+        sys.exit(1)
+
+
+#############################################################################
+# Helpers
+
+
+def _fmt_num(n):
+    """Format a number without a trailing .0, keep 2 decimals otherwise."""
+    if n is None:
+        return ""
+    n = float(n)
+    if n.is_integer():
+        return str(int(n))
+    return str(round(n, 2))
+
+
+def _escape_xml(s):
+    return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def find_matching_input_yaml(input_dir, assignment_basename):
+    """Find the original punten YAML whose (dash-stripped) filename matches
+    the assignment folder name, so we can reuse its 'title'."""
+    input_dir = Path(input_dir)
+    if not input_dir.exists():
+        return None
+    for yaml_file in input_dir.rglob("*.yaml"):
+        name = yaml_file.stem.replace("-", " ")
+        if name == assignment_basename:
+            return yaml_file
+    return None
+
+
+def resolve_vak(input_yaml, input_dir):
+    """The subject (vak) is the top-level subfolder under
+    punten_input_dir_website that the input yaml lives in, e.g.
+    docs/_data/hardware/servers.yaml -> vak = 'hardware'."""
+    if input_yaml is None:
+        return None
+    try:
+        return input_yaml.relative_to(input_dir).parts[0]
+    except ValueError:
         return None
 
-def create_assignments_table_text(assignments):
-    """
-    Create a formatted text representation of the assignments table.
-    
-    Args:
-        assignments: List of assignment dictionaries
-        
-    Returns:
-        Formatted string representing the assignments table
-    """
-    table_text = ""
-    for assignment in assignments:
-        score_str = str(int(assignment['score']) if assignment['score'].is_integer() else assignment['score'])
-        max_str = str(int(assignment['max_points']) if assignment['max_points'].is_integer() else assignment['max_points'])
-        table_text += f"{assignment['description']}: {score_str}/{max_str}\n"
-    
-    return table_text.strip()
 
-def fill_odt_template(template_path, data, output_path):
-    """
-    Fill an ODT template with grading data.
-    
-    Args:
-        template_path: Path to the ODT template file
-        data: Dictionary containing grading data
-        output_path: Where to save the filled ODT file
-        
-    Returns:
-        True if successful, False otherwise
-    """
-    try:
-        # Create a temporary copy of the template
-        temp_odt = output_path
-        shutil.copy2(template_path, temp_odt)
-        
-        # Open the ODT file (it's a ZIP archive)
-        with zipfile.ZipFile(temp_odt, 'a') as zip_file:
-            # Read content.xml
-            content_xml = zip_file.read('content.xml').decode('utf-8')
-            
-            # Replace placeholders with actual data
-            replacements = {
-                '{{STUDENT_NAME}}': data['student_name'],
-                '{{ASSIGNMENT_TITLE}}': data['assignment_title'],
-                '{{ASSIGNMENTS_TABLE}}': create_assignments_table_text(data['assignments']),
-                '{{TOTAL_SCORE}}': str(int(data['total_score']) if data['total_score'].is_integer() else data['total_score']),
-                '{{TOTAL_MAX}}': str(int(data['total_max']) if data['total_max'].is_integer() else data['total_max']),
-                '{{PERCENTAGE}}': f"{data['percentage']:.1f}"
-            }
-            
-            # Perform replacements
-            for placeholder, value in replacements.items():
-                content_xml = content_xml.replace(placeholder, value)
-            
-            # Write back the modified content.xml
-            # First, remove the old content.xml
-            temp_files = []
-            with zipfile.ZipFile(temp_odt, 'r') as read_zip:
-                for item in read_zip.infolist():
-                    if item.filename != 'content.xml':
-                        temp_files.append((item, read_zip.read(item.filename)))
-            
-            # Recreate the ZIP with modified content
-            with zipfile.ZipFile(temp_odt, 'w', zipfile.ZIP_DEFLATED) as write_zip:
-                # Write all files except content.xml
-                for item_info, item_data in temp_files:
-                    write_zip.writestr(item_info, item_data)
-                
-                # Write modified content.xml
-                write_zip.writestr('content.xml', content_xml.encode('utf-8'))
-        
-        return True
-        
-    except Exception as e:
-        print(f"❌ Error filling ODT template: {str(e)}")
-        return False
+#############################################################################
+# Reading the filled-in .ods sheet
 
-def convert_odt_to_pdf(odt_path, pdf_path):
-    """
-    Convert ODT file to PDF using LibreOffice.
-    
-    Args:
-        odt_path: Path to the ODT file
-        pdf_path: Path where PDF should be saved
-        
-    Returns:
-        True if successful, False otherwise
-    """
-    try:
-        # Get directory for output
-        output_dir = os.path.dirname(pdf_path)
-        
-        # Use LibreOffice to convert ODT to PDF
-        cmd = [
-            'libreoffice',
-            '--headless',  # Run without GUI
-            '--convert-to', 'pdf',
-            '--outdir', output_dir,
-            odt_path
+
+def read_ods_data(ods_path):
+    """Read graded items + totals from a sheet created by
+    punten-create-sheets.py. Returns (items, total_score, total_max)."""
+    doc = load_ods(str(ods_path))
+    tables = doc.spreadsheet.getElementsByType(Table)
+    if not tables:
+        raise ValueError(f"No table found in {ods_path}")
+    table = tables[0]
+    rows = table.getElementsByType(TableRow)
+
+    # rows[0] = title row, rows[1:-1] = assignment items, rows[-1] = TOTAAL
+    items = []
+    for row in rows[1:-1]:
+        cells = row.getElementsByType(TableCell)
+        desc = extractText(cells[0]).strip()
+        score_raw = cells[1].getAttribute("value")
+        max_raw = cells[3].getAttribute("value")
+        score = float(score_raw) if score_raw not in (None, "") else None
+        max_pts = float(max_raw) if max_raw not in (None, "") else 0.0
+        items.append({"desc": desc, "score": score, "max": max_pts})
+
+    total_cells = rows[-1].getElementsByType(TableCell)
+    total_score_raw = total_cells[1].getAttribute("value")
+    total_max_raw = total_cells[3].getAttribute("value")
+
+    if total_score_raw not in (None, ""):
+        total_score = float(total_score_raw)
+    else:
+        # Fallback if the file was never opened/saved in LibreOffice
+        total_score = sum(i["score"] or 0 for i in items)
+
+    if total_max_raw not in (None, ""):
+        total_max = float(total_max_raw)
+    else:
+        total_max = sum(i["max"] for i in items)
+
+    return items, total_score, total_max
+
+
+#############################################################################
+# Building the {{SCORE}} replacement
+
+
+def build_score_table_xml(items, total_score, total_max):
+    """Build a raw ODF table:table XML fragment listing each graded item's
+    score plus a totals row, to replace the {{SCORE}} placeholder."""
+
+    def cell(text):
+        return (
+            '<table:table-cell office:value-type="string">'
+            f"<text:p>{_escape_xml(text)}</text:p>"
+            "</table:table-cell>"
+        )
+
+    rows_xml = [
+        "<table:table-row>"
+        + cell("Onderdeel")
+        + cell("Score")
+        + cell("Max")
+        + "</table:table-row>"
+    ]
+
+    for item in items:
+        score_display = "" if item["score"] is None else _fmt_num(item["score"])
+        rows_xml.append(
+            "<table:table-row>"
+            + cell(item["desc"])
+            + cell(score_display)
+            + cell(_fmt_num(item["max"]))
+            + "</table:table-row>"
+        )
+
+    rows_xml.append(
+        "<table:table-row>"
+        + cell("TOTAAL")
+        + cell(_fmt_num(total_score))
+        + cell(_fmt_num(total_max))
+        + "</table:table-row>"
+    )
+
+    return (
+        '<table:table table:name="ScoreTable">'
+        "<table:table-column/><table:table-column/><table:table-column/>"
+        + "".join(rows_xml)
+        + "</table:table>"
+    )
+
+
+#############################################################################
+# Filling the template + converting to PDF
+
+
+def fill_template(template_path, replacements, score_table_xml, out_odt_path):
+    """Copy the template, replace {{PLACEHOLDER}} text and the
+    {{SCORE}} paragraph, and save as out_odt_path."""
+    shutil.copy(template_path, out_odt_path)
+
+    with zipfile.ZipFile(out_odt_path, "r") as zin:
+        infos = zin.infolist()
+        content = zin.read("content.xml").decode("utf-8")
+        other_files = [
+            (info, zin.read(info.filename))
+            for info in infos
+            if info.filename != "content.xml"
         ]
-        
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        
-        if result.returncode == 0:
-            # LibreOffice creates PDF with same base name as ODT
-            base_name = os.path.splitext(os.path.basename(odt_path))[0]
-            generated_pdf = os.path.join(output_dir, f"{base_name}.pdf")
-            
-            # Rename to desired name if different
-            if generated_pdf != pdf_path:
-                if os.path.exists(generated_pdf):
-                    shutil.move(generated_pdf, pdf_path)
-            
-            return os.path.exists(pdf_path)
-        else:
-            print(f"❌ LibreOffice conversion failed: {result.stderr}")
-            return False
-            
-    except Exception as e:
-        print(f"❌ Error converting to PDF: {str(e)}")
-        return False
+
+    for key, value in replacements.items():
+        content = content.replace(f"{{{{{key}}}}}", _escape_xml(value))
+
+    content = re.sub(
+        r"<text:p[^>]*>\{\{SCORE\}\}</text:p>",
+        score_table_xml,
+        content,
+    )
+
+    with zipfile.ZipFile(out_odt_path, "w") as zout:
+        for info, data in other_files:
+            compress = (
+                zipfile.ZIP_STORED
+                if info.filename == "mimetype"
+                else zipfile.ZIP_DEFLATED
+            )
+            zout.writestr(info, data, compress_type=compress)
+        zout.writestr("content.xml", content, compress_type=zipfile.ZIP_DEFLATED)
+
+
+def convert_to_pdf(odt_path, out_dir):
+    """Convert an .odt file to .pdf using headless LibreOffice."""
+    with tempfile.TemporaryDirectory() as profile_dir:
+        subprocess.run(
+            [
+                "soffice",
+                "--headless",
+                f"-env:UserInstallation=file://{profile_dir}",
+                "--convert-to",
+                "pdf",
+                "--outdir",
+                str(out_dir),
+                str(odt_path),
+            ],
+            check=True,
+            capture_output=True,
+        )
+
+
+def save_folder_to_open(folder_path):
+    """Save folder path to be opened by host after container exits
+    (same mechanism as punten-create-sheets.py)."""
+    in_docker = Path("/.dockerenv").exists()
+
+    if in_docker:
+        with open("/tmp/maesbot_output_dir/folder", "w") as f:
+            f.write(str(folder_path))
+        print(
+            f"{DARK_GREY}Folder will open automatically after script completes{NC}",
+            file=sys.stderr,
+        )
+    else:
+        try:
+            subprocess.run(["xdg-open", str(folder_path)], check=True)
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            print(f"{DARK_GREY}Path: {folder_path}{NC}", file=sys.stderr)
+
+
+#############################################################################
+# Main
+
 
 def main():
-    """Main function to process all ODS files and create PDF reports."""
-    
-    # Check if template exists
-    if not os.path.exists(TEMPLATE_PATH):
-        print(f"❌ Template file not found: {TEMPLATE_PATH}")
-        print("Please update the TEMPLATE_PATH variable in the script")
-        return
-    
-    print(f"Using template: {TEMPLATE_PATH}")
-    print(f"Processing ODS files from: {args.input}")
-    print(f"Output directory: {args.output}")
-    print()
-    
-    # Find all ODS files in input directory
-    ods_files = []
-    for file in os.listdir(args.input):
-        if file.endswith('.ods'):
-            ods_files.append(os.path.join(args.input, file))
-    
+    settings = load_settings()
+    paths = settings.get("paths", {})
+
+    output_dir = Path(paths.get("punten_output_dir", ""))
+    output_dir_pdf = Path(paths.get("punten_output_dir_pdf", ""))
+    input_dir = Path(paths.get("punten_input_dir_website", ""))
+    template_path = Path(
+        paths.get(
+            "punten_template",
+            "/data/private/Punten/Templates/Taak-toets.odt",
+        )
+    )
+
+    if not output_dir.exists():
+        print(f"{RED}✗ Error: output directory does not exist: {output_dir}{NC}\n")
+        sys.exit(1)
+
+    if not output_dir_pdf.parent.exists():
+        print(
+            f"{RED}✗ Error: 'paths.punten_output_dir_pdf' parent does not exist: "
+            f"{output_dir_pdf.parent}{NC}\n"
+        )
+        sys.exit(1)
+    output_dir_pdf.mkdir(parents=True, exist_ok=True)
+
+    if not template_path.exists():
+        print(
+            f"{RED}✗ Error: template not found at {template_path}{NC}\n"
+            f"{RED}   Add 'paths.punten_template' to settings.yaml if it lives elsewhere.{NC}\n"
+        )
+        sys.exit(1)
+
+    # Find every leaf folder (klas/assignment) that actually contains sheets
+    leaf_dirs = []
+    for dirpath, _dirnames, filenames in os.walk(output_dir):
+        if any(f.endswith(".ods") for f in filenames):
+            leaf_dirs.append(Path(dirpath))
+
+    if not leaf_dirs:
+        print(f"{RED}✗ No generated sheets found under {output_dir}{NC}\n")
+        sys.exit(1)
+
+    display_to_path = {str(p.relative_to(output_dir)): p for p in sorted(leaf_dirs)}
+    selected_display = pick_from_list(
+        list(display_to_path.keys()),
+        "Select class/assignment:",
+        message_color="#87d7d7",
+    )
+    if not selected_display:
+        print(f"{YELLOW}No assignment selected{NC}\n")
+        sys.exit(1)
+
+    assignment_dir = display_to_path[selected_display]
+    klas = assignment_dir.relative_to(output_dir).parts[0]
+    assignment_basename = assignment_dir.name
+
+    # Pull the title from the matching input yaml, and derive the subject
+    # (vak) from the top-level folder that yaml lives in
+    input_yaml = find_matching_input_yaml(input_dir, assignment_basename)
+    title = assignment_basename
+    if input_yaml:
+        print(f"{DARK_GREY}Loaded input YAML from {input_yaml}{NC}", file=sys.stderr)
+        with open(input_yaml) as f:
+            ydata = yaml.safe_load(f) or {}
+        title = ydata.get("title", title)
+    else:
+        print(
+            f"{YELLOW}⚠ No matching input YAML found for '{assignment_basename}' "
+            f"under {input_dir} — falling back to folder name as title{NC}",
+            file=sys.stderr,
+        )
+
+    vak = resolve_vak(input_yaml, input_dir)
+    if not vak:
+        vak = input(
+            f"{YELLOW}Couldn't determine vak automatically. "
+            f"Vak (subject) for '{title}': {NC}"
+        ).strip()
+
+    ods_files = sorted(assignment_dir.glob("*.ods"))
     if not ods_files:
-        print(f"❌ No ODS files found in {args.input}")
-        return
-    
-    print(f"Found {len(ods_files)} ODS file(s)")
-    
-    # Process each ODS file
-    created_pdfs = []
-    for ods_file in ods_files:
-        print(f"Processing: {os.path.basename(ods_file)}")
-        
-        # Extract data from ODS
-        data = extract_data_from_ods(ods_file)
-        if data is None:
-            continue
-        
-        # Create output filenames
-        base_name = os.path.splitext(os.path.basename(ods_file))[0]
-        temp_odt_path = os.path.join(args.output, f"{base_name}_temp.odt")
-        pdf_path = os.path.join(args.output, f"{base_name}.pdf")
-        
-        # Fill ODT template
-        if not fill_odt_template(TEMPLATE_PATH, data, temp_odt_path):
-            continue
-        
-        # Convert ODT to PDF
-        if convert_odt_to_pdf(temp_odt_path, pdf_path):
-            created_pdfs.append(pdf_path)
-            print(f"  ✅ Created: {os.path.basename(pdf_path)}")
-            
-            # Clean up temporary ODT file
-            try:
-                os.remove(temp_odt_path)
-            except:
-                pass
-        else:
-            print(f"  ❌ Failed to create: {os.path.basename(pdf_path)}")
-    
+        print(f"{RED}✗ No .ods files found in {assignment_dir}{NC}\n")
+        sys.exit(1)
+
+    print(f"{DARK_GREY}Klas: {klas} | Vak: {vak} | Titel: {title}{NC}", file=sys.stderr)
+    print(
+        f"{DARK_GREY}Generating PDFs for {len(ods_files)} student(s): "
+        f"{', '.join(p.stem.split(' - ')[0] for p in ods_files)}{NC}"
+    )
     print()
-    print(f"✅ Successfully created {len(created_pdfs)} PDF report(s)")
-    
-    # Open output directory
+
+    # Destination folder: ".../Verbeterde taken en toetsen/{klas} - {vak}/{assignment}/"
+    # (mirrors punten-create-sheets.py's output_dir/basename/ structure)
+    target_dir = output_dir_pdf / f"{klas} - {vak}" / assignment_basename
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    today = datetime.now().strftime("%d/%m/%Y")
+    created_files = []
+    moved_ods_count = 0
+
+    for ods_path in ods_files:
+        student_name = ods_path.stem.split(" - ")[0]
+
+        try:
+            items, total_score, total_max = read_ods_data(ods_path)
+        except Exception as e:
+            print(f"{RED}✗ Skipping {ods_path.name}: {e}{NC}")
+            continue
+
+        if any(i["score"] is None for i in items):
+            print(
+                f"{YELLOW}⚠ {student_name}: some items are not graded yet, "
+                f"generating PDF anyway{NC}"
+            )
+
+        replacements = {
+            "NAAM": student_name,
+            "DATUM": today,
+            "TOTAAL": _fmt_num(total_score),
+            "VAK": vak,
+            "KLAS": klas,
+            "TITEL": title,
+        }
+        score_table_xml = build_score_table_xml(items, total_score, total_max)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_odt = Path(tmp) / f"{student_name}.odt"
+            fill_template(template_path, replacements, score_table_xml, tmp_odt)
+            try:
+                convert_to_pdf(tmp_odt, target_dir)
+            except subprocess.CalledProcessError as e:
+                print(f"{RED}✗ Failed to convert {student_name} to PDF: {e}{NC}")
+                continue
+
+        generated_pdf = target_dir / f"{student_name}.pdf"
+        final_pdf = target_dir / f"{student_name} - {title}.pdf"
+        if generated_pdf.exists():
+            generated_pdf.replace(final_pdf)
+            created_files.append(final_pdf)
+            print(f"{BLUE}📄 Created: {final_pdf.name}{DARK_GREY}", file=sys.stderr)
+
+            # Move the graded sheet alongside its PDF so it no longer shows
+            # up as a pending assignment in punten_output_dir
+            shutil.move(str(ods_path), str(target_dir / ods_path.name))
+            moved_ods_count += 1
+        else:
+            print(f"{RED}✗ Expected PDF not found for {student_name}{NC}")
+
+    print()
+    print(
+        f"Successfully created {len(created_files)} PDF(s) and moved "
+        f"{moved_ods_count} sheet(s) to: {target_dir}{NC}"
+    )
+
+    # Clean up the now-empty (or partially-emptied) TO-DO folders
     try:
-        subprocess.run(["xdg-open", args.output], check=True)
-        print("📂 Opened output directory")
-    except (subprocess.CalledProcessError, FileNotFoundError):
-        print(f"📁 Output directory: {args.output}")
+        if not any(assignment_dir.iterdir()):
+            assignment_dir.rmdir()
+            klas_dir = assignment_dir.parent
+            if klas_dir != output_dir and not any(klas_dir.iterdir()):
+                klas_dir.rmdir()
+    except OSError:
+        pass  # leftover files (e.g. a failed conversion) - leave it as is
+
+    save_folder_to_open(target_dir)
+
 
 if __name__ == "__main__":
     main()
 
 ######################################################################################################
 # GUIDE
-
-# $ python3 2-sheet2pdf.py --input "/home/hanne/Documents/Nextcloud/School/maesbot-private-data/Punten/Generated Output/5IFCW/servers" --output "/home/hanne/Documents/Nextcloud/School/maesbot-private-data/Punten/PDF Reports/"
+#
+# settings.yaml paths section (yours, for reference):
+#   paths:
+#     private_settings: "/data/private/private-settings.yaml"
+#     punten_input_dir_website: "/data/input/"
+#     punten_output_dir: "/data/private/Punten/Taken en toetsen - TO-DO/"
+#     punten_output_dir_pdf: "/data/private/Punten/Taken en toetsen - Verbeterd/"
+#     punten_template: "/data/private/Punten/Templates/Taak-toets.odt"
+#
+# Add to main.py:
+#   actions = ["Punten: Create Sheets", "Punten: Sheets to PDF"]
+#   ...
+#   elif selected == "Punten: Sheets to PDF":
+#       run_script("punten-sheets-to-pdf.py")
+#
+# (The old commented-out call used the path "Punten/sheets-to-pdf.py", which
+# doesn't match the actual filename "punten-sheets-to-pdf.py" in your repo root.)
