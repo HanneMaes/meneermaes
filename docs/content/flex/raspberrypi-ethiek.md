@@ -1,6 +1,6 @@
 ---
 title: De Ethiek van Raspberry Pi
-last_modified: 2026-09-07 10:29:32 +0200
+last_modified: 2026-09-07 10:35:21 +0200
 created: Mon, oct 13, 2025  21:58:23 PM
 ---
 
@@ -35,7 +35,7 @@ Onderzoek de stelling en:
 
 ## Verslag & Zoekstrategie
 
-Maak een verslag over de Zoekstrategie die je gebruikt het om deze vraag te beantwoorden.
+Maak een verslag over de zoekstrategie die je gebruikt het om deze vraag te beantwoorden.
 
 {% include callout.html type='Tips:' content='
 [Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
