@@ -1,6 +1,6 @@
 ---
 title: Markdown
-last_modified: 2025-03-24 09:27:32 +0200
+last_modified: 2026-09-08 11:24:30 +0200
 created: 2024-03-04T13:37:48+01:00
 ---
 
@@ -10,11 +10,12 @@ created: 2024-03-04T13:37:48+01:00
 2. Theorie: [Wat is markdown](Wat-is-markdown)
 3. Praktisch: [Hoe gebruik je Markdown](Hoe-gebruik-je-Markdown)
 
-# Opdracht
+# Digitale Kennismaking
 
-- [GitHub Pages](github-pages)
-- Opdracht: [Onderzoek naar internettechnologie](Onderzoek-naar-internettechnologie)
+[Digitale kennismaking via Markdown](https://hannemaes.notion.site/Digitale-kennismaking-via-Markdown-32cdac9deeac4a879d74d0b9e6c63f1f?pvs=74){: .opdracht }
 
-# Markdown presentaties
+# Opdracht: Onderzoek naar internettechnologie
 
-- [Theorie & opdracht](presentatie)
+1. [GitHub Pages](github-pages)
+2. Opdracht: [Onderzoek naar internettechnologie](Onderzoek-naar-internettechnologie)
+3. [Je onderzoek presenteren](presentatie)
