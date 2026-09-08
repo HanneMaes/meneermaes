@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified: 2026-08-24 15:49:43 +0200
+last_modified: 2026-09-08 15:52:03 +0200
 created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -34,8 +34,6 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 [Lokale bestanden & Externe links](Lokale-bestanden-en-externe-links)
 
-[Een korte geschiedenis](Een-korte-geschiedenis)
-
 [Code editors](Code-editors)
 
 [Tabs & comments](Tabs-en-comments)
@@ -47,6 +45,8 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 [Body & head](body-en-head)
 
 [Meerdere pagina's](Meerdere-paginas)
+
+[Een korte geschiedenis](Een-korte-geschiedenis)
 
 [Je 1e uitgebreide website](Je-1e-uitgebreide-website){: .opdracht }
 
