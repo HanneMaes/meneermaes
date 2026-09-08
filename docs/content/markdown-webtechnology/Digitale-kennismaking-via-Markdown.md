@@ -1,7 +1,7 @@
 ---
 title: Digitale Kennismaking Via Markdown
 created: 2026-09-08 11:41:25 +0200
-last_modified: 2026-09-08 11:45:49 +0200
+last_modified: 2026-09-08 13:07:12 +0200
 ---
 
 Gebruik deze online tool om de presentaties te maken met Markdown code: [https://marp-editor.ocatools.com/](https://marp-editor.ocatools.com/)
@@ -63,17 +63,17 @@ Maak zelf een presentatie met:
 
 # Downloaden, exporteren, presenteren en uploaden
 
-![image.png](image.png)
+![marp-online-ui.png](images/marp-online-ui.png){: .frame }
 
-- **Download.md:**
-Je huidige presentatie **opslaan als een .md-bestand**. Je kunt dit bestand later opnieuw openen in de Marp Editor of verder bewerken
-- **Export:**
-Je presentatie opslaan als bijvoorbeeld PDF, PowerPoint of HTML
-- **Upload:**
-Een bestaand **.md-bestand openen**
-- **Present:**
-Je presentatie **volledig scherm tonen**, zoals tijdens een echte presentatie
+- **Download.md:**  
+  Je huidige presentatie **opslaan als een .md-bestand**. Je kunt dit bestand later opnieuw openen in de Marp Editor of verder bewerken
+- **Export:**  
+  Je presentatie opslaan als bijvoorbeeld PDF, PowerPoint of HTML
+- **Upload:**  
+  Een bestaand **.md-bestand openen**
+- **Present:**  
+  Je presentatie **volledig scherm tonen**, zoals tijdens een echte presentatie
 
-## Stap 4: Reflectie
+# Reflectie
 
 …
