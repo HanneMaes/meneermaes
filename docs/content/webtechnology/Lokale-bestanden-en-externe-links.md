@@ -1,6 +1,6 @@
 ---
 title: Lokale bestanden & externe links
-last_modified: 2024-09-20 16:42:24 +0200
+last_modified: 2026-09-08 16:26:41 +0200
 created: 2024-09-20 15:18:33 +0200
 ---
 
@@ -80,3 +80,13 @@ Bij het verwijzen naar mediabestanden in je HTML-code is het **cruciaal om relat
 - **Hosting:** Bij het uploaden naar een webserver blijven relatieve paden correct functioneren, terwijl absolute paden vaak niet meer werken.
 
 {% include callout.html type='info' content='Het is **aangeraden** om **altijd met relatieve paden** te werken.' %}
+
+
+# Zelf proberen
+
+{% include callout.html type='vraag' content='Hoe snel kan je een afbeelding downloaden en op een website zetten?' %}
+
+1. Maak een nieuwe website.
+2. Download een afbeelding van het internet.
+3. Zet de afbeelding op de website.
+4. Open de website om te controleren of de afbeelding correct op de website staat.
