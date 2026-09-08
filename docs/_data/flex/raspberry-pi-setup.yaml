@@ -1,15 +1,11 @@
-title: Raspberry Pi Ethiek
+title: Logboek Installatie Raspberry Pi
 punten:
-  - desc: "Zoekstrategie en bronkritiek"
-    max: 3
-  - desc: "Technisch vooronderzoek"
-    max: 3
-  - desc: "Technisch vooronderzoek reflectie"
+  - desc: "Welk OS heb je gekozen en waarom?"
     max: 1
-  - desc: "Installatie WordPress"
-    max: 5
-  - desc: "Installatie WordPress reflectie"
-    max: 1
+  - desc: "Logboek"
+    max: 6
+  - desc: "Relfectie"
+    max: 4
   - desc: "Digitaal document: overzichtelijk, professioneel"
     max: 1
   - desc: "Correcte school- en vaktaal"
@@ -25,7 +21,5 @@ doelen:
     desc: "De leerlingen zoeken doelgericht informatie in diverse bronnen en verwerken die op een kritische en systematische manier."
   - nr: "13.BV3_13.04.BV3_13.04.01 Subdoel 01"
     desc: "De leerlingen bepalen zelfstandig een geschikte zoekstrategie."
-  - nr: "13.BV3_13.04.BV3_13.04. 02 Subdoel 02"
-    desc: "De leerlingen beoordelen op kritische wijze digitale en niet-digitale bronnen op bruikbaarheid op basis van aangereikte criteria."
   - nr: "13.BV3_13.04.BV3_13.04.03 Subdoel 03"
     desc: "De leerlingen verwerken zelfstandig de informatie uit de bronnen i.f.v. een vooropgesteld doel."

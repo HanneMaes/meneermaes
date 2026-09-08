@@ -106,7 +106,7 @@ Onderzoeksvragen:
 3. Wat is de rol van **PHP** binnen WordPress?
 4. Maak een eenvoudig **schema** dat toont hoe deze onderdelen samenwerken.
 
-Reflectie:
+### Reflectie:
 1. Welke begrippen waren **nieuw** voor mij?
 2. **Hoe** heb ik geprobeerd ze te begrijpen (lezen, video, schema, uitleg vragen)?
 
@@ -119,7 +119,7 @@ Nu de Raspberry Pi een OS heeft, is het tijd om **WordPress te installeren**:
 
 Documenteer het **volledige verloop** duidelijk in je logboek, inclusief gemaakte keuzes, ondernomen stappen en screenshots ter ondersteuning.
 
-**Reflectie:**
+### Reflectie:
 - Wat zou ik anders aanpakken als ik opnieuw moest beginnen?
 - Wat heb ik geleerd dat ook nuttig is voor andere IT-opdrachten?
 

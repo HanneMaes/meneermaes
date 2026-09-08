@@ -1,10 +1,8 @@
 ---
 title: Settings Up A Rapberry Pi
 created: 2026-09-07 10:44:08 +0200
-last_modified: 2026-09-07 11:02:28 +0200
+last_modified: 2026-09-08 14:46:53 +0200
 ---
-
-# Opdracht: Setting up a Raspberry Pi
 
 Je krijgt **geen stappenplan**. In plaats daarvan ga je zelf op zoek naar informatie, probeer je oplossingen uit en reflecteer je regelmatig over je leerproces.
 
@@ -38,3 +36,4 @@ Je werkt onderzoekend:
 - Welke strategie gebruikte ik?
 - Wat zou ik volgende keer anders aanpakken?
 
+{% include punten.html data='raspberry-pi-setup' %} 
