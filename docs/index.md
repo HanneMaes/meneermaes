@@ -1,6 +1,6 @@
 ---
 title: Meneer Maes
-last_modified: 2026-06-30 14:21:34 +0200
+last_modified: 2026-09-09 10:04:34 +0200
 created: 2024-03-13T10:31:28+01:00
 ---
 
@@ -62,7 +62,7 @@ created: 2024-03-13T10:31:28+01:00
 
 ## Linux
 
-[Linux Cursus van HoGent (Hogeschool Gent)](https://hogenttin.github.io/linux-training-hogent/)
+[Linux Cursus van HoGent](https://hogenttin.github.io/linux-training-hogent/) (Hogeschool Gent)
 
 [Linux Journey: alles over Linux](https://linuxjourney.com/)
 
