@@ -1,7 +1,7 @@
 ---
 title: Digitale Kennismaking Via Markdown
 created: 2026-09-08 11:41:25 +0200
-last_modified: 2026-09-09 15:05:30 +0200
+last_modified: 2026-09-09 15:26:05 +0200
 ---
 
 Gebruik deze online tool om de presentaties te maken met Markdown code: [https://marp-editor.ocatools.com/](https://marp-editor.ocatools.com/)
@@ -122,3 +122,8 @@ Gebruik voor afbeeldingen een **URL naar een afbeelding die op internet staat**.
 # Reflectie
 
 …
+
+# Puntenverdeling
+
+{% include punten.html data='digitale-kennismaking-markdown' %} 
+
