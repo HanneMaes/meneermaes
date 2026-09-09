@@ -1,7 +1,7 @@
 ---
 title: Digitale Kennismaking Via Markdown
 created: 2026-09-08 11:41:25 +0200
-last_modified: 2026-09-08 13:07:12 +0200
+last_modified: 2026-09-09 11:42:39 +0200
 ---
 
 Gebruik deze online tool om de presentaties te maken met Markdown code: [https://marp-editor.ocatools.com/](https://marp-editor.ocatools.com/)
@@ -73,6 +73,51 @@ Maak zelf een presentatie met:
   Een bestaand **.md-bestand openen**
 - **Present:**  
   Je presentatie **volledig scherm tonen**, zoals tijdens een echte presentatie
+
+# Afbeeldingen 
+
+```markdown
+# Afbeeldingen
+Gebruik voor afbeeldingen een **URL naar een afbeelding die op internet staat**.
+![](https://www.meneermaes.be/content/markdown-webtechnology/images/Markdown-mark.png)
+
+---
+
+# Vergroten & verkleinen
+
+## Width instellen
+![w:100](https://www.meneermaes.be/content/markdown-webtechnology/images/Markdown-mark.png)
+
+## Height instellen
+![h:100](https://www.meneermaes.be/content/markdown-webtechnology/images/Markdown-mark.png)
+
+---
+
+# Achtergrond afbeelding
+![bg](https://www.meneermaes.be/content/markdown-webtechnology/images/Markdown-mark.png)
+
+---
+
+# Achtergrond afbeelding schalen
+![bg 50%](https://www.meneermaes.be/content/markdown-webtechnology/images/Markdown-mark.png)
+
+---
+
+# Achtergrond afbeelding op de rechter helft
+![bg right](https://www.meneermaes.be/content/webtechnology/images/daftpunk.webp)
+
+---
+
+# Doorschijnend
+![opacity:0.5](https://www.meneermaes.be/content/webtechnology/images/daftpunk.webp)
+- 0 = volledig transparant
+- 1 = volledig zichtbaar
+
+---
+
+# Eigenschappen conbineren
+![bg left 80% opacity:0.5](https://www.meneermaes.be/content/webtechnology/images/daftpunk.webp)
+```
 
 # Reflectie
 
