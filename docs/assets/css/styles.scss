@@ -451,17 +451,19 @@ figcaption::before {
 /* CODE */
 /* **** */
 
-code.hljs.language-html::before {
+/* bash */ 
+code.hljs.language-bash::before {
   content: "" !important;
 }
-.language-html code {
-  border: var(--borderWidth) solid #d4a200;
+.language-bash code {
+  border: var(--borderWidth) solid #79b791;
 }
-.language-html::before {
-  color: #d4a200;
-  content: "HTML";
+.language-bash::before {
+  color: #79b791;
+  content: "Bash";
 }
 
+/* css */ 
 code.hljs.language-css::before {
   content: "" !important;
 }
@@ -473,6 +475,19 @@ code.hljs.language-css::before {
   content: "CSS";
 }
 
+/* html */ 
+code.hljs.language-html::before {
+  content: "" !important;
+}
+.language-html code {
+  border: var(--borderWidth) solid #d4a200;
+}
+.language-html::before {
+  color: #d4a200;
+  content: "HTML";
+}
+
+/* javascript */ 
 code.hljs.language-javascript::before {
   content: "" !important;
 }
@@ -484,6 +499,19 @@ code.hljs.language-javascript::before {
   content: "JavaScript";
 }
 
+/* json */ 
+code.hljs.language-json::before {
+  content: "" !important;
+}
+.language-json code {
+  border: var(--borderWidth) solid #b72c92;
+}
+.language-json::before {
+  color: #b72c92;
+  content: "JSON";
+}
+
+/* latex */ 
 code.hljs.language-latex::before {
   content: "" !important;
 }
@@ -495,6 +523,21 @@ code.hljs.language-latex::before {
   content: "LaTeX";
 }
 
+/* markdown */ 
+
+/* python */ 
+code.hljs.language-python::before {
+  content: "" !important;
+}
+.language-python code {
+  border: var(--borderWidth) solid #f6ca40;
+}
+.language-python::before {
+  color: #f6ca40;
+  content: "Python";
+}
+
+.language-json::before,
 .language-html::before,
 .language-css::before,
 .language-javascript::before,

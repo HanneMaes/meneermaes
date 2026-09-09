@@ -39,3 +39,17 @@ Launch the Docker container with the Jekyll project: `cd docs/ && bash init.sh`
 - `init.sh`: Script to launch the Jekyll website
 - `_layouts/`: Directory containing template files for different page layouts
 - `_site/`: Output directory where Jekyll generates the final static site aka the final .html files
+
+## Libraries
+
+### Highlight.js 
+
+Imported in `_layouts/default.html`
+
+**Every languages needs to be imported separately:**
+1. Look for all codeblocks: `grep -RhoE '^[[:space:]]*```[[:alnum:]_+-]+' . --include='*.md' | sed -E 's/^[[:space:]]*```//' | sort -u`
+  - Have aliasses is not a problem highlight.js accepts `js` as well as `javascript` and `bash` as well ass `sh`, ...
+  - Of if you want to see in what file they are: `grep -RnoE '^[[:space:]]*```[[:alnum:]_+-]+' . --include='*.md'`
+2. Go to `https://cdnjs.com/libraries/highlight.js/11.9.0`, check if the version is correct, filter on Javascript files 
+3. Look for the correct langige file and add it to `_layouts/default.html`
+4. Add styling in `assets/styles.scss`, seartch for `/* CODE */` in the file
