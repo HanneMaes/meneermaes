@@ -52,4 +52,8 @@ Imported in `_layouts/default.html`
   - Of if you want to see in what file they are: `grep -RnoE '^[[:space:]]*```[[:alnum:]_+-]+' . --include='*.md'`
 2. Go to `https://cdnjs.com/libraries/highlight.js/11.9.0`, check if the version is correct, filter on Javascript files 
 3. Look for the correct langige file and add it to `_layouts/default.html`
-4. Add styling in `assets/styles.scss`, seartch for `/* CODE */` in the file
+4. Add styling in `assets/styles.scss`, seartch for `/* CODEBLOCKS */` in the file
+
+**Find codeblocks with no language:**
+1. Find all: `awk '/^[[:space:]]*```/ { if (!inside) { if ($0 ~ /^[[:space:]]*```[[:space:]]*$/) print FILENAME ":" FNR ":" $0; inside = 1 } else { inside = 0 } }' $(find . -name '*.md' -type f)`
+2. Open vim on the correct line: `nvim ./flex/Bash-scripting.md +65`

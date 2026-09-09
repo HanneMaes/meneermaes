@@ -105,7 +105,7 @@ footer: Markdown Presentaties
 ---
 
 2. Maak een **.md** bestand met deze code:
-```
+```markdown
 ---
 marp: true
 ---
@@ -118,7 +118,7 @@ marp: true
 ```
 
 Deze code **moet bovenaan** staan:
-```
+```markdown
 ---
 marp: true
 ---
@@ -147,7 +147,7 @@ Als de preview geen slides zijn:
 
 Algemene settings plaats je bovenaan je code:
 
-```
+```markdown
 ---
 marp: true
 theme: default
@@ -169,7 +169,7 @@ theme: default
 
 Settings voor 1 slide plaats je **bovenaan** de slide:
 
-```
+```markdown
 <!-- _backgroundColor: white -->
 <!-- _color: black -->
 ```
@@ -180,7 +180,7 @@ Settings voor 1 slide plaats je **bovenaan** de slide:
 
 Custom CSS voor 1 slide plaats je **bovenaan** de slide:
 
-```
+```markdown
 <style scoped>
     * {
         font-size: 24px;
@@ -194,7 +194,7 @@ Custom CSS voor 1 slide plaats je **bovenaan** de slide:
 
 Global custom CSS plaats je **direct onder de marp settings**:
 
-```
+```markdown
 ---
 marp: true
 ---

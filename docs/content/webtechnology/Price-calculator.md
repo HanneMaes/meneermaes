@@ -1,6 +1,6 @@
 ---
 title: Price calculator
-last_modified: 2024-06-05 08:26:45 +0200
+last_modified: 2026-09-09 15:15:05 +0200
 created: 2024-06-05 08:26:45 +0200
 ---
 

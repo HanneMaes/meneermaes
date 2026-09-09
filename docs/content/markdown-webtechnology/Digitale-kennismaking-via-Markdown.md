@@ -1,7 +1,7 @@
 ---
 title: Digitale Kennismaking Via Markdown
 created: 2026-09-08 11:41:25 +0200
-last_modified: 2026-09-09 11:42:39 +0200
+last_modified: 2026-09-09 15:05:30 +0200
 ---
 
 Gebruik deze online tool om de presentaties te maken met Markdown code: [https://marp-editor.ocatools.com/](https://marp-editor.ocatools.com/)
@@ -19,8 +19,8 @@ color: lightcyan
 # Hoofdstitel
 ## Ondertitel
 Gewone tekst schrijf je gewoon zoals dit.
-- Iets **vetgedrukt maken** doe je met twee asterisk-symbolen.
-- Iets *schuingedrukt* maken doe je met één asterisk.
+- Iets **vetgedrukt maken** doe je met twee asterisk symbolen.
+- Iets *schuin gedrukt* maken doe je met één asterisk.
 
 ---
 
