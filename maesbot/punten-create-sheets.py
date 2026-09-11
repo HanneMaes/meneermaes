@@ -9,7 +9,8 @@ from odf.style import (
     TableColumnProperties,
     TableCellProperties,
     ParagraphProperties,
-)  # For styling cells and columns
+    TableProperties,
+)  # For styling cells, columns, and tab color
 from odf.table import (
     Table,
     TableColumn,
@@ -17,6 +18,9 @@ from odf.table import (
     TableCell,
 )  # For table structure elements
 from odf.text import P  # For paragraph text elements inside cells
+from odf.namespaces import TABLENS  # Needed to set the tab-color attribute directly,
+
+# since odfpy's schema predates ODF 1.2 tab colors
 from lib.colors import *  # Import the colors from colors.py
 from pathlib import Path
 
@@ -50,6 +54,19 @@ os.makedirs(args.output, exist_ok=True)
 # Extract data from YAML with defaults
 title = data.get("title", "punten")  # Get title or use "punten" as default
 punten = data.get("punten", [])  # Get list of assignments/points items
+doelen = data.get("doelen", [])  # Get list of evaluation goals (leerplandoelen)
+
+# Legend for the V/B/G/E evaluation scale used on the Doelen sheet
+DOELEN_SCALE = [
+    ("V", "Niet bereid tot."),
+    ("B", "Toont soms bereidheid tot."),
+    ("G", "Meestal bereid tot."),
+    ("E", "Altijd bereid tot."),
+]
+DOELEN_DEFAULT = "G"  # Pre-marked by default
+CHECKED = "x"
+UNCHECKED = ""
+DOELEN_TAB_COLOR = "#CD7B60"  # rgb(205, 123, 96)
 
 # Create output folder structure: output_dir/basename/
 output_folder = os.path.join(args.output, basename)
@@ -242,8 +259,63 @@ def create_spreadsheet(student_name, assignment_name):
 
     table.addElement(total_row)
 
-    # Add table to document and save
+    # Add the grading table to the document
     doc.spreadsheet.addElement(table)
+
+    # ---- Doelen (evaluation goals) sheet ----
+    # A separate, colored tab in the same file: one row per doel, with an
+    # "X" placed under the applicable V/B/G/E column - the teacher marks
+    # the right one by typing "X" there and clearing the old one. "G" is
+    # pre-marked as the default.
+    if doelen:
+        doelen_tab_style_name = "DoelenTabColor"
+        doelen_tab_style = Style(name=doelen_tab_style_name, family="table")
+        tab_props = TableProperties()
+        # odfpy's schema predates ODF 1.2's tab-color, so it has to be set
+        # directly on the element's attribute dict rather than via kwargs.
+        tab_props.attributes[(TABLENS, "tab-color")] = DOELEN_TAB_COLOR
+        doelen_tab_style.addElement(tab_props)
+        doc.automaticstyles.addElement(doelen_tab_style)
+
+        doelen_table = Table(name="Doelen", stylename=doelen_tab_style_name)
+
+        for i, width in enumerate(("11cm", "2.2cm", "2.2cm", "2.2cm", "2.2cm")):
+            style_name = f"doelen_col_{i}_{width.replace('.', '_')}"
+            col_style = Style(name=style_name, family="table-column")
+            col_style.addElement(TableColumnProperties(columnwidth=width))
+            doc.automaticstyles.addElement(col_style)
+            doelen_table.addElement(TableColumn(stylename=style_name))
+
+        # Legend row explaining what V/B/G/E mean
+        legend_text = "  |  ".join(
+            f"{letter} = {meaning}" for letter, meaning in DOELEN_SCALE
+        )
+        legend_row = TableRow()
+        legend_row.addElement(make_cell(legend_text, bg_style=grey_bg_style_name))
+        for _ in range(4):
+            legend_row.addElement(make_cell("", bg_style=grey_bg_style_name))
+        doelen_table.addElement(legend_row)
+
+        # Column header row
+        header_row = TableRow()
+        header_row.addElement(make_cell("Doelstelling", bg_style=grey_bg_style_name))
+        for letter, _meaning in DOELEN_SCALE:
+            header_row.addElement(make_cell(letter, bg_style=grey_bg_style_name))
+        doelen_table.addElement(header_row)
+
+        # One row per doel, with "X" marking the default V/B/G/E column
+        for d in doelen:
+            nr = d.get("nr", "")
+            desc = d.get("desc", "")
+            label = f"{nr} - {desc}" if nr else desc
+            row = TableRow()
+            row.addElement(make_cell(label, align_style=left_align_style_name))
+            for letter, _meaning in DOELEN_SCALE:
+                box = CHECKED if letter == DOELEN_DEFAULT else UNCHECKED
+                row.addElement(make_cell(box, align_style=center_align_style_name))
+            doelen_table.addElement(row)
+
+        doc.spreadsheet.addElement(doelen_table)
 
     # Create filename: student-assignment.ods
     safe_student_name = student_name.replace("/", "_")  # Make filename safe
@@ -260,7 +332,9 @@ created_files = []
 for student in args.students:
     output_file = create_spreadsheet(student, basename)
     created_files.append(output_file)
-    print(f"{BLUE}📊 Created: {os.path.basename(output_file)}{DARK_GREY}", file=sys.stderr)
+    print(
+        f"{BLUE}📊 Created: {os.path.basename(output_file)}{DARK_GREY}", file=sys.stderr
+    )
 
 print()
 print(
@@ -276,12 +350,16 @@ def save_folder_to_open(folder_path):
     if in_docker:
         with open("/tmp/maesbot_output_dir/folder", "w") as f:
             f.write(folder_path)
-        print(f"{DARK_GREY}Folder will open automatically after script completes{NC}", file=sys.stderr)
+        print(
+            f"{DARK_GREY}Folder will open automatically after script completes{NC}",
+            file=sys.stderr,
+        )
     else:
         try:
             subprocess.run(["xdg-open", folder_path], check=True)
         except (subprocess.CalledProcessError, FileNotFoundError):
             print(f"{DARK_GREY}Path: {folder_path}{NC}", file=sys.stderr)
+
 
 save_folder_to_open(output_folder)
 

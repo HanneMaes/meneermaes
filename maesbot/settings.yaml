@@ -9,5 +9,5 @@
 paths:
   private_settings: "/data/private/private-settings.yaml"
   punten_input_dir_website: "/data/input/"
-  punten_output_dir: "/data/private/Punten/Taken en toetsen - to-do/"
-  punten_output_dir_pdf: "/data/private/Punten/Taken en toetsen - verbeterd/"
+  punten_output_dir: "/data/private/Punten/Taken en toetsen TO-DO/"
+  punten_output_dir_pdf: "/data/private/Punten/Taken en toetsen Verbeterd/"

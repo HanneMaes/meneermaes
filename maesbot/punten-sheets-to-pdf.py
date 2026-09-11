@@ -137,6 +137,58 @@ def read_ods_data(ods_path):
 
 
 #############################################################################
+# Reading the "Doelen" tab (if present)
+
+
+def read_doelen_marks(ods_path):
+    """Read the Doelen tab of a graded .ods sheet, if present.
+
+    Returns a list of dicts: {"nr", "desc", "marked", "ambiguous"} - one per
+    doel row. "marked" is whichever of V/B/G/E contains an "x" (case
+    insensitive), or None if none do. "ambiguous" is True if more than one
+    column was marked "x" for that row (in which case the first one found,
+    in V/B/G/E order, is used, but the caller should warn about it)."""
+    doc = load_ods(str(ods_path))
+    tables = doc.spreadsheet.getElementsByType(Table)
+    doelen_tables = [t for t in tables if t.getAttribute("name") == "Doelen"]
+    if not doelen_tables:
+        return []
+
+    rows = doelen_tables[0].getElementsByType(TableRow)
+    # rows[0] = legend row, rows[1] = header row (Doelstelling|V|B|G|E),
+    # rows[2:] = one row per doel
+    letters = ["V", "B", "G", "E"]
+    marks = []
+    for row in rows[2:]:
+        cells = row.getElementsByType(TableCell)
+        if not cells:
+            continue
+        label = extractText(cells[0]).strip()
+        if not label:
+            continue
+
+        # The sheet stores "nr - desc" combined in one cell; split it back
+        # apart for the PDF (nr's are short codes with no " - " in them).
+        if " - " in label:
+            nr, desc = label.split(" - ", 1)
+        else:
+            nr, desc = "", label
+
+        # Only an actual "x" counts as a mark - ignores stray whitespace or
+        # accidental keystrokes left behind in an otherwise-empty cell.
+        matched_letters = [
+            letter
+            for letter, cell in zip(letters, cells[1:5])
+            if extractText(cell).strip().lower() == "x"
+        ]
+        marked = matched_letters[0] if matched_letters else None
+        ambiguous = len(matched_letters) > 1
+
+        marks.append({"nr": nr, "desc": desc, "marked": marked, "ambiguous": ambiguous})
+    return marks
+
+
+#############################################################################
 # Building the {{SCORE}} replacement
 
 
@@ -185,13 +237,77 @@ def build_score_table_xml(items, total_score, total_max):
     )
 
 
+CHECKED_BOX = "\u2612"  # ☒ - used in the Writer template (Calc uses plain "x" instead)
+UNCHECKED_BOX = "\u2610"  # ☐
+
+
+def build_doelen_rows_xml(doelen_marks):
+    """Build one <table:table-row> per doel for the template's 'Transversale
+    eindterm' table (Table5), replacing the {{DOEL}} row with the doel's
+    nr/desc (on separate lines) and marking the correct V/B/G/E box."""
+
+    # (cell style, label text, line-break comes before the label span)
+    scale_cells = [
+        ("Table5.B2", "Niet bereid tot.", False),
+        ("Table5.C2", "Toont soms bereidheid tot.", False),
+        ("Table5.D2", "Meestal bereid tot.", True),
+        ("Table5.E2", "Altijd bereid tot.", True),
+    ]
+    letters = ["V", "B", "G", "E"]
+
+    rows = []
+    for doel in doelen_marks:
+        nr = doel["nr"]
+        desc = doel["desc"]
+        marked = doel["marked"]
+
+        if nr:
+            label_xml = f"{_escape_xml(nr)}<text:line-break/>{_escape_xml(desc)}"
+        else:
+            label_xml = _escape_xml(desc)
+
+        cells_xml = [
+            '<table:table-cell table:style-name="Table5.A2" office:value-type="string">'
+            f'<text:p text:style-name="P4">{label_xml}</text:p>'
+            "</table:table-cell>"
+        ]
+        for letter, (style, text, lb_before) in zip(letters, scale_cells):
+            box = CHECKED_BOX if letter == marked else UNCHECKED_BOX
+            if lb_before:
+                inner = (
+                    f'<text:span text:style-name="T4">{box}</text:span>'
+                    "<text:line-break/>"
+                    f'<text:span text:style-name="T2">{text}</text:span>'
+                )
+            else:
+                inner = (
+                    f'<text:span text:style-name="T4">{box}</text:span>'
+                    f'<text:span text:style-name="T2"> <text:line-break/>{text}</text:span>'
+                )
+            cells_xml.append(
+                f'<table:table-cell table:style-name="{style}" office:value-type="string">'
+                f'<text:p text:style-name="P4">{inner}</text:p>'
+                "</table:table-cell>"
+            )
+        rows.append(
+            '<table:table-row table:style-name="Table5.1">'
+            + "".join(cells_xml)
+            + "</table:table-row>"
+        )
+
+    return "".join(rows)
+
+
 #############################################################################
 # Filling the template + converting to PDF
 
 
-def fill_template(template_path, replacements, score_table_xml, out_odt_path):
-    """Copy the template, replace {{PLACEHOLDER}} text and the
-    {{SCORE}} paragraph, and save as out_odt_path."""
+def fill_template(
+    template_path, replacements, score_table_xml, doelen_marks, out_odt_path
+):
+    """Copy the template, replace {{PLACEHOLDER}} text, the {{SCORE}}
+    paragraph, and the 'Transversale eindterm' (Table5) row(s), then save
+    as out_odt_path."""
     shutil.copy(template_path, out_odt_path)
 
     with zipfile.ZipFile(out_odt_path, "r") as zin:
@@ -211,6 +327,24 @@ def fill_template(template_path, replacements, score_table_xml, out_odt_path):
         score_table_xml,
         content,
     )
+
+    doel_idx = content.find("{{DOEL}}")
+    if doel_idx != -1:
+        row_start = content.rfind("<table:table-row", 0, doel_idx)
+        row_end = content.find("</table:table-row>", doel_idx) + len(
+            "</table:table-row>"
+        )
+        if doelen_marks:
+            content = (
+                content[:row_start]
+                + build_doelen_rows_xml(doelen_marks)
+                + content[row_end:]
+            )
+        else:
+            # No doelen for this assignment - drop the whole Table5 table
+            table_start = content.rfind("<table:table ", 0, row_start)
+            table_end = content.find("</table:table>", row_end) + len("</table:table>")
+            content = content[:table_start] + content[table_end:]
 
     with zipfile.ZipFile(out_odt_path, "w") as zout:
         for info, data in other_files:
@@ -381,6 +515,19 @@ def main():
                 f"generating PDF anyway{NC}"
             )
 
+        doelen_marks = read_doelen_marks(ods_path)
+        if any(d["marked"] is None for d in doelen_marks):
+            print(
+                f"{YELLOW}⚠ {student_name}: one or more doelen have no V/B/G/E "
+                f"mark, leaving those boxes unchecked{NC}"
+            )
+        if any(d["ambiguous"] for d in doelen_marks):
+            print(
+                f"{RED}⚠ {student_name}: one or more doelen have MULTIPLE "
+                f"V/B/G/E marks - using the first one found, please fix the "
+                f"sheet and re-run{NC}"
+            )
+
         replacements = {
             "NAAM": student_name,
             "DATUM": today,
@@ -393,7 +540,9 @@ def main():
 
         with tempfile.TemporaryDirectory() as tmp:
             tmp_odt = Path(tmp) / f"{student_name}.odt"
-            fill_template(template_path, replacements, score_table_xml, tmp_odt)
+            fill_template(
+                template_path, replacements, score_table_xml, doelen_marks, tmp_odt
+            )
             try:
                 convert_to_pdf(tmp_odt, target_dir)
             except subprocess.CalledProcessError as e:
@@ -420,13 +569,20 @@ def main():
         f"{moved_ods_count} sheet(s) to: {target_dir}{NC}"
     )
 
-    # Clean up the now-empty (or partially-emptied) TO-DO folders
+    # Clean up the now-empty (or partially-emptied) TO-DO folders, all the
+    # way up to punten_output_dir itself if nothing is left in it
     try:
         if not any(assignment_dir.iterdir()):
             assignment_dir.rmdir()
             klas_dir = assignment_dir.parent
             if klas_dir != output_dir and not any(klas_dir.iterdir()):
                 klas_dir.rmdir()
+                if output_dir.exists() and not any(output_dir.iterdir()):
+                    output_dir.rmdir()
+                    print(
+                        f"{DARK_GREY}No pending sheets left - removed {output_dir}{NC}",
+                        file=sys.stderr,
+                    )
     except OSError:
         pass  # leftover files (e.g. a failed conversion) - leave it as is
 

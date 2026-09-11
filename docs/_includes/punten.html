@@ -1,9 +1,18 @@
 {% assign dir_segments = page.path | split: '/' %}
-{% assign subdirectory = dir_segments[1] %}
+{% assign default_subdir = dir_segments[1] %}
+
+{% assign data_segments = include.data | split: '/' %}
+{% if data_segments.size > 1 and data_segments[0] == '..' %}
+  {% assign subdirectory = data_segments[1] %}
+  {% assign data_key = data_segments[2] %}
+{% else %}
+  {% assign subdirectory = default_subdir %}
+  {% assign data_key = include.data %}
+{% endif %}
 
 <!-- load yaml data -->
 {% assign collection = site.data[subdirectory] %}
-{% assign yaml_data = collection[include.data] %}
+{% assign yaml_data = collection[data_key] %}
 {% assign puntenverdeling = yaml_data.punten %}
 {% assign doelen = yaml_data.doelen %}
 
