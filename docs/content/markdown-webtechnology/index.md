@@ -1,6 +1,6 @@
 ---
 title: Markdown
-last_modified: 2026-09-08 11:46:56 +0200
+last_modified: 2026-09-14 21:27:22 +0200
 created: 2024-03-04T13:37:48+01:00
 ---
 
@@ -14,8 +14,12 @@ created: 2024-03-04T13:37:48+01:00
 
 [Digitale kennismaking via Markdown](Digitale-kennismaking-via-Markdown){: .opdracht }
 
-# Opdracht: Onderzoek naar internettechnologie
+# Onderzoek naar internettechnologie
 
 1. [GitHub Pages](github-pages)
-2. Opdracht: [Onderzoek naar internettechnologie](Onderzoek-naar-internettechnologie)
+2. [Onderzoek naar internettechnologie](Onderzoek-naar-internettechnologie){: .opdracht }
 3. [Je onderzoek presenteren](presentatie)
+
+# Reflectie
+
+[Reflecteren over Markdown](Reflecteren-over-markdown){: .opdracht }

@@ -1,12 +1,12 @@
 ---
 title: Basisoptie I.T.
-last_modified: 2026-09-08 09:42:44 +0200
+last_modified: 2026-09-14 20:26:30 +0200
 created: Wed, sep 15, 2024  14:03:23 PM
 ---
 
 # Kennismaking
 
-[Digitale kennismaking via Markdown](https://hannemaes.notion.site/Digitale-kennismaking-via-Markdown-32cdac9deeac4a879d74d0b9e6c63f1f?pvs=74){: .opdracht }
+[Digitale kennismaking via Markdown](../markdown-webtechnology/index){: .opdracht }
 
 [Zelfstandige inhaalopdracht: Digitale kennismaking via online tools](https://hannemaes.notion.site/Zelfstandige-inhaalopdracht-Digitale-kennismaking-via-online-tools-d465e05da6f044fdba720cc56abcf47b?pvs=4){: .opdracht }
 

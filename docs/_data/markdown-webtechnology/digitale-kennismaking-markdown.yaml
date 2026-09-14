@@ -1,7 +1,23 @@
 title: Digitale Kennismaking via Markdown
 punten:
-  - desc: ""
-    max:
+  - desc: "Verschillende titleniveaus"
+    max: 1
+  - desc: "Genummerde en ongenummerde lijst"
+    max: 1
+  - desc: "Vetgedrukte en schuingedrukte tekst"
+    max: 1
+  - desc: "Minstens 3 Afbeeldingen met een extra eigenschap (kleiner, doorschijnend, achtergrondafbeelding, ...)"
+    max: 3
+  - desc: "Je presentatie is overzichtelijk en duidelijk"
+    max: 1
+  - desc: "Je gebruikt extra markdown codes die niet in de cursus staan"
+    max: 2
+  - desc: "Je gebruikt schooltaal"
+    max: 1
 doelen:
-  - nr: ""
-    desc: ""
+  - nr: "BV1_04.02"
+    desc: "De leerlingen gebruiken doelgericht basisfunctionaliteiten van toepassingen om digitale inhouden te creëren."
+  - nr: "BV1_13.01"
+    desc: "De leerlingen reflecteren over het eigen leerproces en sturen het doelgericht bij."
+  - nr: "BV1_13.03"
+    desc: "De leerlingen gebruiken school- en vaktaal."

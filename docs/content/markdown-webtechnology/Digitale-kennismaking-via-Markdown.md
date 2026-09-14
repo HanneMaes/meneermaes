@@ -1,14 +1,27 @@
 ---
 title: Digitale Kennismaking Via Markdown
 created: 2026-09-08 11:41:25 +0200
-last_modified: 2026-09-09 15:26:05 +0200
+last_modified: 2026-09-14 21:06:53 +0200
 ---
 
 Gebruik deze online tool om de presentaties te maken met Markdown code: [https://marp-editor.ocatools.com/](https://marp-editor.ocatools.com/)
 
+# Onderwerpen 
+
+Dit zijn voorbeelden van wat je kan vertellen over jezelf, maar je kiest zelf wat en hoe veel je over jezelf wil delen:
+- Waar je woont 
+- Hoe je naar school komt 
+- Wat je hobby's zijn 
+- Wat je tijdens de vakantie gedaan hebt 
+- Wat je graag zou willen leren tijdens deze lessen 
+- Welke games je speelt 
+- Welke muziek je luistert
+- Welke series je kijkt
+- ...
+
 # Voorbeeldcode
 
-Gebruik deze voorbeeldcode als startpunt:
+Gebruik deze voorbeeld code als startpunt:
 
 ```markdown
 ---
@@ -115,15 +128,18 @@ Gebruik voor afbeeldingen een **URL naar een afbeelding die op internet staat**.
 
 ---
 
-# Eigenschappen conbineren
+# Eigenschappen combineren
 ![bg left 80% opacity:0.5](https://www.meneermaes.be/content/webtechnology/images/daftpunk.webp)
 ```
 
-# Reflectie
+# Uploaden 
 
-…
+Je upload enkel je **markdown code** in de uploadzone.
 
 # Puntenverdeling
 
 {% include punten.html data='digitale-kennismaking-markdown' %} 
 
+# Reflectie
+
+…
