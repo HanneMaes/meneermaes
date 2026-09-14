@@ -1,7 +1,7 @@
 ---
 title: 'Missie: Bouw Je Digitale Hoofdkwartier'
 created: 2026-06-01 16:42:44 +0200
-last_modified: 2026-09-09 15:15:24 +0200
+last_modified: 2026-09-14 10:50:58 +0200
 ---
 
 # Digitale Hoofdkwartier
@@ -48,8 +48,6 @@ School
     │   └── Afgewerkt
     └── Back-ups
 ```
-
-### Wat betekent map?
 
 | Map                    | Functie                                                 |
 | ----------------       | ---------------------------------------------------     |
