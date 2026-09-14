@@ -1,7 +1,7 @@
 ---
 title: Digitale Kennismaking Via Markdown
 created: 2026-09-08 11:41:25 +0200
-last_modified: 2026-09-14 21:06:53 +0200
+last_modified: 2026-09-14 21:55:55 +0200
 ---
 
 Gebruik deze online tool om de presentaties te maken met Markdown code: [https://marp-editor.ocatools.com/](https://marp-editor.ocatools.com/)
@@ -25,8 +25,10 @@ Gebruik deze voorbeeld code als startpunt:
 
 ```markdown
 ---
-backgroundColor: darkblue
+backgroundColor: darkcyan
 color: lightcyan
+footer: Markdown Presentatie
+header: Maes
 ---
 
 # Hoofdstitel
@@ -59,6 +61,11 @@ Je kunt ook een genummerde lijst maken:
 3. Derde stap
 
 ---
+# Styling
+
+Geef 1 slide een uniek design
+
+--- 
 
 # Even oefenen
 Maak zelf een presentatie met:
@@ -69,9 +76,16 @@ Maak zelf een presentatie met:
 - **Vetgedrukte** tekst
 - *schuingedrukte* tekst
 
-## Tips
+---
+<!-- _backgroundColor: black-->
+<!-- _color: white -->
+
+# Tips
 - Hou je slides eenvoudig.
 - Laat plaats over voor de afbeeldingen die we straks gaan toevoegen
+
+# Uitdaging 
+- Kan jij achterhalen waarom deze slide een uniek ontwerp heeft?
 ```
 
 # Downloaden, exporteren, presenteren en uploaden
@@ -132,6 +146,10 @@ Gebruik voor afbeeldingen een **URL naar een afbeelding die op internet staat**.
 ![bg left 80% opacity:0.5](https://www.meneermaes.be/content/webtechnology/images/daftpunk.webp)
 ```
 
+# Ontdek zelf nieuwe Markdown codes 
+
+Ga zelf op ontdekking en gebruik [deze website](https://github.com/im-luka/markdown-cheatsheet) om nieuwe markdown codes te ontdekken.
+
 # Uploaden 
 
 Je upload enkel je **markdown code** in de uploadzone.
@@ -139,7 +157,3 @@ Je upload enkel je **markdown code** in de uploadzone.
 # Puntenverdeling
 
 {% include punten.html data='digitale-kennismaking-markdown' %} 
-
-# Reflectie
-
-…

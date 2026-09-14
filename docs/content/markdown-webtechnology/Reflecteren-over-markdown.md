@@ -1,7 +1,7 @@
 ---
 title: Reflecteren Over Markdown
 created: 2026-09-14 21:26:45 +0200
-last_modified: 2026-09-14 21:44:53 +0200
+last_modified: 2026-09-14 21:58:37 +0200
 ---
 
 > Je hebt de afgelopen lessen geleerd wat Markdown is, waarom het gebruikt wordt en hoe je er zelf digitale inhoud mee kunt maken.
@@ -32,4 +32,11 @@ Reflecteer over wat je leerde tijdens deze Markdown lessen en beantwoord deze vr
 1. Wat vind je het beste gelukt aan je presentatie?
 2. Wat zou je bij een volgende presentatie anders aanpakken?
 
+# Uitdaging & Uploaden
+
+Zoek zelf uit hoe je het document kan **downloaden als .md en .pdf** documenten.  
+**Upload alle 2 documenten in de uploadzone.**
+
+# Evaluatie
 {% include punten.html data='markdown-reflectie' %} 
+
