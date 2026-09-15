@@ -1,7 +1,7 @@
 ---
 title: Digitale Kennismaking Via Markdown
 created: 2026-09-08 11:41:25 +0200
-last_modified: 2026-09-14 21:55:55 +0200
+last_modified: 2026-09-15 09:22:03 +0200
 ---
 
 Gebruik deze online tool om de presentaties te maken met Markdown code: [https://marp-editor.ocatools.com/](https://marp-editor.ocatools.com/)
@@ -61,11 +61,6 @@ Je kunt ook een genummerde lijst maken:
 3. Derde stap
 
 ---
-# Styling
-
-Geef 1 slide een uniek design
-
---- 
 
 # Even oefenen
 Maak zelf een presentatie met:
