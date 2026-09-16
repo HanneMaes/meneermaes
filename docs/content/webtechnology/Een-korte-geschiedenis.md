@@ -1,6 +1,6 @@
 ---
 title: Een korte geschiedenis
-last_modified: 2024-09-20 16:44:56 +0200
+last_modified: 2026-09-16 09:49:05 +0200
 created: 2024-09-19 21:55:45 +0200
 ---
 
