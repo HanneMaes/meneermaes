@@ -1,6 +1,6 @@
 ---
 title: Github Pages
-last_modified: 2025-03-28 16:01:24 +0200
+last_modified: 2026-09-16 11:49:13 +0200
 created: 2025-03-24 08:53:55 +0200
 ---
 
@@ -54,8 +54,8 @@ Wil je een mooiere uitstraling? Je kunt eenvoudig Jekyll-thema’s gebruiken of 
 
 # Hoe publiceer je Markdown-bestanden via GitHub Pages?
 
-Via deze [Officiële guide](https://pages.github.com/) leer je een markdown project te publiceren via een GitHub-repository.
-
-Kies {% include btn.html btn='Project site' %} en {% include btn.html btn='Start from scratch' %}.
+1. Maak een **account** aan op [github.com](https://github.com).
+2. Via deze [Officiële guide](https://pages.github.com/) leer je een markdown project te publiceren via een GitHub-repository.
+3. Kies {% include btn.html btn='Project site' %} en {% include btn.html btn='Start from scratch' %}.
 
 ![](images/github-pages-guide.png){: .frame }
