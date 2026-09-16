@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified: 2026-09-08 15:52:03 +0200
+last_modified: 2026-09-16 09:08:44 +0200
 created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -43,6 +43,8 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 [Je 1e échte website](Je-1e-echte-website){: .opdracht }
 
 [Body & head](body-en-head)
+
+[Achievement: Links](Achievement-links){: .achievement }
 
 [Meerdere pagina's](Meerdere-paginas)
 
