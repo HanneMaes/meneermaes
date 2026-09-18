@@ -1,12 +1,13 @@
 ---
 title: Hardware
-last_modified: 2026-09-11 10:05:51 +0200
+last_modified: 2026-09-18 13:49:56 +0200
 created: Wed, sep 04, 2024  10:47:23 PM
 ---
 
 # Kennismaking
 
 [Digitale kennismaking door integratie van digitale tools](Digitale-kennismaking-door-integratie-van-digitale-tools)
+[Markdown](../markdown-webtechnology/index)
 
 # Opbouw & werking van een computersysteem
 
