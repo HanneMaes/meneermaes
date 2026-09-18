@@ -10,8 +10,8 @@ created: 2024-03-04T13:37:48+01:00
 # Opdracht 1: Servers Diagram
 
 1. Zoek **2 verschillende** servers waarmee jij in contact komt.
-2. Vertel de klas welke **taken** deze server uitvoert en welke **data** de server nodig heeft.
-3. Teken een **diagram** om uit te leggen wat de server doet en hoe jij deze gebruikt.
+2. Vertel de klas welke **taken** deze server uitvoert en welke **data** de server nodig heeft. **Wees zo volledig mogelijk.**
+3. Teken een **diagram** om uit te leggen wat de server doet en hoe jij deze gebruikt. **Wees zo volledig mogelijk.**
 
 Voorbeeld van een diagram:  
 ![diagram](images/diagram.png){: width='500px' }  
