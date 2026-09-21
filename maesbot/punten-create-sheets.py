@@ -9,8 +9,7 @@ from odf.style import (
     TableColumnProperties,
     TableCellProperties,
     ParagraphProperties,
-    TableProperties,
-)  # For styling cells, columns, and tab color
+)  # For styling cells and columns
 from odf.table import (
     Table,
     TableColumn,
@@ -18,9 +17,6 @@ from odf.table import (
     TableCell,
 )  # For table structure elements
 from odf.text import P  # For paragraph text elements inside cells
-from odf.namespaces import TABLENS  # Needed to set the tab-color attribute directly,
-
-# since odfpy's schema predates ODF 1.2 tab colors
 from lib.colors import *  # Import the colors from colors.py
 from pathlib import Path
 
@@ -66,7 +62,7 @@ DOELEN_SCALE = [
 DOELEN_DEFAULT = "G"  # Pre-marked by default
 CHECKED = "x"
 UNCHECKED = ""
-DOELEN_TAB_COLOR = "#CD7B60"  # rgb(205, 123, 96)
+DOELEN_ACCENT_COLOR = "#CD7B60"  # rgb(205, 123, 96)
 
 # Create output folder structure: output_dir/basename/
 output_folder = os.path.join(args.output, basename)
@@ -89,7 +85,8 @@ def create_spreadsheet(student_name, assignment_name):
     table = Table(name="Grading")
 
     # Define column widths for the 4 columns: Description, Score, "/", Max Points
-    for i, width in enumerate(("15cm", "0.6cm", "0.3cm", "0.6cm", "0.3cm", "5cm")):
+    # (B, C, D, E kept equal width so the score/"/"/max/penalty columns line up)
+    for i, width in enumerate(("15cm", "0.6cm", "0.6cm", "0.6cm", "0.6cm", "5cm")):
         # Create unique style name for each column
         style_name = f"col_{i}_{width.replace('.', '_').replace('cm', 'cm')}"
         col_style = Style(name=style_name, family="table-column")
@@ -105,6 +102,13 @@ def create_spreadsheet(student_name, assignment_name):
     grey_bg_style = Style(name=grey_bg_style_name, family="table-cell")
     grey_bg_style.addElement(TableCellProperties(backgroundcolor="#e5e5e5"))
     doc.styles.addElement(grey_bg_style)
+
+    # Accent background style (the former Doelen tab color) for the Doelen
+    # section's legend/header rows, so it still stands out from the rest
+    doelen_bg_style_name = "DoelenBackground"
+    doelen_bg_style = Style(name=doelen_bg_style_name, family="table-cell")
+    doelen_bg_style.addElement(TableCellProperties(backgroundcolor=DOELEN_ACCENT_COLOR))
+    doc.styles.addElement(doelen_bg_style)
 
     # Green background style for total row
     green_bg_style_name = "GreenBackground"
@@ -259,49 +263,76 @@ def create_spreadsheet(student_name, assignment_name):
 
     table.addElement(total_row)
 
+    # Row numbers for the two rows below, needed for their formulas
+    total_row_num = end_row + 1
+    te_laat_row_num = end_row + 2
+
+    # "Te laat" row: teacher marks column B with anything (e.g. "x") if the
+    # assignment was handed in late; column C then auto-computes the 20%
+    # point deduction (shown as a negative number).
+    te_laat_row = TableRow()
+    te_laat_row.addElement(
+        make_cell("Te laat? (-20%)", align_style=left_align_style_name)
+    )
+    te_laat_row.addElement(make_cell("", value_type="string"))  # manual mark
+    te_laat_row.addElement(
+        make_cell(
+            "",  # Display content will be calculated
+            formula=(f'of:=IF([.B{te_laat_row_num}]<>"";[.B{total_row_num}]*-0.2;0)'),
+            value_type="float",
+            value=0,  # Default value
+            align_style=left_align_style_name,
+        )
+    )
+    te_laat_row.addElement(make_cell("", value_type="string"))  # column D unused
+    table.addElement(te_laat_row)
+
+    # "EINDSCORE" row: TOTAAL plus the (negative) late penalty, so the final
+    # adjusted score is visible without the teacher subtracting by hand.
+    eindscore_row = TableRow()
+    eindscore_row.addElement(
+        make_cell("EINDSCORE", align_style=green_left_align_style_name)
+    )
+    eindscore_row.addElement(
+        make_cell(
+            "",  # Display content will be calculated
+            formula=f"of:=[.B{total_row_num}]+[.C{te_laat_row_num}]",
+            value_type="float",
+            value=0,  # Default value
+            bg_style=green_bg_style_name,
+        )
+    )
+    eindscore_row.addElement(make_cell("/", align_style=green_center_align_style_name))
+    eindscore_row.addElement(
+        make_cell(
+            "",  # Display content will be calculated
+            formula=f"of:=[.D{total_row_num}]",
+            value_type="float",
+            value=0,  # Default value
+            align_style=green_left_align_style_name,
+        )
+    )
+    table.addElement(eindscore_row)
+
     # Add the grading table to the document
     doc.spreadsheet.addElement(table)
 
-    # ---- Doelen (evaluation goals) sheet ----
-    # A separate, colored tab in the same file: one row per doel, with an
-    # "X" placed under the applicable V/B/G/E column - the teacher marks
-    # the right one by typing "X" there and clearing the old one. "G" is
-    # pre-marked as the default.
+    # ---- Doelen (evaluation goals), appended below on the same tab ----
+    # One blank row, then a single legend+header row, then data rows.
+    # Reuses columns 1-4 (otherwise score/"/"/max/penalty) as the V/B/G/E
+    # columns. This row uses the accent color instead of the plain grey
+    # used elsewhere, so this section stands out at a glance.
     if doelen:
-        doelen_tab_style_name = "DoelenTabColor"
-        doelen_tab_style = Style(name=doelen_tab_style_name, family="table")
-        tab_props = TableProperties()
-        # odfpy's schema predates ODF 1.2's tab-color, so it has to be set
-        # directly on the element's attribute dict rather than via kwargs.
-        tab_props.attributes[(TABLENS, "tab-color")] = DOELEN_TAB_COLOR
-        doelen_tab_style.addElement(tab_props)
-        doc.automaticstyles.addElement(doelen_tab_style)
+        table.addElement(TableRow())  # blank spacer row
 
-        doelen_table = Table(name="Doelen", stylename=doelen_tab_style_name)
-
-        for i, width in enumerate(("11cm", "2.2cm", "2.2cm", "2.2cm", "2.2cm")):
-            style_name = f"doelen_col_{i}_{width.replace('.', '_')}"
-            col_style = Style(name=style_name, family="table-column")
-            col_style.addElement(TableColumnProperties(columnwidth=width))
-            doc.automaticstyles.addElement(col_style)
-            doelen_table.addElement(TableColumn(stylename=style_name))
-
-        # Legend row explaining what V/B/G/E mean
-        legend_text = "  |  ".join(
-            f"{letter} = {meaning}" for letter, meaning in DOELEN_SCALE
+        legend_text = " ".join(
+            f"{letter}: {meaning}" for letter, meaning in DOELEN_SCALE
         )
-        legend_row = TableRow()
-        legend_row.addElement(make_cell(legend_text, bg_style=grey_bg_style_name))
-        for _ in range(4):
-            legend_row.addElement(make_cell("", bg_style=grey_bg_style_name))
-        doelen_table.addElement(legend_row)
-
-        # Column header row
         header_row = TableRow()
-        header_row.addElement(make_cell("Doelstelling", bg_style=grey_bg_style_name))
+        header_row.addElement(make_cell(legend_text, bg_style=doelen_bg_style_name))
         for letter, _meaning in DOELEN_SCALE:
-            header_row.addElement(make_cell(letter, bg_style=grey_bg_style_name))
-        doelen_table.addElement(header_row)
+            header_row.addElement(make_cell(letter, bg_style=doelen_bg_style_name))
+        table.addElement(header_row)
 
         # One row per doel, with "X" marking the default V/B/G/E column
         for d in doelen:
@@ -313,9 +344,7 @@ def create_spreadsheet(student_name, assignment_name):
             for letter, _meaning in DOELEN_SCALE:
                 box = CHECKED if letter == DOELEN_DEFAULT else UNCHECKED
                 row.addElement(make_cell(box, align_style=center_align_style_name))
-            doelen_table.addElement(row)
-
-        doc.spreadsheet.addElement(doelen_table)
+            table.addElement(row)
 
     # Create filename: student-assignment.ods
     safe_student_name = student_name.replace("/", "_")  # Make filename safe

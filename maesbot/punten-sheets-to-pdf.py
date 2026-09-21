@@ -99,7 +99,10 @@ def resolve_vak(input_yaml, input_dir):
 
 def read_ods_data(ods_path):
     """Read graded items + totals from a sheet created by
-    punten-create-sheets.py. Returns (items, total_score, total_max)."""
+    punten-create-sheets.py. Returns (items, total_score, total_max, late,
+    eindscore) - total_score/total_max are the raw TOTAAL row (before any
+    late penalty); eindscore is the final score after the penalty (equal to
+    total_score when the sheet has no "Te laat" row or it isn't marked)."""
     doc = load_ods(str(ods_path))
     tables = doc.spreadsheet.getElementsByType(Table)
     if not tables:
@@ -107,9 +110,20 @@ def read_ods_data(ods_path):
     table = tables[0]
     rows = table.getElementsByType(TableRow)
 
-    # rows[0] = title row, rows[1:-1] = assignment items, rows[-1] = TOTAAL
+    # Locate TOTAAL by its label rather than assuming it's the last row -
+    # "Te laat" / "EINDSCORE" rows (if present) come after it.
+    total_row_idx = None
+    for i, row in enumerate(rows):
+        cells = row.getElementsByType(TableCell)
+        if cells and extractText(cells[0]).strip().upper() == "TOTAAL":
+            total_row_idx = i
+            break
+    if total_row_idx is None:
+        raise ValueError(f"No TOTAAL row found in {ods_path}")
+
+    # rows[0] = title row, rows[1:total_row_idx] = assignment items
     items = []
-    for row in rows[1:-1]:
+    for row in rows[1:total_row_idx]:
         cells = row.getElementsByType(TableCell)
         desc = extractText(cells[0]).strip()
         score_raw = cells[1].getAttribute("value")
@@ -118,7 +132,7 @@ def read_ods_data(ods_path):
         max_pts = float(max_raw) if max_raw not in (None, "") else 0.0
         items.append({"desc": desc, "score": score, "max": max_pts})
 
-    total_cells = rows[-1].getElementsByType(TableCell)
+    total_cells = rows[total_row_idx].getElementsByType(TableCell)
     total_score_raw = total_cells[1].getAttribute("value")
     total_max_raw = total_cells[3].getAttribute("value")
 
@@ -133,7 +147,26 @@ def read_ods_data(ods_path):
     else:
         total_max = sum(i["max"] for i in items)
 
-    return items, total_score, total_max
+    # Optional "Te laat" (late) / "EINDSCORE" rows right after TOTAAL
+    late = False
+    eindscore = total_score
+    if total_row_idx + 1 < len(rows):
+        te_laat_cells = rows[total_row_idx + 1].getElementsByType(TableCell)
+        if te_laat_cells and extractText(te_laat_cells[0]).strip().upper().startswith(
+            "TE LAAT"
+        ):
+            late = extractText(te_laat_cells[1]).strip() != ""
+    if total_row_idx + 2 < len(rows):
+        eind_cells = rows[total_row_idx + 2].getElementsByType(TableCell)
+        if eind_cells and extractText(eind_cells[0]).strip().upper() == "EINDSCORE":
+            eind_raw = eind_cells[1].getAttribute("value")
+            if eind_raw not in (None, ""):
+                eindscore = float(eind_raw)
+            elif late:
+                # Fallback if the file was never opened/saved in LibreOffice
+                eindscore = round(total_score - total_score * 0.2, 2)
+
+    return items, total_score, total_max, late, eindscore
 
 
 #############################################################################
@@ -141,7 +174,11 @@ def read_ods_data(ods_path):
 
 
 def read_doelen_marks(ods_path):
-    """Read the Doelen tab of a graded .ods sheet, if present.
+    """Read the Doelen section of a graded .ods sheet, if present.
+
+    The Doelen section lives on the same "Grading" tab, below TOTAAL/Te
+    laat/EINDSCORE: a blank row, a legend row, a header row starting with
+    "Doelstelling", then one row per doel.
 
     Returns a list of dicts: {"nr", "desc", "marked", "ambiguous"} - one per
     doel row. "marked" is whichever of V/B/G/E contains an "x" (case
@@ -150,16 +187,22 @@ def read_doelen_marks(ods_path):
     in V/B/G/E order, is used, but the caller should warn about it)."""
     doc = load_ods(str(ods_path))
     tables = doc.spreadsheet.getElementsByType(Table)
-    doelen_tables = [t for t in tables if t.getAttribute("name") == "Doelen"]
-    if not doelen_tables:
+    if not tables:
+        return []
+    rows = tables[0].getElementsByType(TableRow)
+
+    header_idx = None
+    for i, row in enumerate(rows):
+        cells = row.getElementsByType(TableCell)
+        if cells and extractText(cells[0]).strip() == "Doelstelling":
+            header_idx = i
+            break
+    if header_idx is None:
         return []
 
-    rows = doelen_tables[0].getElementsByType(TableRow)
-    # rows[0] = legend row, rows[1] = header row (Doelstelling|V|B|G|E),
-    # rows[2:] = one row per doel
     letters = ["V", "B", "G", "E"]
     marks = []
-    for row in rows[2:]:
+    for row in rows[header_idx + 1 :]:
         cells = row.getElementsByType(TableCell)
         if not cells:
             continue
@@ -504,7 +547,7 @@ def main():
         student_name = ods_path.stem.split(" - ")[0]
 
         try:
-            items, total_score, total_max = read_ods_data(ods_path)
+            items, total_score, total_max, late, eindscore = read_ods_data(ods_path)
         except Exception as e:
             print(f"{RED}✗ Skipping {ods_path.name}: {e}{NC}")
             continue
@@ -513,6 +556,14 @@ def main():
             print(
                 f"{YELLOW}⚠ {student_name}: some items are not graded yet, "
                 f"generating PDF anyway{NC}"
+            )
+
+        if late:
+            print(
+                f"{YELLOW}⚠ {student_name}: marked 'Te laat' in the sheet "
+                f"(eindscore {_fmt_num(eindscore)}/{_fmt_num(total_max)}), but "
+                f"the PDF template has no placeholder for this yet - it will "
+                f"still show the pre-penalty TOTAAL ({_fmt_num(total_score)}){NC}"
             )
 
         doelen_marks = read_doelen_marks(ods_path)
