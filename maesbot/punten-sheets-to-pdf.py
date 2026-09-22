@@ -34,6 +34,7 @@ def load_settings(settings_path="settings.yaml"):
     try:
         with open(settings_file, "r") as f:
             return yaml.safe_load(f) or {}
+
     except Exception as e:
         print(f"{RED}✗ Error loading {settings_path}: {e}{NC}\n")
         sys.exit(1)
@@ -45,6 +46,7 @@ def load_settings(settings_path="settings.yaml"):
 
 def _fmt_num(number):
     """Format a number without an unnecessary .0."""
+
     if number is None:
         return ""
 
@@ -62,6 +64,7 @@ def _escape_xml(value):
 
 def find_matching_input_yaml(input_dir, assignment_basename):
     """Find the original YAML file belonging to an assignment folder."""
+
     input_dir = Path(input_dir)
 
     if not input_dir.exists():
@@ -78,29 +81,31 @@ def find_matching_input_yaml(input_dir, assignment_basename):
 
 def resolve_vak(input_yaml, input_dir):
     """Determine the subject from the first directory below input_dir."""
+
     if input_yaml is None:
         return None
 
     try:
         relative_path = input_yaml.relative_to(input_dir)
+
+        if not relative_path.parts:
+            return None
+
         return relative_path.parts[0]
+
     except (ValueError, IndexError):
         return None
 
 
 def extract_class_name(assignment_dir, output_dir):
     """
-    Extract only the class from a path such as:
+    Extract the class from a path such as:
 
         output/6AD - flex/flex/taak
 
-    or:
-
-        output/6AD - flex/taak
-
-    The class is always the first path component. The part before the first
-    ' - ' is used as the actual class name (so 'flex' is not duplicated).
+    The first directory is treated as the class directory.
     """
+
     relative_parts = assignment_dir.relative_to(output_dir).parts
 
     if not relative_parts:
@@ -123,8 +128,15 @@ def read_ods_data(ods_path):
     Read scores and totals from an ODS file.
 
     Returns:
-        items, total_score, total_max, late, eindscore, late_penalty
+
+        items,
+        total_score,
+        total_max,
+        late,
+        eindscore,
+        late_penalty
     """
+
     document = load_ods(str(ods_path))
     tables = document.spreadsheet.getElementsByType(Table)
 
@@ -151,6 +163,9 @@ def read_ods_data(ods_path):
     if total_row_index is None:
         raise ValueError(f"No TOTAAL row found in {ods_path}")
 
+    #########################################################################
+    # Individual points
+
     items = []
 
     for row in rows[1:total_row_index]:
@@ -160,10 +175,12 @@ def read_ods_data(ods_path):
             continue
 
         description = extractText(cells[0]).strip()
+
         score_raw = cells[1].getAttribute("value")
         maximum_raw = cells[3].getAttribute("value")
 
         score = float(score_raw) if score_raw not in (None, "") else None
+
         maximum = float(maximum_raw) if maximum_raw not in (None, "") else 0.0
 
         items.append(
@@ -174,6 +191,9 @@ def read_ods_data(ods_path):
             }
         )
 
+    #########################################################################
+    # Total
+
     total_cells = rows[total_row_index].getElementsByType(TableCell)
 
     total_score_raw = total_cells[1].getAttribute("value")
@@ -181,13 +201,18 @@ def read_ods_data(ods_path):
 
     if total_score_raw not in (None, ""):
         total_score = float(total_score_raw)
+
     else:
         total_score = sum(item["score"] or 0 for item in items)
 
     if total_max_raw not in (None, ""):
         total_max = float(total_max_raw)
+
     else:
         total_max = sum(item["max"] for item in items)
+
+    #########################################################################
+    # Late
 
     late = False
     late_penalty = 0.0
@@ -210,6 +235,9 @@ def read_ods_data(ods_path):
                     if penalty_raw not in (None, ""):
                         late_penalty = float(penalty_raw)
 
+    #########################################################################
+    # Eindscore
+
     eindscore_row_index = total_row_index + 2
 
     if eindscore_row_index < len(rows):
@@ -223,10 +251,21 @@ def read_ods_data(ods_path):
 
                 if eindscore_raw not in (None, ""):
                     eindscore = float(eindscore_raw)
-                elif late:
-                    eindscore = round(total_score * 0.8, 2)
 
-    return items, total_score, total_max, late, eindscore, late_penalty
+                elif late:
+                    eindscore = round(
+                        total_score * 0.8,
+                        2,
+                    )
+
+    return (
+        items,
+        total_score,
+        total_max,
+        late,
+        eindscore,
+        late_penalty,
+    )
 
 
 #############################################################################
@@ -234,7 +273,14 @@ def read_ods_data(ods_path):
 
 
 def read_doelen_marks(ods_path):
-    """Read the Doelen section from the same ODS sheet, if present."""
+    """
+    Read the Doelen section from the ODS.
+
+    Expected columns:
+
+        Doelstelling | V | B | G | E
+    """
+
     document = load_ods(str(ods_path))
     tables = document.spreadsheet.getElementsByType(Table)
 
@@ -265,6 +311,7 @@ def read_doelen_marks(ods_path):
         return []
 
     letters = ["V", "B", "G", "E"]
+
     doelen = []
 
     for row in rows[doelen_header_index + 1 :]:
@@ -281,21 +328,35 @@ def read_doelen_marks(ods_path):
         if len(cells) < 5:
             continue
 
+        #####################################################################
+        # Split number and description
+
         if " - " in label:
-            number, description = label.split(" - ", 1)
+            number, description = label.split(
+                " - ",
+                1,
+            )
+
         else:
             number = ""
             description = label
 
+        #####################################################################
+        # Find selected V/B/G/E
+
         marked_letters = []
 
-        for letter, cell in zip(letters, cells[1:5]):
+        for letter, cell in zip(
+            letters,
+            cells[1:5],
+        ):
             value = extractText(cell).strip().lower()
 
             if value == "x":
                 marked_letters.append(letter)
 
         marked = marked_letters[0] if marked_letters else None
+
         ambiguous = len(marked_letters) > 1
 
         doelen.append(
@@ -311,7 +372,350 @@ def read_doelen_marks(ods_path):
 
 
 #############################################################################
-# Building the score table (Punten)
+# Placeholder replacement
+#
+# IMPORTANT:
+#
+# The template already contains the correct formatting.
+#
+# Therefore we NEVER create a new formatting style for normal placeholders.
+# We only replace the text inside the existing XML structure.
+
+
+def _placeholder_pattern(key):
+    """
+    Find {{KEY}} even when LibreOffice has split the text over XML tags.
+    """
+
+    return re.compile(
+        r"\{\{"
+        r"\s*"
+        r"(?:<[^>]+>)*"
+        r"\s*" + re.escape(key) + r"\s*"
+        r"(?:<[^>]+>)*"
+        r"\s*"
+        r"\}\}",
+        re.DOTALL,
+    )
+
+
+def replace_placeholder_preserve_formatting(
+    content,
+    key,
+    value,
+):
+    """
+    Replace only the text of a placeholder.
+
+    Existing XML formatting remains untouched.
+
+    For example:
+
+        <text:p text:style-name="P4">{{NAAM}}</text:p>
+
+    becomes:
+
+        <text:p text:style-name="P4">Hanne Maes</text:p>
+
+    And:
+
+        <text:p text:style-name="P3">
+            <text:span text:style-name="T4">{{TOTAAL}}</text:span>
+        </text:p>
+
+    keeps both P3 and T4.
+    """
+
+    pattern = _placeholder_pattern(key)
+
+    matches = list(pattern.finditer(content))
+
+    if not matches:
+        return content
+
+    escaped_value = _escape_xml(value)
+
+    #########################################################################
+    # Replace backwards so positions remain valid.
+
+    for match in reversed(matches):
+        fragment = match.group(0)
+
+        #####################################################################
+        # Split XML tags from text.
+
+        parts = re.split(
+            r"(<[^>]+>)",
+            fragment,
+        )
+
+        text_indexes = []
+
+        for index, part in enumerate(parts):
+            if not part:
+                continue
+
+            if part.startswith("<"):
+                continue
+
+            text_indexes.append(index)
+
+        #####################################################################
+        # Replace the first text section.
+
+        if text_indexes:
+            first_index = text_indexes[0]
+
+            parts[first_index] = escaped_value
+
+            #################################################################
+            # Remove any additional text fragments.
+            #
+            # XML tags remain untouched.
+
+            for index in text_indexes[1:]:
+                parts[index] = ""
+
+            replacement = "".join(parts)
+
+        else:
+            replacement = fragment
+
+        #####################################################################
+        # Insert replacement.
+
+        content = content[: match.start()] + replacement + content[match.end() :]
+
+    return content
+
+
+#############################################################################
+# Doelen table
+
+
+def replace_selected_checkbox(
+    row_xml,
+    marked,
+):
+    """
+    Replace the selected checkbox with V.
+
+    The template has four columns:
+
+        V | B | G | E
+
+    We only replace the checkbox belonging to the selected value.
+    """
+
+    if not marked:
+        return row_xml
+
+    checkbox_map = {
+        "V": 0,
+        "B": 1,
+        "G": 2,
+        "E": 3,
+    }
+
+    selected_index = checkbox_map.get(marked)
+
+    if selected_index is None:
+        return row_xml
+
+    #########################################################################
+    # Find all checkbox characters.
+
+    checkbox_matches = list(
+        re.finditer(
+            r"☐|&#x2610;|&#9744;",
+            row_xml,
+            re.IGNORECASE,
+        )
+    )
+
+    if selected_index >= len(checkbox_matches):
+        return row_xml
+
+    checkbox = checkbox_matches[selected_index]
+
+    return row_xml[: checkbox.start()] + "V" + row_xml[checkbox.end() :]
+
+
+def replace_doel_table(
+    content,
+    doelen_marks,
+):
+    """
+    Replace the template row containing {{DOEL}}.
+
+    The existing row is duplicated rather than creating a new row.
+
+    This means:
+
+    - existing table formatting stays intact
+    - existing cell styles stay intact
+    - existing P4 text formatting stays intact
+    - existing checkbox formatting stays intact
+    """
+
+    doel_pattern = _placeholder_pattern("DOEL")
+
+    match = doel_pattern.search(content)
+
+    if not match:
+        print(
+            f"{YELLOW}⚠ {{DOEL}} placeholder not found in template.{NC}",
+            file=sys.stderr,
+        )
+
+        return content
+
+    #########################################################################
+    # Find table row containing {{DOEL}}
+
+    row_start_matches = list(
+        re.finditer(
+            r"<table:table-row(?:\s[^>]*)?>",
+            content[: match.start()],
+            re.DOTALL,
+        )
+    )
+
+    if not row_start_matches:
+        print(
+            f"{RED}✗ Could not find table row containing {{DOEL}}.{NC}",
+            file=sys.stderr,
+        )
+
+        return content
+
+    row_start = row_start_matches[-1].start()
+
+    row_end = content.find(
+        "</table:table-row>",
+        match.end(),
+    )
+
+    if row_end == -1:
+        print(
+            f"{RED}✗ Could not find end of {{DOEL}} row.{NC}",
+            file=sys.stderr,
+        )
+
+        return content
+
+    row_end += len("</table:table-row>")
+
+    row_xml = content[row_start:row_end]
+
+    #########################################################################
+    # Find surrounding table
+
+    table_start_matches = list(
+        re.finditer(
+            r"<table:table(?:\s[^>]*)?>",
+            content[:row_start],
+            re.DOTALL,
+        )
+    )
+
+    if not table_start_matches:
+        print(
+            f"{RED}✗ Could not find table containing {{DOEL}}.{NC}",
+            file=sys.stderr,
+        )
+
+        return content
+
+    table_start = table_start_matches[-1].start()
+
+    table_end = content.find(
+        "</table:table>",
+        row_end,
+    )
+
+    if table_end == -1:
+        print(
+            f"{RED}✗ Could not find end of Doelen table.{NC}",
+            file=sys.stderr,
+        )
+
+        return content
+
+    table_end += len("</table:table>")
+
+    #########################################################################
+    # If there are no doelen, remove the table.
+
+    if not doelen_marks:
+        return content[:table_start] + content[table_end:]
+
+    #########################################################################
+    # Create rows by cloning the original template row.
+
+    new_rows = []
+
+    for doel in doelen_marks:
+        number = doel["nr"]
+        description = doel["desc"]
+        marked = doel["marked"] or ""
+
+        if number:
+            label = f"{number} - {description}"
+
+        else:
+            label = description
+
+        #####################################################################
+        # Start from the ORIGINAL template row.
+
+        new_row = row_xml
+
+        #####################################################################
+        # Replace {{DOEL}} without touching its P4 formatting.
+
+        new_row = replace_placeholder_preserve_formatting(
+            new_row,
+            "DOEL",
+            label,
+        )
+
+        #####################################################################
+        # Optional {{VBE}} placeholder.
+
+        new_row = replace_placeholder_preserve_formatting(
+            new_row,
+            "VBE",
+            marked,
+        )
+
+        #####################################################################
+        # Change only the selected checkbox.
+
+        new_row = replace_selected_checkbox(
+            new_row,
+            marked,
+        )
+
+        new_rows.append(new_row)
+
+    #########################################################################
+    # Replace original row with cloned rows.
+
+    return content[:row_start] + "".join(new_rows) + content[row_end:]
+
+
+#############################################################################
+# Score table
+#
+# IMPORTANT:
+#
+# No new text formatting styles are created here.
+#
+# The template's P4 style is explicitly reused for all normal score text.
+#
+# The template's P14 + T5 styles are reused for "Punten" so it looks exactly
+# like the existing {{TITEL}} title.
 
 
 def build_score_table_xml(
@@ -323,33 +727,37 @@ def build_score_table_xml(
     late_penalty,
 ):
     """
-    Build the ODF table that replaces {{SCORE}}.
+    Build the score table.
 
-    Column widths are defined via proper ODF automatic table-column styles
-    (style:style family="table-column"), referenced from each
-    table:table-column by table:style-name.
+    Normal table text:
+        P4
 
-    Cells use plain <text:p> paragraphs. Bold/italic formatting is applied
-    later to the complete generated document.
+    Title:
+        P14 + T5
+
+    This deliberately reuses styles from the uploaded template.
     """
+
+    #########################################################################
+    # Normal table cell
 
     def cell(text):
         return (
-            '<table:table-cell office:value-type="string">'
-            f"<text:p>{_escape_xml(text)}</text:p>"
+            "<table:table-cell "
+            'office:value-type="string">'
+            '<text:p text:style-name="P4">'
+            f"{_escape_xml(text)}"
+            "</text:p>"
             "</table:table-cell>"
         )
 
+    #########################################################################
+    # Rows
+
     rows_xml = []
 
-    rows_xml.append(
-        "<table:table-row>"
-        + cell("Punten")
-        + cell("")
-        + cell("")
-        + cell("")
-        + "</table:table-row>"
-    )
+    #########################################################################
+    # Individual points
 
     for item in items:
         score_text = "" if item["score"] is None else _fmt_num(item["score"])
@@ -362,6 +770,9 @@ def build_score_table_xml(
             + cell(_fmt_num(item["max"]))
             + "</table:table-row>"
         )
+
+    #########################################################################
+    # Total when late
 
     if late:
         rows_xml.append(
@@ -382,6 +793,9 @@ def build_score_table_xml(
             + "</table:table-row>"
         )
 
+    #########################################################################
+    # Eindscore
+
     rows_xml.append(
         "<table:table-row>"
         + cell("EINDSCORE")
@@ -391,277 +805,97 @@ def build_score_table_xml(
         + "</table:table-row>"
     )
 
-    column_styles_xml = (
-        '<style:style style:name="ScoreColDesc" style:family="table-column">'
-        "<style:table-column-properties "
-        'fo:break-before="auto" '
-        'style:column-width="13.8cm"/>'
-        "</style:style>"
-        '<style:style style:name="ScoreColScore" style:family="table-column">'
-        "<style:table-column-properties "
-        'fo:break-before="auto" '
-        'style:column-width="0.9cm"/>'
-        "</style:style>"
-        '<style:style style:name="ScoreColSlash" style:family="table-column">'
-        "<style:table-column-properties "
-        'fo:break-before="auto" '
-        'style:column-width="0.4cm"/>'
-        "</style:style>"
-        '<style:style style:name="ScoreColMax" style:family="table-column">'
-        "<style:table-column-properties "
-        'fo:break-before="auto" '
-        'style:column-width="1.1cm"/>'
-        "</style:style>"
+    #########################################################################
+    # "Punten" title
+    #
+    # This is deliberately copied from the template's title formatting:
+    #
+    #   P14 = title paragraph
+    #   T5  = 16pt bold text
+    #
+    # The uploaded template uses exactly this combination for {{TITEL}}.
+
+    title_xml = (
+        '<text:p text:style-name="P14">'
+        '<text:span text:style-name="T5">'
+        "Punten"
+        "</text:span>"
+        "</text:p>"
     )
+
+    #########################################################################
+    # Table
+    #
+    # No table style.
+    # No paragraph style other than P4.
+    # No generated formatting.
+    #
+    # This means the table text remains normal template text.
 
     table_xml = (
-        '<table:table table:name="ScoreTable">'
-        '<table:table-column table:style-name="ScoreColDesc"/>'
-        '<table:table-column table:style-name="ScoreColScore"/>'
-        '<table:table-column table:style-name="ScoreColSlash"/>'
-        '<table:table-column table:style-name="ScoreColMax"/>'
-        + "".join(rows_xml)
-        + "</table:table>"
+        title_xml + "<table:table "
+        'table:name="ScoreTable">'
+        "<table:table-column/>"
+        "<table:table-column/>"
+        "<table:table-column/>"
+        "<table:table-column/>" + "".join(rows_xml) + "</table:table>"
     )
 
-    return column_styles_xml, table_xml
+    return table_xml
 
 
 #############################################################################
-# Building Doelen rows inside the template table
-
-
-def build_doelen_rows_xml(doelen_marks):
-    """
-    Build table rows for the existing {{DOEL}} row in the template.
-
-    The template's existing Doelen table is preserved. Only the row
-    containing {{DOEL}} is replaced.
-    """
-
-    def cell(text):
-        return (
-            '<table:table-cell office:value-type="string">'
-            f"<text:p>{_escape_xml(text)}</text:p>"
-            "</table:table-cell>"
-        )
-
-    rows_xml = []
-
-    for doel in doelen_marks:
-        number = doel["nr"]
-        description = doel["desc"]
-        marked = doel["marked"] or ""
-
-        if number:
-            label = f"{number} - {description}"
-        else:
-            label = description
-
-        rows_xml.append(
-            "<table:table-row>" + cell(label) + cell(marked) + "</table:table-row>"
-        )
-
-    return "".join(rows_xml)
-
-
-#############################################################################
-# Template manipulation
-
-
-def _placeholder_pattern(key):
-    """
-    Build a regex that matches {{KEY}} even when LibreOffice has split the
-    placeholder across multiple <text:span> tags.
-
-    Any XML tags between the braces and the key are tolerated.
-    """
-    return re.compile(
-        r"\{\{\s*(?:<[^>]+>)*\s*" + re.escape(key) + r"\s*(?:<[^>]+>)*\s*\}\}"
-    )
-
-
-def replace_placeholder_in_xml(content, key, value):
-    """Replace {{KEY}} (plain or split across spans) with value."""
-    escaped_value = _escape_xml(value)
-    pattern = _placeholder_pattern(key)
-    return pattern.sub(escaped_value, content)
-
-
-def replace_doel_table(content, doelen_marks):
-    """
-    Replace the table row containing {{DOEL}}.
-
-    If doelen exist:
-        {{DOEL}} row -> one row per doel.
-
-    If there are no doelen:
-        remove the complete table containing {{DOEL}}.
-
-    The existing template table styling is preserved.
-    """
-
-    doel_pattern = _placeholder_pattern("DOEL")
-    match = doel_pattern.search(content)
-
-    if not match:
-        return content
-
-    doel_index = match.start()
-
-    #########################################################################
-    # Find the table containing {{DOEL}}
-
-    table_start = content.rfind(
-        "<table:table",
-        0,
-        doel_index,
-    )
-
-    table_end = content.find(
-        "</table:table>",
-        doel_index,
-    )
-
-    if table_start == -1 or table_end == -1:
-        print(
-            f"{RED}⚠ {{{{DOEL}}}} found, but surrounding table could not "
-            f"be identified.{NC}",
-            file=sys.stderr,
-        )
-        return content
-
-    table_end += len("</table:table>")
-
-    #########################################################################
-    # No doelen -> remove complete table
-
-    if not doelen_marks:
-        return content[:table_start] + content[table_end:]
-
-    #########################################################################
-    # Find the row containing {{DOEL}}
-
-    row_start = content.rfind(
-        "<table:table-row",
-        table_start,
-        doel_index,
-    )
-
-    row_end_marker = "</table:table-row>"
-
-    row_end = content.find(
-        row_end_marker,
-        doel_index,
-    )
-
-    if row_start == -1 or row_end == -1 or row_end > table_end:
-        print(
-            f"{RED}⚠ {{{{DOEL}}}} found, but its table row could not "
-            f"be identified.{NC}",
-            file=sys.stderr,
-        )
-        return content
-
-    row_end += len(row_end_marker)
-
-    #########################################################################
-    # Replace {{DOEL}} row with one row per doel
-
-    doel_rows = build_doelen_rows_xml(doelen_marks)
-
-    return content[:row_start] + doel_rows + content[row_end:]
-
-
-def make_all_text_bold_italic(content):
-    """
-    Make all text in the generated document bold and italic.
-
-    A new automatic text style is added to the generated ODT. The original
-    template file is not modified.
-    """
-
-    marker = "</office:automatic-styles>"
-
-    style_xml = (
-        "<style:style "
-        'style:name="ForceBoldItalic" '
-        'style:family="text">'
-        "<style:text-properties "
-        'fo:font-weight="bold" '
-        'fo:font-style="italic"/>'
-        "</style:style>"
-    )
-
-    #########################################################################
-    # Add the new style
-
-    if marker in content:
-        content = content.replace(
-            marker,
-            style_xml + marker,
-            1,
-        )
-
-    #########################################################################
-    # Apply the style to every text:p that does not already have a style
-
-    content = re.sub(
-        r"<text:p(?![^>]*\btext:style-name=)([^>]*)>",
-        r'<text:p\1 text:style-name="ForceBoldItalic">',
-        content,
-    )
-
-    #########################################################################
-    # Apply the style to every text:span that does not already have a style
-
-    content = re.sub(
-        r"<text:span(?![^>]*\btext:style-name=)([^>]*)>",
-        r'<text:span\1 text:style-name="ForceBoldItalic">',
-        content,
-    )
-
-    return content
+# Template filling
 
 
 def fill_template(
     template_path,
     replacements,
-    score_parts,
+    score_table_xml,
     doelen_marks,
     out_odt_path,
 ):
     """
-    Copy the template and replace all placeholders.
+    Copy template and replace placeholders.
 
-    SCORE:
-        Replaced by a generated score table.
-
-    DOEL:
-        The existing template row containing {{DOEL}} is replaced with one
-        row per doel. If there are no doelen, the complete table containing
-        {{DOEL}} is removed.
-
-    Finally, all document text is made bold and italic.
+    Existing template formatting is preserved everywhere possible.
     """
 
-    shutil.copy(template_path, out_odt_path)
+    #########################################################################
+    # Copy original template.
 
-    with zipfile.ZipFile(out_odt_path, "r") as input_zip:
+    shutil.copy(
+        template_path,
+        out_odt_path,
+    )
+
+    #########################################################################
+    # Read ODT.
+
+    with zipfile.ZipFile(
+        out_odt_path,
+        "r",
+    ) as input_zip:
         infos = input_zip.infolist()
+
         content = input_zip.read("content.xml").decode("utf-8")
 
         other_files = [
-            (info, input_zip.read(info.filename))
+            (
+                info,
+                input_zip.read(info.filename),
+            )
             for info in infos
             if info.filename != "content.xml"
         ]
 
     #########################################################################
     # Normal placeholders
+    #
+    # These replacements preserve the existing paragraph/span styles.
 
     for key, value in replacements.items():
-        content = replace_placeholder_in_xml(
+        content = replace_placeholder_preserve_formatting(
             content,
             key,
             value,
@@ -669,33 +903,45 @@ def fill_template(
 
     #########################################################################
     # SCORE
-
-    score_column_styles, score_table_xml = score_parts
+    #
+    # The template contains:
+    #
+    #     <text:p text:style-name="Standard">{{SCORE}}</text:p>
+    #
+    # We replace ONLY that paragraph.
+    #
+    # Nothing else in the document is affected.
 
     score_pattern = re.compile(
         r"<text:p(?:\s[^>]*)?>"
-        r"\s*(?:<[^>]+>)*"
-        r"\{\{\s*(?:<[^>]+>)*\s*SCORE\s*(?:<[^>]+>)*\s*\}\}"
-        r"\s*(?:<[^>]+>)*"
-        r"</text:p>"
+        r"\s*"
+        r"(?:<[^>]+>)*"
+        r"\{\{"
+        r"\s*"
+        r"SCORE"
+        r"\s*"
+        r"\}\}"
+        r"\s*"
+        r"(?:<[^>]+>)*"
+        r"\s*"
+        r"</text:p>",
+        re.DOTALL,
     )
 
-    content, score_replacements = score_pattern.subn(
+    content, score_count = score_pattern.subn(
         score_table_xml,
         content,
         count=1,
     )
 
-    if score_replacements == 0:
+    if score_count == 0:
         print(
-            f"{RED}✗ Warning: {{{{SCORE}}}} placeholder paragraph not found - "
-            f"the score table was not inserted. Check the template's "
-            f"content.xml for how {{{{SCORE}}}} is stored.{NC}",
+            f"{RED}✗ Warning: {{SCORE}} paragraph not found.{NC}",
             file=sys.stderr,
         )
 
     #########################################################################
-    # DOEL
+    # Doelen
 
     content = replace_doel_table(
         content,
@@ -703,33 +949,23 @@ def fill_template(
     )
 
     #########################################################################
-    # Register score table column styles
+    # Write modified ODT.
+    #
+    # IMPORTANT:
+    #
+    # We do NOT modify styles.xml.
+    #
+    # We do NOT add any new automatic styles.
+    #
+    # We therefore keep the complete template style system untouched.
 
-    if score_column_styles:
-        marker = "</office:automatic-styles>"
+    with zipfile.ZipFile(
+        out_odt_path,
+        "w",
+    ) as output_zip:
+        #####################################################################
+        # Keep mimetype uncompressed.
 
-        if marker in content:
-            content = content.replace(
-                marker,
-                score_column_styles + marker,
-                1,
-            )
-        else:
-            print(
-                f"{RED}✗ Warning: <office:automatic-styles> not found - "
-                f"column widths may fall back to defaults.{NC}",
-                file=sys.stderr,
-            )
-
-    #########################################################################
-    # Make everything bold + italic
-
-    content = make_all_text_bold_italic(content)
-
-    #########################################################################
-    # Write modified ODT
-
-    with zipfile.ZipFile(out_odt_path, "w") as output_zip:
         for info, data in other_files:
             compression = (
                 zipfile.ZIP_STORED
@@ -743,6 +979,9 @@ def fill_template(
                 compress_type=compression,
             )
 
+        #####################################################################
+        # Write content.xml.
+
         output_zip.writestr(
             "content.xml",
             content,
@@ -754,14 +993,18 @@ def fill_template(
 # PDF conversion
 
 
-def convert_to_pdf(odt_path, output_directory):
-    """Convert an ODT file to PDF using headless LibreOffice."""
+def convert_to_pdf(
+    odt_path,
+    output_directory,
+):
+    """Convert ODT to PDF using headless LibreOffice."""
+
     with tempfile.TemporaryDirectory() as profile_directory:
         subprocess.run(
             [
                 "soffice",
                 "--headless",
-                f"-env:UserInstallation=file://{profile_directory}",
+                (f"-env:UserInstallation=file://{profile_directory}"),
                 "--convert-to",
                 "pdf",
                 "--outdir",
@@ -773,24 +1016,46 @@ def convert_to_pdf(odt_path, output_directory):
         )
 
 
+#############################################################################
+# Open output folder
+
+
 def save_folder_to_open(folder_path):
-    """Save folder path for opening by the host after the container exits."""
+    """
+    Save folder path for opening by the host after the container exits.
+    """
+
     in_docker = Path("/.dockerenv").exists()
 
     if in_docker:
-        with open("/tmp/maesbot_output_dir/folder", "w") as output_file:
+        output_dir = Path("/tmp/maesbot_output_dir")
+
+        output_dir.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
+
+        with open(
+            output_dir / "folder",
+            "w",
+        ) as output_file:
             output_file.write(str(folder_path))
 
         print(
             f"{DARK_GREY}Folder will open automatically after script completes{NC}",
             file=sys.stderr,
         )
+
     else:
         try:
             subprocess.run(
-                ["xdg-open", str(folder_path)],
+                [
+                    "xdg-open",
+                    str(folder_path),
+                ],
                 check=True,
             )
+
         except (
             subprocess.CalledProcessError,
             FileNotFoundError,
@@ -806,14 +1071,37 @@ def save_folder_to_open(folder_path):
 
 
 def main():
+
     settings = load_settings()
-    paths = settings.get("paths", {})
 
-    output_dir = Path(paths.get("punten_output_dir", ""))
+    paths = settings.get(
+        "paths",
+        {},
+    )
 
-    output_dir_pdf = Path(paths.get("punten_output_dir_pdf", ""))
+    #########################################################################
+    # Paths
 
-    input_dir = Path(paths.get("punten_input_dir_website", ""))
+    output_dir = Path(
+        paths.get(
+            "punten_output_dir",
+            "",
+        )
+    )
+
+    output_dir_pdf = Path(
+        paths.get(
+            "punten_output_dir_pdf",
+            "",
+        )
+    )
+
+    input_dir = Path(
+        paths.get(
+            "punten_input_dir_website",
+            "",
+        )
+    )
 
     template_path = Path(
         paths.get(
@@ -823,17 +1111,21 @@ def main():
     )
 
     #########################################################################
-    # Check directories and template
+    # Check directories
 
     if not output_dir.exists():
         print(f"{RED}✗ Error: output directory does not exist: {output_dir}{NC}\n")
+
         sys.exit(1)
 
     if not output_dir_pdf.parent.exists():
         print(
-            f"{RED}✗ Error: parent of PDF output directory does not exist: "
-            f"{output_dir_pdf.parent}{NC}\n"
+            f"{RED}"
+            f"✗ Error: parent of PDF output directory does not exist: "
+            f"{output_dir_pdf.parent}"
+            f"{NC}\n"
         )
+
         sys.exit(1)
 
     output_dir_pdf.mkdir(
@@ -843,23 +1135,29 @@ def main():
 
     if not template_path.exists():
         print(f"{RED}✗ Error: template not found at {template_path}{NC}\n")
+
         sys.exit(1)
 
     #########################################################################
-    # Find generated sheets
+    # Find assignment directories
 
     leaf_directories = []
 
-    for directory_path, _directory_names, filenames in os.walk(output_dir):
+    for (
+        directory_path,
+        _directory_names,
+        filenames,
+    ) in os.walk(output_dir):
         if any(filename.endswith(".ods") for filename in filenames):
             leaf_directories.append(Path(directory_path))
 
     if not leaf_directories:
         print(f"{RED}✗ No generated sheets found under {output_dir}{NC}\n")
+
         sys.exit(1)
 
     #########################################################################
-    # Select assignment
+    # Assignment picker
 
     display_to_path = {
         str(path.relative_to(output_dir)): path for path in sorted(leaf_directories)
@@ -873,11 +1171,15 @@ def main():
 
     if not selected_display:
         print(f"{YELLOW}No assignment selected{NC}\n")
+
         sys.exit(1)
 
     assignment_dir = display_to_path[selected_display]
 
     assignment_basename = assignment_dir.name
+
+    #########################################################################
+    # Class
 
     klas = extract_class_name(
         assignment_dir,
@@ -885,7 +1187,7 @@ def main():
     )
 
     #########################################################################
-    # Find matching YAML
+    # Find YAML
 
     input_yaml = find_matching_input_yaml(
         input_dir,
@@ -910,14 +1212,17 @@ def main():
 
     else:
         print(
-            f"{YELLOW}⚠ No matching input YAML found for "
-            f"'{assignment_basename}' under {input_dir}. "
-            f"Using folder name as title.{NC}",
+            f"{YELLOW}"
+            f"⚠ No matching input YAML found for "
+            f"'{assignment_basename}' under "
+            f"{input_dir}. "
+            f"Using folder name as title."
+            f"{NC}",
             file=sys.stderr,
         )
 
     #########################################################################
-    # Determine vak
+    # Vak
 
     vak = resolve_vak(
         input_yaml,
@@ -927,13 +1232,17 @@ def main():
     if not vak:
         vak = input(f"{YELLOW}Vak voor '{title}': {NC}").strip()
 
+    if vak:
+        vak = vak.capitalize()
+
     #########################################################################
-    # Find ODS files
+    # ODS files
 
     ods_files = sorted(assignment_dir.glob("*.ods"))
 
     if not ods_files:
         print(f"{RED}✗ No .ods files found in {assignment_dir}{NC}\n")
+
         sys.exit(1)
 
     print(
@@ -942,7 +1251,7 @@ def main():
     )
 
     #########################################################################
-    # Output directory
+    # Target directory
 
     target_directory = output_dir_pdf / f"{klas} - {vak}" / assignment_basename
 
@@ -957,13 +1266,16 @@ def main():
     moved_ods_count = 0
 
     #########################################################################
-    # Process each student
+    # Process students
 
     for ods_path in ods_files:
-        student_name = ods_path.stem.split(" - ", 1)[0].strip()
+        student_name = ods_path.stem.split(
+            " - ",
+            1,
+        )[0].strip()
 
         #####################################################################
-        # Read scores
+        # Read score data
 
         try:
             (
@@ -977,13 +1289,8 @@ def main():
 
         except Exception as error:
             print(f"{RED}✗ Skipping {ods_path.name}: {error}{NC}")
-            continue
 
-        if any(item["score"] is None for item in items):
-            print(
-                f"{YELLOW}⚠ {student_name}: some items are "
-                f"not graded yet. Generating PDF anyway.{NC}"
-            )
+            continue
 
         #####################################################################
         # Read doelen
@@ -992,18 +1299,22 @@ def main():
 
         if any(doel["marked"] is None for doel in doelen_marks):
             print(
-                f"{YELLOW}⚠ {student_name}: one or more doelen "
-                f"have no V/B/G/E mark.{NC}"
+                f"{YELLOW}"
+                f"⚠ {student_name}: one or more doelen "
+                f"have no V/B/G/E mark."
+                f"{NC}"
             )
 
         if any(doel["ambiguous"] for doel in doelen_marks):
             print(
-                f"{RED}⚠ {student_name}: one or more doelen "
-                f"have multiple V/B/G/E marks.{NC}"
+                f"{RED}"
+                f"⚠ {student_name}: one or more doelen "
+                f"have multiple V/B/G/E marks."
+                f"{NC}"
             )
 
         #####################################################################
-        # Replacements
+        # Placeholders
 
         replacements = {
             "NAAM": student_name,
@@ -1017,7 +1328,7 @@ def main():
         #####################################################################
         # Build score table
 
-        score_parts = build_score_table_xml(
+        score_table_xml = build_score_table_xml(
             items=items,
             total_score=total_score,
             total_max=total_max,
@@ -1027,7 +1338,7 @@ def main():
         )
 
         #####################################################################
-        # Create temporary ODT
+        # Temporary ODT
 
         with tempfile.TemporaryDirectory() as temporary_directory:
             temporary_odt_path = Path(temporary_directory) / f"{student_name}.odt"
@@ -1035,13 +1346,13 @@ def main():
             fill_template(
                 template_path=template_path,
                 replacements=replacements,
-                score_parts=score_parts,
+                score_table_xml=score_table_xml,
                 doelen_marks=doelen_marks,
                 out_odt_path=temporary_odt_path,
             )
 
             #################################################################
-            # Convert to PDF
+            # PDF
 
             try:
                 convert_to_pdf(
@@ -1051,6 +1362,7 @@ def main():
 
             except subprocess.CalledProcessError as error:
                 print(f"{RED}✗ Failed to convert {student_name} to PDF: {error}{NC}")
+
                 continue
 
         #####################################################################
@@ -1066,7 +1378,7 @@ def main():
             created_files.append(final_pdf)
 
             print(
-                f"{BLUE}📄 Created: {final_pdf.name}{DARK_GREY}",
+                f"{BLUE}📄 Created: {final_pdf.name}{NC}",
                 file=sys.stderr,
             )
 
@@ -1092,11 +1404,12 @@ def main():
         f"Successfully created "
         f"{len(created_files)} PDF(s) and moved "
         f"{moved_ods_count} sheet(s) to: "
-        f"{target_directory}{NC}"
+        f"{target_directory}"
+        f"{NC}"
     )
 
     #########################################################################
-    # Remove empty directories
+    # Remove empty source directories
 
     try:
         if not any(assignment_dir.iterdir()):
@@ -1119,5 +1432,9 @@ def main():
     save_folder_to_open(target_directory)
 
 
-if __name__ == "__main__":
+#############################################################################
+# Entry point
 
+
+if __name__ == "__main__":
+    main()
