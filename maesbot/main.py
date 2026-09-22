@@ -194,7 +194,6 @@ print()
 settings = load_settings("settings.yaml")
 
 # Show main menu
-# actions = ["Punten: Create Sheets"]
 actions = ["Punten: Create Sheets", "Punten: Sheets to PDF"]
 selected = pick_from_list(
     actions, "What can I do for my Master?", message_color="#bade87"
@@ -220,7 +219,6 @@ if selected:
 
         # Get output directory
         output_dir = settings.get("paths", {}).get("punten_output_dir")
-        output_dir = str(output_dir) + str(className)
         if not output_dir:
             print(
                 f"{RED}✗ Error: 'paths.punten_output_dir' not found in settings.yaml{NC}\n"
@@ -228,8 +226,16 @@ if selected:
             sys.exit(1)
 
         # Build arguments
-        args = ["--input", input_file, "--output", output_dir, "--students"]
-        args.extend(students)  # Add each student as a separate argument
+        args = [
+            "--input",
+            input_file,
+            "--output",
+            str(output_dir),
+            "--class",
+            className,
+            "--students",
+        ]
+        args.extend(students)
 
         # Run script
         success = run_script("punten-create-sheets.py", args)

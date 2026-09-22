@@ -4,7 +4,7 @@ created: 2024-03-04T13:37:48+01:00
 ---
 
 > In deze opdracht verdiep je je in verschillende internettechnologieën.
-> Je taak is om onderzoek te doen en uitleg te geven **1 onderwerp**.
+> Je taak is om onderzoek te doen en uitleg te geven over **1 onderwerp**.
 
 # Zoekstrategie
 
@@ -70,7 +70,12 @@ Maak een **Markdown document** waarin je in eigen woorden je onderwerp toelicht.
 
 ## Je onderzoek beschrijven in Markdown
 
-Gebruik Markdown om je onderzoek op een **duidelijke en goed gestructureerde** manier weer te geven, en gebruik **afbeeldingen ter verduidelijking**.
+Maak via Markdown een **tekstdocument** om je onderzoek op een **duidelijke en goed gestructureerde** manier weer te geven, en gebruik **afbeeldingen ter verduidelijking**.
+
+Je mag zelf kiezen welke Markdown-editor je gebruikt: 
+- VSCodium
+- Een online editor zoals [https://dillinger.io/](https://dillinger.io/)
+- ...
 
 Exporteer je Markdown document naar:
 

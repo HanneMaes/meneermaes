@@ -7,11 +7,9 @@ generates one PDF report card per student, based on the Taak-toets.odt
 template.
 
 Requires:
-  - LibreOffice ('soffice' binary) available in the container, for the
-    ODT -> PDF conversion.
+  - LibreOffice ('soffice' binary) available in the container
   - The .ods sheets must have been opened, filled in, and SAVED in
-    LibreOffice Calc, so the calculated totals are cached in the file
-    (this script does not evaluate spreadsheet formulas itself).
+    LibreOffice Calc
 """
 
 import os
@@ -30,7 +28,7 @@ from odf.table import Table, TableRow, TableCell
 from odf.teletype import extractText
 
 from lib.fuzzypicker import pick_from_list
-from lib.colors import *  # noqa: F401,F403  (color constants used below)
+from lib.colors import *
 
 
 #############################################################################
@@ -70,7 +68,7 @@ def _escape_xml(s):
 
 def find_matching_input_yaml(input_dir, assignment_basename):
     """Find the original punten YAML whose (dash-stripped) filename matches
-    the assignment folder name, so we can reuse its 'title'."""
+    the assignment folder name."""
     input_dir = Path(input_dir)
     if not input_dir.exists():
         return None
@@ -83,8 +81,7 @@ def find_matching_input_yaml(input_dir, assignment_basename):
 
 def resolve_vak(input_yaml, input_dir):
     """The subject (vak) is the top-level subfolder under
-    punten_input_dir_website that the input yaml lives in, e.g.
-    docs/_data/hardware/servers.yaml -> vak = 'hardware'."""
+    punten_input_dir_website that the input yaml lives in."""
     if input_yaml is None:
         return None
     try:
@@ -98,11 +95,8 @@ def resolve_vak(input_yaml, input_dir):
 
 
 def read_ods_data(ods_path):
-    """Read graded items + totals from a sheet created by
-    punten-create-sheets.py. Returns (items, total_score, total_max, late,
-    eindscore) - total_score/total_max are the raw TOTAAL row (before any
-    late penalty); eindscore is the final score after the penalty (equal to
-    total_score when the sheet has no "Te laat" row or it isn't marked)."""
+    """Read graded items + totals from a sheet.
+    Returns (items, total_score, total_max, late, eindscore, late_penalty)."""
     doc = load_ods(str(ods_path))
     tables = doc.spreadsheet.getElementsByType(Table)
     if not tables:
@@ -110,8 +104,6 @@ def read_ods_data(ods_path):
     table = tables[0]
     rows = table.getElementsByType(TableRow)
 
-    # Locate TOTAAL by its label rather than assuming it's the last row -
-    # "Te laat" / "EINDSCORE" rows (if present) come after it.
     total_row_idx = None
     for i, row in enumerate(rows):
         cells = row.getElementsByType(TableCell)
@@ -121,7 +113,6 @@ def read_ods_data(ods_path):
     if total_row_idx is None:
         raise ValueError(f"No TOTAAL row found in {ods_path}")
 
-    # rows[0] = title row, rows[1:total_row_idx] = assignment items
     items = []
     for row in rows[1:total_row_idx]:
         cells = row.getElementsByType(TableCell)
@@ -139,7 +130,6 @@ def read_ods_data(ods_path):
     if total_score_raw not in (None, ""):
         total_score = float(total_score_raw)
     else:
-        # Fallback if the file was never opened/saved in LibreOffice
         total_score = sum(i["score"] or 0 for i in items)
 
     if total_max_raw not in (None, ""):
@@ -147,8 +137,8 @@ def read_ods_data(ods_path):
     else:
         total_max = sum(i["max"] for i in items)
 
-    # Optional "Te laat" (late) / "EINDSCORE" rows right after TOTAAL
     late = False
+    late_penalty = 0.0
     eindscore = total_score
     if total_row_idx + 1 < len(rows):
         te_laat_cells = rows[total_row_idx + 1].getElementsByType(TableCell)
@@ -156,6 +146,9 @@ def read_ods_data(ods_path):
             "TE LAAT"
         ):
             late = extractText(te_laat_cells[1]).strip() != ""
+            late_penalty_raw = te_laat_cells[2].getAttribute("value")
+            if late_penalty_raw not in (None, ""):
+                late_penalty = float(late_penalty_raw)
     if total_row_idx + 2 < len(rows):
         eind_cells = rows[total_row_idx + 2].getElementsByType(TableCell)
         if eind_cells and extractText(eind_cells[0]).strip().upper() == "EINDSCORE":
@@ -163,28 +156,17 @@ def read_ods_data(ods_path):
             if eind_raw not in (None, ""):
                 eindscore = float(eind_raw)
             elif late:
-                # Fallback if the file was never opened/saved in LibreOffice
                 eindscore = round(total_score - total_score * 0.2, 2)
 
-    return items, total_score, total_max, late, eindscore
+    return items, total_score, total_max, late, eindscore, late_penalty
 
 
 #############################################################################
-# Reading the "Doelen" tab (if present)
+# Reading the "Doelen" tab
 
 
 def read_doelen_marks(ods_path):
-    """Read the Doelen section of a graded .ods sheet, if present.
-
-    The Doelen section lives on the same "Grading" tab, below TOTAAL/Te
-    laat/EINDSCORE: a blank row, a legend row, a header row starting with
-    "Doelstelling", then one row per doel.
-
-    Returns a list of dicts: {"nr", "desc", "marked", "ambiguous"} - one per
-    doel row. "marked" is whichever of V/B/G/E contains an "x" (case
-    insensitive), or None if none do. "ambiguous" is True if more than one
-    column was marked "x" for that row (in which case the first one found,
-    in V/B/G/E order, is used, but the caller should warn about it)."""
+    """Read the Doelen section of a graded .ods sheet, if present."""
     doc = load_ods(str(ods_path))
     tables = doc.spreadsheet.getElementsByType(Table)
     if not tables:
@@ -210,15 +192,11 @@ def read_doelen_marks(ods_path):
         if not label:
             continue
 
-        # The sheet stores "nr - desc" combined in one cell; split it back
-        # apart for the PDF (nr's are short codes with no " - " in them).
         if " - " in label:
             nr, desc = label.split(" - ", 1)
         else:
             nr, desc = "", label
 
-        # Only an actual "x" counts as a mark - ignores stray whitespace or
-        # accidental keystrokes left behind in an otherwise-empty cell.
         matched_letters = [
             letter
             for letter, cell in zip(letters, cells[1:5])
@@ -235,61 +213,122 @@ def read_doelen_marks(ods_path):
 # Building the {{SCORE}} replacement
 
 
-def build_score_table_xml(items, total_score, total_max):
-    """Build a raw ODF table:table XML fragment listing each graded item's
-    score plus a totals row, to replace the {{SCORE}} placeholder."""
+def build_score_table_xml(
+    items, total_score, total_max, late, eindscore, late_penalty, doelen_marks
+):
+    """Build a raw ODF table XML fragment listing each graded item's
+    score plus a totals row, to replace the {{SCORE}} placeholder.
 
-    def cell(text):
+    Uses a plain, non-bold/non-italic paragraph style ("Standard") for every
+    cell so the table inherits normal text formatting instead of picking up
+    bold/italic from the surrounding template paragraph.
+    """
+
+    def cell(text, style_name="TableContentsCell"):
         return (
-            '<table:table-cell office:value-type="string">'
-            f"<text:p>{_escape_xml(text)}</text:p>"
+            f'<table:table-cell table:style-name="{style_name}" office:value-type="string">'
+            f'<text:p text:style-name="Standard">{_escape_xml(text)}</text:p>'
             "</table:table-cell>"
         )
 
-    rows_xml = [
-        "<table:table-row>"
-        + cell("Onderdeel")
-        + cell("Score")
-        + cell("Max")
-        + "</table:table-row>"
-    ]
+    rows_xml = []
 
     for item in items:
         score_display = "" if item["score"] is None else _fmt_num(item["score"])
+
         rows_xml.append(
             "<table:table-row>"
-            + cell(item["desc"])
-            + cell(score_display)
-            + cell(_fmt_num(item["max"]))
+            + cell(item["desc"], "ScoreDescCell")
+            + cell(score_display, "ScoreValCell")
+            + cell("/", "ScoreSepCell")
+            + cell(_fmt_num(item["max"]), "ScoreMaxCell")
             + "</table:table-row>"
         )
 
-    rows_xml.append(
-        "<table:table-row>"
-        + cell("TOTAAL")
-        + cell(_fmt_num(total_score))
-        + cell(_fmt_num(total_max))
-        + "</table:table-row>"
-    )
+    if late:
+        # Show TOTAAL (pre-penalty) only when relevant, followed by the
+        # late penalty and the final EINDSCORE.
+        rows_xml.append(
+            "<table:table-row>"
+            + cell("TOTAAL", "ScoreDescCell")
+            + cell(_fmt_num(total_score), "ScoreValCell")
+            + cell("/", "ScoreSepCell")
+            + cell(_fmt_num(total_max), "ScoreMaxCell")
+            + "</table:table-row>"
+        )
+        rows_xml.append(
+            "<table:table-row>"
+            + cell("Te laat (-20%)", "ScoreDescCell")
+            + cell(_fmt_num(late_penalty), "ScoreValCell")
+            + cell("", "ScoreSepCell")
+            + cell("", "ScoreMaxCell")
+            + "</table:table-row>"
+        )
+        rows_xml.append(
+            "<table:table-row>"
+            + cell("EINDSCORE", "ScoreDescCell")
+            + cell(_fmt_num(eindscore), "ScoreValCell")
+            + cell("/", "ScoreSepCell")
+            + cell(_fmt_num(total_max), "ScoreMaxCell")
+            + "</table:table-row>"
+        )
+    else:
+        # Not late: TOTAAL and EINDSCORE are identical, so just show one
+        # row, labelled EINDSCORE.
+        rows_xml.append(
+            "<table:table-row>"
+            + cell("EINDSCORE", "ScoreDescCell")
+            + cell(_fmt_num(eindscore), "ScoreValCell")
+            + cell("/", "ScoreSepCell")
+            + cell(_fmt_num(total_max), "ScoreMaxCell")
+            + "</table:table-row>"
+        )
+
+    if doelen_marks:
+        rows_xml.append(
+            "<table:table-row>"
+            + cell("", "ScoreDescCell")
+            + cell("", "ScoreValCell")
+            + cell("", "ScoreSepCell")
+            + cell("", "ScoreMaxCell")
+            + "</table:table-row>"
+        )
+
+        for doel in doelen_marks:
+            nr = doel["nr"]
+            desc = doel["desc"]
+            marked = doel["marked"]
+
+            label = f"{nr} - {desc}" if nr else desc
+            mark_display = marked if marked else ""
+
+            rows_xml.append(
+                "<table:table-row>"
+                + cell(f"Doel: {label}", "ScoreDescCell")
+                + cell(mark_display, "ScoreValCell")
+                + cell("", "ScoreSepCell")
+                + cell("", "ScoreMaxCell")
+                + "</table:table-row>"
+            )
 
     return (
         '<table:table table:name="ScoreTable">'
-        "<table:table-column/><table:table-column/><table:table-column/>"
+        '<table:table-column table:style-name="ScoreDescriptionColumn"/>'
+        '<table:table-column table:style-name="ScoreValueColumn"/>'
+        '<table:table-column table:style-name="ScoreSeparatorColumn"/>'
+        '<table:table-column table:style-name="ScoreMaxColumn"/>'
         + "".join(rows_xml)
         + "</table:table>"
     )
 
 
-CHECKED_BOX = "\u2612"  # ☒ - used in the Writer template (Calc uses plain "x" instead)
-UNCHECKED_BOX = "\u2610"  # ☐
+CHECKED_BOX = "\u2612"
+UNCHECKED_BOX = "\u2610"
 
 
 def build_doelen_rows_xml(doelen_marks):
-    """Build one <table:table-row> per doel for the template's 'Transversale
-    eindterm' table (Table5), replacing the {{DOEL}} row with the doel's
-    nr/desc (on separate lines) and marking the correct V/B/G/E box."""
+    """Build one <table:table-row> per doel for the template's table."""
 
-    # (cell style, label text, line-break comes before the label span)
     scale_cells = [
         ("Table5.B2", "Niet bereid tot.", False),
         ("Table5.C2", "Toont soms bereidheid tot.", False),
@@ -348,9 +387,7 @@ def build_doelen_rows_xml(doelen_marks):
 def fill_template(
     template_path, replacements, score_table_xml, doelen_marks, out_odt_path
 ):
-    """Copy the template, replace {{PLACEHOLDER}} text, the {{SCORE}}
-    paragraph, and the 'Transversale eindterm' (Table5) row(s), then save
-    as out_odt_path."""
+    """Copy the template, replace placeholders, and save as out_odt_path."""
     shutil.copy(template_path, out_odt_path)
 
     with zipfile.ZipFile(out_odt_path, "r") as zin:
@@ -362,6 +399,9 @@ def fill_template(
             if info.filename != "content.xml"
         ]
 
+    # Plain-text replacements (NAAM, DATUM, VAK, KLAS, TITEL, TOTAAL) keep
+    # whatever bold/italic formatting the {{PLACEHOLDER}} span already had
+    # in the template - we only swap the text, nothing else.
     for key, value in replacements.items():
         content = content.replace(f"{{{{{key}}}}}", _escape_xml(value))
 
@@ -384,7 +424,6 @@ def fill_template(
                 + content[row_end:]
             )
         else:
-            # No doelen for this assignment - drop the whole Table5 table
             table_start = content.rfind("<table:table ", 0, row_start)
             table_end = content.find("</table:table>", row_end) + len("</table:table>")
             content = content[:table_start] + content[table_end:]
@@ -420,8 +459,7 @@ def convert_to_pdf(odt_path, out_dir):
 
 
 def save_folder_to_open(folder_path):
-    """Save folder path to be opened by host after container exits
-    (same mechanism as punten-create-sheets.py)."""
+    """Save folder path to be opened by host after container exits."""
     in_docker = Path("/.dockerenv").exists()
 
     if in_docker:
@@ -475,7 +513,6 @@ def main():
         )
         sys.exit(1)
 
-    # Find every leaf folder (klas/assignment) that actually contains sheets
     leaf_dirs = []
     for dirpath, _dirnames, filenames in os.walk(output_dir):
         if any(f.endswith(".ods") for f in filenames):
@@ -496,11 +533,16 @@ def main():
         sys.exit(1)
 
     assignment_dir = display_to_path[selected_display]
-    klas = assignment_dir.relative_to(output_dir).parts[0]
+
+    klas_vak_parts = assignment_dir.relative_to(output_dir).parts[0].split(" - ")
+    klas = (
+        klas_vak_parts[0]
+        if klas_vak_parts
+        else assignment_dir.relative_to(output_dir).parts[0]
+    )
+
     assignment_basename = assignment_dir.name
 
-    # Pull the title from the matching input yaml, and derive the subject
-    # (vak) from the top-level folder that yaml lives in
     input_yaml = find_matching_input_yaml(input_dir, assignment_basename)
     title = assignment_basename
     if input_yaml:
@@ -534,8 +576,6 @@ def main():
     )
     print()
 
-    # Destination folder: ".../Verbeterde taken en toetsen/{klas} - {vak}/{assignment}/"
-    # (mirrors punten-create-sheets.py's output_dir/basename/ structure)
     target_dir = output_dir_pdf / f"{klas} - {vak}" / assignment_basename
     target_dir.mkdir(parents=True, exist_ok=True)
 
@@ -547,7 +587,9 @@ def main():
         student_name = ods_path.stem.split(" - ")[0]
 
         try:
-            items, total_score, total_max, late, eindscore = read_ods_data(ods_path)
+            items, total_score, total_max, late, eindscore, late_penalty = (
+                read_ods_data(ods_path)
+            )
         except Exception as e:
             print(f"{RED}✗ Skipping {ods_path.name}: {e}{NC}")
             continue
@@ -556,14 +598,6 @@ def main():
             print(
                 f"{YELLOW}⚠ {student_name}: some items are not graded yet, "
                 f"generating PDF anyway{NC}"
-            )
-
-        if late:
-            print(
-                f"{YELLOW}⚠ {student_name}: marked 'Te laat' in the sheet "
-                f"(eindscore {_fmt_num(eindscore)}/{_fmt_num(total_max)}), but "
-                f"the PDF template has no placeholder for this yet - it will "
-                f"still show the pre-penalty TOTAAL ({_fmt_num(total_score)}){NC}"
             )
 
         doelen_marks = read_doelen_marks(ods_path)
@@ -579,15 +613,19 @@ def main():
                 f"sheet and re-run{NC}"
             )
 
+        # {{NAAM}} is replaced with the actual student name derived from
+        # the .ods filename (everything before " - ").
         replacements = {
             "NAAM": student_name,
             "DATUM": today,
-            "TOTAAL": _fmt_num(total_score),
+            "TOTAAL": f"{_fmt_num(eindscore)}/{_fmt_num(total_max)}",
             "VAK": vak,
             "KLAS": klas,
             "TITEL": title,
         }
-        score_table_xml = build_score_table_xml(items, total_score, total_max)
+        score_table_xml = build_score_table_xml(
+            items, total_score, total_max, late, eindscore, late_penalty, doelen_marks
+        )
 
         with tempfile.TemporaryDirectory() as tmp:
             tmp_odt = Path(tmp) / f"{student_name}.odt"
@@ -607,8 +645,6 @@ def main():
             created_files.append(final_pdf)
             print(f"{BLUE}📄 Created: {final_pdf.name}{DARK_GREY}", file=sys.stderr)
 
-            # Move the graded sheet alongside its PDF so it no longer shows
-            # up as a pending assignment in punten_output_dir
             shutil.move(str(ods_path), str(target_dir / ods_path.name))
             moved_ods_count += 1
         else:
@@ -620,8 +656,6 @@ def main():
         f"{moved_ods_count} sheet(s) to: {target_dir}{NC}"
     )
 
-    # Clean up the now-empty (or partially-emptied) TO-DO folders, all the
-    # way up to punten_output_dir itself if nothing is left in it
     try:
         if not any(assignment_dir.iterdir()):
             assignment_dir.rmdir()
@@ -635,30 +669,10 @@ def main():
                         file=sys.stderr,
                     )
     except OSError:
-        pass  # leftover files (e.g. a failed conversion) - leave it as is
+        pass
 
     save_folder_to_open(target_dir)
 
 
 if __name__ == "__main__":
     main()
-
-######################################################################################################
-# GUIDE
-#
-# settings.yaml paths section (yours, for reference):
-#   paths:
-#     private_settings: "/data/private/private-settings.yaml"
-#     punten_input_dir_website: "/data/input/"
-#     punten_output_dir: "/data/private/Punten/Taken en toetsen - TO-DO/"
-#     punten_output_dir_pdf: "/data/private/Punten/Taken en toetsen - Verbeterd/"
-#     punten_template: "/data/private/Punten/Templates/Taak-toets.odt"
-#
-# Add to main.py:
-#   actions = ["Punten: Create Sheets", "Punten: Sheets to PDF"]
-#   ...
-#   elif selected == "Punten: Sheets to PDF":
-#       run_script("punten-sheets-to-pdf.py")
-#
-# (The old commented-out call used the path "Punten/sheets-to-pdf.py", which
-# doesn't match the actual filename "punten-sheets-to-pdf.py" in your repo root.)
