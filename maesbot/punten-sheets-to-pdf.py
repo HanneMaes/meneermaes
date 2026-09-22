@@ -710,12 +710,31 @@ def replace_doel_table(
 #
 # IMPORTANT:
 #
-# No new text formatting styles are created here.
+# No new text formatting styles are created here, except the deliberate
+# ScoreBold / ScoreRight / ScoreRightBold / ScoreCenter / ScoreCenterBold
+# styles needed for the TOTAAL, "Te laat" and EINDSCORE rows and for
+# aligning score/"/" cells.
 #
-# The template's P4 style is explicitly reused for all normal score text.
+# Vertical centering + the top border are applied through explicit,
+# per-role table-cell styles (one per label/score/slash cell, normal and
+# bold), instead of a single shared cell style. This avoids relying on
+# LibreOffice to correctly re-apply a shared cell style to every cell
+# regardless of content (numeric vs text vs empty), which was the cause of
+# some cells (e.g. the "1" before the "/" in "1/5", and the TOTAAL/Te
+# laat/EINDSCORE rows) not being vertically centered before.
+#
+# The template's P4 style is reused as the parent style for all paragraph
+# styles, so normal score text remains identical to the template's own
+# body text.
 #
 # The template's P14 + T5 styles are reused for "Punten" so it looks exactly
 # like the existing {{TITEL}} title.
+#
+# Column widths are applied via a proper ODF automatic table-column style
+# (style:family="table-column"), referenced from each table:table-column
+# using table:style-name. Setting style:column-width directly on
+# <table:table-column> has no effect - LibreOffice ignores it and divides
+# the available width equally, which is why the columns were equal before.
 
 
 def build_score_table_xml(
@@ -732,20 +751,89 @@ def build_score_table_xml(
     Normal table text:
         P4
 
+    Bold rows (TOTAAL / Te laat / EINDSCORE):
+        ScoreBold (description/max) + ScoreRightBold (score)
+        + ScoreCenterBold (the "/" separator)
+
+    Right-aligned score cells (all rows):
+        ScoreRight (normal) or ScoreRightBold (bold rows)
+
+    Centered "/" separator (all rows):
+        ScoreCenter (normal) or ScoreCenterBold (bold rows)
+
+    Row borders and vertical alignment:
+        Every cell gets a light grey top border and vertically centered
+        content via explicit per-role table-cell styles (one per
+        label/score/slash cell, normal and bold variant), since both are
+        cell properties, not paragraph properties.
+
     Title:
         P14 + T5
 
-    This deliberately reuses styles from the uploaded template.
+    Column widths:
+        Description column wide, score/slash/max columns narrow.
+
+    Returns:
+        (table_xml, column_styles_xml, text_styles_xml)
     """
 
     #########################################################################
-    # Normal table cell
+    # Description / max cell, optionally bold (for TOTAAL/EINDSCORE).
+    #
+    # Uses its own table-cell style (ScoreCellLabel / ScoreCellLabelBold)
+    # so the top border + vertical centering are guaranteed regardless of
+    # what LibreOffice infers from the cell's content.
 
-    def cell(text):
+    def label_cell(text, bold=False):
+        paragraph_style = "ScoreBold" if bold else "P4"
+        cell_style = "ScoreCellLabelBold" if bold else "ScoreCellLabel"
+
         return (
             "<table:table-cell "
+            f'table:style-name="{cell_style}" '
             'office:value-type="string">'
-            '<text:p text:style-name="P4">'
+            f'<text:p text:style-name="{paragraph_style}">'
+            f"{_escape_xml(text)}"
+            "</text:p>"
+            "</table:table-cell>"
+        )
+
+    #########################################################################
+    # Score cell - always right-aligned, optionally bold.
+    #
+    # Uses its own table-cell style (ScoreCellScore / ScoreCellScoreBold),
+    # explicitly forced to office:value-type="string" so a numeric-looking
+    # value (e.g. "1") never triggers different default cell formatting
+    # than a text value.
+
+    def score_cell(text, bold=False):
+        paragraph_style = "ScoreRightBold" if bold else "ScoreRight"
+        cell_style = "ScoreCellScoreBold" if bold else "ScoreCellScore"
+
+        return (
+            "<table:table-cell "
+            f'table:style-name="{cell_style}" '
+            'office:value-type="string">'
+            f'<text:p text:style-name="{paragraph_style}">'
+            f"{_escape_xml(text)}"
+            "</text:p>"
+            "</table:table-cell>"
+        )
+
+    #########################################################################
+    # "/" separator cell - always centered, optionally bold.
+    #
+    # Uses its own table-cell style (ScoreCellSlash / ScoreCellSlashBold).
+
+    def slash_cell(text, bold=False):
+        paragraph_style = "ScoreCenterBold" if bold else "ScoreCenter"
+        cell_style = "ScoreCellSlashBold" if bold else "ScoreCellSlash"
+
+        return (
+            "<table:table-cell "
+            f'table:style-name="{cell_style}" '
+            'office:value-type="string">'
+            f'<text:p text:style-name="{paragraph_style}">'
             f"{_escape_xml(text)}"
             "</text:p>"
             "</table:table-cell>"
@@ -764,44 +852,45 @@ def build_score_table_xml(
 
         rows_xml.append(
             "<table:table-row>"
-            + cell(item["desc"])
-            + cell(score_text)
-            + cell("/")
-            + cell(_fmt_num(item["max"]))
+            + label_cell(item["desc"])
+            + score_cell(score_text)
+            + slash_cell("/")
+            + label_cell(_fmt_num(item["max"]))
             + "</table:table-row>"
         )
 
     #########################################################################
-    # Total when late
+    # Total when late - TOTAAL and the late penalty row are bold too, so
+    # every "final" row in the table stands out the same way.
 
     if late:
         rows_xml.append(
             "<table:table-row>"
-            + cell("TOTAAL")
-            + cell(_fmt_num(total_score))
-            + cell("/")
-            + cell(_fmt_num(total_max))
+            + label_cell("TOTAAL", bold=True)
+            + score_cell(_fmt_num(total_score), bold=True)
+            + slash_cell("/", bold=True)
+            + label_cell(_fmt_num(total_max), bold=True)
             + "</table:table-row>"
         )
 
         rows_xml.append(
             "<table:table-row>"
-            + cell("Te laat (-20%)")
-            + cell(_fmt_num(late_penalty))
-            + cell("")
-            + cell("")
+            + label_cell("Te laat (-20%)", bold=True)
+            + score_cell(_fmt_num(late_penalty), bold=True)
+            + slash_cell("", bold=True)
+            + label_cell("", bold=True)
             + "</table:table-row>"
         )
 
     #########################################################################
-    # Eindscore
+    # Eindscore - always bold.
 
     rows_xml.append(
         "<table:table-row>"
-        + cell("EINDSCORE")
-        + cell(_fmt_num(eindscore))
-        + cell("/")
-        + cell(_fmt_num(total_max))
+        + label_cell("EINDSCORE", bold=True)
+        + score_cell(_fmt_num(eindscore), bold=True)
+        + slash_cell("/", bold=True)
+        + label_cell(_fmt_num(total_max), bold=True)
         + "</table:table-row>"
     )
 
@@ -824,24 +913,136 @@ def build_score_table_xml(
     )
 
     #########################################################################
+    # Column-width styles.
+    #
+    # These are automatic table-column styles, registered separately and
+    # injected into <office:automatic-styles> by fill_template(). Each
+    # table:table-column below references one of these by name via
+    # table:style-name, which is the only way ODF actually applies a
+    # column width.
+
+    column_styles_xml = (
+        '<style:style style:name="ScoreColDesc" style:family="table-column">'
+        '<style:table-column-properties style:column-width="13.5cm"/>'
+        "</style:style>"
+        '<style:style style:name="ScoreColScore" style:family="table-column">'
+        '<style:table-column-properties style:column-width="1.2cm"/>'
+        "</style:style>"
+        '<style:style style:name="ScoreColSlash" style:family="table-column">'
+        '<style:table-column-properties style:column-width="0.5cm"/>'
+        "</style:style>"
+        '<style:style style:name="ScoreColMax" style:family="table-column">'
+        '<style:table-column-properties style:column-width="1.2cm"/>'
+        "</style:style>"
+    )
+
+    #########################################################################
+    # Text/paragraph styles for bold rows and aligned cells.
+    #
+    # ScoreBold:         bold text, normal (left) alignment - description
+    #                    and max cells of TOTAAL, "Te laat" and EINDSCORE.
+    # ScoreRight:        normal weight, right-aligned - score cell of
+    #                    every row.
+    # ScoreRightBold:    bold AND right-aligned - score cell of TOTAAL,
+    #                    "Te laat" and EINDSCORE rows.
+    # ScoreCenter:       normal weight, centered - "/" cell of every row.
+    # ScoreCenterBold:   bold AND centered - "/" cell of TOTAAL, "Te laat"
+    #                    and EINDSCORE rows.
+    #
+    # All use P4 as their parent style, so they inherit the template's
+    # normal font/size and only override weight and/or alignment.
+
+    text_styles_xml = (
+        '<style:style style:name="ScoreBold" style:family="paragraph" '
+        'style:parent-style-name="P4">'
+        '<style:text-properties fo:font-weight="bold" '
+        'style:font-weight-asian="bold" style:font-weight-complex="bold"/>'
+        "</style:style>"
+        '<style:style style:name="ScoreRight" style:family="paragraph" '
+        'style:parent-style-name="P4">'
+        '<style:paragraph-properties fo:text-align="end"/>'
+        "</style:style>"
+        '<style:style style:name="ScoreRightBold" style:family="paragraph" '
+        'style:parent-style-name="P4">'
+        '<style:paragraph-properties fo:text-align="end"/>'
+        '<style:text-properties fo:font-weight="bold" '
+        'style:font-weight-asian="bold" style:font-weight-complex="bold"/>'
+        "</style:style>"
+        '<style:style style:name="ScoreCenter" style:family="paragraph" '
+        'style:parent-style-name="P4">'
+        '<style:paragraph-properties fo:text-align="center"/>'
+        "</style:style>"
+        '<style:style style:name="ScoreCenterBold" style:family="paragraph" '
+        'style:parent-style-name="P4">'
+        '<style:paragraph-properties fo:text-align="center"/>'
+        '<style:text-properties fo:font-weight="bold" '
+        'style:font-weight-asian="bold" style:font-weight-complex="bold"/>'
+        "</style:style>"
+    )
+
+    #########################################################################
+    # Table-cell styles: top border + vertical centering.
+    #
+    # Six explicit table-cell styles (style:family="table-cell") are
+    # registered, one per role (label, score, slash) times normal/bold.
+    # Every one of them independently sets:
+    #
+    #   fo:border-top="0.5pt solid #cccccc"
+    #   fo:border-bottom="none"
+    #   fo:border-left="none"
+    #   fo:border-right="none"
+    #   style:vertical-align="middle"
+    #
+    # Using six separate styles (instead of one shared ScoreCellBorder
+    # style referenced everywhere) guarantees every single cell - label,
+    # score and slash, normal or bold, empty or not - carries its own
+    # unambiguous cell style, so LibreOffice/soffice cannot silently
+    # fall back to default (top-aligned, borderless) formatting for any
+    # particular cell.
+
+    def _cell_border_style(name):
+        return (
+            f'<style:style style:name="{name}" style:family="table-cell">'
+            "<style:table-cell-properties "
+            'fo:border-top="0.5pt solid #cccccc" '
+            'fo:border-bottom="none" '
+            'fo:border-left="none" '
+            'fo:border-right="none" '
+            'style:vertical-align="middle"/>'
+            "</style:style>"
+        )
+
+    cell_styles_xml = (
+        _cell_border_style("ScoreCellLabel")
+        + _cell_border_style("ScoreCellLabelBold")
+        + _cell_border_style("ScoreCellScore")
+        + _cell_border_style("ScoreCellScoreBold")
+        + _cell_border_style("ScoreCellSlash")
+        + _cell_border_style("ScoreCellSlashBold")
+    )
+
+    #########################################################################
     # Table
     #
     # No table style.
-    # No paragraph style other than P4.
-    # No generated formatting.
-    #
-    # This means the table text remains normal template text.
+    # Cell paragraph styles are P4 (normal), ScoreBold (bold, left),
+    # ScoreRight/ScoreRightBold (right) or ScoreCenter/ScoreCenterBold
+    # (center). Every cell also carries its own explicit table-cell style
+    # (ScoreCellLabel*/ScoreCellScore*/ScoreCellSlash*) for the light grey
+    # top border and vertical centering.
 
     table_xml = (
         title_xml + "<table:table "
         'table:name="ScoreTable">'
-        "<table:table-column/>"
-        "<table:table-column/>"
-        "<table:table-column/>"
-        "<table:table-column/>" + "".join(rows_xml) + "</table:table>"
+        '<table:table-column table:style-name="ScoreColDesc"/>'
+        '<table:table-column table:style-name="ScoreColScore"/>'
+        '<table:table-column table:style-name="ScoreColSlash"/>'
+        '<table:table-column table:style-name="ScoreColMax"/>'
+        + "".join(rows_xml)
+        + "</table:table>"
     )
 
-    return table_xml
+    return table_xml, column_styles_xml, text_styles_xml + cell_styles_xml
 
 
 #############################################################################
@@ -854,6 +1055,8 @@ def fill_template(
     score_table_xml,
     doelen_marks,
     out_odt_path,
+    score_column_styles_xml,
+    score_text_styles_xml,
 ):
     """
     Copy template and replace placeholders.
@@ -949,15 +1152,48 @@ def fill_template(
     )
 
     #########################################################################
+    # Register the ScoreCol* column-width styles and the ScoreBold /
+    # ScoreRight / ScoreRightBold / ScoreCenter / ScoreCenterBold /
+    # ScoreCellLabel* / ScoreCellScore* / ScoreCellSlash* styles.
+    #
+    # These must live inside <office:automatic-styles> so the
+    # table:style-name / text:style-name references used above actually
+    # resolve to something. Without this step, LibreOffice silently
+    # ignores unknown style names and falls back to defaults (equal
+    # column widths, normal weight, left alignment, no border, top
+    # vertical alignment).
+
+    marker = "</office:automatic-styles>"
+
+    combined_styles_xml = score_column_styles_xml + score_text_styles_xml
+
+    if marker in content:
+        content = content.replace(
+            marker,
+            combined_styles_xml + marker,
+            1,
+        )
+    else:
+        print(
+            f"{RED}✗ Warning: <office:automatic-styles> not found - "
+            f"column widths, bold/alignment styling, row borders and "
+            f"vertical centering will fall back to defaults.{NC}",
+            file=sys.stderr,
+        )
+
+    #########################################################################
     # Write modified ODT.
     #
     # IMPORTANT:
     #
     # We do NOT modify styles.xml.
     #
-    # We do NOT add any new automatic styles.
+    # We only add the ScoreCol*, ScoreBold/ScoreRight*/ScoreCenter* and
+    # ScoreCellLabel*/ScoreCellScore*/ScoreCellSlash* styles to
+    # office:automatic-styles in content.xml.
     #
-    # We therefore keep the complete template style system untouched.
+    # We therefore keep the complete template style system untouched,
+    # apart from those additions.
 
     with zipfile.ZipFile(
         out_odt_path,
@@ -1328,13 +1564,15 @@ def main():
         #####################################################################
         # Build score table
 
-        score_table_xml = build_score_table_xml(
-            items=items,
-            total_score=total_score,
-            total_max=total_max,
-            late=late,
-            eindscore=eindscore,
-            late_penalty=late_penalty,
+        score_table_xml, score_column_styles_xml, score_text_styles_xml = (
+            build_score_table_xml(
+                items=items,
+                total_score=total_score,
+                total_max=total_max,
+                late=late,
+                eindscore=eindscore,
+                late_penalty=late_penalty,
+            )
         )
 
         #####################################################################
@@ -1349,6 +1587,8 @@ def main():
                 score_table_xml=score_table_xml,
                 doelen_marks=doelen_marks,
                 out_odt_path=temporary_odt_path,
+                score_column_styles_xml=score_column_styles_xml,
+                score_text_styles_xml=score_text_styles_xml,
             )
 
             #################################################################
