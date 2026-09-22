@@ -237,12 +237,14 @@ def create_spreadsheet(student_name, assignment_name):
     total_row.addElement(make_cell("TOTAAL", align_style=green_left_align_style_name))
 
     # Column 2: Sum formula for all scores (B column from start_row to end_row)
+    # No cached "value" - leaving it unset forces LibreOffice to actually
+    # evaluate the formula on open, instead of possibly trusting a stale
+    # cached number from a file it didn't create.
     total_row.addElement(
         make_cell(
             "",  # Display content will be calculated
             formula=f"of:=SUM([.B{start_row}:.B{end_row}])",  # OpenDocument formula syntax
             value_type="float",
-            value=0,  # Default value
             bg_style=green_bg_style_name,
         )
     )
@@ -256,7 +258,6 @@ def create_spreadsheet(student_name, assignment_name):
             "",  # Display content will be calculated
             formula=f"of:=SUM([.D{start_row}:.D{end_row}])",  # OpenDocument formula syntax
             value_type="float",
-            value=0,  # Default value
             align_style=green_left_align_style_name,
         )
     )
@@ -280,7 +281,6 @@ def create_spreadsheet(student_name, assignment_name):
             "",  # Display content will be calculated
             formula=(f'of:=IF([.B{te_laat_row_num}]<>"";[.B{total_row_num}]*-0.2;0)'),
             value_type="float",
-            value=0,  # Default value
             align_style=left_align_style_name,
         )
     )
@@ -298,7 +298,6 @@ def create_spreadsheet(student_name, assignment_name):
             "",  # Display content will be calculated
             formula=f"of:=[.B{total_row_num}]+[.C{te_laat_row_num}]",
             value_type="float",
-            value=0,  # Default value
             bg_style=green_bg_style_name,
         )
     )
@@ -308,7 +307,6 @@ def create_spreadsheet(student_name, assignment_name):
             "",  # Display content will be calculated
             formula=f"of:=[.D{total_row_num}]",
             value_type="float",
-            value=0,  # Default value
             align_style=green_left_align_style_name,
         )
     )

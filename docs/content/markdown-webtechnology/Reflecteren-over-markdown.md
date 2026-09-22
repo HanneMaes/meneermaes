@@ -1,7 +1,7 @@
 ---
 title: Reflecteren Over Markdown
 created: 2026-09-14 21:26:45 +0200
-last_modified: 2026-09-14 21:58:37 +0200
+last_modified: 2026-09-22 10:02:06 +0200
 ---
 
 > Je hebt de afgelopen lessen geleerd wat Markdown is, waarom het gebruikt wordt en hoe je er zelf digitale inhoud mee kunt maken.
@@ -23,7 +23,7 @@ Reflecteer over wat je leerde tijdens deze Markdown lessen en beantwoord deze vr
 ## To Markdown or not?
 
 5. Zou je Markdown opnieuw gebruiken voor een document of presentatie? **Waarom wel/niet?**
-6. Wat vind je handiger: opmaak via knoppen zoals in Word of opmaak schrijven via Markdown-syntax?
+6. Wat vind je handiger: opmaak via knoppen zoals in Word/Documenten/PowerPoint/Presentaties of opmaak schrijven via Markdown-syntax?
 7. Geef Markdown een score van 1 tot 10.
 8. Geef Word een score van 1 tot 10.
 
