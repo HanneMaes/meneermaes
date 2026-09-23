@@ -1,6 +1,6 @@
 ---
 title: Databases
-last_modified: 2026-07-08 13:47:35 +0200
+last_modified: 2026-09-23 15:00:54 +0200
 created: Wed, sep 04, 2024  10:47:23 PM
 ---
 
@@ -16,6 +16,9 @@ Formulier: **[Vragen bij het thuis verwerken van leerstof](https://docs.google.c
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Tk1t3WKK-ZY?si=O0TRh54k9UFDbal2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # The Manga Guide to Databases
+
+Een manga die de basisprincipes van databases uitlegt en abstracte begrippen visueel en laagdrempelig uitlegt.  
+Zo krijg je eerst een concreet verhaal en voorbeeld, voor je zelf aan de slag gaan.
 
 [The Manga Guide to Databases](https://nostarch.com/mg_databases.htm)
 
