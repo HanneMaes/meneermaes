@@ -12,8 +12,10 @@ punten:
     max: 2
   - desc: "Elke pagina heeft een title & favicon"
     max: 2
-  - desc: "Je hebt minsten 1 pagina’s met een ander favicon"
+  - desc: "Je hebt minsten 1 pagina met een ander favicon"
     max: 2
+  - desc: "Je hebt een table met minstens 2 rows en een header"
+    max: 3
   - desc: "Je maakt gebruik van comments en tabs om je code duidelijker te maken"
     max: 2
   - desc: "Hoe uitgebreid is je website? Maak je gebruik van andere tags?"
