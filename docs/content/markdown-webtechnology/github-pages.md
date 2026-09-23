@@ -1,6 +1,6 @@
 ---
 title: Github Pages
-last_modified: 2026-09-23 11:59:42 +0200
+last_modified: 2026-09-23 13:44:14 +0200
 created: 2025-03-24 08:53:55 +0200
 ---
 
@@ -56,19 +56,19 @@ Wil je een mooiere uitstraling? Je kunt eenvoudig Jekyll-thema’s gebruiken of 
 
 1. Maak een **account** aan op [github.com](https://github.com).
 2. Maak **nieuwe repository**.  
-  - Een repository or repo kan je zien als een online map voor een project, maar dan met extra mogelijkheden om de geschiedenis en samenwerking van je bestanden bij te houden.
+    Een repository or repo kan je zien als een online map voor een project, maar dan met extra mogelijkheden om de geschiedenis en samenwerking van je bestanden bij te houden.
 3. Geef je repository een naam  
-  ![pages repo name](images/pages-repo-name.png){: .frame width='100' }  
+    ![pages repo name](images/pages-repo-name.png){: .frame width='400' }  
 4. Click op {% include btn.html btn='Create repository' %}  
 5. Click op {% include btn.html btn='Add file' %}, maak een nieuwe file aan of upload een bestaande .md-file.  
-  **Het is belangrijk dat je files de naam `index.md` heeft.**  
-  Dit bestand is de **startpagina** van je website.  
-  ![pages add file](images/pages-add-file.png)
+    **Het is belangrijk dat je files de naam `index.md` heeft.**  
+    Dit bestand is de **startpagina** van je website.  
+    ![pages add file](images/pages-add-file.png){: .frame width='400' }  
 6. Ga naar {% include btn.html btn='Settings' %} 
-  ![pages settings](images/pages-settings.png)
+    ![pages settings](images/pages-settings.png){: .frame width='300' }  
 7. Selecteer{% include btn.html btn='Pages' %}  
-  ![pages pages](images/pages-pages.png)
+    ![pages pages](images/pages-pages.png){: .frame width='200' }  
 8. Bij **Branch** selecteer je {% include btn.html btn='Main' %} en {% include btn.html btn='/ (root)' %}  
-  ![pages branch](images/pages-branch.png)
+    ![pages branch](images/pages-branch.png){: .frame width='300' }  
 9. **Wacht** to GitHub klaar is met je site te **builden**, je site is klaar als je bij de Pages instellingen de URL van je website te zien krijgt:  
-  ![pages url](images/pages-url.png)
+    ![pages url](images/pages-url.png){: .frame width='800' }  

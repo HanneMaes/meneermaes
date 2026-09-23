@@ -1,7 +1,7 @@
 ---
 title: Tables
 created: 2026-09-23 10:02:17 +0200
-last_modified: 2026-09-23 11:22:18 +0200
+last_modified: 2026-09-23 14:56:36 +0200
 ---
 
 Een tabel gebruik je om gegevens in rijen en kolommen weer te geven.
@@ -100,23 +100,71 @@ Daarvoor gebruik je `<th>`, dit betekent **table header**.
 </table>
 ```
 
+# Oefening
+
+## Basis 
+
+Maak deze tabel met 2 kolommen en 4 rijen:  
+{% include browser.html img='images/tables-oef-1.png' %}
+
+Voeg een header toe:  
+{% include browser.html img='images/tables-oef-2.png' %}
+
+Breid de tabel uit met een derde kolom:  
+{% include browser.html img='images/tables-oef-3.png' %}
+
+Nu krijg je een nog grotere dataset:
+{% include browser.html img='images/tables-oef-4.png' %} 
+
+## Uitbreiding
+
+Werk verder aan dezelfde table en gebruik `colspan` om een **rij over meerdere kolommen te laten lopen**.
+
+```html 
+<th colspan="4">Internet Hall of Fame</th>
+```
+
+{% include browser.html img='images/tables-oef-5.png' %} 
+
+Zoek zelfstandig uit hoe je `rowspan` kunt gebruiken om een **cel over meerdere rijen te laten lopen**, zoals ik hieronder bij de **cell internet** gedaan heb.
+
+{% include browser.html img='images/tables-oef-6.png' %}
+
+## Table Puzzles
+
+Maak deze tables **exact** na
+
+**De Halve Piramide:**
+{% include browser.html img='images/tables-puzzle-1.png' %} 
+
+**De Brug:**
+{% include browser.html img='images/tables-puzzle-2.png' %} 
+
+**De Toren:**
+{% include browser.html img='images/tables-puzzle-3.png' %} 
+
+**De Trap:**
+{% include browser.html img='images/tables-puzzle-4.png' %} 
+
+**De Hele Piramide:**
+{% include browser.html img='images/tables-puzzle-5.png' %}
+
 # Overzicht
 
-| Element   | Betekenis    | Gebruik                         |
-| --------- | ------------ | ------------------------------- |
-| `<table>` | Table        | De volledige tabel              |
-| `<tr>`    | Table Row    | Een rij                         |
-| `<td>`    | Table Data   | Cel met gegevens         |
-| `<th>`    | Table Header | Header/cel die gegevens benoemt |
+| Element             | Betekenis    | Gebruik                                          |
+| ------------------- | ------------ | ------------------------------------------------ |
+| `<table>`           | Table        | De volledige tabel                               |
+| `<tr>`              | Table Row    | Een rij in de tabel                              |
+| `<td>`              | Table Data   | Een cel met gegevens                             |
+| `<th>`              | Table Header | Een header die de gegevens benoemt               |
 
-# Oefeningen
+| Attribuut           | Betekenis    | Gebruik                                          |
+| ------------------- | ------------ | ------------------------------------------------ |
+| `border="1"`        | Border       | Geeft een zichtbare rand rond de tabel en cellen |
+| `colspan="2"`       | Column Span  | Laat een cel over meerdere kolommen lopen        |
+| `rowspan="2"`       | Row Span     | Laat een cel over meerdere rijen lopen           |
 
-Maak deze tabellen na: 
-
-## 2 kolommen, 4 rijen
-
-{% include browser.html img='images/tables-oef-2x4.png' %} 
-
-## 2 kolommen, 4 rijen en header 
-
-
+{% include callout.html type='Element & Attribuut' content='
+Een **element** vertelt de browser **wat iets is**.  
+Een **attribuut** geeft **extra informatie** over een element.
+' %}
