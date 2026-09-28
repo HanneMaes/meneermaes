@@ -1,6 +1,6 @@
 ---
 title: Bash Scripting
-last_modified: 2026-01-21 17:22:10 +0100
+last_modified: 2026-09-28 11:57:13 +0200
 created: 2025-01-15 15:21:22 +0200
 ---
 
@@ -41,6 +41,7 @@ Je mag zelf kiezen welke optie je gebruikt om met Bash aan de slag te gaan.
 
 # Bash scripts aanmaken en uitvoeren
 
+**Aanmaken:**
 1. Open de terminal
    - In de meeste Linux-distributies kun je de terminal openen door op {% include btn.html btn='Ctrl' %} {% include btn.html btn='Alt' %} {% include btn.html btn='T' %}
    - Of je kunt zoeken naar **"Terminal"** in het applicatiemenu.
@@ -49,6 +50,24 @@ Je mag zelf kiezen welke optie je gebruikt om met Bash aan de slag te gaan.
 4. Nieuwe bestanden aanmaken:
    - `touch bestand.txt`
    - `touch script.sh`
+
+**Openen:**
+1. Open het bestand met de gewenste **terminal editor**:
+  - `nano script.sh`
+  - `vi script.sh`
+2. Schrijf code
+
+**Opslaan en uitvoeren:**
+1. Sla je bestand op:
+    - Nano:{% include btn.html btn='CTRL' %} {% include btn.html btn='o' %} *(write out)*, {% include btn.html btn='ENTER' %} 
+    - Vi:{% include btn.html btn='ESC' %}, `:w` *(write)*
+2. Sluit de terminal editor
+    - Nano:{% include btn.html btn='CTRL' %} {% include btn.html btn='x' %} *(exit)*
+    - Vi:{% include btn.html btn='ESC' %}, `:q` *(quit)*
+
+- Je kan ook opslaan en sluiten in 1 commando
+    - Nano:{% include btn.html btn='CTRL' %} {% include btn.html btn='x' %}, als het bestand nog niet opgeslagen is zal hij vragen om het op te slaan
+    - Vi:{% include btn.html btn='ESC' %}, `:wq` *(write & quit)*
 
 # Bash syntax
 

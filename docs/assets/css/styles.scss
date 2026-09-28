@@ -578,12 +578,21 @@ code {
 
 .btn {
   border-bottom: var(--borderWidth) solid var(--medium);
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  transition: all var(--animSpeed);
+}
+.btn:hover {
+  border-bottom: 1px solid var(--medium);
+  top: var(--borderWidth);
 }
 
 .uiSeparator {
   color: var(--medium);
   font-weight: bold;
 }
+
 
 /* *************** */
 /* HEADER & FOOTER */

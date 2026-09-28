@@ -1,2 +1,5 @@
-{% assign keys = include.btn | replace: ', ', ',' | split: ',' %}
-{% for key in keys %}<span class="btn">{{ key }}</span>{% endfor %}
+{%- assign keys = include.btn | replace: ', ', ',' | split: ',' -%}
+{%- for key in keys %}<span class="btn">{{ key }}</span>{% endfor -%}
+
+<!-- the "-" in the liauis tags is Liquid whitespace control: it tells Liquid to strip all whitespace (spaces, tabs, newlines) before the tag -->
+<!-- zonder dit voegt hij een p-tag toe rond alle btn elementen -->
