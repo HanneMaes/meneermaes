@@ -29,26 +29,26 @@
   <body>
     <section>
 
+      <!-- ------------------------------------ -->
+      <!-- TOP BAR: when sidebar is not visible -->
+      <!-- ------------------------------------ -->
+
+      <!-- <header>  -->
+      <!-- </header> -->
+
       <!-- ------------------------- -->
-      <!-- SIDEBAR: BREADCRUMBS, TOC -->
+      <!-- SIDE BAR: BREADCRUMBS, TOC -->
       <!-- ------------------------- -->
 
-      <aside data-aos="fade-right" data-aos-delay="300"> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
+      <aside> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
 
-        <!-- ------ -->
         <!-- SEARCH -->
-        <!-- ------ -->
-
         <!-- <nav> -->
-        <!--   <a href="{{ site.baseurl }}/index#cursussen"><img class="icon" src="{{ site.baseurl }}/assets/images/search.svg"/></a> -->
+        <!--   <a href="{{ site.baseurl }}/index#cursussen"><img class="icon" src="{{ site.baseurl }}/assets/images/search.svg" ></a> -->
         <!-- </nav> -->
 
-        <!-- ----------- -->
         <!-- BREADCRUMBS -->
-        <!-- ----------- -->
-
-        <!-- not on homepage -->
-        {% unless page.url == '/' %}
+        {% unless page.url == '/' %} <!-- not on homepage -->
 
           <nav>
         
