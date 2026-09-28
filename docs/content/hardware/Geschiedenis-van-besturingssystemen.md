@@ -1,6 +1,6 @@
 ---
 title: Geschiedenis Van Besturingssystemen
-last_modified: 2025-11-13 14:26:12 +0100
+last_modified: 2026-09-28 08:52:38 +0200
 created: 2024-09-19 15:18:44 +0200
 ---
 
@@ -32,34 +32,34 @@ Jullie krijgen elk een aantal gebeurtenissen toegewezen met bijbehorende onderzo
 ## Gebeurtenissen
 
 **Xerox & Palo Alto Research Center (PARC)**  
-Wat waren de belangrijkste innovaties van het PARC-onderzoek en hoe werden deze innovaties later overgenomen door andere bedrijven zoals Apple en Microsoft?
+- Wat waren de belangrijkste innovaties van het PARC-onderzoek en hoe werden deze innovaties later overgenomen door andere bedrijven zoals Apple en Microsoft?
 
 **Android 1.0**  
-Wat is het, welke bedrijf richtte het op, en waarvoor was het oorspronkelijk bedoeld?
+- Wat is het, welke bedrijf richtte het op, en waarvoor was het oorspronkelijk bedoeld?
 
 **Classic Mac OS**  
-Hoe verschilde Classic Mac OS van andere besturingssystemen van die tijd?
+- Hoe verschilde Classic Mac OS van andere besturingssystemen van die tijd?
 
 **GNU Project**  
-Wat is het, waarom werd het opgericht en door wie?
+- Wat is het, waarom werd het opgericht en door wie?
 
 **BSD: Berkeley Software Distribution**  
-Wat waren de belangrijkste innovaties van BSD vergeleken met Unix, word BSD nu nog gebruikt?
+- Wat waren de belangrijkste innovaties van BSD vergeleken met Unix, word BSD nu nog gebruikt?
 
 **Unix & Bell Labs**  
-Wat is Bell Labs en hoe verschilt Unix van andere besturingssystemen die op dat moment beschikbaar waren?
+- Wat is Bell Labs en hoe verschilt Unix van andere besturingssystemen die op dat moment beschikbaar waren?
 
 **Windows 95**  
-Wie richtte het op en wat was er revolutionair aan dit besturingssysteem?
+- Wie richtte het op en wat was er revolutionair aan dit besturingssysteem?
 
 **CyanogenMod**  
-Waarom werd het ontwikkeld en wat waren de belangrijkste kenmerken?
+- Waarom werd het ontwikkeld en wat waren de belangrijkste kenmerken?
 
 **MacOS**  
-Wie richtte het op, wat was er anders aan dit besturingssysteem en waarom waren deze veranderingen belangrijk?
+- Wie richtte het op, wat was er anders aan dit besturingssysteem en waarom waren deze veranderingen belangrijk?
 
 **Linux**  
-Wat is het, waarom werd het opgericht, door wie en waarom is het momenteel zo belangrijk?
+- Wat is het, waarom werd het opgericht, door wie en waarom is het momenteel zo belangrijk?
 
 ## Puntenverdeling
 
