@@ -52,8 +52,7 @@ created: Thu, oct 21, 2025  09:07:23 PM
 - {% include btn.html btn='Ctrl, e' %}&#58; Ga naar het **einde** van de lijn.
 - {% include btn.html btn='Ctrl, Shift, c' %}&#58; **Copy**.
 - {% include btn.html btn='Ctrl, Shift, v' %}&#58; **Paste**.
-
-`command 1 && command 2 && command 3`: Commands **chainen** *(na elkaar uitvoeren)*.
+- `command 1 && command 2 && command 3`: Commands **chainen** *(na elkaar uitvoeren)*.
 
 # Terminologie
 
