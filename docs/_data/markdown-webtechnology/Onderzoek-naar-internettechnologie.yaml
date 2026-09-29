@@ -2,10 +2,10 @@ title: Onderzoek naar Internettechnology
 punten:
   - desc: "Antwoorden op de vragen, ik zal extra vragen stellen om te zien of je het snapt"
     max: 9
-  - desc: "Je converteert je Markdown naar Word en HTML"
+  - desc: "Je converteert je Markdown naar Word en HTML (je upload ook je .md bestand)"
     max: 3
-  - desc: "Je publiceert je Markdown als een website via GitHub pages"
-    max: 3
+  - desc: "Je publiceert je Markdown als een website via GitHub pages en je maake je website duidelijk en overzichtelijk door gebruik te maken van markdown syntax."
+    max: 5
 doelen:
   - nr: "BV3_04.01"
     desc: "De leerlingen gebruiken doelgericht courante functionaliteiten van vergelijkbare toepassingen om digitale inhouden te creëren."
