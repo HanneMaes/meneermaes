@@ -66,7 +66,7 @@ Wil je een mooiere uitstraling? Je kunt eenvoudig Jekyll-thema’s gebruiken of 
     ![pages add file](images/pages-add-file.png){: .frame width='400' }  
 6. Ga naar {% include btn.html btn='Settings' %} 
     ![pages settings](images/pages-settings.png){: .frame width='300' }  
-7. Selecteer{% include btn.html btn='Pages' %}  
+7. Selecteer {% include btn.html btn='Pages' %}  
     ![pages pages](images/pages-pages.png){: .frame width='200' }  
 8. Bij **Branch** selecteer je {% include btn.html btn='Main' %} en {% include btn.html btn='/ (root)' %}  
     ![pages branch](images/pages-branch.png){: .frame width='300' }  
