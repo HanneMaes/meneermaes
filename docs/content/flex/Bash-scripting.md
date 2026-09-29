@@ -255,14 +255,14 @@ Je maakt vaak websites en moet telkens opnieuw dezelfde mappen aanmaken. **Dat k
 **Stap 1: Voorbereiding**
 
 1. Maak een nieuw Bash-script aan.
-2. Voeg de correcte shebang toe bovenaan `(#!/bin/bash)`.
+2. Voeg de correcte shebang toe bovenaan `#!/usr/bin/env bash`.
 3. Maak het script executable zodat je het kan uitvoeren `chmod +x scriptnaam.sh`.
 4. Voer het script uit om te testen `bash scriptnaam.sh`.
 
 **Stap 2: Projectinformatie**
 
 1. Laat het script de gebruiker vragen naar de naam van de website.
-2. Maak een map aan met de naam van de website.
+2. Laat het script een map aan met de naam van de website aanmaken.
 
 **Stap 3: Basisbestanden en mappen**
 
