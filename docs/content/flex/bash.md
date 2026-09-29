@@ -47,11 +47,11 @@ created: Thu, oct 21, 2025  09:07:23 PM
 
 # Command line shortcuts
 
-{% include btn.html btn='Ctrl, c' %}&#58; **Stop** het command dat aan het runnen is/**verwijder** het command dat je aan het typen bent.
-{% include btn.html btn='Ctrl, a' %}&#58; Ga naar het **begin** van de lijn.
-{% include btn.html btn='Ctrl, e' %}&#58; Ga naar het **einde** van de lijn.
-{% include btn.html btn='Ctrl, Shift, c' %}&#58; **Copy**.
-{% include btn.html btn='Ctrl, Shift, v' %}&#58; **Paste**.
+- {% include btn.html btn='Ctrl, c' %}&#58; **Stop** het command dat aan het runnen is/**verwijder** het command dat je aan het typen bent.
+- {% include btn.html btn='Ctrl, a' %}&#58; Ga naar het **begin** van de lijn.
+- {% include btn.html btn='Ctrl, e' %}&#58; Ga naar het **einde** van de lijn.
+- {% include btn.html btn='Ctrl, Shift, c' %}&#58; **Copy**.
+- {% include btn.html btn='Ctrl, Shift, v' %}&#58; **Paste**.
 
 `command 1 && command 2 && command 3`: Commands **chainen** *(na elkaar uitvoeren)*.
 
@@ -82,7 +82,7 @@ Dat is wat er draait in de terminal.
 " %}
 
 {% include toggle.html title="Bash" content="
-Bash is een **shell-taal** waarin je **commmands & scripts** kan schrijven.  
+Bash is een **shell-taal** waarin je **commands & scripts** kan schrijven.  
 Er zijn meerdere shell-talen zoals:
 - PowerShell *(op Windows)*
 - Zsh *(op MacOS & Linux)*
