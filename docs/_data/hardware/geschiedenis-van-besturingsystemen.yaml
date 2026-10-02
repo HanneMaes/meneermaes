@@ -8,3 +8,8 @@ punten:
     max: 2
   - desc: "Specifieke vragen over je onderwerp"
     max: 4
+doelen:
+   - nr: "Transversaal: 04.01"
+     desc: "De leerlingen gebruiken doelgericht courante functionaliteiten van vergelijkbare toepassingen om digitale inhouden te creëren."
+   - nr: "Transversaal: 13.03"
+     desc: "De leerlingen gebruiken school- en vaktaal."
