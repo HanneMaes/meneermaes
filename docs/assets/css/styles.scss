@@ -812,7 +812,7 @@ aside {
   align-self: flex-start;
 
   /* give it scrollbar when it get's to big */
-  max-height: 100vh;
+  max-height: 95vh;
   overflow-y: auto;
 
   scrollbar-width: auto; /* Scrollbar styling: Firefox, and Chrome/Safari in recent versions */
