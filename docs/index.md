@@ -66,9 +66,17 @@ created: 2024-03-13T10:31:28+01:00
 
 [Linux Journey: alles over Linux](https://linuxjourney.com/)
 
-[Linux Survival: een game dat je de beginselen van de Linux terminal leert](https://linuxsurvival.com/)
-
 [Linux for Hackers](content/uitbreiding/Linux%20Basics%20for%20Hackers.pdf)
+
+### Games waarmee je Bash leert
+
+[Linux Survival: een game dat je de beginselen van de Linux terminal leert](Leer de belangrijkste Linux-commando’s via een interactieve tutorial)
+
+[Bashcrawl: Een dungeon waarin je bestandssysteem de wereld is](https://bamr87.github.io/bashcrawl)
+
+[Terminus: Los Bash puzzels op](https://terminus-global.vercel.app/)
+
+[CLMystery: Los een moordmysterie op](https://github.com/veltman/clmystery)
 
 ## Privacy
 
