@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ******************** */
 
   const headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
-  const maxLetters = 50; // Tekst inkorten in de sidebar (toc, in- en uitgaande links)
+  const maxLetters = 30; // Tekst inkorten in de sidebar (toc, in- en uitgaande links)
   const SEARCH_URL = "/search.json"; // Pas aan als je site een baseurl heeft
   const currentPath = normalizePath(window.location.pathname);
 
@@ -144,26 +144,38 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      // Alleen interne links (slaat http(s) extern, mailto:, tel: enz. over)
-      if (url.origin !== window.location.origin) return;
+      // mailto:, tel: enz. overslaan
+      if (url.protocol !== "http:" && url.protocol !== "https:") return;
 
-      const path = normalizePath(url.pathname);
-      if (path === currentPath) return; // zichzelf overslaan
-      if (seen.has(path)) return;       // ontdubbelen
-      seen.add(path);
+      const isExternal = url.origin !== window.location.origin;
+      let key, linkHref, fallback;
 
-      const label =
-        a.textContent.trim() ||
-        path.split("/").filter(Boolean).pop() ||
-        path;
+      if (isExternal) {
+        key = url.origin + url.pathname.replace(/\/+$/, "");
+        linkHref = url.href;
+        fallback = url.hostname;
+      } else {
+        const path = normalizePath(url.pathname);
+        if (path === currentPath) return; // zichzelf overslaan
+        key = path;
+        linkHref = url.pathname;
+        fallback = path.split("/").filter(Boolean).pop() || path;
+      }
 
-      items.push({ href: url.pathname, label: truncate(label) });
+      if (seen.has(key)) return; // ontdubbelen: eerste voorkomen telt
+      seen.add(key);
+
+      const label = a.textContent.trim() || fallback;
+
+      items.push({ href: linkHref, label: truncate(label), isExternal: isExternal });
     });
 
     container.innerHTML = items
       .map(function (item) {
+        const cls = item.isExternal ? "linksOutgoing linksExternal" : "linksOutgoing";
+        const attrs = item.isExternal ? ' target="_blank" rel="noopener noreferrer"' : "";
         return (
-          '<li><a class="linksOutgoing" href="' + escapeHTML(item.href) + '">' +
+          '<li><a class="' + cls + '" href="' + escapeHTML(item.href) + '"' + attrs + ">" +
           escapeHTML(item.label) + "</a></li>"
         );
       })
