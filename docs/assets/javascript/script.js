@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // variables I need in multiple things
   var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6"); // Get all headers
-  var maxLetters = 50; // Trim text in the sidebar (toc, incoming and outgoind links)
+  var maxLetters = 30; // Trim text in the sidebar (toc, incoming and outgoind links)
 
   /* ************************ */
   /* ADD CSS CLASSES TO STUFF */
@@ -73,7 +73,10 @@ document.addEventListener("DOMContentLoaded", function () {
         path.split("/").filter(Boolean).pop() ||
         path;
 
-      items.push({ path, label });
+        // trim text
+  	    var labelText = label.length > maxLetters ? label.substring(0, maxLetters) + '...' : label;
+
+      items.push({ path, labelText });
     });
 
     const container = document.getElementById("outgoingLinks");
