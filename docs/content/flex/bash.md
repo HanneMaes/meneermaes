@@ -93,4 +93,4 @@ Er zijn meerdere shell-talen zoals:
 
 # Games om bash te leren
 
-{% include bash-games.md %}
+{% include cursusmateriaal/bash-games.md %}
