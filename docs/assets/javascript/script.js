@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ******************** */
 
   const headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
-  const maxLetters = 30; // Tekst inkorten in de sidebar (toc, in- en uitgaande links)
+  const maxLetters = 50; // Tekst inkorten in de sidebar (toc, in- en uitgaande links)
   const SEARCH_URL = "/search.json"; // Pas aan als je site een baseurl heeft
   const currentPath = normalizePath(window.location.pathname);
 
