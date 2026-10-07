@@ -64,7 +64,7 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 [CSS Basics](CSS-basics)
 
-[Je 1e website stylen](Je-1e-website-stylen){: .opdracht }
+[Je 1e website stylen](Je-1e-website-stylen)
 
 [Peer assessment](Peer-assessment)
 
