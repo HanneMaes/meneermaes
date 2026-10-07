@@ -6,14 +6,32 @@ created: 2024-10-10 11:55:25 +0200
 
 > Style je vorige website door gebruik te maken van CSS
 
-1. Je start van een website met meerdere pagina's en styled alle pagina's met hetzelfde CSS-bestand.
+1. Je start van een website met meerdere pagina's en styled alle pagina's met hetzelfde CSS-bestand, zorg dat je **css-bestand de gebruikelijke naam heeft**.
 2. Je gebruikt enkel CSS in het {% include filePath.html fileOrPath='.CSS-bestand' %} en niet in je {% include filePath.html fileOrPath='.html-bestand' %}.  
 2. Zorg ervoor dat je CSS-code een goede structuur heeft.  
     Je maakt bijvoorbeeld gebruik van `h1, h2, a` als elementen dezelfde opmaak moeten hebben.
 3. Nadien geef je **1 pagina een ander ontwerp**, door gebruikt te maken van een **ander CSS-bestand**.
 4. Ga **zelfstandig** opzoek naar **nieuwe CSS-attributen** om je website zo mooi mogelijk te maken.
 
-{% include punten.html data='Je-eerste-website-stylen' %}
+# Te gebruiken css-properties
+
+Probeer met zo veel mogelijk van onderstaande css-properties te experimenteren:
+
+**Tekst:**
+- `color`
+- `font-size`
+- `font-weight`
+- `font-style`
+- `text-align`
+- `text-decoration`
+- `line-height`
+
+**Elementen:**
+- `background-color`
+- `width` & `height`, maak gebruik van zowel `%` & `px`
+- `margin`
+- `padding`
+- `border-radius`
 
 # Uitdagingen
 
@@ -22,4 +40,4 @@ created: 2024-10-10 11:55:25 +0200
 - Geeft een **HTML-element** een **schaduw**, geef deze schaduw ook een **kleur**.
 - Geeft een **tekst** een **schaduw**, geef deze tekst ook een **kleur**.
 - Maak elementen **doorschijnend**.
-- Surf naar https://fonts.google.com/ en gebruik **lettertypes**.
+- Surf naar [https://fonts.google.com/](https://fonts.google.com/) en gebruik **lettertypes**.
