@@ -6,6 +6,8 @@ created: 2024-10-10 11:55:25 +0200
 
 > Style je vorige website door gebruik te maken van CSS
 
+# Opdracht
+
 1. Je start van een website met meerdere pagina's en styled alle pagina's met hetzelfde CSS-bestand, zorg dat je **css-bestand de gebruikelijke naam heeft**.
 2. Je gebruikt enkel CSS in het {% include filePath.html fileOrPath='.CSS-bestand' %} en niet in je {% include filePath.html fileOrPath='.html-bestand' %}.  
 2. Zorg ervoor dat je CSS-code een goede structuur heeft.  
@@ -13,7 +15,7 @@ created: 2024-10-10 11:55:25 +0200
 3. Nadien geef je **1 pagina een ander ontwerp**, door gebruikt te maken van een **ander CSS-bestand**.
 4. Ga **zelfstandig** opzoek naar **nieuwe CSS-attributen** om je website zo mooi mogelijk te maken.
 
-# Te gebruiken css-properties
+## Te gebruiken css-properties
 
 Probeer met zo veel mogelijk van onderstaande css-properties te experimenteren:
 
@@ -33,7 +35,7 @@ Probeer met zo veel mogelijk van onderstaande css-properties te experimenteren:
 - `padding`
 - `border-radius`
 
-# Uitdagingen
+## Uitdagingen
 
 - Geef je pagina een **afbeelding als achtergrond**.
 - Geef een **HTML-element** een **rand**, geef deze rand ook een **kleur en dikte**.
