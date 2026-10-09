@@ -7,6 +7,7 @@ created: Wed, sep 04, 2024  10:47:23 PM
 # Kennismaking
 
 [Digitale kennismaking door integratie van digitale tools](Digitale-kennismaking-door-integratie-van-digitale-tools)
+
 [Markdown](../markdown-webtechnology/index)
 
 # Opbouw & werking van een computersysteem
