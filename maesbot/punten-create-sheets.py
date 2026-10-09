@@ -108,7 +108,8 @@ def create_spreadsheet(student_name, assignment_name):
     doc = OpenDocumentSpreadsheet()
     table = Table(name="Grading")
 
-    # Define column widths: Description (wide), Score, "/", Max, (unused), (unused)
+    # Define column widths:
+    # A: Description, B: Score, C: "/", D: Max, E: unused, F: Feedback
     for i, width in enumerate(("15cm", "0.6cm", "0.6cm", "0.6cm", "0.6cm", "5cm")):
         style_name = f"col_{i}_{width.replace('.', '_').replace('cm', 'cm')}"
         col_style = Style(name=style_name, family="table-column")
@@ -192,7 +193,12 @@ def create_spreadsheet(student_name, assignment_name):
         return cell
 
     # Title row
+    #
+    # A1:D1 contains the assignment title.
+    # E1 remains empty and has no background.
+    # F1 contains the Feedback header, with the same grey background.
     title_row = TableRow()
+
     for i in range(4):
         content = f"{title}" if i == 0 else ""
         cell = TableCell()
@@ -200,6 +206,18 @@ def create_spreadsheet(student_name, assignment_name):
         p = P(text=content)
         cell.addElement(p)
         title_row.addElement(cell)
+
+    # Empty E1 cell, without a background style
+    empty_e_cell = TableCell()
+    empty_e_cell.addElement(P(text=""))
+    title_row.addElement(empty_e_cell)
+
+    # Feedback header in F1
+    feedback_header_cell = TableCell()
+    feedback_header_cell.setAttribute("stylename", grey_bg_style_name)
+    feedback_header_cell.addElement(P(text="Feedback"))
+    title_row.addElement(feedback_header_cell)
+
     table.addElement(title_row)
 
     # Assignment rows
