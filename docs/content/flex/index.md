@@ -38,7 +38,9 @@ created: Wed, sep 11, 2024  10:47:23 PM
 
 [WSL](WSL)
 
-[Bash](bash)
+[Bash: Basics](bash-basics)
+
+[Bash: Advanced](bash-advanced)
 
 [Bash scripting](Bash-scripting)
 
