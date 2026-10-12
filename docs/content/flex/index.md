@@ -26,7 +26,7 @@ created: Wed, sep 11, 2024  10:47:23 PM
 
 # Python
 
-[Bash](bash)
+[Bash: Basics](bash-basics)
 
 [Python: Basics](https://hannemaes.notion.site/Python-Game-Development-f26abfaf2cdc4ff7967753b933cd206f?source=copy_link)
 
@@ -42,9 +42,9 @@ created: Wed, sep 11, 2024  10:47:23 PM
 
 [Bash: Advanced](bash-advanced)
 
-[Bash scripting](Bash-scripting)
+[Bash: Scripting](Bash-scripting)
 
-[Bash challenges](Bash-challenges)
+[Bash: Challenges](Bash-challenges)
 
 ## Raspberry Pi
 

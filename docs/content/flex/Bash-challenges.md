@@ -1,5 +1,5 @@
 ---
-title: Linux challenges
+title: Bash Challenges
 created: 2024-11-28T13:37:48+01:00
 ---
 

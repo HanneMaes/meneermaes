@@ -1,5 +1,5 @@
 ---
-title: Bash
+title: Bash Basics
 last_modified: 2025-11-25 09:22:28 +0100
 created: Thu, oct 21, 2025  09:07:23 PM
 ---
