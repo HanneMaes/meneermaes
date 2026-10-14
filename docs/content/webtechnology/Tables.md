@@ -1,7 +1,7 @@
 ---
 title: Tables
 created: 2026-09-23 10:02:17 +0200
-last_modified: 2026-09-23 14:56:36 +0200
+last_modified: 2026-10-14 15:33:41 +0200
 ---
 
 Een tabel gebruik je om gegevens in rijen en kolommen weer te geven.
@@ -148,6 +148,103 @@ Maak deze tables **exact** na
 
 **De Hele Piramide:**
 {% include browser.html img='images/tables-puzzle-5.png' %}
+
+**Table Puzzles Oplossingen**
+
+{% include toggle.html title="De Halve Piramide" content='
+```html
+<table border="1">
+  <tr>
+    <td>a</td>
+  </tr>
+  <tr>
+    <td>b</td>
+    <td>c</td>
+  </tr>
+  <tr>
+    <td>d</td>
+    <td>e</td>
+    <td>f</td>
+  </tr>
+</table>
+```
+' %}
+{% include toggle.html title="De Brug" content='
+```html
+<table border="1">
+  <tr>
+    <td>a</td>
+  </tr>
+  <tr>
+    <td>b</td>
+    <td>c</td>
+  </tr>
+  <tr>
+    <td>d</td>
+    <td>e</td>
+    <td>f</td>
+  </tr>
+</table>
+```
+' %}
+{% include toggle.html title="De Toren" content='
+```html
+<table border="1">
+  <tr>
+    <td>a</td>
+    <td rowspan="3">b</td>
+    <td>c</td>
+  </tr>
+  <tr>
+    <td>d</td>
+    <td>e</td>
+  </tr>
+  <tr>
+    <td>f</td>
+    <td>g</td>
+  </tr>
+</table>
+```
+' %}
+{% include toggle.html title="De Trap" content='
+```html
+<table border="1">
+  <tr>
+    <td>a</td>
+    <td>b</td>
+    <td>c</td>
+  </tr>
+  <tr>
+    <td>d</td>
+    <td colspan="2">e</td>
+  </tr>
+  <tr>
+    <td colspan="3">f</td>
+  </tr>
+</table>
+```
+' %}
+{% include toggle.html title="De Hele Piramide" content='
+```html
+<table border="1">
+  <tr>
+    <td>a</td>
+    <td>b</td>
+    <td>c</td>
+    <td>d</td>
+    <td>e</td>
+  </tr>
+  <tr>
+    <td>f</td>
+    <td colspan="3">g</td>
+    <td>h</td>
+  </tr>
+  <tr>
+    <td colspan="5">i</td>
+  </tr>
+</table>
+```
+' %}
 
 # Overzicht
 
