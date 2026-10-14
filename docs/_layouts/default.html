@@ -69,32 +69,33 @@
 
         {% endunless %}
 
-        <!-- ----------------- -->
-        <!-- TABLE OF CONTENTS -->
-        <!-- ----------------- -->
+        <!-- ------- -->
+        <!-- SIDEBAR -->
+        <!-- ------- -->
 
-        <nav class="toc">
-          <em>Inhoudstafel</em>
-          <ul id="toc"></ul>
-        </nav>
+        <nav>
 
-        <!-- --------------------------- -->
-        <!-- Incoming and outgoing links -->
-        <!-- --------------------------- -->
+          <!-- TABLE OF CONTENTS -->
+          <div class="toc">
+            <em>Inhoudstafel</em>
+            <ul id="toc"></ul>
+          </div>
 
-        <nav class="links">
+          <!-- Incoming and outgoing links -->
+          <div class="links">
 
-          <!-- not on homapage and index pages -->
-          {% assign lastChar = page.url | slice: -1 %}
-          {% unless page.url == '/' or lastChar == '/' %}
+            <!-- not on homapage and index pages -->
+            {% assign lastChar = page.url | slice: -1 %}
+            {% unless page.url == '/' or lastChar == '/' %}
 
-            <em>Inkomende links</em>
-            <ul class="incomingLinks" id="incomingLinks"></ul>
+              <em>Inkomende links</em>
+              <ul class="incomingLinks" id="incomingLinks"></ul>
 
-          {% endunless %}
+            {% endunless %}
 
-          <em>Uitgaande links</em>
-          <ul class="outgoingLinks" id="outgoingLinks"></ul>
+            <em>Uitgaande links</em>
+            <ul class="outgoingLinks" id="outgoingLinks"></ul>
+          </div>
 
         </nav>
 
