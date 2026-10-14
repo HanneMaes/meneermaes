@@ -828,7 +828,7 @@ nav {
   font-size: 13px;
 
   border-radius: var(--roundness);
-  background-color: color-mix(in srgb, white 50%, transparent)
+  background-color: color-mix(in srgb, white 50%, transparent);
 
   margin: calc(2 * var(--spacingSmall));
   margin-top:   0px;
@@ -846,7 +846,7 @@ nav:hover {
   box-shadow: 0px 0px 0px var(--borderWidth) var(--light) inset,
               0px 15px 40px color-mix(in srgb, var(--medium) 33%, transparent);
   opacity: 1;
-  background-color: color-mix(in srgb, white 70%, transparent)
+  background-color: color-mix(in srgb, white 70%, transparent);
 }
 
 nav em {
