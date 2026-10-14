@@ -25,7 +25,7 @@ Een `class` gebruik je wanneer je **één of meerdere elementen** dezelfde opmaa
 
 ```html 
 
-<h1>Belangrijke info</h1>
+<h1 class="belangrijk">Belangrijke info</h1>
 <div class="belangrijk">Dit is een blok.</div>
 <span class="belangrijk">Dit woord is belangrijk.</span>
 ```
