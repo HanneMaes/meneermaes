@@ -33,7 +33,7 @@
       <!-- TOP BAR -->
       <!-- ------- -->
 
-      <nav>
+      <header>
         
         <!-- SEARCH -->
         <!-- <nav> -->
@@ -60,7 +60,7 @@
 
           </nav>
         {% endunless %}
-      </nav>
+      </header>
 
       <!-- -------- -->
       <!-- SIDE BAR -->
@@ -69,13 +69,13 @@
       <aside> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
 
         <!-- TABLE OF CONTENTS -->
-        <div class="toc">
+        <nav class="toc">
           <em>Inhoudstafel</em>
           <ul id="toc"></ul>
-        </div>
+        </nav>
 
         <!-- Incoming and outgoing links -->
-        <div class="links">
+        <nav class="links">
 
           <!-- not on homapage and index pages -->
           {% assign lastChar = page.url | slice: -1 %}
@@ -88,7 +88,7 @@
 
           <em>Uitgaande links</em>
           <ul class="outgoingLinks" id="outgoingLinks"></ul>
-        </div>
+        </nav>
 
       </aside>
 
