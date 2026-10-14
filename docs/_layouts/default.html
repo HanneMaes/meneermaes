@@ -29,19 +29,12 @@
   <body>
     <section>
 
-      <!-- ------------------------------------ -->
-      <!-- TOP BAR: when sidebar is not visible -->
-      <!-- ------------------------------------ -->
+      <!-- ------- -->
+      <!-- TOP BAR -->
+      <!-- ------- -->
 
-      <!-- <header>  -->
-      <!-- </header> -->
-
-      <!-- ------------------------- -->
-      <!-- SIDE BAR: BREADCRUMBS, TOC -->
-      <!-- ------------------------- -->
-
-      <aside> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
-
+      <nav>
+        
         <!-- SEARCH -->
         <!-- <nav> -->
         <!--   <a href="{{ site.baseurl }}/index#cursussen"><img class="icon" src="{{ site.baseurl }}/assets/images/search.svg" ></a> -->
@@ -66,40 +59,36 @@
             {% endunless %}
 
           </nav>
-
         {% endunless %}
+      </nav>
 
-        <!-- ------- -->
-        <!-- SIDEBAR -->
-        <!-- ------- -->
+      <!-- -------- -->
+      <!-- SIDE BAR -->
+      <!-- -------- -->
 
-        <nav>
+      <aside> <!-- I cant put AOS on the individual elements because that breaks the hover anims -->
 
-          <!-- TABLE OF CONTENTS -->
-          <div class="toc">
-            <em>Inhoudstafel</em>
-            <ul id="toc"></ul>
-          </div>
+        <!-- TABLE OF CONTENTS -->
+        <div class="toc">
+          <em>Inhoudstafel</em>
+          <ul id="toc"></ul>
+        </div>
 
-          <hr>
+        <!-- Incoming and outgoing links -->
+        <div class="links">
 
-          <!-- Incoming and outgoing links -->
-          <div class="links">
+          <!-- not on homapage and index pages -->
+          {% assign lastChar = page.url | slice: -1 %}
+          {% unless page.url == '/' or lastChar == '/' %}
 
-            <!-- not on homapage and index pages -->
-            {% assign lastChar = page.url | slice: -1 %}
-            {% unless page.url == '/' or lastChar == '/' %}
+            <em>Inkomende links</em>
+            <ul class="incomingLinks" id="incomingLinks"></ul>
 
-              <em>Inkomende links</em>
-              <ul class="incomingLinks" id="incomingLinks"></ul>
+          {% endunless %}
 
-            {% endunless %}
-
-            <em>Uitgaande links</em>
-            <ul class="outgoingLinks" id="outgoingLinks"></ul>
-          </div>
-
-        </nav>
+          <em>Uitgaande links</em>
+          <ul class="outgoingLinks" id="outgoingLinks"></ul>
+        </div>
 
       </aside>
 
