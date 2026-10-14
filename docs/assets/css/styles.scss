@@ -790,15 +790,20 @@ iframe {
   align-items: center;
 }
 
-/* ************************* */
-/* BREADCRUMBS & TOC & LINKS */
-/* ************************* */
+/* ******************************* */
+/* MENU SYSTEM (top and side bars) */
+/* ******************************* */
 
 .icon {
   border-radius: 0px;
   opacity: 0.4 !important;
   width: 17px !important;
   margin: 0 !important;
+}
+
+/* topbar */ 
+.topbar {
+  position: fixed;
 }
 
 /* sidebar */
@@ -816,7 +821,7 @@ aside {
   overflow-y: auto;
 }
 
-/* the boxes in the sidebar (aside) and topbar (header) */
+/* nav: the boxes in the sidebar (aside) and topbar */
 nav {
   max-width: var(--sidebardWidthMax);
   font-size: 13px;
