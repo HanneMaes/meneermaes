@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified: 2026-09-23 10:04:20 +0200
+last_modified: 2026-10-14 15:19:59 +0200
 created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -78,6 +78,8 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 [Browser developer tools](Browser-developer-tools)
 
+[First draft](Portfolio-website-First-draft){: .portfolio }
+
 [Knoppen](knoppen){: .opdracht }
 
 [Flexbox](flexbox)
@@ -100,6 +102,8 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 [Random story generator: Deel 1](Random-story-generator-deel-1)
 
+[Het if-statement](Het-if-statement)
+
 [Random story generator: Deel 2](Random-story-generator-deel-2)
 
 [Formulieren stylen](Formulieren-stylen)
@@ -116,17 +120,25 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 [URL Query Parameters](URL-query-parameters)
 
+[Externe libraries](Externe-libraries)
+
 # Responsive Design
 
-[Responsive design](Responsive-design)
+[Wat is responsive design?](Wat-is-responsive-design)
+
+[Responsive design met CSS](Responsive-design)
 
 [Responsive design met JavaScript](Responsive-design-met-JavaScript)
+
+[De mobile-first filosofie](Mobile-first)
+
+[Responsive design](Portfolio-website-Responsive-design){: .portfolio }
 
 # Hosting
 
 [Open-source](open-source)
 
-[GitHub Pages](hosting-1-GitHub-pages){: .opdracht }
+[GitHub Pages](hosting-1-GitHub-pages)
 
 [Testing](testing)
 

@@ -1,6 +1,6 @@
 ---
 title: 'Portfolio website: First draft'
-last_modified: 2024-05-03T07:12:37
+last_modified: 2026-10-14 14:43:06 +0200
 created: 2024-04-22 13:53:09 +0200
 ---
  
@@ -14,6 +14,4 @@ Begin met het ontwerpen van een overzichtelijke en aantrekkelijke website. Zorg 
 
 # Stap 2: Website publiceren op GitHub Pages
 
-Gebruik de informatie in de [Cheat Sheet](Cheat-Sheet) om je website te **publiceren** via **GitHub Pages**.
-
-{% include punten-csv.html data='portfolio-website-1-first-draft' %}
+Volg deze stappen om je website te publiceren via [GitHub Pages](hosting-1-GitHub-pages).

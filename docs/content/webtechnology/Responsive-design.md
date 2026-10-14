@@ -1,16 +1,10 @@
 ---
-title: Responsive Design
-last_modified: 2025-05-09 15:40:02 +0200
+title: Responsive Design met CSS
+last_modified: 2026-10-14 15:13:16 +0200
 created: 2025-04-04 10:48:04 +0200
 ---
 
-# Wat is responsive design?
-
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSnFaYYHLrTxCS8w7qM_RWBAPidlXrqNC8wq69L0Y17hAPQc3yUAL5dvAj7R1BKdA/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="515" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-# Hoe maak je een website responsive?
-
-## Min- en max-values
+# Min- en max-values
 
 ```css
 img {
@@ -24,7 +18,63 @@ img {
 }
 ```
 
-## Media queries: Oriëntatie (Liggend/Portret)
+In CSS stellen min en max values de **minimale en maximale grootte van een element** in. Dit is handig bij het ontwerpen van responsive websites, omdat het elementen kan helpen zich aan te passen aan verschillende schermgroottes en apparaten **zonder media-queries** te moeten gebruiken.
+
+Het werken met min en max values is vaak simpeler *(op een goede manier)* dan werken met media-queries, omdat je per element enkel een minimale of maximale grootte moet instellen, zonder je ontwerp te moeten gaan aanpassen voor meerdere schermformaten.
+
+**Voorbeeld:**
+
+```css
+.alwaysMaxWidth {
+    width: 90%;
+    max-width: 300px;
+}
+```
+
+```html
+<div class="alwaysMaxWidth">
+    Deze elementen zullen een maximale grootte hebben, zolang zullen nooit groter worden dan 300px.<br>
+    Dit is zeer handig afbeeldingen die zo groot mogelijk moeten zijn zonder verlies van kwaliteit.
+</div>
+<img class="alwaysMaxWidth" src="images/big.png">
+```
+
+{% include browser.html img='images/min-max-width.gif' %}
+
+# Media queries
+
+Media queries stellen ons in staat om **specifieke CSS-regels** toe te passen op basis van de **eigenschappen van het apparaat**.
+
+![](images/media-query.gif)
+
+```html
+<body>
+	Dit is mijn <span class="text"></span> website.
+</body>
+```
+
+```css
+.text::before {
+    content: 'desktop';
+    color: goldenrod;
+    margin-left:  10px;
+    margin-right: 10px;
+}
+
+/* gebruik deze styling als het scherm 500px of minder breed is */
+@media screen and (max-width: 500px) {
+    body {
+        background-color: black;
+        color: white;
+    }
+    
+    .text::before {
+        content: 'mobile';
+    }
+}
+```
+
+## Oriëntatie (Liggend/Portret)
 
 ```css
 /* Portretmodus */
@@ -42,7 +92,7 @@ img {
 }
 ```
 
-## Media queries: Scherm breedte
+## Scherm breedte
 
 ```css
 /* Schermen breder dan 700px */
@@ -67,7 +117,7 @@ img {
 }
 ```
 
-## Media queries: volgorde is belangrijk
+## Volgorde is belangrijk
 
 Media queries mag je **overal in je CSS-bestand** zetten. Wat telt, is de **volgorde van je code**.
 
@@ -103,6 +153,102 @@ body {
 ```
 
 > Daarom zet je media queries best **onderaan** het bestand!
+
+## Media queries combineren
+
+Het is mogelijk meerdere **media queries** met elkaar te **combineren**.
+
+![alt text](images/media-query-combine.gif)
+
+```html
+<body>
+    <p class="orientatie">Oriëntatie</p>
+    <p class="text">Font-size</p>
+</body>
+```
+
+```css
+body {
+    font-size: 30px;
+    color: grey;
+}
+
+/* ********** */
+/* orientatie */
+/* ********** */
+
+/* Portrait (verticaal) */
+@media only screen and (orientation: portrait) {
+    body {
+        background-color: black;
+        color: white;
+    }
+    .orientatie::after {
+        content: ': portrait';
+    }
+}
+  
+/* Landscape (horizontaal) */
+@media only screen and (orientation: landscape) {
+    body {
+        background-color: white;
+        color: black;
+    }
+    .orientatie::after {
+        content: ': landscape';
+    }
+}
+
+/* ********** */
+/* screensize */
+/* ********** */
+
+/* Schermen breder dan 700px */
+@media screen and (min-width: 700px) {
+    .text {
+        font-size: 100px;
+    }
+    .text::after {
+        content: ': 100px';
+    }
+}
+
+/* Schermen tussen 700px en 530 px breed */
+@media screen and (max-width: 700px) and (min-width: 530px) {
+    .text {
+        font-size: 80px;
+    }
+    .text::after {
+        content: ': 80px';
+    }
+}
+
+/* Schermen kleiner dan 530px breed */
+@media (max-width: 530px) {
+    .text {
+        font-size: 30px;
+    }
+    .text::after {
+        content: ': 30px';
+    }
+}
+```
+
+## Media query breakpoints
+
+Media query breakpoints zijn de specifieke schermgroottes die je instelt om je design aan te passen, dit zijn veelgebruikte breakpoints.  
+Maar pas op, met het grote veranderende aanbod aan toestellen kunnen er altijd uitzonderingen zijn.
+
+- `576px` voor **portrettelefoons**
+- `768px` voor **tablets**
+- `992px` voor **laptops**
+- `1200px` voor **desktop computers**
+
+# Developer tools
+
+Zowel **Firefox** als **Chrome** hebben ingebouwde opties voor het ontwikkelen van mobiele en responsieve websites in hun **Developer Tools** via {% include btn.html btn="F12" %} of {% include ui.html ui="rc, inspect" %} of {% include ui.html ui="ham, Developer tools" %}.  
+
+{% include browser.html img='images/media-query-developer-tools-mobile.gif' %}
 
 # Praktische tips
 
@@ -142,7 +288,36 @@ Fullscreen overlays worden in webdesign vaak gebruikt om **fullscreen menu's of 
 - Met `top`, `bottom`, `left` en `right` kan je de plaats bepalen.
 - De `z-index` bepaalt welk element bovenop komt te liggen als meerdere elementen elkaar overlappen. Een element met een hogere z-index ligt bovenop een element met een lagere z-index. De standaard z-index is 0.
 
-# Opdracht: Responsive design
+# Oefeningen
+
+## Oefening 1: Responsive media gallery
+
+{% include browser.html img='images/oef-gallery-desktop.png' %}
+{% include phone.html img='images/oef-gallery-mobile.png' %}
+
+Maak een **responsive gallery website** met minstens 3 afbeelding.
+- Desktop:
+    - De **afbeeldingen** staan in een **rij**.
+    - De **achtergrond** van de titel is **doorschijnend**.
+- Mobile:
+    - De **afbeeldingen** staan in een **kolom**.
+    - De **achtergrond** van de titel heeft een **kleur**.
+    
+{% include callout.html type='info' content='Hou deze oefening bij want we gaan er nog op verder werken.' %}
+
+## Oefening 2: Sidebar menu
+
+{% include browser.html img='images/oef-sidebar.gif' %}
+
+Maak een sidebar menu met deze eigenschappen:
+- De sidebar neemt **20%** van de **breedte** van de pagina in.
+- De sidebar moet **tussen de 130 en 250 pixels breed** blijven.
+- De **1e letter** van je hoofdtitel heeft een andere kleur, dit doe je met een speciale CSS-selector.
+- Voor de ondertitels staat een speciaal **ASCII-symbool** in een andere kleur. Op [deze website](https://ss64.com/ascii.html) kan je speciale ASCII-symbolen terugvinden.
+- De links zijn **onderlijnt** in een **andere kleur**.
+- Je sidebar staat **verticaal gecentreerd**.
+
+## Opdracht 3: Alle technieken combineren
 
 Maak een nieuwe website via de regels van responsive design.  
 Je website heeft deze zaken:

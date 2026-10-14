@@ -1,13 +1,7 @@
 ---
-title: Wat is responsive design?
-last_modified: 2024-05-03T07:12:37
-created: Wed, Mar 20, 2024  3:36:23 PM
+title: Wat Is Responsive Design
+created: 2026-10-14 14:59:14 +0200
+last_modified: 2026-10-14 15:02:43 +0200
 ---
 
-> Responsive design is het ontwerpen van websites die zich automatisch aanpassen aan verschillende schermformaten
-
-Responsive webdesign verwijst naar **websites die zich aanpassen aan verschillende schermformaten en apparaten**, zoals **desktops**, **laptops**, **tablets** en **smartphones**.  
-
-Het doel is om een optimale gebruikerservaring te bieden, ongeacht het apparaat dat wordt gebruikt om de website te bekijken.  
-
-Het **belang** van responsive webdesign is de afgelopen jaren enorm **toegenomen** vanwege de groeiende verscheidenheid aan apparaten en schermformaten waarmee mensen toegang hebben tot het internet. 
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSnFaYYHLrTxCS8w7qM_RWBAPidlXrqNC8wq69L0Y17hAPQc3yUAL5dvAj7R1BKdA/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="515" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
