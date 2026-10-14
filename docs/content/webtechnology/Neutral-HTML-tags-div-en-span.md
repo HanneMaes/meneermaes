@@ -18,6 +18,27 @@ Hoewel beide elementen gebruikt worden om inhoud te groeperen, zijn er belangrjk
     Dat betekent dat het **altijd een nieuwe regel begint en de volledige breedte van zijn oudercontainer inneemt**.
     Het wordt vaak gebruikt om secties van een webpagina te definiëren of om groepen van elementen samen te voegen.
 
+# Hoe selecteer je een `<div>` of `<span>` met CSS?
+Om een `<div>` of `<span>` met CSS te selecteren, geef je het element een **class** of een **id** in HTML. Vervolgens gebruik je die in je CSS om de gewenste opmaak toe te passen.
+
+## 1. Selecteren met een class
+Een `class` gebruik je wanneer je **één of meerdere elementen** dezelfde opmaak wilt geven.
+
+```html 
+
+<h1>Belangrijke info</h1>
+<div class="belangrijk">Dit is een blok.</div>
+<span class="belangrijk">Dit woord is belangrijk.</span>
+```
+
+```css 
+.belangrijk {
+    color: red;
+}
+```
+
+De punt `.` voor belangrijk betekent dat je **alle elementen met die class selecteert**.
+
 ## Test zelf het verschil
 
 Start met het maken van deze HTML-pagina.  
