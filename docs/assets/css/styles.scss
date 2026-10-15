@@ -824,14 +824,12 @@ aside {
 
 /* nav: the boxes in the sidebar (aside) and topbar */
 nav {
-  max-width: var(--sidebardWidthMax);
   font-size: 13px;
 
   border-radius: var(--roundness);
   background-color: color-mix(in srgb, white 50%, transparent);
 
   margin: calc(2 * var(--spacingSmall));
-  margin-top:   0px;
   margin-right: 0px;
 
   padding: 15px;
@@ -861,9 +859,14 @@ nav a {
 
 nav ul {
   margin-left: var(--spacingSmall);
+  margin-top: 0px;
   margin-bottom: 0px;
 
   padding-left: 0px;
+  padding-top: 5px;
+
+  display: inline-block;
+  margin-bottom: 10px;
 
   list-style: none; /* remove bullet point */
 }
@@ -896,9 +899,6 @@ nav ul {
 
 /* toc */
 
-.h1Link {
-  margin-top: 7px;
-}
 .h2Link {
   margin-left: 15px;
   opacity: 0.8;
