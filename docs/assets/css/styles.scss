@@ -8,7 +8,8 @@
 
 /* SASS VARIABLES: because normal variables don't work in @media */ 
 $contentWidthMax: 800px;
-$sidebarWidthMax: 200px;
+$sidebarWidthMax: 240px;
+$sidebarMinWidth: 100px;
 
 /* ********* */
 /* VARIABLES */
@@ -34,6 +35,7 @@ $sidebarWidthMax: 200px;
   --contentWidth: 85%;
   --contentWidthMax: #{$contentWidthMax};
   --sidebarWidthMax: #{$sidebarWidthMax};
+  --sidebarMinWidth: #{$sidebarMinWidth};
   --roundness: 10px;
   --borderWidth: 3px;
 
@@ -809,8 +811,7 @@ iframe {
 
 /* sidebar */
 aside {
-  flex: 0 1 var(--sidebardWidthMax); /* don't grow, shrink normally (after rightSidebar), start at var(--sidebardWidthMax) */
-  min-width: 0;
+  flex: 0 0 var(--sidebarWidthMax); /* the content defines the width */
 
   /* make it stay on the same position, even when scrolling */
   position: sticky;
@@ -860,13 +861,10 @@ nav a {
 nav ul {
   margin-left: var(--spacingSmall);
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 
   padding-left: 0px;
   padding-top: 5px;
-
-  display: inline-block;
-  margin-bottom: 10px;
 
   list-style: none; /* remove bullet point */
 }
