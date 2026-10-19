@@ -1,6 +1,6 @@
 ---
 title: Soorten Besturingssystemen
-last_modified: 2026-01-15 14:30:03 +0100
+last_modified: 2026-10-19 08:35:01 +0200
 created: 2024-09-25 21:21:33 +0200
 ---
 
@@ -72,10 +72,6 @@ Terwijl je naar de presentaties van je klasgenoten luistert, is het belangrijk o
 
 Na de presentaties krijgen jullie allemaal enkele vragen over de besturingssystemen. Deze vragen zijn bedoeld om te testen of je alles goed hebt begrepen.
 {% include punten.html data='soorten-besturingssystemen-inzichtsvragen' %}
-
-## Doelen
-
-{% include punten.html data='soorten-besturingssystemen-doelen' %}
 
 # Uitbreiding
 
