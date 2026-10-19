@@ -1,0 +1,8 @@
+title: Educatief Bash Game
+punten:
+  - desc: "Basiswerking: de belangrijkste onderdelen van de game werken"
+    max: 2
+  - desc: "Instructies en spelopbouw: de speler weet wat het doel is en hoe die het spel moet spelen"
+    max: 2
+  - desc: "Bash-leerinhoud: het spel leert de speler relevante Bash-commando's gebruiken"
+    max: 2

@@ -1,6 +1,6 @@
 ---
 title: Flex
-last_modified: 2026-09-08 11:37:00 +0200
+last_modified: 2026-10-19 14:53:07 +0200
 created: Wed, sep 11, 2024  10:47:23 PM
 ---
 
@@ -45,6 +45,8 @@ created: Wed, sep 11, 2024  10:47:23 PM
 [Bash: Scripting](Bash-scripting)
 
 [Bash: Challenges](Bash-challenges)
+
+[Ontwerp van een educatief Bash game](Ontwerp-van-een-educatief-Bash-game)
 
 ## Raspberry Pi
 

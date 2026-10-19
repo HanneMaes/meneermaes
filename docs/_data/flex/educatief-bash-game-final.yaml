@@ -1,0 +1,15 @@
+title: Educatief Bash Game Final
+punten:
+  - desc: "Verwerking van feedback: je gebruikt de feedback om je game te verbeteren"
+    max: 1
+  - desc: "Educatieve kwaliteit: de speler leert Bash door opdrachten op te lossen en krijgt nuttige feedback of hints"
+    max: 3
+  - desc: "Werking en afwerking: de game werkt correct en is voldoende getest"
+    max: 3
+doelen:
+  - nr: "13.01"
+    desc: "De leerlingen reflecteren cyclisch, vakspecifiek en vakoverschrijdend over het eigen leerproces en sturen het op basis daarvan doelgericht bij"
+  - nr: "13.02"
+    desc: "De leerlingen zetten (meta)cognitieve leer- en regulatiestrategieën in om 	zich leerinhouden eigen te maken"
+  - nr: "13.03"
+    desc: "De leerlingen gebruiken school- en vaktaal"
