@@ -1,6 +1,6 @@
 ---
 title: Zelf Aan De Slag Met Een Besturingssysteem
-last_modified: 2025-02-11 12:44:24 +0200
+last_modified: 2026-10-19 09:42:00 +0200
 created: 2024-10-23 15:39:25 +0200
 ---
 
@@ -87,11 +87,18 @@ Bedenk **2 zaken die je wil doen of bereiken** met je gekozen Linux-distributie,
 ## 2. Onderzoek
 
 1. Zoek Linux-distributies op die passen bij je gekozen scenario.
-2. Voeg een vergelijkingstabel toe aan je projectverslagt waarin je 2 Linux-distributies vergelijkt met criteria zoals:
-	- Systeemvereisten
-	- Gebruiksgemak
-	- **Voeg extra criteria op die passen bij je gekozen scenario**
-3. Kies een Linux-distributie en beschrijf waarom je deze gekozen hebt boven de andere.
+2. Test de passende Linux-distributies zonder ze te installeren via:
+   - [meulinux.com](https://meulinux.com/en/simulators/): werkt snel, maar biedt slechts een beperkte keuze aan distributies.
+   - [distrosea.com](https://distrosea.com/): biedt een ruime keuze aan distributies, maar werkt trager.
+
+   **Let op:** via deze websites kan je een Linux-distributie niet volledig testen. Je krijgt wel een eerste indruk van de gebruikersinterface (UI), het gebruiksgemak en de beschikbare mogelijkheden. Houd er rekening mee dat deze online simulaties veel trager kunnen werken dan een echte installatie op een computer.
+
+3. Voeg een vergelijkingstabel toe aan je projectverslag waarin je 2 Linux-distributies vergelijkt op basis van criteria zoals:
+   - Systeemvereisten
+   - Gebruiksgemak
+   - **Extra criteria die passen bij je gekozen scenario**
+
+4. Kies een Linux-distributie en beschrijf waarom je deze boven de andere distributie verkiest.
 
 ## 3. Installatie
 

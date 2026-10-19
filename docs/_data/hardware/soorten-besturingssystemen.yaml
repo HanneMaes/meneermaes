@@ -5,7 +5,7 @@ punten:
   - desc: "Wat maakt het geschikt voor deze toepassingen"
     max: 2
   - desc: "Bedrijven / producten / diensten"
-    max: 2
+    max: 1
   - desc: "Verschillende versies"
     max: 1
   - desc: "Is het open-source of commercieel en hoe beïnvloedt dit de ontwikkeling"
