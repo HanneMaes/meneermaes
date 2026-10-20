@@ -1,7 +1,7 @@
 ---
 title: Ontwerp Van Een Educatief Bash Game
 created: 2026-10-19 14:51:58 +0200
-last_modified: 2026-10-20 13:02:55 +0200
+last_modified: 2026-10-20 13:07:00 +0200
 ---
 
 > Maak een game in Bash waarin de speler al spelend leert werken met de Linux-terminal en Bash-commando's.
@@ -14,8 +14,8 @@ last_modified: 2026-10-20 13:02:55 +0200
 - **Geef feedback:** leg uit waarom een antwoord juist of fout is en geef eventueel hints.
 - **Maak het interactief:** laat de speler keuzes maken, problemen oplossen en nieuwe locaties ontdekken.
 - **Test je game:** speel je eigen game en laat ook iemand anders hem uitproberen.
-- **Gebruik ASCII-art:** maak je game visueel aantrekkelijk met tekeningen van tekst en symbolen in de terminal, bijvoorbeeld een kaart of characters.
-  ![bash-ascii-art](images/bash-ascii-art.png){: .frame }  
+- **Gebruik ASCII-art:** maak je game visueel aantrekkelijk met tekeningen van tekst en symbolen in de terminal, bijvoorbeeld een kaart of characters.  
+  ![bash-ascii-art](images/bash-ascii-art.png){: .frame }{: width='200px' }  
 
 # Puntenverdeling
 
