@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified: 2026-10-14 15:19:59 +0200
+last_modified: 2026-10-21 14:37:56 +0200
 created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -113,6 +113,8 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 [Arrays](Arrays)
 
 [Project: Character creator](Project-Character-creator)
+
+[Project: Dungeon crawler](Dungeon-crawler)
 
 [LocalStorage](localStorage)
 

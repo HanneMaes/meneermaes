@@ -9,18 +9,18 @@ HOSTNAME=$(echo "$URL" | awk -F/ '{print $3}')
 DATESTAMP=$(date +%y-%m-%d)
 
 # Combine for folder name
-FOLDER="offline-website/${DATESTAMP}_${HOSTNAME}"
+FOLDER="offline-websites/${DATESTAMP}_${HOSTNAME}"
 
 # Create folder and download the website into it
-mkdir -p "$FOLDER" && \
-cd "$FOLDER" && \
-wget \
-  --mirror \
-  --convert-links \
-  --adjust-extension \
-  --page-requisites \
-  --no-parent \
-  "$URL"
+mkdir -p "$FOLDER" &&
+  cd "$FOLDER" &&
+  wget \
+    --mirror \
+    --convert-links \
+    --adjust-extension \
+    --page-requisites \
+    --no-parent \
+    "$URL"
 
 # Finished
 echo ""
