@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified: 2026-10-21 14:37:56 +0200
+last_modified: 2026-10-21 16:19:40 +0200
 created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -9,16 +9,25 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 # Hulpmiddelen
 
 **Code**
-
 - [W3Schools](https://www.w3schools.com/)
 - [MDN](https://developer.mozilla.org)
 
 **Design**
-
 - [Image to Favicon](https://favicon.io/)
 - [Web Colors](https://htmlcolorcodes.com)
 - [Google Fonts](https://fonts.google.com/)
 - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+**Inspiratie**
+- [Landingfolio](https://www.landingfolio.com/)
+- [Neal.fun](https://neal.fun/)
+
+**Coding games**
+- [CSS Diner](https://flukeout.github.io/)
+- [CSS Flexbox Frogg Towery](https://flexboxfrogg.com/#nl)
+- [CSS Flexbox Tower Defense](http://www.flexboxdefense.com/)
+- [CSS Grid Garden](https://cssgridgarden.com/#nl)
+- [JavaScript Untrusted](https://untrustedgame.com/)
 
 ---
 
@@ -158,12 +167,23 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 # Verdieping 
 
+## Ethiek
+
+[Dark Patterns](https://neal.fun/dark-patterns/)
+
 [Cookies](cookies)
+
+## Coding
 
 [Emmet](emmet)
 
 [Markdown](../markdown-webtechnology/index)
 
+[Electron](electron)
+
+
+## Design 
+
 [Three.js](three-js)
 
-[Electron](electron)
+[Pixel vs Vector](pixel-vs-vector)

@@ -1,6 +1,6 @@
 ---
 title: Geavanceerde CSS-Selectors
-last_modified: 2024-10-18 16:19:48 +0200
+last_modified: 2026-10-21 16:18:26 +0200
 created: 2024-10-18 14:01:36 +0200
 ---
 
@@ -60,3 +60,7 @@ Aankoop prijs: <span class="euro">100</span>
     color: red;
 }
 ```
+
+# CSS Game
+
+[CSS Diner](https://flukeout.github.io/)

@@ -1,6 +1,6 @@
 ---
 title: Flexbox
-last_modified: 2024-11-14 12:45:52 +0200
+last_modified: 2026-10-21 16:16:52 +0200
 created: 2024-11-07 20:57:12 +0200
 ---
 
@@ -14,14 +14,16 @@ created: 2024-11-07 20:57:12 +0200
 [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 ' %}
 
-# Oefening 01: Knoppen website aanpassen
+# Oefeningen
+
+## 01 Knoppen website aanpassen
 
 Open de knoppen website van de vorige oefening en probeer deze composities na te maken door gebruik te maken van flexbox.  
 **Neem telkens een screenshot als het gelukt is.**
 
 [Oefening: Flexbox composities](oef-flexbox-composities)
 
-# Oefening 02: Navigatiebalk
+## 02 Navigatiebalk
 
 ![](images/flexbox-navbar.png)
 
@@ -37,41 +39,46 @@ Een navigatiebalk zet je in de `<nav>`-tags
 </nav>
 ```
 
-# Oefening 03: Card design
+## 03 Card design
 
 Maak 1 of meerdere van onderstaande card designs na.  
 Het design moet niet exact het zelfde zijn, maar de layout wel.  
 
 Ik heb ze zo gerangschikt dat de makkelijkste bovenaan staan en de moeilijkste onderaan.
 
-## Layout 1: Speelkaart
+### Layout 1: Speelkaart
 
 ![original-a10757d38c5dc65c49ebb3d710520f79.jpg](images/flexbox-speelkaart.jpg)
 
-## Layout 2: Bankkaart
+### Layout 2: Bankkaart
 
 ![ef0c60709387378574a68a25f31a024b.png](images/flexbox-bankkaart.png)
 
-## Layout 3: Meerdere elementen
+### Layout 3: Meerdere elementen
 
 {% include callout.html type='tip' content='Je zal **flexbox-elementen in flexbox-elementen** moeten gebruiken.' %}
 
 ![original-23ffb962fef5f00af0a840eb7a02b6d7.png](images/flexbox-layout3.png)
 
-## Layout 4: Boarding pass
+### Layout 4: Boarding pass
 
 {% include callout.html type='tip' content='Je zal **flexbox-elementen in flexbox-elementen** moeten gebruiken.' %}
 
 ![Screenshot from 2023-11-21 11-39-41.png](images/flexbox-Boarding-pass.png)
 
-# Oefening 04: Piet Mondriaan
+## 04 Piet Mondriaan
 
 Maak dit kunstwerk van Piet Mondriaan na.
 
 ![Untitled](images/flexbox-mondriaan.jpeg)
 
-# Oefening 05: iPhone
+## 05 iPhone
 
 Maak een iPhone na in HTML en CSS, en geef het deze layout:
 
 ![Untitled.png](images/flexbox-iphone.png)
+
+# Flexbox Games 
+
+- [CSS Flexbox Frogg Towery](https://flexboxfrogg.com/#nl)
+- [CSS Flexbox Tower Defense](http://www.flexboxdefense.com/)
