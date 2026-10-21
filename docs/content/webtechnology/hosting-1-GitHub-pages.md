@@ -1,6 +1,6 @@
 ---
 title: Website Hosting op Github Pages
-last_modified: 2026-10-21 08:53:48 +0200
+last_modified: 2026-10-21 11:06:33 +0200
 created: 2025-03-20 17:14:30 +0200
 ---
 
@@ -65,7 +65,7 @@ Wil je bij een conflict je lokale versie pushen: `git push --force origin main`.
 1. Ga naar de **settings** van je GitHub repo _(niet de settings van je account)_.  
    `Settings (balk bovenaan) > Pages (balk rechts)`
 2. **Branch**: selecteer de folder die je wil publiceren als website.
-   - **Master**: publiceer je hele project al website.
+   - **Main**: publiceer je hele project al website.
    - **Custom folder**: je kan ervoor kiezen enkel een deel van je project te publiceren als website (vaak de `docs/` folder). Zo kan je naast je website ook andere bestanden hebben zoals test- of onafgewerkte pagina’s, design assets, …
 
 Als alles goed gelopen is, krijg je bovenaan de `Pages` pagina in de `Settings` het adres voor je website te zien:
