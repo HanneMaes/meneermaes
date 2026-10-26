@@ -1,7 +1,7 @@
 ---
 title: Ontwerp Van Een Educatief Bash Game
 created: 2026-10-19 14:51:58 +0200
-last_modified: 2026-10-20 13:07:00 +0200
+last_modified: 2026-10-26 10:33:40 +0100
 ---
 
 > Maak een game in Bash waarin de speler al spelend leert werken met de Linux-terminal en Bash-commando's.
@@ -19,14 +19,20 @@ last_modified: 2026-10-20 13:07:00 +0200
 
 # Puntenverdeling
 
-De opdracht bestaat uit twee fases.
+De opdracht bestaat uit meerdere fases.
 
-## Eerste testversie
+## v0.1: Eerste testversie
 Lever een eerste speelbare versie van je game in.
 
 {% include punten.html data='educatief-bash-game-v1' %} 
 
-## Final version
+## v0.2: Feedback verwerken
+
+Bekijk de feedback die je op je eerste testversie hebt gekregen. Verwerk deze feedback in je game en verbeter waar nodig.
+
+{% include punten.html data='educatief-bash-game-v2' %} 
+
+## v1.0: Final version
 Verwerk de ontvangen feedback en lever een verbeterde versie van je game in.
 
 {% include punten.html data='educatief-bash-game-final' %} 

@@ -1,0 +1,6 @@
+title: Educatief Bash Game
+punten:
+  - desc: "Relevante feedback wordt aantoonbaar verwerkt in het game"
+    max: 3
+  - desc: "Je hebt de aangepaste onderdelen getest en controleert of de problemen opgelost zijn"
+    max: 2
