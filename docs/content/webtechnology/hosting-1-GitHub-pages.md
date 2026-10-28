@@ -1,6 +1,6 @@
 ---
 title: Website Hosting op Github Pages
-last_modified: 2026-10-21 11:06:33 +0200
+last_modified: 2026-10-28 09:50:40 +0100
 created: 2025-03-20 17:14:30 +0200
 ---
 
@@ -8,7 +8,7 @@ created: 2025-03-20 17:14:30 +0200
 
 Controleer of **Git bash** op je computer staat, zo niet download en installeer je het via: [https://gitforwindows.org/](https://gitforwindows.org/)
 
-# Nieuw GitHub project
+# Nieuw GitHub project aanmaken
 
 1. Maak een **nieuwe repository** op GitHub.  
    Het is belangrijk dat je een **README.md** file toegevoegd.  
@@ -29,24 +29,11 @@ Controleer of **Git bash** op je computer staat, zo niet download en installeer 
      - Als je **geen licentie** kiest, wordt je code **automatisch** beschermd door het **auteursrecht**.  
        _Andere kunnen je code bekijken, maar mogen deze niet gebruiken, toch geeft GitHub hen nog steeds de optie je code to clonen._  
        → Hier vind je meer informatie over licenties: [Licenties](licenties)
+2. Volg de instructies om de link te leggen met code op je computer:
+  
+{% include browser.html img='images/github-repo-init.png' %} 
 
-2. **Clone** je GitHub naar je computer
-
-   1. **Kopieer** de **url** van de repository: `Code > Local > HTTPS`
-
-      ![Untitled](images/ghpages.png){: .frame width='400px' }
-
-   2. Open een **terminal** op de **locatie** waar je **project** moet komen.
-      - Windows PowerShell: `Rechter klik > Openen in Terminal`
-      - VS Code: `ctrl + shift + p > Create New Terminal`
-   3. **Clone** de repository: `git clone <repo url>`  
-      Als alles goed gelopen is, heb je nu een folder met de GitHub repository waarin je kan beginnen werken.
-
-# Maak een website
-
-Maak een website in de nieuwe folder die je net gecloned hebt.
-
-# Push: Code uploaden
+## Push: Code uploaden
 
 1. Voeg de bestanden toe die je wil pushen (uploaden) naar GitHub.
    - 1 bestand toevoegen: `git add index.html`.
@@ -60,7 +47,19 @@ Maak een website in de nieuwe folder die je net gecloned hebt.
 
 Wil je bij een conflict je lokale versie pushen: `git push --force origin main`.
 
-# Website publiceren via GitHub pages
+## Clone: Een bestaande repository downloaden
+
+1. **Kopieer** de **url** van de repository: `Code > Local > HTTPS`
+
+  ![Untitled](images/ghpages.png){: .frame width='400px' }
+
+2. Open een **terminal** op de **locatie** waar je **project** moet komen.
+  - Windows PowerShell: `Rechter klik > Openen in Terminal`
+  - VS Code: `ctrl + shift + p > Create New Terminal`
+3. **Clone** de repository: `git clone <repo url>`  
+  Als alles goed gelopen is, heb je nu een folder met de GitHub repository waarin je kan beginnen werken.
+
+# Pages: Website publiceren via GitHub pages
 
 1. Ga naar de **settings** van je GitHub repo _(niet de settings van je account)_.  
    `Settings (balk bovenaan) > Pages (balk rechts)`
