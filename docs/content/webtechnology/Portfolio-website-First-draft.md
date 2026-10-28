@@ -1,6 +1,6 @@
 ---
 title: 'Portfolio website: First draft'
-last_modified: 2026-10-21 09:19:31 +0200
+last_modified: 2026-10-28 09:23:43 +0100
 created: 2024-04-22 13:53:09 +0200
 ---
  
@@ -17,6 +17,10 @@ Begin met het ontwerpen van een overzichtelijke en aantrekkelijke website. Zorg 
 Volg deze stappen om je website te publiceren via [GitHub Pages](hosting-1-GitHub-pages).
 
 # Puntenverdeling
+
+Je **upload** een document met:
+- De URL van de **website** 
+- De URL van de **GitHub repository**
 
 Je hebt je code volledig **zelf geschreven** en kan **al je code uitleggen**.
 
