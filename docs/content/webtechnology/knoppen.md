@@ -1,6 +1,6 @@
 ---
 title: Knoppen
-last_modified: 2024-10-18 12:48:19 +0200
+last_modified: 2026-10-28 10:27:19 +0100
 created: 2024-10-18 12:28:08 +0200
 ---
 
@@ -57,8 +57,6 @@ a:hover {
     Op deze pagina kan je informatie vinden over hoe je knoppen kan stylen: [https://www.w3schools.com/css/css3_buttons.asp](https://www.w3schools.com/css/css3_buttons.asp)
 3. Gebruik **minstens 3 verschillende webfonts**.
 4. Geef elke knop een **uniek hover effect**.
-
-{% include punten-csv.html data='knoppen' %}
 
 # Uitdaging: Knop namaken
 
