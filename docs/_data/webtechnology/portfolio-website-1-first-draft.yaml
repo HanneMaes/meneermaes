@@ -1,8 +1,6 @@
 title: Portfolio Website 1 First Draft
 punten:
-  - desc: "Je hebt minstens 3 uitgebreide pagina's"
-    max: 2
-  - desc: "Je hebt uitgebreide CSS"
-    max: 2
   - desc: "Je publiceerde je website via GitHub Pages"
+    max: 4
+  - desc: "Je hebt je website aangepast en die veranderingen online gezet"
     max: 4
