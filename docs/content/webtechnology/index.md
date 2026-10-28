@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified: 2026-10-21 16:19:40 +0200
+last_modified: 2026-10-28 10:39:29 +0100
 created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -89,7 +89,7 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 [First draft](Portfolio-website-First-draft){: .portfolio }
 
-[Knoppen](knoppen){: .opdracht }
+[Knoppen](knoppen)
 
 [Flexbox](flexbox)
 
