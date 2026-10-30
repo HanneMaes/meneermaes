@@ -4,7 +4,6 @@ last_modified_at: 2024-09-25 21:59:45 +0200
 date: 2024-09-25 21:21:33 +0200
 ---
 
-
 Besturingssystemen zijn overal om ons heen te vinden, van onze telefoons en computers tot geavanceerde machines en IoT-apparaten. 
 
 In deze opdracht gaan jullie niet alleen onderzoeken hoe verschillende besturingssystemen werken, maar ook hoe ze orden toegepast in verschillende situaties en wat hun specifieke voordelen en nadelen zijn.
@@ -46,6 +45,10 @@ Iedereen krijgt één van de onderstaande Besturingssystemen toegewezen:
 - Docker containers
 
 # Onderzoeksvragen
+
+{% include callout.html type='Tips & Opdracht' content='
+[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
+' %}
 
 1. **Waar wordt het besturingssysteem voor gebruikt?**  
     Geef voorbeelden van toepassingen en sectoren waarin dit OS voorkomt.

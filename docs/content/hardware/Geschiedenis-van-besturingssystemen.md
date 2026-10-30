@@ -1,6 +1,6 @@
 ---
 title: Geschiedenis Van Besturingssystemen
-last_modified: 2026-09-28 08:52:38 +0200
+last_modified: 2026-10-30 13:33:25 +0100
 created: 2024-09-19 15:18:44 +0200
 ---
 
@@ -30,6 +30,10 @@ Jullie krijgen elk een aantal gebeurtenissen toegewezen met bijbehorende onderzo
 - Verzamel beeldmateriaal om de informatie visueel te ondersteunen en de impact van de gebeurtenis duidelijker te maken.
 
 ## Gebeurtenissen
+
+{% include callout.html type='Tips & Opdracht' content='
+[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
+' %}
 
 **Xerox & Palo Alto Research Center (PARC)**  
 - Wat waren de belangrijkste innovaties van het PARC-onderzoek en hoe werden deze innovaties later overgenomen door andere bedrijven zoals Apple en Microsoft?
