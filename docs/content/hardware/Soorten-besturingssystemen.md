@@ -1,6 +1,6 @@
 ---
 title: Soorten Besturingssystemen
-last_modified: 2026-10-19 08:35:01 +0200
+last_modified: 2026-10-30 13:38:22 +0100
 created: 2024-09-25 21:21:33 +0200
 ---
 
@@ -49,6 +49,10 @@ Iedereen krijgt één van de onderstaande Besturingssystemen toegewezen:
 
 Zorg ervoor dat je het besturingssysteem goed begrijpt en de belangrijkste punten duidelijk kunt uitleggen.  
 Bereid een korte presentatie voor waarin je de antwoorden op de onderzoeksvragen deelt. Dit is een kans om te laten zien wat je hebt geleerd en om anderen te helpen begrijpen hoe jouw besturingssysteem functioneert.
+
+{% include callout.html type='Tips & Opdracht' content='
+[Informatie vinden, beoordelen en verwerken](../universeel/informatie-vinden-beoordelen-en-verwerken)
+' %}
 
 1. **Waar wordt het besturingssysteem voor gebruikt?**  
     Geef voorbeelden van toepassingen en sectoren waarin dit OS voorkomt.
