@@ -1,6 +1,6 @@
 ---
 title: Meneer Maes
-last_modified: 2026-09-09 10:04:34 +0200
+last_modified: 2026-11-10 09:48:51 +0100
 created: 2024-03-13T10:31:28+01:00
 ---
 
@@ -55,6 +55,10 @@ created: 2024-03-13T10:31:28+01:00
 [Robocode](content/robocode/index)
 
 [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
+
+[Invent Your Own Computer Games with Python](https://inventwithpython.com/invent4thed/)
+
+[Cracking Codes with Python](https://inventwithpython.com/cracking/)
 
 ## Web
 
