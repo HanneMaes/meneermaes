@@ -1,8 +1,34 @@
 ---
 title: Wamp & XAMPP Installatie & Gebruik
 created: 2026-01-06 13:05:54 +0100
-last_modified: 2026-01-14 11:20:09 +0100
+last_modified: 2026-11-13 14:13:11 +0100
 ---
+
+# XAMPP
+
+## Installatie via de bedrijfsportaal app
+
+1. Op de **bedrijfsportaal** app
+2. Installeer **XAMPP**
+
+## Installatie met admin rechten
+
+1. Surf naar [https://www.apachefriends.org/download.html](https://www.apachefriends.org/download.html)
+1. Download & installeer **XAMPP**
+
+## Gebruik
+
+1. Apache > Start
+2. MySQL > Start > Admin
+
+**Bij error: MySQL shutdown unexcpectedly, ...**{: .badText }  
+**MySQL stopt meteen nadat je op de start knop gedrukt hebt**{: .badText }
+1. Open Task Manager (ctrl-shift-esc).
+2. Alles met SQL sluiten.
+
+**Als al de rest niet werkt**{: .badText }  
+1. Uninstall XAMPP
+2. Reinstall XAMPP
 
 # WAMP 
 
@@ -24,24 +50,3 @@ last_modified: 2026-01-14 11:20:09 +0100
 4. Log in met
   - Gebruikernaam: **root**
   - **Geen wachtwoord**
-
-# XAMPP
-
-## Installatie
-
-1. Surf naar [https://www.apachefriends.org/download.html](https://www.apachefriends.org/download.html)
-1. Download & installeer **XAMPP**
-
-## Gebruik
-
-1. Apache > Start
-2. MySQL > Start > Admin
-
-**Bij error: MySQL shutdown unexcpectedly, ...**{: .badText }  
-**MySQL stopt meteen nadat je op de start knop gedrukt hebt**{: .badText }
-1. Open Task Manager (ctrl-shift-esc).
-2. Alles met SQL sluiten.
-
-**Als al de rest niet werkt**{: .badText }  
-1. Uninstall XAMPP
-2. Reinstall XAMPP
