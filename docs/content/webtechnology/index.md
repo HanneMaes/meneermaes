@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified: 2026-10-28 10:39:29 +0100
+last_modified: 2026-11-17 13:43:03 +0100
 created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -77,7 +77,7 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 [Peer assessment](Peer-assessment)
 
-## Geavanceerde CSS
+## CSS Advanced
 
 [Neutrale HTML-tags\: \<div\> en \<span\>](Neutral-HTML-tags-div-en-span)
 
