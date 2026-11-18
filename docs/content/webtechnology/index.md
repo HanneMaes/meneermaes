@@ -1,6 +1,6 @@
 ---
 title: Webtechnology
-last_modified: 2026-11-17 13:43:03 +0100
+last_modified: 2026-11-18 11:56:59 +0100
 created: Wed, Mar 20, 2024  3:36:23 PM
 ---
 
@@ -97,8 +97,6 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 
 [Copyright infringement](Copyright-infringement)
 
-[Formulieren stylen](Formulieren-stylen)
-
 # JavaScript
 
 ## JavaScript basics
@@ -108,6 +106,8 @@ created: Wed, Mar 20, 2024  3:36:23 PM
 [Je 1e JavaScript code](Je-1e-JavaScript-code)
 
 ## JavaScript projecten
+
+[Formulieren stylen](Formulieren-stylen)
 
 [Random story generator: Deel 1](Random-story-generator-deel-1)
 
