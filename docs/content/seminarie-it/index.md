@@ -1,12 +1,12 @@
 ---
 title: Seminarie I.T.
-last_modified: 2026-06-01 16:43:06 +0200
+last_modified: 2026-11-19 15:59:24 +0100
 created: 2025-01-19 15:37:26 +0200
 ---
 
-[Missie: Bouw je digitale HQ](missie-bouw-je-digitale-HQ)
+[Digitale Kennismaking](Digitale-Kennismaking)
 
-[Digitale Kennismaking](https://www.notion.so/hannemaes/Digitale-kennismaking-met-Canva-14c2b51142cd8029ac34d6338316a551)
+[Missie: Bouw je digitale HQ](missie-bouw-je-digitale-HQ)
 
 [Opleiding tot Cyberagent](https://hannemaes.notion.site/Opleiding-tot-Cyberagent-1762b51142cd80568005c447835a9510?pvs=74)
 
