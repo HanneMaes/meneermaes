@@ -1,7 +1,7 @@
 ---
 title: Bash Advanced
 created: 2026-11-17 13:04:56 +0100
-last_modified: 2026-11-17 13:26:15 +0100
+last_modified: 2026-11-23 10:17:22 +0100
 ---
 
 # Add text to files
@@ -23,6 +23,12 @@ Als de file nog niet bestaat, zal deze automatisch aangemaakt worden.
 | `echo "Another line" >> hello.txt` | Voeg **text** toe aan het **einde** van een file |
 | `date >> today.txt`                | Voeg **output van een command** toe aan het **einde** van een file |
 
+## Oefeningen 
+
+**Mijn eerste tekstbestand**
+1. Maak een bestand persoonlijk.txt met daarin je naam en 2 lijnen andere informatie over jezelf, elk op een eigen lijn.
+2. Voeg de tekst 'Ik leer werken met Bash' toe aan persoonlijk.txt, zonder de bestaande inhoud te overschrijven.
+
 # Bash advanced commands
 
 | Command                                  | Afkorting / Betekenis       | Functie                                                   |
@@ -40,3 +46,14 @@ Als de file nog niet bestaat, zal deze automatisch aangemaakt worden.
 | `head -n 5`                              |                             | De eerste 5 regels weergeven                              |
 | `tail -n 5`                              |                             | De laatste 5 regels weergeven                             |
 | `du -ah .`                               | Disk Usage                  | De grootte van bestanden en mappen weergeven              |
+
+**Dagboek**
+1. Maak een bestand dagboek.txt met de datum van vandaag en op een 2e lijn de tekst 'Vandaag heb ik Bash geleerd'.
+
+**Mijn computer**
+Gebruik de juiste commando's om de volgende informatie telkens in een afzonderlijk bestand op te slaan:
+1. De inhoud van de huidige map in bestanden.txt.
+2. De huidige locatie in locatie.txt.
+3. De huidige datum in datum.txt.
+4. De gebruikersnaam waarmee je bent ingelogd in gebruiker.txt
+
