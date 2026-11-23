@@ -1,7 +1,7 @@
 ---
 title: Bash Advanced
 created: 2026-11-17 13:04:56 +0100
-last_modified: 2026-11-23 10:50:17 +0100
+last_modified: 2026-11-23 10:58:01 +0100
 ---
 
 # Add text to files
@@ -61,7 +61,9 @@ Als de file nog niet bestaat, zal deze automatisch aangemaakt worden.
 | `sort`                     | Sort                            | Tekst alfabetisch of numeriek sorteren          |
 | `uniq`                     | Unique                          | Opeenvolgende dubbele regels verwijderen        |
 | `wc`                       | Word Count                      | Het aantal regels, woorden en tekens tellen     |
-| `wc -l`                    | Word Count - Lines              | Het aantal regels tellen                        |
+| `wc -l`                    | Word Count: Lines               | Het aantal regels tellen                        |
+| `wc -w`                    | Word Count: Words               | Het aantal regels tellen                        |
+| `wc -m`                    | Word Count: | Het aantal regels tellen                        |
 | `head -n 5`                |                                 | De eerste 5 regels weergeven                    |
 | `tail -n 5`                |                                 | De laatste 5 regels weergeven                   |
 | `du -ah .`                 | Disk Usage                      | De grootte van bestanden en mappen weergeven    |
@@ -73,3 +75,25 @@ Gebruik de juiste commando's om de volgende informatie telkens in een afzonderli
 3. De huidige datum in datum.txt.
 4. De gebruikersnaam waarmee je bent ingelogd in gebruiker.txt
 
+**Fruit**
+1. Maak een bestand aan met deze tekst:
+```txt 
+appel
+banaan
+appel
+kers
+druif
+banaan
+appel
+mango
+kers
+appel
+```
+2. Zoek alle regels waarin appel voorkomt.
+3. Tel hoeveel regels het woord appel bevatten.
+4. Hoeveel regels bevat fruit.txt?
+5. Hoeveel woorden bevat het bestand?
+6. Hoeveel tekens bevat het bestand?
+7. Toon het fruit gesorteerd.
+8. Sla het gesorteerde fruit op (overschrijf het bestand).
+9. Verwijder dubbele opeenvolgende regels en overschrijf het bestand.
