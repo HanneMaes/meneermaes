@@ -1,7 +1,7 @@
 ---
 title: Bash Advanced
 created: 2026-11-17 13:04:56 +0100
-last_modified: 2026-11-23 10:58:01 +0100
+last_modified: 2026-11-23 11:00:00 +0100
 ---
 
 # Add text to files
@@ -23,7 +23,7 @@ Als de file nog niet bestaat, zal deze automatisch aangemaakt worden.
 | `echo "Another line" >> hello.txt` | Voeg **text** toe aan het **einde** van een file                   |
 | `date >> today.txt`                | Voeg **output van een command** toe aan het **einde** van een file |
 
-## Oefeningen 
+### Oefeningen 
 
 **Mijn eerste tekstbestand**
 1. Maak een bestand persoonlijk.txt met daarin je naam en 2 lijnen andere informatie over jezelf, elk op een eigen lijn.
@@ -48,6 +48,8 @@ Als de file nog niet bestaat, zal deze automatisch aangemaakt worden.
 | `date +%H:%M:%S` | Het huidige uur weergeven in het formaat UU:MM:SS    |
 | `date +%H:%M`    | Het huidige uur weergeven in het formaat UU:MM       |
 
+### Oefeningen
+
 **Dagboek**
 1. Maak een bestand dagboek.txt met de datum van vandaag.
 2. Voeg op de tweede lijn de tekst Vandaag heb ik Bash geleerd toe.
@@ -67,6 +69,8 @@ Als de file nog niet bestaat, zal deze automatisch aangemaakt worden.
 | `head -n 5`                |                                 | De eerste 5 regels weergeven                    |
 | `tail -n 5`                |                                 | De laatste 5 regels weergeven                   |
 | `du -ah .`                 | Disk Usage                      | De grootte van bestanden en mappen weergeven    |
+
+### Oefeningen
 
 **Mijn computer**
 Gebruik de juiste commando's om de volgende informatie telkens in een afzonderlijk bestand op te slaan:
