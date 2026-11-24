@@ -1,7 +1,7 @@
 ---
 title: Bash Advanced
 created: 2026-11-17 13:04:56 +0100
-last_modified: 2026-11-23 12:52:39 +0100
+last_modified: 2026-11-24 13:04:57 +0100
 ---
 
 # Add text to files
@@ -34,15 +34,15 @@ Als de file nog niet bestaat, zal deze automatisch aangemaakt worden.
 |------------------|------------------------------------------------------|
 | `date`           | De huidige datum en tijd weergeven                   |
 | `date +%F`       | De huidige datum weergeven (YYYY-MM-DD)              |
-| `date %d`        | Dag van de maand                                     |
-| `date %m`        | Maand                                                |
-| `date %Y`        | Volledig jaartal                                     |
-| `date %y`        | Verkort jaartal                                      |
-| `date %H`        | Uur                                                  |
-| `date %M`        | Minuten                                              |
-| `date %S`        | Seconden                                             |
-| `date %A`        | Volledige naam van de weekdag                        |
-| `date %B`        | Volledige naam van de maand                          |
+| `date +%d`        | Dag van de maand                                     |
+| `date +%m`        | Maand                                                |
+| `date +%Y`        | Volledig jaartal                                     |
+| `date +%y`        | Verkort jaartal                                      |
+| `date +%H`        | Uur                                                  |
+| `date +%M`        | Minuten                                              |
+| `date +%S`        | Seconden                                             |
+| `date +%A`        | Volledige naam van de weekdag                        |
+| `date +%B`        | Volledige naam van de maand                          |
 | `date +%d-%m-%Y` | De huidige datum weergeven in het formaat DD-MM-YYYY |
 | `date +%H:%M:%S` | Het huidige uur weergeven in het formaat UU:MM:SS    |
 | `date +%H:%M`    | Het huidige uur weergeven in het formaat UU:MM       |
@@ -55,11 +55,11 @@ Als de file nog niet bestaat, zal deze automatisch aangemaakt worden.
 
 # System information
 
-| Command           | Afkorting / Betekenis | Functie                                    |
-|-------------------|-----------------------|--------------------------------------------|
-| `whoami`          | Who am I              | De naam van de huidige gebruiker weergeven |
-| `du -ah file.txt` | Disk Usage            | De grootte van een bestand weergeven       |
-| `du -ah dir/`     | Disk Usage            | De grootte van alle bestanden in een dir weergeven|
+| Command           | Afkorting / Betekenis | Functie                                            |
+|-------------------|-----------------------|----------------------------------------------------|
+| `whoami`          | Who am I              | De naam van de huidige gebruiker weergeven         |
+| `du -ah file.txt` | Disk Usage            | De grootte van een bestand weergeven               |
+| `du -ah dir/`     | Disk Usage            | De grootte van alle bestanden in een dir weergeven |
 
 **Oefening: mijn computer**
 
@@ -72,17 +72,17 @@ Gebruik de juiste commando's om de volgende informatie telkens in een afzonderli
 
 # Zoeken in een bestand
 
-| Command                    | Afkorting / Betekenis           | Functie                                         |
-| `grep "woord" file.txt`    | Global Regular Expression Print | Zoeken naar tekst in een bestand                |
-| `grep -c "woord" file.txt` | Count                           | Het aantal regels met een bepaalde tekst tellen |
-| `sort`                     | Sort                            | Tekst alfabetisch of numeriek sorteren          |
-| `uniq`                     | Unique                          | Opeenvolgende dubbele regels verwijderen        |
-| `wc`                       | Word Count                      | Het aantal regels, woorden en tekens tellen van een bestand |
-| `wc -l`                    | Word Count: lines               | Het aantal **regels** tellen van een bestand                       |
-| `wc -w`                    | Word Count: words               | Het aantal **regels** tellen van een bestand                        |
-| `wc -m`                    | Word Count: multibyte characters                     | Het aantal **tekens** tellen van een bestand                        |
-| `head -n 5`                |                                 | De eerste 5 regels weergeven                    |
-| `tail -n 5`                |                                 | De laatste 5 regels weergeven                   |
+| Command                    | Afkorting / Betekenis            | Functie                                                     |
+| `grep "woord" file.txt`    | Global Regular Expression Print  | Zoeken naar tekst in een bestand                            |
+| `grep -c "woord" file.txt` | Count                            | Het aantal regels met een bepaalde tekst tellen             |
+| `sort`                     | Sort                             | Tekst alfabetisch of numeriek sorteren                      |
+| `uniq`                     | Unique                           | Opeenvolgende dubbele regels verwijderen                    |
+| `wc`                       | Word Count                       | Het aantal regels, woorden en tekens tellen van een bestand |
+| `wc -l`                    | Word Count: lines                | Het aantal **regels** tellen van een bestand                |
+| `wc -w`                    | Word Count: words                | Het aantal **woorden** tellen van een bestand                 |
+| `wc -m`                    | Word Count: multibyte characters | Het aantal **tekens** tellen van een bestand                |
+| `head -n 5`                |                                  | De eerste 5 regels weergeven                                |
+| `tail -n 5`                |                                  | De laatste 5 regels weergeven                               |
 
 **Oefening: fruit**
 
