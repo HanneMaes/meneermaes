@@ -1,7 +1,7 @@
 ---
 title: Bash Advanced
 created: 2026-11-17 13:04:56 +0100
-last_modified: 2026-11-24 13:11:22 +0100
+last_modified: 2026-11-24 13:15:22 +0100
 ---
 
 # Add text to files
@@ -55,11 +55,11 @@ Als de file nog niet bestaat, zal deze automatisch aangemaakt worden.
 
 # System information
 
-| Command           | Afkorting / Betekenis | Functie                                            |
-|-------------------|-----------------------|----------------------------------------------------|
-| `whoami`          | Who am I              | De naam van de huidige gebruiker weergeven         |
-| `du -ah file.txt` | Disk Usage            | De grootte van een bestand weergeven               |
-| `du -ah dir/`     | Disk Usage            | De grootte van alle bestanden in een dir weergeven |
+| Command           | Afkorting / Betekenis                       | Functie                                            |
+|-------------------|---------------------------------------------|----------------------------------------------------|
+| `whoami`          | Who am I                                    | De naam van de huidige gebruiker weergeven         |
+| `du -ah file.txt` | Disk Usage<br>-a: All<br>-h: Human-readable | De grootte van een bestand weergeven               |
+| `du -ah dir/`     | Disk Usage                                  | De grootte van alle bestanden in een dir weergeven |
 
 **Oefening: mijn computer**
 
