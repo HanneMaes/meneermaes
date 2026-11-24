@@ -1,7 +1,7 @@
 ---
 title: Bash Advanced
 created: 2026-11-17 13:04:56 +0100
-last_modified: 2026-11-24 13:18:47 +0100
+last_modified: 2026-11-24 13:35:31 +0100
 ---
 
 # Add text to files
@@ -76,7 +76,7 @@ Gebruik de juiste commando's om de volgende informatie telkens in een afzonderli
 | `grep "woord" file.txt`    | Global Regular Expression Print  | Zoeken naar tekst in een bestand                            |
 | `grep -c "woord" file.txt` | Count                            | Het aantal regels met een bepaalde tekst tellen             |
 | `sort`                     | Sort                             | Tekst alfabetisch of numeriek sorteren                      |
-| `uniq`                     | Unique                           | Opeenvolgende dubbele regels verwijderen                    |
+| `uniq`                     | Unique                           | **Opeenvolgende** dubbele regels verwijderen                    |
 | `wc`                       | Word Count                       | Het aantal regels, woorden en tekens tellen van een bestand |
 | `wc -l`                    | Word Count: lines                | Het aantal **regels** tellen van een bestand                |
 | `wc -w`                    | Word Count: words                | Het aantal **woorden** tellen van een bestand                 |
