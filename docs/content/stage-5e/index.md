@@ -1,6 +1,6 @@
 ---
 title: Stage 5e Jaar
-last_modified: 2026-09-02 22:13:11 +0200
+last_modified: 2026-11-24 10:02:24 +0100
 created: thu, aug 25, 2025  5:09:21 PM
 ---
 
@@ -9,9 +9,9 @@ created: thu, aug 25, 2025  5:09:21 PM
 Tijdens deze stage werken jullie in opdracht van een **externe partner** aan een **professionele website**.  
 Dit kan een onderneming, vzw, sportclub, zelfstandige of andere organisatie zijn.
 
-De stage vindt plaats op **school**, tijdens de project weken eind april: **?/04/2027 – ?/4/2027**.
+De stage vindt plaats op **school**, tijdens de project weken eind april: **19/04/2027 – 26/04/2027**.
 
-Het eindresultaat is een statische website, ontwikkeld met HTML, CSS en JavaScript. De website voldoet aan de verwachtingen van de opdrachtgever, wordt professioneel gepresenteerd en zal effectief in gebruik genomen worden.
+Het eindresultaat is een statische website, ontwikkeld met **HTML, CSS en JavaScript**, maar **geen PHP**. De website voldoet aan de verwachtingen van de opdrachtgever, wordt professioneel gepresenteerd en zal effectief in gebruik genomen worden.
 
 **Bedrijfsbezoeken**:  
 Naast het ontwikkelen van de website nemen jullie ook deel aan een aantal bedrijfsbezoeken doorheen het schooljaar.
