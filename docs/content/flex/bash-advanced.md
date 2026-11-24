@@ -1,7 +1,7 @@
 ---
 title: Bash Advanced
 created: 2026-11-17 13:04:56 +0100
-last_modified: 2026-11-24 13:04:57 +0100
+last_modified: 2026-11-24 13:11:22 +0100
 ---
 
 # Add text to files
@@ -146,7 +146,7 @@ Mijn eerste tekstbestand
 Dagboek 
 1. `date >> dagboek.txt`
 2. `echo "Vandaag heb ik Bash geleerd" >> dagboek.txt`
-3. `echo "date +%H:%M Het is me gelukt om het tijdstip toe te voegen" >> dagboek.txt`
+3. `echo "$(date +%H:%M) Het is me gelukt om het tijdstip toe te voegen" >> dagboek.txt`
 
 Mijn computer 
 1. `ls > bestanden.txt`
