@@ -1,6 +1,6 @@
 ---
 title: Geschiedenis Van Besturingssystemen
-last_modified: 2026-10-30 13:33:25 +0100
+last_modified: 2026-11-27 12:59:55 +0100
 created: 2024-09-19 15:18:44 +0200
 ---
 
@@ -25,9 +25,9 @@ Werk als team samen en maak een tijdlijn van deze gebeurtenissen. Verdeel de rol
 # Opdracht
 
 Jullie krijgen elk een aantal gebeurtenissen toegewezen met bijbehorende onderzoeksvragen. Zoek een antwoord op de vragen over jouw onderwerp en beantwoord daarnaast de volgende algemene vragen:
-- Hoe past jouw gebeurtenis in de tijdslijn? Wat is de relatie met de gebeurtenissen ervoor en erna?
-- Hoe heeft deze gebeurtenis bijgedragen aan de ontwikkeling van moderne besturingssystemen?
-- Verzamel beeldmateriaal om de informatie visueel te ondersteunen en de impact van de gebeurtenis duidelijker te maken.
+- Hoe past jouw gebeurtenis in de tijdslijn? Wat is de relatie met de gebeurtenissen **ervoor en erna**?
+- Hoe heeft deze gebeurtenis **bijgedragen** aan de ontwikkeling van **moderne besturingssystemen**?
+- Verzamel **beeldmateriaal** om de informatie visueel te ondersteunen en de impact van de gebeurtenis duidelijker te maken.
 
 ## Gebeurtenissen
 
