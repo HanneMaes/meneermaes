@@ -1,7 +1,7 @@
 ---
 title: 'Missie: Bouw Je Digitale Hoofdkwartier'
 created: 2026-06-01 16:42:44 +0200
-last_modified: 2026-09-14 10:50:58 +0200
+last_modified: 2026-11-27 09:29:37 +0100
 ---
 
 # Digitale Hoofdkwartier
@@ -78,7 +78,8 @@ Waarom? Omdat kleuren je helpen om **sneller te herkennen, minder te moeten zoek
 
 {% include callout.html type='Opdracht' content='
 1. Maak de mappenstructuur na in Google Drive
-2. **Plaats duidelijke screenshots** van je gekleurde mappen op een **logische plaats in de mappenstructuur**.
+2. **Plaats duidelijke screenshots/schermafbeelding** van je gekleurde mappen op een **logische plaats in de mappenstructuur**.
+3. Geef je screenshot/schermafbeelding een **duidelijke bestandsnaam**.
 ' %}
 
 > In een goed georganiseerd hoofdkwartier zie je in één oogopslag waar alles zit
